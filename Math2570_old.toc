@@ -1,0 +1,43 @@
+\thispagestyle {empty}
+\contentsline {chapter}{Table of Contents}{iii}{Doc-Start}
+\contentsline {chapter}{Preface}{v}{section*.2}
+\contentsline {chapter}{\numberline {1}Sequences and Series}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Sequences}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Infinite Series}{13}{section.1.2}
+\contentsline {section}{\numberline {1.3}Integral and Comparison Tests}{26}{section.1.3}
+\contentsline {section}{\numberline {1.4}Ratio and Root Tests}{34}{section.1.4}
+\contentsline {section}{\numberline {1.5}Alternating Series and Absolute Convergence}{39}{section.1.5}
+\contentsline {section}{\numberline {1.6}Power Series}{48}{section.1.6}
+\contentsline {section}{\numberline {1.7}Taylor Polynomials}{58}{section.1.7}
+\contentsline {section}{\numberline {1.8}Taylor Series}{68}{section.1.8}
+\thispagestyle {empty}
+\contentsline {chapter}{\numberline {2}Curves in the Plane}{79}{chapter.2}
+\contentsline {section}{\numberline {2.1}Conic Sections}{79}{section.2.1}
+\contentsline {section}{\numberline {2.2}Parametric Equations}{92}{section.2.2}
+\contentsline {section}{\numberline {2.3}Calculus and Parametric Equations}{101}{section.2.3}
+\contentsline {section}{\numberline {2.4}Introduction to Polar Coordinates}{111}{section.2.4}
+\contentsline {section}{\numberline {2.5}Calculus and Polar Functions}{122}{section.2.5}
+\contentsline {chapter}{\numberline {3}Vectors}{133}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction to Cartesian Coordinates in Space}{133}{section.3.1}
+\contentsline {section}{\numberline {3.2}An Introduction to Vectors}{147}{section.3.2}
+\contentsline {section}{\numberline {3.3}The Dot Product}{158}{section.3.3}
+\contentsline {section}{\numberline {3.4}The Cross Product}{168}{section.3.4}
+\contentsline {section}{\numberline {3.5}Lines}{177}{section.3.5}
+\contentsline {section}{\numberline {3.6}Planes}{186}{section.3.6}
+\contentsline {chapter}{\numberline {4}Vector Valued Functions}{193}{chapter.4}
+\contentsline {section}{\numberline {4.1}Vector--Valued Functions}{193}{section.4.1}
+\contentsline {section}{\numberline {4.2}Calculus and Vector--Valued Functions}{199}{section.4.2}
+\contentsline {section}{\numberline {4.3}The Calculus of Motion}{210}{section.4.3}
+\contentsline {section}{\numberline {4.4}Unit Tangent and Normal Vectors}{221}{section.4.4}
+\contentsline {section}{\numberline {4.5}The Arc Length Parameter and Curvature}{228}{section.4.5}
+\contentsline {chapter}{\numberline {5}Functions of Several Variables}{237}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction to Multivariable Functions}{237}{section.5.1}
+\contentsline {section}{\numberline {5.2}Limits and Continuity of Multivariable Functions}{243}{section.5.2}
+\contentsline {section}{\numberline {5.3}Partial Derivatives}{252}{section.5.3}
+\contentsline {section}{\numberline {5.4}Differentiability and the Total Differential}{262}{section.5.4}
+\contentsline {section}{\numberline {5.5}The Multivariable Chain Rule}{270}{section.5.5}
+\contentsline {section}{\numberline {5.6}Directional Derivatives}{276}{section.5.6}
+\contentsline {section}{\numberline {5.7}Tangent Lines, Normal Lines, and Tangent Planes}{284}{section.5.7}
+\contentsline {section}{\numberline {5.8}Extreme Values}{292}{section.5.8}
+\contentsline {chapter}{\numberline {A}Solutions To Selected Problems}{A.1}{appendix.A}
+\contentsline {chapter}{Index}{A.17}{section*.216}

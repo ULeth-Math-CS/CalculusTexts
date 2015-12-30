@@ -1,0 +1,472 @@
+\begin{theindex}
+
+  \item $!$, \hyperpage{1}
+  \item Absolute Convergence Theorem, \hyperpage{44}
+  \item Absolute Value Theorem, \hyperpage{4}
+  \item acceleration, \hyperpage{212}
+  \item Alternating Harmonic Series, \hyperpage{20}, \hyperpage{42}, 
+		\hyperpage{53}
+  \item Alternating Series Test
+    \subitem for series, \hyperpage{39}
+  \item $a_\text{N}$, \hyperpage{227}, \hyperpage{235}
+  \item analytic function, \hyperpage{70}
+  \item angle of elevation, \hyperpage{216}
+  \item arc length, \hyperpage{106}, \hyperpage{127}, \hyperpage{209}, 
+		\hyperpage{230}
+  \item arc length parameter, \hyperpage{230, 231}
+  \item $a_\text{T}$, \hyperpage{227}, \hyperpage{235}
+  \item average rate of change, \hyperpage{198}
+
+  \indexspace
+
+  \item Binomial Series, \hyperpage{70}
+  \item boundary point, \hyperpage{245}
+  \item bounded sequence, \hyperpage{6}
+    \subitem convergence, \hyperpage{7}
+  \item bounded set, \hyperpage{245}
+
+  \indexspace
+
+  \item Chain Rule
+    \subitem multivariable, \hyperpage{272}, \hyperpage{274}
+  \item circle of curvature, \hyperpage{234}
+  \item closed, \hyperpage{245}
+  \item closed disk, \hyperpage{245}
+  \item concavity, \hyperpage{104}
+  \item conic sections, \hyperpage{80}
+    \subitem degenerate, \hyperpage{80}
+    \subitem ellipse, \hyperpage{83}
+    \subitem hyperbola, \hyperpage{86}
+    \subitem parabola, \hyperpage{80}
+  \item Constant Multiple Rule
+    \subitem of series, \hyperpage{19}
+  \item constrained optimization, \hyperpage{299}
+  \item continuous function, \hyperpage{250}
+    \subitem properties, \hyperpage{251}
+    \subitem vector--valued, \hyperpage{202}
+  \item contour lines, \hyperpage{240}
+  \item convergence
+    \subitem absolute, \hyperpage{43, 44}
+    \subitem Alternating Series Test, \hyperpage{39}
+    \subitem conditional, \hyperpage{43}
+    \subitem Direct Comparison Test, \hyperpage{28}
+    \subitem Integral Test, \hyperpage{26}
+    \subitem interval of, \hyperpage{49}
+    \subitem Limit Comparison Test, \hyperpage{29}
+    \subitem $n^\text  {th}$--term test, \hyperpage{21}
+    \subitem of geometric series, \hyperpage{15}
+    \subitem of monotonic sequences, \hyperpage{10}
+    \subitem of $p$-series, \hyperpage{16}
+    \subitem of power series, \hyperpage{49}
+    \subitem of sequence, \hyperpage{3}, \hyperpage{7}
+    \subitem of series, \hyperpage{13}
+    \subitem radius of, \hyperpage{49}
+    \subitem Ratio Comparison Test, \hyperpage{34}
+    \subitem Root Comparison Test, \hyperpage{36}
+  \item critical point, \hyperpage{294}, \hyperpage{296}
+  \item cross product
+    \subitem and derivatives, \hyperpage{205}
+    \subitem applications, \hyperpage{173}
+      \subsubitem area of parallelogram, \hyperpage{174}
+      \subsubitem torque, \hyperpage{175}
+      \subsubitem volume of parallelepiped, \hyperpage{175}
+    \subitem definition, \hyperpage{170}
+    \subitem properties, \hyperpage{172}
+  \item curvature, \hyperpage{232}
+    \subitem and motion, \hyperpage{235}
+    \subitem equations for, \hyperpage{233}
+    \subitem of circle, \hyperpage{233, 234}
+    \subitem radius of, \hyperpage{234}
+  \item curve
+    \subitem parametrically defined, \hyperpage{92}
+    \subitem rectangular equation, \hyperpage{92}
+    \subitem smooth, \hyperpage{97}
+  \item cusp, \hyperpage{97}
+  \item cycloid, \hyperpage{197}
+  \item cylinder, \hyperpage{136}
+
+  \indexspace
+
+  \item derivative
+    \subitem Chain Rule, \hyperpage{272}, \hyperpage{274}
+    \subitem directional, \hyperpage{278, 279}, \hyperpage{281}, 
+		\hyperpage{283}
+    \subitem implicit, \hyperpage{276}
+    \subitem mixed partial, \hyperpage{257}
+    \subitem multivariable differentiability, \hyperpage{265}, 
+		\hyperpage{269}
+    \subitem parametric equations, \hyperpage{101}
+    \subitem partial, \hyperpage{254}, \hyperpage{260}
+    \subitem power series, \hyperpage{51}
+    \subitem vector--valued functions, \hyperpage{203}, \hyperpage{205}
+  \item differentiable, \hyperpage{265}, \hyperpage{269}
+  \item Direct Comparison Test
+    \subitem for series, \hyperpage{28}
+  \item directional derivative, \hyperpage{278, 279}, \hyperpage{281}, 
+		\hyperpage{283}
+  \item directrix, \hyperpage{80}, \hyperpage{136}
+  \item displacement, \hyperpage{197}, \hyperpage{209}
+  \item distance
+    \subitem between lines, \hyperpage{184}
+    \subitem between point and line, \hyperpage{184}
+    \subitem between point and plane, \hyperpage{192}
+    \subitem between points in space, \hyperpage{134}
+    \subitem traveled, \hyperpage{218}
+  \item divergence
+    \subitem Alternating Series Test, \hyperpage{39}
+    \subitem Direct Comparison Test, \hyperpage{28}
+    \subitem Integral Test, \hyperpage{26}
+    \subitem Limit Comparison Test, \hyperpage{29}
+    \subitem $n^\text  {th}$--term test, \hyperpage{21}
+    \subitem of geometric series, \hyperpage{15}
+    \subitem of $p$-series, \hyperpage{16}
+    \subitem of sequence, \hyperpage{3}
+    \subitem of series, \hyperpage{13}
+    \subitem Ratio Comparison Test, \hyperpage{34}
+    \subitem Root Comparison Test, \hyperpage{36}
+  \item dot product
+    \subitem and derivatives, \hyperpage{205}
+    \subitem definition, \hyperpage{160}
+    \subitem properties, \hyperpage{161}
+
+  \indexspace
+
+  \item eccentricity, \hyperpage{85}, \hyperpage{88}
+  \item ellipse
+    \subitem definition, \hyperpage{83}
+    \subitem eccentricity, \hyperpage{85}
+    \subitem parametric equations, \hyperpage{96}
+    \subitem reflective property, \hyperpage{85}
+    \subitem standard equation, \hyperpage{83}
+  \item extrema
+    \subitem absolute, \hyperpage{294}
+    \subitem relative, \hyperpage{294}
+  \item Extreme Value Theorem, \hyperpage{299}
+
+  \indexspace
+
+  \item factorial, \hyperpage{1}
+  \item focus, \hyperpage{80}, \hyperpage{83}, \hyperpage{86}
+  \item function
+    \subitem of three variables, \hyperpage{242}
+    \subitem of two variables, \hyperpage{239}
+    \subitem vector--valued, \hyperpage{195}
+
+  \indexspace
+
+  \item geometric series, \hyperpage{15}
+  \item gradient, \hyperpage{279}, \hyperpage{281}, \hyperpage{283}, 
+		\hyperpage{291}
+    \subitem and level curves, \hyperpage{281}
+    \subitem and level surfaces, \hyperpage{292}
+
+  \indexspace
+
+  \item Harmonic Series, \hyperpage{20}
+  \item Head To Tail Rule, \hyperpage{150}
+  \item hyperbola
+    \subitem definition, \hyperpage{86}
+    \subitem eccentricity, \hyperpage{88}
+    \subitem parametric equations, \hyperpage{96}
+    \subitem reflective property, \hyperpage{88}
+    \subitem standard equation, \hyperpage{86}
+
+  \indexspace
+
+  \item implicit differentiation, \hyperpage{276}
+  \item initial point, \hyperpage{147}
+  \item Integral Test, \hyperpage{26}
+  \item integration
+    \subitem distance traveled, \hyperpage{218}
+    \subitem of power series, \hyperpage{51}
+    \subitem of vector--valued functions, \hyperpage{207}
+    \subitem surface area, \hyperpage{107}, \hyperpage{129}
+  \item interior point, \hyperpage{245}
+  \item interval of convergence, \hyperpage{49}
+
+  \indexspace
+
+  \item level curves, \hyperpage{240}, \hyperpage{281}
+  \item level surface, \hyperpage{242}, \hyperpage{292}
+  \item limit
+    \subitem Absolute Value Theorem, \hyperpage{4}
+    \subitem of multivariable function, \hyperpage{246, 247}, 
+		\hyperpage{252}
+    \subitem of sequence, \hyperpage{3}
+    \subitem of vector--valued functions, \hyperpage{201}
+    \subitem properties, \hyperpage{247}
+  \item Limit Comparison Test
+    \subitem for series, \hyperpage{29}
+  \item lines, \hyperpage{179}
+    \subitem distances between, \hyperpage{184}
+    \subitem equations for, \hyperpage{181}
+    \subitem intersecting, \hyperpage{182}
+    \subitem parallel, \hyperpage{182}
+    \subitem skew, \hyperpage{182}
+
+  \indexspace
+
+  \item Maclaurin Polynomial, 
+		\hyperindexformat{\see{Taylor Polynomial}}{59}
+    \subitem definition, \hyperpage{59}
+  \item Maclaurin Series, \hyperindexformat{\see{Taylor Series}}{68}
+    \subitem definition, \hyperpage{68}
+  \item magnitude of vector, \hyperpage{147}
+  \item maximum
+    \subitem absolute, \hyperpage{294}
+    \subitem relative/local, \hyperpage{294}, \hyperpage{297}
+  \item minimum
+    \subitem absolute, \hyperpage{294}
+    \subitem relative/local, \hyperpage{294}, \hyperpage{297}
+  \item monotonic sequence, \hyperpage{8}
+  \item multivariable function, \hyperpage{239}, \hyperpage{242}
+    \subitem continuity, \hyperpage{250--252}, \hyperpage{265}, 
+		\hyperpage{269}
+    \subitem differentiability, \hyperpage{265, 266}, \hyperpage{269}
+    \subitem domain, \hyperpage{239}, \hyperpage{242}
+    \subitem level curves, \hyperpage{240}
+    \subitem level surface, \hyperpage{242}
+    \subitem limit, \hyperpage{246, 247}, \hyperpage{252}
+    \subitem range, \hyperpage{239}, \hyperpage{242}
+
+  \indexspace
+
+  \item norm, \hyperpage{147}
+  \item normal line, \hyperpage{101}, \hyperpage{288}
+  \item normal vector, \hyperpage{188}
+  \item $n^\text  {th}$--term test, \hyperpage{21}
+
+  \indexspace
+
+  \item open, \hyperpage{245}
+  \item open ball, \hyperpage{252}
+  \item open disk, \hyperpage{245}
+  \item optimization
+    \subitem constrained, \hyperpage{299}
+  \item orthogonal, \hyperpage{163}, \hyperpage{288}
+    \subitem decomposition, \hyperpage{166}
+  \item orthogonal decomposition of vectors, \hyperpage{166}
+  \item orthogonal projection, \hyperpage{165}
+  \item osculating circle, \hyperpage{234}
+
+  \indexspace
+
+  \item $p$-series, \hyperpage{16}
+  \item parabola
+    \subitem definition, \hyperpage{80}
+    \subitem general equation, \hyperpage{81}
+    \subitem reflective property, \hyperpage{82}
+  \item parallel vectors, \hyperpage{154}
+  \item Parallelogram Law, \hyperpage{150}
+  \item parametric equations
+    \subitem arc length, \hyperpage{106}
+    \subitem concavity, \hyperpage{104}
+    \subitem definition, \hyperpage{92}
+    \subitem finding $\frac  {d^2y}{dx^2}$, \hyperpage{104}
+    \subitem finding $\frac  {dy}{dx}$, \hyperpage{101}
+    \subitem normal line, \hyperpage{101}
+    \subitem surface area, \hyperpage{107}
+    \subitem tangent line, \hyperpage{101}
+  \item partial derivative, \hyperpage{254}, \hyperpage{260}
+    \subitem high order, \hyperpage{261}
+    \subitem meaning, \hyperpage{256}
+    \subitem mixed, \hyperpage{257}
+    \subitem second derivative, \hyperpage{257}
+    \subitem total differential, \hyperpage{264}, \hyperpage{269}
+  \item perpendicular, \hyperindexformat{\see{orthogonal}}{163}
+  \item planes
+    \subitem coordinate plane, \hyperpage{135}
+    \subitem distance between point and plane, \hyperpage{192}
+    \subitem equations of, \hyperpage{189}
+    \subitem introduction, \hyperpage{135}
+    \subitem normal vector, \hyperpage{188}
+    \subitem tangent, \hyperpage{290}
+  \item polar
+    \subitem coordinates, \hyperpage{111}
+    \subitem function
+      \subsubitem arc length, \hyperpage{127}
+      \subsubitem gallery of graphs, \hyperpage{117}
+      \subsubitem surface area, \hyperpage{129}
+    \subitem functions, \hyperpage{113}
+      \subsubitem area, \hyperpage{124}
+      \subsubitem area between curves, \hyperpage{126}
+      \subsubitem finding $\frac  {dy}{dx}$, \hyperpage{122}
+      \subsubitem graphing, \hyperpage{113}
+  \item polar coordinates, \hyperpage{111}
+    \subitem plotting points, \hyperpage{111}
+  \item power series, \hyperpage{48}
+    \subitem algebra of, \hyperpage{72}
+    \subitem convergence, \hyperpage{49}
+    \subitem derivatives and integrals, \hyperpage{51}
+  \item projectile motion, \hyperpage{216}, \hyperpage{228}
+
+  \indexspace
+
+  \item quadric surface
+    \subitem definition, \hyperpage{139}
+    \subitem ellipsoid, \hyperpage{141}
+    \subitem elliptic cone, \hyperpage{140}
+    \subitem elliptic paraboloid, \hyperpage{140}
+    \subitem gallery, \hyperpage{140--142}
+    \subitem hyperbolic paraboloid, \hyperpage{142}
+    \subitem hyperboloid of one sheet, \hyperpage{141}
+    \subitem hyperboloid of two sheets, \hyperpage{142}
+    \subitem sphere, \hyperpage{141}
+    \subitem trace, \hyperpage{139}
+
+  \indexspace
+
+  \item $\mathbb{R}$, \hyperpage{147}
+  \item radius of convergence, \hyperpage{49}
+  \item radius of curvature, \hyperpage{234}
+  \item Ratio Comparison Test
+    \subitem for series, \hyperpage{34}
+  \item rearrangements of series, \hyperpage{44}
+  \item right hand rule
+    \subitem of Cartesian coordinates, \hyperpage{133}
+  \item Root Comparison Test
+    \subitem for series, \hyperpage{36}
+
+  \indexspace
+
+  \item saddle point, \hyperpage{296, 297}
+  \item Second Derivative Test, \hyperpage{297}
+  \item sensitivity analysis, \hyperpage{268}
+  \item sequence
+    \subitem Absolute Value Theorem, \hyperpage{4}
+    \subitem positive, \hyperpage{28}
+  \item sequences
+    \subitem boundedness, \hyperpage{6}
+    \subitem convergent, \hyperpage{3}, \hyperpage{7}, \hyperpage{10}
+    \subitem definition, \hyperpage{1}
+    \subitem divergent, \hyperpage{3}
+    \subitem limit, \hyperpage{3}
+    \subitem limit properties, \hyperpage{5}
+    \subitem monotonic, \hyperpage{8}
+  \item series
+    \subitem absolute convergence, \hyperpage{43}
+    \subitem Absolute Convergence Theorem, \hyperpage{44}
+    \subitem alternating, \hyperpage{39}
+      \subsubitem Approximation Theorem, \hyperpage{41}
+    \subitem Alternating Series Test, \hyperpage{39}
+    \subitem Binomial, \hyperpage{70}
+    \subitem conditional convergence, \hyperpage{43}
+    \subitem convergent, \hyperpage{13}
+    \subitem definition, \hyperpage{13}
+    \subitem Direct Comparison Test, \hyperpage{28}
+    \subitem divergent, \hyperpage{13}
+    \subitem geometric, \hyperpage{15}
+    \subitem Integral Test, \hyperpage{26}
+    \subitem interval of convergence, \hyperpage{49}
+    \subitem Limit Comparison Test, \hyperpage{29}
+    \subitem Maclaurin, \hyperpage{68}
+    \subitem $n^\text  {th}$--term test, \hyperpage{21}
+    \subitem $p$-series, \hyperpage{16}
+    \subitem partial sums, \hyperpage{13}
+    \subitem power, \hyperpage{48, 49}
+      \subsubitem derivatives and integrals, \hyperpage{51}
+    \subitem properties, \hyperpage{19}
+    \subitem radius of convergence, \hyperpage{49}
+    \subitem Ratio Comparison Test, \hyperpage{34}
+    \subitem rearrangements, \hyperpage{44}
+    \subitem Root Comparison Test, \hyperpage{36}
+    \subitem Taylor, \hyperpage{68}
+    \subitem telescoping, \hyperpage{17, 18}
+  \item smooth, \hyperpage{205}
+  \item smooth curve, \hyperpage{97}
+  \item speed, \hyperpage{212}
+  \item sphere, \hyperpage{134}
+  \item Sum/Difference Rule
+    \subitem of series, \hyperpage{19}
+  \item surface area
+    \subitem solid of revolution, \hyperpage{107}, \hyperpage{129}
+  \item surface of revolution, \hyperpage{137, 138}
+
+  \indexspace
+
+  \item tangent line, \hyperpage{101}, \hyperpage{122}, \hyperpage{204}
+    \subitem directional, \hyperpage{286}
+  \item tangent plane, \hyperpage{290}
+  \item Taylor Polynomial
+    \subitem definition, \hyperpage{59}
+    \subitem Taylor's Theorem, \hyperpage{61}
+  \item Taylor Series
+    \subitem common series, \hyperpage{72}
+    \subitem definition, \hyperpage{68}
+    \subitem equality with generating function, \hyperpage{69}
+  \item Taylor's Theorem, \hyperpage{61}
+  \item telescoping series, \hyperpage{17, 18}
+  \item terminal point, \hyperpage{147}
+  \item total differential, \hyperpage{264}, \hyperpage{269}
+    \subitem sensitivity analysis, \hyperpage{268}
+  \item trace, \hyperpage{139}
+
+  \indexspace
+
+  \item unbounded sequence, \hyperpage{6}
+  \item unbounded set, \hyperpage{245}
+  \item unit normal vector
+    \subitem $a_\text{N}$, \hyperpage{227}
+    \subitem and acceleration, \hyperpage{226, 227}
+    \subitem and curvature, \hyperpage{235}
+    \subitem definition, \hyperpage{224}
+    \subitem in $\mathbb  {R}^2$, \hyperpage{226}
+  \item unit tangent vector
+    \subitem and acceleration, \hyperpage{226, 227}
+    \subitem and curvature, \hyperpage{232}, \hyperpage{235}
+    \subitem $a_\text{T}$, \hyperpage{227}
+    \subitem definition, \hyperpage{223}
+    \subitem in $\mathbb  {R}^2$, \hyperpage{226}
+  \item unit vector, \hyperpage{153}
+    \subitem properties, \hyperpage{155}
+    \subitem standard unit vector, \hyperpage{156}
+    \subitem unit normal vector, \hyperpage{224}
+    \subitem unit tangent vector, \hyperpage{223}
+
+  \indexspace
+
+  \item vector--valued function
+    \subitem algebra of, \hyperpage{196}
+    \subitem arc length, \hyperpage{209}
+    \subitem average rate of change, \hyperpage{198}
+    \subitem continuity, \hyperpage{202}
+    \subitem definition, \hyperpage{195}
+    \subitem derivatives, \hyperpage{203}, \hyperpage{205}
+    \subitem describing motion, \hyperpage{212}
+    \subitem displacement, \hyperpage{197}
+    \subitem distance traveled, \hyperpage{218}
+    \subitem graphing, \hyperpage{195}
+    \subitem integration, \hyperpage{207}
+    \subitem limits, \hyperpage{201}
+    \subitem of constant length, \hyperpage{207}, \hyperpage{215}, 
+		\hyperpage{224}
+    \subitem projectile motion, \hyperpage{216}
+    \subitem smooth, \hyperpage{205}
+    \subitem tangent line, \hyperpage{204}
+  \item vectors, \hyperpage{147}
+    \subitem algebra of, \hyperpage{150}
+    \subitem algebraic properties, \hyperpage{153}
+    \subitem component form, \hyperpage{148}
+    \subitem cross product, \hyperpage{170}, \hyperpage{172}
+    \subitem definition, \hyperpage{147}
+    \subitem dot product, \hyperpage{160, 161}
+    \subitem Head To Tail Rule, \hyperpage{150}
+    \subitem magnitude, \hyperpage{147}
+    \subitem norm, \hyperpage{147}
+    \subitem normal vector, \hyperpage{188}
+    \subitem orthogonal, \hyperpage{163}
+    \subitem orthogonal decomposition, \hyperpage{166}
+    \subitem orthogonal projection, \hyperpage{165}
+    \subitem parallel, \hyperpage{154}
+    \subitem Parallelogram Law, \hyperpage{150}
+    \subitem resultant, \hyperpage{150}
+    \subitem standard unit vector, \hyperpage{156}
+    \subitem unit vector, \hyperpage{153}, \hyperpage{155}
+    \subitem zero vector, \hyperpage{150}
+  \item velocity, \hyperpage{212}
+
+  \indexspace
+
+  \item work, \hyperpage{168}
+
+\end{theindex}

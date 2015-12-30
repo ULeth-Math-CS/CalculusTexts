@@ -1,0 +1,349 @@
+\section{Introduction to differential equations}\label{sec:ODEintro}
+
+
+\subsection*{Differential equations}
+
+The laws of physics are generally written down as differential
+equations.  Therefore, all of science and engineering use
+differential equations to some degree.  Understanding
+differential equations is essential to understanding almost anything you will
+study in your science and engineering classes.
+You can think of mathematics as the language of science, and
+differential equations are one of the most important parts of this
+language as far as science and engineering are concerned.  As an analogy,
+suppose all your classes from now on were given in Swahili.  
+It would be important to first learn Swahili, or you would have a very
+tough time getting a good grade in your classes.
+
+You have already seen many
+differential equations without perhaps knowing about it.
+And you have even solved simple
+differential equations when you were taking calculus.
+Let us see an example you may not have seen:
+\begin{equation} \label{eq1}
+\frac{dx}{dt} + x = 2 \cos t .
+\end{equation}
+Here $x$ is the \sword{dependent variable}\index{dependent variable} and $t$ is the
+\sword{independent variable}\index{independent variable}.
+Equation \eqref{eq1}
+is a basic example of a \sword{differential equation}\index{differential equation}.  In fact it
+is an example of a \sword{first order differential equation}\index{differential equation!first order}, since
+it involves only the first derivative of the dependent variable.  This 
+equation arises from Newton's law of cooling where the ambient
+temperature oscillates with time.
+
+\subsection*{Solutions of differential equations}
+
+Solving the differential equation means finding $x$ in terms of $t$.  That
+is, we want to find a function of $t$, which we will call $x$, such that when
+we plug $x$, $t$, and $\frac{dx}{dt}$ into \eqref{eq1}, the equation holds.
+It is
+the same idea as it would be for a normal (algebraic) equation of just
+$x$ and $t$.  We claim that
+\begin{equation*}
+x = x(t) = \cos t + \sin t
+\end{equation*}
+is a \sword{solution}\index{differential equation!solution}\index{solution}.
+How do we check?  We simply plug $x$ into equation \eqref{eq1}!  First we
+need to compute $\frac{dx}{dt}$.  We find that $\frac{dx}{dt} = 
+-\sin t + \cos t$.  Now let us compute the left hand side
+of \eqref{eq1}.
+\begin{equation*}
+\frac{dx}{dt} + x = 
+(-\sin t + \cos t)
++
+(\cos t + \sin t)
+=
+2\cos t .
+\end{equation*}
+Yay!  We got precisely the right hand side.
+But there is more!
+We claim
+$x = \cos t + \sin t + e^{-t}$ is also
+a solution.  Let us try,
+\begin{equation*}
+\frac{dx}{dt} = -\sin t + \cos t - e^{-t} .
+\end{equation*}
+Again plugging into the left hand side of \eqref{eq1}
+\begin{equation*}
+\frac{dx}{dt} + x = 
+(-\sin t + \cos t - e^{-t}) +
+(\cos t + \sin t + e^{-t})
+= 2\cos t .
+\end{equation*}
+And it works yet again!
+
+So there can be many different solutions.  In fact, for this equation all
+solutions can be written in the form
+\begin{equation*}
+x = \cos t + \sin t + C e^{-t}
+\end{equation*}
+for some constant $C$.  See \ref{intro:plotsfig} for the graph of a
+few of these solutions. 
+We will see how we find these solutions
+a few lectures from now.
+
+
+
+\mtable{.5}{A few solutions of $\frac{dx}{dt} + x = 2 \cos t$.}{intro:plotsfig}{
+\myincludegraphics[scale=.45]{figures/intro-plots-alt}
+}
+
+It turns out that solving differential equations can be quite hard.  
+There is no general method that solves every differential equation.  We will
+generally focus on how to get exact formulas for solutions of certain
+differential
+equations, but we will also spend a little bit of time
+on getting approximate solutions.
+
+For most of the course we will look at
+\sword{ordinary differential equation}\index{ordinary differential equation}\index{differential equation!ordinary differential equation} (often abbreviated \sword{ODEs}, by which we mean that there
+is only one independent variable and derivatives are only with respect to
+this one variable.
+If there are several independent variables, we will get
+\sword{partial differential equations}\index{partial differential equation}\index{differential equation!partial differential equation} or \sword{PDEs}.
+
+Even for ODEs, which are very well understood, it is not a simple question
+of turning a crank to get answers.  
+It is important to
+know when it is easy to find solutions and how to do so.
+Although in real applications you will
+leave much of the actual calculations to computers, you
+need to understand what they are doing.  It is often necessary
+to simplify or transform your equations into something that a computer can
+understand and solve.
+You may need to make certain assumptions and changes in your
+model to achieve this.
+
+To be a successful engineer or scientist, you will be required to solve
+problems in your job that you have never seen before.  It is important to
+learn problem solving techniques, so that you may apply those techniques to
+new problems.  A common mistake is to expect to learn some prescription for
+solving all the problems you will encounter in your later career.  This
+course is no exception.
+
+
+\subsection*{Differential equations in practice}
+\mtable{.7}{Mathematical modelling process}{}{
+\myincludegraphics[scale=.5]{figures/1-1-fig}
+}
+
+So how do we use differential equations in science and engineering?  
+First, we have some \sword{real world problem} we wish
+to understand.
+We make some simplifying assumptions and create a \sword{mathematical
+model}\index{mathematical model}
+That is, we translate the real world situation into a
+set of differential equations.
+Then we apply mathematics to get some sort of a \sword{mathematical
+solution} to the model.
+There is still something left to do.  We have to interpret the results.
+We have to figure out what the mathematical solution says about the real world
+problem we started with.
+
+Learning how to formulate the mathematical model and how to interpret the
+results is what your physics and engineering classes do.  In this
+course we will focus mostly on the mathematical analysis.  Sometimes we will
+work with simple real world examples, so that we have some intuition and
+motivation about what we are doing.
+
+Let us look at 
+an example of this process.
+One of the most basic differential equations
+is the standard \sword{exponential growth model}\index{exponential growth model}
+Let $P$ denote the population 
+of some bacteria on a Petri dish.  We assume that there is enough food
+and enough space.  Then the rate of growth of bacteria is proportional
+to the population---a large population grows quicker.  Let $t$ denote
+time (say in seconds) and $P$ the population.  Our model
+is
+\begin{equation*}
+\frac{dP}{dt} = kP ,
+\end{equation*}
+for some positive constant $k > 0$.\\
+
+\example{ex_bacgrowth}{Model for bacterial growth}{
+Suppose there are 100 bacteria at time 0 and 200 bacteria 10 seconds later.
+How many bacteria will there be 1 minute from time 0 (in 60 seconds)?}
+{First we have to solve the equation.  We claim that a solution is given by
+\begin{equation*}
+P(t) = C e^{kt} ,
+\end{equation*}
+where $C$ is a constant.  Let us try:
+\begin{equation*}
+\frac{dP}{dt} = C k e^{kt} = k P .
+\end{equation*}
+And it really is a solution.
+
+OK, so what now?  We do not know $C$ and we do not know $k$.  But we know
+something.  We know $P(0) = 100$, and we also know 
+$P(10) = 200$.  Let us plug these conditions in and see what happens.
+\begin{align*}
+& 100 = P(0) = C e^{k0} = C ,\\
+& 200 = P(10) = 100 \, e^{k10} .
+\end{align*}
+Therefore, $2 = e^{10k}$ or $\frac{\ln 2}{10} = k \approx 0.069$.
+So we know that
+\begin{equation*}
+P(t) = 100 \, e^{(\ln 2) t / 10} \approx 100 \, e^{0.069 t} .
+\end{equation*}
+At one minute, $t=60$, the population is $P(60) = 6400$.  See Figure
+\ref{intro:plotbactfig}.
+
+\mtable{0.65}{Bacteria growth in the first 60 seconds.}{intro:plotbactfig}{%
+\myincludegraphics[scale=.4]{figures/intro-plotbact}
+}
+
+Let us talk about the interpretation of the results.  Does our solution
+mean that
+there must be exactly 6400 bacteria on the plate at 60s?  No!  We made
+assumptions that might not be true exactly, just approximately.
+If our assumptions are reasonable,
+then there will be approximately 6400 bacteria.
+Also, in real life $P$ is a
+discrete quantity, not a real number.  However, our model has no problem saying
+that for example at 61 seconds, $P(61) \approx 6859.35$.
+%Obviously there 
+%are either 6859 bacteria or 6860 bacteria.
+}\\
+
+Normally, the $k$ in $P' = kP$ is known,
+and we want to solve
+the equation for different \sword{initial conditions}\index{initial condition}\index{differential equation!initial condition}.
+What does that mean?
+Take $k=1$ for simplicity.  Now suppose we want to solve the equation
+$\frac{dP}{dt} = P$ 
+subject to $P(0) = 1000$ (the initial condition).
+Then the solution turns out to be (exercise)
+\begin{equation*}
+P(t) = 1000 \, e^t .
+\end{equation*}
+
+We call $P(t) = C e^t$ \sword{general solution}\index{general solution}\index{solution!general},
+as every solution
+of the equation can be written in this form for some constant $C$.  You
+will need an initial condition to find out what $C$ is, in order to find the
+\sword{particular solution}\index{particular solution} we are looking for.  Generally, when we say
+``particular solution,'' we just mean some solution.
+
+\medskip
+
+Let us get to what we will call the four fundamental equations.
+These equations appear very often and it is useful to just memorize what
+their solutions are.
+These solutions
+are reasonably easy
+to guess by recalling properties of exponentials, sines, and cosines.
+They are also simple to check, which is something that you should always do.
+There is no need to wonder if you have remembered the solution correctly.
+%You will be
+%required to know these and be able to solve these.
+%I promise at least one or
+%two of these will appear on EVERY test.  You should just memorize their
+%solutions.  You can and should always check that you have the
+%right solution, so that makes the memorization easier.  It is in fact not
+%hard to guess these solutions.
+
+\medskip
+
+First such equation is,
+\begin{equation*}
+\frac{dy}{dx} = k y ,
+\end{equation*}
+for some constant $k > 0$.
+Here $y$ is the dependent and $x$ the independent variable.
+The general solution for this equation is
+\begin{equation*}
+y(x) = C e^{kx} .
+\end{equation*}
+We have already seen that this function is a solution above with different
+variable names.
+
+\medskip
+
+Next,
+\begin{equation*}
+\frac{dy}{dx} = -k y ,
+\end{equation*}
+for some constant $k > 0$.
+The general solution for this equation is
+\begin{equation*}
+y(x) = C e^{-kx} .
+\end{equation*}
+
+\medskip
+
+\noindent{\bf Exercise:} Check that the $y$ given is really a solution to the equation.
+
+\medskip
+
+Next, take the
+\sword{second order differential equation}\index{second order differential equation}
+\begin{equation*}
+\frac{d^2y}{{dx}^2} = -k^2 y ,
+\end{equation*}
+for some constant $k > 0$.
+The general solution for this equation is
+\begin{equation*}
+y(x) = C_1 \cos(kx) + C_2 \sin(kx) .
+\end{equation*}
+Note that
+because
+we have a second order differential equation,
+we have two constants in our general solution.
+
+\medskip
+
+\noindent{\bf Exercise:} Check that the $y$ given is really a solution to the equation.
+
+\medskip
+
+And finally, take the second order differential equation
+\begin{equation*}
+\frac{d^2y}{{dx}^2} = k^2 y ,
+\end{equation*}
+for some constant $k > 0$.
+The general solution for this equation is
+\begin{equation*}
+y(x) = C_1 e^{kx} + C_2 e^{-kx} ,
+\end{equation*}
+or
+\begin{equation*}
+y(x) = D_1 \cosh(kx) + D_2 \sinh(kx) .
+\end{equation*}
+
+For those that do not know, $\cosh$ and $\sinh$ are defined by
+\begin{align*}
+\cosh x &= \frac{e^{x} + e^{-x}}{2} , \\
+\sinh x &= \frac{e^{x} - e^{-x}}{2} .
+\end{align*}
+These functions are sometimes easier to
+work with than exponentials.  They have some nice familiar
+properties such as
+$\cosh 0 = 1$, $\sinh 0 = 0$, and $\frac{d}{dx} \cosh x = \sinh x$ (no that is
+not a typo)
+and $\frac{d}{dx} \sinh x = \cosh x$.
+
+\medskip
+
+\noindent{\bf Exercise:} Check that both forms of the $y$ given are
+really solutions to the equation.
+
+\medskip
+
+An interesting note about $\cosh$:  The graph of $\cosh$ is the exact shape
+a hanging chain will make.  This shape is called
+a \sword{catenary}\index{catenary}
+Contrary to popular belief this is not a
+parabola.  If you invert the graph of $\cosh$ it is also the ideal arch for
+supporting its own weight.
+For example, the gateway arch in Saint Louis is an inverted graph of
+$\cosh$---if it were just a parabola it might fall down.  The formula
+used in the design is
+inscribed inside the arch:
+\begin{equation*}
+y = -127.7 \; \textrm{ft} \cdot \cosh({x / 127.7  \; \textrm{ft}}) + 757.7 \;
+\textrm{ft} .
+\end{equation*}
+
+\printexercises{exercises/14_01_exercises}

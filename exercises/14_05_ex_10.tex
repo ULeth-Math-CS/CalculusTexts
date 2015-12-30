@@ -1,0 +1,14 @@
+{\sword{Newton's law of cooling}\index{Newton's law of cooling} states that $\frac{dx}{dt} = -k(x-A)$ where
+$x$ is the temperature, $t$ is time, $A$ is the ambient temperature,
+and $k > 0$ is a constant.
+Suppose that $A = A_0 \cos (\omega t)$ for some constants $A_0$ and $\omega$.
+That is, the ambient temperature oscillates (for example night and day
+temperatures).  a) Find the general solution.  b) In the long term, will the
+initial conditions make much of a difference?  Why or why not?}
+{(a) The general solution is
+\[
+x(t) = \frac{\omega A_0}{\omega^2-k^2}\left(\sin (\omega t)+\frac{k}{\omega}\cos(\omega t)\right)+Ce^{-kt}.
+\]
+(We hope you haven't forgotten how to integrate by parts!)
+
+(b)They won't. Since $k>0$, the term that is determined by the initial conditions decays exponentially, so for $t>>0$, there won't be much of a contribution from this term.}

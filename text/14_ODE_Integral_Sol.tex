@@ -1,0 +1,257 @@
+\section{Integrals as solutions}\label{sec:ODE_int_sol}
+
+
+A first order ODE is an equation of the form
+\begin{equation*}
+\frac{dy}{dx} = f(x,y) ,
+\end{equation*}
+or just
+\begin{equation*}
+y' = f(x,y) .
+\end{equation*}
+In general, there is no simple formula or procedure one can follow to find
+solutions.
+In the next few lectures we will look at special cases where solutions are not
+difficult to obtain.
+In this section, let us assume that $f$ is a function of $x$ alone,
+that is, the equation is
+\begin{equation} \label{ias:inteq}
+y' = f(x) .
+\end{equation}
+We could just integrate (antidifferentiate) both sides with respect to $x$.
+\begin{equation*}
+\int y'(x) ~dx = \int f(x) ~dx + C ,
+\end{equation*}
+that is
+\begin{equation*}
+y(x) = \int f(x) ~dx + C .
+\end{equation*}
+This $y(x)$ is actually the general solution.
+So to solve \eqref{ias:inteq},
+we find some antiderivative of $f(x)$
+and then we add an arbitrary constant to get the general solution.
+
+\medskip
+
+Now is a good time to discuss a point about
+calculus notation and terminology.  Calculus
+textbooks muddy the waters by talking about the integral as primarily the
+so-called indefinite integral.  The \index{indefinite integral}
+is really the \sword{antiderivative}\index{antiderivative}
+(in fact the whole one-parameter family
+of antiderivatives).  There really exists only one integral and that
+is the definite integral.
+The only reason for the indefinite integral notation is that we can always
+write an antiderivative as a (definite) integral.  That is, by the fundamental
+theorem of calculus we can always write
+$\int f(x) ~dx + C$ as
+\begin{equation*}
+\int_{x_0}^x f(t) ~dt + C .
+\end{equation*}
+Hence the terminology \emph{to integrate} when we may really mean
+\emph{to antidifferentiate}.
+Integration is just one way to compute the
+antiderivative (and it is a way that always works, see the following
+examples).  Integration is defined as the area under the graph, it
+only happens to also compute antiderivatives.
+For sake of consistency, we will keep using the
+indefinite integral notation when we want an antiderivative,
+and you should \emph{always} think of the definite integral.\\
+
+\example{egg1}{Finding a general solution}{
+Find the general solution of $y' = 3 x^2$.}
+{Elementary calculus tells us
+that the general solution must be $y = x^3 + C$.  Let us check by
+differentiating:
+$y' = 3x^2$.  We have gotten \emph{precisely} our equation back.
+}\\
+
+Normally, we also have an initial condition such as $y(x_0) = y_0$
+for some two numbers $x_0$ and $y_0$ ($x_0$ is usually 0, but not always).
+We can then write the solution as a definite integral in a nice way.
+Suppose our problem is $y' = f(x)$, $y(x_0) = y_0$.  Then the solution is
+\begin{equation} \label{int:eqdef}
+y(x) = \int_{x_0}^x f(s) ~ds + y_0 .
+\end{equation}
+Let us check!
+We compute
+$y' = f(x)$, via the fundamental theorem of calculus, and by Jupiter, $y$ is a
+solution.  Is it the one satisfying the initial condition?  Well,
+$y(x_0) = \int_{x_0}^{x_0} f(x)~dx + y_0 = y_0$.  It is!
+
+Do note that the definite integral and the indefinite integral
+(antidifferentiation) are completely different beasts.  The definite integral
+always evaluates to a number.  Therefore, \eqref{int:eqdef} is a formula we
+can plug into the calculator or a computer, and it will be happy to calculate
+specific values for us.  We will easily be able to plot the
+solution and work with it just like with any other function.
+It is not so crucial to always find a
+closed form for the antiderivative.\\
+
+\example{egg2}{An ODE with no closed-form solution}{
+Solve
+\begin{equation*}
+y' = e^{-x^2}, \qquad y(0) = 1 .
+\end{equation*}
+}
+{By the preceding discussion, the solution must be
+\begin{equation*}
+y(x) = \int_0^x e^{-s^2} ~ds + 1 .
+\end{equation*}
+Here is a good way to make fun of your friends taking second semester
+calculus.  Tell them to
+find the closed form solution.  Ha ha ha (bad math joke).  It is
+not possible (in closed form).
+There is absolutely nothing wrong with writing the solution as a
+definite integral.
+This particular integral
+is in fact very important
+in statistics.
+}\\
+
+Using this method, we can also solve equations of the form
+\begin{equation*}
+y' = f(y) .
+\end{equation*}
+Let us write the equation in \index{Leibniz notation}.
+\begin{equation*}
+\frac{dy}{dx} = f(y) .
+\end{equation*}
+Now we use the inverse function theorem from calculus
+to switch the roles of $x$ and $y$
+to obtain
+\begin{equation*}
+\frac{dx}{dy} = \frac{1}{f(y)} .
+\end{equation*}
+What
+we are doing seems like algebra with $dx$ and $dy$.
+It is tempting to just do algebra with $dx$
+and $dy$ as if they were numbers.  And in this case it does work.  Be
+careful,
+however, as this sort of hand-waving calculation can lead to trouble,
+especially when
+more than one independent variable is involved.
+At this point we can simply integrate,
+\begin{equation*}
+x(y) = \int \frac{1}{f(y)} ~dy + C .
+\end{equation*}
+Finally, we try to solve for $y$.\\
+
+\example{egg3}{Solving the exponential growth equation}{
+Previously, we guessed $y' = ky$ (for some $k > 0$) has the solution
+$y=Ce^{kx}$.  We can now find the solution without guessing.}
+{First we note that $y=0$ is a solution.
+Henceforth, we assume $y\not= 0$.  We write
+\begin{equation*}
+\frac{dx}{dy} = \frac{1}{ky} .
+\end{equation*}
+We integrate to obtain
+\begin{equation*}
+x(y) = x = \frac{1}{k} \ln \, \lvert y \rvert + D,
+\end{equation*}
+where $D$ is an arbitrary constant.
+Now we solve for $y$ (actually for $\lvert y \rvert$).
+\begin{equation*}
+\lvert y \rvert =
+e^{kx-kD} = 
+e^{-kD} e^{k x} .
+\end{equation*}
+If we replace $e^{-kD}$ with an arbitrary constant $C$ we can
+get rid of the absolute value bars (which we can do as $D$ was arbitrary).  In
+this way, we
+also incorporate the solution $y=0$.  We get the same general solution as
+we guessed before, $y = Ce^{kx}$.
+}\\
+
+\example{egg4}{Solving an ODE by integration}{
+Find the general solution of
+$y' = y^2$.}
+{
+First we note that $y=0$ is a solution.  We can now assume that $y \not= 0$.
+Write
+\begin{equation*}
+\frac{dx}{dy} = \frac{1}{y^2} .
+\end{equation*}
+We integrate to get
+\begin{equation*}
+x = \frac{-1}{y} + C .
+\end{equation*}
+We solve for $y = \frac{1}{C-x}$.
+So the general solution is
+\begin{equation*}
+y = \frac{1}{C-x} \qquad \text{or} \qquad y = 0.
+\end{equation*}
+Note the singularities of the solution.  If for example $C=1$, then the
+solution ``blows up'' as we approach $x=1$.  Generally,
+it is hard to tell
+from just looking at the equation itself how the solution is going to behave.
+The equation $y' = y^2$ is very nice and defined everywhere, but
+the solution is only defined on some interval $(-\infty, C)$ or
+$(C, \infty)$.
+}\\
+
+Classical problems leading to differential equations solvable by integration
+are problems 
+dealing with \index{velocity},
+\index{acceleration} and \index{distance}.  You have surely seen these
+problems before in your calculus class.\\
+
+\example{egg5}{Finding the distance travelled}{
+Suppose a car drives at a speed $e^{t/2}$ meters per second,
+where $t$ is time in seconds.
+How far did the car get in 2 seconds (starting at $t=0$)?  How far in 10 seconds?}
+{
+Let $x$ denote the distance the car travelled.
+The equation is
+\begin{equation*}
+x' = e^{t/2} .
+\end{equation*}
+We can just integrate this equation to get that
+\begin{equation*}
+x(t) = 2 e^{t/2} + C . 
+\end{equation*}
+We still need to figure out $C$.  We know that when $t=0$, then
+$x=0$.  That is, $x(0) = 0$.  So
+\begin{equation*}
+0 = x(0) = 2e^{0/2} + C = 2 + C .
+\end{equation*}
+Thus $C = -2$ and 
+\begin{equation*}
+x(t) = 2 e^{t/2} - 2 .
+\end{equation*}
+Now we just plug in to get where the car is at 2 and at 10 seconds.
+We obtain
+\begin{equation*}
+x(2) = 2e^{2/2} - 2 \approx 3.44 \text{ meters} ,
+\qquad
+x(10) = 2e^{10/2} - 2 \approx 294 \text{ meters} .
+\end{equation*}
+}\\
+
+\example{egg6}{Another car problem}{
+Suppose that the car accelerates at a rate of $\unitfrac[t^2]{m}{s^2}$.
+At time $t=0$ the car is at the 1 meter mark and is travelling at
+\unitfrac[10]{m}{s}.  Where is the car at time $t=10$?}
+{
+Well this is actually a second order problem.  If $x$ is the distance
+travelled, then $x'$ is the velocity, and $x''$ is the acceleration.
+The equation with initial conditions is
+\begin{equation*}
+x'' = t^2 , \qquad x(0) = 1 , \qquad x'(0) = 10 .
+\end{equation*}
+What if we say $x' = v$.  Then we have the problem
+\begin{equation*}
+v' = t^2, \qquad v(0) = 10 .
+\end{equation*}
+Once we solve for $v$, we can integrate and find $x$.
+}\\
+
+\medskip
+
+\noindent{\bf Exercise:} Solve for $v$, and then solve for $x$.  Find $x(10)$ to answer the
+question.
+
+\medskip
+
+\printexercises{exercises/14_02_exercises}
+

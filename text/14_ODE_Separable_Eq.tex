@@ -1,0 +1,222 @@
+\section{Separable equations}\label{sec:separable}
+
+
+When a differential equation is of the form
+$y' = f(x)$,
+we can just integrate:
+$y = \int f(x) ~dx + C$. 
+Unfortunately this method no longer works for the
+general form of the equation
+$y' = f(x,y)$.
+Integrating both sides yields
+\begin{equation*}
+y = \int f(x,y) ~dx + C .
+\end{equation*}
+Notice the dependence on $y$ in the integral.
+
+\subsection*{Separable equations}
+
+Let us suppose that the equation is
+\sword{separable}\index{differential equation!separable}\index{separable ODE}.
+That is, let us consider
+\begin{equation*}
+y' = f(x)g(y) ,
+\end{equation*}
+for some functions $f(x)$ and $g(y)$.
+Let us write the equation in the \sword{Leibniz notation}\index{Leibniz notation}
+\begin{equation*}
+\frac{dy}{dx} = f(x)g(y) .
+\end{equation*}
+Then we rewrite the equation as
+\begin{equation*}
+\frac{dy}{g(y)} = f(x) ~dx .
+\end{equation*}
+Now both sides look like something we can integrate.  We obtain
+\begin{equation*}
+\int \frac{dy}{g(y)} = \int f(x) ~dx + C .
+\end{equation*}
+If we can find closed form expressions
+for these two integrals, we can, perhaps, solve for $y$.
+
+\example{egh1}{A separable ODE}{
+Solve the equation
+\begin{equation*}
+y' = xy .
+\end{equation*}}
+{
+First note that $y=0$ is a solution,
+so assume $y \not =0$ from now on.
+Write the equation as $\frac{dy}{dx} = xy$, then
+\begin{equation*}
+\int \frac{dy}{y} = \int x~dx + C .
+\end{equation*}
+We compute the antiderivatives to get
+\begin{equation*}
+\ln \, \lvert y\rvert = \frac{x^2}{2} + C .
+\end{equation*}
+Or
+\begin{equation*}
+\lvert y \rvert = e^{\frac{x^2}{2} + C} = e^{\frac{x^2}{2}} e^C = D e^{\frac{x^2}{2}} ,
+\end{equation*}
+where $D > 0$ is some constant.  Because $y=0$ is a solution and because
+of the absolute value we actually can write:
+\begin{equation*}
+y = D e^{\frac{x^2}{2}} ,
+\end{equation*}
+for any number $D$ (including zero or negative).
+
+We check:
+\begin{equation*}
+y' = D x e^{\frac{x^2}{2}} = x \left( D e^{\frac{x^2}{2}} \right) = xy .
+\end{equation*}
+Yay!
+}\\
+
+We should be a little bit more careful with this method.  You may be worried 
+that we were
+integrating in two different variables.
+We seemed to be
+doing a different operation to each side.  Let us work this method out more
+rigorously.  Take
+\begin{equation*}
+\frac{dy}{dx} = f(x)g(y) .
+\end{equation*}
+We rewrite the equation as follows.
+Note that $y = y(x)$ is a function of $x$ and so is
+$\frac{dy}{dx}$!
+\begin{equation*}
+\frac{1}{g(y)}~\frac{dy}{dx} = f(x) .
+\end{equation*}
+We integrate both sides with respect to $x$.
+\begin{equation*}
+\int \frac{1}{g(y)}~\frac{dy}{dx} ~dx = \int f(x) ~dx + C .
+\end{equation*}
+We can use the change of variables formula.
+\begin{equation*}
+\int \frac{1}{g(y)}~dy = \int f(x) ~dx + C .
+\end{equation*}
+And we are done.
+
+\subsection*{Implicit solutions}
+
+It is clear that we might sometimes get stuck even if we can do the
+integration.  For example, take the separable equation
+\begin{equation*}
+y' = \frac{xy}{y^2+1} .
+\end{equation*}
+We separate variables,
+\begin{equation*}
+\frac{y^2+1}{y}~dy = \left(y+\frac{1}{y}\right)~dy = x~dx .
+\end{equation*}
+We integrate to get
+\begin{equation*}
+\frac{y^2}{2} + \ln \, \lvert y \rvert = \frac{x^2}{2} + C ,
+\end{equation*}
+or perhaps the easier looking expression (where $D = 2C$)
+\begin{equation*}
+y^2 + 2 \ln \, \lvert y\rvert = x^2 + D .
+\end{equation*}
+It is not easy to find the solution explicitly as it is hard to solve
+for $y$.  We, therefore, leave the solution in this form and call
+it an
+\sword{implicit solution}\index{implicit solution}\index{solution!implicit}.
+It is still
+easy to check that an implicit solution satisfies the differential
+equation.  In this case, we differentiate with respect to $x$
+to get
+\begin{equation*}
+y'\left(2y + \frac{2}{y}\right) = 2x .
+\end{equation*}
+It is simple to see that the differential equation holds.
+If you want to compute values
+for $y$, you might have to be tricky.  For example, you can graph
+$x$ as a function of $y$, and then flip your paper.  Computers are also good
+at some of these tricks.
+
+We note that the above equation also has the solution $y=0$.
+The general solution is 
+$y^2 + 2 \ln \, \lvert y \rvert = x^2 + C$ together with $y=0$.  These outlying solutions
+such as $y=0$
+are sometimes called \emph{singular solutions\index{singular solution}}.\\
+
+\example{egh2}{An example with initial conditions}{
+Solve $x^2y' = 1 - x^2+y^2 - x^2y^2$, $y(1) = 0$.}
+{
+First factor the right hand side to obtain
+\begin{equation*}
+x^2y' = (1 - x^2)(1+y^2) .
+\end{equation*}
+Separate variables, integrate, and solve for $y$.
+\begin{align*}
+\frac{y'}{1+y^2} & = \frac{1 - x^2}{x^2} , \\
+\frac{y'}{1+y^2} & = \frac{1}{x^2} - 1 , \\
+\operatorname{arctan} (y) & = \frac{-1}{x} - x + C , \\
+y & = \tan \left(\frac{-1}{x} - x + C\right) .
+\end{align*}
+Now solve for the initial condition, $0 = \tan(-2+C)$ to get $C=2$ (or $2 +
+\pi$, etc\ldots).  The solution we are seeking is, therefore,
+\begin{equation*}
+y = \tan \left(\frac{-1}{x} - x + 2 \right) .
+\end{equation*}
+}
+
+\example{sep_coffeeexample}{Cooling a cup of coffee}{
+Bob made a cup of coffee, and
+Bob likes to drink coffee only once it will not burn him at 60
+degrees.
+Initially at time $t=0$ minutes,
+Bob measured the temperature and the coffee was 89 degrees Celsius.
+One minute later, Bob measured the coffee again and it had 85 degrees.
+The temperature of the room (the ambient temperature) is 22 degrees.
+When should Bob start drinking?}
+{
+Let $T$ be the temperature of the coffee, and let $A$ be the ambient (room) temperature.
+\sword{Newton's law of cooling}\index{Newton's law of cooling} states that the rate at which the
+temperature of the coffee is changing
+is proportional to the difference between the
+ambient temperature and the temperature of the coffee.  That is,
+\begin{equation*}
+\frac{dT}{dt} = k(A-T) ,
+\end{equation*}
+for some constant $k$.
+For our setup $A=22$, $T(0) = 89$, $T(1) = 85$.
+We separate variables and integrate (let $C$ and $D$ denote arbitrary
+constants)
+\begin{align*}
+\frac{1}{T-A} \, \frac{dT}{dt} & = -k , \\
+\ln (T-A) &= -kt + C , \qquad \text{(note that $T-A > 0$)} \\
+T-A &= D\, e^{-kt} ,  \\
+T &= A + D\, e^{-kt} .
+\end{align*}
+That is,
+$T = 22 + D\, e^{-kt}$.  We plug in the first condition: $89 = T(0) = 22 +
+D$,
+and hence $D = 67$.  So
+$T = 22 + 67\, e^{-kt}$.  The second condition says $85 = T(1) = 
+22 + 67\, e^{-k}$.  Solving for $k$ we get
+$k = - \ln \frac{85-22}{67} \approx 0.0616$.  Now we solve for the time $t$
+that gives us a temperature of 60 degrees.  That is, we solve
+$60 = 22 + 67 e^{-0.0616t}$ to get
+$t = - \frac{\ln \frac{60-22}{67}}{0.0616} \approx 9.21$ minutes.  So Bob can
+begin to drink the coffee at just over 9 minutes from the time Bob made
+it.  That is probably about the amount of time it took us to calculate how long
+it would take.
+}\\
+
+\example{egh4}{Finding all possible solutions}{
+Find the general solution to $y' = \frac{-xy^2}{3}$ (including singular
+solutions).}
+{
+First note that $y=0$ is a solution (a singular solution).
+So assume that $y \not= 0$ and write
+\begin{align*}
+\frac{-3}{y^2} y' & = x , \\
+\frac{3}{y} & = \frac{x^2}{2} + C , \\
+y & = \frac{3}{\nicefrac{x^2}{2} + C}
+= \frac{6}{x^2 + 2C}.
+\end{align*}
+}
+
+\printexercises{exercises/14_04_exercises}
+
+

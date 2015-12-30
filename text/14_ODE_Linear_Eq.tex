@@ -1,0 +1,298 @@
+\section{Linear equations and the integrating factor}\label{sec:lineareq}
+
+
+
+One of the most important types of equations we will learn how to solve are
+the so-called
+\sword{linear equations}\index{linear differential equation}\index{differential equation!linear}
+In this lecture we focus on the
+\sword{first order linear equation}\index{first order linear differential equation}\index{linear differential equation!first order}.
+A first order equation is linear if we can put it
+into the form:
+\begin{equation} \label{lineq:eq1}
+y' + p(x) y = f(x) .
+\end{equation}
+Here the word
+``linear'' means linear in $y$ and $y'$;
+no higher powers nor functions of $y$ or $y'$ appear.
+The dependence on $x$ can be more
+complicated.
+
+Solutions of linear equations have nice properties.  For example, the
+solution exists wherever $p(x)$ and $f(x)$ are defined, and has the same
+regularity (read: it is just as nice).  But most importantly for us right now,
+there is a method for solving linear first order equations.
+
+The trick is to rewrite the left hand side
+of \eqref{lineq:eq1} as a derivative of a product of $y$ with another
+function.
+To this end
+we find a function $r(x)$ such that
+\begin{equation*}
+r(x) y' + r(x) p(x) y = \frac{d}{dx}\Bigl[ r(x) y \Bigr] .
+\end{equation*}
+This is the left hand side of
+\eqref{lineq:eq1} multiplied by $r(x)$.  So if we multiply \eqref{lineq:eq1} by
+$r(x)$, we obtain
+\begin{equation*}
+\frac{d}{dx}\Bigl[ r(x) y \Bigr] = r(x)f(x) .
+\end{equation*}
+Now we integrate both sides.
+The right hand side does not depend on $y$ and the left hand side
+is written as a derivative of a function.  Afterwards, we solve for $y$.
+The function $r(x)$ is called the \sword{integrating factor}\index{integrating factor} and the
+method is called the \sword{integrating factor method}.
+
+We are looking for a function $r(x)$, such that if
+we differentiate it, we get the same function back multiplied by $p(x)$.
+That seems like a job for the exponential function!  Let
+\begin{equation*}
+r(x) = e^{\int p(x) \,dx} .
+\end{equation*}
+We compute:
+\begin{align*}
+y' + p(x) y &= f(x) , \\
+e^{\int p(x) \,dx} y' + e^{\int p(x) \,dx} p(x) y & = e^{\int p(x) \,dx} f(x) , \\
+\frac{d}{dx}\left[ e^{\int p(x) \,dx} y \right] & = e^{\int p(x) \,dx} f(x) , \\
+e^{\int p(x) \,dx} y & = \int e^{\int p(x) \,dx} f(x) ~dx + C , \\
+y & = e^{-\int p(x) \,dx} \left( \int e^{\int p(x) \,dx} f(x) ~dx + C \right) .
+\end{align*}
+
+Of course, to get a closed form formula for $y$,
+we need to be able to find a
+closed form formula for the integrals appearing above.\\
+
+\example{egl1}{A linear equation with a closed form solution}{
+Solve
+\begin{equation*}
+y' + 2xy = e^{x-x^2}, \qquad y(0) = -1 .
+\end{equation*}}
+{
+First note that $p(x) = 2x$ and $f(x) = e^{x-x^2}$.
+The integrating factor is $r(x) = e^{\int p(x)\, dx} = e^{x^2}$.
+We multiply both sides of the equation by $r(x)$ to get
+\begin{align*}
+e^{x^2} y' + 2xe^{x^2}y & = e^{x-x^2} e^{x^2} , \\
+\frac{d}{dx} \left[ e^{x^2} y \right] &= e^x .
+\end{align*}
+We integrate
+\begin{align*}
+e^{x^2} y &= e^x +C , \\
+y &= e^{x-x^2} + C e^{-x^2} .
+\end{align*}
+Next, we solve for the initial condition $-1 = y(0) = 1 + C$, so $C=-2$.
+The solution is
+\begin{equation*}
+y = e^{x-x^2} - 2 e^{-x^2} .
+\end{equation*}
+}\\
+
+Note that we do not care which antiderivative we take when computing
+$e^{\int p(x) dx}$.  You can always add a constant of integration,
+but those constants
+will not matter in the end.
+
+\medskip
+
+\noindent{\bf Exercise:} Try it!  Add a constant of integration to the integral in
+the integrating factor and show that the solution you get in the end is the
+same as what we got above.
+
+\medskip
+
+A piece of advice: Do not try to remember the formula itself, that is way too
+hard.  It is easier to remember the process and repeat it.
+
+Since we cannot always evaluate the integrals in closed form, it is useful to
+know how to write the solution in definite integral form.  A definite
+integral is something that
+you can plug into a computer or a calculator.  Suppose we are given
+\begin{equation*}
+y' + p(x) y = f(x) , \qquad y(x_0) = y_0 .
+\end{equation*}
+Look at the solution and write the integrals
+as definite integrals.
+\begin{equation} \label{lei:defsol}
+\boxed{
+~~
+y(x) = e^{-\int_{x_0}^x p(s)\, ds} \left( \int_{x_0}^x e^{\int_{x_0}^t p(s)\, ds}
+f(t) ~dt + y_0 \right).
+~~
+}
+\end{equation}
+You should
+be careful to properly use dummy variables here.  If you now plug such a
+formula into a
+computer or a calculator, it will be happy to give you numerical answers.
+
+\medskip
+
+\noindent{\bf Exercise:} Check that $y(x_0) = y_0$ in formula \eqref{lei:defsol}.
+
+\medskip
+
+\noindent {\bf Exercise:} Write the solution of the following problem
+as a definite integral, but try to simplify as far as you can.  You will not
+be able to find the solution in closed form.
+\begin{equation*}
+y' + y = e^{x^2-x}, \qquad y(0) = 10 .
+\end{equation*}
+
+\medskip
+
+\noindent {\bf Remark:} Before we move on, we should note some interesting properties of linear
+equations.  First, for the linear initial value problem
+$y' + p(x) y = f(x)$, $y(x_0) = y_0$,
+there is always an explicit formula \eqref{lei:defsol} for the
+solution.  Second, it follows
+from the formula \eqref{lei:defsol} that if $p(x)$
+and $f(x)$ are continuous on some interval $(a,b)$, then the 
+solution $y(x)$ exists and is differentiable on $(a,b)$.  Compare
+with the simple nonlinear example we have seen previously, $y'=y^2$,
+and compare to Theorem \ref{slope:picardthm}.
+
+\medskip
+
+Let us discuss a common
+simple application of linear equations.
+This type of 
+problem is used often in real life.
+For example, linear equations are used in
+figuring out the concentration of
+chemicals in bodies of water (rivers and lakes).\\
+
+
+\example{egl3}{An application of linear ODEs}{
+A 100 litre tank contains 10 kilograms of salt dissolved in 60 litres of
+water.  Solution of water and salt (brine) with concentration of 0.1
+kilograms per
+litre is flowing in at the rate of 5 litres a minute.  The solution
+in the tank is well stirred and flows out at a rate of 3 litres a minute.
+How much salt is in the tank when the tank is full?
+}
+{Let us come up with the equation.  Let $x$ denote the kilograms of salt in the tank,
+let $t$ denote the time in minutes.  For a small change $\Delta t$ in
+time, the change in $x$ (denoted $\Delta x$) is approximately
+\begin{equation*}
+\Delta x \approx
+(\text{rate in} \times \text{concentration in}) \Delta t - 
+(\text{rate out} \times \text{concentration out}) \Delta t .
+\end{equation*}
+Dividing through by $\Delta t$ and
+taking the limit $\Delta t \to 0$ we see that
+\begin{equation*}
+\frac{dx}{dt} =
+(\text{rate in} \times \text{concentration in})  - 
+(\text{rate out} \times \text{concentration out}) .
+\end{equation*}
+In our example, we have
+\begin{align*}
+\text{rate in} &= 5 , \\
+\text{concentration in} &= 0.1 , \\
+\text{rate out} &= 3 , \\
+\text{concentration out} &= \frac{x}{\text{volume}} = \frac{x}{60+(5-3)t} .
+\end{align*}
+Our equation is, therefore,
+\begin{equation*}
+\frac{dx}{dt} =
+(5 \times 0.1)  - 
+\left(3 \frac{x}{60+2t}\right) .
+\end{equation*}
+Or in the form \eqref{lineq:eq1}
+\begin{equation*}
+\frac{dx}{dt} +
+\frac{3}{60+2t} x
+=
+0.5 .
+\end{equation*}
+
+Let us solve.  The integrating factor is
+\begin{equation*}
+r(t) = \exp \left( \int \frac{3}{60+2t} dt  \right)
+=
+\exp \left( \frac{3}{2} \ln (60+2t) \right)
+=
+{(60+2t)}^{3/2} .
+\end{equation*}
+
+\mtable{.5}{The tank in Example \ref{egl3}}{lintank}{
+\myincludegraphics[scale=.5]{figures/lin-tank}
+}
+
+We multiply both sides of the equation to get
+\[
+{(60+2t)}^{3/2} \frac{dx}{dt} +
+{(60+2t)}^{3/2} \frac{3}{60+2t} x
+ =
+0.5{(60+2t)}^{3/2} ,
+\]
+and reversing the product rule gives us
+\[
+\frac{d}{dt}\left[
+{(60+2t)}^{3/2} x \right]
+ =
+0.5{(60+2t)}^{3/2} ,
+\]
+so
+\[
+{(60+2t)}^{3/2} x
+ =
+\int 
+0.5{(60+2t)}^{3/2}
+dt
++C.
+\]
+Thus,
+\begin{align*}
+ x
+& =
+{(60+2t)}^{-3/2} \int 
+\frac{
+{(60+2t)}^{3/2}
+}{2}
+dt
++C{(60+2t)}^{-3/2} ,\\
+& =
+{(60+2t)}^{-3/2}
+\frac{1}{10}{(60+2t)}^{5/2}
++C{(60+2t)}^{-3/2} ,\\
+& =
+\frac{60+2t}{10}
++C{(60+2t)}^{-3/2} .
+\end{align*}
+
+We need to find $C$.  We know that at $t=0$, $x=10$.  So
+\begin{equation*}
+10 = x(0)
+=
+\frac{60}{10}
++C{(60)}^{-3/2}
+=
+6
++C{(60)}^{-3/2} ,
+\end{equation*}
+or
+\begin{equation*}
+C=4 ({60}^{3/2}) \approx 1859.03 .
+\end{equation*}
+
+We are interested in $x$ when the tank is full.  So we note that the tank is
+full when $60+2t = 100$, or when $t=20$.  So
+\begin{equation*}
+x(20)= 
+\frac{60+40}{10}
++C{(60+40)}^{-3/2}
+\approx
+10
++1859.03 {(100)}^{-3/2}
+\approx
+11.86 .
+\end{equation*}
+
+The concentration at the end is approximately $\unitfrac[0.1186]{kg}{litre}$ and we started
+with $\dfrac{1}{6}$ or $\unitfrac[0.167]{kg}{litre}$.
+}
+
+\printexercises{exercises/14_05_exercises}
+
+

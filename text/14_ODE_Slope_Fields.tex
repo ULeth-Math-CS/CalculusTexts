@@ -1,0 +1,174 @@
+\section{Slope fields}\label{sec:slopefields}
+
+{\em Note:} you might find the software {\em DFIELD} and {\em PPLANE} useful. You can download the programs at \href{http://math.rice.edu/~dfield/dfpp.html}{http://math.rice.edu/\string~dfield/dfpp.html}. These used to be available as in-browser Java applets, but due to changes in Java security settings, you need to download the programs and run them locally. Both Java and MATLAB versions are available.
+
+Another option is the IODE software which accompanies the lecture notes by Ji\u{r}\'{i} Lebl from which we've borrowed the text for this chapter.
+
+\medskip
+
+As we said, the general first order equation we are studying looks like
+\begin{equation*}
+y' = f(x,y).
+\end{equation*}
+In general, we cannot simply solve these kinds of equations explicitly.
+It would be nice if we could at least figure out the shape and behaviour of
+the solutions, or if we could find approximate solutions.
+
+\subsection*{Slope fields}
+
+Suppose we are able to solve a first order equation of the form $y'=f(x,y)$, obtaining a solution $y=g(x)$. Differential calculus tells us that $y'=g'(x)$ gives us the slope of the tangent line to the curve $y=g(x)$ at the point $(x,g(x))$.  Thus, the equation $y' = f(x,y)$
+gives you a slope at each point 
+in the
+$(x,y)$-plane.  We can plot the slope at lots of points
+as a short line through the point $(x,y)$ with the slope $f(x,y)$.
+See Figure \ref{1.3:fig1}.
+
+\mtable{.75}{Slope field for the equation $y'=xy$}{1.3:fig1}{
+ \myincludegraphics[scale=.45]{figures/1-3-xysl}}
+
+\mtable{.5}{Slope field of $y' = xy$ with a graph of solutions satisfying
+ $y(0) = 0.2$, $y(0) = 0$, and $y(0) = -0.2$.}{1.3:fig2}{
+ \myincludegraphics[scale=.45]{figures/1-3-xysl-sol}
+}
+
+We call this picture the \sword{slope field}\index{slope field} of the equation.
+If we are given a specific initial
+condition $y(x_0) = y_0$, we can look at the
+location $(x_0,y_0)$ and follow the slopes.  See Figure \ref{1.3:fig2}.
+
+By looking at the slope field we can get a lot of information
+about the behaviour of
+solutions.  For
+example, in Figure \ref{1.3:fig2} we can see what the solutions do when the initial conditions
+are $y(0) > 0$, $y(0) = 0$ and $y(0) < 0$.  Note that a small change in the
+initial condition causes quite different behaviour.
+On the other hand, plotting a few solutions of the equation
+$y' = -y$,
+we see that no matter what $y(0)$ is, all solutions tend to zero as $x$
+tends to infinity.
+See Figure \ref{1.3:fig3}.
+
+\mtable{.25}{Slope field of $y' = -y$ with a graph of a few solutions.}{1.3:fig3}{
+\myincludegraphics[scale=.45]{figures/1-3-mysl-sol}}
+
+\subsection*{Existence and uniqueness}
+
+We wish to ask two fundamental questions about the problem
+\begin{equation*}
+y' = f(x,y), \qquad y(x_0) = y_0.
+\end{equation*}
+\begin{enumerate}[label=(\roman*)]
+\item Does a solution \emph{exist}?
+\item Is the solution \emph{unique} (if it exists)?
+\end{enumerate}
+
+What do you think is the answer?
+The answer seems to be yes to both does it not?  Well, pretty much.  But there
+are cases when the answer to either question can be no.
+
+Since generally the equations we encounter in applications
+come from real life situations, it seems
+logical that a solution always exists.
+It also has to be unique if we believe our
+universe is deterministic.  If the solution does not exist, or if it is
+not unique, we have
+probably not devised the correct model.  Hence, it is good to know
+when things go wrong and why.\\
+
+\example{egk1}{An initial value problem with no solution}{
+Attempt to solve:
+\begin{equation*}
+y' = \frac{1}{x}, \qquad y(0) = 0 .
+\end{equation*}}
+{
+Integrate to find the general solution $y = \ln \, \lvert x \rvert + C$.  Note that the
+solution does not exist at $x=0$.  See Figure \ref{1.3:xinvfig}.
+}\\
+
+
+\mtable{.75}{Slope field of $y' = \dfrac{1}{x}$.}{1.3:xinvfig}{
+ \myincludegraphics[scale=.45]{figures/1-3-xinv-sol}
+}
+
+\mtable{.5}{Slope field of $y' = 2 \sqrt{\lvert y \rvert}$ with two
+ solutions satisfying $y(0) = 0$.}{1.3:sqrtfig}{
+ \myincludegraphics[scale=.45]{figures/1-3-sqrt-sol}}
+ 
+\example{egk2}{An initial value problem without a unique solution}{
+Solve:
+\begin{equation*}
+y' = 2 \sqrt{\lvert y \rvert}, \qquad y(0) = 0 .
+\end{equation*}}
+{
+See Figure \ref{1.3:sqrtfig}.
+Note that $y=0$ is a solution.  But another solution is the function
+\begin{equation*}
+y(x) =
+\begin{cases}
+x^2 & \text{ if $x \geq 0$,}\\
+-x^2 & \text{ if $x < 0$.}
+\end{cases}
+\end{equation*}
+}\\
+
+It is hard to tell by staring at the slope field that the
+solution is not
+unique.
+Is there any hope?
+Of course there is.  We have the following theorem,
+known as Picard's theorem%
+
+
+\theorem{slope:picardthm}{Picard's theorem on existence and uniqueness}{%
+\index{existence and uniqueness}\index{Picard's theorem}
+If $f(x,y)$ is continuous (as a function of two
+variables) and $\frac{\partial f}{\partial y}$ exists and is
+continuous near some $(x_0,y_0)$, then a solution to
+\begin{equation*}
+y' = f(x,y), \qquad y(x_0) = y_0,
+\end{equation*}
+exists (at least for some small interval of $x$'s) and is unique.
+}
+
+Note that the problems $y' = \dfrac{1}{x}$, $y(0) = 0$ and 
+$y' = 2 \sqrt{\lvert y \rvert}$, $y(0) = 0$ do not satisfy the hypothesis of the
+theorem.
+Even if we can use the theorem,
+we ought to be careful about this existence business.  It is quite
+possible that the solution only exists for a short while.\\
+
+\mnote{.3}{Picard's Theorem is named after the French mathematician
+\href{http://en.wikipedia.org/wiki/Charles_\%C3\%89mile_Picard}{Charles {\' E}mile Picard}
+(1856 -- 1941)}. 
+
+\example{egk4}{An initial value problem with a ``finite time'' solution}{
+For some constant $A$, solve:
+\begin{equation*}
+y' = y^2, \qquad y(0) = A .
+\end{equation*}}
+{
+We know how to solve this equation.  First assume that $A \not= 0$,
+so $y$ is not equal to zero at least for some $x$ near 0.  So
+$x' = \dfrac{1}{y^2}$, so
+$x = \dfrac{-1}{y} + C$, so $y = \frac{1}{C-x}$.  If $y(0) = A$, then
+$C = \dfrac{1}{A}$ so
+\begin{equation*}
+y = \frac{1}{\dfrac{1}{A} - x} .
+\end{equation*}
+If $A=0$, then $y=0$ is a solution.
+
+For example, when $A=1$
+the solution ``blows up'' at $x=1$.  Hence, the solution does not exist
+for all $x$ even if the equation is nice everywhere.  The equation
+$y' = y^2$ certainly
+looks nice.
+}\\
+
+For most of this
+course we will be interested in equations where existence and
+uniqueness holds, and in fact holds ``globally'' unlike for the equation
+$y'=y^2$.
+%But it is necessary to understand the examples where things fail for the
+%aforementioned reasons.
+\printexercises{exercises/14_03_exercises}
+

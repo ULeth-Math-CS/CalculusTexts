@@ -1,0 +1,21 @@
+{Suppose there are two lakes located on a stream.  Clean
+water flows into the first lake,
+then the water from the first lake flows into the second lake, and then
+water from the second lake flows further downstream.
+The in and out flow from each lake is 500 litres per hour.
+The first lake contains 100 thousand litres of water and the
+second lake contains 200 thousand litres of water.
+A truck with \unit[500]{kg} of toxic substance
+crashes into the first lake.  Assume that the water is being continually
+mixed perfectly by the stream.  a) Find the concentration of toxic substance
+as a function of time in both lakes.  b) When will the
+concentration in the first lake be below \unit[0.001]{kg} per litre?
+c) When will the
+concentration in the second lake be maximal?}
+{(a) The first lake begins with 500 kg of the substance at time $t=0$, and no additional substance is added. If $x(t)$ denotes the amount of toxic substance at time $t$, we have $x(0)=500$. Since water flows out of the lake at a rate of 500 litres per hour, and there are 100,000 in the lake (this amount is assumed constant) we have $x'(t) = -\frac{500}{100000}x(t)$. Thus, $x(t) = 500e^{-t/200}$. Let $y(t)$ denote the amount of toxic substance in the second lake. We have $y(0)=0$. The substance is flowing in at a rate of $\frac{x(t)}{100000} kg/l\times 500 l/hour = \frac{x(t)}{200} = \frac{5}{2}e^{-t/200}$ kg/hour. The second lake has a volume of 200,000 litres, so the concentration of the substance in the second lake is $y(t)/200000$, and the water flows out at a rate of 500 litres per hour. This gives us the equation
+\[
+y'(t) = \frac{5}{2}e^{-t/200}-\frac{1}{400}y(t),
+\]
+which yields the solution $y(t) = 500e^{-t/400}-500e^{-3t/400}$.\\
+(b) A concentration of 0.001 kg per litre corresponds to $x(t) = 100$, since there are 100,000 litres in the first lake. Setting $x(t)=100$ and solving for $t$ gives $t=200\ln 5 \approx 322$ hours.
+(c) The maximum concentration in the second lake occurs after $t=200\ln 3 \approx 220$ hours.}

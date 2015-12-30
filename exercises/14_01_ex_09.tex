@@ -1,0 +1,10 @@
+{Verify that $x = C_1 e^{-t} + C_2 e^{2t}$ is a solution to $x'' - x' -2 x =
+0$.  Find $C_1$ and $C_2$ to solve for the initial conditions $x(0) = 10$
+and $x'(0) = 0$.}
+{With $x(t) = C_1e^{-t}+C_2e^{2t}$ we have
+\begin{align*}
+x'(t) & = -C_1e^{-t}+2C_2e^{2t} \text{ and}\\
+x''(t) & = C_1e^{-t}+4C_2e^{2t}.
+\end{align*}
+Verification is left to the student. Setting $x'(0)=0$ gives $C_1=2C_2$, and putting this into $x(0)=10$ gives $2C_2+C_2=10$, so $C_2=10/3$ and $C_1 = 20/3$.
+}
