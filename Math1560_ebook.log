@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2015.11.18)  14 DEC 2015 14:59
+This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2015.11.18)  7 JAN 2016 09:08
 entering extended mode
 **Math1560_ebook.tex
 (Math1560_ebook.tex
@@ -8353,67 +8353,16 @@ File: figures/fig02_04_ex_45a.pdf Graphic file (type QTm)
 
 
 
-]
-File: Calculus.pdf Graphic file (type QTm)
- <use  "Calculus.pdf" >
-File: Calculus.pdf Graphic file (type QTm)
+] (Math1560_ebook.ind [13
 
-<use  "Calculus.pdf" >
-File: Calculus.pdf Graphic file (type QTm)
- <use  "Calculus.pdf"  page863>
-File: Calculus.pdf Graphic file (type QTm)
-
-<use  "Calculus.pdf"  page863>
-File: Calculus.pdf Graphic file (type QTm)
- <use  "Calculus.pdf"  page863>
-File: Calculus.pdf Graphic file (type QTm)
-
-<use  "Calculus.pdf"  page863>
-File: Calculus.pdf Graphic file (type QTm)
- <use  "Calculus.pdf"  page863> [13]
-File: Calculus.pdf Graphic file (type QTm)
-
-<use  "Calculus.pdf"  page864>
-File: Calculus.pdf Graphic file (type QTm)
- <use  "Calculus.pdf"  page864>
-File: Calculus.pdf Graphic file (type QTm)
-
-<use  "Calculus.pdf"  page864> [14]
-File: Calculus.pdf Graphic file (type QTm)
- <use  "Calculus.pdf"  page865>
-File: Calculus.pdf Graphic file (type QTm)
-
-<use  "Calculus.pdf"  page865>
-File: Calculus.pdf Graphic file (type QTm)
- <use  "Calculus.pdf"  page865> [15]
-File: Calculus.pdf Graphic file (type QTm)
-
-<use  "Calculus.pdf"  page866>
-File: Calculus.pdf Graphic file (type QTm)
- <use  "Calculus.pdf"  page866>
-File: Calculus.pdf Graphic file (type QTm)
-
-<use  "Calculus.pdf"  page866> [16]
-File: Calculus.pdf Graphic file (type QTm)
- <use  "Calculus.pdf"  page867>
-File: Calculus.pdf Graphic file (type QTm)
-
-<use  "Calculus.pdf"  page867>
-File: Calculus.pdf Graphic file (type QTm)
- <use  "Calculus.pdf"  page867> [17]
-File: Calculus.pdf Graphic file (type QTm)
-
-<use  "Calculus.pdf"  page868>
-File: Calculus.pdf Graphic file (type QTm)
- <use  "Calculus.pdf"  page868>
-File: Calculus.pdf Graphic file (type QTm)
-
-<use  "Calculus.pdf"  page868> [18]
+] [14])
 (text/Inside_Cover_Of_The_Text_Material_Complete.tex
 Requested font "Calibri/B/OT:script=latn;language=DFLT;mapping=tex-text;mapping
 =tex-text;" at 8.0pt
  -> C:/WINDOWS/Fonts/calibrib.ttf
- [19]
+ [15
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 181--182
 
  []
@@ -8433,11 +8382,11 @@ Overfull \hbox (9.8515pt too wide) in paragraph at lines 233--240
 [][] 
  []
 
-[20
+[16
 
-] [21
+] [17
 
-] [22
+] [18
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 643--647
@@ -8449,11 +8398,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 653--659
 
  []
 
-[23
+[19
 
 ])
-Package atenddvi Info: Last page = 294.
- [24
+Package atenddvi Info: Last page = 290.
+ [20
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 343.
@@ -8465,11 +8414,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 343.
  ) 
 Here is how much of TeX's memory you used:
  53673 strings out of 428755
- 1133440 string characters out of 3164219
- 1497187 words of memory out of 3000000
- 54635 multiletter control sequences out of 15000+200000
+ 1133444 string characters out of 3164219
+ 1497116 words of memory out of 3000000
+ 54634 multiletter control sequences out of 15000+200000
  15093 words of font info for 134 fonts, out of 3000000 for 9000
  1096 hyphenation exceptions out of 8191
  62i,24n,90p,10387b,939s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Math1560_ebook.pdf (294 pages).
+Output written on Math1560_ebook.pdf (290 pages).
