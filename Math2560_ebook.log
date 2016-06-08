@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2015.11.18)  14 DEC 2015 15:02
+This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2015.11.18)  6 JUN 2016 15:06
 entering extended mode
 **Math2560_ebook.tex
 (Math2560_ebook.tex
@@ -28,7 +28,7 @@ File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\xr.sty"
 Package: xr 1994/05/28 v5.02 eXternal References (DPC)
 )
-Package xr Info: IMPORTING LABELS FROM Math1560_ebook.aux on input line 22.
+Package xr Info: IMPORTING LABELS FROM Math1560_ebook.aux on input line 23.
 
 (headers/Page_Size_Calculus.tex
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
@@ -1480,24 +1480,24 @@ ex-text;" at 10.0pt
 \symLatin:m:it=\mathgroup10
 \symGreek:m:n=\mathgroup11
 \symGreek:m:it=\mathgroup12
-LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 42.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 43.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
 (Font)                  EU1/Calibri(0)/m/n --> EU1/Calibri(0)/bx/n on input lin
-e 42.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 42.
+e 43.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 43.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> EU1/Calibri(0)/m/it on input line 42.
+(Font)                  OT1/cmr/m/it --> EU1/Calibri(0)/m/it on input line 43.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> EU1/Calibri(0)/m/it on input line 42.
+(Font)                  OT1/cmr/bx/it --> EU1/Calibri(0)/m/it on input line 43.
 
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 42.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 43.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> EU1/Calibri(0)/bx/n on input line 42.
+(Font)                  OT1/cmr/bx/n --> EU1/Calibri(0)/bx/n on input line 43.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> EU1/Calibri(0)/bx/n on input line 42.
+(Font)                  OT1/cmr/bx/n --> EU1/Calibri(0)/bx/n on input line 43.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  EU1/Calibri(0)/m/it --> EU1/Calibri(0)/bx/it on input l
-ine 42.
+ine 43.
 \symOperators:m:n=\mathgroup13
 Requested font "[cmmi10]" at 10.0pt
  -> C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
@@ -1555,48 +1555,48 @@ Requested font "[cmmi10]/I/OT" at 10.0pt
 . and font adjustment code:
 . 
 .................................................
-LaTeX Font Info:    Redeclaring symbol font `Greek:m:n' on input line 42.
+LaTeX Font Info:    Redeclaring symbol font `Greek:m:n' on input line 43.
 LaTeX Font Info:    Overwriting symbol font `Greek:m:n' in version `normal'
 (Font)                  EU1/Calibri(0)/m/n --> EU1/[cmmi10](0)/m/n on input lin
-e 42.
+e 43.
 LaTeX Font Info:    Overwriting symbol font `Greek:m:n' in version `bold'
 (Font)                  EU1/Calibri(0)/m/n --> EU1/[cmmi10](0)/m/n on input lin
-e 42.
-LaTeX Font Info:    Redeclaring symbol font `Greek:m:it' on input line 42.
+e 43.
+LaTeX Font Info:    Redeclaring symbol font `Greek:m:it' on input line 43.
 LaTeX Font Info:    Overwriting symbol font `Greek:m:it' in version `normal'
 (Font)                  EU1/Calibri(0)/m/it --> EU1/[cmmi10](0)/m/it on input l
-ine 42.
+ine 43.
 LaTeX Font Info:    Overwriting symbol font `Greek:m:it' in version `bold'
 (Font)                  EU1/Calibri(0)/m/it --> EU1/[cmmi10](0)/m/it on input l
-ine 42.
+ine 43.
 Requested font "[cmmi10]/OT:mapping=tex-text;" at 10.0pt
  -> C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 
 (Math2560_ebook.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 60.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 60.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 61.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 61.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\tipa\t3cmr.fd"
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    ... okay on input line 61.
 
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1633,7 +1633,7 @@ LaTeX Font Info:    ... okay on input line 60.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box90
-Package hyperref Info: Link coloring OFF on input line 60.
+Package hyperref Info: Link coloring OFF on input line 61.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1643,9 +1643,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count330
 )
-LaTeX Info: Redefining \ref on input line 60.
-LaTeX Info: Redefining \pageref on input line 60.
-LaTeX Info: Redefining \nameref on input line 60.
+LaTeX Info: Redefining \ref on input line 61.
+LaTeX Info: Redefining \pageref on input line 61.
+LaTeX Info: Redefining \nameref on input line 61.
 
 (Math2560_ebook.out) (Math2560_ebook.out)
 \@outlinefile=\write6
@@ -1911,9 +1911,6 @@ Chapter 1.
 Requested font "Calibri/B/OT:script=latn;language=DFLT;mapping=tex-text;mapping
 =tex-text;" at 14.4pt
  -> C:/WINDOWS/Fonts/calibrib.ttf
-
-Underfull \vbox (badness 1616) has occurred while \output is active []
-
  [1
 
 
@@ -1925,17 +1922,17 @@ Underfull \vbox (badness 1616) has occurred while \output is active []
 
 
 ]
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 47--48
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 49--50
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
@@ -1947,32 +1944,27 @@ Requested font "Calibri/B/OT:script=latn;language=DFLT;mapping=tex-text;mapping
 =tex-text;+smcp;" at 9.0pt
  -> C:/WINDOWS/Fonts/calibrib.ttf
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
 
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 84--85
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 86--87
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
-
- []
-
-[3]
 Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
@@ -1982,7 +1974,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--100
  []
 
 
-Overfull \hbox (0.14224pt too wide) in paragraph at lines 112--112
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
+
+ []
+
+
+Overfull \hbox (0.14224pt too wide) in paragraph at lines 114--114
 []$[]$\EU1/Calibri(0)/m/n/10 There is not a composition of function here to exp
 loit; rather,
  []
@@ -1991,43 +1988,43 @@ loit; rather,
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4]
-Underfull \hbox (badness 10000) in paragraph at lines 112--113
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
 
 
-Overfull \hbox (1.06784pt too wide) in paragraph at lines 153--154
+Overfull \hbox (1.06784pt too wide) in paragraph at lines 155--156
 []\EU1/Calibri(0)/m/n/10 The next three examples will help fill in some missing
  pieces of our antideriva-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--176
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 192--194
+Underfull \hbox (badness 10000) in paragraph at lines 194--196
 
  []
 
@@ -2065,18 +2062,13 @@ Requested font "[cmmi10]/I/OT:mapping=tex-text;" at 9.0pt
 Requested font "[cmmi10]/I/OT:mapping=tex-text;" at 6.0pt
  -> C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 
-Overfull \hbox (1.50717pt too wide) in paragraph at lines 212--212
+Overfull \hbox (1.50717pt too wide) in paragraph at lines 214--214
 []$[]$ $[]$ 
  []
 
 
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 212--213
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 214--215
 [][][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 212--213
-
  []
 
 
@@ -2084,13 +2076,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 214--215
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--217
+
+ []
+
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 233--234
+Underfull \hbox (badness 10000) in paragraph at lines 235--236
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--239
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
 
  []
 
@@ -2098,85 +2095,80 @@ Underfull \hbox (badness 10000) in paragraph at lines 238--239
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
-Underfull \hbox (badness 10000) in paragraph at lines 259--260
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--284
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 289--290
+Underfull \hbox (badness 10000) in paragraph at lines 291--292
 
  []
 
 
-Overfull \hbox (1.98653pt too wide) in paragraph at lines 307--307
+Overfull \hbox (1.98653pt too wide) in paragraph at lines 309--309
  $[]$ $[]$\EU1/Calibri(0)/bx/n/10 Integrating by substitution: inverse trigonom
 etric functions 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--308
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
 
  []
 
 
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 325--326
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 327--328
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--326
-
- []
-
-[10]
 Underfull \hbox (badness 10000) in paragraph at lines 327--328
 
  []
 
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 329--330
 
-Overfull \hbox (1.98653pt too wide) in paragraph at lines 339--339
+ []
+
+
+Overfull \hbox (1.98653pt too wide) in paragraph at lines 341--341
  $[]$ $[]$\EU1/Calibri(0)/bx/n/10 Integrating by substitution: inverse trigonom
 etric functions 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--339
+Underfull \hbox (badness 10000) in paragraph at lines 341--341
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--340
+Underfull \hbox (badness 10000) in paragraph at lines 341--342
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 342--343
+Underfull \hbox (badness 10000) in paragraph at lines 344--345
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 363--364
+Underfull \hbox (badness 10000) in paragraph at lines 365--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 384--385
+Underfull \hbox (badness 10000) in paragraph at lines 386--387
 
  []
 
 [12]
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 402--403
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 404--405
 [][][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 402--403
-
  []
 
 
@@ -2185,7 +2177,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 404--405
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 436--437
+Underfull \hbox (badness 10000) in paragraph at lines 406--407
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 438--439
 
  []
 
@@ -2198,7 +2195,7 @@ Overfull \hbox (1.99965pt too wide) has occurred while \output is active
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 468--469
+Underfull \hbox (badness 10000) in paragraph at lines 470--471
 
  []
 
@@ -4239,52 +4236,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--133
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--136
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--136
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--136
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--136
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--136
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--136
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--136
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--136
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--136
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--136
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
 
  []
 
@@ -5969,12 +5966,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 283--284
 Chapter 4.
 (text/14_ODE_Intro.tex
 File: figures/intro-plots-alt.pdf Graphic file (type QTm)
- <use  "figures/intro-plots-alt.pdf" >
-Overfull \hbox (14.69847pt too wide) has occurred while \output is active
- [][] 
- []
-
-[185
+ <use  "figures/intro-plots-alt.pdf" > [185
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 162--164
@@ -5993,12 +5985,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 208--209
  []
 
 File: figures/intro-plotbact.pdf Graphic file (type QTm)
-<use  "figures/intro-plotbact.pdf" >
-Overfull \hbox (5.19725pt too wide) has occurred while \output is active
- [][] 
- []
-
-[187]
+<use  "figures/intro-plotbact.pdf" > [187]
 Overfull \hbox (5.57764pt too wide) in paragraph at lines 319--326
 \EU1/Calibri(0)/m/n/10 have some nice familiar properties such as $[] [] \OT1/c
 mr/m/n/10 = []$\EU1/Calibri(0)/m/n/10 , $[] [] \OT1/cmr/m/n/10 = []$\EU1/Calibr
@@ -6162,23 +6149,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--77
 
 File: figures/1-3-xysl.pdf Graphic file (type QTm)
 <use  "figures/1-3-xysl.pdf" >
-Overfull \hbox (15.59846pt too wide) has occurred while \output is active
- [][][] 
- []
-
 File: figures/1-3-xysl-sol.pdf Graphic file (type QTm)
-<use  "figures/1-3-xysl-sol.pdf" >
-Overfull \hbox (15.59846pt too wide) has occurred while \output is active
- [][] 
- []
-
+ <use  "figures/1-3-xysl-sol.pdf" >
 File: figures/1-3-mysl-sol.pdf Graphic file (type QTm)
-<use  "figures/1-3-mysl-sol.pdf" >
-Overfull \hbox (15.59846pt too wide) has occurred while \output is active
- [][][] 
- []
 
-[195
+<use  "figures/1-3-mysl-sol.pdf" > [195
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 86--87
@@ -6212,17 +6187,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
 File: figures/1-3-xinv-sol.pdf Graphic file (type QTm)
 <use  "figures/1-3-xinv-sol.pdf" >
-Overfull \hbox (15.59846pt too wide) has occurred while \output is active
- [][] 
- []
-
 File: figures/1-3-sqrt-sol.pdf Graphic file (type QTm)
-<use  "figures/1-3-sqrt-sol.pdf" >
-Overfull \hbox (15.59846pt too wide) has occurred while \output is active
- [][][] 
- []
-
-
+ <use  "figures/1-3-sqrt-sol.pdf" >
 Underfull \hbox (badness 4819) has occurred while \output is active
 []\EU1/Calibri(0)/m/n/9 Picard’s Theorem is named after the
  []
@@ -6334,7 +6300,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--141
  []
 
 [200]
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
+Underfull \hbox (badness 10000) in paragraph at lines 206--207
 
  []
 
@@ -6414,7 +6380,7 @@ LaTeX Warning: Command \nobreakspace invalid in math mode on input line 121.
 LaTeX Warning: Command \nobreakspace invalid in math mode on input line 121.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--163
+Underfull \hbox (badness 10000) in paragraph at lines 157--164
 
  []
 
@@ -6469,7 +6435,7 @@ File: figures/euler-step1.pdf Graphic file (type QTm)
 <use  "figures/euler-step1.pdf" >
 File: figures/euler-step2.pdf Graphic file (type QTm)
  <use  "figures/euler-step2.pdf" >
-Overfull \hbox (30.74844pt too wide) has occurred while \output is active
+Overfull \hbox (4.49954pt too wide) has occurred while \output is active
  [][] 
  []
 
@@ -6479,12 +6445,7 @@ Underfull \hbox (badness 1014) has occurred while \output is active
  []
 
 File: figures/euler-step12-sol.pdf Graphic file (type QTm)
-<use  "figures/euler-step12-sol.pdf" >
-Overfull \hbox (18.74844pt too wide) has occurred while \output is active
- [][] 
- []
-
-[209
+<use  "figures/euler-step12-sol.pdf" > [209
 
 ] [210] [211]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -9604,10 +9565,10 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 321.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 321.
  ) 
 Here is how much of TeX's memory you used:
- 55211 strings out of 428755
- 1167776 string characters out of 3164219
- 1524030 words of memory out of 3000000
- 56013 multiletter control sequences out of 15000+200000
+ 55213 strings out of 428755
+ 1167794 string characters out of 3164219
+ 1523040 words of memory out of 3000000
+ 56016 multiletter control sequences out of 15000+200000
  16412 words of font info for 142 fonts, out of 3000000 for 9000
  1096 hyphenation exceptions out of 8191
  63i,26n,127p,10387b,969s stack positions out of 5000i,500n,10000p,200000b,50000s

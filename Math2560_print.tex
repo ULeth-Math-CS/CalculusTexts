@@ -14,7 +14,8 @@
 \setboolean{printlabelname}{false}
 \ifthenelse{\boolean{printlabelname}}{\usepackage[notref,notcite]{showkeys}}{}
 
-
+\newboolean{colour}
+\setboolean{colour}{false}
 
 %% end detour
 %\usepackage{amsmath}
@@ -58,9 +59,7 @@
 %%%\tracingonline=1
 \begin{document}
 
-
-%\printincolor
-\printinblackandwhite
+\ifthenelse{\boolean{colour}}{\printincolor}{\printinblackandwhite}
 
 %\printexercisenames
 %\printallanswers
@@ -171,8 +170,18 @@
 \input{text/07_Disk_Washer_Method}
 \input{text/07_Shell_Method}
 \input{text/07_Arc_Length}
-\input{text/07_Work}
-\input{text/07_Fluid_Force}
+%\input{text/07_Work}
+%\input{text/07_Fluid_Force}
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{Differential Equations}
+\thispagestyle{empty}
+\input{text/14_ODE_Intro}
+\input{text/14_ODE_Integral_Sol}
+%\input{text/14_ODE_Slope_Fields}
+\input{text/14_ODE_Separable_Eq}
+\input{text/14_ODE_Linear_Eq}
+%\input{text/14_ODE_Euler}
 
 %%\addtocounter{chapter}{7}
 \clearpage{\pagestyle{empty}\cleardoublepage}
@@ -192,15 +201,7 @@
 %%%
 %%%    Begins Calc III
 %
-\clearpage{\pagestyle{empty}\cleardoublepage}
-\chapter{Differential Equations}
-\thispagestyle{empty}
-\input{text/14_ODE_Intro}
-\input{text/14_ODE_Integral_Sol}
-\input{text/14_ODE_Slope_Fields}
-\input{text/14_ODE_Separable_Eq}
-\input{text/14_ODE_Linear_Eq}
-\input{text/14_ODE_Euler}
+
 
 %%
 %%%\addtocounter{chapter}{8}

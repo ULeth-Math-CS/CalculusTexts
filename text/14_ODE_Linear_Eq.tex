@@ -140,6 +140,7 @@ y' + y = e^{x^2-x}, \qquad y(0) = 10 .
 
 \medskip
 
+\ifthenelse{\boolean{colour}}{
 \noindent {\bf Remark:} Before we move on, we should note some interesting properties of linear
 equations.  First, for the linear initial value problem
 $y' + p(x) y = f(x)$, $y(x_0) = y_0$,
@@ -149,7 +150,7 @@ from the formula \eqref{lei:defsol} that if $p(x)$
 and $f(x)$ are continuous on some interval $(a,b)$, then the 
 solution $y(x)$ exists and is differentiable on $(a,b)$.  Compare
 with the simple nonlinear example we have seen previously, $y'=y^2$,
-and compare to Theorem \ref{slope:picardthm}.
+and compare to Theorem \ref{slope:picardthm}.}{}
 
 \medskip
 

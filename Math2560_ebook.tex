@@ -14,7 +14,8 @@
 \setboolean{printlabelname}{false}
 \ifthenelse{\boolean{printlabelname}}{\usepackage[notref,notcite]{showkeys}}{}
 
-
+\newboolean{colour}
+\setboolean{colour}{true}
 
 %% end detour
 %\usepackage{amsmath}
@@ -60,8 +61,7 @@
 \begin{document}
 
 
-\printincolor
-%\printinblackandwhite
+\ifthenelse{\boolean{colour}}{\printincolor}{\printinblackandwhite}
 
 %\printexercisenames
 %\printallanswers

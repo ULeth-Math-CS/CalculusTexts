@@ -46,313 +46,297 @@
 \indexentry{integration!surface area|hyperpage}{86}
 \indexentry{surface area!solid of revolution|hyperpage}{86}
 \indexentry{Gabriel's Horn|hyperpage}{88}
-\indexentry{integration!work|hyperpage}{91}
-\indexentry{work|hyperpage}{91}
-\indexentry{Hooke's Law|hyperpage}{94}
-\indexentry{fluid pressure/force|hyperpage}{100}
-\indexentry{integration!fluid force|hyperpage}{100}
-\indexentry{fluid pressure/force|hyperpage}{102}
-\indexentry{integration!fluid force|hyperpage}{102}
-\indexentry{factorial|hyperpage}{107}
-\indexentry{aa@$"!$|hyperpage}{107}
-\indexentry{sequences!definition|hyperpage}{107}
-\indexentry{limit!of sequence|hyperpage}{109}
-\indexentry{sequences!limit|hyperpage}{109}
-\indexentry{convergence!of sequence|hyperpage}{109}
-\indexentry{divergence!of sequence|hyperpage}{109}
-\indexentry{sequences!convergent|hyperpage}{109}
-\indexentry{sequences!divergent|hyperpage}{109}
-\indexentry{Absolute Value Theorem|hyperpage}{110}
-\indexentry{limit!Absolute Value Theorem|hyperpage}{110}
-\indexentry{sequence!Absolute Value Theorem|hyperpage}{110}
-\indexentry{sequences!limit properties|hyperpage}{111}
-\indexentry{sequences!boundedness|hyperpage}{112}
-\indexentry{bounded sequence|hyperpage}{112}
-\indexentry{unbounded sequence|hyperpage}{112}
-\indexentry{bounded sequence!convergence|hyperpage}{113}
+\indexentry{dependent variable|hyperpage}{91}
+\indexentry{independent variable|hyperpage}{91}
+\indexentry{differential equation|hyperpage}{91}
+\indexentry{differential equation!first order|hyperpage}{91}
+\indexentry{differential equation!solution|hyperpage}{91}
+\indexentry{solution|hyperpage}{91}
+\indexentry{ordinary differential equation|hyperpage}{92}
+\indexentry{differential equation!ordinary differential equation|hyperpage}{92}
+\indexentry{partial differential equation|hyperpage}{92}
+\indexentry{differential equation!partial differential equation|hyperpage}{92}
+\indexentry{mathematical model|hyperpage}{92}
+\indexentry{exponential growth model|hyperpage}{92}
+\indexentry{initial condition|hyperpage}{93}
+\indexentry{differential equation!initial condition|hyperpage}{93}
+\indexentry{general solution|hyperpage}{93}
+\indexentry{solution!general|hyperpage}{93}
+\indexentry{particular solution|hyperpage}{93}
+\indexentry{second order differential equation|hyperpage}{94}
+\indexentry{catenary|hyperpage}{94}
+\indexentry{indefinite integral|hyperpage}{96}
+\indexentry{antiderivative|hyperpage}{96}
+\indexentry{Leibniz notation|hyperpage}{97}
+\indexentry{velocity|hyperpage}{98}
+\indexentry{acceleration|hyperpage}{98}
+\indexentry{distance|hyperpage}{98}
+\indexentry{differential equation!separable|hyperpage}{101}
+\indexentry{separable ODE|hyperpage}{101}
+\indexentry{Leibniz notation|hyperpage}{101}
+\indexentry{implicit solution|hyperpage}{102}
+\indexentry{solution!implicit|hyperpage}{102}
+\indexentry{singular solution|hyperpage}{103}
+\indexentry{Newton's law of cooling|hyperpage}{103}
+\indexentry{linear differential equation|hyperpage}{106}
+\indexentry{differential equation!linear|hyperpage}{106}
+\indexentry{first order linear differential equation|hyperpage}{106}
+\indexentry{linear differential equation!first order|hyperpage}{106}
+\indexentry{integrating factor|hyperpage}{106}
+\indexentry{Newton's law of cooling|hyperpage}{110}
+\indexentry{factorial|hyperpage}{111}
+\indexentry{aa@$"!$|hyperpage}{111}
+\indexentry{sequences!definition|hyperpage}{111}
+\indexentry{limit!of sequence|hyperpage}{113}
+\indexentry{sequences!limit|hyperpage}{113}
 \indexentry{convergence!of sequence|hyperpage}{113}
+\indexentry{divergence!of sequence|hyperpage}{113}
 \indexentry{sequences!convergent|hyperpage}{113}
-\indexentry{sequences!monotonic|hyperpage}{114}
-\indexentry{monotonic sequence|hyperpage}{114}
-\indexentry{sequences!convergent|hyperpage}{116}
-\indexentry{convergence!of monotonic sequences|hyperpage}{116}
-\indexentry{series!definition|hyperpage}{119}
-\indexentry{series!partial sums|hyperpage}{119}
-\indexentry{series!convergent|hyperpage}{119}
-\indexentry{series!divergent|hyperpage}{119}
-\indexentry{convergence!of series|hyperpage}{119}
-\indexentry{divergence!of series|hyperpage}{119}
-\indexentry{series!geometric|hyperpage}{121}
-\indexentry{geometric series|hyperpage}{121}
-\indexentry{series!geometric|hyperpage}{121}
-\indexentry{geometric series|hyperpage}{121}
-\indexentry{convergence!of geometric series|hyperpage}{121}
-\indexentry{divergence!of geometric series|hyperpage}{121}
-\indexentry{series!p@$p$-series|hyperpage}{122}
-\indexentry{p@$p$-series|hyperpage}{122}
-\indexentry{series!p@$p$-series|hyperpage}{122}
-\indexentry{p@$p$-series|hyperpage}{122}
-\indexentry{convergence!of p@of $p$-series|hyperpage}{122}
-\indexentry{divergence!of p@of $p$-series|hyperpage}{122}
-\indexentry{series!telescoping|hyperpage}{123}
-\indexentry{telescoping series|hyperpage}{123}
-\indexentry{series!telescoping|hyperpage}{124}
-\indexentry{telescoping series|hyperpage}{124}
-\indexentry{Constant Multiple Rule!of series|hyperpage}{125}
-\indexentry{series!properties|hyperpage}{125}
-\indexentry{Sum/Difference Rule!of series|hyperpage}{125}
-\indexentry{Harmonic Series|hyperpage}{126}
-\indexentry{Alternating Harmonic Series|hyperpage}{126}
-\indexentry{series!nth@$n^\text  {th}$--term test|hyperpage}{127}
-\indexentry{nth@$n^\text  {th}$--term test|hyperpage}{127}
-\indexentry{convergence!nth@$n^\text  {th}$--term test|hyperpage}{127}
-\indexentry{divergence!nth@$n^\text  {th}$--term test|hyperpage}{127}
-\indexentry{series!Integral Test|hyperpage}{132}
-\indexentry{Integral Test|hyperpage}{132}
-\indexentry{convergence!Integral Test|hyperpage}{132}
-\indexentry{divergence!Integral Test|hyperpage}{132}
-\indexentry{sequence!positive|hyperpage}{134}
-\indexentry{series!Direct Comparison Test|hyperpage}{134}
-\indexentry{Direct Comparison Test!for series|hyperpage}{134}
-\indexentry{convergence!Direct Comparison Test|hyperpage}{134}
-\indexentry{divergence!Direct Comparison Test|hyperpage}{134}
-\indexentry{series!Limit Comparison Test|hyperpage}{135}
-\indexentry{Limit Comparison Test!for series|hyperpage}{135}
-\indexentry{convergence!Limit Comparison Test|hyperpage}{135}
-\indexentry{divergence!Limit Comparison Test|hyperpage}{135}
-\indexentry{series!Ratio Comparison Test|hyperpage}{140}
-\indexentry{Ratio Comparison Test!for series|hyperpage}{140}
-\indexentry{convergence!Ratio Comparison Test|hyperpage}{140}
-\indexentry{divergence!Ratio Comparison Test|hyperpage}{140}
-\indexentry{series!Root Comparison Test|hyperpage}{142}
-\indexentry{Root Comparison Test!for series|hyperpage}{142}
-\indexentry{convergence!Root Comparison Test|hyperpage}{142}
-\indexentry{divergence!Root Comparison Test|hyperpage}{142}
-\indexentry{series!alternating|hyperpage}{145}
-\indexentry{series!Alternating Series Test|hyperpage}{145}
-\indexentry{Alternating Series Test!for series|hyperpage}{145}
-\indexentry{convergence!Alternating Series Test|hyperpage}{145}
-\indexentry{divergence!Alternating Series Test|hyperpage}{145}
-\indexentry{series!alternating!Approximation Theorem|hyperpage}{147}
-\indexentry{Alternating Harmonic Series|hyperpage}{148}
-\indexentry{convergence!absolute|hyperpage}{149}
-\indexentry{convergence!conditional|hyperpage}{149}
-\indexentry{series!absolute convergence|hyperpage}{149}
-\indexentry{series!conditional convergence|hyperpage}{149}
-\indexentry{rearrangements of series|hyperpage}{150}
-\indexentry{series!rearrangements|hyperpage}{150}
-\indexentry{convergence!absolute|hyperpage}{150}
-\indexentry{Absolute Convergence Theorem|hyperpage}{150}
-\indexentry{series!Absolute Convergence Theorem|hyperpage}{150}
-\indexentry{rearrangements of series|hyperpage}{150}
-\indexentry{series!rearrangements|hyperpage}{150}
-\indexentry{power series|hyperpage}{154}
-\indexentry{series!power|hyperpage}{154}
-\indexentry{convergence!of power series|hyperpage}{155}
-\indexentry{power series!convergence|hyperpage}{155}
-\indexentry{series!power|hyperpage}{155}
-\indexentry{convergence!radius of|hyperpage}{155}
-\indexentry{convergence!interval of|hyperpage}{155}
-\indexentry{radius of convergence|hyperpage}{155}
-\indexentry{interval of convergence|hyperpage}{155}
-\indexentry{series!radius of convergence|hyperpage}{155}
-\indexentry{series!interval of convergence|hyperpage}{155}
-\indexentry{series!power!derivatives and integrals|hyperpage}{157}
-\indexentry{integration!of power series|hyperpage}{157}
-\indexentry{derivative!power series|hyperpage}{157}
-\indexentry{power series!derivatives and integrals|hyperpage}{157}
-\indexentry{Alternating Harmonic Series|hyperpage}{159}
-\indexentry{Taylor Polynomial!definition|hyperpage}{165}
-\indexentry{Maclaurin Polynomial!definition|hyperpage}{165}
-\indexentry{Maclaurin Polynomial|hyperindexformat{\see{Taylor Polynomial}}}{165}
-\indexentry{Taylor Polynomial!Taylor's Theorem|hyperpage}{167}
-\indexentry{Taylor's Theorem|hyperpage}{167}
-\indexentry{Taylor Series!definition|hyperpage}{174}
-\indexentry{Maclaurin Series!definition|hyperpage}{174}
-\indexentry{Maclaurin Series|hyperindexformat{\see{Taylor Series}}}{174}
-\indexentry{series!Taylor|hyperpage}{174}
-\indexentry{series!Maclaurin|hyperpage}{174}
-\indexentry{Taylor Series!equality with generating function|hyperpage}{175}
-\indexentry{analytic function|hyperpage}{176}
-\indexentry{Binomial Series|hyperpage}{176}
-\indexentry{series!Binomial|hyperpage}{176}
-\indexentry{Taylor Series!common series|hyperpage}{178}
-\indexentry{power series!algebra of|hyperpage}{178}
-\indexentry{dependent variable|hyperpage}{185}
-\indexentry{independent variable|hyperpage}{185}
-\indexentry{differential equation|hyperpage}{185}
-\indexentry{differential equation!first order|hyperpage}{185}
-\indexentry{differential equation!solution|hyperpage}{185}
-\indexentry{solution|hyperpage}{185}
-\indexentry{ordinary differential equation|hyperpage}{186}
-\indexentry{differential equation!ordinary differential equation|hyperpage}{186}
-\indexentry{partial differential equation|hyperpage}{186}
-\indexentry{differential equation!partial differential equation|hyperpage}{186}
-\indexentry{mathematical model|hyperpage}{186}
-\indexentry{exponential growth model|hyperpage}{186}
-\indexentry{initial condition|hyperpage}{187}
-\indexentry{differential equation!initial condition|hyperpage}{187}
-\indexentry{general solution|hyperpage}{187}
-\indexentry{solution!general|hyperpage}{187}
-\indexentry{particular solution|hyperpage}{187}
-\indexentry{second order differential equation|hyperpage}{188}
-\indexentry{catenary|hyperpage}{188}
-\indexentry{indefinite integral|hyperpage}{190}
-\indexentry{antiderivative|hyperpage}{190}
-\indexentry{Leibniz notation|hyperpage}{191}
-\indexentry{velocity|hyperpage}{192}
-\indexentry{acceleration|hyperpage}{192}
-\indexentry{distance|hyperpage}{192}
-\indexentry{slope field|hyperpage}{195}
-\indexentry{existence and uniqueness|hyperpage}{196}
-\indexentry{Picard's theorem|hyperpage}{196}
-\indexentry{differential equation!separable|hyperpage}{199}
-\indexentry{separable ODE|hyperpage}{199}
-\indexentry{Leibniz notation|hyperpage}{199}
-\indexentry{implicit solution|hyperpage}{200}
-\indexentry{solution!implicit|hyperpage}{200}
-\indexentry{singular solution|hyperpage}{201}
-\indexentry{Newton's law of cooling|hyperpage}{201}
-\indexentry{linear differential equation|hyperpage}{204}
-\indexentry{differential equation!linear|hyperpage}{204}
-\indexentry{first order linear differential equation|hyperpage}{204}
-\indexentry{linear differential equation!first order|hyperpage}{204}
-\indexentry{integrating factor|hyperpage}{204}
-\indexentry{Newton's law of cooling|hyperpage}{208}
-\indexentry{IODE software!Lab II|hyperpage}{209}
-\indexentry{IODE software!Project II|hyperpage}{209}
-\indexentry{Euler's method|hyperpage}{209}
-\indexentry{first order method|hyperpage}{209}
-\indexentry{second order method|hyperpage}{209}
-\indexentry{stiff problem|hyperpage}{211}
-\indexentry{conic sections|hyperpage}{214}
-\indexentry{conic sections!degenerate|hyperpage}{214}
-\indexentry{conic sections!parabola|hyperpage}{214}
-\indexentry{parabola!definition|hyperpage}{214}
-\indexentry{directrix|hyperpage}{214}
-\indexentry{focus|hyperpage}{214}
-\indexentry{parabola!general equation|hyperpage}{215}
-\indexentry{parabola!reflective property|hyperpage}{216}
-\indexentry{conic sections!ellipse|hyperpage}{217}
-\indexentry{ellipse!definition|hyperpage}{217}
-\indexentry{focus|hyperpage}{217}
-\indexentry{ellipse!standard equation|hyperpage}{217}
-\indexentry{ellipse!eccentricity|hyperpage}{219}
-\indexentry{eccentricity|hyperpage}{219}
-\indexentry{ellipse!reflective property|hyperpage}{219}
-\indexentry{conic sections!hyperbola|hyperpage}{220}
-\indexentry{hyperbola!definition|hyperpage}{220}
-\indexentry{focus|hyperpage}{220}
-\indexentry{hyperbola!standard equation|hyperpage}{220}
-\indexentry{hyperbola!reflective property|hyperpage}{222}
-\indexentry{hyperbola!eccentricity|hyperpage}{222}
-\indexentry{eccentricity|hyperpage}{222}
-\indexentry{curve!rectangular equation|hyperpage}{226}
-\indexentry{curve!parametrically defined|hyperpage}{226}
-\indexentry{parametric equations!definition|hyperpage}{226}
-\indexentry{ellipse!parametric equations|hyperpage}{230}
-\indexentry{hyperbola!parametric equations|hyperpage}{230}
-\indexentry{curve!smooth|hyperpage}{231}
-\indexentry{smooth curve|hyperpage}{231}
-\indexentry{cusp|hyperpage}{231}
-\indexentry{parametric equations!finding $\frac  {dy}{dx}$|hyperpage}{235}
-\indexentry{derivative!parametric equations|hyperpage}{235}
-\indexentry{tangent line|hyperpage}{235}
-\indexentry{normal line|hyperpage}{235}
-\indexentry{parametric equations!tangent line|hyperpage}{235}
-\indexentry{parametric equations!normal line|hyperpage}{235}
-\indexentry{concavity|hyperpage}{238}
-\indexentry{parametric equations!concavity|hyperpage}{238}
-\indexentry{parametric equations!finding $\frac  {d^2y}{dx^2}$|hyperpage}{238}
-\indexentry{parametric equations!arc length|hyperpage}{240}
-\indexentry{arc length|hyperpage}{240}
-\indexentry{surface area!solid of revolution|hyperpage}{241}
-\indexentry{integration!surface area|hyperpage}{241}
-\indexentry{parametric equations!surface area|hyperpage}{241}
-\indexentry{polar coordinates|hyperpage}{245}
-\indexentry{polar!coordinates|hyperpage}{245}
-\indexentry{polar coordinates!plotting points|hyperpage}{245}
-\indexentry{polar!functions|hyperpage}{247}
-\indexentry{polar!functions!graphing|hyperpage}{247}
-\indexentry{polar!function!gallery of graphs|hyperpage}{251}
-\indexentry{polar!functions!finding $\frac  {dy}{dx}$|hyperpage}{256}
-\indexentry{tangent line|hyperpage}{256}
-\indexentry{polar!functions!area|hyperpage}{258}
-\indexentry{polar!functions!area between curves|hyperpage}{260}
-\indexentry{arc length|hyperpage}{261}
-\indexentry{polar!function!arc length|hyperpage}{261}
-\indexentry{surface area!solid of revolution|hyperpage}{263}
-\indexentry{polar!function!surface area|hyperpage}{263}
-\indexentry{integration!surface area|hyperpage}{263}
-\indexentry{right hand rule!of Cartesian coordinates|hyperpage}{267}
-\indexentry{distance!between points in space|hyperpage}{268}
-\indexentry{sphere|hyperpage}{269}
-\indexentry{planes!coordinate plane|hyperpage}{269}
-\indexentry{planes!introduction|hyperpage}{269}
-\indexentry{cylinder|hyperpage}{270}
-\indexentry{directrix|hyperpage}{270}
-\indexentry{surface of revolution|hyperpage}{272}
-\indexentry{surface of revolution|hyperpage}{272}
-\indexentry{quadric surface!definition|hyperpage}{273}
-\indexentry{trace|hyperpage}{273}
-\indexentry{quadric surface!trace|hyperpage}{273}
-\indexentry{quadric surface!gallery|(hyperpage}{274}
-\indexentry{quadric surface!elliptic paraboloid|hyperpage}{274}
-\indexentry{quadric surface!elliptic cone|hyperpage}{274}
-\indexentry{quadric surface!ellipsoid|hyperpage}{275}
-\indexentry{quadric surface!sphere|hyperpage}{275}
-\indexentry{quadric surface!hyperboloid of one sheet|hyperpage}{275}
-\indexentry{quadric surface!hyperboloid of two sheets|hyperpage}{276}
-\indexentry{quadric surface!gallery|)hyperpage}{276}
-\indexentry{quadric surface!hyperbolic paraboloid|hyperpage}{276}
-\indexentry{multivariable function|hyperpage}{281}
-\indexentry{multivariable function!domain|hyperpage}{281}
-\indexentry{multivariable function!range|hyperpage}{281}
-\indexentry{function!of two variables|hyperpage}{281}
-\indexentry{multivariable function!level curves|hyperpage}{282}
-\indexentry{level curves|hyperpage}{282}
-\indexentry{contour lines|hyperpage}{282}
-\indexentry{multivariable function|hyperpage}{284}
-\indexentry{function!of three variables|hyperpage}{284}
-\indexentry{multivariable function!domain|hyperpage}{284}
-\indexentry{multivariable function!range|hyperpage}{284}
-\indexentry{multivariable function!level surface|hyperpage}{284}
-\indexentry{level surface|hyperpage}{284}
-\indexentry{open|hyperpage}{287}
-\indexentry{closed|hyperpage}{287}
-\indexentry{open disk|hyperpage}{287}
-\indexentry{closed disk|hyperpage}{287}
-\indexentry{boundary point|hyperpage}{287}
-\indexentry{interior point|hyperpage}{287}
-\indexentry{bounded set|hyperpage}{287}
-\indexentry{unbounded set|hyperpage}{287}
-\indexentry{limit!of multivariable function|hyperpage}{288}
-\indexentry{multivariable function!limit|hyperpage}{288}
-\indexentry{limit!of multivariable function|hyperpage}{289}
-\indexentry{limit!properties|hyperpage}{289}
-\indexentry{multivariable function!limit|hyperpage}{289}
-\indexentry{continuous function|hyperpage}{292}
-\indexentry{multivariable function!continuity|hyperpage}{292}
-\indexentry{continuous function!properties|hyperpage}{293}
-\indexentry{multivariable function!continuity|hyperpage}{293}
-\indexentry{multivariable function!limit|hyperpage}{294}
-\indexentry{limit!of multivariable function|hyperpage}{294}
-\indexentry{multivariable function!continuity|hyperpage}{294}
-\indexentry{open ball|hyperpage}{294}
-\indexentry{partial derivative|hyperpage}{296}
-\indexentry{derivative!partial|hyperpage}{296}
-\indexentry{partial derivative!meaning|hyperpage}{298}
-\indexentry{partial derivative!mixed|hyperpage}{299}
-\indexentry{partial derivative!second derivative|hyperpage}{299}
-\indexentry{derivative!mixed partial|hyperpage}{299}
-\indexentry{derivative!partial|hyperpage}{302}
-\indexentry{partial derivative|hyperpage}{302}
-\indexentry{partial derivative!high order|hyperpage}{303}
-\indexentry{tangent line!directional|hyperpage}{306}
-\indexentry{normal line|hyperpage}{308}
-\indexentry{orthogonal|hyperpage}{308}
-\indexentry{tangent plane|hyperpage}{310}
-\indexentry{planes!tangent|hyperpage}{310}
-\indexentry{gradient|hyperpage}{311}
-\indexentry{gradient!and level surfaces|hyperpage}{312}
-\indexentry{level surface|hyperpage}{312}
+\indexentry{sequences!divergent|hyperpage}{113}
+\indexentry{Absolute Value Theorem|hyperpage}{114}
+\indexentry{limit!Absolute Value Theorem|hyperpage}{114}
+\indexentry{sequence!Absolute Value Theorem|hyperpage}{114}
+\indexentry{sequences!limit properties|hyperpage}{115}
+\indexentry{sequences!boundedness|hyperpage}{116}
+\indexentry{bounded sequence|hyperpage}{116}
+\indexentry{unbounded sequence|hyperpage}{116}
+\indexentry{bounded sequence!convergence|hyperpage}{117}
+\indexentry{convergence!of sequence|hyperpage}{117}
+\indexentry{sequences!convergent|hyperpage}{117}
+\indexentry{sequences!monotonic|hyperpage}{118}
+\indexentry{monotonic sequence|hyperpage}{118}
+\indexentry{sequences!convergent|hyperpage}{120}
+\indexentry{convergence!of monotonic sequences|hyperpage}{120}
+\indexentry{series!definition|hyperpage}{123}
+\indexentry{series!partial sums|hyperpage}{123}
+\indexentry{series!convergent|hyperpage}{123}
+\indexentry{series!divergent|hyperpage}{123}
+\indexentry{convergence!of series|hyperpage}{123}
+\indexentry{divergence!of series|hyperpage}{123}
+\indexentry{series!geometric|hyperpage}{125}
+\indexentry{geometric series|hyperpage}{125}
+\indexentry{series!geometric|hyperpage}{125}
+\indexentry{geometric series|hyperpage}{125}
+\indexentry{convergence!of geometric series|hyperpage}{125}
+\indexentry{divergence!of geometric series|hyperpage}{125}
+\indexentry{series!p@$p$-series|hyperpage}{126}
+\indexentry{p@$p$-series|hyperpage}{126}
+\indexentry{series!p@$p$-series|hyperpage}{126}
+\indexentry{p@$p$-series|hyperpage}{126}
+\indexentry{convergence!of p@of $p$-series|hyperpage}{126}
+\indexentry{divergence!of p@of $p$-series|hyperpage}{126}
+\indexentry{series!telescoping|hyperpage}{127}
+\indexentry{telescoping series|hyperpage}{127}
+\indexentry{series!telescoping|hyperpage}{128}
+\indexentry{telescoping series|hyperpage}{128}
+\indexentry{Constant Multiple Rule!of series|hyperpage}{129}
+\indexentry{series!properties|hyperpage}{129}
+\indexentry{Sum/Difference Rule!of series|hyperpage}{129}
+\indexentry{Harmonic Series|hyperpage}{130}
+\indexentry{Alternating Harmonic Series|hyperpage}{130}
+\indexentry{series!nth@$n^\text  {th}$--term test|hyperpage}{131}
+\indexentry{nth@$n^\text  {th}$--term test|hyperpage}{131}
+\indexentry{convergence!nth@$n^\text  {th}$--term test|hyperpage}{131}
+\indexentry{divergence!nth@$n^\text  {th}$--term test|hyperpage}{131}
+\indexentry{series!Integral Test|hyperpage}{136}
+\indexentry{Integral Test|hyperpage}{136}
+\indexentry{convergence!Integral Test|hyperpage}{136}
+\indexentry{divergence!Integral Test|hyperpage}{136}
+\indexentry{sequence!positive|hyperpage}{138}
+\indexentry{series!Direct Comparison Test|hyperpage}{138}
+\indexentry{Direct Comparison Test!for series|hyperpage}{138}
+\indexentry{convergence!Direct Comparison Test|hyperpage}{138}
+\indexentry{divergence!Direct Comparison Test|hyperpage}{138}
+\indexentry{series!Limit Comparison Test|hyperpage}{139}
+\indexentry{Limit Comparison Test!for series|hyperpage}{139}
+\indexentry{convergence!Limit Comparison Test|hyperpage}{139}
+\indexentry{divergence!Limit Comparison Test|hyperpage}{139}
+\indexentry{series!Ratio Comparison Test|hyperpage}{144}
+\indexentry{Ratio Comparison Test!for series|hyperpage}{144}
+\indexentry{convergence!Ratio Comparison Test|hyperpage}{144}
+\indexentry{divergence!Ratio Comparison Test|hyperpage}{144}
+\indexentry{series!Root Comparison Test|hyperpage}{146}
+\indexentry{Root Comparison Test!for series|hyperpage}{146}
+\indexentry{convergence!Root Comparison Test|hyperpage}{146}
+\indexentry{divergence!Root Comparison Test|hyperpage}{146}
+\indexentry{series!alternating|hyperpage}{149}
+\indexentry{series!Alternating Series Test|hyperpage}{149}
+\indexentry{Alternating Series Test!for series|hyperpage}{149}
+\indexentry{convergence!Alternating Series Test|hyperpage}{149}
+\indexentry{divergence!Alternating Series Test|hyperpage}{149}
+\indexentry{series!alternating!Approximation Theorem|hyperpage}{151}
+\indexentry{Alternating Harmonic Series|hyperpage}{152}
+\indexentry{convergence!absolute|hyperpage}{153}
+\indexentry{convergence!conditional|hyperpage}{153}
+\indexentry{series!absolute convergence|hyperpage}{153}
+\indexentry{series!conditional convergence|hyperpage}{153}
+\indexentry{rearrangements of series|hyperpage}{154}
+\indexentry{series!rearrangements|hyperpage}{154}
+\indexentry{convergence!absolute|hyperpage}{154}
+\indexentry{Absolute Convergence Theorem|hyperpage}{154}
+\indexentry{series!Absolute Convergence Theorem|hyperpage}{154}
+\indexentry{rearrangements of series|hyperpage}{154}
+\indexentry{series!rearrangements|hyperpage}{154}
+\indexentry{power series|hyperpage}{158}
+\indexentry{series!power|hyperpage}{158}
+\indexentry{convergence!of power series|hyperpage}{159}
+\indexentry{power series!convergence|hyperpage}{159}
+\indexentry{series!power|hyperpage}{159}
+\indexentry{convergence!radius of|hyperpage}{159}
+\indexentry{convergence!interval of|hyperpage}{159}
+\indexentry{radius of convergence|hyperpage}{159}
+\indexentry{interval of convergence|hyperpage}{159}
+\indexentry{series!radius of convergence|hyperpage}{159}
+\indexentry{series!interval of convergence|hyperpage}{159}
+\indexentry{series!power!derivatives and integrals|hyperpage}{161}
+\indexentry{integration!of power series|hyperpage}{161}
+\indexentry{derivative!power series|hyperpage}{161}
+\indexentry{power series!derivatives and integrals|hyperpage}{161}
+\indexentry{Alternating Harmonic Series|hyperpage}{163}
+\indexentry{Taylor Polynomial!definition|hyperpage}{169}
+\indexentry{Maclaurin Polynomial!definition|hyperpage}{169}
+\indexentry{Maclaurin Polynomial|hyperindexformat{\see{Taylor Polynomial}}}{169}
+\indexentry{Taylor Polynomial!Taylor's Theorem|hyperpage}{171}
+\indexentry{Taylor's Theorem|hyperpage}{171}
+\indexentry{Taylor Series!definition|hyperpage}{178}
+\indexentry{Maclaurin Series!definition|hyperpage}{178}
+\indexentry{Maclaurin Series|hyperindexformat{\see{Taylor Series}}}{178}
+\indexentry{series!Taylor|hyperpage}{178}
+\indexentry{series!Maclaurin|hyperpage}{178}
+\indexentry{Taylor Series!equality with generating function|hyperpage}{179}
+\indexentry{analytic function|hyperpage}{180}
+\indexentry{Binomial Series|hyperpage}{180}
+\indexentry{series!Binomial|hyperpage}{180}
+\indexentry{Taylor Series!common series|hyperpage}{182}
+\indexentry{power series!algebra of|hyperpage}{182}
+\indexentry{conic sections|hyperpage}{190}
+\indexentry{conic sections!degenerate|hyperpage}{190}
+\indexentry{conic sections!parabola|hyperpage}{190}
+\indexentry{parabola!definition|hyperpage}{190}
+\indexentry{directrix|hyperpage}{190}
+\indexentry{focus|hyperpage}{190}
+\indexentry{parabola!general equation|hyperpage}{191}
+\indexentry{parabola!reflective property|hyperpage}{192}
+\indexentry{conic sections!ellipse|hyperpage}{193}
+\indexentry{ellipse!definition|hyperpage}{193}
+\indexentry{focus|hyperpage}{193}
+\indexentry{ellipse!standard equation|hyperpage}{193}
+\indexentry{ellipse!eccentricity|hyperpage}{195}
+\indexentry{eccentricity|hyperpage}{195}
+\indexentry{ellipse!reflective property|hyperpage}{195}
+\indexentry{conic sections!hyperbola|hyperpage}{196}
+\indexentry{hyperbola!definition|hyperpage}{196}
+\indexentry{focus|hyperpage}{196}
+\indexentry{hyperbola!standard equation|hyperpage}{196}
+\indexentry{hyperbola!reflective property|hyperpage}{198}
+\indexentry{hyperbola!eccentricity|hyperpage}{198}
+\indexentry{eccentricity|hyperpage}{198}
+\indexentry{curve!rectangular equation|hyperpage}{202}
+\indexentry{curve!parametrically defined|hyperpage}{202}
+\indexentry{parametric equations!definition|hyperpage}{202}
+\indexentry{ellipse!parametric equations|hyperpage}{206}
+\indexentry{hyperbola!parametric equations|hyperpage}{206}
+\indexentry{curve!smooth|hyperpage}{207}
+\indexentry{smooth curve|hyperpage}{207}
+\indexentry{cusp|hyperpage}{207}
+\indexentry{parametric equations!finding $\frac  {dy}{dx}$|hyperpage}{211}
+\indexentry{derivative!parametric equations|hyperpage}{211}
+\indexentry{tangent line|hyperpage}{211}
+\indexentry{normal line|hyperpage}{211}
+\indexentry{parametric equations!tangent line|hyperpage}{211}
+\indexentry{parametric equations!normal line|hyperpage}{211}
+\indexentry{concavity|hyperpage}{214}
+\indexentry{parametric equations!concavity|hyperpage}{214}
+\indexentry{parametric equations!finding $\frac  {d^2y}{dx^2}$|hyperpage}{214}
+\indexentry{parametric equations!arc length|hyperpage}{216}
+\indexentry{arc length|hyperpage}{216}
+\indexentry{surface area!solid of revolution|hyperpage}{217}
+\indexentry{integration!surface area|hyperpage}{217}
+\indexentry{parametric equations!surface area|hyperpage}{217}
+\indexentry{polar coordinates|hyperpage}{221}
+\indexentry{polar!coordinates|hyperpage}{221}
+\indexentry{polar coordinates!plotting points|hyperpage}{221}
+\indexentry{polar!functions|hyperpage}{223}
+\indexentry{polar!functions!graphing|hyperpage}{223}
+\indexentry{polar!function!gallery of graphs|hyperpage}{227}
+\indexentry{polar!functions!finding $\frac  {dy}{dx}$|hyperpage}{232}
+\indexentry{tangent line|hyperpage}{232}
+\indexentry{polar!functions!area|hyperpage}{234}
+\indexentry{polar!functions!area between curves|hyperpage}{236}
+\indexentry{arc length|hyperpage}{237}
+\indexentry{polar!function!arc length|hyperpage}{237}
+\indexentry{surface area!solid of revolution|hyperpage}{239}
+\indexentry{polar!function!surface area|hyperpage}{239}
+\indexentry{integration!surface area|hyperpage}{239}
+\indexentry{right hand rule!of Cartesian coordinates|hyperpage}{243}
+\indexentry{distance!between points in space|hyperpage}{244}
+\indexentry{sphere|hyperpage}{245}
+\indexentry{planes!coordinate plane|hyperpage}{245}
+\indexentry{planes!introduction|hyperpage}{245}
+\indexentry{cylinder|hyperpage}{246}
+\indexentry{directrix|hyperpage}{246}
+\indexentry{surface of revolution|hyperpage}{248}
+\indexentry{surface of revolution|hyperpage}{248}
+\indexentry{quadric surface!definition|hyperpage}{249}
+\indexentry{trace|hyperpage}{249}
+\indexentry{quadric surface!trace|hyperpage}{249}
+\indexentry{quadric surface!gallery|(hyperpage}{250}
+\indexentry{quadric surface!elliptic paraboloid|hyperpage}{250}
+\indexentry{quadric surface!elliptic cone|hyperpage}{250}
+\indexentry{quadric surface!ellipsoid|hyperpage}{251}
+\indexentry{quadric surface!sphere|hyperpage}{251}
+\indexentry{quadric surface!hyperboloid of one sheet|hyperpage}{251}
+\indexentry{quadric surface!hyperboloid of two sheets|hyperpage}{252}
+\indexentry{quadric surface!gallery|)hyperpage}{252}
+\indexentry{quadric surface!hyperbolic paraboloid|hyperpage}{252}
+\indexentry{multivariable function|hyperpage}{257}
+\indexentry{multivariable function!domain|hyperpage}{257}
+\indexentry{multivariable function!range|hyperpage}{257}
+\indexentry{function!of two variables|hyperpage}{257}
+\indexentry{multivariable function!level curves|hyperpage}{258}
+\indexentry{level curves|hyperpage}{258}
+\indexentry{contour lines|hyperpage}{258}
+\indexentry{multivariable function|hyperpage}{260}
+\indexentry{function!of three variables|hyperpage}{260}
+\indexentry{multivariable function!domain|hyperpage}{260}
+\indexentry{multivariable function!range|hyperpage}{260}
+\indexentry{multivariable function!level surface|hyperpage}{260}
+\indexentry{level surface|hyperpage}{260}
+\indexentry{open|hyperpage}{263}
+\indexentry{closed|hyperpage}{263}
+\indexentry{open disk|hyperpage}{263}
+\indexentry{closed disk|hyperpage}{263}
+\indexentry{boundary point|hyperpage}{263}
+\indexentry{interior point|hyperpage}{263}
+\indexentry{bounded set|hyperpage}{263}
+\indexentry{unbounded set|hyperpage}{263}
+\indexentry{limit!of multivariable function|hyperpage}{264}
+\indexentry{multivariable function!limit|hyperpage}{264}
+\indexentry{limit!of multivariable function|hyperpage}{265}
+\indexentry{limit!properties|hyperpage}{265}
+\indexentry{multivariable function!limit|hyperpage}{265}
+\indexentry{continuous function|hyperpage}{268}
+\indexentry{multivariable function!continuity|hyperpage}{268}
+\indexentry{continuous function!properties|hyperpage}{269}
+\indexentry{multivariable function!continuity|hyperpage}{269}
+\indexentry{multivariable function!limit|hyperpage}{270}
+\indexentry{limit!of multivariable function|hyperpage}{270}
+\indexentry{multivariable function!continuity|hyperpage}{270}
+\indexentry{open ball|hyperpage}{270}
+\indexentry{partial derivative|hyperpage}{272}
+\indexentry{derivative!partial|hyperpage}{272}
+\indexentry{partial derivative!meaning|hyperpage}{274}
+\indexentry{partial derivative!mixed|hyperpage}{275}
+\indexentry{partial derivative!second derivative|hyperpage}{275}
+\indexentry{derivative!mixed partial|hyperpage}{275}
+\indexentry{derivative!partial|hyperpage}{278}
+\indexentry{partial derivative|hyperpage}{278}
+\indexentry{partial derivative!high order|hyperpage}{279}
+\indexentry{tangent line!directional|hyperpage}{282}
+\indexentry{normal line|hyperpage}{284}
+\indexentry{orthogonal|hyperpage}{284}
+\indexentry{tangent plane|hyperpage}{286}
+\indexentry{planes!tangent|hyperpage}{286}
+\indexentry{gradient|hyperpage}{287}
+\indexentry{gradient!and level surfaces|hyperpage}{288}
+\indexentry{level surface|hyperpage}{288}
