@@ -5,25 +5,40 @@ In this section we investigate the antiderivatives of rational functions. Recall
 We begin with an example that demonstrates the motivation behind this section. Consider the integral $\ds\int \frac{1}{x^2-1}\ dx$. We do not have a simple formula for this (if the denominator were $x^2+1$, we would recognize the antiderivative as being the arctangent function). It can be solved using Trigonometric Substitution, but note how the integral is easy to evaluate once we realize:
 
 %This integral is not difficult to evaluate once one realizes the following fact: 
-$$\frac{1}{x^2-1} = \frac{1/2}{x-1} - \frac{1/2}{x+1}.$$
+\[
+\frac{1}{x^2-1} = \frac{1/2}{x-1} - \frac{1/2}{x+1}.
+\]
 Thus 
 \begin{align*}
 \int\frac{1}{x^2-1}\ dx &= \int\frac{1/2}{x-1}\ dx - \int\frac{1/2}{x+1}\ dx \\
 			&= \frac12\ln|x-1| - \frac12\ln|x+1| + C.
 \end{align*}
 
-This section teaches how to \textit{decompose} $$\frac{1}{x^2-1}\quad  \text{into}\quad  \frac{1/2}{x-1}-\frac{1/2}{x+1}.$$
+This section teaches how to \textit{decompose} 
+\[
+\frac{1}{x^2-1}\quad  \text{into}\quad  \frac{1/2}{x-1}-\frac{1/2}{x+1}.
+\]
 
-We start with a rational function $f(x)=\dfrac{p(x)}{q(x)}$, where $p$ and $q$ do not have any common factors and the degree of $p$ is less than the degree of $q$. It can be shown that any polynomial, and hence $q$, can be factored into a product of linear and irreducible quadratic terms. The following Key Idea states how to decompose a rational function into a sum of rational functions whose denominators are all of lower degree than $q$.
+We start with a rational function $f(x)=\dfrac{p(x)}{q(x)}$, where $p$ and $q$ do not have any common factors and the degree of $p$ is less than the degree of $q$. Note that in the case of a function $f(x) = \dfrac{p(x)}{q(x)}$ where the degree of $p$ is greater than or equal to that of $q$, we can perform polynomial long division to rewrite $f(x)$ in the form
+\[
+f(x) = Q(x)+\frac{R(x)}{q(x)},
+\]
+where $Q(x)$ is the quotient polynomial, and $R(x)$, the remainder, always has degree less than that of $q$. 
+
+It can be shown that any polynomial, and hence $q$, can be factored into a product of linear and irreducible quadratic terms. The following Key Idea states how to decompose a rational function into a sum of rational functions whose denominators are all of lower degree than $q$.
 %\clearpage
 
 \keyidea{idea:partial_fraction}{Partial Fraction Decomposition}
 {Let $\ds \frac{p(x)}{q(x)}$ be a rational function, where the degree of $p$ is less than the degree of $q$.\index{integration!partial fraction decomp.}
 \begin{enumerate}
 	\item	\textbf{Linear Terms:} Let $(x-a)$ divide $q(x)$, where $(x-a)^n$ is the highest power of $(x-a)$ that divides $q(x)$. Then the decomposition of $\frac{p(x)}{q(x)}$ will contain the sum
-	$$\frac{A_1}{(x-a)} + \frac{A_2}{(x-a)^2} + \cdots +\frac{A_n}{(x-a)^n}.$$
+	\[
+	\frac{A_1}{(x-a)} + \frac{A_2}{(x-a)^2} + \cdots +\frac{A_n}{(x-a)^n}.
+	\]
 	\item		\textbf{Quadratic Terms:} Let $x^2+bx+c$ divide $q(x)$, where $(x^2+bx+c)^n$ is the highest power of $x^2+bx+c$ that divides $q(x)$. Then the decomposition of $\frac{p(x)}{q(x)}$ will contain the sum 
-	$$\frac{B_1x+C_1}{x^2+bx+c}+\frac{B_2x+C_2}{(x^2+bx+c)^2}+\cdots+\frac{B_nx+C_n}{(x^2+bx+c)^n}.$$
+	\[
+	\frac{B_1x+C_1}{x^2+bx+c}+\frac{B_2x+C_2}{(x^2+bx+c)^2}+\cdots+\frac{B_nx+C_n}{(x^2+bx+c)^n}.
+	\]
 	\end{enumerate}
 	To find the coefficients $A_i$, $B_i$ and $C_i$:
 	\begin{enumerate}
@@ -36,17 +51,27 @@ The following examples will demonstrate how to put this Key Idea into practice. 
 
 \example{ex_pf1}{Decomposing into partial fractions}{
 Decompose $\ds f(x)=\frac{1}{(x+5)(x-2)^3(x^2+x+2)(x^2+x+7)^2}$ without solving for the resulting coefficients.}
-{The denominator is already factored, as both $x^2+x+2$ and $x^2+x+7$ cannot be factored further. We need to decompose $f(x)$ properly. Since $(x+5)$ is a linear term that divides the denominator, there will be a $$\frac{A}{x+5}$$ term in the decomposition.
+{The denominator is already factored, as both $x^2+x+2$ and $x^2+x+7$ cannot be factored further. We need to decompose $f(x)$ properly. Since $(x+5)$ is a linear term that divides the denominator, there will be a 
+\[
+\frac{A}{x+5}
+\]
+term in the decomposition.
 
 As $(x-2)^3$ divides the denominator, we will have the following terms in the decomposition:
-$$\frac{B}{x-2},\quad \frac{C}{(x-2)^2}\quad \text{and}\quad \frac{D}{(x-2)^3}.$$
+\[
+\frac{B}{x-2},\quad \frac{C}{(x-2)^2}\quad \text{and}\quad \frac{D}{(x-2)^3}.
+\]
 
 The $x^2+x+2$ term in the denominator results in a $\ds\frac{Ex+F}{x^2+x+2}$ term.
 
-Finally, the $(x^2+x+7)^2$ term results in the terms $$\frac{Gx+H}{x^2+x+7}\quad \text{and}\quad \frac{Ix+J}{(x^2+x+7)^2}.$$
+Finally, the $(x^2+x+7)^2$ term results in the terms 
+\[
+\frac{Gx+H}{x^2+x+7}\quad \text{and}\quad \frac{Ix+J}{(x^2+x+7)^2}.
+\]
 All together, we have 
 \begin{align*}
-\frac{1}{(x+5)(x-2)^3(x^2+x+2)(x^2+x+7)^2} &= \frac{A}{x+5} + \frac{B}{x-2}+ \frac{C}{(x-2)^2}+\frac{D}{(x-2)^3}+ \\
+\frac{1}{(x+5)(x-2)^3(x^2+x+2)(x^2+x+7)^2} &= \\
+&\frac{A}{x+5} + \frac{B}{x-2}+ \frac{C}{(x-2)^2}+\frac{D}{(x-2)^3}+ \\
 		& \frac{Ex+F}{x^2+x+2}+\frac{Gx+H}{x^2+x+7}+\frac{Ix+J}{(x^2+x+7)^2}
 \end{align*}
 Solving for the coefficients $A$, $B \ldots J$ would be a bit tedious but not ``hard.''
@@ -55,7 +80,9 @@ Solving for the coefficients $A$, $B \ldots J$ would be a bit tedious but not ``
 \example{ex_pf2}{Decomposing into partial fractions}{
 Perform the partial fraction decomposition of $\ds \frac{1}{x^2-1}$.}
 {The denominator factors into two linear terms: $x^2-1 = (x-1)(x+1)$. Thus 
-$$\frac{1}{x^2-1} = \frac{A}{x-1} + \frac{B}{x+1}.$$
+\[
+\frac{1}{x^2-1} = \frac{A}{x-1} + \frac{B}{x+1}.
+\]
 To solve for $A$ and $B$, first multiply through by $x^2-1 = (x-1)(x+1)$:
 \begin{align*}
 1 &= \frac{A(x-1)(x+1)}{x-1}+\frac{B(x-1)(x+1)}{x+1} \\
@@ -65,23 +92,34 @@ To solve for $A$ and $B$, first multiply through by $x^2-1 = (x-1)(x+1)$:
 	&= (A+B)x + (A-B).
 \end{align*}
 The next step is key. Note the equality we have:
-$$1 = (A+B)x+(A-B).$$
+\[
+1 = (A+B)x+(A-B).
+\]
 For clarity's sake, rewrite the left hand side as
-$$0x+1 = (A+B)x+(A-B).$$
+\[
+0x+1 = (A+B)x+(A-B).
+\]
 On the left, the coefficient of the $x$ term is 0; on the right, it is $(A+B)$. Since both sides are equal, we must have that $0=A+B$. 
 
 Likewise, on the left, we have a constant term of 1; on the right, the constant term is $(A-B)$. Therefore we have $1=A-B$.
 
 We have two linear equations with two unknowns. This one is easy to solve by hand, leading to 
-$$\begin{array}{c} A+B = 0 \\ A-B = 1 \end{array} \Rightarrow \begin{array}{c} A=1/2 \\ B = -1/2\end{array}.$$
-Thus $$\frac{1}{x^2-1} = \frac{1/2}{x-1}-\frac{1/2}{x+1}.$$
+\[
+\begin{array}{c} A+B = 0 \\ A-B = 1 \end{array} \Rightarrow \begin{array}{c} A=1/2 \\ B = -1/2\end{array}.
+\]
+Thus 
+\[
+\frac{1}{x^2-1} = \frac{1/2}{x-1}-\frac{1/2}{x+1}.
+\]
 \vskip-\baselineskip
 }\\
 
 \example{ex_pf3}{Integrating using partial fractions}{
 Use partial fraction decomposition to integrate $\ds\int\frac{1}{(x-1)(x+2)^2}\ dx.$}
 {We decompose the integrand as follows, as described by Key Idea \ref{idea:partial_fraction}:
-$$\frac{1}{(x-1)(x+2)^2} = \frac{A}{x-1} + \frac{B}{x+2} + \frac{C}{(x+2)^2}.$$
+\[
+\frac{1}{(x-1)(x+2)^2} = \frac{A}{x-1} + \frac{B}{x+2} + \frac{C}{(x+2)^2}.
+\]
 To solve for $A$, $B$ and $C$, we multiply both sides by $(x-1)(x+2)^2$ and collect like terms:
 \begin{align}
 1 &= A(x+2)^2 + B(x-1)(x+2) + C(x-1)\label{eq:pf3}\\
@@ -93,24 +131,41 @@ To solve for $A$, $B$ and $C$, we multiply both sides by $(x-1)(x+2)^2$ and coll
 Likewise, the equality holds when $x=-2$; this leads to the equation $1=-3C$. Thus $C = -1/3$.
 
 Knowing $A$ and $C$, we can find the value of $B$ by choosing yet another value of $x$, such as $x=0$, and solving for $B$.}
-We have $$0x^2+0x+ 1 = (A+B)x^2 + (4A+B+C)x + (4A-2B-C)$$
+We have 
+\[
+0x^2+0x+ 1 = (A+B)x^2 + (4A+B+C)x + (4A-2B-C)
+\]
 leading to the equations 
-$$A+B = 0, \quad 4A+B+C = 0 \quad \text{and} \quad 4A-2B-C = 1.$$
+\[
+A+B = 0, \quad 4A+B+C = 0 \quad \text{and} \quad 4A-2B-C = 1.
+\]
 These three equations of three unknowns lead to a unique solution:
-$$A = 1/9,\quad B = -1/9 \quad \text{and} \quad C = -1/3.$$
+\[
+A = 1/9,\quad B = -1/9 \quad \text{and} \quad C = -1/3.
+\]
 Thus 
-$$\int\frac{1}{(x-1)(x+2)^2}\ dx = \int \frac{1/9}{x-1}\ dx + \int \frac{-1/9}{x+2}\ dx + \int \frac{-1/3}{(x+2)^2}\ dx.$$
+\[
+\int\frac{1}{(x-1)(x+2)^2}\ dx = \int \frac{1/9}{x-1}\ dx + \int \frac{-1/9}{x+2}\ dx + \int \frac{-1/3}{(x+2)^2}\ dx.
+\]
 
 Each can be integrated with a simple substitution with $u=x-1$ or $u=x+2$ (or by directly applying Key Idea \ref{idea:linearsub} as the denominators are linear functions). The end result is
-$$\int\frac{1}{(x-1)(x+2)^2}\ dx = \frac19\ln|x-1| -\frac19\ln|x+2| +\frac1{3(x+2)}+C.$$
+\[
+\int\frac{1}{(x-1)(x+2)^2}\ dx = \frac19\ln|x-1| -\frac19\ln|x+2| +\frac1{3(x+2)}+C.
+\]
 \vskip-\baselineskip}\\
 
 %\enlargethispage{\baselineskip}
 \example{ex_pf4}{Integrating using partial fractions}{
 Use partial fraction decomposition to integrate $\ds \int \frac{x^3}{(x-5)(x+3)}\ dx$.}
-{Key Idea \ref{idea:partial_fraction} presumes that the degree of the numerator is less than the degree of the denominator. Since this is not the case here, we begin by using polynomial division to reduce the degree of the numerator. We omit the steps, but encourage the reader to verify that $$\frac{x^3}{(x-5)(x+3)} = x+2+\frac{19x+30}{(x-5)(x+3)}.$$
+{Key Idea \ref{idea:partial_fraction} presumes that the degree of the numerator is less than the degree of the denominator. Since this is not the case here, we begin by using polynomial division to reduce the degree of the numerator. We omit the steps, but encourage the reader to verify that 
+\[
+\frac{x^3}{(x-5)(x+3)} = x+2+\frac{19x+30}{(x-5)(x+3)}.
+\]
 Using Key Idea \ref{idea:partial_fraction}, we can rewrite the new rational function as:
-$$\frac{19x+30}{(x-5)(x+3)} = \frac{A}{x-5} + \frac{B}{x+3}$$ for appropriate values of $A$ and $B$. Clearing denominators, we have 
+\[
+\frac{19x+30}{(x-5)(x+3)} = \frac{A}{x-5} + \frac{B}{x+3}
+\]
+for appropriate values of $A$ and $B$. Clearing denominators, we have 
 
 \mnote{.4}{\textbf{Note:} The values of $A$ and $B$ can be quickly found using the technique described in the margin of Example \ref{ex_pf3}.}
 
@@ -148,7 +203,9 @@ Use partial fraction decomposition to evaluate $\ds \int\frac{7x^2+31x+54}{(x+1)
 				54 &= 11A+C.
 \end{align*}
 Solving this system of linear equations gives the nice result of $A=5$, $B = 2$ and $C=-1$. Thus
-$$\int\frac{7x^2+31x+54}{(x+1)(x^2+6x+11)}\ dx = \int\left(\frac{5}{x+1} + \frac{2x-1}{x^2+6x+11}\right)\ dx.$$
+\[
+\int\frac{7x^2+31x+54}{(x+1)(x^2+6x+11)}\ dx = \int\left(\frac{5}{x+1} + \frac{2x-1}{x^2+6x+11}\right)\ dx.
+\]
 
 The first term of this new integrand is easy to evaluate; it leads to a $5\ln|x+1|$ term. The second term is not hard, but takes several steps and uses substitution techniques.
 
@@ -158,9 +215,13 @@ The integrand $\ds \frac{2x-1}{x^2+6x+11}$ has a quadratic in the denominator an
 					&= \frac{2x+6}{x^2+6x+11} - \frac{7}{x^2+6x+11}.
 \end{align*}
 We can now integrate the first term with substitution, leading to a $\ln|x^2+6x+11|$ term. The final term can be integrated using arctangent. First, complete the square in the denominator:
-$$\frac{7}{x^2+6x+11} = \frac{7}{(x+3)^2+2}.$$
+\[
+\frac{7}{x^2+6x+11} = \frac{7}{(x+3)^2+2}.
+\]
 An antiderivative of the latter term can be found using Theorem \ref{thm:int_inverse_trig} and substitution:
-$$\int \frac{7}{x^2+6x+11}\ dx = \frac{7}{\sqrt{2}}\tan^{-1}\left(\frac{x+3}{\sqrt{2}}\right)+C.$$
+\[
+\int \frac{7}{x^2+6x+11}\ dx = \frac{7}{\sqrt{2}}\tan^{-1}\left(\frac{x+3}{\sqrt{2}}\right)+C.
+\]
 
 Let's start at the beginning and put all of the steps together.
 \small\begin{align*}

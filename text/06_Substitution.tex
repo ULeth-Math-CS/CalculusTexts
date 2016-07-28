@@ -12,14 +12,26 @@ Despite this latter difficulty, there are still broad classes of functions for w
 \section{Substitution}\label{sec:substitution}
 
 We motivate this section with an example. Let $f(x) = (x^2+3x-5)^{10}$. We can compute $\fp(x)$ using the Chain Rule. It is:
-	$$\fp(x) = 10(x^2+3x-5)^9\cdot(2x+3) = (20x+30)(x^2+3x-5)^9.$$
-Now consider this: What is $\int (20x+30)(x^2+3x-5)^9\ dx$? We have the answer in front of us; $$\int (20x+30)(x^2+3x-5)^9\ dx = (x^2+3x-5)^{10}+C.$$
+\[	
+\fp(x) = 10(x^2+3x-5)^9\cdot(2x+3) = (20x+30)(x^2+3x-5)^9.
+\]
+Now consider this: What is $\int (20x+30)(x^2+3x-5)^9\ dx$? We have the answer in front of us; 
+\[
+\int (20x+30)(x^2+3x-5)^9\ dx = (x^2+3x-5)^{10}+C.
+\]
 How would we have evaluated this indefinite integral without starting with $f(x)$ as we did?
 
 This section explores \textit{integration by substitution.} It allows us to ``undo the Chain Rule.'' Substitution allows us to evaluate the above integral without knowing the original function first.
 
-The underlying principle is to rewrite a ``complicated'' integral of the form $\int f(x)\ dx$ as a not--so--complicated integral $\int h(u)\ du$. We'll formally establish later how this is done. First, consider again our introductory indefinite integral, $\int (20x+30)(x^2+3x-5)^9\ dx$. Arguably the most ``complicated'' part of the integrand is $(x^2+3x-5)^9$. We wish to make this simpler; we do so through a substitution. Let $u=x^2+3x-5$. Thus $$(x^2+3x-5)^9 = u^9.$$
-We have established $u$ as a function of $x$, so now consider the differential of $u$: $$du = (2x+3)dx.$$ Keep in mind that $(2x+3)$ and $dx$ are multiplied; the $dx$ is not ``just sitting there.''
+The underlying principle is to rewrite a ``complicated'' integral of the form $\int f(x)\ dx$ as a not--so--complicated integral $\int h(u)\ du$. We'll formally establish later how this is done. First, consider again our introductory indefinite integral, $\int (20x+30)(x^2+3x-5)^9\ dx$. Arguably the most ``complicated'' part of the integrand is $(x^2+3x-5)^9$. We wish to make this simpler; we do so through a substitution. Let $u=x^2+3x-5$. Thus 
+\[
+(x^2+3x-5)^9 = u^9.
+\]
+We have established $u$ as a function of $x$, so now consider the differential of $u$: 
+\[
+du = (2x+3)dx.
+\]
+Keep in mind that $(2x+3)$ and $dx$ are multiplied; the $dx$ is not ``just sitting there.''
 
 Return to the original integral and do some substitutions through algebra:
 \begin{align*}
@@ -32,20 +44,32 @@ Return to the original integral and do some substitutions through algebra:
 One might well look at this and think ``I (sort of) followed how that worked, but I could never come up with that on my own,'' but the process can be learned. This section contains numerous examples through which the reader will gain understanding and mathematical maturity enabling them to regard substitution as a natural tool when evaluating integrals.
 
 We stated before that integration by substitution ``undoes'' the Chain Rule. Specifically, let $F(x)$ and $g(x)$ be differentiable functions and consider the derivative of their composition: 
-	$$\frac{d}{dx}\Big(F\big(g(x)\big)\Big) = \Fp(g(x))g\primeskip'(x).$$ Thus 
-	$$\int \Fp(g(x))g\primeskip'(x)\ dx = F(g(x)) + C.$$
+	\[
+	\frac{d}{dx}\Big(F\big(g(x)\big)\Big) = \Fp(g(x))g\primeskip'(x).
+	\] Thus 
+	\[
+	\int \Fp(g(x))g\primeskip'(x)\ dx = F(g(x)) + C.
+	\]
 Integration by substitution works by recognizing the ``inside'' function $g(x)$ and replacing it with a variable. By setting $u=g(x)$, we can rewrite the derivative as
-	$$\frac{d}{dx}\Big(F\big(u\big)\Big) = \Fp(u)u\primeskip'.$$
+	\[
+	\frac{d}{dx}\Big(F\big(u\big)\Big) = \Fp(u)u\primeskip'.
+	\]
 Since $du = g\primeskip'(x)dx$, we can rewrite the above integral as
-	$$\int \Fp(g(x))g\primeskip'(x)\ dx = \int \Fp(u) du = F(u)+C = F(g(x))+ C.$$
+	\[
+	\int \Fp(g(x))g\primeskip'(x)\ dx = \int \Fp(u) du = F(u)+C = F(g(x))+ C.
+	\]
 	
 This concept is important so we restate it in the context of a theorem.
 
 \theorem{thm:subst}{Integration by Substitution}
 {Let $F$ and $g$ be differentiable functions, where the range of $g$ is an interval $I$ contained in the domain of $F$. Then \index{integration!by substitution}
-	$$\int \Fp(g(x))g\primeskip'(x)\ dx = F(g(x)) + C.$$
+	\[
+	\int \Fp(g(x))g\primeskip'(x)\ dx = F(g(x)) + C.
+	\]
 If $u = g(x)$, then $du = g\primeskip'(x)dx$ and 
-	$$\int \Fp(g(x))g\primeskip'(x)\ dx = \int \Fp(u)\ du = F(u)+C = F(g(x))+C.$$
+	\[
+	\int \Fp(g(x))g\primeskip'(x)\ dx = \int \Fp(u)\ du = F(u)+C = F(g(x))+C.
+	\]
 }
 
 The point of substitution is to make the integration step easy. Indeed, the step $\int \Fp(u)\ du = F(u) + C$ looks easy, as the antiderivative of the derivative of $F$ is just $F$, plus a constant. The ``work'' involved is making the proper substitution. There is not a step--by--step process that one can memorize; rather, experience will be one's guide. To gain experience, we now embark on many examples.\\
@@ -55,7 +79,10 @@ Evaluate $\ds \int x\sin(x^2+5)\ dx$.}
 {Knowing that substitution is related to the Chain Rule, we choose to let $u$ be the ``inside'' function of $\sin(x^2+5)$. (This is not \emph{always} a good choice, but it is often the best place to start.)
 
 Let $u = x^2+5$, hence $du = 2x\,dx$. The integrand has an $x\,dx$ term, but not a $2x\,dx$ term. (Recall that multiplication is commutative, so the $x$ does not physically have to be next to $dx$ for there to be an $x\,dx$ term.) We can divide both sides of the $du$ expression by 2:
-	$$du = 2x\,dx \quad \Rightarrow \quad \frac12du = x\,dx.$$ We can now substitute.
+	\[
+	du = 2x\,dx \quad \Rightarrow \quad \frac12du = x\,dx.
+	\]
+	We can now substitute.
 	\begin{align*}\int x\sin(x^2+5)\ dx &= \int \sin(\underbrace{x^2+5}_u) \underbrace{x\ dx}_{\frac12du}\\
 						 &= \int \frac12\sin u\ du
 \end{align*}
@@ -82,7 +109,9 @@ The previous example exhibited a common, and simple, type of substitution. The `
 
 \keyidea{idea:linearsub}{Substitution With A Linear Function}
 {Consider $\int \Fp(ax+b)\ dx$, where $a\neq 0$ and $b$ are constants. Letting $u = ax+b$ gives $du = a\cdot dx$, leading to the result
-$$\int \Fp(ax+b)\ dx = \frac{1}{a}F(ax+b) + C.$$
+\[
+\int \Fp(ax+b)\ dx = \frac{1}{a}F(ax+b) + C.
+\]
 }
 
 Thus $\int \sin (7x-4)\ dx = -\frac17\cos(7x-4)+C$. Our next example can use Key Idea \ref{idea:linearsub}, but we will only employ it after going through all of the steps.\\
@@ -120,7 +149,9 @@ Our examples so far have required ``basic substitution.'' The next example demon
 \example{ex_sub4}{Integrating by substitution}{
 Evaluate $\ds\int x\sqrt{x+3}\ dx$.}
 {Recognizing the composition of functions, set $u = x+3$. Then $du = dx$, giving what seems initially to be a simple substitution. But at this stage, we have:
-	$$\int x\sqrt{x+3}\ dx = \int x\sqrt{u}\ du.$$
+	\[
+	\int x\sqrt{x+3}\ dx = \int x\sqrt{u}\ du.
+	\]
 We cannot evaluate an integral that has both an $x$ and an $u$ in it. We need to convert the $x$ to an expression involving just $u$.
 
 Since we set $u = x+3$, we can also state that $u-3 = x$. Thus we can replace $x$ in the integrand with $u-3$. It will also be helpful to rewrite $\sqrt{u}$ as $u^\frac12$.
@@ -180,7 +211,9 @@ Thus the result they give is $\int \tan x \ dx = \ln|\sec x| + C$. These two ans
 \example{ex_sub7}{Integrating by substitution: antiderivatives of $\sec x$}{
 Evaluate $\ds\int \sec x\ dx$.}
 {This example employs a wonderful trick: multiply the integrand by ``1'' so that we see how to integrate more clearly. In this case, we write ``1'' as
-$$1 = \frac{\sec x + \tan x}{\sec x + \tan x}.$$
+\[
+1 = \frac{\sec x + \tan x}{\sec x + \tan x}.
+\]
 This may seem like it came out of left field, but it works beautifully. Consider:
 \begin{align*}
 			\int \sec x\ dx	&=	\int \sec x\cdot \frac{\sec x + \tan x}{\sec x + \tan x}\ dx \\
@@ -222,7 +255,9 @@ Evaluate $\ds \int \cos^2x\ dx$.}
 However, setting $u = \cos x$ means $du = -\sin x\ dx$, which we do not have in the integral. Another technique is needed.
 
 The process we'll employ is to use a Power Reducing formula for $\cos^2x$ (perhaps consult the back of this text for this formula), which states 
-	$$\cos ^2x = \frac{1+\cos(2x)}{2}.$$
+	\[
+	\cos ^2x = \frac{1+\cos(2x)}{2}.
+	\]
 	The right hand side of this equation is not difficult to integrate. We have:
 \begin{align*}
 	\int \cos^2x\ dx &= \int \frac{1+\cos(2x)}2\ dx \\
@@ -248,7 +283,9 @@ Evaluate $\ds\int \frac{x^3+4x^2+8x+5}{x^2+2x+1}\ dx$.}
 When dealing with rational functions (i.e., quotients made up of polynomial functions), it is an almost universal rule that everything works better when the degree of the numerator is less than the degree of the denominator. Hence we use polynomial division.
 
 We skip the specifics of the steps, but note that when $x^2+2x+1$ is divided into $x^3+4x^2+8x+5$, it goes in $x+2$ times with a remainder of $3x+3$. Thus 
-	$$\frac{x^3+4x^2+8x+5}{x^2+2x+1} = x+2 + \frac{3x+3}{x^2+2x+1}.$$
+	\[
+	\frac{x^3+4x^2+8x+5}{x^2+2x+1} = x+2 + \frac{3x+3}{x^2+2x+1}.
+	\]
 Integrating $x+2$ is simple. The fraction can be integrated by setting $u = x^2+2x+1$, giving $du = (2x+2)\ dx$. This is very similar to the numerator. Note that $du/2 = (x+1)\ dx$ and then consider the following:
 \begin{align*}
 \int \frac{x^3+4x^2+8x+5}{x^2+2x+1}\ dx & = \int \left(x+2 + \frac{3x+3}{x^2+2x+1}\right)\ dx  \rule[-13pt]{0pt}{5pt} \\
@@ -263,7 +300,9 @@ In some ways, we ``lucked out'' in that after dividing, substitution was able to
 \example{ex_sub11}{Integration by alternate methods}{
 Evaluate $\ds\int \frac{x^2+2x+3}{\sqrt{x}}\ dx$ with, and without, substitution.}
 {We already know how to integrate this particular example. Rewrite $\sqrt{x}$ as $x^\frac12$ and simplify the fraction:
-	$$ \frac{x^2+2x+3}{x^{1/2}} = x^\frac32 + 2x^\frac12 + 3x^{-\frac12}.$$
+	\[
+	 \frac{x^2+2x+3}{x^{1/2}} = x^\frac32 + 2x^\frac12 + 3x^{-\frac12}.
+	 \]
 We can now integrate using the Power Rule:
 \begin{align*}
 	\int \frac{x^2+2x+3}{x^{1/2}}\ dx &= \int\left(x^\frac32 + 2x^\frac12 + 3x^{-\frac12}\right)\ dx\\
@@ -272,7 +311,9 @@ We can now integrate using the Power Rule:
 This is a perfectly fine approach. We demonstrate how this can also be solved using substitution as its implementation is rather clever.
 
 Let $u = \sqrt{x} = x^\frac12$; therefore 
-		$$du = \frac12x^{-\frac12}dx = \frac{1}{2\sqrt{x}}\ dx \quad \Rightarrow \quad 2du = \frac{1}{\sqrt{x}}\ dx.$$
+		\[
+		du = \frac12x^{-\frac12}dx = \frac{1}{2\sqrt{x}}\ dx \quad \Rightarrow \quad 2du = \frac{1}{\sqrt{x}}\ dx.
+		\]
 		
 This gives us $\ds \int \frac{x^2+2x+3}{\sqrt{x}}\ dx = \int (x^2+2x+3)\cdot2\ du$. What are we to do with the other $x$ terms? Since $u = x^\frac12$, $u^2 = x$, etc. We can then replace $x^2$ and $x$ with appropriate powers of $u$. We thus have
 \begin{align*}
@@ -288,7 +329,15 @@ which is obviously the same answer we obtained before. In this situation, substi
 \vskip\baselineskip
 
 %In Section \ref{sec:deriv_inverse_function} 
-When studying derivatives of inverse functions, we learned that $$\frac{d}{dx}\big(\tan^{-1}x\big) = \frac{1}{1+x^2}.$$ Applying the Chain Rule to this is not difficult; for instance, $$\frac{d}{dx}\big(\tan^{-1}5x\big) = \frac{5}{1+25x^2}.$$ We now explore how Substitution can be used to ``undo'' certain derivatives that are the result of the Chain Rule applied to Inverse Trigonometric functions. We begin with an example.\\
+When studying derivatives of inverse functions, we learned that 
+\[
+\frac{d}{dx}\big(\tan^{-1}x\big) = \frac{1}{1+x^2}.
+\]
+Applying the Chain Rule to this is not difficult; for instance, 
+\[
+\frac{d}{dx}\big(\tan^{-1}5x\big) = \frac{5}{1+25x^2}.
+\]
+We now explore how Substitution can be used to ``undo'' certain derivatives that are the result of the Chain Rule applied to Inverse Trigonometric functions. We begin with an example.\\
 
 \example{ex_subst14}{Integrating by substitution: inverse trigonometric functions}{
 Evaluate $\ds \int \frac{1}{25+x^2}\ dx$.}
@@ -298,7 +347,11 @@ Evaluate $\ds \int \frac{1}{25+x^2}\ dx$.}
 							&= \frac{1}{25(1+\left(\frac{x}{5}\right)^2)} \\
 							&= \frac{1}{25}\frac{1}{1+\left(\frac{x}{5}\right)^2}\ .
 \end{align*}
-Thus $$\int\frac{1}{25+x^2}\ dx = \frac{1}{25}\int \frac{1}{1+\left(\frac{x}{5}\right)^2}\ dx.$$ This can be integrated using Substitution. Set $u = x/5$, hence $du = dx/5$ or $dx=5du$. Thus
+Thus 
+\[
+\int\frac{1}{25+x^2}\ dx = \frac{1}{25}\int \frac{1}{1+\left(\frac{x}{5}\right)^2}\ dx.
+\]
+This can be integrated using Substitution. Set $u = x/5$, hence $du = dx/5$ or $dx=5du$. Thus
 \begin{align*}
 \int\frac{1}{25+x^2}\ dx &= \frac{1}{25}\int \frac{1}{1+\left(\frac{x}{5}\right)^2}\ dx \\
 										&= \frac15\int \frac{1}{1+u^2}\ du \\
@@ -329,7 +382,9 @@ Example \ref{ex_subst14} demonstrates a general technique that can be applied to
 Let's practice using Theorem \ref{thm:int_inverse_trig}.\\
 
 \example{ex_subst15}{Integrating by substitution: inverse trigonometric functions}{Evaluate the given indefinite integrals.
-$$\int \frac{1}{9+x^2}\ dx,\quad \int \frac{1}{x\sqrt{x^2-\frac{1}{100}}}\ dx\quad \text{ and }\quad  \int \frac{1}{\sqrt{5-x^2}}\ dx.$$
+\[
+\int \frac{1}{9+x^2}\ dx,\quad \int \frac{1}{x\sqrt{x^2-\frac{1}{100}}}\ dx\quad \text{ and }\quad  \int \frac{1}{\sqrt{5-x^2}}\ dx.
+\]
 }
 {Each can be answered using a straightforward application of Theorem \ref{thm:int_inverse_trig}.\\
 
@@ -360,14 +415,18 @@ In our example, we take half of $-4$ and square it, getting $4$. We add/subtract
 				&=\frac{1}{(x-2)^2 + 9}
 \end{align*}
 We can now integrate this using the arctangent rule. Technically, we need to substitute first with $u=x-2$, but we can employ Key Idea \ref{idea:linearsub} instead. Thus we have 
-$$ \int \frac{1}{x^2-4x+13}\ dx = \int \frac{1}{(x-2)^2+9}\ dx = \frac13\tan^{-1}\frac{x-2}{3}+C.$$
+\[
+ \int \frac{1}{x^2-4x+13}\ dx = \int \frac{1}{(x-2)^2+9}\ dx = \frac13\tan^{-1}\frac{x-2}{3}+C.
+ \]
 \vskip -\baselineskip
 }\\
 
 \example{ex_subst17}{Integrals requiring multiple methods}{
 Evaluate $\ds \int \frac{4-x}{\sqrt{16-x^2}}\ dx$.}
 {This integral requires two different methods to evaluate it. We get to those methods by splitting up the integral: 
-$$ \int \frac{4-x}{\sqrt{16-x^2}}\ dx = \int \frac{4}{\sqrt{16-x^2}}\ dx - \int \frac{x}{\sqrt{16-x^2}}\ dx.$$
+\[
+ \int \frac{4-x}{\sqrt{16-x^2}}\ dx = \int \frac{4}{\sqrt{16-x^2}}\ dx - \int \frac{x}{\sqrt{16-x^2}}\ dx.
+ \]
 The first integral is handled using a straightforward application of Theorem \ref{thm:int_inverse_trig}; the second integral is handled by substitution, with $u = 16-x^2$. We handle each separately.
 
 $\ds \int \frac{4}{\sqrt{16-x^2}}\ dx = 4\sin^{-1}\frac{x}{4} + C$.
@@ -381,7 +440,9 @@ $\ds \int\frac{x}{\sqrt{16-x^2}}\ dx$: Set $u = 16-x^2$, so $du = -2xdx$ and $xd
 				&= -\sqrt{16-x^2} + C.
 \end{align*}
 Combining these together, we have 
-$$ \int \frac{4-x}{\sqrt{16-x^2}}\ dx = 4\sin^{-1}\frac x4 + \sqrt{16-x^2}+C.$$
+\[
+ \int \frac{4-x}{\sqrt{16-x^2}}\ dx = 4\sin^{-1}\frac x4 + \sqrt{16-x^2}+C.
+ \]
 \vskip-\baselineskip
 }\\
 
@@ -400,7 +461,9 @@ At its heart, (using the notation of Theorem \ref{thm:subst}) substitution conve
 
 \theorem{thm:subst_def_int}{Substitution with Definite Integrals}
 {Let $F$ and $g$ be differentiable functions, where the range of $g$ is an interval $I$ that is contained in the domain of $F$. Then \index{integration!definite!and substitution}\index{definite integral!and substitution}
-$$\int_a^b \Fp\big(g(x)\big)g\primeskip'(x)\ dx = \int_{g(a)}^{g(b)} \Fp(u)\ du.$$
+\[
+\int_a^b \Fp\big(g(x)\big)g\primeskip'(x)\ dx = \int_{g(a)}^{g(b)} \Fp(u)\ du.
+\]
 }
 
 In effect, Theorem \ref{thm:subst_def_int} states that once you convert to integrating with respect to $u$, you do not need to switch back to evaluating with respect to $x$. A few examples will help one understand.\\
