@@ -1,387 +1,389 @@
 \begin{theindex}
 
-  \item $!$, \hyperpage{111}
-  \item Absolute Convergence Theorem, \hyperpage{154}
-  \item Absolute Value Theorem, \hyperpage{114}
-  \item acceleration, \hyperpage{98}
-  \item Alternating Harmonic Series, \hyperpage{130}, \hyperpage{152}, 
-		\hyperpage{163}
+  \item $!$, \hyperpage{115}
+  \item Absolute Convergence Theorem, \hyperpage{158}
+  \item Absolute Value Theorem, \hyperpage{118}
+  \item acceleration, \hyperpage{102}
+  \item Alternating Harmonic Series, \hyperpage{134}, \hyperpage{156}, 
+		\hyperpage{167}
   \item Alternating Series Test
-    \subitem for series, \hyperpage{149}
-  \item analytic function, \hyperpage{180}
-  \item antiderivative, \hyperpage{96}
-  \item arc length, \hyperpage{84}, \hyperpage{216}, \hyperpage{237}
+    \subitem for series, \hyperpage{153}
+  \item analytic function, \hyperpage{184}
+  \item antiderivative, \hyperpage{100}
+  \item arc length, \hyperpage{88}, \hyperpage{220}, \hyperpage{241}
 
   \indexspace
 
-  \item Binomial Series, \hyperpage{180}
-  \item boundary point, \hyperpage{263}
-  \item bounded sequence, \hyperpage{116}
-    \subitem convergence, \hyperpage{117}
-  \item bounded set, \hyperpage{263}
+  \item Binomial Series, \hyperpage{184}
+  \item boundary point, \hyperpage{267}
+  \item bounded sequence, \hyperpage{120}
+    \subitem convergence, \hyperpage{121}
+  \item bounded set, \hyperpage{267}
 
   \indexspace
 
-  \item catenary, \hyperpage{94}
-  \item closed, \hyperpage{263}
-  \item closed disk, \hyperpage{263}
-  \item concavity, \hyperpage{214}
-  \item conic sections, \hyperpage{190}
-    \subitem degenerate, \hyperpage{190}
-    \subitem ellipse, \hyperpage{193}
-    \subitem hyperbola, \hyperpage{196}
-    \subitem parabola, \hyperpage{190}
+  \item catenary, \hyperpage{98}
+  \item closed, \hyperpage{267}
+  \item closed disk, \hyperpage{267}
+  \item concavity, \hyperpage{218}
+  \item conic sections, \hyperpage{194}
+    \subitem degenerate, \hyperpage{194}
+    \subitem ellipse, \hyperpage{197}
+    \subitem hyperbola, \hyperpage{200}
+    \subitem parabola, \hyperpage{194}
   \item Constant Multiple Rule
-    \subitem of series, \hyperpage{129}
-  \item continuous function, \hyperpage{268}
-    \subitem properties, \hyperpage{269}
-  \item contour lines, \hyperpage{258}
+    \subitem of series, \hyperpage{133}
+  \item continuous function, \hyperpage{272}
+    \subitem properties, \hyperpage{273}
+  \item contour lines, \hyperpage{262}
   \item convergence
-    \subitem absolute, \hyperpage{153, 154}
-    \subitem Alternating Series Test, \hyperpage{149}
-    \subitem conditional, \hyperpage{153}
-    \subitem Direct Comparison Test, \hyperpage{138}
-      \subsubitem for integration, \hyperpage{56}
-    \subitem Integral Test, \hyperpage{136}
-    \subitem interval of, \hyperpage{159}
-    \subitem Limit Comparison Test, \hyperpage{139}
-      \subsubitem for integration, \hyperpage{57}
-    \subitem $n^\text  {th}$--term test, \hyperpage{131}
-    \subitem of geometric series, \hyperpage{125}
-    \subitem of improper int., \hyperpage{51}, \hyperpage{55--57}
-    \subitem of monotonic sequences, \hyperpage{120}
-    \subitem of $p$-series, \hyperpage{126}
-    \subitem of power series, \hyperpage{159}
-    \subitem of sequence, \hyperpage{113}, \hyperpage{117}
-    \subitem of series, \hyperpage{123}
-    \subitem radius of, \hyperpage{159}
-    \subitem Ratio Comparison Test, \hyperpage{144}
-    \subitem Root Comparison Test, \hyperpage{146}
+    \subitem absolute, \hyperpage{157, 158}
+    \subitem Alternating Series Test, \hyperpage{153}
+    \subitem conditional, \hyperpage{157}
+    \subitem Direct Comparison Test, \hyperpage{142}
+      \subsubitem for integration, \hyperpage{59}
+    \subitem Integral Test, \hyperpage{140}
+    \subitem interval of, \hyperpage{163}
+    \subitem Limit Comparison Test, \hyperpage{143}
+      \subsubitem for integration, \hyperpage{60}
+    \subitem $n^\text  {th}$--term test, \hyperpage{135}
+    \subitem of geometric series, \hyperpage{129}
+    \subitem of improper int., \hyperpage{54}, \hyperpage{58--60}
+    \subitem of monotonic sequences, \hyperpage{124}
+    \subitem of $p$-series, \hyperpage{130}
+    \subitem of power series, \hyperpage{163}
+    \subitem of sequence, \hyperpage{117}, \hyperpage{121}
+    \subitem of series, \hyperpage{127}
+    \subitem radius of, \hyperpage{163}
+    \subitem Ratio Comparison Test, \hyperpage{148}
+    \subitem Root Comparison Test, \hyperpage{150}
   \item curve
-    \subitem parametrically defined, \hyperpage{202}
-    \subitem rectangular equation, \hyperpage{202}
-    \subitem smooth, \hyperpage{207}
-  \item cusp, \hyperpage{207}
-  \item cylinder, \hyperpage{246}
+    \subitem parametrically defined, \hyperpage{206}
+    \subitem rectangular equation, \hyperpage{206}
+    \subitem smooth, \hyperpage{211}
+  \item cusp, \hyperpage{211}
+  \item cylinder, \hyperpage{250}
 
   \indexspace
 
   \item definite integral
     \subitem and substitution, \hyperpage{13}
-  \item dependent variable, \hyperpage{91}
+  \item dependent variable, \hyperpage{95}
   \item derivative
-    \subitem mixed partial, \hyperpage{275}
-    \subitem parametric equations, \hyperpage{211}
-    \subitem partial, \hyperpage{272}, \hyperpage{278}
-    \subitem power series, \hyperpage{161}
-  \item differential equation, \hyperpage{91}
-    \subitem first order, \hyperpage{91}
-    \subitem initial condition, \hyperpage{93}
-    \subitem linear, \hyperpage{106}
-    \subitem ordinary differential equation, \hyperpage{92}
-    \subitem partial differential equation, \hyperpage{92}
-    \subitem separable, \hyperpage{101}
-    \subitem solution, \hyperpage{91}
+    \subitem mixed partial, \hyperpage{279}
+    \subitem parametric equations, \hyperpage{215}
+    \subitem partial, \hyperpage{276}, \hyperpage{282}
+    \subitem power series, \hyperpage{165}
+  \item differential equation, \hyperpage{95}
+    \subitem first order, \hyperpage{95}
+    \subitem initial condition, \hyperpage{97}
+    \subitem linear, \hyperpage{110}
+    \subitem ordinary differential equation, \hyperpage{96}
+    \subitem partial differential equation, \hyperpage{96}
+    \subitem separable, \hyperpage{105}
+    \subitem solution, \hyperpage{95}
   \item Direct Comparison Test
-    \subitem for integration, \hyperpage{56}
-    \subitem for series, \hyperpage{138}
-  \item directrix, \hyperpage{190}, \hyperpage{246}
-  \item Disk Method, \hyperpage{69}
-  \item distance, \hyperpage{98}
-    \subitem between points in space, \hyperpage{244}
+    \subitem for integration, \hyperpage{59}
+    \subitem for series, \hyperpage{142}
+  \item directrix, \hyperpage{194}, \hyperpage{250}
+  \item Disk Method, \hyperpage{73}
+  \item distance, \hyperpage{102}
+    \subitem between points in space, \hyperpage{248}
   \item divergence
-    \subitem Alternating Series Test, \hyperpage{149}
-    \subitem Direct Comparison Test, \hyperpage{138}
-      \subsubitem for integration, \hyperpage{56}
-    \subitem Integral Test, \hyperpage{136}
-    \subitem Limit Comparison Test, \hyperpage{139}
-      \subsubitem for integration, \hyperpage{57}
-    \subitem $n^\text  {th}$--term test, \hyperpage{131}
-    \subitem of geometric series, \hyperpage{125}
-    \subitem of improper int., \hyperpage{51}, \hyperpage{55--57}
-    \subitem of $p$-series, \hyperpage{126}
-    \subitem of sequence, \hyperpage{113}
-    \subitem of series, \hyperpage{123}
-    \subitem Ratio Comparison Test, \hyperpage{144}
-    \subitem Root Comparison Test, \hyperpage{146}
+    \subitem Alternating Series Test, \hyperpage{153}
+    \subitem Direct Comparison Test, \hyperpage{142}
+      \subsubitem for integration, \hyperpage{59}
+    \subitem Integral Test, \hyperpage{140}
+    \subitem Limit Comparison Test, \hyperpage{143}
+      \subsubitem for integration, \hyperpage{60}
+    \subitem $n^\text  {th}$--term test, \hyperpage{135}
+    \subitem of geometric series, \hyperpage{129}
+    \subitem of improper int., \hyperpage{54}, \hyperpage{58--60}
+    \subitem of $p$-series, \hyperpage{130}
+    \subitem of sequence, \hyperpage{117}
+    \subitem of series, \hyperpage{127}
+    \subitem Ratio Comparison Test, \hyperpage{148}
+    \subitem Root Comparison Test, \hyperpage{150}
 
   \indexspace
 
-  \item eccentricity, \hyperpage{195}, \hyperpage{198}
+  \item eccentricity, \hyperpage{199}, \hyperpage{202}
   \item ellipse
-    \subitem definition, \hyperpage{193}
-    \subitem eccentricity, \hyperpage{195}
-    \subitem parametric equations, \hyperpage{206}
-    \subitem reflective property, \hyperpage{195}
-    \subitem standard equation, \hyperpage{193}
-  \item exponential growth model, \hyperpage{92}
+    \subitem definition, \hyperpage{197}
+    \subitem eccentricity, \hyperpage{199}
+    \subitem parametric equations, \hyperpage{210}
+    \subitem reflective property, \hyperpage{199}
+    \subitem standard equation, \hyperpage{197}
+  \item exponential growth model, \hyperpage{96}
 
   \indexspace
 
-  \item factorial, \hyperpage{111}
-  \item first order linear differential equation, \hyperpage{106}
-  \item focus, \hyperpage{190}, \hyperpage{193}, \hyperpage{196}
+  \item factorial, \hyperpage{115}
+  \item first order linear differential equation, \hyperpage{110}
+  \item focus, \hyperpage{194}, \hyperpage{197}, \hyperpage{200}
   \item function
-    \subitem of three variables, \hyperpage{260}
-    \subitem of two variables, \hyperpage{257}
+    \subitem of three variables, \hyperpage{264}
+    \subitem of two variables, \hyperpage{261}
 
   \indexspace
 
-  \item Gabriel's Horn, \hyperpage{88}
-  \item general solution, \hyperpage{93}
-  \item geometric series, \hyperpage{125}
-  \item gradient, \hyperpage{287}
-    \subitem and level surfaces, \hyperpage{288}
+  \item Gabriel's Horn, \hyperpage{92}
+  \item general solution, \hyperpage{97}
+  \item geometric series, \hyperpage{129}
+  \item gradient, \hyperpage{291}
+    \subitem and level surfaces, \hyperpage{292}
 
   \indexspace
 
-  \item Harmonic Series, \hyperpage{130}
+  \item Harmonic Series, \hyperpage{134}
   \item hyperbola
-    \subitem definition, \hyperpage{196}
-    \subitem eccentricity, \hyperpage{198}
-    \subitem parametric equations, \hyperpage{206}
-    \subitem reflective property, \hyperpage{198}
-    \subitem standard equation, \hyperpage{196}
+    \subitem definition, \hyperpage{200}
+    \subitem eccentricity, \hyperpage{202}
+    \subitem parametric equations, \hyperpage{210}
+    \subitem reflective property, \hyperpage{202}
+    \subitem standard equation, \hyperpage{200}
 
   \indexspace
 
-  \item implicit solution, \hyperpage{102}
-  \item improper integration, \hyperpage{51}, \hyperpage{53}
-  \item indefinite integral, \hyperpage{96}
-  \item independent variable, \hyperpage{91}
-  \item initial condition, \hyperpage{93}
-  \item Integral Test, \hyperpage{136}
-  \item integrating factor, \hyperpage{106}
+  \item implicit solution, \hyperpage{106}
+  \item improper integration, \hyperpage{54}, \hyperpage{56}
+  \item indefinite integral, \hyperpage{100}
+  \item independent variable, \hyperpage{95}
+  \item initial condition, \hyperpage{97}
+  \item Integral Test, \hyperpage{140}
+  \item integrating factor, \hyperpage{110}
   \item integration
-    \subitem arc length, \hyperpage{84}
-    \subitem area between curves, \hyperpage{62}
+    \subitem arc length, \hyperpage{88}
+    \subitem area between curves, \hyperpage{66}
     \subitem by parts, \hyperpage{18}
     \subitem by substitution, \hyperpage{2}
     \subitem definite
       \subsubitem and substitution, \hyperpage{13}
-    \subitem general application technique, \hyperpage{61}
-    \subitem improper, \hyperpage{51}, \hyperpage{53}, 
-		\hyperpage{56, 57}
-    \subitem of power series, \hyperpage{161}
+    \subitem general application technique, \hyperpage{65}
+    \subitem improper, \hyperpage{54}, \hyperpage{56}, 
+		\hyperpage{59, 60}
+    \subitem of power series, \hyperpage{165}
     \subitem of trig. functions, \hyperpage{7}
     \subitem of trig. powers, \hyperpage{27}, \hyperpage{31}
-    \subitem partial fraction decomp., \hyperpage{44}
-    \subitem surface area, \hyperpage{86}, \hyperpage{217}, 
-		\hyperpage{239}
+    \subitem partial fraction decomp., \hyperpage{47}
+    \subitem surface area, \hyperpage{90}, \hyperpage{221}, 
+		\hyperpage{243}
     \subitem trig. subst., \hyperpage{36}
     \subitem volume
-      \subsubitem cross-sectional area, \hyperpage{68}
-      \subsubitem Disk Method, \hyperpage{69}
-      \subsubitem Shell Method, \hyperpage{77}, \hyperpage{80}
-      \subsubitem Washer Method, \hyperpage{71}, \hyperpage{80}
-  \item interior point, \hyperpage{263}
-  \item interval of convergence, \hyperpage{159}
+      \subsubitem cross-sectional area, \hyperpage{72}
+      \subsubitem Disk Method, \hyperpage{73}
+      \subsubitem Shell Method, \hyperpage{81}, \hyperpage{84}
+      \subsubitem Washer Method, \hyperpage{75}, \hyperpage{84}
+  \item interior point, \hyperpage{267}
+  \item interval of convergence, \hyperpage{163}
 
   \indexspace
 
-  \item l'H\^opital's Rule, \hyperpage{52}
-  \item Leibniz notation, \hyperpage{97}, \hyperpage{101}
-  \item level curves, \hyperpage{258}
-  \item level surface, \hyperpage{260}, \hyperpage{288}
+  \item l'H\^opital's Rule, \hyperpage{55}
+  \item Leibniz notation, \hyperpage{101}, \hyperpage{105}
+  \item level curves, \hyperpage{262}
+  \item level surface, \hyperpage{264}, \hyperpage{292}
   \item limit
-    \subitem Absolute Value Theorem, \hyperpage{114}
-    \subitem of multivariable function, \hyperpage{264, 265}, 
-		\hyperpage{270}
-    \subitem of sequence, \hyperpage{113}
-    \subitem properties, \hyperpage{265}
+    \subitem Absolute Value Theorem, \hyperpage{118}
+    \subitem of multivariable function, \hyperpage{268, 269}, 
+		\hyperpage{274}
+    \subitem of sequence, \hyperpage{117}
+    \subitem properties, \hyperpage{269}
   \item Limit Comparison Test
-    \subitem for integration, \hyperpage{57}
-    \subitem for series, \hyperpage{139}
-  \item linear differential equation, \hyperpage{106}
-    \subitem first order, \hyperpage{106}
+    \subitem for integration, \hyperpage{60}
+    \subitem for series, \hyperpage{143}
+  \item linear differential equation, \hyperpage{110}
+    \subitem first order, \hyperpage{110}
 
   \indexspace
 
   \item Maclaurin Polynomial, 
-		\hyperindexformat{\see{Taylor Polynomial}}{169}
-    \subitem definition, \hyperpage{169}
-  \item Maclaurin Series, \hyperindexformat{\see{Taylor Series}}{178}
-    \subitem definition, \hyperpage{178}
-  \item mathematical model, \hyperpage{92}
-  \item monotonic sequence, \hyperpage{118}
-  \item multivariable function, \hyperpage{257}, \hyperpage{260}
-    \subitem continuity, \hyperpage{268--270}
-    \subitem domain, \hyperpage{257}, \hyperpage{260}
-    \subitem level curves, \hyperpage{258}
-    \subitem level surface, \hyperpage{260}
-    \subitem limit, \hyperpage{264, 265}, \hyperpage{270}
-    \subitem range, \hyperpage{257}, \hyperpage{260}
+		\hyperindexformat{\see{Taylor Polynomial}}{173}
+    \subitem definition, \hyperpage{173}
+  \item Maclaurin Series, \hyperindexformat{\see{Taylor Series}}{182}
+    \subitem definition, \hyperpage{182}
+  \item mathematical model, \hyperpage{96}
+  \item monotonic sequence, \hyperpage{122}
+  \item multivariable function, \hyperpage{261}, \hyperpage{264}
+    \subitem continuity, \hyperpage{272--274}
+    \subitem domain, \hyperpage{261}, \hyperpage{264}
+    \subitem level curves, \hyperpage{262}
+    \subitem level surface, \hyperpage{264}
+    \subitem limit, \hyperpage{268, 269}, \hyperpage{274}
+    \subitem range, \hyperpage{261}, \hyperpage{264}
 
   \indexspace
 
-  \item Newton's law of cooling, \hyperpage{103}, \hyperpage{110}
-  \item normal line, \hyperpage{211}, \hyperpage{284}
-  \item $n^\text  {th}$--term test, \hyperpage{131}
+  \item Newton's law of cooling, \hyperpage{107}, \hyperpage{114}
+  \item normal line, \hyperpage{215}, \hyperpage{288}
+  \item $n^\text  {th}$--term test, \hyperpage{135}
 
   \indexspace
 
-  \item open, \hyperpage{263}
-  \item open ball, \hyperpage{270}
-  \item open disk, \hyperpage{263}
-  \item ordinary differential equation, \hyperpage{92}
-  \item orthogonal, \hyperpage{284}
+  \item open, \hyperpage{267}
+  \item open ball, \hyperpage{274}
+  \item open disk, \hyperpage{267}
+  \item ordinary differential equation, \hyperpage{96}
+  \item orthogonal, \hyperpage{288}
 
   \indexspace
 
-  \item $p$-series, \hyperpage{126}
+  \item $p$-series, \hyperpage{130}
   \item parabola
-    \subitem definition, \hyperpage{190}
-    \subitem general equation, \hyperpage{191}
-    \subitem reflective property, \hyperpage{192}
+    \subitem definition, \hyperpage{194}
+    \subitem general equation, \hyperpage{195}
+    \subitem reflective property, \hyperpage{196}
   \item parametric equations
-    \subitem arc length, \hyperpage{216}
-    \subitem concavity, \hyperpage{214}
-    \subitem definition, \hyperpage{202}
-    \subitem finding $\frac  {d^2y}{dx^2}$, \hyperpage{214}
-    \subitem finding $\frac  {dy}{dx}$, \hyperpage{211}
-    \subitem normal line, \hyperpage{211}
-    \subitem surface area, \hyperpage{217}
-    \subitem tangent line, \hyperpage{211}
-  \item partial derivative, \hyperpage{272}, \hyperpage{278}
-    \subitem high order, \hyperpage{279}
-    \subitem meaning, \hyperpage{274}
-    \subitem mixed, \hyperpage{275}
-    \subitem second derivative, \hyperpage{275}
-  \item partial differential equation, \hyperpage{92}
-  \item particular solution, \hyperpage{93}
+    \subitem arc length, \hyperpage{220}
+    \subitem concavity, \hyperpage{218}
+    \subitem definition, \hyperpage{206}
+    \subitem finding $\frac  {d^2y}{dx^2}$, \hyperpage{218}
+    \subitem finding $\frac  {dy}{dx}$, \hyperpage{215}
+    \subitem normal line, \hyperpage{215}
+    \subitem surface area, \hyperpage{221}
+    \subitem tangent line, \hyperpage{215}
+  \item partial derivative, \hyperpage{276}, \hyperpage{282}
+    \subitem high order, \hyperpage{283}
+    \subitem meaning, \hyperpage{278}
+    \subitem mixed, \hyperpage{279}
+    \subitem second derivative, \hyperpage{279}
+  \item partial differential equation, \hyperpage{96}
+  \item particular solution, \hyperpage{97}
   \item planes
-    \subitem coordinate plane, \hyperpage{245}
-    \subitem introduction, \hyperpage{245}
-    \subitem tangent, \hyperpage{286}
+    \subitem coordinate plane, \hyperpage{249}
+    \subitem introduction, \hyperpage{249}
+    \subitem tangent, \hyperpage{290}
   \item polar
-    \subitem coordinates, \hyperpage{221}
+    \subitem coordinates, \hyperpage{225}
     \subitem function
-      \subsubitem arc length, \hyperpage{237}
-      \subsubitem gallery of graphs, \hyperpage{227}
-      \subsubitem surface area, \hyperpage{239}
-    \subitem functions, \hyperpage{223}
-      \subsubitem area, \hyperpage{234}
-      \subsubitem area between curves, \hyperpage{236}
-      \subsubitem finding $\frac  {dy}{dx}$, \hyperpage{232}
-      \subsubitem graphing, \hyperpage{223}
-  \item polar coordinates, \hyperpage{221}
-    \subitem plotting points, \hyperpage{221}
-  \item power series, \hyperpage{158}
-    \subitem algebra of, \hyperpage{182}
-    \subitem convergence, \hyperpage{159}
-    \subitem derivatives and integrals, \hyperpage{161}
+      \subsubitem arc length, \hyperpage{241}
+      \subsubitem gallery of graphs, \hyperpage{231}
+      \subsubitem surface area, \hyperpage{243}
+    \subitem functions, \hyperpage{227}
+      \subsubitem area, \hyperpage{238}
+      \subsubitem area between curves, \hyperpage{240}
+      \subsubitem finding $\frac  {dy}{dx}$, \hyperpage{236}
+      \subsubitem graphing, \hyperpage{227}
+  \item polar coordinates, \hyperpage{225}
+    \subitem plotting points, \hyperpage{225}
+  \item power series, \hyperpage{162}
+    \subitem algebra of, \hyperpage{186}
+    \subitem convergence, \hyperpage{163}
+    \subitem derivatives and integrals, \hyperpage{165}
 
   \indexspace
 
   \item quadric surface
-    \subitem definition, \hyperpage{249}
-    \subitem ellipsoid, \hyperpage{251}
-    \subitem elliptic cone, \hyperpage{250}
-    \subitem elliptic paraboloid, \hyperpage{250}
-    \subitem gallery, \hyperpage{250--252}
-    \subitem hyperbolic paraboloid, \hyperpage{252}
-    \subitem hyperboloid of one sheet, \hyperpage{251}
-    \subitem hyperboloid of two sheets, \hyperpage{252}
-    \subitem sphere, \hyperpage{251}
-    \subitem trace, \hyperpage{249}
+    \subitem definition, \hyperpage{253}
+    \subitem ellipsoid, \hyperpage{255}
+    \subitem elliptic cone, \hyperpage{254}
+    \subitem elliptic paraboloid, \hyperpage{254}
+    \subitem gallery, \hyperpage{254--256}
+    \subitem hyperbolic paraboloid, \hyperpage{256}
+    \subitem hyperboloid of one sheet, \hyperpage{255}
+    \subitem hyperboloid of two sheets, \hyperpage{256}
+    \subitem sphere, \hyperpage{255}
+    \subitem trace, \hyperpage{253}
 
   \indexspace
 
-  \item radius of convergence, \hyperpage{159}
+  \item radius of convergence, \hyperpage{163}
   \item Ratio Comparison Test
-    \subitem for series, \hyperpage{144}
-  \item rearrangements of series, \hyperpage{154}
+    \subitem for series, \hyperpage{148}
+  \item rearrangements of series, \hyperpage{158}
   \item right hand rule
-    \subitem of Cartesian coordinates, \hyperpage{243}
+    \subitem of Cartesian coordinates, \hyperpage{247}
   \item Root Comparison Test
-    \subitem for series, \hyperpage{146}
+    \subitem for series, \hyperpage{150}
 
   \indexspace
 
-  \item second order differential equation, \hyperpage{94}
-  \item separable ODE, \hyperpage{101}
+  \item second order differential equation, \hyperpage{98}
+  \item separable ODE, \hyperpage{105}
   \item sequence
-    \subitem Absolute Value Theorem, \hyperpage{114}
-    \subitem positive, \hyperpage{138}
+    \subitem Absolute Value Theorem, \hyperpage{118}
+    \subitem positive, \hyperpage{142}
   \item sequences
-    \subitem boundedness, \hyperpage{116}
-    \subitem convergent, \hyperpage{113}, \hyperpage{117}, 
-		\hyperpage{120}
-    \subitem definition, \hyperpage{111}
-    \subitem divergent, \hyperpage{113}
-    \subitem limit, \hyperpage{113}
-    \subitem limit properties, \hyperpage{115}
-    \subitem monotonic, \hyperpage{118}
+    \subitem boundedness, \hyperpage{120}
+    \subitem convergent, \hyperpage{117}, \hyperpage{121}, 
+		\hyperpage{124}
+    \subitem definition, \hyperpage{115}
+    \subitem divergent, \hyperpage{117}
+    \subitem limit, \hyperpage{117}
+    \subitem limit properties, \hyperpage{119}
+    \subitem monotonic, \hyperpage{122}
   \item series
-    \subitem absolute convergence, \hyperpage{153}
-    \subitem Absolute Convergence Theorem, \hyperpage{154}
-    \subitem alternating, \hyperpage{149}
-      \subsubitem Approximation Theorem, \hyperpage{151}
-    \subitem Alternating Series Test, \hyperpage{149}
-    \subitem Binomial, \hyperpage{180}
-    \subitem conditional convergence, \hyperpage{153}
-    \subitem convergent, \hyperpage{123}
-    \subitem definition, \hyperpage{123}
-    \subitem Direct Comparison Test, \hyperpage{138}
-    \subitem divergent, \hyperpage{123}
-    \subitem geometric, \hyperpage{125}
-    \subitem Integral Test, \hyperpage{136}
-    \subitem interval of convergence, \hyperpage{159}
-    \subitem Limit Comparison Test, \hyperpage{139}
-    \subitem Maclaurin, \hyperpage{178}
-    \subitem $n^\text  {th}$--term test, \hyperpage{131}
-    \subitem $p$-series, \hyperpage{126}
-    \subitem partial sums, \hyperpage{123}
-    \subitem power, \hyperpage{158, 159}
-      \subsubitem derivatives and integrals, \hyperpage{161}
-    \subitem properties, \hyperpage{129}
-    \subitem radius of convergence, \hyperpage{159}
-    \subitem Ratio Comparison Test, \hyperpage{144}
-    \subitem rearrangements, \hyperpage{154}
-    \subitem Root Comparison Test, \hyperpage{146}
-    \subitem Taylor, \hyperpage{178}
-    \subitem telescoping, \hyperpage{127, 128}
-  \item Shell Method, \hyperpage{77}, \hyperpage{80}
-  \item singular solution, \hyperpage{103}
-  \item smooth curve, \hyperpage{207}
-  \item solution, \hyperpage{91}
-    \subitem general, \hyperpage{93}
-    \subitem implicit, \hyperpage{102}
-  \item sphere, \hyperpage{245}
+    \subitem absolute convergence, \hyperpage{157}
+    \subitem Absolute Convergence Theorem, \hyperpage{158}
+    \subitem alternating, \hyperpage{153}
+      \subsubitem Approximation Theorem, \hyperpage{155}
+    \subitem Alternating Series Test, \hyperpage{153}
+    \subitem Binomial, \hyperpage{184}
+    \subitem conditional convergence, \hyperpage{157}
+    \subitem convergent, \hyperpage{127}
+    \subitem definition, \hyperpage{127}
+    \subitem Direct Comparison Test, \hyperpage{142}
+    \subitem divergent, \hyperpage{127}
+    \subitem geometric, \hyperpage{129}
+    \subitem Integral Test, \hyperpage{140}
+    \subitem interval of convergence, \hyperpage{163}
+    \subitem Limit Comparison Test, \hyperpage{143}
+    \subitem Maclaurin, \hyperpage{182}
+    \subitem $n^\text  {th}$--term test, \hyperpage{135}
+    \subitem $p$-series, \hyperpage{130}
+    \subitem partial sums, \hyperpage{127}
+    \subitem power, \hyperpage{162, 163}
+      \subsubitem derivatives and integrals, \hyperpage{165}
+    \subitem properties, \hyperpage{133}
+    \subitem radius of convergence, \hyperpage{163}
+    \subitem Ratio Comparison Test, \hyperpage{148}
+    \subitem rearrangements, \hyperpage{158}
+    \subitem Root Comparison Test, \hyperpage{150}
+    \subitem Taylor, \hyperpage{182}
+    \subitem telescoping, \hyperpage{131, 132}
+  \item Shell Method, \hyperpage{81}, \hyperpage{84}
+  \item singular solution, \hyperpage{107}
+  \item smooth curve, \hyperpage{211}
+  \item solution, \hyperpage{95}
+    \subitem general, \hyperpage{97}
+    \subitem implicit, \hyperpage{106}
+  \item sphere, \hyperpage{249}
+  \item substitution 
+    \subitem  hyperbolic, \hyperpage{41}
   \item Sum/Difference Rule
-    \subitem of series, \hyperpage{129}
+    \subitem of series, \hyperpage{133}
   \item surface area
-    \subitem solid of revolution, \hyperpage{86}, \hyperpage{217}, 
-		\hyperpage{239}
-  \item surface of revolution, \hyperpage{248}
+    \subitem solid of revolution, \hyperpage{90}, \hyperpage{221}, 
+		\hyperpage{243}
+  \item surface of revolution, \hyperpage{252}
 
   \indexspace
 
-  \item tangent line, \hyperpage{211}, \hyperpage{232}
-    \subitem directional, \hyperpage{282}
-  \item tangent plane, \hyperpage{286}
+  \item tangent line, \hyperpage{215}, \hyperpage{236}
+    \subitem directional, \hyperpage{286}
+  \item tangent plane, \hyperpage{290}
   \item Taylor Polynomial
-    \subitem definition, \hyperpage{169}
-    \subitem Taylor's Theorem, \hyperpage{171}
+    \subitem definition, \hyperpage{173}
+    \subitem Taylor's Theorem, \hyperpage{175}
   \item Taylor Series
-    \subitem common series, \hyperpage{182}
-    \subitem definition, \hyperpage{178}
-    \subitem equality with generating function, \hyperpage{179}
-  \item Taylor's Theorem, \hyperpage{171}
-  \item telescoping series, \hyperpage{127, 128}
-  \item trace, \hyperpage{249}
+    \subitem common series, \hyperpage{186}
+    \subitem definition, \hyperpage{182}
+    \subitem equality with generating function, \hyperpage{183}
+  \item Taylor's Theorem, \hyperpage{175}
+  \item telescoping series, \hyperpage{131, 132}
+  \item trace, \hyperpage{253}
 
   \indexspace
 
-  \item unbounded sequence, \hyperpage{116}
-  \item unbounded set, \hyperpage{263}
+  \item unbounded sequence, \hyperpage{120}
+  \item unbounded set, \hyperpage{267}
 
   \indexspace
 
-  \item velocity, \hyperpage{98}
+  \item velocity, \hyperpage{102}
 
   \indexspace
 
-  \item Washer Method, \hyperpage{71}, \hyperpage{80}
+  \item Washer Method, \hyperpage{75}, \hyperpage{84}
 
 \end{theindex}

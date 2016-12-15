@@ -2,44 +2,44 @@
 \enlargethispage \baselineskip 
 \contentsline {chapter}{Table of Contents}{iii}{Doc-Start}
 \contentsline {chapter}{Preface}{v}{section*.2}
-\contentsline {chapter}{\numberline {1}Techniques of Antidifferentiation}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Substitution}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Integration by Parts}{18}{section.1.2}
-\contentsline {section}{\numberline {1.3}Trigonometric Integrals}{27}{section.1.3}
-\contentsline {section}{\numberline {1.4}Trigonometric Substitution}{35}{section.1.4}
-\contentsline {section}{\numberline {1.5}Partial Fraction Decomposition}{43}{section.1.5}
-\contentsline {section}{\numberline {1.6}Improper Integration}{50}{section.1.6}
-\contentsline {chapter}{\numberline {2}Applications of Integration}{61}{chapter.2}
-\contentsline {section}{\numberline {2.1}Area Between Curves}{62}{section.2.1}
-\contentsline {section}{\numberline {2.2}Volume by Cross-Sectional Area; Disk and Washer Methods}{68}{section.2.2}
-\contentsline {section}{\numberline {2.3}The Shell Method}{76}{section.2.3}
-\contentsline {section}{\numberline {2.4}Arc Length and Surface Area}{83}{section.2.4}
-\contentsline {chapter}{\numberline {3}Differential Equations}{91}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introduction to differential equations}{91}{section.3.1}
-\contentsline {section}{\numberline {3.2}Integrals as solutions}{96}{section.3.2}
-\contentsline {section}{\numberline {3.3}Separable equations}{101}{section.3.3}
-\contentsline {section}{\numberline {3.4}Linear equations and the integrating factor}{106}{section.3.4}
-\contentsline {chapter}{\numberline {4}Sequences and Series}{111}{chapter.4}
-\contentsline {section}{\numberline {4.1}Sequences}{111}{section.4.1}
-\contentsline {section}{\numberline {4.2}Infinite Series}{123}{section.4.2}
-\contentsline {section}{\numberline {4.3}Integral and Comparison Tests}{136}{section.4.3}
-\contentsline {section}{\numberline {4.4}Ratio and Root Tests}{144}{section.4.4}
-\contentsline {section}{\numberline {4.5}Alternating Series and Absolute Convergence}{149}{section.4.5}
-\contentsline {section}{\numberline {4.6}Power Series}{158}{section.4.6}
-\contentsline {section}{\numberline {4.7}Taylor Polynomials}{168}{section.4.7}
-\contentsline {section}{\numberline {4.8}Taylor Series}{178}{section.4.8}
+\contentsline {chapter}{\numberline {6}Techniques of Antidifferentiation}{263}{chapter.6}
+\contentsline {section}{\numberline {6.1}Substitution}{263}{section.6.1}
+\contentsline {section}{\numberline {6.2}Integration by Parts}{280}{section.6.2}
+\contentsline {section}{\numberline {6.3}Trigonometric Integrals}{289}{section.6.3}
+\contentsline {section}{\numberline {6.4}Trigonometric Substitution}{297}{section.6.4}
+\contentsline {section}{\numberline {6.5}Partial Fraction Decomposition}{308}{section.6.5}
+\contentsline {section}{\numberline {6.6}Improper Integration}{315}{section.6.6}
+\contentsline {chapter}{\numberline {7}Applications of Integration}{327}{chapter.7}
+\contentsline {section}{\numberline {7.1}Area Between Curves}{328}{section.7.1}
+\contentsline {section}{\numberline {7.2}Volume by Cross-Sectional Area; Disk and Washer Methods}{334}{section.7.2}
+\contentsline {section}{\numberline {7.3}The Shell Method}{342}{section.7.3}
+\contentsline {section}{\numberline {7.4}Arc Length and Surface Area}{349}{section.7.4}
+\contentsline {chapter}{\numberline {8}Differential Equations}{357}{chapter.8}
+\contentsline {section}{\numberline {8.1}Introduction to differential equations}{357}{section.8.1}
+\contentsline {section}{\numberline {8.2}Integrals as solutions}{362}{section.8.2}
+\contentsline {section}{\numberline {8.4}Separable equations}{367}{section.8.4}
+\contentsline {section}{\numberline {8.5}Linear equations and the integrating factor}{372}{section.8.5}
+\contentsline {chapter}{\numberline {9}Sequences and Series}{377}{chapter.9}
+\contentsline {section}{\numberline {9.1}Sequences}{377}{section.9.1}
+\contentsline {section}{\numberline {9.2}Infinite Series}{389}{section.9.2}
+\contentsline {section}{\numberline {9.3}Integral and Comparison Tests}{402}{section.9.3}
+\contentsline {section}{\numberline {9.4}Ratio and Root Tests}{410}{section.9.4}
+\contentsline {section}{\numberline {9.5}Alternating Series and Absolute Convergence}{415}{section.9.5}
+\contentsline {section}{\numberline {9.6}Power Series}{424}{section.9.6}
+\contentsline {section}{\numberline {9.7}Taylor Polynomials}{434}{section.9.7}
+\contentsline {section}{\numberline {9.8}Taylor Series}{444}{section.9.8}
 \thispagestyle {empty}
-\contentsline {chapter}{\numberline {5}Curves in the Plane}{189}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conic Sections}{189}{section.5.1}
-\contentsline {section}{\numberline {5.2}Parametric Equations}{202}{section.5.2}
-\contentsline {section}{\numberline {5.3}Calculus and Parametric Equations}{211}{section.5.3}
-\contentsline {section}{\numberline {5.4}Introduction to Polar Coordinates}{221}{section.5.4}
-\contentsline {section}{\numberline {5.5}Calculus and Polar Functions}{232}{section.5.5}
-\contentsline {chapter}{\numberline {6}Functions of Several Variables}{243}{chapter.6}
-\contentsline {section}{\numberline {6.1}Introduction to Cartesian Coordinates in Space}{243}{section.6.1}
-\contentsline {section}{\numberline {6.2}Introduction to Multivariable Functions}{257}{section.6.2}
-\contentsline {section}{\numberline {6.3}Limits and Continuity of Multivariable Functions}{263}{section.6.3}
-\contentsline {section}{\numberline {6.4}Partial Derivatives}{272}{section.6.4}
-\contentsline {section}{\numberline {6.5}Tangent Lines, Normal Lines, and Tangent Planes}{282}{section.6.5}
+\contentsline {chapter}{\numberline {10}Curves in the Plane}{455}{chapter.10}
+\contentsline {section}{\numberline {10.1}Conic Sections}{455}{section.10.1}
+\contentsline {section}{\numberline {10.2}Parametric Equations}{468}{section.10.2}
+\contentsline {section}{\numberline {10.3}Calculus and Parametric Equations}{477}{section.10.3}
+\contentsline {section}{\numberline {10.4}Introduction to Polar Coordinates}{487}{section.10.4}
+\contentsline {section}{\numberline {10.5}Calculus and Polar Functions}{498}{section.10.5}
+\contentsline {chapter}{\numberline {11}Functions of Several Variables}{509}{chapter.11}
+\contentsline {section}{\numberline {11.1}Introduction to Cartesian Coordinates in Space}{509}{section.11.1}
+\contentsline {section}{\numberline {11.2}Introduction to Multivariable Functions}{523}{section.11.2}
+\contentsline {section}{\numberline {11.3}Limits and Continuity of Multivariable Functions}{529}{section.11.3}
+\contentsline {section}{\numberline {11.4}Partial Derivatives}{538}{section.11.4}
+\contentsline {section}{\numberline {11.5}Tangent Lines, Normal Lines, and Tangent Planes}{548}{section.11.5}
 \contentsline {chapter}{\numberline {A}Solutions To Selected Problems}{A.1}{appendix.A}
-\contentsline {chapter}{Index}{A.15}{section*.190}
+\contentsline {chapter}{Index}{A.15}{section*.191}
