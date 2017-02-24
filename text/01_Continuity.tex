@@ -1,5 +1,5 @@
 \section{Continuity}\label{sec:continuity}
-As we have studied limits, we have gained the intuition that limits measure ``where a function is heading.'' That is, if $\ds \lim_{x\to 1} f(x) = 3$, then as $x$ is close to 1, $f(x)$ is close to 3. We have seen, though, that this is not necessarily a good indicator of what $f(1)$ actually this. This can be problematic; functions can tend to one value but attain another. This section focuses on functions that \textit{do not} exhibit such behavior.
+As we have studied limits, we have gained the intuition that limits measure ``where a function is heading.'' That is, if $\ds \lim_{x\to 1} f(x) = 3$, then as $x$ is close to 1, $f(x)$ is close to 3. We have seen, though, that this is not necessarily a good indicator of what $f(1)$ actually this. This can be problematic; functions can tend to one value but attain another. This section focuses on functions that \textit{do not} exhibit such behaviour.
 
 \definition{def:continuous}{Continuous Function}
 {Let $f$ be a function defined on an open interval $I$ containing $c$. \index{continuous function} 
@@ -43,7 +43,10 @@ The \textit{floor function},\index{floor function} $f(x) = \lfloor x \rfloor$, r
 		\item		The function is defined for all values of $c$.
 		\item		The limit $\ds \lim_{x\to c} f(x) = f(c)$ for all values of $c$ where the limit exist, since each step consists of just a line. 
 		\end{enumerate}
-		We conclude that $f$ is continuous everywhere except at integer values of $c$. So the intervals on which $f$ is continuous are $$\ldots, (-2,-1), (-1,0), (0,1), (1,2), \ldots.$$
+		We conclude that $f$ is continuous everywhere except at integer values of $c$. So the intervals on which $f$ is continuous are 
+\[
+\ldots, (-2,-1), (-1,0), (0,1), (1,2), \ldots.
+\]
 \vskip -\baselineskip
 }\\
 		
@@ -59,10 +62,6 @@ Our definition of continuity on an interval specifies the interval is an open in
 		}
 		
 We can make the appropriate adjustments to talk about continuity on half--open intervals such as $[a,b)$ or $(a,b]$ if necessary.\\
-%
-%Using this new definition, we can adjust our answer in Example \ref{ex_contint2} by stating that the floor function is continuous on the following half--open intervals $$\ldots, [-2,-1), [-1,0), [0,1), [1,2), \ldots.$$ This can tempt us to conclude that $f$ is continuous everywhere; after all, if $f$ is continuous on $[0,1)$ and $[1,2)$, isn't $f$ also continuous on $[0,2)$? Of course, the answer is \textit{no}, and the graph of the floor function immediately confirms this.\\
-%
-%Continuous functions are important as they behave in a predictable fashion: functions attain the value they approach. Because continuity is so important, most of the functions you have likely seen in the past are continuous on their domains. This is demonstrated in the following example where we examine the intervals of continuity of a variety of common functions.\\
 
 \example{ex_cont_funct1}{Determining intervals on which a function is continuous}{
 For each of the following functions, give the domain of the function and the interval(s) on which it is continuous.
@@ -155,7 +154,11 @@ State the interval(s) on which each of the following functions is continuous.
 			
 	\mfigure{.7}{A graph of $f$ in Example \ref{ex_cont_funct}(a).}{fig_continuous3}{figures/figContinuous3}
 			\item		The functions $y=x$ and $y=\sin x$ are each continuous everywhere, hence their product is, too.
-			\item		Theorem \ref{thm:continuous_functions} states that $f(x) = \tan x$ is continuous ``on its domain.'' Its domain includes all real numbers except odd multiples of $\pi/2$. Thus $f(x) = \tan x$ is continuous on $$\ldots \left(-\frac{3\pi}{2},-\frac{\pi}2\right),\ \left(-\frac{\pi}2,\frac{\pi}2\right),\ \left(\frac{\pi}2,\frac{3\pi}2\right),\ldots,$$ or, equivalently, on $D = \{x\in \mathbb{R}\ |\ x\neq n\cdot \frac{\pi}2,\ $n$\ \text{is an odd integer} \}.$
+			\item		Theorem \ref{thm:continuous_functions} states that $f(x) = \tan x$ is continuous ``on its domain.'' Its domain includes all real numbers except odd multiples of $\pi/2$. Thus $f(x) = \tan x$ is continuous on 
+\[
+\ldots \left(-\frac{3\pi}{2},-\frac{\pi}2\right),\ \left(-\frac{\pi}2,\frac{\pi}2\right),\ \left(\frac{\pi}2,\frac{3\pi}2\right),\ldots,
+\]
+or, equivalently, on $D = \{x\in \mathbb{R}\ |\ x\neq n\cdot \frac{\pi}2,\ $n$\ \text{is an odd integer} \}.$
 			\item		The domain of $y = \sqrt{x}$ is $[0,\infty)$. The range of $y=\ln x$ is $(-\infty,\infty)$, but if we restrict its domain to $[1,\infty)$ its range is $[0,\infty)$. So restricting $y = \ln x$ to the domain of $[1,\infty)$ restricts its output is $[0,\infty)$, on which $y = \sqrt{x}$ is defined. Thus the domain of $f(x) = \sqrt{\ln x}$ is $[1,\infty)$.
 			\end{enumerate}
 \vskip -\baselineskip
@@ -212,9 +215,12 @@ Approximate the root of $f(x) = x-\cos x$, accurate to three places after the de
 			}%
 			
 Notice that in the 12$^\text{th}$ iteration we have the endpoints of the interval each starting with $0.739$. Thus we have narrowed the zero down to an accuracy of the first three places after the decimal. Using a computer, we have 
-$$ f(0.7390) = -0.00014, \quad f(0.7391) = 0.000024.$$ Either endpoint of the interval gives a good approximation of where $f$ is 0. The Intermediate Value Theorem states that the actual zero is still within this interval. While we do not know its exact value, we know it starts with $0.739$. 
+\[
+ f(0.7390) = -0.00014, \quad f(0.7391) = 0.000024.
+\] 
+Either endpoint of the interval gives a good approximation of where $f$ is 0. The Intermediate Value Theorem states that the actual zero is still within this interval. While we do not know its exact value, we know it starts with $0.739$. 
 
-This type of exercise is rarely done by hand. Rather, it is simple to program a computer to run such an algorithm and stop when the endpoints differ by a preset small amount. One of the authors did write such a program and found the zero of $f$, accurate to 10 places after the decimal, to be 0.7390851332. While it took a few minutes to write the program, it took less than a thousandth of a second for the program to run the necessary 35 iterations. In less than 8 hundredths of a second, the zero was calculated to 100 decimal places (with less than 200 iterations).
+This type of exercise is rarely done by hand. Rather, it is simple to program a computer to run such an algorithm and stop when the endpoints differ by a pre-set small amount. One of the authors did write such a program and found the zero of $f$, accurate to 10 places after the decimal, to be 0.7390851332. While it took a few minutes to write the program, it took less than a thousandth of a second for the program to run the necessary 35 iterations. In less than 8 hundredths of a second, the zero was calculated to 100 decimal places (with less than 200 iterations).
 }\\
 
 It is a simple matter to extend the Bisection Method to solve problems similar to ``Find $x$, where $f(x) = 0$.'' For instance, we can find $x$, where $f(x) = 1$. %This may seem obvious, but to many it is not. 

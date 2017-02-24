@@ -1,5 +1,5 @@
 
-\section{Epsilon-Delta Definition of a Limit}\label{sec:limit_def}
+\section{Formal Definition of a Limit}\label{sec:limit_def}
 
 This section introduces the formal definition of a limit. Many refer to this as ``the epsilon--delta,'' definition, referring to the letters $\epsilon$ and $\delta$ of the Greek alphabet.\\
 
@@ -11,7 +11,7 @@ Before we give the actual definition, let's consider a few informal ways of desc
 \item[3.]if ``$y$ is near $L$'' whenever ``$x$ is near $c$.''
 \end{description}
 
-The problem with these definitions is that the words ``tends,'' ``approach,'' and especially ``near'' are not exact.  In what way does the variable $x$ tend to, or approach, $c$? How near do $x$ and $y$ have to be to $c$ and $L$, respectively?  \\
+The problem with these definitions (as with Definition \ref{def:limit_informal} from Section \ref{sec:limit_intro} is that the words ``tends,'' ``approach,'' and especially ``near'' are not exact.  In what way does the variable $x$ tend to, or approach, $c$? How near do $x$ and $y$ have to be to $c$ and $L$, respectively?  \\
 
 The definition we describe in this section comes from formalizing {\bf 3}.  A quick restatement gets us closer to what we want:
 
@@ -26,17 +26,21 @@ The traditional notation for the $x$-tolerance is the lowercase Greek letter del
 \end{description}
 
 We can write ``$x$ is within $\delta$ units of $c$'' mathematically as
-$$|x-c| < \delta, \qquad \text{which is equivalent to }\qquad c-\delta < x < c+\delta.$$
+\[
+|x-c| < \delta, \qquad \text{which is equivalent to }\qquad c-\delta < x < c+\delta.
+\]
 Letting the symbol ``$\longrightarrow$'' represent the word ``implies,'' we can rewrite $\textbf{3}''$ as 
-$$
+\[
 |x - c| < \delta \longrightarrow  |y - L| < \epsilon 
 \qquad \textrm{or} \qquad c - \delta < x < c + \delta \longrightarrow L - \epsilon < y < L + \epsilon.
-$$
+\]
 The point is that $\delta$ and $\epsilon$, being tolerances, can be any positive (but typically small) values.  Finally, we have the formal definition of the limit with the notation  seen in the previous section.
 
 \definition{def:limit}{The Limit of a Function $f$}
 {Let $I$ be an open interval containing $c$, and let $f$ be a function defined on $I$, except possibly at $c$. The \sword{limit of $f(x)$, as $x$ approaches $c$, is $L$}, denoted by  
-$$\displaystyle \lim_{x\rightarrow c} f(x) = L,$$
+\[
+ \lim_{x\rightarrow c} f(x) = L,
+\]
 means that given any $\epsilon > 0$, there exists $\delta > 0$ such that for all $x\neq c$,  
 if  $|x - c| < \delta$, then $|f(x) - L| < \epsilon$.\index{limit!definition}
 }
@@ -90,23 +94,29 @@ Let's try another value of $\epsilon$.\\
 
 What if the $y$ tolerance is 0.01, i.e.,  $\epsilon =0.01$?  How close to 4 does $x$ have to be in order for $y$ to be within 0.01 units of 2 (or $1.99 < y < 2.01$)?  Again, we just square these values to get
 $1.99^2 < x < 2.01^2$, or 
-$$3.9601 < x < 4.0401.$$  
+\[
+3.9601 < x < 4.0401.
+\]  
 What is the desired $x$ tolerance?  In this case we must have $\delta \leq 0.0399$, which is the minimum distance from 4 of the two bounds given above.  %Note that in some sense, it looks like there are two tolerances (below 4 of 0.0399 units and above 4 of 0.0401 units).  However, we couldn't use the larger value of $0.0401$ for $\delta$ since then the interval for $x$ would be  $3.9599 < x < 4.0401$ resulting in $y$ values of $1.98995 < y < 2.01$ (which contains values NOT within 0.01 units of 2).\\
 
 What we have so far: if $\epsilon =0.5$, then $\delta \leq 1.75$ and if $\epsilon = 0.01$, then $\delta \leq 0.0399$. A pattern is not easy to see, so we switch to general $\epsilon$ try to determine $\delta$ symbolically.  We start by assuming $y=\sqrt{x}$ is within $\epsilon$ units of 2:
 
-\begin{eqnarray*}
-|y - 2| < \epsilon &\\
--\epsilon < y - 2 < \epsilon& \qquad \textrm{(Definition of absolute value)}\\
--\epsilon < \sqrt{x} - 2 < \epsilon  &\qquad (y=\sqrt{x})\\
-2 - \epsilon < \sqrt{x} < 2+ \epsilon &\qquad \textrm{ (Add 2)}\\
-(2 - \epsilon)^2 < x < (2+ \epsilon) ^2 &\qquad \textrm{ (Square all)}\\
-4 - 4\epsilon + \epsilon^2 < x < 4 + 4\epsilon + \epsilon^2 &\qquad \textrm{ (Expand)}\\
-4 - (4\epsilon - \epsilon^2) < x < 4 + (4\epsilon + \epsilon^2). &\qquad \textrm{ (Rewrite in the desired form)}
-\end{eqnarray*}
+\begin{align*}
+|y - 2| & < \epsilon \\
+-\epsilon < y - 2 & < \epsilon \tag{Definition of absolute value}\\
+-\epsilon < \sqrt{x} - 2 & < \epsilon  \tag{$y=\sqrt{x}$}\\
+2 - \epsilon < \sqrt{x} & < 2+ \epsilon \tag{Add 2}\\
+(2 - \epsilon)^2 < x & < (2+ \epsilon) ^2 \tag{Square all}\\
+4 - 4\epsilon + \epsilon^2 < x & < 4 + 4\epsilon + \epsilon^2 tag{Expand}\\
+4 - (4\epsilon - \epsilon^2) < x & < 4 + (4\epsilon + \epsilon^2). \tag{Rewrite in the desired form}
+\end{align*}
 
 The ``desired form'' in the last step is ``$4-\textit{something} < x < 4 +\textit{something}$.''
-Since we want this last interval to describe an $x$ tolerance around 4, we have that either $\delta \leq 4\epsilon - \epsilon^2$ or $\delta \leq 4\epsilon + \epsilon^2$, whichever is smaller: $$\delta \leq \min\{4\epsilon - \epsilon^2, 4\epsilon + \epsilon^2\}.$$  Since $\epsilon > 0$, the minimum is $\delta \leq 4\epsilon - \epsilon^2$.  That's the formula: given an $\epsilon$, set $\delta \leq 4\epsilon-\epsilon^2$. 
+Since we want this last interval to describe an $x$ tolerance around 4, we have that either $\delta \leq 4\epsilon - \epsilon^2$ or $\delta \leq 4\epsilon + \epsilon^2$, whichever is smaller: 
+\[
+\delta \leq \min\{4\epsilon - \epsilon^2, 4\epsilon + \epsilon^2\}.
+\]
+Since $\epsilon > 0$, the minimum is $\delta \leq 4\epsilon - \epsilon^2$.  That's the formula: given an $\epsilon$, set $\delta \leq 4\epsilon-\epsilon^2$. 
 
 We can check this for our previous values.  If $\epsilon=0.5$, the formula gives
 $\delta \leq 4(0.5) - (0.5)^2 = 1.75$ and when $\epsilon=0.01$, the formula gives $\delta \leq 4(0.01) - (0.01)^2 = 0.399$.
@@ -115,7 +125,10 @@ $\delta \leq 4(0.5) - (0.5)^2 = 1.75$ and when $\epsilon=0.01$, the formula give
 So given any $\epsilon >0$, set $\delta \leq 4\epsilon - \epsilon^2$. Then if $|x-4|<\delta$ (and $x\neq 4$), then $|f(x) - 2| < \epsilon$,  satisfying the definition of the limit.  We have shown formally (and finally!) that $\displaystyle \lim_{x\rightarrow 4} \sqrt{x} = 2 $.
 }\\
 
-%FOOTNOTE $**$: Actually, it is a pain, but this won't work if $\epsilon \ge 4$.  This shouldn't really occur since $\epsilon$ is supposed to be small, but it could happen.  In the cases where $\epsilon \ge 4$, just take $\delta = 1$ and you'll be fine.
+\mnote{.75}{One word of caution is needed here. It may seem a bit annoying/pedantic, but if we really want to be \textit{precise} in our arguments, we should point out a flaw in our ``proof'': it won't work if $\epsilon \ge 4$.  This shouldn't really occur since $\epsilon$ is supposed to be small, but it could happen.  In the cases where $\epsilon \ge 4$, taking $\delta=1$ would do the job. If we want to cover all possibilities, we should define $\delta$ to be the \textit{minimum} of 1 and $4\epsilon-\epsilon^2$.
+
+Actually, if we're being \textit{really} careful, we should point out that our argument is flawed as soon as $\epsilon>2$, since in the ``square all'' step, we'd be squaring a negative number on the left-hand side. (As we hope the reader is aware, squaring both sides of an inequality is only a valid step when both sides are positive.)}
+
 The previous example was a little long in that we sampled a few specific cases of $\epsilon$ before handling the general case. Normally this is not done.  The previous example is also a bit unsatisfying in that $\sqrt{4}=2$; why work so hard to prove something so obvious? Many $\epsilon$-$\delta$ proofs are long and difficult to do. In this section, we will focus on examples where the answer is, frankly, obvious, because the non--obvious examples are even harder. In the next section we will learn some theorems that allow us to evaluate limits \textit{analytically}, that is, without using the $\epsilon$-$\delta$ definition.\\
 %That is why theorems about limits are so useful! After doing a few more $\epsilon$--$\delta$ proofs, you will really appreciate the analytical ``short cuts'' found in the next section.\\
 
@@ -159,7 +172,7 @@ We have also picked $\delta$ to be smaller than ``necessary.'' We could get by w
 
 \mfigure{.8}{Choosing $\delta = \epsilon/5$ in Example \ref{ex_compute_lim2}.}{fig:limit_eover5}{figures/figlimit_proof2a}
 
-In summary, given $\epsilon > 0$, set $\delta=\leq\epsilon/5$.  Then $|x - 2| < \delta$ implies 
+In summary, given $\epsilon > 0$, set $\delta=\min\{1,\epsilon/5\}$. (We want $\delta\leq \epsilon/5$, but part of our argument relies on the assumption that $\delta\leq 1$, and this fails in the case that $\epsilon>5$.)  Then $|x - 2| < \delta$ implies 
 $|x^2 - 4|< \epsilon$ (i.e. $|y - 4|< \epsilon$) as desired.  This shows that $\displaystyle \lim_{x\rightarrow 2} x^2 = 4 $. Figure \ref{fig:limit_eover5} gives a visualization of this; by restricting $x$ to values within $\delta = \epsilon/5$ of 2, we see that $f(x)$ is within $\epsilon$ of $4$.
 }\\
 
@@ -268,7 +281,10 @@ We illustrate evaluating limits once more.\\
 \ln(1-\epsilon) < x < \ln(1+\epsilon) & \qquad \textrm{(Take natural logs)}\\
 \end{eqnarray*}
 Making the safe assumption that $\epsilon<1$ ensures the last inequality is valid (i.e., so that $\ln (1-\epsilon)$ is defined). We can then set $\delta$ to be the minimum of $|\ln(1-\epsilon)|$ and $\ln(1+\epsilon)$; i.e.,  %  Well, there is a catch.  The value of $\epsilon$ is supposed to be small, but if it happens that $\epsilon \ge 1$, then $\ln(1-\epsilon)$ would be undefined!  The way to work around this is to simply define a new epsilon that is guaranteed to be smaller than the original epsilon \textit{and} less than 1 (let's say less than 1/2 just to be on the safe side).  Let's call this new value $\epsilon_1$ and define it to be $\epsilon_1 = \min\{\epsilon, 1/2\}$.  Then we can use the calculations above to define 
-$$\delta = \min\{|\ln(1-\epsilon)|, \ln(1+\epsilon)\} = \ln(1+\epsilon).$$  
+\[
+\delta = \min\{|\ln(1-\epsilon)|, \ln(1+\epsilon)\} = \ln(1+\epsilon).
+\]
+ 
 \mnote{.5}{\textbf{Note:} Recall $\ln 1= 0$ and $\ln x<0$ when $0<x<1$. So $\ln (1-\epsilon) <0$, hence we consider its absolute value.}
 
 Now, we work through the actual the proof:

@@ -22,12 +22,23 @@ While our question is not precisely formed (what constitutes ``near the value 1'
 
 \mfigure{.7}{$\sin(x)/x$ near $x=1$.}{fig:zoom_sinx_over_x}{figures/figZoomSinXOverX}
 \mfigure{.4}{$\sin(x)/x$ near $x=0$.}{fig:sinx_over_x}{figures/figSinXOverX}
-Consider this again at a different value for $x$. When $x$ is near 0, what value (if any) is $y$ near? By considering Figure \ref{fig:sinx_over_x}, one can see that it seems that $y$ takes on values near $1$. But what happens when $x=0$? We have $$ y \rightarrow \frac{\sin 0}{0} \rightarrow \raisebox{8pt}{\text{``\ }}\frac{0}{0}\raisebox{8pt}{\text{\ ''}}.$$ 
+Consider this again at a different value for $x$. When $x$ is near 0, what value (if any) is $y$ near? By considering Figure \ref{fig:sinx_over_x}, one can see that it seems that $y$ takes on values near $1$. But what happens when $x=0$? We have 
+\[
+ y \rightarrow \frac{\sin 0}{0} \rightarrow \raisebox{8pt}{\text{``\ }}\frac{0}{0}\raisebox{8pt}{\text{\ ''}}.
+\] 
 The expression ``$0/0$'' has no value; it is \emph{indeterminate.} \index{limit!indeterminate form}\index{indeterminate form} Such an expression gives no information about what is going on with the function nearby. We cannot find out how $y$ behaves near $x=0$ for this function simply by letting $x=0$. 
 
-\emph{Finding a limit} entails understanding how a function behaves near a particular value of $x$. Before continuing, it will be useful to establish some notation. Let $y=f(x)$; that is, let $y$ be a function of $x$ for some function $f$. The expression ``the limit of $y$ as $x$ approaches 1'' describes a number, often referred to as $L$, that $y$ nears as $x$ nears 1. We write all this as $$\lim_{x\to 1} y = \lim_{x\to 1} f(x) = L.$$ This is not a complete definition (that will come in the next section); this is a pseudo-definition that will allow us to explore the idea of a limit. \index{limit!pseudo-definition}
+\emph{Finding a limit} entails understanding how a function behaves near a particular value of $x$. Before continuing, it will be useful to establish some notation. Let $y=f(x)$; that is, let $y$ be a function of $x$ for some function $f$. The expression ``the limit of $y$ as $x$ approaches 1'' describes a number, often referred to as $L$, that $y$ nears as $x$ nears 1. We write all this as 
+\[
+\lim_{x\to 1} y = \lim_{x\to 1} f(x) = L.
+\]
+This is not a complete definition (that will come in the next section); this is a pseudo-definition that will allow us to explore the idea of a limit. \index{limit!pseudo-definition}
 
-Above, where $f(x) = \sin(x)/x$, we approximated $$\lim_{x\to 1} \frac{\sin x}{x} \approx 0.84 \quad \text{ and } \quad \lim_{x\to 0}\frac{\sin x}{x} \approx 1.$$ (We \textit{approximated} these limits, hence used the ``$\approx$'' symbol, since we are working with the pseudo-definition of a limit, not the actual definition.)
+Above, where $f(x) = \sin(x)/x$, we approximated 
+\[
+\lim_{x\to 1} \frac{\sin x}{x} \approx 0.84 \quad \text{ and } \quad \lim_{x\to 0}\frac{\sin x}{x} \approx 1.
+\]
+(We \textit{approximated} these limits, hence used the ``$\approx$'' symbol, since we are working with the pseudo-definition of a limit, not the actual definition.)
 
 Once we have the true definition of a limit, we will find limits \textit{analytically}; that is, exactly using a variety of mathematical tools. For now, we will \textit{approximate} limits both graphically and numerically. Graphing a function can provide a good approximation, though often not very precise. Numerical methods can provide a more accurate approximation. We have already approximated limits graphically, so we now turn our attention to numerical approximations.
 
@@ -44,7 +55,11 @@ Now approximate $\lim_{x\to 0} \sin(x)/x$ numerically. We already approximated t
 
 \mtable{.45}{Values of $\sin(x)/x$ with $x$ near 0.}{table:sinx_2}{\input{figures/sinx_over_x_table_2}}
  
-This numerical method gives confidence to say that 1 is a good approximation of $\lim_{x\to 0} \sin(x)/x$; that is, $$\lim_{x\to 0} \sin(x)/x \approx 1.$$ Later we will be able to prove that the limit is \textit{exactly} 1.
+This numerical method gives confidence to say that 1 is a good approximation of $\lim_{x\to 0} \sin(x)/x$; that is, 
+\[
+\lim_{x\to 0} \sin(x)/x \approx 1.
+\]
+Later we will be able to prove that the limit is \textit{exactly} 1.
 
 We now consider several examples that allow us explore different aspects of the limit concept.\\
 
@@ -52,12 +67,23 @@ We now consider several examples that allow us explore different aspects of the 
 
 
 \example{ex_limit1}{Approximating the value of a limit}{
-Use graphical and numerical methods to approximate $$\lim_{x\to 3} \frac{x^2-x-6}{6x^2-19x+3}.$$}%
-{To graphically approximate the limit, graph $$y = (x^2-x-6)/(6x^2-19x+3)$$ on a small interval that contains 3. To numerically approximate the limit, create a table of values where the $x$ values are near 3. This is done in Figures \ref{fig:limit1} and \ref{table:limit1}, respectively.
+Use graphical and numerical methods to approximate 
+\[
+\lim_{x\to 3} \frac{x^2-x-6}{6x^2-19x+3}.
+\]
+}%
+{To graphically approximate the limit, graph 
+\[
+y = (x^2-x-6)/(6x^2-19x+3)
+\]
+on a small interval that contains 3. To numerically approximate the limit, create a table of values where the $x$ values are near 3. This is done in Figures \ref{fig:limit1} and \ref{table:limit1}, respectively.
 
 \enlargethispage{2\baselineskip}
 
-The graph shows that when $x$ is near 3, the value of $y$ is very near $0.3$. By considering values of $x$ near 3, we see that $y=0.294$ is a better approximation. The graph and the table imply that $$\lim_{x\to 3} \frac{x^2-x-6}{6x^2-19x+3} \approx 0.294.$$ 
+The graph shows that when $x$ is near 3, the value of $y$ is very near $0.3$. By considering values of $x$ near 3, we see that $y=0.294$ is a better approximation. The graph and the table imply that 
+\[
+\lim_{x\to 3} \frac{x^2-x-6}{6x^2-19x+3} \approx 0.294.
+\] 
 \vskip -\baselineskip
 }\\
 \mtable{.8}{Numerically approximating a limit in Example \ref{ex_limit1}.}{table:limit1}{\input{figures/table_limit1}}
@@ -74,7 +100,11 @@ Graphs are useful since they give a visual understanding concerning the behaviou
 Since tables and graphs are used only to \textit{approximate} the value of a limit, there is not a firm answer to how many data points are ``enough.'' Include enough so that a trend is clear, and use values (when possible) both less than and greater than the value in question. In Example \ref{ex_limit1}, we used both values less than and greater than 3. Had we used just $x=3.001$, we might have been tempted to conclude that the limit had a value of $0.3$. While this is not far off, we could do better. Using values ``on both sides of 3'' helps us identify trends.\\
 
 \example{ex_limit2}{Approximating the value of a limit}{
-Graphically and numerically approximate the limit of $f(x)$ as $x$ approaches 0, where $$f(x) = \left\{\begin{array}{rl} x+1 & x< 0 \\ -x^2+1 & x > 0 \end{array}\right..$$}{Again we graph $f(x)$ and create a table of its values near $x=0$ to approximate the limit. Note that this is a piecewise defined function, so it behaves differently on either side of 0. Figure \ref{fig:limit2} shows a graph of $f(x)$, and on either side of 0 it seems the $y$ values approach 1. Note that $f(0)$ is not actually defined, as indicated in the graph with the open circle.
+Graphically and numerically approximate the limit of $f(x)$ as $x$ approaches 0, where 
+\[
+f(x) = \left\{\begin{array}{rl} x+1 & x< 0 \\ -x^2+1 & x > 0 \end{array}\right..
+\]
+}{Again we graph $f(x)$ and create a table of its values near $x=0$ to approximate the limit. Note that this is a piecewise defined function, so it behaves differently on either side of 0. Figure \ref{fig:limit2} shows a graph of $f(x)$, and on either side of 0 it seems the $y$ values approach 1. Note that $f(0)$ is not actually defined, as indicated in the graph with the open circle.
 
 \mfigure{.5}{Graphically approximating a limit in Example \ref{ex_limit2}.}{fig:limit2}{figures/figlimit2}
 \mtable{.25}{Numerically approximating a limit in Example \ref{ex_limit2}.}{table:limit2}{\input{figures/table_limit2}}
@@ -102,7 +132,10 @@ We'll explore each of these in turn.\\
 %
 
 \example{ex_no_limit1}{Different Values Approached From Left and Right}{
-Explore why $\ds\lim_{x\to 1} f(x)$ does not exist, where $$f(x) = \left\{\begin{array}{cl} x^2-2x+3 & x\leq 1 \\ x & x>1 \end{array}\right..$$}%
+Explore why $\ds\lim_{x\to 1} f(x)$ does not exist, where 
+\[
+f(x) = \left\{\begin{array}{cl} x^2-2x+3 & x\leq 1 \\ x & x>1 \end{array}\right.
+\]}%
 {
 A graph of $f(x)$ around $x=1$ and a table are given Figures \ref{fig:nolimit1} and \ref{table:nolimit1}, respectively. It is clear that as $x$ approaches 1, $f(x)$ does not seem to approach a single number. Instead, it seems as though $f(x)$ approaches two different numbers. When considering values of $x$ less than 1 (approaching 1 from the left), it seems that $f(x)$ is approaching 2; when considering values of $x$ greater than 1 (approaching 1 from the right), it seems that $f(x)$ is approaching 1. Recognizing this behaviour is important; we'll study this in greater depth later. Right now, it suffices to say that the limit does not exist since $f(x)$ is not approaching one value as $x$ approaches 1.
 \mfigure{.8}{Observing no limit as $x\to 1$ in Example \ref{ex_no_limit1}.}{fig:nolimit1}{figures/fignolimit1}
@@ -120,8 +153,15 @@ Explore why $\ds\lim_{x\to 1} 1/(x-1)^2$ does not exist.}%
 \mfigure{.4}{Observing no limit as $x\to 1$ in Example \ref{ex_no_limit2}.}{fig:nolimit2}{figures/fignolimit2}
 \mtable{.2}{Values of $f(x)$ near $x=1$ in Example \ref{ex_no_limit2}.}{table:nolimit2}{\input{figures/table_nolimit2}}
 
-We can deduce this on our own, without the aid of the graph and table. If $x$ is near 1, then $(x-1)^2$ is very small, and: $$\frac{1}{\text{very small number}} = \text{very large number}.$$
-Since $f(x)$ is not approaching a single number, we conclude that $$\lim_{x\to 1}\frac{1}{(x-1)^2}$$ does not exist.
+We can deduce this on our own, without the aid of the graph and table. If $x$ is near 1, then $(x-1)^2$ is very small, and: 
+\[
+\frac{1}{\text{very small number}} = \text{very large number}.
+\]
+Since $f(x)$ is not approaching a single number, we conclude that 
+\[
+\lim_{x\to 1}\frac{1}{(x-1)^2}
+\]
+does not exist.
 }\\
 
 %\vskip \baselineskip
@@ -172,16 +212,28 @@ We have approximated limits of functions as $x$ approached a particular number. 
 
 \mfigure{.35}{Interpreting a difference quotient as the slope of a secant line.}{fig:diffquot1}{figures/figDiffQuot1}
 
-Let $f(x)$ represent the position function, in feet, of some particle that is moving in a straight line, where $x$ is measured in seconds. Let's say that when $x=1$, the particle is at position 10 ft., and when $x=5$, the particle is at 20 ft. Another way of expressing this is to say $$f(1)=10 \quad \text{ and } \quad f(5) = 20.$$
-Since the particle traveled 10 feet in 4 seconds, we can say the particle's \textit{average velocity} was 2.5 ft/s. We write this calculation using a ``quotient of differences,'' or, a \textit{difference quotient}: $$\frac{f(5) - f(1)}{5-1} = \frac{10}4 = 2.5 \text{ft/s}.$$
+Let $f(x)$ represent the position function, in feet, of some particle that is moving in a straight line, where $x$ is measured in seconds. Let's say that when $x=1$, the particle is at position 10 ft., and when $x=5$, the particle is at 20 ft. Another way of expressing this is to say 
+\[
+f(1)=10 \quad \text{ and } \quad f(5) = 20.
+\]
+Since the particle traveled 10 feet in 4 seconds, we can say the particle's \textit{average velocity} was 2.5 ft/s. We write this calculation using a ``quotient of differences,'' or, a \textit{difference quotient}: 
+\[
+\frac{f(5) - f(1)}{5-1} = \frac{10}4 = 2.5 \text{ft/s}.
+\]
 
 This difference quotient can be thought of as the familiar ``rise over run'' used to compute the slopes of lines. In fact, that is essentially what we are doing: given two points on the graph of $f$, we are finding the slope of the \textit{secant line} through those two points. See Figure \ref{fig:diffquot1}.
 
-Now consider finding the average speed on another time interval. We again start at $x=1$, but consider the position of the particle $h$ seconds later. That is, consider the positions of the particle when $x=1$ and when $x=1+h$. The difference quotient is now $$\frac{f(1+h)-f(1)}{(1+h)-1} = \frac{f(1+h)-f(1)}h.$$
+Now consider finding the average speed on another time interval. We again start at $x=1$, but consider the position of the particle $h$ seconds later. That is, consider the positions of the particle when $x=1$ and when $x=1+h$. The difference quotient is now 
+\[
+\frac{f(1+h)-f(1)}{(1+h)-1} = \frac{f(1+h)-f(1)}h.
+\]
 
 Let $f(x) = -1.5x^2+11.5x$; note that $f(1)=10$ and $f(5) = 20$, as in our discussion. We can compute this difference quotient for all values of $h$ (even negative values!) except $h=0$, for then we get ``0/0,'' the indeterminate form introduced earlier. For all values $h\neq 0$, the difference quotient computes the average velocity of the particle over an interval of time of length $h$ starting at $x=1$. 
 
-For small values of $h$, i.e., values of $h$ close to 0, we get average velocities over very short time periods and compute secant lines over small intervals. See Figure \ref{fig:diff_quot_small_h}. This leads us to wonder what the limit of the difference quotient is as $h$ approaches 0. That is, $$\lim_{h\to 0} \frac{f(1+h)-f(1)}{h} = \text{ ? }$$
+For small values of $h$, i.e., values of $h$ close to 0, we get average velocities over very short time periods and compute secant lines over small intervals. See Figure \ref{fig:diff_quot_small_h}. This leads us to wonder what the limit of the difference quotient is as $h$ approaches 0. That is, 
+\[
+\lim_{h\to 0} \frac{f(1+h)-f(1)}{h} = \text{ ? }
+\]
 
 \vskip \baselineskip
 \ifthenelse{\boolean{longpage}}% in longpage form
@@ -221,7 +273,24 @@ Proper understanding of limits is key to understanding calculus. With limits, we
 
 \ifthenelse{\boolean{longpage}}{}{\mtable{.2}{The difference quotient evaluated at values of $h$ near 0.}{table:diff_quot_smallh}{\begin{tabular}{cc}$h$ & $\frac{f(1+h)-f(1)}{h}$\vspace{1pt} \\ \hline $-0.5$ & 9.25 \\ $-0.1$ & 8.65 \\ $-0.01$ & 8.515 \\ 0.01 & 8.485 \\ 0.1 & 8.35 \\ 0.5 & 7.75 \end{tabular}} }
 
-In the next section we give the formal definition of the limit and begin our study of finding limits analytically. In the following exercises, we continue our introduction and approximate the value of limits.\\
+Despite the importance of limits to calculus, we often settle for an imprecise, intuitive understanding of what the limit of a function means. The precise definition of the limit omitted from a course like Math 1560, and left for later courses, such as Math 3500. For this course, we will use the following informal definition.
+
+\smallskip
+
+\definition{def:limit_informal}{Informal Definition of the Limit}
+{\index{limit!definition}\index{limit!informal definition}
+
+\indent Let $I$ be an open interval containing $c$, and let $f$ be a function defined on $I$, except possibly at $c$. 
+We say that the \sword{limit of $f(x)$, as $x$ approaches $c$, is $L$}, and write 
+\[
+\lim_{x\rightarrow c} f(x) = L,
+\]
+if we can make the value of $f(x)$ arbitrarily close to $L$ by choosing $x\neq c$ sufficiently close to $c$.}
+
+
+The formal definition of the limit makes precise the meaning of the phrases ``arbitrarily close'' and ``sufficiently close''. The problem with the definition we have given is that, while it gives an intuitive understanding of the meaning of the limit, it's of no use for \textit{proving} theorems about limits. In Section \ref{sec:limit_analytically} we will state (but not prove) several theorems about limits which will allow use to compute their values analytically, without recourse to tables of values.
+
+In the next section we give the formal definition of the limit and begin our study of finding limits analytically. Your Math 1560 instructor will likely choose to skip Section \ref{sec:limit_def}, in which case it can be considered optional reading for the interested reader.  In the following exercises, we continue our introduction and approximate the value of limits.\\
 
 \printexercises{exercises/01_01_exercises}
 

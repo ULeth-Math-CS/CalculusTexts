@@ -3,7 +3,7 @@
 \contentsline {chapter}{Preface}{v}{section*.2}
 \contentsline {chapter}{\numberline {1}Limits}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}An Introduction To Limits}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Epsilon-Delta Definition of a Limit}{8}{section.1.2}
+\contentsline {section}{\numberline {1.2}Formal Definition of a Limit}{8}{section.1.2}
 \contentsline {section}{\numberline {1.3}Finding Limits Analytically}{15}{section.1.3}
 \contentsline {section}{\numberline {1.4}One Sided Limits}{25}{section.1.4}
 \contentsline {section}{\numberline {1.5}Continuity}{31}{section.1.5}
@@ -41,4 +41,4 @@
 \contentsline {section}{\numberline {5.7}Hyperbolic Functions}{247}{section.5.7}
 \contentsline {section}{\numberline {5.8}Area Between Curves}{257}{section.5.8}
 \contentsline {chapter}{\numberline {A}Solutions To Selected Problems}{A.1}{appendix.A}
-\contentsline {chapter}{Index}{A.13}{section*.198}
+\contentsline {chapter}{Index}{A.13}{section*.228}

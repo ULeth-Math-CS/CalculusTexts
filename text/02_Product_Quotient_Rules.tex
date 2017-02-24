@@ -5,17 +5,37 @@ The previous section showed that, in some ways, derivatives behave nicely. The C
 We begin with the Product Rule.
 
 \theorem{thm:ProductRule}{Product Rule}
-{Let $f$ and $g$ be differentiable functions on an open interval $I$.\index{Power Rule!differentiation}\index{derivative!Product Rule} Then $fg$ is a differentiable function on $I$, and $$\frac{d}{dx}\Big(f(x)g(x)\Big) = f(x)g\primeskip'(x) + \fp(x)g(x).$$}
+{Let $f$ and $g$ be differentiable functions on an open interval $I$.\index{Power Rule!differentiation}\index{derivative!Product Rule} Then $fg$ is a differentiable function on $I$, and 
+\[
+(fg)\primeskip'(x) = f\primeskip'(x)g(x) + f(x)g\primeskip'(x).
+\]
+}
+In the Leibniz notation, the Product Rule is written
+\[
+\frac{d}{dx}\Big(f(x)g(x)\Big) = \left(\frac{d}{dx}\,f(x)\right)g(x)+f(x)\left(\frac{d}{dx}\,g(x)\right).
+\]
 
-\sword{Important:} $\ds\frac{d}{dx}\Big(f(x)g(x)\Big) \neq \fp(x)g\primeskip'(x)$! While this answer is simpler than the Product Rule, it is wrong. 
+\mnote{.7}{\sword{Important:} $\ds\frac{d}{dx}\Big(f(x)g(x)\Big) \neq \fp(x)g\primeskip'(x)$! While this answer is simpler than the Product Rule, it is wrong. If it were true, then we'd have 
+\[
+\frac{d}{dx}(x^2) = \frac{d}{dx}(x)\cdot \frac{d}{dx}(x) = 1\cdot 1 = 1!
+\]
+In fact, we'd have $\dfrac{d}{dx}(x^n) = 1$ for every positive integer $n$, contradicting the Power Rule.
+}
 
 We practice using this new rule in an example, followed by an example that demonstrates why this theorem is true.\\
 
 \example{ex_prod1}{Using the Product Rule}{
 Use the Product Rule to compute the derivative of $y=5x^2\sin x$. Evaluate the derivative at $x=\pi/2$.}
-{To make our use of the Product Rule explicit, let's set $f(x) = 5x^2$ and $g(x) = \sin x$. We easily compute/recall that $\fp(x) = 10x$ and $g\primeskip'(x) = \cos x$. Employing the rule, we have $$\frac{d}{dx}\Big(5x^2\sin x\Big) = 5x^2\cos x + 10x\sin x.$$
+{To make our use of the Product Rule explicit, let's set $f(x) = 5x^2$ and $g(x) = \sin x$. We easily compute/recall that $\fp(x) = 10x$ and $g\primeskip'(x) = \cos x$. Employing the rule, we have 
+\[
+\frac{d}{dx}\Big(5x^2\sin x\Big) = 10x\sin x + 5x^2\cos x.
+\]
 
-At $x=\pi/2$, we have $$y\primeskip'(\pi/2) = 5\left(\frac{\pi}{2}\right)^2\cos \left(\frac{\pi}2\right) + 10\frac{\pi}2 \sin\left(\frac{\pi}{2}\right) = 5\pi.$$ We graph $y$ and its tangent line at $x=\pi/2$, which has a slope of $5\pi$, in Figure \ref{fig:5xsquaredsinx}. While this does not \textit{prove} that the Produce Rule is the correct way to handle derivatives of products, it helps validate its truth.
+At $x=\pi/2$, we have 
+\[
+y\primeskip'(\pi/2) =  10\frac{\pi}2 \sin\left(\frac{\pi}{2}\right) + 5\left(\frac{\pi}{2}\right)^2\cos \left(\frac{\pi}2\right) = 5\pi.
+\]
+We graph $y$ and its tangent line at $x=\pi/2$, which has a slope of $5\pi$, in Figure \ref{fig:5xsquaredsinx}. While this does not \textit{prove} that the Produce Rule is the correct way to handle derivatives of products, it helps validate its truth.
 \mfigure{.4}{A graph of $y = 5x^2\sin x$ and its tangent line at $x=\pi/2$.}{fig:5xsquaredsinx}{figures/fig5xsquaredsinx}
 }\\
 
@@ -24,32 +44,38 @@ We now investigate why the Product Rule is true.\\
 \example{ex_prove_product}{A proof of the Product Rule}{
 Use the definition of the derivative to prove Theorem \ref{thm:ProductRule}.}
 {By the limit definition, we have 
-		$$\frac{d}{dx}\Big(f(x)g(x)\Big) =\lim_{h\to0} \frac{f(x+h)g(x+h)-f(x)g(x)}{h}.$$ We now do something a bit unexpected; add 0 to the numerator (so that nothing is changed) in the form of $-f(x+h)g(x)+f(x+h)g(x)$, then do some regrouping as shown.
+\[
+(fg)\primeskip'(x) =\lim_{h\to0} \frac{f(x+h)g(x+h)-f(x)g(x)}{h}.
+\]
+We now do something a bit unexpected; add 0 to the numerator (so that nothing is changed) in the form of $-f(x)g(x+h)+f(x)g(x+h)$, then do some regrouping as shown.
 		\small
 		\begin{align*}
-		\frac{d}{dx}\Big(f(x)g(x)\Big) &=\lim_{h\to0} \frac{f(x+h)g(x+h)-f(x)g(x)}{h} \quad \parbox{120pt}{\small (now add 0 to the numerator)}\\
-																	&=	\lim_{h\to0} \frac{f(x+h)g(x+h)-f(x+h)g(x)+f(x+h)g(x)-f(x)g(x)}{h} \quad \parbox{100pt}{\small (regroup)} \\
-																	&=	\lim_{h\to0} \frac{\Big(f(x+h)g(x+h)-f(x+h)g(x)\Big)+\Big(f(x+h)g(x)-f(x)g(x)\Big)}{h}\\
-																	&=	\lim_{h\to0} \frac{f(x+h)g(x+h)-f(x+h)g(x)}{h}+\lim_{h\to0}\frac{f(x+h)g(x)-f(x)g(x)}{h}\quad\parbox{100pt}{\small (factor)}\\
-																	&=\lim_{h\to0} f(x+h)\frac{g(x+h)-g(x)}{h}+\lim_{h\to0}\frac{f(x+h)-f(x)}{h}g(x)\quad\parbox{100pt}{\small (apply limits)}\\
-																	&=f(x)g\primeskip'(x) + \fp(x)g(x)
+		(fg)\primeskip'(x) &=\lim_{h\to 0} \frac{f(x+h)g(x+h)-f(x)g(x)}{h} \tag{now add 0 to the numerator}\\
+  &=	\lim_{h\to 0} \frac{f(x+h)g(x+h)-f(x)g(x+h)+f(x)g(x+h)-f(x)g(x)}{h} \tag{regroup} \\
+  &=	\lim_{h\to 0} \frac{\Big(f(x+h)g(x+h)-f(x)g(x+h)\Big)+\Big(f(x)g(x+h)-f(x)g(x)\Big)}{h}\\
+  &=	\lim_{h\to 0} \frac{f(x+h)g(x+h)-f(x)g(x+h)}{h}+\lim_{h\to 0}\frac{f(x)g(x+h)-f(x)g(x)}{h} \tag{factor}\\
+  &=\lim_{h\to 0} \frac{f(x+h)-f(x)}{h}g(x+h)+\lim_{h\to 0} f(x)\frac{g(x+h)-g(x)}{h}\tag{apply limits}\\
+  &=\fp(x)g(x) + f(x)g\primeskip'(x)
 		\end{align*}
 		\normalsize
-\vskip-\baselineskip
+Notice that when we applied the limit in the last step, we relied on the fact that since $g$ is assumed to be differentiable at $x$, it is continuous at $x$, and therefore, $\ds \lim_{h\to 0}g(x+h) = g(x)$.
 }\\
 
 It is often true that we can recognize that a theorem is true through its proof yet somehow doubt its applicability to real problems. In the following example, we compute the derivative of a product of functions in two ways to verify that the Product Rule is indeed ``right.''\\
 
 \example{ex_prod2}{Exploring alternate derivative methods}{
 Let $y = (x^2+3x+1)(2x^2-3x+1)$. Find $y\primeskip'$ two ways: first, by expanding the given product and then taking the derivative, and second, by applying the Product Rule. Verify that both methods give the same answer.}
-{We first expand the expression for $y$; a little algebra shows that $y = 2x^4+3x^3-6x^2+1$. It is easy to compute $y\primeskip'$; $$y\primeskip' = 8x^3+9x^2-12x.$$
+{We first expand the expression for $y$; a little algebra shows that $y = 2x^4+3x^3-6x^2+1$. It is easy to compute $y\primeskip'$; 
+\[
+y\primeskip' = 8x^3+9x^2-12x.
+\]
 
 Now apply the Product Rule. 
-			\begin{align*}y\primeskip' &= (x^2+3x+1)(4x-3)+(2x+3)(2x^2-3x+1) \\
-			&= \big(4x^3+9x^2-5x-3\big) + \big(4x^3-7x+3\big)\\
-			& = 8x^3+9x^2-12x.
+\begin{align*}
+y\primeskip' &= (2x+3)(2x^2-3x+1) + (x^2+3x+1)(4x-3)\\
+			 &= \big(4x^3-7x+3\big) + \big(4x^3+9x^2-5x-3\big)\\
+			 & = 8x^3+9x^2-12x.
 			\end{align*}
-
 The uninformed usually assume that ``the derivative of the product is the product of the derivatives.'' Thus we are tempted to say that $y\primeskip' = (2x+3)(4x-3) = 8x^2+6x-9$. Obviously this is not correct.
 }\\
 
@@ -58,10 +84,10 @@ The uninformed usually assume that ``the derivative of the product is the produc
 }
 {We have a product of three functions while the Product Rule only specifies how to handle a product of two functions. Our method of handling this problem is to simply group the latter two functions together, and consider $y = x^3\big(\ln x\cos x\big)$. Following the Product Rule, we have
 \begin{align*}
-\yp &= (x^3)\big(\ln x\cos x\big)' + 3x^2\big(\ln x\cos x\big)
+\yp &=  3x^2\big(\ln x\cos x\big) + (x^3)\frac{d}{dx}\big(\ln x\cos x\big)
 \intertext{To evaluate $\big(\ln x\cos x\big)'$, we apply the Product Rule again:}
-		&= (x^3)\big(\ln x(-\sin x) + \frac1x\cos x\big)+ 3x^2\big(\ln x\cos x\big)\\
-		&= x^3\ln x(-\sin x) + x^3\frac1x\cos x+ 3x^2\ln x\cos x
+		&= 3x^2\big(\ln x\cos x\big) + (x^3)\big(\frac1x\cos x + \ln x(-\sin x)\big)\\
+		&= 3x^2\ln x\cos x + x^3\frac1x\cos x + x^3\ln x(-\sin x)
 \end{align*} 
 Recognize the pattern in our answer above: when applying the Product Rule to a product of three functions, there are three terms added together in the final derivative. Each terms contains only one derivative of one of the original functions, and each function's derivative shows up in only one term. It is straightforward to extend this pattern to finding the derivative of a product of 4 or more functions.
 }\\
@@ -78,8 +104,11 @@ Find the derivatives of the following functions.
 }
 {Recalling that the derivative of $\ln x$ is $1/x$, we use the Product Rule to find our answers.
 		\begin{enumerate}
-		\item	$\ds \frac{d}{dx}\Big(x\ln x\Big) = x\cdot 1/x + 1\cdot \ln x = 1+\ln x$. 
-		\item Using the result from above, we compute $$\ds \frac{d}{dx}\Big(x\ln x-x\Big) = 1+\ln x-1 = \ln x.$$ 
+		\item	$\ds \frac{d}{dx}\Big(x\ln x\Big) = 1\cdot \ln x + x\cdot 1/x = \ln x + 1$. 
+		\item Using the result from above, we compute 
+\[
+ \frac{d}{dx}\Big(x\ln x-x\Big) = \ln x + 1 - 1 = \ln x.
+\] 
 		\end{enumerate}
 This seems significant; if the natural log function $\ln x$ is an important function (it is), it seems worthwhile to know a function whose derivative is $\ln x$. We have found one. (We leave it to the reader to find another; a correct answer will be \textit{very} similar to this one.)
 }\\
@@ -87,20 +116,27 @@ This seems significant; if the natural log function $\ln x$ is an important func
 We have learned how to compute the derivatives of sums, differences, and products of functions. We now learn how to find the derivative of a quotient of functions.\\
 
 \theorem{thm:QuotientRule}{Quotient Rule}
-{Let $f$ and $g$ be functions defined on an open interval $I$, where $g(x) \neq 0$ on $I$.\index{derivative!Quotient Rule}\index{Quotient Rule} Then $f/g$ is differentiable on $I$, and $$\frac{d}{dx}\left(\frac{f(x)}{g(x)}\right) = \frac{g(x)\fp(x) - f(x)g\primeskip'(x)}{g(x)^2}.$$
-}
+{Let $f$ and $g$ be functions defined on an open interval $I$, where $g(x) \neq 0$ on $I$.\index{derivative!Quotient Rule}\index{Quotient Rule} Then $f/g$ is differentiable on $I$, and 
+\[
+\left(\frac{f}{g}\right)\primeskip'(x) = \frac{\fp(x)g(x) - f(x)g\primeskip'(x)}{g(x)^2}.
+\]
+}\\
 
-The Quotient Rule is not hard to use, although it might be a bit tricky to remember. A useful mnemonic works as follows. Consider a fraction's numerator and denominator as ``HI'' and ``LO'', respectively. Then $$\frac{d}{dx}\left(\frac{\text{HI}}{\text{LO}}\right) = \frac{\text{LO$\cdot$ dHI -- HI$\cdot$ dLO}}{\text{LOLO}},$$ read ``low dee high minus high dee low, over low low.'' Said fast, that phrase can roll off the tongue, making it easy to memorize. The ``dee high'' and ``dee low'' parts refer to the derivatives of the numerator and denominator, respectively.\\
+\mnote{.3}{
+The Quotient Rule is not hard to use, although it might be a bit tricky to remember. A useful mnemonic works as follows. Consider a fraction's numerator and denominator as ``HI'' and ``LO'', respectively. Then 
+\[
+\frac{d}{dx}\left(\frac{\text{HI}}{\text{LO}}\right) = \frac{\text{LO$\cdot$ dHI -- HI$\cdot$ dLO}}{\text{LOLO}},
+\]
+read ``low dee high minus high dee low, over low low.'' Said fast, that phrase can roll off the tongue, making it easy to memorize. The ``dee high'' and ``dee low'' parts refer to the derivatives of the numerator and denominator, respectively. As an unexpected side benefit, you will also have an opportunity to practice your yodelling. }
 
 Let's practice using the Quotient Rule.\\
 
 \example{ex_quot1}{Using the Quotient Rule}{
-Let $\ds f(x) = \frac{5x^2}{\sin x}$. Find $\fp(x)$.}
+Let $f(x) = \dfrac{5x^2}{\sin x}$. Find $\fp(x)$.}
 {Directly applying the Quotient Rule gives:
-	\begin{align*}
-	\frac{d}{dx}\left(\frac{5x^2}{\sin x}\right) &= \frac{\sin x\cdot 10x - 5x^2\cdot \cos x}{\sin^2x} \\
-																		&=	\frac{10x\sin x - 5x^2\cos x}{\sin^2 x}.
-	\end{align*}
+	\[
+	\frac{d}{dx}\left(\frac{5x^2}{\sin x}\right) = \frac{10x\cdot\sin x - 5x^2\cdot \cos x}{\sin^2x}.
+	\]
 \vskip-1.5\baselineskip
 }\\
 
@@ -146,13 +182,17 @@ In Example \ref{ex_quot1} the derivative of $\ds f(x) = \frac{5x^2}{\sin x}$ was
 {We found in Example \ref{ex_quot1} that the $\ds \fp(x) = \frac{10x\sin x - 5x^2\cos x}{\sin^2 x}$. We now find $\fp$ using the Product Rule, considering $f$ as $f(x) = 5x^2\csc x$.
 		\begin{align*}
 		\fp(x) &= \frac{d}{dx}\Big(5x^2\csc x\Big) \\
-					&=	\parbox{140pt}{$5x^2(-\csc x\cot x) + 10x\csc x$} \text{\small (now rewrite trig functions)}\\
-					&= 5x^2\cdot \frac{-1}{\sin x}\cdot \frac{\cos x}{\sin x} + \frac{10x}{\sin x}\\
-					&=	\parbox{140pt}{$\ds\frac{-5x^2\cos x}{\sin ^2x}+\frac{10x}{\sin x}$} \text{\small (get common denominator)}\\
+					&=	10x\csc x + 5x^2(-\csc x\cot x) \tag{now rewrite trig functions}\\
+					&=  \frac{10x}{\sin x} + 5x^2\cdot \frac{-1}{\sin x}\cdot \frac{\cos x}{\sin x}\\
+					&=	\frac{10x}{\sin x} + \frac{-5x^2\cos x}{\sin ^2x} \tag{get common denominator}\\
 					&= \frac{10x\sin x - 5x^2\cos x}{\sin^2x}
 		\end{align*}
-Finding $\fp$ using either method returned the same result. At first, the answers looked different, but some algebra verified they are the same. In general, there is not one final form that we seek; the immediate result from the Product Rule is fine. Work to ``simplify\primeskip'' your results into a form that is most readable and useful to you.
+Finding $\fp$ using either method returned the same result. At first, the answers looked different, but some algebra verified they are the same. In general, there is not one final form that we seek; the immediate result from the Product Rule is fine. It is up to you if you wish to work to ``simplify\primeskip'' your results into a form that is most readable and useful to you.
 }\\
+
+\mnote{.5}{The only times it is really necessary -- that is, worthwhile -- to simplify a product or quotient rule derivative on a test is if you are trying to determine the values of $x$ at which the derivative is zero (there will be plenty of that to come!) or in some cases, if a second derivative is required, and simplifying first makes that computation easier. (Also keep in mind that the person grading your test will be looking for the product or quotient rule pattern, so the unsimplified answer is sometimes the easiest to identify as the correct one.
+
+However, for written assignments where you have the luxury of taking your time to perfect your presentation, a simplified answer is usually preferable.}
 
 The Quotient Rule gives other useful results, as show in the next example.\\
 
@@ -165,22 +205,26 @@ Find the derivatives of the following functions.
 }
 {We employ the Quotient Rule.
 		\begin{enumerate}
-		\item		$\ds \fp(x) = \frac{x\cdot 0 - 1\cdot 1}{x^2} = -\frac{1}{x^2}$.
-		\item		$\ds \fp(x) = \frac{x^n\cdot 0 - 1\cdot nx^{n-1}}{(x^n)^2} = -\frac{nx^{n-1}}{x^{2n}} = -\frac{n}{x^{n+1}}.$
+		\item		$\ds \fp(x) = \frac{0\cdot x - 1\cdot 1}{x^2} = -\frac{1}{x^2}$.
+		\item		$\ds \fp(x) = \frac{0\cdot x^n - 1\cdot nx^{n-1}}{(x^n)^2} = -\frac{nx^{n-1}}{x^{2n}} = -\frac{n}{x^{n+1}}.$
 		\end{enumerate}
 \vskip-\baselineskip
 }\\
 
 The derivative of $\ds y=\frac{1}{x^n}$ turned out to be rather nice. It gets better. Consider:
-\begin{align*} \frac{d}{dx}\left(\frac{1}{x^n}\right) &= \parbox{60pt}{$\ds\frac{d}{dx}\Big(x^{-n}\Big)$} \text{\small (apply result from Example \ref{ex_deriv_power})}\\
-									&= \parbox{60pt}{$\ds-\frac{n}{x^{n+1}}$}\text{\small (rewrite algebraically)} \\
-									&= -nx^{-(n+1)} \\
-									&= -nx^{-n-1}.
-	\end{align*}
+\begin{align*} 
+\frac{d}{dx}\left(\frac{1}{x^n}\right) &= \frac{d}{dx}\Big(x^{-n}\Big) \tag{apply result from Example \ref{ex_deriv_power}}\\
+				&= -\frac{n}{x^{n+1}} \tag{rewrite algebraically} \\
+				&= -nx^{-(n+1)} \\
+				&= -nx^{-n-1}.
+\end{align*}
 This is reminiscent of the Power Rule: multiply by the power, then subtract 1 from the power. We now add to our previous Power Rule, which had the restriction of $n>0$.
 
 \theorem{thm:PowerRule}{Power Rule with Integer Exponents}
-{Let $f(x) = x^n$, where $n\neq 0$ is an integer.\index{derivative!Power Rule}\index{Power Rule!differentiation} Then $$\fp(x) = n\cdot x^{n-1}.$$
+{Let $f(x) = x^n$, where $n\neq 0$ is an integer.\index{derivative!Power Rule}\index{Power Rule!differentiation} Then 
+\[
+\fp(x) = n\cdot x^{n-1}.
+\]
 }
 
 Taking the derivative of many functions is relatively straightforward. It is clear (with practice) what rules apply and in what order they should be applied. Other functions present multiple paths; different rules may be applied depending on how the function is treated. One of the beautiful things about calculus is that there is not ``the'' right way; each path, when applied correctly, leads to the same result, the derivative. We demonstrate this concept in an example.\\
@@ -195,22 +239,36 @@ Let $\ds f(x) = \frac{x^2-3x+1}{x}$. Find $\fp(x)$ in each of the following ways
 		\end{enumerate}
 Verify that all three methods give the same result.}
 {	\begin{enumerate}
-	\item		Applying the Quotient Rule gives: $$ \fp(x) = \frac{x\cdot\big(2x-3\big)-\big(x^2-3x+1\big)\cdot 1}{x^2} = \frac{x^2-1}{x^2} = 1-\frac{1}{x^2}.$$
+	\item		Applying the Quotient Rule gives: 
+\[
+ \fp(x) = \frac{\big(2x-3\big)\cdot x- \big(x^2-3x+1\big)\cdot 1}{x^2} = \frac{x^2-1}{x^2} = 1-\frac{1}{x^2}.
+\]
 	\item		By rewriting $f$, we can apply the Product and Power Rules as follows:
 			\begin{align*}
-			\fp(x) &=		\big(x^2-3x+1\big)\cdot (-1)x^{-2} + \big(2x-3\big)\cdot x^{-1} \\
-							&=	-\frac{x^2-3x+1}{x^2}+\frac{2x-3}{x} \\
-							&= -\frac{x^2-3x+1}{x^2}+\frac{2x^2-3x}{x^2}\\
-							&= \frac{x^2-1}{x^2} = 1-\frac{1}{x^2},
+			\fp(x) &=	\big(2x-3\big)\cdot x^{-1} + \big(x^2-3x+1\big)\cdot (-1)x^{-2} \\
+				&=	\frac{2x-3}{x} - \frac{x^2-3x+1}{x^2}\\
+				&= \frac{2x^2-3x}{x^2} - \frac{x^2-3x+1}{x^2}\\
+				&= \frac{x^2-1}{x^2} = 1-\frac{1}{x^2},
 			\end{align*}
 			the same result as above.
-	\item		As $x\neq 0$, we can divide through by $x$ first, giving $\ds f(x) = x-3+\frac{1}x$. Now apply the Power Rule. $$\fp(x) = 1-\frac{1}{x^2},$$  the same result as before.
+	\item		As $x\neq 0$, we can divide through by $x$ first, giving $\ds f(x) = x-3+\frac{1}x$. Now apply the Power Rule. 
+\[
+ \fp(x) = 1-\frac{1}{x^2},
+\]
+the same result as before.
 	\end{enumerate}
 \vskip-\baselineskip
 }\\
 
+\enlargethispage{1.5\baselineskip}
+\pagebreak
+
 Example \ref{ex_multiple_deriv} demonstrates three methods of finding \fp. One is hard pressed to argue for a ``best method'' as all three gave the same result without too much difficulty, although it is clear that using the Product Rule required more steps. Ultimately, the important principle to take away from this is: reduce the answer to a form that seems ``simple'' and easy to interpret. In that example, we saw different expressions for \fp, including: {\small 
-		$$1-\frac{1}{x^2} = \frac{x\cdot\big(2x-3\big)-\big(x^2-3x+1\big)\cdot 1}{x^2} = 	\big(x^2-3x+1\big)\cdot (-1)x^{-2} + \big(2x-3\big)\cdot x^{-1}.$$} They are equal; they are all correct; only the first is ``clear.'' Work to make answers clear.
+\[
+ 1-\frac{1}{x^2} = \frac{\big(2x-3\big)\cdot x-\big(x^2-3x+1\big)\cdot 1}{x^2} = 	\big(2x-3\big)\cdot x^{-1} + \big(x^2-3x+1\big)\cdot (-1)x^{-2}.
+\]
+} 
+They are equal; they are all correct; only the first is ``clear.'' Work to make answers clear.
 		
 In the next section we continue to learn rules that allow us to more easily compute derivatives than using the limit definition directly. We have to memorize the derivatives of a certain set of functions, such as ``the derivative of $\sin x$ is $\cos x$.'' The Sum/Difference, Constant Multiple, Power, Product and Quotient Rules show us how to find the derivatives of certain combinations of these functions. The next section shows how to find the derivatives when we \emph{compose} these functions together.
 

@@ -30,25 +30,26 @@ In this section we explore in depth the concepts behind \#1 by introducing the \
 {\textbf{Left-Hand Limit} \index{limit!one sided}\index{limit!right handed}\index{limit!left handed}
 
 \indent Let $I$ be an open interval containing $c$, and let $f$ be a function defined on $I$, except possibly at $c$. 
-The \sword{limit of $f(x)$, as $x$ approaches $c$ from the left, is $L$}, or, \sword{the left--hand limit of $f$ at $c$ is $L$}, denoted by  
-$$\displaystyle \lim_{x\rightarrow c^-} f(x) = L,$$
-means that given any $\epsilon > 0$, there exists $\delta > 0$ such that for all $x< c$,  
-if  $|x - c| < \delta$, then $|f(x) - L| < \epsilon$.\\
-%Let $f$ be a function defined on an open interval containing $c$. 
-%The notation $$ \lim_{x\rightarrow c^-} f(x) = L, $$ read as ``the limit of $f(x)$ as $x$ approaches $c$ from the left is $L$,'' or ``the \textit{left-hand limit of $f$ at $c$ is L}'' 
-%means that given any $\epsilon > 0$, there exists $\delta > 0$ such that 
-%$|x - c| < \delta$ implies $|f(x) - L| < \epsilon$, for all $x<c$.\\
+We say that the \sword{limit of $f(x)$, as $x$ approaches $c$ from the left, is $L$}, or, \sword{the left--hand limit of $f$ at $c$ is $L$}, and write  
+\[
+ \lim_{x\rightarrow c^-} f(x) = L,
+\]
+if we can make $f(x)$ arbitrarily close to $L$ by choosing $x<c$ sufficiently close to $c$.\\
+
+\mnote{.5}{The precise versions of these definitions, in the language of Section \ref{sec:limit_def} are as follows:
+
+For the right-hand limit, $\ds \lim_{x\to c^+}f(x) = L$ if and only if for every $\epsilon > 0$, there exists a $\delta > 0$ such that if $c<x<c+\delta$, then $\lvert f(x)-L\rvert < \epsilon$.
+
+The definition of the left-hand limit is similar, with the condition $c<x<c+\delta$ replaced by $c-\delta<x<c$.}
 
 \textbf{Right-Hand Limit}
 
 Let $I$ be an open interval containing $c$, and let $f$ be a function defined on $I$, except possibly at $c$. 
-The \sword{limit of $f(x)$, as $x$ approaches $c$ from the right, is $L$}, or, \sword{the right--hand limit of $f$ at $c$ is $L$}, denoted by  
-$$\displaystyle \lim_{x\rightarrow c^+} f(x) = L,$$
-means that given any $\epsilon > 0$, there exists $\delta > 0$ such that for all $x> c$,  
-if  $|x - c| < \delta$, then $|f(x) - L| < \epsilon$.
-%Let $f$ be a function defined on an open interval containing $c$. The notation $$ \lim_{x\rightarrow c^+} f(x) = L, $$ read as ``the limit of $f(x)$ as $x$ approaches $c$ from the right is $L$,'' or ``the \textit{right-hand limit of $f$ at $c$ is L}'' 
-%means that given any $\epsilon > 0$, there exists $\delta > 0$ such that 
-%$|x - c| < \delta$ implies $|f(x) - L| < \epsilon$, for all $x>c$.
+We say that the \sword{limit of $f(x)$, as $x$ approaches $c$ from the right, is $L$}, or, \sword{the right--hand limit of $f$ at $c$ is $L$}, and write  
+\[
+ \lim_{x\rightarrow c^+} f(x) = L,
+\]
+if we can make $f(x)$ arbitrarily close to $L$ by choosing $x>c$ sufficiently close to $c$.
 }
 %\end{minipage}
 \restoreboxwidth
@@ -97,7 +98,15 @@ Let $\ds f(x) = \left\{\begin{array}{cc} x & 0\leq x\leq 1 \\ 3-x & 1<x<2\end{ar
 Note how the left and right-hand limits were different at $x=1$. This, of course, causes \textit{the} limit to not exist. The following theorem states what is fairly intuitive: \textit{the} limit exists precisely when the left and right-hand limits are equal.
 
 \theorem{thm:leftrightlimits}{Limits and One Sided Limits}
-{Let $f$ be a function defined on an open interval $I$ containing $c$. \index{limit!does not exist} Then $$\lim_{x\to c}f(x) = L$$ if, and only if, $$\lim_{x\to c^-}f(x) = L \quad \text{and} \quad \lim_{x\to c^+}f(x) = L.$$}
+{Let $f$ be a function defined on an open interval $I$ containing $c$. \index{limit!does not exist} Then 
+\[
+\lim_{x\to c}f(x) = L
+\]
+if, and only if, 
+\[
+\lim_{x\to c^-}f(x) = L \quad \text{and} \quad \lim_{x\to c^+}f(x) = L.
+\]
+}
 
 The phrase ``if, and only if'' means the two statements are \textit{equivalent}: they are either both true or both false. If the limit equals $L$, then the left and right hand limits both equal $L$. If the limit is not equal to $L$, then at least one of the left and right-hand limits is not equal to $L$ (it may not even exist).
 			
@@ -181,7 +190,9 @@ Let $f(x) = \left\{\begin{array}{cc} x^2 & 0\leq x\leq 1 \\ 2-x & 1<x\leq 2\end{
 }
 {		It is clear from the definition of the function and its graph that all of the following are equal:
 \mfigure{.7}{Graphing $f$ in Example \ref{ex_onesided}}{fig:onesidedd}{figures/figOneSidedLimits4}
-$$ \lim_{x\to 1^-} f(x) = \lim_{x\to 1^+} f(x) =\lim_{x\to 1} f(x) =f(1) = 1.$$
+\[
+ \lim_{x\to 1^-} f(x) = \lim_{x\to 1^+} f(x) =\lim_{x\to 1} f(x) =f(1) = 1.
+\]
 }\\
 
 In Examples \ref{ex_onesidea} -- \ref{ex_onesided} we were asked to find both $\ds \lim_{x\to 1}f(x)$ and $f(1)$. Consider the following table:

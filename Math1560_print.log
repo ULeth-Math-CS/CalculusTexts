@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2015.11.18)  1 SEP 2016 16:12
+This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2015.11.18)  23 FEB 2017 15:56
 entering extended mode
 **Math1560_print.tex
 (Math1560_print.tex
@@ -1943,7 +1943,7 @@ File: figures/figSinXOverXBW.pdf Graphic file (type QTm)
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
@@ -1966,22 +1966,22 @@ Overfull \hbox (10.9996pt too wide) has occurred while \output is active
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 62--64
+Underfull \hbox (badness 10000) in paragraph at lines 88--90
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
 
@@ -1989,22 +1989,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--89
 File: figures/figlimit2BW.pdf Graphic file (type QTm)
  <use  "figures/figlimit2BW.pdf" >
 (figures/table_limit2.tex) [3]
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
  []
 
@@ -2012,12 +2012,12 @@ File: figures/figNoLimit3aBW.pdf Graphic file (type QTm)
 <use  "figures/figNoLimit3aBW.pdf" >
 File: figures/figNoLimit3bBW.pdf Graphic file (type QTm)
  <use  "figures/figNoLimit3bBW.pdf" >
-Overfull \hbox (182.0pt too wide) in paragraph at lines 165--166
+Overfull \hbox (182.0pt too wide) in paragraph at lines 205--206
 $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
+Underfull \hbox (badness 10000) in paragraph at lines 205--206
 
  []
 
@@ -2031,7 +2031,7 @@ Overfull \hbox (2.99962pt too wide) has occurred while \output is active
  []
 
 (figures/table_nolimit2.tex) [4]
-Underfull \hbox (badness 10000) in paragraph at lines 169--170
+Underfull \hbox (badness 10000) in paragraph at lines 209--210
 
  []
 
@@ -2042,12 +2042,22 @@ Underfull \hbox (badness 2790) has occurred while \output is active
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 212--213
+Underfull \hbox (badness 10000) in paragraph at lines 264--265
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 224--225
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 288--289
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 293--294
 
  []
 
@@ -2121,48 +2131,52 @@ Requested font "Calibri/B/OT:script=latn;language=DFLT;mapping=tex-text;mapping
 =tex-text;" at 5.0pt
  -> C:/WINDOWS/Fonts/calibrib.ttf
 
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 42--43
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 46--47
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--49
+Underfull \hbox (badness 10000) in paragraph at lines 50--53
 
  []
 
 [8
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--116
+Underfull \hbox (badness 10000) in paragraph at lines 126--126
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--116
+Underfull \hbox (badness 10000) in paragraph at lines 126--126
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--116
+Underfull \hbox (badness 10000) in paragraph at lines 126--126
 
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: figures/figLimitProof1aBW.pdf Graphic file (type QTm)
+
 <use  "figures/figLimitProof1aBW.pdf" >
 File: figures/figLimitProof1bBW.pdf Graphic file (type QTm)
 
@@ -2172,27 +2186,27 @@ Overfull \hbox (50.0pt too wide) has occurred while \output is active
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--121
+Underfull \hbox (badness 10000) in paragraph at lines 132--134
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--164
+Underfull \hbox (badness 10000) in paragraph at lines 177--177
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 219--220
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
 
  []
 
@@ -2203,29 +2217,29 @@ Overfull \hbox (1.99962pt too wide) has occurred while \output is active
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 258--259
+Underfull \hbox (badness 10000) in paragraph at lines 271--272
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 260--261
+Underfull \hbox (badness 10000) in paragraph at lines 273--274
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 289--290
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
 
  []
 
 
-Overfull \hbox (4.123pt too wide) in paragraph at lines 291--292
+Overfull \hbox (4.123pt too wide) in paragraph at lines 307--308
 []$ \EU1/Calibri(0)/m/n/10 instead. By using the substitution $[] \OT1/cmr/m/n/
 10 = [] \OMS/cmsy/m/n/10 ^^@ []$\EU1/Calibri(0)/m/n/10 , this reduces to showin
 g $[][] [][] \OT1/cmr/m/n/10 =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--292
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
 
  []
 
@@ -2279,109 +2293,106 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--14
  []
 
 
-Overfull \hbox (1.35648pt too wide) in paragraph at lines 34--34
+Overfull \hbox (1.35648pt too wide) in paragraph at lines 40--40
 []$[]$ [] 
  []
 
 
-Overfull \hbox (16.35648pt too wide) in paragraph at lines 34--34
+Overfull \hbox (16.35648pt too wide) in paragraph at lines 40--40
 []$[]$ [] 
  []
 
 
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 34--35
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 40--41
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--35
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
 
-Overfull \hbox (1.50717pt too wide) in paragraph at lines 66--66
+Overfull \hbox (1.50717pt too wide) in paragraph at lines 76--76
 [] [] 
  []
 
-
-Underfull \vbox (badness 1320) has occurred while \output is active []
-
- [15
+[15
 
 ]
-Overfull \hbox (9.18732pt too wide) in paragraph at lines 66--66
+Overfull \hbox (9.18732pt too wide) in paragraph at lines 76--76
 []\EU1/Calibri(0)/m/n/10 Using the Scalar Multiple and Sum/Difference rules, we
  find that $[] [][][]\OT1/cmr/m/n/10 ([]) +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
 
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 75--77
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 89--91
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
 [16]
-Overfull \hbox (31.39998pt too wide) in paragraph at lines 120--121
+Overfull \hbox (31.39998pt too wide) in paragraph at lines 141--142
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--121
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
 
  []
 
 
-Overfull \hbox (70.0pt too wide) in paragraph at lines 95--125
+Overfull \hbox (70.0pt too wide) in paragraph at lines 116--146
 $[]$ 
  []
 
 
-Overfull \hbox (1.50717pt too wide) in paragraph at lines 160--160
+Overfull \hbox (1.50717pt too wide) in paragraph at lines 201--201
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
+Underfull \hbox (badness 10000) in paragraph at lines 201--201
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
  []
 
 
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 168--169
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 225--226
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--169
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
 
  []
 
 
-Overfull \hbox (9.55905pt too wide) in paragraph at lines 170--171
+Overfull \hbox (9.55905pt too wide) in paragraph at lines 227--228
 []\EU1/Calibri(0)/m/n/10 It can take some work to figure out appropriate functi
 ons by which to “squeeze”
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
+Underfull \hbox (badness 10000) in paragraph at lines 229--230
 
  []
 
@@ -2393,84 +2404,84 @@ File: figures/figSqueeze1bBW.pdf Graphic file (type QTm)
 File: figures/figSqueeze1cBW.pdf Graphic file (type QTm)
 
 <use  "figures/figSqueeze1cBW.pdf" >
-Overfull \hbox (1.555pt too wide) in paragraph at lines 202--202
+Overfull \hbox (1.555pt too wide) in paragraph at lines 269--269
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--207
-
- []
-
-
-Overfull \hbox (1.50717pt too wide) in paragraph at lines 223--223
-[] [] 
- []
-
-
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 223--224
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 223--224
+Underfull \hbox (badness 10000) in paragraph at lines 273--274
 
  []
 
 File: figures/figSqueeze1BW.pdf Graphic file (type QTm)
 <use  "figures/figSqueeze1BW.pdf" > [19]
-Underfull \hbox (badness 10000) in paragraph at lines 229--230
+Overfull \hbox (1.50717pt too wide) in paragraph at lines 290--290
+[] [] 
+ []
+
+
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 290--291
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--291
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 231--232
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
 
  []
 
 File: figures/fig_LimitXplus1BW.pdf Graphic file (type QTm)
 <use  "figures/fig_LimitXplus1BW.pdf" > [20]
-Underfull \hbox (badness 10000) in paragraph at lines 245--246
+Underfull \hbox (badness 10000) in paragraph at lines 326--327
 
  []
 
 
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 249--250
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 333--334
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
+Underfull \hbox (badness 10000) in paragraph at lines 333--334
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 251--253
+Underfull \hbox (badness 10000) in paragraph at lines 335--337
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 264--265
+Underfull \hbox (badness 10000) in paragraph at lines 352--353
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--269
+Underfull \hbox (badness 10000) in paragraph at lines 356--357
 
  []
 
 [21]
-Overfull \hbox (10.4779pt too wide) in paragraph at lines 284--284
+Overfull \hbox (10.4779pt too wide) in paragraph at lines 367--367
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--285
+Underfull \hbox (badness 10000) in paragraph at lines 367--368
 
  []
 
@@ -2510,65 +2521,65 @@ Underfull \hbox (badness 10000) in paragraph at lines 284--285
  [23
 
 ] [24]) (text/01_One_Sided_Limits.tex
-Underfull \hbox (badness 10000) in paragraph at lines 52--52
+Underfull \hbox (badness 10000) in paragraph at lines 53--53
 
  []
 
 
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 52--56
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 53--57
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--56
+Underfull \hbox (badness 10000) in paragraph at lines 53--57
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
 [25
 
 ]
-Overfull \hbox (1.50717pt too wide) in paragraph at lines 95--95
+Overfull \hbox (1.50717pt too wide) in paragraph at lines 96--96
 [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
 
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 100--101
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 109--110
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
 
 File: figures/figOneSidedLimits1BW.pdf Graphic file (type QTm)
 <use  "figures/figOneSidedLimits1BW.pdf" > [26]
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
 
  []
 
 
-Overfull \hbox (1.50717pt too wide) in paragraph at lines 140--140
+Overfull \hbox (1.50717pt too wide) in paragraph at lines 149--149
 [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--141
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
 
  []
 
 
-Overfull \hbox (1.50717pt too wide) in paragraph at lines 161--161
+Overfull \hbox (1.50717pt too wide) in paragraph at lines 170--170
 [] [] 
  []
 
@@ -2577,17 +2588,17 @@ File: figures/figOneSidedLimits2BW.pdf Graphic file (type QTm)
 File: figures/figOneSidedLimits3BW.pdf Graphic file (type QTm)
 
 <use  "figures/figOneSidedLimits3BW.pdf" > [27]
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
+Underfull \hbox (badness 10000) in paragraph at lines 170--171
 
  []
 
 
-Overfull \hbox (1.50717pt too wide) in paragraph at lines 185--185
+Overfull \hbox (1.50717pt too wide) in paragraph at lines 196--196
 [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--186
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
 
  []
 
@@ -2628,73 +2639,73 @@ File: figures/figOneSidedLimits4BW.pdf Graphic file (type QTm)
 File: figures/fig01_04_ex_05BW.pdf Graphic file (type QTm)
 
 <use  "figures/fig01_04_ex_05BW.pdf" >
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 199--199
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 210--210
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 210--210
 
  []
 
 File: figures/fig01_04_ex_06BW.pdf Graphic file (type QTm)
 <use  "figures/fig01_04_ex_06BW.pdf" >
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 199--199
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 210--210
 [] []
  []
 
 File: figures/fig01_04_ex_07BW.pdf Graphic file (type QTm)
 <use  "figures/fig01_04_ex_07BW.pdf" >
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 199--199
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 210--210
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 210--210
 
  []
 
 File: figures/fig01_04_ex_08BW.pdf Graphic file (type QTm)
 <use  "figures/fig01_04_ex_08BW.pdf" >
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 199--199
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 210--210
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 210--210
 
  []
 
 File: figures/fig01_04_ex_09BW.pdf Graphic file (type QTm)
 <use  "figures/fig01_04_ex_09BW.pdf" >
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 199--199
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 210--210
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 210--210
 
  []
 
 File: figures/fig01_04_ex_10BW.pdf Graphic file (type QTm)
 <use  "figures/fig01_04_ex_10BW.pdf" >
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 199--199
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 210--210
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 210--210
 
  []
 
 File: figures/fig01_04_ex_11BW.pdf Graphic file (type QTm)
 <use  "figures/fig01_04_ex_11BW.pdf" >
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 199--199
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 210--210
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 210--210
 
  []
 
@@ -2703,97 +2714,97 @@ Underfull \hbox (badness 10000) in paragraph at lines 199--199
 ]
 File: figures/fig01_04_ex_12BW.pdf Graphic file (type QTm)
  <use  "figures/fig01_04_ex_12BW.pdf" >
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 199--199
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 210--210
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 210--210
 
  []
 
 
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 199--199
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 210--210
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 210--210
 
  []
 
 
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 199--199
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 210--210
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 210--210
 
  []
 
 
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 199--199
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 210--210
 [] []
  []
 
 
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 199--199
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 210--210
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 210--210
 
  []
 
 
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 199--199
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 210--210
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 210--210
 
  []
 
 
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 199--199
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 210--210
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 210--210
 
  []
 
 
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 199--199
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 210--210
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 210--210
 
  []
 
 
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 199--199
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 210--210
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 210--210
 
  []
 
 
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 199--199
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 210--210
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 210--210
 
  []
 
@@ -2817,7 +2828,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--32
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--48
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
 
  []
 
@@ -2828,77 +2839,77 @@ File: figures/figContinuous2BW.pdf Graphic file (type QTm)
 [31
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
 
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 59--60
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 62--63
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--66
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
 
-Overfull \hbox (1.50717pt too wide) in paragraph at lines 93--93
+Overfull \hbox (1.50717pt too wide) in paragraph at lines 92--92
 [] [] 
  []
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
 
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 108--109
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 107--108
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
 
-Overfull \hbox (1.50717pt too wide) in paragraph at lines 132--132
+Overfull \hbox (1.50717pt too wide) in paragraph at lines 131--131
 [] [] 
  []
 
 
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 132--133
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 131--132
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
 
 [33]
-Overfull \hbox (1.50717pt too wide) in paragraph at lines 162--162
+Overfull \hbox (1.50717pt too wide) in paragraph at lines 165--165
 []$ $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--162
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
 
  []
 
 
-Overfull \hbox (3.39209pt too wide) in paragraph at lines 162--162
+Overfull \hbox (3.39209pt too wide) in paragraph at lines 165--165
 []\EU1/Calibri(0)/m/n/10 The square–root terms are continuous on the intervals 
 $\OT1/cmr/m/n/10 [[]\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 1\OT1/cmr/m/n/10 )$ \EU
 1/Calibri(0)/m/n/10 and $\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@1\OML/cmm/m/it/10
@@ -2906,17 +2917,17 @@ $\OT1/cmr/m/n/10 [[]\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 1\OT1/cmr/m/n/10 )$ \EU
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
 
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 171--172
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 174--175
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
+Underfull \hbox (badness 10000) in paragraph at lines 174--175
 
  []
 
@@ -2924,12 +2935,12 @@ File: figures/figContinuous3BW.pdf Graphic file (type QTm)
 <use  "figures/figContinuous3BW.pdf" > [34
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 183--184
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
 
-Overfull \hbox (1.80075pt too wide) in paragraph at lines 218--218
+Overfull \hbox (1.80075pt too wide) in paragraph at lines 224--224
 []$[]\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 :[]\OT1/cmr/m/n/10 ) \OML/cmm/m/it/10 
 < []$\EU1/Calibri(0)/m/n/10 , $[]\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 :[]\OT1/cm
 r/m/n/10 ) \OML/cmm/m/it/10 > []$\EU1/Calibri(0)/m/n/10 , and at the midpoint, 
@@ -2938,7 +2949,7 @@ $[]\OML/cmm/m/it/10 :[][]$\EU1/Calibri(0)/m/n/10 , we have $[]\OT1/cmr/m/n/10 (
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--219
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
 
  []
 
@@ -3023,32 +3034,27 @@ File: figures/fig01_04_ex_11BW.pdf Graphic file (type QTm)
 [37
 
 ]
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 233--233
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 239--239
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--233
+Underfull \hbox (badness 10000) in paragraph at lines 239--239
 
  []
 
 [38]) (text/01_Limits_Involving_Infinity.tex
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 21--22
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 20--21
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
@@ -3063,27 +3069,27 @@ Overfull \hbox (2.99962pt too wide) has occurred while \output is active
 [39
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--61
+Underfull \hbox (badness 10000) in paragraph at lines 68--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
@@ -3099,32 +3105,32 @@ Underfull \hbox (badness 2096) has occurred while \output is active
  []
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--110
+Underfull \hbox (badness 10000) in paragraph at lines 117--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--110
+Underfull \hbox (badness 10000) in paragraph at lines 117--117
 
  []
 
 
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 110--114
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 117--121
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--114
+Underfull \hbox (badness 10000) in paragraph at lines 117--121
 
  []
 
@@ -3132,17 +3138,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--114
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [41]
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--141
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
 
  []
 
@@ -3153,40 +3159,52 @@ File: figures/fighzasy3BW.pdf Graphic file (type QTm)
 File: figures/fighzasy4BW.pdf Graphic file (type QTm)
 
 <use  "figures/fighzasy4BW.pdf" >
-Overfull \hbox (53.9989pt too wide) in paragraph at lines 158--163
+Overfull \hbox (53.9989pt too wide) in paragraph at lines 173--178
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--167
+Overfull \hbox (100.0pt too wide) in paragraph at lines 172--182
+$[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--182
 
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 File: figures/fighzasy1BW.pdf Graphic file (type QTm)
+
 <use  "figures/fighzasy1BW.pdf" >
 Overfull \hbox (7.99963pt too wide) has occurred while \output is active
  [][] 
  []
 
 [42]
-Overfull \hbox (0.95432pt too wide) in paragraph at lines 171--172
+Overfull \hbox (0.95432pt too wide) in paragraph at lines 186--187
 \EU1/Calibri(0)/m/n/10 understand $[] []\OML/cmm/m/it/10 =[]$\EU1/Calibri(0)/m/
 n/10 . As $[]$ gets larger and larger, the $[]\OML/cmm/m/it/10 =[]$ \EU1/Calibr
 i(0)/m/n/10 gets smaller and smaller,
  []
 
 
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 203--204
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 228--229
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
  []
 
-[43]
-Underfull \hbox (badness 10000) in paragraph at lines 209--210
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [43]
+Underfull \hbox (badness 10000) in paragraph at lines 237--239
 
  []
 
@@ -3194,17 +3212,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 209--210
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [44]
-Overfull \hbox (1.50717pt too wide) in paragraph at lines 267--267
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
+
+ []
+
+
+Overfull \hbox (1.50717pt too wide) in paragraph at lines 294--294
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--267
+Underfull \hbox (badness 10000) in paragraph at lines 294--294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--268
+Underfull \hbox (badness 10000) in paragraph at lines 294--295
 
  []
 
@@ -3220,7 +3243,7 @@ Overfull \hbox (22.9996pt too wide) has occurred while \output is active
  []
 
 [45]
-Overfull \hbox (6.40102pt too wide) in paragraph at lines 278--279
+Overfull \hbox (6.40102pt too wide) in paragraph at lines 305--306
 []\EU1/Calibri(0)/m/n/10 developed a not–so–easy method of proving the value of
  a limit ($[]$-$[]$ proofs), 
  []
@@ -3262,13 +3285,13 @@ Overfull \hbox (6.40102pt too wide) in paragraph at lines 278--279
 
 File: figures/fig01_06_ex_09BW.pdf Graphic file (type QTm)
  <use  "figures/fig01_06_ex_09BW.pdf" >
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 290--290
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 317--317
 [][] [] 
  []
 
 File: figures/fig01_06_ex_10BW.pdf Graphic file (type QTm)
 <use  "figures/fig01_06_ex_10BW.pdf" >
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 290--290
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 317--317
 [][] [] 
  []
 
@@ -3284,12 +3307,12 @@ File: figures/fig01_06_ex_40BW.pdf Graphic file (type QTm)
 [47
 
 ]
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 290--290
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 317--317
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--290
+Underfull \hbox (badness 10000) in paragraph at lines 317--317
 
  []
 
@@ -3910,7 +3933,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
 
 Underfull \hbox (badness 4132) has occurred while \output is active
-[]\EU1/Calibri(0)/bx/n/9 Note: \EU1/Calibri(0)/m/n/9 Definition []11[] comes wi
+[]\EU1/Calibri(0)/bx/n/9 Note: \EU1/Calibri(0)/m/n/9 Definition []12[] comes wi
 th the
  []
 
@@ -3991,33 +4014,28 @@ Overfull \vbox (4.9724pt too high) has occurred while \output is active []
 [72
 
 ]) (text/02_Product_Quotient_Rules.tex
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 8--9
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 12--14
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
-
- []
-
-
-Overfull \hbox (103.55066pt too wide) in paragraph at lines 39--39
-[] 
+Underfull \hbox (badness 1442) has occurred while \output is active
+\EU1/Calibri(0)/m/n/9 While this answer is simpler than the
  []
 
 File: figures/fig5xsquaredsinxBW.pdf Graphic file (type QTm)
@@ -4029,51 +4047,21 @@ Overfull \hbox (1.99962pt too wide) has occurred while \output is active
 [73
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--42
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
 [74]
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
-
- []
-
-
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 91--92
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
@@ -4083,50 +4071,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
+
+ []
+
+
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 123--124
+[][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
+
+ []
+
+
+Underfull \hbox (badness 1173) has occurred while \output is active
+\EU1/Calibri(0)/m/n/9 over low low.” Said fast, that phrase
+ []
+
 [75]
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
-
- []
-
-
-Overfull \hbox (1.50717pt too wide) in paragraph at lines 140--140
-[] [] 
- []
-
-
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 140--141
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 140--141
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 142--143
-
- []
-
-File: figures/figtanxBW.pdf Graphic file (type QTm)
-<use  "figures/figtanxBW.pdf" > [76]
-Overfull \hbox (8.41325pt too wide) in paragraph at lines 155--155
-[]$[]$\EU1/Calibri(0)/m/n/10 We found in Example []54[] that the $[] []\OT1/cmr
-/m/n/10 ([]) = []$\EU1/Calibri(0)/m/n/10 .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 155--156
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
 
  []
 
@@ -4136,27 +4117,64 @@ Underfull \hbox (badness 10000) in paragraph at lines 157--158
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
-
+Overfull \hbox (1.50717pt too wide) in paragraph at lines 176--176
+[] [] 
  []
 
-[77]
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 184--185
+
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 176--177
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--185
+Underfull \hbox (badness 10000) in paragraph at lines 176--177
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--187
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
+
+ []
+
+File: figures/figtanxBW.pdf Graphic file (type QTm)
+<use  "figures/figtanxBW.pdf" > [76]
+Overfull \hbox (8.41325pt too wide) in paragraph at lines 191--191
+[]$[]$\EU1/Calibri(0)/m/n/10 We found in Example []54[] that the $[] []\OT1/cmr
+/m/n/10 ([]) = []$\EU1/Calibri(0)/m/n/10 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--211
+Underfull \hbox (badness 10000) in paragraph at lines 197--198
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
+
+ []
+
+
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 228--229
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
+
+ []
+
+[77]
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
 
  []
 
@@ -4198,25 +4216,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 210--211
 ]
 File: figures/fig02_04_ex_42BW.pdf Graphic file (type QTm)
  <use  "figures/fig02_04_ex_42BW.pdf" >
-Underfull \hbox (badness 10000) in paragraph at lines 217--217
+Underfull \hbox (badness 10000) in paragraph at lines 275--275
 
  []
 
 File: figures/fig02_04_ex_43BW.pdf Graphic file (type QTm)
 <use  "figures/fig02_04_ex_43BW.pdf" >
-Underfull \hbox (badness 10000) in paragraph at lines 217--217
+Underfull \hbox (badness 10000) in paragraph at lines 275--275
 
  []
 
 File: figures/fig02_04_ex_44BW.pdf Graphic file (type QTm)
 <use  "figures/fig02_04_ex_44BW.pdf" >
-Underfull \hbox (badness 10000) in paragraph at lines 217--217
+Underfull \hbox (badness 10000) in paragraph at lines 275--275
 
  []
 
 File: figures/fig02_04_ex_45BW.pdf Graphic file (type QTm)
 <use  "figures/fig02_04_ex_45BW.pdf" >
-Underfull \hbox (badness 10000) in paragraph at lines 217--217
+Underfull \hbox (badness 10000) in paragraph at lines 275--275
 
  []
 
@@ -8427,10 +8445,10 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 348.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 348.
  ) 
 Here is how much of TeX's memory you used:
- 53600 strings out of 428755
- 1133431 string characters out of 3164219
- 1492637 words of memory out of 3000000
- 54561 multiletter control sequences out of 15000+200000
+ 53595 strings out of 428755
+ 1133318 string characters out of 3164219
+ 1493258 words of memory out of 3000000
+ 54556 multiletter control sequences out of 15000+200000
  15093 words of font info for 134 fonts, out of 3000000 for 9000
  1096 hyphenation exceptions out of 8191
  62i,24n,90p,10387b,939s stack positions out of 5000i,500n,10000p,200000b,50000s
