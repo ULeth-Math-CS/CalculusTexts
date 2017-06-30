@@ -164,6 +164,35 @@ or, equivalently, on $D = \{x\in \mathbb{R}\ |\ x\neq n\cdot \frac{\pi}2,\ $n$\ 
 \vskip -\baselineskip
 }\\
 
+\subsection*{Classifying discontinuities}\index{discontinuity}
+We now know what it means for a function to be continuous, so of course we can easily say what it means for a function to be \textit{discontinuous}; namely, not continuous. However, to better understand continuity it is worth our time to discuss the different ways in which a function can fail to be discontinuous. By definition, a function $f$ is continuous at a point $a$ in its domain if $\displaystyle \lim_{x\to a}f(x) = f(a)$. If this equality fails to hold, then $f$ is not continuous. We note, however, that there are a number of different things that can go wrong with this equation.
+\begin{enumerate}
+\item $\displaystyle \lim_{x\to a}f(x)=L$ exists, but $L\neq f(a)$, or $f(a)$ is undefined. Such a discontinuity is called a \textbf{removable discontinuity}\index{discontinuity ! removable}.
+
+A removable discontinuity can be pictured as a ``hole'' in the graph of $f$. The term ``removable'' refers to the fact that by simply redefining $f(a)$ to equal $L$ (that is, changing the value of $f$ at a single point), we can create a new function that is continuous at $x=a$, and agrees with $f$ at all $x\neq a$.
+
+\mfigure[width=0.95\marginparwidth]{.4}{The graph of a function with a removable discontinuity at $x=0$}{fig:disc_rem}{figures/fig_disc_rem}
+
+
+\item $\displaystyle \lim_{x\to a^+}f(x) = L$ and $\displaystyle \lim_{x\to a^-}f(x)=M$ exist, but $L\neq M$. In this case the left and right hand limits both exist, but since they are not equal, the limit of $f$ as $x\to a$ does not exist. Such a discontinuity is called a \textbf{jump discontinuity}\index{discontinuity ! jump}.
+
+The phrase ``jump discontinuity'' is meant to represent the fact that visually, the graph of $f$ ``jumps'' from one value to another as we cross the value $x=a$.
+
+\mfigure[width=0.95\marginparwidth]{.2}{The graph of a function with a jump discontinuity at $x=1$}{fig:disc_jump}{figures/fig_disc_jump}
+
+\item The function $f$ is \textbf{unbounded} near $x=a$. This means that the value of $f$ becomes arbitrarily large (or large and negative) as $x$ approaches $a$. Such a discontinuity is called an \textbf{infinite discontinuity}.\index{discontinuity ! infinite}
+
+
+Infinite discontinuities are most easily understood in terms of \textit{infinite limits}, which we will discuss in the next section.
+
+
+
+\item $\lim_{x\to a}f(x)$ does not exist, for reasons other than the above. Such discontinuities are called \textbf{essential discontinuities} \index{discontinuity ! essential}. With jump and infinite discontinuities, the limit fails to exist, but in ways that can still be described or even quantified. Essential discontinuities include examples such as $f(x)=\sin(1/x)$ as $x\to 0$, where the function oscillates infinitely often, or is otherwise so badly-behaved that the limit does not exist.
+\end{enumerate}
+
+\mfigure[width=0.95\marginparwidth]{.8}{The graph of a function with an infinite discontinuity at $x=2$}{fig:disc_inf}{figures/fig_disc_inf}
+
+\subsection*{Consequences of continuity}
 A common way of thinking of a continuous function is that ``its graph can be sketched without lifting your pencil.'' That is, its graph forms a ``continuous'' curve, without holes, breaks or jumps. 
 While beyond the scope of this text, this pseudo--definition glosses over some of the finer points of continuity. Very strange functions are continuous that one would be hard pressed to actually sketch by hand. 
 
@@ -234,6 +263,25 @@ In Section \ref{sec:newton} another equation solving method will be introduced, 
 This section formally defined what it means to be a continuous function. ``Most'' functions that we deal with are continuous, so often it feels odd to have to formally define this concept. Regardless, it is important, and forms the basis of the next chapter.
 \enlargethispage{\baselineskip}
 
-In the next section we examine one more aspect of limits: limits that involve infinity.
-		
+
+\clearpage
+\vskip 2\baselineskip
+\noindent\textbf{\Large Chapter Summary}
+\vskip \baselineskip
+
+In this chapter we:
+\begin{itemize}
+\item defined the limit, 
+\item found accessible ways to approximate their values numerically and graphically, 
+\item	developed a not--so--easy method of proving the value of a limit ($\epsilon$-$\delta$ proofs),
+\item	explored when limits do not exist,
+\item	defined continuity and explored properties of continuous functions, and 
+\item	considered limits that involved infinity.
+\end{itemize}
+
+Why? Mathematics is famous for building on itself and calculus proves to be no exception. In the next chapter we will be interested in ``dividing by 0.'' That is, we will want to divide a quantity by a smaller and smaller number and see what value the quotient approaches. In other words, we will want to find a limit. These limits will enable us to, among other things, determine \textit{exactly} how fast something is moving when we are only given position information.
+
+Later, we will want to add up an infinite list of numbers. We will do so by first adding up a finite list of numbers, then take a limit as the number of things we are adding approaches infinity. Surprisingly, this sum often is finite; that is, we can add up an infinite list of numbers and get, for instance, 42. 
+
+These are just two quick examples of why we are interested in limits. Many students dislike this topic when they are first introduced to it, but over time an appreciation is often formed based on the scope of its applicability.		
 \printexercises{exercises/01_05_exercises}

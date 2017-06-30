@@ -16,13 +16,13 @@ We have an approximation of the area, using one rectangle. How can we refine our
 
 Let's use 4 rectangles of equal width of 1. This \textit{partitions} the interval $[0,4]$ into 4 \textit{subintervals}, $[0,1]$, $[1,2]$, $[2,3]$ and $[3,4]$. On each subinterval we will draw a rectangle.
 
-There are three common ways to determine the height of these rectangles: the \textbf{Left Hand Rule}, the \textbf{Right Hand Rule}, and the \textbf{Midpoint Rule}. The \textbf{Left Hand Rule} says to evaluate the function at the left--hand endpoint of the subinterval and make the rectangle that height. In Figure \ref{fig:rie1b}, the rectangle drawn on the interval $[2,3]$ has height determined by the Left Hand Rule; it has a height of $f(2)$. (The rectangle is labeled ``LHR.'')\index{Left Hand Rule}\index{Right Hand Rule}\index{Midpoint Rule}
+There are three common ways to determine the height of these rectangles: the \textbf{Left Hand Rule}, the \textbf{Right Hand Rule}, and the \textbf{Midpoint Rule}. The \textbf{Left Hand Rule} says to evaluate the function at the left--hand endpoint of the subinterval and make the rectangle that height. In Figure \ref{fig:rie1b}, the rectangle drawn on the interval $[2,3]$ has height determined by the Left Hand Rule; it has a height of $f(2)$. (The rectangle is labelled ``LHR.'')\index{Left Hand Rule}\index{Right Hand Rule}\index{Midpoint Rule}
 
 \mfigure{.55}{Approximating $\int_0^4(4x-x^2)\ dx$ using rectangles. The heights of the rectangles are determined using different rules.}{fig:rie1b}{figures/figrie1b}
 
-The \textbf{Right Hand Rule} says the opposite: on each subinterval, evaluate the function at the right endpoint and make the rectangle that height. In the figure, the rectangle drawn on $[0,1]$ is drawn using $f(1)$ as its height; this rectangle is labeled ``RHR.''.
+The \textbf{Right Hand Rule} says the opposite: on each subinterval, evaluate the function at the right endpoint and make the rectangle that height. In the figure, the rectangle drawn on $[0,1]$ is drawn using $f(1)$ as its height; this rectangle is labelled ``RHR.''.
 
-The \textbf{Midpoint Rule} says that on each subinterval, evaluate the function at the midpoint and make the rectangle that height. The rectangle drawn on $[1,2]$ was made using the Midpoint Rule, with a height of $f(1.5)$. That rectangle is labeled ``MPR.''
+The \textbf{Midpoint Rule} says that on each subinterval, evaluate the function at the midpoint and make the rectangle that height. The rectangle drawn on $[1,2]$ was made using the Midpoint Rule, with a height of $f(1.5)$. That rectangle is labelled ``MPR.''
 
 These are the three most common rules for determining the heights of approximating rectangles, but one is not forced to use one of these three methods. The rectangle on $[3,4]$ has a height of approximately $f(3.53)$, very close to the Midpoint Rule. It was chosen so that the area of the rectangle is \textit{exactly} the area of the region under $f$ on $[3,4]$. (Later you'll be able to figure how to do this, too.)
 
@@ -65,7 +65,11 @@ It is hard to tell at this moment which is a better approximation: 10 or 11? We 
 
 %\clearpage
 
-Suppose we wish to add up a list of numbers $a_1$, $a_2$, $a_3$, \ldots, $a_9$. Instead of writing $$a_1+a_2+a_3+a_4+a_5+a_6+a_7+a_8+a_9,$$ we use summation notation and write 
+Suppose we wish to add up a list of numbers $a_1$, $a_2$, $a_3$, \ldots, $a_9$. Instead of writing 
+\[
+a_1+a_2+a_3+a_4+a_5+a_6+a_7+a_8+a_9,
+\]
+ we use summation notation and write 
 \begin{center}
 \myincludegraphics{figures/figrie_notation}
 \captionsetup{type=figure}%
@@ -74,11 +78,13 @@ Suppose we wish to add up a list of numbers $a_1$, $a_2$, $a_3$, \ldots, $a_9$. 
 
 The upper case sigma represents the term ``sum.'' The index of summation in this example is $i$; any symbol can be used. By convention, the index takes on only the integer values between (and including) the lower and upper bounds. 
 
-Let's practice using this notation.\\
+Let's practise using this notation.\\
 
 \example{ex_rie3}{Using summation notation}{
 Let the numbers $\{a_i\}$ be defined as $a_i = 2i-1$ for integers $i$, where $i\geq 1$. So $a_1 = 1$, $a_2 = 3$, $a_3 = 5$, etc. (The output is the positive odd integers). Evaluate the following summations:
-$$ 1.\ \sum_{i=1}^6 a_i \qquad\qquad\qquad 2.\ \sum_{i=3}^7 (3a_i-4)\qquad\qquad \qquad 3.\ \sum_{i=1}^4 (a_i)^2$$
+\[
+ 1.\ \sum_{i=1}^6 a_i \qquad\qquad\qquad 2.\ \sum_{i=3}^7 (3a_i-4)\qquad\qquad \qquad 3.\ \sum_{i=1}^4 (a_i)^2
+\]
 }
 {\begin{enumerate}
 		\item		\noindent\vskip-45pt%\begin{minipage}[t]{\linewidth}
@@ -134,7 +140,10 @@ It might seem odd to stress a new, concise way of writing summations only to wri
 \restoreboxwidth
 
 \example{ex_rie4}{Evaluating summations using Theorem \ref{thm:summation}}
-{Revisit Example \ref{ex_rie3} and, using Theorem \ref{thm:summation}, evaluate $$\sum_{i=1}^6 a_i = \sum_{i=1}^6 (2i-1).$$
+{Revisit Example \ref{ex_rie3} and, using Theorem \ref{thm:summation}, evaluate 
+\[
+\sum_{i=1}^6 a_i = \sum_{i=1}^6 (2i-1).
+\]
 }
 {\begin{align*}
 		\sum_{i=1}^6 (2i-1) & = \sum_{i=1}^6 2i - \sum_{i=1}^6 (1)\\
@@ -157,7 +166,11 @@ Figure \ref{fig:rie5} shows a number line of $[0,4]$ divided into 16 equally spa
 	%$$x_i = x_1 + (i-1)\Delta x. \text{TIKZ}$$
 So $x_{10} = x_1 + 9(4/16) = 2.25.$
 
-If we had partitioned $[0,4]$ into 100 equally spaced subintervals, each subinterval would have length $\Delta x=4/100 = 0.04$. We could compute $x_{32}$ as $$x_{32} = x_1 + 31(4/100) = 1.24.$$ (That was far faster than creating a sketch first.)
+If we had partitioned $[0,4]$ into 100 equally spaced subintervals, each subinterval would have length $\Delta x=4/100 = 0.04$. We could compute $x_{32}$ as 
+\[
+x_{32} = x_1 + 31(4/100) = 1.24.
+\]
+ (That was far faster than creating a sketch first.)
 
 Given any subdivision of $[0,4]$, the first subinterval is $[x_1,x_2]$; the second is $[x_2,x_3]$; the $i^\text{ th}$ subinterval is $[x_i,x_{i+1}]$. 
 
@@ -215,7 +228,10 @@ The following example lets us practice using the Right Hand Rule and the summati
 
 \example{ex_rie7}{Approximating definite integrals using sums}{
 Approximate $\int_0^4(4x-x^2)\ dx$ using the Right Hand Rule and summation formulas with 16 and 1000 equally spaced intervals.}
-{Using the formula derived before, using 16 equally spaced intervals and the Right Hand Rule, we can approximate the definite integral as $$\sum_{i=1}^{16}f(x_{i+1})\Delta x.$$
+{Using the formula derived before, using 16 equally spaced intervals and the Right Hand Rule, we can approximate the definite integral as 
+\[
+\sum_{i=1}^{16}f(x_{i+1})\Delta x.
+\]
 We have $\Delta x = 4/16 = 0.25$. Since $x_i = 0+(i-1)\Delta x$, we have 
 \begin{align*}
 x_{i+1} &= 0 + \big((i+1)-1\big)\Delta x \\
@@ -249,7 +265,10 @@ We do so here, skipping from the original summand to the equivalent of Equation 
 									&=10.666656\notag
 \end{align}
 
-Using many, many rectangles, we have a likely good approximation of $\int_0^4 (4x-x^2)\dx$. That is, $$\int_0^4(4x-x^2)\ dx \approx 10.666656.$$
+Using many, many rectangles, we have a likely good approximation of $\int_0^4 (4x-x^2)\dx$. That is, 
+\[
+\int_0^4(4x-x^2)\ dx \approx 10.666656.
+\]
 \vskip -1.0\baselineskip
 }\\
 
@@ -271,10 +290,16 @@ Summations of rectangles with area $f(c_i)\Delta x_i$ are named after mathematic
 
 \definition{def:rie_sum}{Riemann Sum}
 {Let $f$ be defined on the closed interval $[a,b]$ and let $\Delta x$ be a partition of $[a,b]$, with \index{Riemann Sum}
-	$$a=x_1 < x_2 < \ldots < x_n < x_{n+1}=b.$$
+\[	
+a=x_1 < x_2 < \ldots < x_n < x_{n+1}=b.
+\]
 Let $\Delta x_i$ denote the length of the $i^\text{ th}$ subinterval $[x_i,x_{i+1}]$ and let $c_i$ denote any value in the $i^\text{ th}$ subinterval.
 
-The sum $$\sum_{i=1}^n f(c_i)\Delta x_i$$  is a \textbf{Riemann sum} of $f$ on $[a,b]$.}
+The sum 
+\[
+\sum_{i=1}^n f(c_i)\Delta x_i
+\]
+  is a \textbf{Riemann sum} of $f$ on $[a,b]$.}
 
 \mfigure{.75}{An example of a general Riemann sum to approximate $\int_0^4(4x-x^2)\ dx$.}{fig:riedef}{figures/figriedef}
 Figure \ref{fig:riedef} shows the approximating rectangles of a Riemann sum of $\int_0^4(4x-x^2)\ dx$. While the rectangles in this example do not approximate well the shaded area, they demonstrate that the subinterval widths may vary and the heights of the rectangles can be determined without following a particular rule.
@@ -325,10 +350,14 @@ Let's do another example.\\
 \example{ex_rie8}{Approximating definite integrals with sums}{
 Approximate $\int_{-2}^3 (5x+2)\ dx$ using the Midpoint Rule and 10 equally spaced intervals.}
 {Following Key Idea \ref{idea:riemann}, we have
-	$$\Delta x = \frac{3 - (-2)}{10} = 1/2 \quad \text{and} \quad x_i = (-2) + (1/2)(i-1) = i/2-5/2.$$
+	\[
+	\Delta x = \frac{3 - (-2)}{10} = 1/2 \quad \text{and} \quad x_i = (-2) + (1/2)(i-1) = i/2-5/2.
+	\]
 	As we are using the Midpoint Rule, we will also need $x_{i+1}$ and $\ds \frac{x_i+x_{i+1}}2$. Since $x_i = i/2-5/2$,\quad $x_{i+1} = (i+1)/2 - 5/2 = i/2 -2$.
 	This gives 
-	$$\frac{x_i+x_{i+1}}2 = \frac{(i/2-5/2) + (i/2-2)}{2} = \frac{i-9/2}{2} = i/2 - 9/4.$$
+	\[
+	\frac{x_i+x_{i+1}}2 = \frac{(i/2-5/2) + (i/2-2)}{2} = \frac{i-9/2}{2} = i/2 - 9/4.
+	\]
 	We now construct the Riemann sum and compute its value using summation formulas.
 \begin{align*}
 \int_{-2}^3 (5x+2)\ dx 	&\approx \sum_{i=1}^{10} f\left(\frac{x_i+x_{i+1}}{2}\right)\Delta x \\
@@ -365,12 +394,19 @@ We construct the Right Hand Rule Riemann sum as follows. Be sure to follow each 
 \end{align*}
 \drawexampleline
 
-The result is an amazing, easy to use formula. To approximate the definite integral with 10 equally spaced subintervals and the Right Hand Rule, set $n=10$ and compute $$\int_0^4 (4x-x^2)\ dx \approx \frac{32}{3}\left(1-\frac{1}{10^2}\right) = 10.56.$$
+The result is an amazing, easy to use formula. To approximate the definite integral with 10 equally spaced subintervals and the Right Hand Rule, set $n=10$ and compute 
+\[
+\int_0^4 (4x-x^2)\ dx \approx \frac{32}{3}\left(1-\frac{1}{10^2}\right) = 10.56.
+\]
 Recall how earlier we approximated the definite integral with 4 subintervals; with $n=4$, the formula gives 10, our answer as before.
 
 It is now easy to approximate the integral with 1,000,000 subintervals!  Hand-held calculators will round off the answer a bit prematurely giving an answer of $10.66666667$. (The actual answer is $10.666666666656$.)
 
-We now take an important leap. Up to this point, our mathematics has been limited to geometry and algebra (finding areas and manipulating expressions). Now we apply \textit{calculus}. For any \textit{finite} $n$, we know that $$\int_0^4 (4x-x^2)\ dx \approx \frac{32}{3}\left(1-\frac{1}{n^2}\right).$$ Both common sense and high--level mathematics tell us that as $n$ gets large, the approximation gets better. In fact, if we take the \textit{limit} as $n\rightarrow \infty$, we get the \textit{exact area} described by $\int_0^4 (4x-x^2)\ dx$. That is, 
+We now take an important leap. Up to this point, our mathematics has been limited to geometry and algebra (finding areas and manipulating expressions). Now we apply \textit{calculus}. For any \textit{finite} $n$, we know that 
+\[
+\int_0^4 (4x-x^2)\ dx \approx \frac{32}{3}\left(1-\frac{1}{n^2}\right).
+\]
+ Both common sense and high--level mathematics tell us that as $n$ gets large, the approximation gets better. In fact, if we take the \textit{limit} as $n\rightarrow \infty$, we get the \textit{exact area} described by $\int_0^4 (4x-x^2)\ dx$. That is, 
 \begin{align*}
 \int_0^4 (4x-x^2)\ dx &= \lim_{n\rightarrow \infty} \frac{32}{3}\left(1-\frac{1}{n^2}\right) \\
 									&= \frac{32}{3}\left(1-0\right)\\
@@ -408,7 +444,9 @@ Once again, we have found a compact formula for approximating the definite integ
 \mfigure{.5}{Approximating $\int_{-1}^5 x^3\ dx$ using the Right Hand Rule and 10 evenly spaced subintervals.}{fig:rie9}{figures/figrie9}
 
 Now find the exact answer using a limit:
-$$\int_{-1}^5 x^3\ dx = \lim_{n\to\infty} \left(156 + \frac{378}n + \frac{216}{n^2}\right) = 156.$$
+\[
+\int_{-1}^5 x^3\ dx = \lim_{n\to\infty} \left(156 + \frac{378}n + \frac{216}{n^2}\right) = 156.
+\]
 \vskip-\baselineskip
 }\\
 
@@ -417,7 +455,11 @@ $$\int_{-1}^5 x^3\ dx = \lim_{n\to\infty} \left(156 + \frac{378}n + \frac{216}{n
 
 We have used limits to evaluate exactly given definite limits. Will this always work? We will show, given not--very--restrictive conditions, that yes, it will always work.
 
-The previous two examples demonstrated how an expression such as $$\sum_{i=1}^n f(x_{i+1})\Delta x$$ can be rewritten as an expression explicitly involving $n$, such as $32/3(1-1/n^2)$. 
+The previous two examples demonstrated how an expression such as 
+\[
+\sum_{i=1}^n f(x_{i+1})\Delta x
+\]
+ can be rewritten as an expression explicitly involving $n$, such as $32/3(1-1/n^2)$. 
 
 Viewed in this manner, we can think of the summation as a function of $n$. An $n$ value is given (where $n$ is a positive integer), and the sum of areas of $n$ equally spaced rectangles is returned, using the Left Hand, Right Hand, or Midpoint Rules. 
 
@@ -430,12 +472,16 @@ Given a definite integral $\int_a^b f(x)\ dx$, let:
 	
 Recall the definition of a limit as $n\to\infty$: 
 		$\ds\lim_{n\to\infty}S_L(n) = K$ if, given any $\epsilon>0$, there exists $N>0$ such that 
-		$$\left|S_L(n)-K\right| < \epsilon \quad \text{when}\quad n\geq N.$$
+		\[
+		\left|S_L(n)-K\right| < \epsilon \quad \text{when}\quad n\geq N.
+		\]
 
 The following theorem states that we can use any of our three rules to find the exact value of a definite integral $\int_a^b f(x)\ dx$. It also goes two steps further. The theorem states that the height of each rectangle doesn't have to be determined following a specific rule, but could be $f(c_i)$, where $c_i$ is any point in the $i^\text{ th}$ subinterval, as discussed before Riemann Sums where defined in Definition \ref{def:rie_sum}.
 
 The theorem goes on to state that the rectangles do not need to be of the same width. Using the notation of Definition \ref{def:rie_sum}, let $\Delta x_i$ denote the length of the $i^\text{ th}$ subinterval in a partition of $[a,b]$. Now let $||\Delta x||$ represent the length of the largest subinterval in the partition: that is, $||\Delta x||$ is the largest of all the $\Delta x_i$'s. If $||\Delta x||$ is small, then $[a,b]$ must be partitioned into many subintervals, since all subintervals must have small lengths. ``Taking the limit as $||\Delta x||$ goes to zero'' implies that the number $n$ of subintervals in the partition is growing to infinity, as the largest subinterval length is becoming arbitrarily small. We then interpret the expression 
-$$\lim_{||\Delta x||\to 0}\sum_{i=1}^nf(c_i)\Delta x_i$$
+\[
+\lim_{||\Delta x||\to 0}\sum_{i=1}^nf(c_i)\Delta x_i
+\]
 as ``the limit of the sum of rectangles, where the width of each rectangle can be different but getting small, and the height of each rectangle is not necessarily determined by a particular rule.'' The theorem states that this Riemann Sum also gives the value of the definite integral of $f$ over $[a,b]$.
 
 %Let $\Delta x$ represent \textit{any} partition of $[a,b]$, and let $\|\Delta x\|$ denote the length of the longest subinterval of this partition. The theorem also states that limit of \textit{any} Riemann sum of the form $\sum_{i=1}^n f(c_i)\Delta x_i$, as $\|\Delta x\|\to 0$, also gives the exact value of the definite integral.

@@ -6,7 +6,7 @@ In Section \ref{sec:extreme_values} we learned about extreme values -- the large
 We start with a classic example which is followed by a discussion of the topic of optimization.\\
 
 \example{ex_opt1}{Optimization: perimeter and area}{
-A man has 100 feet of fencing, a large yard, and a small dog. He wants to create a rectangular enclosure for his dog with the fencing that provides the maximal area. What dimensions provide the maximal area?}
+A man has 100 metres of fencing, a large yard, and a small dog. He wants to create a rectangular enclosure for his dog with the fencing that provides the maximal area. What dimensions provide the maximal area?}
 {One can likely guess the correct answer -- that is great. We will proceed to show how calculus can provide this answer in a context that proves this answer is correct.
 
 It helps to make a sketch of the situation. Our enclosure is sketched twice in Figure \ref{fig:opt1}, either with green grass and nice fence boards or as a simple rectangle. Either way, drawing a rectangle forces us to realize that we need to know the dimensions of this rectangle so we can create an area function -- after all, we are trying to maximize the area.
@@ -22,13 +22,25 @@ It helps to make a sketch of the situation. Our enclosure is sketched twice in F
 } %end regular page
 
 
-We let $x$ and $y$ denote the lengths of the sides of the rectangle. Clearly, $$\text{Area}=xy.$$
+We let $x$ and $y$ denote the lengths of the sides of the rectangle. Clearly, 
+\[
+\text{Area}=xy.
+\]
 
-We do not yet know how to handle functions with 2 variables; we need to reduce this down to a single variable. We know more about the situation: the man has 100 feet of fencing. By knowing the perimeter of the rectangle must be 100, we can create another equation: $$\text{Perimeter} = 100 = 2x+2y.$$
+We do not yet know how to handle functions with 2 variables; we need to reduce this down to a single variable. We know more about the situation: the man has 100 metres of fencing. By knowing the perimeter of the rectangle must be 100, we can create another equation: 
+\[
+\text{Perimeter} = 100 = 2x+2y.
+\]
 
 We now have 2 equations and 2 unknowns. In the latter equation, we solve for $y$:
-$$y = 50-x.$$ Now substitute this expression for $y$ in the area equation:
-$$ \text{Area} = A(x) = x(50-x).$$ Note we now have an equation of one variable; we can truly call the Area a function of $x$. 
+\[
+y = 50-x.
+\]
+ Now substitute this expression for $y$ in the area equation:
+\[
+ \text{Area} = A(x) = x(50-x).
+ \]
+  Note we now have an equation of one variable; we can truly call the Area a function of $x$. 
 
 This function only makes sense when $0\leq x \leq 50$, otherwise we get negative values of area. So we find the extreme values of $A(x)$ on the interval $[0,50]$. 
 
@@ -40,7 +52,7 @@ A'(x) 	&= 50-2x
 \end{align*}
 We solve $50-2x=0$ to find $x=25$; this is the only critical point. We evaluate $A(x)$ at the endpoints of our interval and at this critical point to find the extreme values; in this case, all we care about is the maximum.
 
-Clearly $A(0)=0$ and $A(50)=0$, whereas $A(25) = 625 \text{ft}^2$. This is the maximum. Since we earlier found $y = 50-x$, we find that $y$ is also $25$. Thus the dimensions of the rectangular enclosure with perimeter of 100 ft. with maximum area is a square, with sides of length 25 ft.
+Clearly $A(0)=0$ and $A(50)=0$, whereas $A(25) = 625 \text{m}^2$. This is the maximum. Since we earlier found $y = 50-x$, we find that $y$ is also $25$. Thus the dimensions of the rectangular enclosure with perimeter of 100 m with maximum area is a square, with sides of length 25 m.
 }\\
 
 This example is very simplistic and a bit contrived. (After all, most people create a design then buy fencing to meet their needs, and not buy fencing and plan later.) But it models well the necessary process: create equations that describe a situation, reduce an equation to a single variable, then find the needed extreme value.
@@ -65,27 +77,42 @@ We outline here the basic process of solving these optimization problems.
 We will use Key Idea \ref{idea:optimization} in a variety of examples.\\
 
 \example{ex_opt2}{Optimization: perimeter and area}{
-Here is another classic calculus problem: A woman has a 100 feet of fencing, a small dog, and a large yard that contains a stream (that is mostly straight). She wants to create a rectangular enclosure with maximal area that uses the stream as one side. (Apparently her dog won't swim away.) What dimensions provide the maximal area?}
+Here is another classic calculus problem: A woman has a 100 metres of fencing, a small dog, and a large yard that contains a stream (that is mostly straight). She wants to create a rectangular enclosure with maximal area that uses the stream as one side. (Apparently her dog won't swim away.) What dimensions provide the maximal area?}
 {We will follow the steps outlined by Key Idea \ref{idea:optimization}. 
 	\begin{enumerate}
 	\item		We are maximizing \textit{area}. A sketch of the region will help; Figure \ref{fig:opt2} gives two sketches of the proposed enclosed area. A key feature of the sketches is to acknowledge that one side is not fenced. 
 	
 \mfigure{.4}{A sketch of the enclosure in Example \ref{ex_opt2}.}{fig:opt2}{figures/figopt2a}
 	
-	\item		We want to maximize the area; as in the example before, $$\text{Area} = xy.$$ This is our fundamental equation. This defines area as a function of two variables, so we need another equation to  reduce it to one variable. 
+	\item		We want to maximize the area; as in the example before, 
+	\[
+	\text{Area} = xy.
+	\]
+ This is our fundamental equation. This defines area as a function of two variables, so we need another equation to  reduce it to one variable. 
 	
-	We again appeal to the perimeter; here the perimeter is $$\text{Perimeter} = 100 = x+2y.$$ Note how this is different than in our previous example.
-	\item		We now reduce the fundamental equation to a single variable. In the perimeter equation, solve for $y$: $y = 50 - x/2$. We can now write Area as $$\text{Area} = A(x) = x(50-x/2) = 50x - \frac12x^2.$$ Area is now defined as a function of one variable.
+	We again appeal to the perimeter; here the perimeter is 
+	\[
+	\text{Perimeter} = 100 = x+2y.
+	\]
+ Note how this is different than in our previous example.
+	\item		We now reduce the fundamental equation to a single variable. In the perimeter equation, solve for $y$: $y = 50 - x/2$. We can now write Area as 
+	\[
+	\text{Area} = A(x) = x(50-x/2) = 50x - \frac12x^2.
+	\]
+ Area is now defined as a function of one variable.
 	\item		We want the area to be nonnegative. Since $A(x) = x(50-x/2)$, we want $x\geq 0$ and $50-x/2\geq 0$. The latter inequality implies that $x\leq100$, so $0\leq x\leq 100$. 
 	\item		We now find the extreme values. At the endpoints, the minimum is found, giving an area of 0. 
 	
-	Find the critical points. We have $A'(x) = 50-x$; setting this equal to 0 and solving for $x$ returns $x=50$. This gives an area of $$A(50) = 50(25) = 1250.$$
-	\item		We earlier set $y = 50-x/2$; thus $y = 25$. Thus our rectangle will have two sides of length 25 and one side of length 50, with a total area of 1250 ft$^2$.
+	Find the critical points. We have $A'(x) = 50-x$; setting this equal to 0 and solving for $x$ returns $x=50$. This gives an area of 
+	\[
+	A(50) = 50(25) = 1250.
+	\]
+	\item		We earlier set $y = 50-x/2$; thus $y = 25$. Thus our rectangle will have two sides of length 25 and one side of length 50, with a total area of 1250 m$^2$.
 	\end{enumerate}
 \vskip-\baselineskip
 }\\
 
-Keep in mind as we do these problems that we are practicing a \textit{process}; that is, we are learning to turn a situation into a system of equations. These equations allow us to write a certain quantity as a function of one variable, which we then optimize.\\
+Keep in mind as we do these problems that we are practising a \textit{process}; that is, we are learning to turn a situation into a system of equations. These equations allow us to write a certain quantity as a function of one variable, which we then optimize.\\
 
 %\mnote{.5}{\textbf{Note:} Example \ref{ex_opt3} is another classic calculus example. The underlying principle is given in a variety of contexts; Google ``calculus dog'' to find articles where 
 
@@ -102,23 +129,27 @@ There are two immediate solutions that we could consider, each of which we will 
 
 The optimal solution likely has the line being run along the ground for a while, then underwater, as the figure implies. We need to label our unknown distances -- the distance run along the ground and the distance run underwater. Recognizing that the underwater distance can be measured as the hypotenuse of a right triangle, we choose to label the distances as shown in Figure \ref{fig:opt3c}.
 
-\mfigure{.15}{Labeling unknown distances in Example \ref{ex_opt3}.}{fig:opt3c}{figures/figopt3c}
+\mfigure{.15}{Labelling unknown distances in Example \ref{ex_opt3}.}{fig:opt3c}{figures/figopt3c}
 
 By choosing $x$ as we did, we make the expression under the square root simple. We now create the cost function. 
 
-$$
+\[
 \begin{array}{ccccc}
 \text{Cost} &=&  \text{land cost} &+ & \text{water cost} \\
 						&	& \text{\$50}\times \text{land distance} &+& \text{\$130}\times \text{water distance} \\
 						&	& 50(5000-x) &+& 130\sqrt{x^2+1000^2}.\\
 \end{array}
-$$
+\]
 
 So we have $c(x) = 50(5000-x)+ 130\sqrt{x^2+1000^2}$. This function only makes sense on the interval $[0,5000]$. While we are fairly certain the endpoints will not give a minimal cost, we still evaluate $c(x)$ at each to verify.
-$$c(0) = 380,000 \quad\quad c(5000) \approx 662,873.$$
+\[
+c(0) = 380,000 \quad\quad c(5000) \approx 662,873.
+\]
 
 We now find the critical values of $c(x)$. We compute $c\primeskip'(x)$ as 
-$$c\primeskip'(x) = -50+\frac{130x}{\sqrt{x^2+1000^2}}.$$
+\[
+c\primeskip'(x) = -50+\frac{130x}{\sqrt{x^2+1000^2}}.
+\]
 
 Recognize that this is never undefined. Setting $c\primeskip'(x)=0$ and solving for $x$, we have:
 \begin{align*}

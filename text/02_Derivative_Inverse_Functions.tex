@@ -4,7 +4,11 @@ Recall that a function $y=f(x)$ is said to be \textit{one to one} if it passes t
 
 Now recall that one to one functions have \textit{inverses}. That is, if $f$ is one to one, it has an inverse function, denoted by $f\primeskip^{-1}$, such that if $f(a)=b$, then $f\primeskip^{-1}(b) = a$. The domain of $f\primeskip^{-1}$ is the range of $f$, and vice-versa. For ease of notation, we set $g=f\primeskip^{-1}$ and treat $g$ as a function of $x$.
 
-Since $f(a)=b$ implies $g(b)=a$, when we compose $f$ and $g$ we get a nice result: $$f\big(g(b)\big) = f(a) = b.$$ In general, $f\big(g(x)\big) =x$ and $g\big(f(x)\big) = x$. This gives us a convenient way to check if two functions are inverses of each other: compose them and if the result is $x$, then they are inverses (on the appropriate domains.)
+Since $f(a)=b$ implies $g(b)=a$, when we compose $f$ and $g$ we get a nice result: 
+\[
+f\big(g(b)\big) = f(a) = b.
+\]
+In general, $f\big(g(x)\big) =x$ and $g\big(f(x)\big) = x$. This gives us a convenient way to check if two functions are inverses of each other: compose them and if the result is $x$, then they are inverses (on the appropriate domains.)
 
 When the point $(a,b)$ lies on the graph of $f$, the point $(b,a)$ lies on the graph of $g$. This leads us to discover that the graph of $g$ is the reflection of $f$ across the line $y=x$. In Figure \ref{fig:inverse1} we see a function graphed along with its inverse. See how the point $(1,1.5)$ lies on one graph, whereas $(1.5,1)$ lies on the other. Because of this relationship, whatever we know about $f$ can quickly be transferred into knowledge about $g$.
 
@@ -62,9 +66,14 @@ This last expression is not immediately illuminating. Drawing a figure will help
 \mfigure{.8}{A right triangle defined by $y=\sin ^{-1}(x/1)$ with the length of the third leg found using the Pythagorean Theorem.}{fig:inverse3}{figures/figinverse3}
 \vskip \baselineskip
 
-Therefore $\cos (\sin^{-1} x) = \cos y = \sqrt{1-x^2}/1 = \sqrt{1-x^2}$, resulting in $$\frac{d}{dx}\big(\arcsin x\big) = g\primeskip'(x) = \frac{1}{\sqrt{1-x^2}}.$$
+Therefore $\cos (\sin^{-1} x) = \cos y = \sqrt{1-x^2}/1 = \sqrt{1-x^2}$, resulting in 
+\[
+\frac{d}{dx}\big(\arcsin x\big) = g\primeskip'(x) = \frac{1}{\sqrt{1-x^2}}.
+\]
 \vskip-\baselineskip
 }\\
+
+\mnote{.2}{\textbf{Note}: if we set $y=\arcsin x$, then $\sin y = x$, and since $\sin^2y+\cos^2y=1$, we get $\cos^2y = 1-\sin^2y = 1-x^2$. Thus, $\cos(\arcsin x) = \pm \sqrt{1-x^2}$. Here, we see a detail that was overlooked in the main text: we restricting the domain of $\sin x$ to $[-\pi/2,\pi/]$ means that $y$ lies in this interval, and thus, $\cos y\geq 0$, since the cosine function is positive for angles in the first and fourth quadrants. This means that we can safely choose the positive square root.}
 
 Remember that the input $x$ of the arcsine function is a ratio of a side of a right triangle to its hypotenuse; the absolute value of this ratio will never be greater than 1. Therefore the inside of the square root will never be negative.
 
@@ -75,7 +84,11 @@ In order to make $y=\sin x$ one to one, we restrict its domain to $[-\pi/2,\pi/2
 
 %\mfigure{.35}{Graphs of $\sin x$ and $\sin^{-1}x$}{fig:inverse4b}{figures/figinverse4}
 
-In Figure \ref{fig:inverse4} we see $f(x) = \sin x$ and $f\primeskip^{-1} = \sin^{-1} x$ graphed on their respective domains. The line tangent to $\sin x$ at the point $(\pi/3, \sqrt{3}/2)$ has slope $\cos \pi/3 = 1/2$. The slope of the corresponding point on $\sin^{-1}x$, the point $(\sqrt{3}/2,\pi/3)$, is $$\frac{1}{\sqrt{1-(\sqrt{3}/2)^2}} = \frac{1}{\sqrt{1-3/4}} = \frac{1}{\sqrt{1/4}} = \frac{1}{1/2}=2,$$ verifying yet again that at corresponding points, a function and its inverse have reciprocal slopes.\\
+In Figure \ref{fig:inverse4} we see $f(x) = \sin x$ and $f\primeskip^{-1} = \sin^{-1} x$ graphed on their respective domains. The line tangent to $\sin x$ at the point $(\pi/3, \sqrt{3}/2)$ has slope $\cos \pi/3 = 1/2$. The slope of the corresponding point on $\sin^{-1}x$, the point $(\sqrt{3}/2,\pi/3)$, is 
+\[
+\frac{1}{\sqrt{1-(\sqrt{3}/2)^2}} = \frac{1}{\sqrt{1-3/4}} = \frac{1}{\sqrt{1/4}} = \frac{1}{1/2}=2,
+\]
+ verifying yet again that at corresponding points, a function and its inverse have reciprocal slopes.\\
 
 Using similar techniques, we can find the derivatives of all the inverse trigonometric functions. In Figure \ref{fig:domain_trig} we show the restrictions of the domains of the standard trigonometric functions that allow them to be invertible.\\
 

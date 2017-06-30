@@ -27,7 +27,7 @@ The graph of a function $f$ is \textit{concave up} when \fp\ is \textit{increasi
 %The function is said to be \emph{concave up} when it looks like this.  
 %  The second derivative is positive precisely where the function is concave up.
 
-If a function is decreasing and concave up, then its rate of decrease is slowing; it is ``leveling off.''  If the  function is increasing and concave up, then the \textit{rate} of increase is increasing.  The function is increasing at a faster and faster rate.
+If a function is decreasing and concave up, then its rate of decrease is slowing; it is ``levelling off.''  If the  function is increasing and concave up, then the \textit{rate} of increase is increasing.  The function is increasing at a faster and faster rate.
 
 Now consider a function which is concave down. We essentially repeat the above paragraphs with slight variation.
 
@@ -36,7 +36,7 @@ The graph of a function $f$ is \textit{concave down}  when \fp\ is \textit{decre
 \mfigure{.35}{A function $f$ with a concave down graph. Notice how the slopes of the tangent lines, when looking from left to right, are decreasing.}{fig:concavity2}{figures/figconcavity2}
 \enlargethispage{\baselineskip}
 
-If a function is increasing and concave down, then its rate of increase is slowing; it is ``leveling off.''  If the function is decreasing and concave down, then the \textit{rate} of decrease is decreasing.  The function is decreasing at a faster and faster rate.
+If a function is increasing and concave down, then its rate of increase is slowing; it is ``levelling off.''  If the function is decreasing and concave down, then the \textit{rate} of decrease is decreasing.  The function is decreasing at a faster and faster rate.
 
 \mnote{.55}{\textbf{Note:} A mnemonic for remembering what concave up/down means is: ``Concave up is like a cup; concave down is like a frown.'' It is admittedly terrible, but it works.
 %
@@ -71,7 +71,7 @@ If knowing where a graph is concave up/down is important, it makes sense that th
 {A \textbf{point of inflection} is a point on the graph of $f$ at which the concavity of $f$ changes.\index{point of inflection}\index{inflection point}
 }
 
-Figure \ref{fig:concavity4} shows a graph of a function with inflection points labeled.
+Figure \ref{fig:concavity4} shows a graph of a function with inflection points labelled.
 
 \mfigure{.55}{A graph of a function with its inflection points marked. The intervals where concave up/down are also indicated.}{fig:concavity4}{figures/figconcavity4}
 
@@ -101,7 +101,9 @@ The number line in Figure \ref{fig:concline1} illustrates the process of determi
 \example{ex_conc2}{Finding intervals of concave up/down, inflection points}{
 Let $f(x)=x/(x^2-1)$. Find the inflection points of $f$ and the intervals on which it is concave up/down.}
 {We need to find \fp\ and \fpp. Using the Quotient Rule and simplifying, we find
-$$\fp(x)=\frac{-(1+x^2)}{(x^2-1)^2} \quad \text{and}\quad \fpp(x) = \frac{2x(x^2+3)}{(x^2-1)^3}.$$
+\[
+\fp(x)=\frac{-(1+x^2)}{(x^2-1)^2} \quad \text{and}\quad \fpp(x) = \frac{2x(x^2+3)}{(x^2-1)^3}.
+\]
 
 To find the possible points of inflection, we seek to find where $\fpp(x)=0$ and where $\fpp$ is not defined. Solving $\fpp(x)=0$ reduces to solving $2x(x^2+3)=0$; we find $x=0$.  We find that \fpp\ is not defined when $x=\pm 1$, for then the denominator of \fpp\ is 0. We also note that $f$ itself is not defined at $x=\pm1$, having a domain of $(-\infty,-1)\cup(-1,1)\cup(1,\infty)$. Since the domain of $f$ is the union of three intervals, it makes sense that the concavity of $f$ could switch across intervals. We technically cannot say that $f$ has a point of inflection at $x=\pm1$ as they are not part of the domain, but we must still consider these $x$-values to be important and will include them in our number line.
 
@@ -137,15 +139,15 @@ We utilize this concept in the next example.\\
 \enlargethispage{\baselineskip}
 
 \example{ex_conc3}{Understanding inflection points}{
-The sales of a certain product over a three-year span are modeled by $S(t)= t^4-8t^2+20$, where $t$ is the time in years, shown in Figure \ref{fig:conc3}.  Over the first two years, sales are decreasing.  Find the point at which sales are decreasing at their greatest rate.
+The sales of a certain product over a three-year span are modelled by $S(t)= t^4-8t^2+20$, where $t$ is the time in years, shown in Figure \ref{fig:conc3}.  Over the first two years, sales are decreasing.  Find the point at which sales are decreasing at their greatest rate.
 
-\mfigure{.2}{A graph of $S(t)$ in Example \ref{ex_conc3}, modeling the sale of a product over time.}{fig:conc3}{figures/figconc3}
+\mfigure{.2}{A graph of $S(t)$ in Example \ref{ex_conc3}, modelling the sale of a product over time.}{fig:conc3}{figures/figconc3}
 }
 {We want to maximize the rate of decrease, which is to say, we want to find where $S\primeskip'$ has a minimum.  To do this, we find where $S\primeskip''$ is 0.  We find $S\primeskip'(t)=4t^3-16t$ and $S\primeskip''(t)=12t^2-16$.  Setting $S\primeskip''(t)=0$ and solving, we get $t=\sqrt{4/3}\approx 1.16$ (we ignore the negative value of $t$ since it does not lie in the domain of our function $S$).
 
 This is both the inflection point and the point of maximum decrease.  This is the point at which things first start looking up for the company.  After the inflection point, it will still take some time before sales start to increase, but at least sales are not decreasing quite as quickly as they had been.
 
-A graph of $S(t)$ and $S\primeskip'(t)$ is given in Figure \ref{fig:conc3b}. When $S\primeskip'(t)<0$, sales are decreasing; note how at $t\approx 1.16$, $S\primeskip'(t)$ is minimized. That is, sales are decreasing at the fastest rate at $t\approx 1.16$.  On the interval of $(1.16,2)$, $S$ is decreasing but concave up, so the decline in sales is ``leveling off.''
+A graph of $S(t)$ and $S\primeskip'(t)$ is given in Figure \ref{fig:conc3b}. When $S\primeskip'(t)<0$, sales are decreasing; note how at $t\approx 1.16$, $S\primeskip'(t)$ is minimized. That is, sales are decreasing at the fastest rate at $t\approx 1.16$.  On the interval of $(1.16,2)$, $S$ is decreasing but concave up, so the decline in sales is ``levelling off.''
 }\\
 
 
@@ -192,7 +194,7 @@ Let $f(x)=100/x + x$.  Find the critical points of $f$ and use the Second Deriva
 
 \mfigure{.78}{A graph of $f(x)$ in Example \ref{ex_conc4}. The second derivative is evaluated at each critical point. When the graph is concave up, the critical point represents a local minimum; when the graph is concave down, the critical point represents a local maximum.}{fig:conc4}{figures/figconc4}
 
-We have been learning how the first and second derivatives of a function relate information about the graph of that function. We have found intervals of increasing and decreasing, intervals where the graph is concave up and down, along with the locations of relative extrema and inflection points. In Chapter \ref{chapter:limits} we saw how limits explained asymptotic behavior. In the next section we combine all of this information to produce accurate sketches of functions.
+We have been learning how the first and second derivatives of a function relate information about the graph of that function. We have found intervals of increasing and decreasing, intervals where the graph is concave up and down, along with the locations of relative extrema and inflection points. In Chapter \ref{chapter:limits} we saw how limits explained asymptotic behaviour. In the next section we combine all of this information to produce accurate sketches of functions.
 %\myincludegraphics[scale=.7]{apex-second-derivative_img10}
 
 

@@ -11,7 +11,9 @@ It is interesting to note that this solution of 50 feet can be represented graph
 Now consider a slightly harder situation (and not particularly realistic): an object travels in a straight line with a constant velocity of 5ft/s for 10 seconds, then instantly reverses course at a rate of 2ft/s for 4 seconds. (Since the object is travelling in the opposite direction when reversing course, we say the velocity is a constant $-2$ft/s.) How far away from the starting point is the object -- what is its \textit{displacement}?
 
 Here we use ``Distance $=$ Rate$_1$ $\times$ Time$_1$ + Rate$_2$ $\times$ Time$_2$,'' which is 
-	$$\text{Distance } \ = 5\cdot10 + (-2)\cdot 4 = 42\text{ ft.}$$ 
+	\[
+	\text{Distance } \ = 5\cdot10 + (-2)\cdot 4 = 42\text{ ft.}
+	\] 
 Hence the object is 42 feet from its starting location.
 
 We can again depict this situation graphically. In Figure \ref{fig:defint2} we have the velocities graphed as straight lines on $[0,10]$ and $[10,14]$, respectively. The displacement of the object is 
@@ -35,12 +37,19 @@ The velocity of an object moving straight up/down under the acceleration of grav
 {It is straightforward to find the initial velocity; at time $t=0$, $v(0) =-32\cdot 0+48 = 48 $ ft/s.
 
 To answer questions about the height of the object, we need to find the object's position function $s(t)$. This is an initial value problem, which we studied in the previous section. We are told the initial height is 0, i.e., $s(0) = 0$. We know $s\primeskip'(t) = v(t) = -32t+48$. To find $s$, we find the indefinite integral of $v(t)$:
-		$$\int v(t)\ dt = \int (-32t+48)\ dt = -16t^2+48t+C = s(t).$$
+		\[
+		\int v(t)\ dt = \int (-32t+48)\ dt = -16t^2+48t+C = s(t).
+		\]
 Since $s(0) = 0$, we conclude that $C=0$ and $s(t) = -16t^2+48t$.
 
 To find the maximum height of the object, we need to find the maximum of $s$. Recalling our work finding extreme values, we find the critical points of $s$ by setting its derivative equal to 0 and solving for $t$:
-		$$s\primeskip'(t) = -32t+48 = 0 \quad \Rightarrow \quad t=48/32 = 1.5\text{s}.$$
-(Notice how we ended up just finding when the velocity was 0ft/s!) The first derivative test shows this is a maximum, so the maximum height of the object is found at $$s(1.5) = -16(1.5)^2+48(1.5)=36\text{ft}.$$
+		\[
+		s\primeskip'(t) = -32t+48 = 0 \quad \Rightarrow \quad t=48/32 = 1.5\text{s}.
+		\]
+(Notice how we ended up just finding when the velocity was 0ft/s!) The first derivative test shows this is a maximum, so the maximum height of the object is found at 
+\[
+s(1.5) = -16(1.5)^2+48(1.5)=36\text{ft}.
+\]
 The height at time $t=2$ is now straightforward to compute: it is $s(2) = 32$ft.\\
 
 While we have answered all three questions, let's look at them again graphically, using the concepts of area that we explored earlier.
@@ -51,7 +60,9 @@ Figure \ref{fig:defint3} shows a graph of $v(t)$ on axes from $t=0$ to $t=3$. It
 \mfigure{.5}{A graph of $v(t)=-32t+48$; the shaded areas help determine displacement.}{fig:defint3}{figures/figdefint3}
 
 Recall how in our previous work that the displacement of the object (in this case, its height) was found as the area under the velocity curve, as shaded in the figure. Moreover, the area between the curve and the $t$--axis that is below the $t$--axis counted as ``negative'' area. That is, it represents the object coming back toward its starting position. So to find the maximum distance from the starting point -- the maximum height -- we find the area under the velocity line that is above the $t$--axis, i.e., from $t=0$ to $t=1.5$. This region is a triangle; its area is 
-$$\text{Area } = \frac12\text{Base} \times \text{Height} =\frac12\times 1.5\text{s}\times 48\text{ft/s} = 36\text{ft},$$
+\[
+\text{Area } = \frac12\text{Base} \times \text{Height} =\frac12\times 1.5\text{s}\times 48\text{ft/s} = 36\text{ft},
+\]
 which matches our previous calculation of the maximum height.
 
 %\enlargethispage{3\baselineskip}
@@ -61,7 +72,9 @@ Finally, we find the total \textit{signed} area under the velocity function from
 	Displacement = Area above the $t$--axis $-$ Area below $t$--axis.
 	\end{center}
 	The regions are triangles, and we find 
-	$$\text{Displacement} = \frac12(1.5\text{s})(48\text{ft/s}) - \frac12(.5\text{s})(16\text{ft/s}) = 32\text{ft}.$$
+	\[
+	\text{Displacement} = \frac12(1.5\text{s})(48\text{ft/s}) - \frac12(.5\text{s})(16\text{ft/s}) = 32\text{ft}.
+	\]
 This also matches our previous calculation of the height at $t=2$.
 
 Notice how we answered each question in this example in two ways. Our first method was to manipulate equations using our understanding of antiderivatives and derivatives. Our second method was geometric: we answered questions looking at a graph and finding the areas of certain regions of this graph.
@@ -77,7 +90,10 @@ Given a graph of a function $y=f(x)$, we will find that there is great use in co
 
 \noindent\parbox{\specialboxlength}{\centering (area  under $f$ and above the $x$--axis on $[a,b]$) $-$ (area above $f$ and under the $x$--axis on $[a,b]$).}\\
 
-The \textbf{definite integral of $f$ on $[a,b]$} is the total signed area of $f$ on $[a,b]$, denoted $$\int_a^b f(x)\ dx,$$
+The \textbf{definite integral of $f$ on $[a,b]$} is the total signed area of $f$ on $[a,b]$, denoted 
+\[
+\int_a^b f(x)\ dx,
+\]
 where $a$ and $b$ are the \textbf{bounds of integration.}
 }
 
@@ -179,17 +195,26 @@ The area definition of the definite integral allows us to use geometry compute t
 
 \example{ex_defint8}{Evaluating definite integrals using geometry}{
 Evaluate the following definite integrals:
-		$$1. \ \int_{-2}^5 (2x-4)\ dx \qquad 2.\ \int_{-3}^3 \sqrt{9-x^2}\ dx.$$
+		\[
+		1. \ \int_{-2}^5 (2x-4)\ dx \qquad 2.\ \int_{-3}^3 \sqrt{9-x^2}\ dx.
+		\]
 
 }
 {%\mfigure{.8}{A graph of $f(x) = 2x-4$ in Example \ref{ex_defint8}.}{fig:defint8a}{figures/figdefint8a}
 
 \begin{enumerate}
-		\item		It is useful to sketch the function in the integrand, as shown in Figure \ref{fig:defint8}(a). We see we need to compute the areas of two regions, which we have labeled $R_1$ and $R_2$. Both are triangles, so the area computation is straightforward:
-			$$R_1: \frac12(4)(8) = 16 \qquad R_2: \frac12(3)6 = 9.$$ 
-Region $R_1$ lies under the $x$--axis, hence it is counted as negative area (we can think of the triangle's height as being ``$-8$''), so $$\int_{-2}^5(2x-4)\ dx = -16+9 = -7.$$
+		\item		It is useful to sketch the function in the integrand, as shown in Figure \ref{fig:defint8}(a). We see we need to compute the areas of two regions, which we have labelled $R_1$ and $R_2$. Both are triangles, so the area computation is straightforward:
+			\[
+			R_1: \frac12(4)(8) = 16 \qquad R_2: \frac12(3)6 = 9.
+			\] 
+Region $R_1$ lies under the $x$--axis, hence it is counted as negative area (we can think of the triangle's height as being ``$-8$''), so 
+\[
+\int_{-2}^5(2x-4)\ dx = -16+9 = -7.
+\]
 		\item		Recognize that the integrand of this definite integral describes a half circle, as sketched in Figure \ref{fig:defint8}(b), with radius 3. Thus the area is:
-		$$\int_{-3}^3 \sqrt{9-x^2}\ dx = \frac12\pi r^2 = \frac 92\pi.$$
+		\[
+		\int_{-3}^3 \sqrt{9-x^2}\ dx = \frac12\pi r^2 = \frac 92\pi.
+		\]
 \vskip-\baselineskip
 }\\
 

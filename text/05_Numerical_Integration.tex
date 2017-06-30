@@ -10,9 +10,9 @@ The Fundamental Theorem of Calculus gives a concrete technique for finding the e
 %This method of evaluating definite integrals has one significant shortcoming: not all functions have an antiderivative expressible in terms of elementary functions.  (Elementary functions are combinations of polynomials, $n^{\text{th}}$ root, rational, exponential, logarithmic and trigonometric functions.). To be clear, we are not claiming that the antiderivatives are just \textit{hard} to find; rather, we are saying that we \textit{cannot} write them out using functions that we normally use. 
 An \sword{elementary function}\index{elementary function} is any function that is a combination of polynomials, $n^{\text{th}}$ roots, rational, exponential, logarithmic and trigonometric functions. We can compute the derivative of any elementary function, but there are many elementary functions of which we cannot compute an antiderivative. For example, the following functions do not have antiderivatives that we can express with elementary functions:
 
-$$
+\[
 e^{-x^2}, \quad \sin(x^3)\quad \text{and} \quad \frac{\sin x}{x}.
-$$
+\]
 
 The simplest way to refer to the antiderivatives of $e^{-x^2}$ is to simply write $\int e^{-x^2}\ dx$. 
 
@@ -21,9 +21,9 @@ This section outlines three common methods of approximating the value of definit
 
 We will apply the methods we learn in this section to the following definite integrals:
 
-$$
+\[
 \int_0^1 e^{-x^2} \ dx, \quad \int_{-\frac{\pi}{4}}^{\frac{\pi}{2}} \sin(x^3) \ dx, \quad \text{and} \quad \int_{0.5}^{4\pi} \frac{\sin(x)}{x} \ dx,
-$$
+\]
 as pictured in Figure \ref{fig:numerical1}.
 
 \mtable{.6}{Graphically representing three definite integrals that cannot be evaluated using antiderivatives.}{fig:numerical1}{\myincludegraphics{figures/fignumerical1a}\vskip 25pt \myincludegraphics{figures/fignumerical1b}\vskip 25pt\myincludegraphics{figures/fignumerical1c}}
@@ -33,13 +33,19 @@ as pictured in Figure \ref{fig:numerical1}.
 
 In Section \ref{sec:riemann} we addressed the problem of evaluating definite integrals by approximating the area under the curve using rectangles. We revisit those ideas here before introducing other methods of approximating definite integrals. \index{numerical integration!Left/Right Hand Rule}\index{Right Hand Rule}\index{Left Hand Rule}\index{integration!numerical!Left/Right Hand Rule}
 
-We start with a review of notation. Let $f$ be a continuous function on the interval $[a,b]$. We wish to approximate $\ds \int_a^b f(x)\ dx$. We partition $[a,b]$ into $n$ equally spaced subintervals, each of length $\ds\dx = \frac{b-a}{n}$. The endpoints of these subintervals are labeled as $$x_1=a,\ x_2 = a+\dx,\ x_3 = a+ 2\dx,\ \ldots,\ x_i = a+(i-1)\dx,\ \ldots,\ x_{n+1} = b.$$
+We start with a review of notation. Let $f$ be a continuous function on the interval $[a,b]$. We wish to approximate $\ds \int_a^b f(x)\ dx$. We partition $[a,b]$ into $n$ equally spaced subintervals, each of length $\ds\dx = \frac{b-a}{n}$. The endpoints of these subintervals are labelled as 
+\[
+x_1=a,\ x_2 = a+\dx,\ x_3 = a+ 2\dx,\ \ldots,\ x_i = a+(i-1)\dx,\ \ldots,\ x_{n+1} = b.
+\]
 
 Key Idea \ref{idea:riemann} states that to use the Left Hand Rule we use the summation $\ds \sum_{i=1}^n f(x_i)\dx$ and to use the Right Hand Rule we use $\ds \sum_{i=1}^n f(x_{i+1})\dx$. We review the use of these rules in the context of examples.\\
 
 \example{ex_num1}{Approximating definite integrals with rectangles}{
 Approximate $\ds \int_0^1e^{-x^2}\ dx$ using the Left and Right Hand Rules with 5 equally spaced subintervals.}
-{We begin by partitioning the interval $[0,1]$ into 5 equally spaced intervals. We have $\dx = \frac{1-0}5 = 1/5=0.2$, so $$x_1 = 0,\ x_2 = 0.2,\ x_3 = 0.4,\ x_4 = 0.6,\ x_5 = 0.8,\ \text{and}\ x_6 = 1.$$
+{We begin by partitioning the interval $[0,1]$ into 5 equally spaced intervals. We have $\dx = \frac{1-0}5 = 1/5=0.2$, so 
+\[
+x_1 = 0,\ x_2 = 0.2,\ x_3 = 0.4,\ x_4 = 0.6,\ x_5 = 0.8,\ \text{and}\ x_6 = 1.
+\]
 
 Using the Left Hand Rule, we have:
 
@@ -61,13 +67,19 @@ Using the Right Hand Rule, we have:
 
 \mtable{.7}{Approximating $\int_0^1e^{-x^2}\ dx$ in Example \ref{ex_num1}.}{fig:num1}{\myincludegraphics{figures/fignum1b}\vskip 25pt \myincludegraphics{figures/fignum1a}}
 
-Figure \ref{fig:num1} shows the rectangles used in each method to approximate the definite integral. These graphs show that in this particular case, the Left Hand Rule is an over approximation and the Right Hand Rule is an under approximation. To get a better approximation, we could use more rectangles, as we did in Section \ref{sec:riemann}. We could also average the Left and Right Hand Rule results together, giving $$ \frac{0.808 + 0.681}{2} = 0.7445.$$ The actual answer, accurate to 4 places after the decimal, is 0.7468, showing our average is a good approximation.
+Figure \ref{fig:num1} shows the rectangles used in each method to approximate the definite integral. These graphs show that in this particular case, the Left Hand Rule is an over approximation and the Right Hand Rule is an under approximation. To get a better approximation, we could use more rectangles, as we did in Section \ref{sec:riemann}. We could also average the Left and Right Hand Rule results together, giving 
+\[
+ \frac{0.808 + 0.681}{2} = 0.7445.
+\]
+  The actual answer, accurate to 4 places after the decimal, is 0.7468, showing our average is a good approximation.
 }\\
 
 \example{ex_num2}{Approximating definite integrals with rectangles}{
 Approximate $\ds\int_{-\frac{\pi}4}^{\frac{\pi}2} \sin (x^3)\ dx$ using the Left and Right Hand Rules with 10 equally spaced subintervals.}
 {We begin by finding \dx:
-$$\frac{b-a}{n} = \frac{\pi/2 - (-\pi/4)}{10} = \frac{3\pi}{40}\approx 0.236.$$
+\[
+\frac{b-a}{n} = \frac{\pi/2 - (-\pi/4)}{10} = \frac{3\pi}{40}\approx 0.236.
+\]
 It is useful to write out the endpoints of the subintervals in a table; in Figure \ref{fig:num2a}, we give the exact values of the endpoints, their decimal approximations, and decimal approximations of $\sin(x^3)$ evaluated at these points. 
 
 \mtable{.25}{Table of values used to approximate $\int_{-\frac{\pi}4}^{\frac{\pi}2}\sin(x^3)\ dx$ in Example \ref{ex_num2}.}{fig:num2a}{%
@@ -130,8 +142,14 @@ $x_i$ & $e^{-x_i^2}$ \\ \hline
 \end{tabular}
 }
 
-The leftmost trapezoid has legs of length 1 and 0.961 and a height of 0.2. Thus, by our formula, the area of the leftmost trapezoid is: $$ \frac{1+0.961}{2}(0.2) = 0.1961.$$
-Moving right, the next trapezoid has legs of length 0.961 and 0.852 and a height of 0.2. Thus its area is: $$\frac{0.961+0.852}2(0.2) = 0.1813.$$
+The leftmost trapezoid has legs of length 1 and 0.961 and a height of 0.2. Thus, by our formula, the area of the leftmost trapezoid is: 
+\[
+ \frac{1+0.961}{2}(0.2) = 0.1961.
+\]
+Moving right, the next trapezoid has legs of length 0.961 and 0.852 and a height of 0.2. Thus its area is: 
+\[
+\frac{0.961+0.852}2(0.2) = 0.1813.
+\]
 
 The sum of the areas of all 5 trapezoids is:
 %\small$$ 
@@ -144,11 +162,14 @@ We approximate $\ds \int_0^1 e^{-x^2}\ dx \approx 0.7445.$
 }\\
 
 There are many things to observe in this example. Note how each term in the final summation was multiplied by both 1/2 and by $\dx = 0.2$. We can factor these coefficients out, leaving a more concise summation as:\small
-$$
-\frac12(0.2)\Big[(1+0.961) + (0.961+0.852) + (0.852+0.698) + ( 0.698+ 0.527) +(0.527 + 0.368)\Big].$$
+\[
+\frac12(0.2)\Big[(1+0.961) + (0.961+0.852) + (0.852+0.698) + ( 0.698+ 0.527) +(0.527 + 0.368)\Big].
+\]
 \normalsize
 Now notice that all numbers except for the first and the last are added twice. Therefore we can write the summation even more concisely as
-$$\frac{0.2}{2}\Big[1 + 2(0.961+0.852+0.698+0.527) + 0.368\Big].$$
+\[
+\frac{0.2}{2}\Big[1 + 2(0.961+0.852+0.698+0.527) + 0.368\Big].
+\]
 
 This is the heart of the \textbf{Trapezoidal Rule}, wherein a definite integral $\ds \int_a^b f(x) \ dx$ is approximated by using trapezoids of equal widths to approximate the corresponding area under $f$. Using $n$ equally spaced subintervals with endpoints $x_1$, $x_2$, $\ldots$, $x_{n+1}$, we again have $\ds \dx = \frac{b-a}n$. Thus:
 \begin{align*}
@@ -188,14 +209,23 @@ Consider three points $(x_1,y_1)$, $(x_2,y_2)$ and $(x_3,y_3)$ whose $x$--values
 \int_{x_1}^{x_3} f(x)\ dx = \frac{x_3-x_1}{6}\big(y_1+4y_2+y_3\big).\label{eq:simpsons}
 \end{equation}
 
-Consider Figure \ref{fig:numsimpsons}. A function $f$ goes through the 3 points shown and the parabola $g$ that also goes through those points is graphed with a dashed line. Using our equation from above, we know exactly that $$\int_1^3 g(x) \ dx = \frac{3-1}{6}\big(3+4(1)+2\big)= 3.$$ Since $g$ is a good approximation for $f$ on $[1,3]$, we can state that $$\int_1^3 f(x)\ dx \approx 3.$$
+Consider Figure \ref{fig:numsimpsons}. A function $f$ goes through the 3 points shown and the parabola $g$ that also goes through those points is graphed with a dashed line. Using our equation from above, we know exactly that 
+\[
+\int_1^3 g(x) \ dx = \frac{3-1}{6}\big(3+4(1)+2\big)= 3.
+\]
+ Since $g$ is a good approximation for $f$ on $[1,3]$, we can state that 
+ \[
+ \int_1^3 f(x)\ dx \approx 3.
+ \]
 
 \mfigure{.7}{A graph of a function $f$ and a parabola that approximates it well on $[1,3]$.}{fig:numsimpsons}{figures/fignumsimpsons}
 
 Notice how the interval $[1,3]$ was split into two subintervals as we needed 3 points. Because of this, whenever we use Simpson's Rule, we need to break the interval into an even number of subintervals. 
 
 In general, to approximate $\ds \int_a^b f(x)\ dx$ using Simpson's Rule, subdivide $[a,b]$ into $n$ subintervals, where $n$ is even and each subinterval has width $\dx = (b-a)/n$. We approximate $f$ with $n/2$ parabolic curves, using Equation \eqref{eq:simpsons} to compute the area under these parabolas. Adding up these areas gives the formula:
-$$\int_a^b f(x) \ dx \approx \frac{\dx}3\Big[f(x_1)+4f(x_2)+2f(x_3)+4f(x_4)+\ldots+2f(x_{n-1})+4f(x_n)+f(x_{n+1})\Big].$$
+\[
+\int_a^b f(x) \ dx \approx \frac{\dx}3\Big[f(x_1)+4f(x_2)+2f(x_3)+4f(x_4)+\ldots+2f(x_{n-1})+4f(x_n)+f(x_{n+1})\Big].
+\]
 Note how the coefficients of the terms in the summation have the pattern 1, 4, 2, 4, 2, 4, $\ldots$, 2, 4, 1.
 
 Let's demonstrate Simpson's Rule with a concrete example.\\
@@ -217,7 +247,10 @@ $x_i$ & $e^{-x_i^2}$ \\ \hline
 \myincludegraphics{figures/fignum5b}\\[10pt]
 (b)
 \end{tabular}}
-Simpson's Rule states that $$\int_0^1e^{-x^2}\ dx \approx \frac{0.25}{3}\Big[1+4(0.939)+2(0.779)+4(0.570) + 0.368\Big] = 0.7468\overline{3}.$$
+Simpson's Rule states that 
+\[
+\int_0^1e^{-x^2}\ dx \approx \frac{0.25}{3}\Big[1+4(0.939)+2(0.779)+4(0.570) + 0.368\Big] = 0.7468\overline{3}.
+\]
 
 Recall in Example \ref{ex_num1} we stated that the correct answer, accurate to 4 places after the decimal, was 0.7468. Our approximation with Simpson's Rule, with 4 subintervals, is better than our approximation with the Trapezoidal Rule using 5!
 
@@ -313,12 +346,16 @@ A second method is to use Error Analysis. While the details are beyond the scope
 \item	Let $E_T$ be the error in approximating $\ds \int_a^b f(x)\ dx$ using the Trapezoidal Rule. 
 
 If $f$ has a continuous 2$^\text{nd}$ derivative on $[a,b]$ and $M$ is any upper bound of $\big|\fpp(x)\big|$ on $[a,b]$, then
-$$\ds E_T \leq \frac{(b-a)^3}{12n^2}M.$$
+\[
+\ds E_T \leq \frac{(b-a)^3}{12n^2}M.
+\]
 
 \item	Let $E_S$ be the error in approximating $\ds \int_a^b f(x)\ dx$ using Simpson's Rule. 
 
 If $f$ has a continuous 4$^\text{th}$ derivative on $[a,b]$ and $M$ is any upper bound of $\big|f\,^{(4)}\big|$ on $[a,b]$, then
-$$E_S \leq \frac{(b-a)^5}{180n^4}M.$$
+\[
+E_S \leq \frac{(b-a)^5}{180n^4}M.
+\]
 \end{enumerate}
 }
 %\end{minipage}
@@ -341,33 +378,51 @@ Find the error bounds when approximating $\ds \int_0^1 e^{-x^2}\ dx$ using the T
 
 \mfigure{.25}{Graphing $\fpp(x)$ in Example \ref{ex_num7} to help establish error bounds.}{fig:num7a}{figures/fignum7a}
 
-We start by computing the $2^\text{nd}$ derivative of $f(x) = e^{-x^2}$: $$\fpp(x) = e^{-x^2}(4x^2-2).$$ Figure \ref{fig:num7a} shows a graph of $\fpp(x)$ on $[0,1]$. It is clear that the largest value of $\fpp$, in absolute value, is 2. Thus we let $M=2$ and apply the error formula from Theorem \ref{thm:numerical_error}.
+We start by computing the $2^\text{nd}$ derivative of $f(x) = e^{-x^2}$: 
+\[
+\fpp(x) = e^{-x^2}(4x^2-2).
+\]
+ Figure \ref{fig:num7a} shows a graph of $\fpp(x)$ on $[0,1]$. It is clear that the largest value of $\fpp$, in absolute value, is 2. Thus we let $M=2$ and apply the error formula from Theorem \ref{thm:numerical_error}.
 
-$$E_T = \frac{(1-0)^3}{12\cdot 5^2}\cdot 2 = 0.00\overline{6}.$$
+\[
+E_T = \frac{(1-0)^3}{12\cdot 5^2}\cdot 2 = 0.00\overline{6}.
+\]
 
 Our error estimation formula states that our approximation of 0.7445 found in Example \ref{ex_num3} is within 0.0067 of the correct answer, hence we know that
-$$0.7445-0.0067 = .7378 \leq \int_0^1e^{-x^2}\ dx \leq 0.7512 = 0.7445 + 0.0067.$$ We had earlier computed the exact answer, correct to 4 decimal places, to be 0.7468, affirming the validity of Theorem \ref{thm:numerical_error}.\\
+\[
+0.7445-0.0067 = .7378 \leq \int_0^1e^{-x^2}\ dx \leq 0.7512 = 0.7445 + 0.0067.
+\]
+ We had earlier computed the exact answer, correct to 4 decimal places, to be 0.7468, affirming the validity of Theorem \ref{thm:numerical_error}.\\
 
 \noindent\textbf{Simpson's Rule with $n=4$:}
 
 
-We start by computing the $4^\text{th}$ derivative of $f(x) = e^{-x^2}$: $$f\,^{(4)}(x) = e^{-x^2}(16x^4-48x^2+12).$$ Figure \ref{fig:num7b} shows a graph of $f\,^{(4)}(x)$ on $[0,1]$. It is clear that the largest value of $f\,^{(4)}$, in absolute value, is 12. Thus we let $M=12$ and apply the error formula from Theorem \ref{thm:numerical_error}.
+We start by computing the $4^\text{th}$ derivative of $f(x) = e^{-x^2}$: 
+\[
+f\,^{(4)}(x) = e^{-x^2}(16x^4-48x^2+12).
+\]
+ Figure \ref{fig:num7b} shows a graph of $f\,^{(4)}(x)$ on $[0,1]$. It is clear that the largest value of $f\,^{(4)}$, in absolute value, is 12. Thus we let $M=12$ and apply the error formula from Theorem \ref{thm:numerical_error}.
 
-$$E_s = \frac{(1-0)^5}{180\cdot 4^4}\cdot 12 = 0.00026.$$
+\[
+E_s = \frac{(1-0)^5}{180\cdot 4^4}\cdot 12 = 0.00026.
+\]
 
 \mfigure{.8}{Graphing $f\,^{(4)}(x)$ in Example \ref{ex_num7} to help establish error bounds.}{fig:num7b}{figures/fignum7b}
 
 \enlargethispage{2\baselineskip}
 
 Our error estimation formula states that our approximation of $0.7468\overline{3}$ found in Example \ref{ex_num5} is within 0.00026 of the correct answer, hence we know that
-$$0.74683-0.00026 = .74657 \leq \int_0^1e^{-x^2}\ dx \leq 0.74709 = 0.74683 + 0.00026.$$ Once again we affirm the validity of Theorem \ref{thm:numerical_error}.
+\[
+0.74683-0.00026 = .74657 \leq \int_0^1e^{-x^2}\ dx \leq 0.74709 = 0.74683 + 0.00026.
+\]
+ Once again we affirm the validity of Theorem \ref{thm:numerical_error}.
 }\\
 
-At the beginning of this section we mentioned two main situations where numerical integration was desirable. We have considered the case where an antiderivative of the integrand cannot be computed. We now investigate the situation where the integrand is not known. This is, in fact, the most widely used application of Numerical Integration methods. ``Most of the time'' we observe behavior but do not know ``the'' function that describes it. We instead collect data about the behavior and make approximations based off of this data. We demonstrate this in an example.\\
+At the beginning of this section we mentioned two main situations where numerical integration was desirable. We have considered the case where an antiderivative of the integrand cannot be computed. We now investigate the situation where the integrand is not known. This is, in fact, the most widely used application of Numerical Integration methods. ``Most of the time'' we observe behaviour but do not know ``the'' function that describes it. We instead collect data about the behaviour and make approximations based off of this data. We demonstrate this in an example.\\
 
-\example{ex_num8}{Approximating distance traveled}{
-One of the authors drove his daughter home from school while she recorded their speed every 30 seconds. The data is given in Figure \ref{fig:num8}. Approximate the distance they traveled.}
-{Recall that by integrating a speed function we get distance traveled. We have information about $v(t)$; we will use Simpson's Rule to approximate $\ds \int_a^b v(t)\ dt.$ 
+\example{ex_num8}{Approximating distance travelled}{
+One of the authors drove his daughter home from school while she recorded their speed every 30 seconds. The data is given in Figure \ref{fig:num8}. Approximate the distance they travelled.}
+{Recall that by integrating a speed function we get distance travelled. We have information about $v(t)$; we will use Simpson's Rule to approximate $\ds \int_a^b v(t)\ dt.$ 
 
 The most difficult aspect of this problem is converting the given data into the form we need it to be in. The speed is measured in miles per hour, whereas the time is measured in 30 second increments. 
 
@@ -390,7 +445,9 @@ Time & \parbox{30pt}{\centering Speed \\ (mph)}\rule[-9pt]{0pt}{5pt} \\ \hline
 \end{tabular}
 }
 We need to compute $\dx = (b-a)/n$. Clearly, $n=24$. What are $a$ and $b$? Since we start at time $t=0$, we have that $a=0$. The final recorded time came after 24 periods of 30 seconds, which is 12 minutes or 1/5 of an hour. Thus we have
-$$\dx = \frac{b-a}{n} = \frac{1/5-0}{24} = \frac1{120}; \quad \frac{\dx}{3} = \frac{1}{360}.$$
+\[
+\dx = \frac{b-a}{n} = \frac{1/5-0}{24} = \frac1{120}; \quad \frac{\dx}{3} = \frac{1}{360}.
+\]
 
 Thus the distance traveled is approximately:
 \begin{align*}

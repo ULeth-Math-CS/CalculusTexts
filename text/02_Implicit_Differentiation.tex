@@ -10,23 +10,41 @@ Sometimes the \textit{implicit} relationship between $x$ and $y$ is complicated.
 
 Implicit differentiation is a technique based on the Chain Rule that is used to find a derivative when the relationship between the variables is given implicitly rather than explicitly (solved for one variable in terms of the other). \\
 
-We begin by reviewing the Chain Rule. Let $f$ and $g$ be functions of $x$. Then $$\frac{d}{dx}\Big(f(g(x))\Big) = \fp(g(x))\cdot g'(x).$$ Suppose now that $y=g(x)$. We can rewrite the above as \begin{equation}\frac{d}{dx}\Big(f(y))\Big) = \fp(y))\cdot y\primeskip', \quad \text{or}\quad \frac{d}{dx}\Big(f(y))\Big)= \fp(y)\cdot \frac{dy}{dx} .\label{eq:implicit1}\end{equation} These equations look strange; the key concept to learn here is that we can find $y\primeskip'$ even if we don't exactly know how $y$ and $x$ relate.\\
+We begin by reviewing the Chain Rule. Let $f$ and $g$ be functions of $x$. Then 
+\[
+\frac{d}{dx}\Big(f(g(x))\Big) = \fp(g(x))\cdot g'(x).
+\]
+Suppose now that $y=g(x)$. We can rewrite the above as 
+\begin{equation}
+\frac{d}{dx}\Big(f(y))\Big) = \fp(y))\cdot y\primeskip', \quad \text{or}\quad \frac{d}{dx}\Big(f(y))\Big)= \fp(y)\cdot \frac{dy}{dx} .\label{eq:implicit1}
+\end{equation} 
+These equations look strange; the key concept to learn here is that we can find $y\primeskip'$ even if we don't exactly know how $y$ and $x$ relate.\\
 
 We demonstrate this process in the following example.\\
 
 \example{ex_implicit1}{Using Implicit Differentiation}{
 Find $y\primeskip'$ given that $\sin(y) + y^3=6-x^3$.}
 {We start by taking the derivative of both sides (thus maintaining the equality.) We have :
-$$ \frac{d}{dx}\Big(\sin(y) + y^3\Big)=\frac{d}{dx}\Big(6-x^3\Big).$$
+\[
+ \frac{d}{dx}\Big(\sin(y) + y^3\Big)=\frac{d}{dx}\Big(6-x^3\Big).
+\]
 The right hand side is easy; it returns $-3x^2$. 
 
-The left hand side requires more consideration. We take the derivative term--by--term.  Using the technique derived from Equation \ref{eq:implicit1} above, we can see that $$\frac{d}{dx}\Big(\sin y\Big) = \cos y \cdot y\primeskip'.$$ %The derivative of $\sin(y)$ is $\cos(y)y\primeskip'$.  The reason for this is the chain rule. Since $y$ itself depends on $x$, the term $\sin(y)$ is really a function inside of a function, $y$ being a function of $x$.
+The left hand side requires more consideration. We take the derivative term--by--term.  Using the technique derived from Equation \ref{eq:implicit1} above, we can see that 
+\[
+\frac{d}{dx}\Big(\sin y\Big) = \cos y \cdot y\primeskip'.
+\]
+ %The derivative of $\sin(y)$ is $\cos(y)y\primeskip'$.  The reason for this is the chain rule. Since $y$ itself depends on $x$, the term $\sin(y)$ is really a function inside of a function, $y$ being a function of $x$.
 
 We apply the same process to the $y^3$ term. 
-$$\frac{d}{dx}\Big(y^3\Big) = \frac{d}{dx}\Big((y)^3\Big) = 3(y)^2\cdot y\primeskip'.$$
+\[
+\frac{d}{dx}\Big(y^3\Big) = \frac{d}{dx}\Big((y)^3\Big) = 3(y)^2\cdot y\primeskip'.
+\]
 %Similarly, the derivative of $y^3$ is $3y^2y\primeskip'$.  
 Putting this together with the right hand side, we have
-$$\cos(y)y\primeskip'+3y^2y\primeskip' = -3x^2.$$
+\[
+\cos(y)y\primeskip'+3y^2y\primeskip' = -3x^2.
+\]
 Now solve for $y\primeskip'$.
 		\begin{align*}
 		\cos(y)y\primeskip'+3y^2y\primeskip' 	&= -3x^2.\\
@@ -42,9 +60,20 @@ For instance, we can affirm easily that the point $(\sqrt[3]{6},0)$ lies on the 
 
 \example{ex_implicit2}{Using Implicit Differentiation to find a tangent line}{
 Find the equation of the line tangent to the curve of the implicitly defined function $\sin y + y^3=6-x^3$ at the point $(\sqrt[3]6,0)$.}
-{In Example \ref{ex_implicit1} we found that $$y\primeskip' = \frac{-3x^2}{\cos y +3y^2}.$$ We find the slope of the tangent line at the point  $(\sqrt[3]6,0)$ by substituting $\sqrt[3]6$ for $x$ and $0$ for $y$. Thus at the point $(\sqrt[3]6,0)$, we have the slope as $$y\primeskip' = \frac{-3(\sqrt[3]{6})^2}{\cos 0 + 3\cdot0^2} = \frac{-3\sqrt[3]{36}}{1} \approx -9.91.$$
+{In Example \ref{ex_implicit1} we found that 
+\[
+y\primeskip' = \frac{-3x^2}{\cos y +3y^2}.
+\]
+ We find the slope of the tangent line at the point  $(\sqrt[3]6,0)$ by substituting $\sqrt[3]6$ for $x$ and $0$ for $y$. Thus at the point $(\sqrt[3]6,0)$, we have the slope as 
+ \[
+ y\primeskip' = \frac{-3(\sqrt[3]{6})^2}{\cos 0 + 3\cdot0^2} = \frac{-3\sqrt[3]{36}}{1} \approx -9.91.
+ \]
 
-Therefore the equation of the tangent line to the implicitly defined function $\sin y + y^3=6-x^3$ at the point $(\sqrt[3]{6},0)$ is $$y = -3\sqrt[3]{36}(x-\sqrt[3]{6})+0 \approx -9.91x+18.$$ The curve and this tangent line are shown in Figure \ref{fig:implicit2}.
+Therefore the equation of the tangent line to the implicitly defined function $\sin y + y^3=6-x^3$ at the point $(\sqrt[3]{6},0)$ is 
+\[
+y = -3\sqrt[3]{36}(x-\sqrt[3]{6})+0 \approx -9.91x+18.
+\]
+ The curve and this tangent line are shown in Figure \ref{fig:implicit2}.
 \mfigure{.45}{The function $\sin y+y^3 = 6-x^3$ and its tangent line at the point $(\sqrt[3]{6},0)$.}{fig:implicit2}{figures/figimplicit2}
 }\\
 
@@ -65,12 +94,18 @@ Given the implicitly defined function $y^3+x^2y^4=1+2x$, find $y\primeskip'$.}
 The second term, $x^2y^4$, is a little tricky.  It requires the Product Rule as it is the product of two functions of $x$: $x^2$ and $y^4$.  Its derivative is $x^2(4y^3y\primeskip') + 2xy^4$.  The first part of this expression requires a $y\primeskip'$ because we are taking the derivative of a $y$ term.  The second part does not require it because we are taking the derivative of $x^2$.  
 
 The derivative of the right hand side is easily found to be $2$. In all, we get:
-$$3y^2y\primeskip' + 4x^2y^3y\primeskip' + 2xy^4 = 2.$$
+\[
+3y^2y\primeskip' + 4x^2y^3y\primeskip' + 2xy^4 = 2.
+\]
 
 Move terms around so that the left side consists only of the $y\primeskip'$ terms and the right side consists of all the other terms:
-$$3y^2y\primeskip' + 4x^2y^3y\primeskip' = 2-2xy^4.$$
+\[
+3y^2y\primeskip' + 4x^2y^3y\primeskip' = 2-2xy^4.
+\]
 Factor out $y\primeskip'$ from the left side and solve to get
-$$y\primeskip' = \frac{2-2xy^4}{3y^2+4x^2y^3}.$$
+\[
+y\primeskip' = \frac{2-2xy^4}{3y^2+4x^2y^3}.
+\]
 
 To confirm the validity of our work, let's find the equation of a tangent line to this function at a point. It is easy to confirm that the point $(0,1)$ lies on the graph of this function. At this point, $y\primeskip' = 2/3$. So the equation of the tangent line is $y = 2/3(x-0)+1$. The function and its tangent line are graphed in Figure \ref{fig:implicit4}.
 
@@ -91,14 +126,22 @@ Given the implicitly defined function $\sin(x^2y^2)+y^3=x+y$, find $y\primeskip'
 		\end{align*}  
 
 We leave the derivatives of the other terms to the reader. After taking the derivatives of both sides, we have
-$$2(x^2yy\primeskip'+xy^2)\cos(x^2y^2) + 3y^2y\primeskip' = 1 + y\primeskip'.$$
+\[
+2(x^2yy\primeskip'+xy^2)\cos(x^2y^2) + 3y^2y\primeskip' = 1 + y\primeskip'.
+\]
 
 We now have to be careful to properly solve for $y\primeskip'$, particularly because of the product on the left.  It is best to multiply out the product.  Doing this, we get
-$$2x^2y\cos(x^2y^2)y\primeskip' + 2xy^2\cos(x^2y^2) + 3y^2y\primeskip' = 1 + y\primeskip'.$$
+\[
+2x^2y\cos(x^2y^2)y\primeskip' + 2xy^2\cos(x^2y^2) + 3y^2y\primeskip' = 1 + y\primeskip'.
+\]
 From here we can safely move around terms to get the following:
-$$2x^2y\cos(x^2y^2)y\primeskip' + 3y^2y\primeskip' - y\primeskip' = 1 - 2xy^2\cos(x^2y^2).$$
+\[
+2x^2y\cos(x^2y^2)y\primeskip' + 3y^2y\primeskip' - y\primeskip' = 1 - 2xy^2\cos(x^2y^2).
+\]
 Then we can solve for $y\primeskip'$ to get
-$$y\primeskip' = \frac{1 - 2xy^2\cos(x^2y^2)}{2x^2y\cos(x^2y^2)+3y^2-1}.$$
+\[
+y\primeskip' = \frac{1 - 2xy^2\cos(x^2y^2)}{2x^2y\cos(x^2y^2)+3y^2-1}.
+\]
 
 A graph of this implicit function is given in Figure \ref{fig:implicit5}. It is easy to verify that the points $(0,0)$, $(0,1)$ and $(0,-1)$ all lie on the graph. We can find the slopes of the tangent lines at each of these points using our formula for $y\primeskip'$. 
 
@@ -118,11 +161,16 @@ Quite a few ``famous'' curves have equations that are given implicitly.  We can 
 \example{ex_implicit7}{Finding slopes of tangent lines to a circle}{
 Find the slope of the tangent line to the circle $x^2+y^2=1$ at the point $(1/2, \sqrt{3}/2)$.}
 {%\myincludegraphics[scale=.4]{text/apex-implicit_differentiation1.png}
-Taking derivatives, we get $2x+2yy\primeskip'=0$.  Solving for $y\primeskip'$  gives: $$\ds y\primeskip' = \frac{-x}{y}.$$ 
+Taking derivatives, we get $2x+2yy\primeskip'=0$.  Solving for $y\primeskip'$  gives: 
+\[
+\ds y\primeskip' = \frac{-x}{y}.
+\] 
 This is a clever formula. Recall that the slope of the line through the origin and the point $(x,y)$ on the circle will be $y/x$. We have found that the slope of the tangent line to the circle at that point is the opposite reciprocal of $y/x$, namely, $-x/y$. Hence these two lines are always perpendicular.
 
 At the point $(1/2, \sqrt{3}/2)$, we have the tangent line's slope as
-$$y\primeskip' = \frac{-1/2}{\sqrt{3}/2} = \frac{-1}{\sqrt{3}} \approx -0.577.$$
+\[
+y\primeskip' = \frac{-1/2}{\sqrt{3}/2} = \frac{-1}{\sqrt{3}} \approx -0.577.
+\]
 
 A graph of the circle and its tangent line at $(1/2,\sqrt{3}/2)$ is given in Figure \ref{fig:implicit7}, along with a thin dashed line from the origin that is perpendicular to the tangent line. (It turns out that all normal lines to a circle pass through the center of the circle.)
 \mfigure{.5}{The unit circle with its tangent line at $(1/2,\sqrt{3}/2)$.}{fig:implicit7}{figures/figimplicit7}
@@ -130,9 +178,15 @@ A graph of the circle and its tangent line at $(1/2,\sqrt{3}/2)$ is given in Fig
 
 This section has shown how to find the derivatives of implicitly defined functions, whose graphs include a wide variety of interesting and unusual shapes. Implicit differentiation can also be used to further our understanding of ``regular'' differentiation. 
 
-One hole in our current understanding of derivatives is this: what is the derivative of the square root function? That is, $$\frac{d}{dx}\big(\sqrt{x}\big) = \frac{d}{dx}\big(x^{1/2}\big) = \text{?}$$
+One hole in our current understanding of derivatives is this: what is the derivative of the square root function? That is, 
+\[
+\frac{d}{dx}\big(\sqrt{x}\big) = \frac{d}{dx}\big(x^{1/2}\big) = \text{?}
+\]
 
-We allude to a possible solution, as we can write the square root function as a power function with a rational (or, fractional) power. We are then tempted to apply the Power Rule and obtain $$\frac{d}{dx}\big(x^{1/2}\big) = \frac12x^{-1/2} = \frac{1}{2\sqrt{x}}.$$
+We allude to a possible solution, as we can write the square root function as a power function with a rational (or, fractional) power. We are then tempted to apply the Power Rule and obtain 
+\[
+\frac{d}{dx}\big(x^{1/2}\big) = \frac12x^{-1/2} = \frac{1}{2\sqrt{x}}.
+\]
 
 The trouble with this is that the Power Rule was initially defined only for positive integer powers, $n>0$. While we did not justify this at the time, generally the Power Rule is proved using something called the Binomial Theorem, which deals only with positive integers. The Quotient Rule allowed us to extend the Power Rule to negative integer powers. Implicit Differentiation allows us to extend the Power Rule to rational powers, as shown below.
 
@@ -228,7 +282,9 @@ y\primeskip' &= x^x\big(\ln x+1\big).
 \end{align*} 
 
 To ``test'' our answer, let's use it to find the equation of the tangent line at $x=1.5$. The point on the graph our tangent line must pass through is $(1.5, 1.5^{1.5}) \approx (1.5, 1.837)$. Using the equation for $y\primeskip'$, we find the slope as
-$$y\primeskip' = 1.5^{1.5}\big(\ln 1.5+1\big) \approx 1.837(1.405) \approx 2.582.$$
+\[
+y\primeskip' = 1.5^{1.5}\big(\ln 1.5+1\big) \approx 1.837(1.405) \approx 2.582.
+\]
 Thus the equation of the tangent line is $y = 1.6833(x-1.5)+1.837$. Figure \ref{fig:implicit9} graphs $y=x^x$ along with this tangent line.
 \mfigure{.75}{A plot of $y=x^x$.}{fig:logdiffa}{figures/figlogdiffa}
 \mfigure{.5}{A graph of $y=x^x$ and its tangent line at $x=1.5$.}{fig:implicit10}{figures/figimplicit10}

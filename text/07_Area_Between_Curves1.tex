@@ -158,24 +158,24 @@ The ``top'' function is always $x=\frac{7-y}2$ while there are two ``bottom'' fu
 Of course, the final answer is the same. (It is interesting to note that the area of all 4 subregions used is 3/4. This is coincidental.)
 }\\
 
-While we have focused on producing exact answers, we are also able to make approximations using the principle of Theorem \ref{thm:areabetweencurves1}. The integrand in the theorem is a distance (``top minus bottom''); integrating this distance function gives an area. By taking discrete measurements of distance, we can approximate an area using numerical integration techniques developed in Section \ref{sec:numerical_integration}. The following example demonstrates this.\\
+%While we have focused on producing exact answers, we are also able to make approximations using the principle of Theorem \ref{thm:areabetweencurves1}. The integrand in the theorem is a distance (``top minus bottom''); integrating this distance function gives an area. By taking discrete measurements of distance, we can approximate an area using numerical integration techniques developed in Section \ref{sec:numerical_integration}. The following example demonstrates this.\\
 
-\example{ex_abc51}{Numerically approximating area}{
-To approximate the area of a lake, shown in Figure \ref{fig:abc51} (a),  the ``length'' of the lake is measured at 200-foot increments as shown in Figure \ref{fig:abc51} (b), where the lengths are given in hundreds of feet. Approximate the area of the lake.}
-{The measurements of length can be viewed as measuring ``top minus bottom'' of two functions. The exact answer is found by integrating $\ds \int_0^{12} \big(f(x)-g(x)\big)\ dx$, but of course we don't know the functions $f$ and $g$. Our discrete measurements instead allow us to approximate.
+%\example{ex_abc51}{Numerically approximating area}{
+%To approximate the area of a lake, shown in Figure \ref{fig:abc51} (a),  the ``length'' of the lake is measured at 200-foot increments as shown in Figure \ref{fig:abc51} (b), where the lengths are given in hundreds of feet. Approximate the area of the lake.}
+%{The measurements of length can be viewed as measuring ``top minus bottom'' of two functions. The exact answer is found by integrating $\ds \int_0^{12} \big(f(x)-g(x)\big)\ dx$, but of course we don't know the functions $f$ and $g$. Our discrete measurements instead allow us to approximate.
 
-\mtable{.55}{(a) A sketch of a lake, and (b) the lake with length measurements.}{fig:abc51}{\noindent\begin{tabular}{c}\myincludegraphics{figures/figabc5b}\\(a)\\ \myincludegraphics{figures/figabc5} \\ (b)\end{tabular}}
-We have the following data points:
-$$(0,0),\ (2,2.25),\ (4,5.08),\ (6,6.35),\ (8,5.21),\ (10,2.76),\ (12,0).$$
-We also have that $\dx=\frac{b-a}{n} = 2$, so Simpson's Rule gives
-\begin{align*}
-\text{Area}&\approx \frac{2}{3}\Big(1\cdot0+4\cdot2.25+2\cdot5.08+4\cdot6.35+2\cdot5.21+4\cdot2.76+1\cdot0\Big)\\
-			&= 44.01\overline{3} \ \text{units}^2.
-\end{align*}
+%\mtable{.55}{(a) A sketch of a lake, and (b) the lake with length measurements.}{fig:abc51}{\noindent\begin{tabular}{c}\myincludegraphics{figures/figabc5b}\\(a)\\ \myincludegraphics{figures/figabc5} \\ (b)\end{tabular}}
+%We have the following data points:
+%$$(0,0),\ (2,2.25),\ (4,5.08),\ (6,6.35),\ (8,5.21),\ (10,2.76),\ (12,0).$$
+%We also have that $\dx=\frac{b-a}{n} = 2$, so Simpson's Rule gives
+%\begin{align*}
+%\text{Area}&\approx \frac{2}{3}\Big(1\cdot0+4\cdot2.25+2\cdot5.08+4\cdot6.35+2\cdot5.21+4\cdot2.76+1\cdot0\Big)\\
+%			&= 44.01\overline{3} \ \text{units}^2.
+%\end{align*}
 
-Since the measurements are in hundreds of feet, units$^2 = (100\ \text{ft})^2 = 10,000\ \text{ft}^2$, giving a total area of $440,133\ \text{ft}^2$. (Since we are approximating, we'd likely say the area was about $440,000\ \text{ft}^2$, which is a little more than 10 acres.)
-}
-\\
+%Since the measurements are in hundreds of feet, units$^2 = (100\ \text{ft})^2 = 10,000\ \text{ft}^2$, giving a total area of $440,133\ \text{ft}^2$. (Since we are approximating, we'd likely say the area was about $440,000\ \text{ft}^2$, which is a little more than 10 acres.)
+%}
+%\\
 
-In the next section we apply our applications--of--integration techniques to finding the volumes of certain solids.
+%In the next section we apply our applications--of--integration techniques to finding the volumes of certain solids.
 \printexercises{exercises/07_01_exercises1}

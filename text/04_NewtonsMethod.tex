@@ -30,15 +30,25 @@ Newton's Method is built around tangent lines.  The main idea is that if $x$ is 
 We start Newton's Method with an initial guess about roughly where the root is.  Call this $x_0$. (See Figure \ref{fig:newt1}(a).)  Draw the tangent line to the graph at $(x_0,f(x_0))$ and see where it meets the $x$-axis. Call this point $x_1$.  Then repeat the process -- draw the tangent line to the graph at $(x_1, f(x_1))$ and see where it meets the $x$-axis. (See Figure \ref{fig:newt1}(b).) Call this point $x_2$.  Repeat the process again to get $x_3$, $x_4$, etc.  This sequence of points will often converge rather quickly to a root of $f$.  
 
 We can use this \textit{geometric} process to create an \textit{algebraic} process.  Let's look at how we found $x_1$.  We started with the tangent line to the graph at $(x_0,f(x_0))$.  The slope of this tangent line is $\fp(x_0)$ and the equation of the line is
-$$y=\fp(x_0)(x-x_0)+f(x_0).$$
+\[
+y=\fp(x_0)(x-x_0)+f(x_0).
+\]
 This line crosses the $x$-axis when $y=0$, and the $x$--value where it crosses is what we called $x_1$. So let $y=0$ and replace $x$ with $x_1$, giving the equation: 
-$$ 0 = \fp(x_0)(x_1-x_0)+f(x_0).$$ 
+\[
+ 0 = \fp(x_0)(x_1-x_0)+f(x_0).
+\] 
 Now solve for $x_1$:
-$$x_1=x_0-\frac{f(x_0)}{\fp(x_0)}.$$
+\[
+x_1=x_0-\frac{f(x_0)}{\fp(x_0)}.
+\]
 Since we repeat the same geometric process to find $x_2$ from $x_1$, we have
-$$x_2=x_1-\frac{f(x_1)}{\fp(x_1)}.$$
+\[
+x_2=x_1-\frac{f(x_1)}{\fp(x_1)}.
+\]
 In general, given an approximation $x_n$, we can find the next approximation, $x_{n+1}$ as follows:
-$$x_{n+1} = x_{n} - \frac{f(x_{n})}{\fp(x_{n})}.$$
+\[
+x_{n+1} = x_{n} - \frac{f(x_{n})}{\fp(x_{n})}.
+\]
 
 We summarize this process as follows.
 
@@ -46,7 +56,10 @@ We summarize this process as follows.
 {Let $f$ be a differentiable function on an interval $I$ with a root in $I$. To approximate the value of the root, accurate to $d$ decimal places:\index{Newton's Method}
 	\begin{enumerate}
 	\item		Choose a value $x_0$ as an initial approximation of the root. (This is often done by looking at a graph of $f$.)
-	\item		Create successive approximations iteratively; given an approximation $x_n$, compute the next approximation $x_{n+1}$ as $$x_{n+1} = x_n - \frac{f(x_n)}{\fp(x_n)}.$$
+	\item		Create successive approximations iteratively; given an approximation $x_n$, compute the next approximation $x_{n+1}$ as 
+	\[
+	x_{n+1} = x_n - \frac{f(x_n)}{\fp(x_n)}.
+	\]
 	\item		Stop the iterations when successive approximations do not differ in the first $d$ places after the decimal point.
 		\end{enumerate}
 }
@@ -71,7 +84,11 @@ A graph of $f(x)$ is given in Figure \ref{fig:newt2}. We can see from the graph 
 \mfigure{.5}{A graph of $f(x) = x^3-x^2-1$ in Example \ref{ex_newt2}.}{fig:newt2}{figures/fignewt2}
 }\\   
 
-We can automate this process on a calculator that has an \verb+Ans+ key that returns the result of the previous calculation.  Start by pressing \verb+1+ and then \texttt{Enter}. (We have just entered our initial guess, $x_0=1$.)  Now  compute $$\text{\tt Ans} - \frac{f(\text{\tt Ans})}{\fp(\text{\tt Ans})}$$ by entering the following and repeatedly press the \texttt{Enter} key:
+We can automate this process on a calculator that has an \verb+Ans+ key that returns the result of the previous calculation.  Start by pressing \verb+1+ and then \texttt{Enter}. (We have just entered our initial guess, $x_0=1$.)  Now  compute 
+\[
+\text{\tt Ans} - \frac{f(\text{\tt Ans})}{\fp(\text{\tt Ans})}
+\]
+ by entering the following and repeatedly press the \texttt{Enter} key:
 \begin{center}
 \verb+Ans-(Ans^3-Ans^2-1)/(3*Ans^2-2*Ans)+
 \end{center}
@@ -90,10 +107,14 @@ So we rewrite $\cos x=x$ as $\cos{x}-x=0$.  Written this way, we are finding a r
 \mfigure{.65}{A graph of $f(x)=\cos x-x$ used to find an initial approximation of its root.}{fig:newt3}{figures/fignewt3}
 
 We now compute $x_1$, $x_2$, etc.  The formula for $x_1$ is 
-$$x_1 = 0.75 - \frac{\cos(0.75)-0.75}{-\sin(0.75)-1}\approx 0.7391111388.$$
+\[
+x_1 = 0.75 - \frac{\cos(0.75)-0.75}{-\sin(0.75)-1}\approx 0.7391111388.
+\]
 %To 11 decimal places, this gives .7391111388.  We then compute 
 Apply Newton's Method again to find $x_2$:
-$$x_2 = 0.7391111388 - \frac{\cos(0.7391111388)-0.7391111388}{-\sin(0.7391111388)-1}\approx 0.7390851334.$$
+\[
+x_2 = 0.7391111388 - \frac{\cos(0.7391111388)-0.7391111388}{-\sin(0.7391111388)-1}\approx 0.7390851334.
+\]
 We can continue this way, but it is really best to automate this process.  On a calculator with an Ans key, we would start by pressing 0.75, then \texttt{Enter}, inputting our initial approximation. We then enter:
 %\begin{verbatim}
 \begin{center}\texttt{Ans - (cos(Ans)-Ans)/(-sin(Ans)-1)}.\end{center}
@@ -107,7 +128,7 @@ x_4 &= 0.7390851332.
 Our approximations $x_2$ and $x_3$ did not differ for at least the first 5 places after the decimal, so we could have stopped. However, using our calculator in the manner described is easy, so finding $x_4$ was not hard. It is interesting to see how we found an approximation, accurate to as many decimal places as our calculator displays, in just 4 iterations.
 }\\
 
-If you know how to program, you can translate the following pseudocode into your favorite language to perform the computation in this problem.
+If you know how to program, you can translate the following pseudocode into your favourite language to perform the computation in this problem.
 \begin{center}
 \begin{verbatim}
 x = .75
@@ -130,7 +151,11 @@ What should one use for the initial guess, $x_0$?  Generally, the closer to the 
 
 \mfigure{.8}{A graph of $f(x) = x^3-x^2-1$, showing why an initial approximation of $x_0=0$ with Newton's Method fails.}{fig:newt2a}{figures/fignewt2a}
 
-We can also see analytically that it fails. Since $$x_1 = 0 -\frac{f(0)}{\fp(0)}$$ and $\fp(0)=0$, we see that $x_1$ is not well defined.  
+We can also see analytically that it fails. Since 
+\[
+x_1 = 0 -\frac{f(0)}{\fp(0)}
+\]
+ and $\fp(0)=0$, we see that $x_1$ is not well defined.  
 
 This problem can also occur if, for instance, it turns out that $\fp(x_5)=0$. Adjusting the initial approximation $x_0$ by a very small amount will likely fix the problem.
 

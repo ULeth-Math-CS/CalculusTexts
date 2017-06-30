@@ -20,8 +20,8 @@ Consider the function $y = \dfrac{\sin x}{x}$. When $x$ is near the value 1, wha
 
 While our question is not precisely formed (what constitutes ``near the value 1''?), the answer does not seem difficult to find. One might think first to look at a graph of this function to approximate the appropriate $y$ values. Consider Figure \ref{fig:zoom_sinx_over_x}, where $y = \frac{\sin x}{x}$ is graphed. For values of $x$ near 1, it seems that $y$ takes on values near $0.85$. In fact, when $x=1$, then $y=\frac{\sin 1}{1} \approx 0.84$, so it makes sense that when $x$ is ``near'' 1, $y$ will be ``near'' $0.84$.
 
-\mfigure{.7}{$\sin(x)/x$ near $x=1$.}{fig:zoom_sinx_over_x}{figures/figZoomSinXOverX}
-\mfigure{.4}{$\sin(x)/x$ near $x=0$.}{fig:sinx_over_x}{figures/figSinXOverX}
+\mfigure{.5}{$\sin(x)/x$ near $x=1$.}{fig:zoom_sinx_over_x}{figures/figZoomSinXOverX}
+\mfigure{.2}{$\sin(x)/x$ near $x=0$.}{fig:sinx_over_x}{figures/figSinXOverX}
 Consider this again at a different value for $x$. When $x$ is near 0, what value (if any) is $y$ near? By considering Figure \ref{fig:sinx_over_x}, one can see that it seems that $y$ takes on values near $1$. But what happens when $x=0$? We have 
 \[
  y \rightarrow \frac{\sin 0}{0} \rightarrow \raisebox{8pt}{\text{``\ }}\frac{0}{0}\raisebox{8pt}{\text{\ ''}}.
@@ -32,7 +32,9 @@ The expression ``$0/0$'' has no value; it is \emph{indeterminate.} \index{limit!
 \[
 \lim_{x\to 1} y = \lim_{x\to 1} f(x) = L.
 \]
-This is not a complete definition (that will come in the next section); this is a pseudo-definition that will allow us to explore the idea of a limit. \index{limit!pseudo-definition}
+This is not a complete definition; this is a pseudo-definition that will allow us to explore the idea of a limit. \index{limit!pseudo-definition} A more detailed, but still informal, definition of the limit is given in Definition \ref{def:limit_informal} at the end of this section. The precise definition is given in the next section.
+
+
 
 Above, where $f(x) = \sin(x)/x$, we approximated 
 \[
@@ -47,13 +49,13 @@ Consider again $\lim_{x\to 1}\sin (x)/x$. To approximate this limit numerically,
 
 Notice that for values of $x$ near $1$, we have $\sin (x)/x$ near $0.841$. The $x=1$ row is in bold to highlight the fact that when considering limits, we are \textit{not} concerned with the value of the function at that particular $x$ value; we are only concerned with the values of the function when $x$ is \textit{near} 1. 
 
-\mtable{.7}{Values of $\sin(x)/x$ with $x$ near 1.}{table:sinx_1}{\input{figures/sinx_over_x_table_1}}
+\mtable{.7}{Approximate values of $\sin(x)/x$ with $x$ near 1.}{table:sinx_1}{\input{figures/sinx_over_x_table_1}}
 
 %\vskip \baselineskip
 
 Now approximate $\lim_{x\to 0} \sin(x)/x$ numerically. We already approximated the value of this limit as 1 graphically in Figure \ref{fig:sinx_over_x}. The table in Figure \ref{table:sinx_2} shows the value of $\sin(x)/x$ for values of $x$ near 0. Ten places after the decimal point are shown to highlight how close to 1 the value of $\sin(x)/x$ gets as $x$ takes on values very near 0. We include the $x=0$ row in bold again to stress that we are not concerned with the value of our function at $x=0$, only on the behaviour of the function \textit{near} 0. 
 
-\mtable{.45}{Values of $\sin(x)/x$ with $x$ near 0.}{table:sinx_2}{\input{figures/sinx_over_x_table_2}}
+\mtable{.45}{Approximate values of $\sin(x)/x$ with $x$ near 0.}{table:sinx_2}{\input{figures/sinx_over_x_table_2}}
  
 This numerical method gives confidence to say that 1 is a good approximation of $\lim_{x\to 0} \sin(x)/x$; that is, 
 \[
@@ -115,6 +117,9 @@ The graph and table allow us to say that $\lim_{x\to 0}f(x) \approx 1$; in fact,
 }\\
 
 \vskip \baselineskip
+
+\pagebreak
+
 \noindent\textbf{\large Identifying When Limits Do Not Exist}\\
 
 A function may not have a limit for all values of $x$. That is, we cannot say $\lim_{x\to c}f(x)=L$ for some numbers $L$ for all values of $c$, for there may not be a number that $f(x)$ is approaching. There are three ways in which a limit may fail to exist. \index{limit!does not exist}
@@ -173,7 +178,7 @@ Explore why $\ds\lim_{x\to 0}\sin(1/x)$ does not exist.}%
 %\mfigure{.2}{Zooming in to observing no limit as $x\to 0$ in Example \ref{ex_no_limit3}.}{fig:nolimit3b}{figures/figNoLimit3b}
 Two graphs of $f(x) = \sin(1/x)$ are given in Figures \ref{fig:nolimit3}. Figure \ref{fig:nolimit3}(a) shows $f(x)$ on the interval $[-1,1]$; notice how $f(x)$ seems to oscillate near $x=0$. One might think that despite the oscillation, as $x$ approaches 0, $f(x)$ approaches 0. However, Figure \ref{fig:nolimit3}(b) zooms in on $\sin(1/x)$, on the interval $[-0.1,0.1]$. Here the oscillation is even more pronounced. Finally, in the table in Figure \ref{fig:nolimit3}(c), we see $\sin(x)/x$ evaluated for values of $x$ near 0. As $x$ approaches 0, $f(x)$ does not appear to approach any value. 
 
-It can be shown that in reality, as $x$ approaches 0, $\sin(1/x)$ takes on all values between $-1$ and 1 infinite times! Because of this oscillation,
+It can be shown that in reality, as $x$ approaches 0, $\sin(1/x)$ takes on all values between $-1$ and 1 infinitely many times! Because of this oscillation,
 
  $\ds\lim_{x\to 0}\sin(1/x)$ does not exist.}\\
 
@@ -192,7 +197,7 @@ It can be shown that in reality, as $x$ approaches 0, $\sin(1/x)$ takes on all v
 \end{minipage}} %% else, not longpage
 {%\clearpage%}
 %\vskip 1\baselineskip
-\ifthenelse{\isodd{\thepage}}{\noindent\hskip -\marginparwidth }{}
+\ifthenelse{\isodd{\thepage}}{}{\noindent\hskip -\marginparwidth }
 \noindent\begin{minipage}{\textwidth+\marginparwidth+\marginparsep}%\centering
 \begin{tabular}{ccc}
 \myincludegraphics{figures/figNoLimit3a} &  \myincludegraphics{figures/figNoLimit3b} &  \begin{tabular}[b]{cc}

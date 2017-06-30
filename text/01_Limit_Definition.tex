@@ -19,7 +19,7 @@ The definition we describe in this section comes from formalizing {\bf 3}.  A qu
 \item[$\textbf{3}^\prime$.]If $x$ is within a certain \textit{tolerance level} of $c$, then the corresponding value $y=f(x)$ is within a certain \textit{tolerance level} of $L$.
 \end{description}
 
-The traditional notation for the $x$-tolerance is the lowercase Greek letter delta, or $\delta$, and the $y$-tolerance is denoted by lowercase epsilon, or $\epsilon$. One more rephrasing of $\textbf{3}^\prime$ nearly gets us to the actual definition:
+The traditional notation for the $x$-tolerance is the lower-case Greek letter delta, or $\delta$, and the $y$-tolerance is denoted by lower-case epsilon, or $\epsilon$. One more rephrasing of $\textbf{3}^\prime$ nearly gets us to the actual definition:
 
 \begin{description}
 \item[$\textbf{3}^{\prime \prime}$.]If $x$ is within $\delta$ units of $c$, then the corresponding value of $y$ is within $\epsilon$ units of $L$.
@@ -45,11 +45,11 @@ means that given any $\epsilon > 0$, there exists $\delta > 0$ such that for all
 if  $|x - c| < \delta$, then $|f(x) - L| < \epsilon$.\index{limit!definition}
 }
 
-(Mathematicians often enjoy writing ideas without using any words. Here is the wordless definition of the limit:\\
+%(Mathematicians often enjoy writing ideas without using any words. Here is the wordless definition of the limit:\\
 
-$\displaystyle \lim_{x\rightarrow c} f(x) = L \iff$
-$\forall \, \epsilon > 0, \exists \, \delta > 0 \; : \;
-0<|x - c| < \delta \longrightarrow |f(x) - L| < \epsilon$.\text{)}\\
+%$\displaystyle \lim_{x\rightarrow c} f(x) = L \iff$
+%$\forall \, \epsilon > 0, \exists \, \delta > 0 \; : \;
+%0<|x - c| < \delta \longrightarrow |f(x) - L| < \epsilon$.\text{)}\\
 
 Note the order in which $\epsilon$ and $\delta$ are given.  In the definition, the $y$-tolerance $\epsilon$ is given \textit{first} and then the limit will exist {\bf if} we can find an $x$-tolerance $\delta$ that works.  
 
