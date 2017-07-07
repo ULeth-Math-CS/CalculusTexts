@@ -64,8 +64,8 @@
 \begin{enumerate}\addtocounter{enumi}{18}
 \item	\deriv{\sin^{-1}x}{\frac{1}{\sqrt{1-x^2}}}
 \item	\deriv{\cos^{-1}x}{\frac{-1}{\sqrt{1-x^2}}}
-\item	\deriv{\csc^{-1}x}{\frac{-1}{|x|\sqrt{x^2-1}}}
-\item	\deriv{\sec^{-1}x}{\frac{1}{|x|\sqrt{x^2-1}}}
+\item	\deriv{\csc^{-1}x}{\frac{-1}{x\sqrt{x^2-1}}}
+\item	\deriv{\sec^{-1}x}{\frac{1}{x\sqrt{x^2-1}}}
 \item	\deriv{\tan^{-1}x}{\frac{1}{1+x^2}}
 \item	\deriv{\cot^{-1}x}{\frac{-1}{1+x^2}}
 \item	\deriv{\cosh x}{\sinh x}
@@ -124,7 +124,7 @@ $\ n\neq -1$
 \begin{minipage}[t]{.38\linewidth}
 \begin{enumerate}\addtocounter{enumi}{21}
 \item	\myint{\frac{1}{\sqrt{a^2-x^2}}}{\sin^{-1}\left(\frac xa\right)+C}
-\item	\myint{\frac{1}{x\sqrt{x^2-a^2}}}{\frac1a\sec^{-1}\left(\frac{|x|}{a}\right)+C}
+\item	\myint{\frac{1}{x\sqrt{x^2-a^2}}}{\frac1a\sec^{-1}\left(\frac{x}{a}\right)+C}
 \item	\myint{\cosh x}{\sinh x+C}
 \item	\myint{\sinh x}{\cosh x+C}
 \item	\myint{\tanh x}{\ln(\cosh x)+C}

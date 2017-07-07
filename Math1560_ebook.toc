@@ -12,10 +12,10 @@
 \contentsline {section}{\numberline {2.1}Instantaneous Rates of Change: The Derivative}{49}{section.2.1}
 \contentsline {section}{\numberline {2.2}Interpretations of the Derivative}{61}{section.2.2}
 \contentsline {section}{\numberline {2.3}Basic Differentiation Rules}{67}{section.2.3}
-\contentsline {section}{\numberline {2.4}The Product and Quotient Rules}{73}{section.2.4}
-\contentsline {section}{\numberline {2.5}The Chain Rule}{82}{section.2.5}
-\contentsline {section}{\numberline {2.6}Implicit Differentiation}{90}{section.2.6}
-\contentsline {section}{\numberline {2.7}Derivatives of Inverse Functions}{99}{section.2.7}
+\contentsline {section}{\numberline {2.4}The Product and Quotient Rules}{74}{section.2.4}
+\contentsline {section}{\numberline {2.5}The Chain Rule}{83}{section.2.5}
+\contentsline {section}{\numberline {2.6}Implicit Differentiation}{91}{section.2.6}
+\contentsline {section}{\numberline {2.7}Derivatives of Inverse Functions}{100}{section.2.7}
 \contentsline {chapter}{\numberline {3}The Graphical Behaviour of Functions}{105}{chapter.3}
 \contentsline {section}{\numberline {3.1}Extreme Values}{105}{section.3.1}
 \contentsline {section}{\numberline {3.2}The Mean Value Theorem}{112}{section.3.2}
@@ -38,4 +38,4 @@
 \contentsline {section}{\numberline {5.5}Substitution}{214}{section.5.5}
 \contentsline {section}{\numberline {5.6}Area Between Curves}{231}{section.5.6}
 \contentsline {chapter}{\numberline {A}Solutions To Selected Problems}{A.1}{appendix.A}
-\contentsline {chapter}{Index}{A.11}{section*.218}
+\contentsline {chapter}{Index}{A.11}{section*.231}

@@ -82,11 +82,60 @@ Let's practice using this theorem.\\
 			We can easily find the actual answer; $(-1.1)^3 = -1.331$. 
 		
 		\item		See Figure \ref{fig:xcubedwithderiv}.
-		\mfigure{.5}{A graph of $f(x) = x^3$, along with its derivative $\fp(x) = 3x^2$ and its tangent line at $x=-1$.}{fig:xcubedwithderiv}{figures/figxcubedwithderiv}
+		\mfigure{.6}{A graph of $f(x) = x^3$, along with its derivative $\fp(x) = 3x^2$ and its tangent line at $x=-1$.}{fig:xcubedwithderiv}{figures/figxcubedwithderiv}
 		\end{enumerate}
 \vskip-1.5\baselineskip
 }\\
 %\clearpage
+
+It is easy to use Definition \ref{def:the_derivative} to verify the Constant Rule, and with a bit of work we can confirm the Power Rule for small values of $n$. But how do we know that the Power Rule holds in general? One way to tackle this problem relies on a famous result from Algebra: the Binomial Theorem.
+
+\theorem{thm:binomial}{Binomial Theorem}{
+For any real numbers $a$ and $b$, and any positive integer $n$, we have
+\[
+(a+b)^n = a^n+\binom{n}{1}a^{n-1}b+\binom{n}{2}a^{n-2}b^2+\cdots + \binom{n}{n-1}ab^{n-1}+b^n,
+\]
+where $\binom{n}{k}$ (read, ``$n$ choose $k$'') is the binomial coefficient given by
+\[
+\binom{n}{k} = \frac{n!}{k!(n-k)!} = \frac{n(n-1)\cdots (n-k+1)}{1\cdot 2 \cdots k}.
+\]
+}
+\mnote{.2}{You may recall from high school that the binomial coefficients are the numbers that appear in \href{https://en.wikipedia.org/wiki/Binomial_coefficient}{Pascal's Triange}. If we number the rows of Pascal's triangle beginning from the top at row zero, then the numbers in row $n$ are given by $\binom{n}{k}$, for $k=0, 1, 2, \ldots, n$.
+
+In particular, note that:
+\begin{multline*}
+\binom{n}{0} = 1, \binom{n}{1} = n, \binom{n}{2} = \frac{n(n-1)}{2},\\ \cdots,  \binom{n}{n-1} = n, \binom{n}{n}=1.
+\end{multline*} }
+
+With Theorem \ref{thm:binomial} in hand, we can quickly establish the Power Rule using the definition of the derivative. Given $f(x)=x^n$, where $n$ is a positive integer, we have:
+\begin{align*}
+f'(x) & = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\\
+& = \lim_{h\to 0}\frac{(x+h)^n-x^n}{h}\\
+& = \lim_{h\to 0}\frac{(x^n+nx^{n-1}h+\cdots + h^n)-x^n}{h} \tag{Using Theorem \ref{thm:binomial}}\\
+& = \lim_{h\to 0}\frac{nx^{n-1}h \binom{n}{2}x^{n-2}h^2 + \cdots + h^n}{h} \tag{Cancelling the $x^n$ terms}\\
+& = \lim_{h\to 0}(nx^{n-1} + \binom{n}{2}x^{n-2}h+\cdots + nxh^{n-2}+h^{n-1}) \tag{Dividing by $h$}\\
+& = nx^{n-1} \tag{Setting $h=0$}
+\end{align*}
+
+The fact that the derivative of $\sin(x)$ is $\cos(x)$ was established in Example \ref{ex_deriv_sinx}; the fact that the derivative of $\cos(x)$ is $-\sin(x)$ is established similarly, and left as an exercise. We aren't yet in a position to rigorously establish the derivative formulas for $e^x$ and $\ln(x)$, but we can show that it's at least plausible that the exponential function is its own derivative. For $f(x)=e^x$, Definition \ref{def:the_derivative} tells us:
+\begin{align*}
+f'(x) & = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\\
+& = \lim_{h\to 0}\frac{e^{x+h}-e^x}{h}\\
+& = \lim_{h\to 0}\frac{e^x\cdot e^h - e^x}{h} \tag{Laws of exponents}\\
+& = \lim_{h\to 0}\frac{e^x(e^h-1)}{h} \tag{Factoring}\\
+& = e^x\lim_{h\to 0}\frac{e^h-1}{h}.
+\end{align*}
+It seems we are stuck on this last limit. But notice that
+\[
+\lim_{h\to 0}\frac{e^h-1}{h} = \lim_{h\to 0}\frac{e^{0+h}-e^0}{h} = f'(0),
+\]
+so $f'(x) = f'(0)e^x$, where $f'(0)$ is simply the slope of the tangent line to the graph $y=e^x$ at $x=0$. Looking at the graph of $y=a^x$ for several values of $a>1$, we see that this slope depends on the value of $a$. One way of defining the number $e$ used as the base of the natural exponential is that this is the value of $a$ such that the slope of the tangent line at $x=0$ is exactly one; that is, such that $f'(0)=1$. With this definition, we immediately find that $f'(x)=e^x$, as expected.
+
+\mfigure[width=0.95\marginparwidth]{.4}{The graph $y=a^x$, for three values of $a>1$}{fig:exp_values}{figures/fig_exp_values}
+
+We will establish the formula for the derivative of $f(x)=\ln(x)$ in Section \ref{sec:deriv_inverse_function} as a special case of Theorem \ref{thm:deriv_inverse_functions} (see Example \ref{ex_deriv_lnx}).
+
+\mnote{.15}{In some Calculus textbooks, the derivatives of $f(x)=e^x$ and $g(x)=\ln(x)$ are left until after the Fundamental Theorem of Calculus (see Theorem \ref{thm:FTC1}). In this approach, the logarithm is defined as an integral, and the exponential function as its inverse. Interestingly enough, all of the familiar properties of the logarithm can be derived using properties of the integral.}
 
 Theorem \ref{thm:deriv_common} gives useful information, but we will need much more. For instance, using the theorem, we can easily find the derivative of $y=x^3$, but it does not tell how to compute the derivative of $y=2x^3$, $y=x^3+\sin x$ nor $y=x^3\sin x$. The following theorem helps with the first two of these examples (the third is answered in the next section).
 \enlargethispage{\baselineskip}
@@ -112,7 +161,16 @@ Theorem \ref{thm:deriv_prop} allows us to find the derivatives of a wide variety
 																		&= 6x+5.
 		\end{align*}
 
-We were a bit pedantic here, showing every step. Normally we would do all the arithmetic and steps in our head and readily find $\ds \frac{d}{dx}\Big(3x^2+5x+7\Big) = 6x+5.$\\
+We were a bit pedantic here, showing every step. Normally we would do all the arithmetic and steps in our head and readily find $\ds \frac{d}{dx}\Big(3x^2+5x+7\Big) = 6x+5.$
+
+Both rules in Theorem \ref{thm:deriv_prop} are easily established using the definition of the derivative. We will leave the Constant Multiple Rule as an exercise, and demonstrate that the Sum Rule is true. Suppose that we are given two differentiable functions $f$ and $g$. Recalling how the sum $f+g$ is defined, and using Definition \ref{def:the_derivative}, we have:
+\begin{align*}
+(f+g)'(x) & = \lim_{h\to 0}\frac{(f+g)(x+h)-(f+g)(x)}{h}\\
+ & = \lim_{h\to 0}\frac{(f(x+h)+g(x+h))-(f(x)+g(x))}{h}\\
+ & = \lim_{h\to 0}\frac{(f(x+h)-f(x))+(g(x+h)-g(x))}{h}\\
+ & = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h}+\lim_{h\to 0}\frac{g(x+h)-g(x)}{h}\\
+ & = f'(x)+g'(x).
+\end{align*} \\
 
 \example{ex_der2}{Using the tangent line to approximate a function value}{
 Let $f(x) = \sin x + 2x+1$. Approximate $f(3)$ using an appropriate tangent line.}
@@ -175,7 +233,7 @@ Find the first four derivatives of the following functions:
 	\begin{enumerate}\addtocounter{enumi}{2}
 	\item		$f(x) = 5e^x$
 	\end{enumerate}
-	\end{minipage}
+	\end{minipage}\pagebreak
 }
 {\begin{enumerate}
 	\item		Using the Power and Constant Multiple Rules, we have: $\fp(x) = 8x$. Continuing on, we have 

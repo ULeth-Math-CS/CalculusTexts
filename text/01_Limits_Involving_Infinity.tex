@@ -30,13 +30,7 @@ It is important to note that by saying $\ds \lim_{x\to c}f(x) = \infty$ we are i
 \example{ex_inflim1}{Evaluating limits involving infinity}{Find $\displaystyle \lim_{x\rightarrow 1}\frac1{(x-1)^2}$ as shown in Figure \ref{fig:inflim1}.
 
 \mfigure{.25}{Observing infinite limit as $x\to 1$ in Example \ref{ex_inflim1}.}{fig:inflim1}{figures/fignolimit2}}
-{In Example \ref{ex_no_limit2} of Section \ref{sec:limit_intro}, by inspecting values of $x$ close to 1 we concluded that this limit does not exist.  That is, it cannot equal any real number.  But the limit could be infinite.  And in fact, we see that the function does appear to be growing larger and larger, as $f(.99)=10^4$, $f(.999)=10^6$, $f(.9999)=10^8$.  A similar thing happens on the other side of 1.  In general, let $M$ denote some ``large'' value. How close should $x$ be to 1 in order to have $1/(x-1)^2$ larger than $M$? Let $\delta=1/\sqrt{M}$. If $x$ is within $\delta$ of 1, i.e., if $|x-1|<1/\sqrt{M}$, then:
-	\begin{align*}
-	|x-1| &< \frac{1}{\sqrt{M}} \\
-	(x-1)^2 &< \frac{1}{M}\\
-	\frac{1}{(x-1)^2} &> M.
-	\end{align*}
-Thus, we can make $\dfrac{1}{(x-1)^2}$ larger than any value ($M$) by taking $x$ close enough to 1 (within a distance of $1/\sqrt{M}$).  So we may say $\ds\lim_{x\rightarrow 1}1/{(x-1)^2}=\infty$.
+{In Example \ref{ex_no_limit2} of Section \ref{sec:limit_intro}, by inspecting values of $x$ close to 1 we concluded that this limit does not exist.  That is, it cannot equal any real number.  But the limit could be infinite.  And in fact, we see that the function does appear to be growing larger and larger, as $f(.99)=10^4$, $f(.999)=10^6$, $f(.9999)=10^8$.  A similar thing happens on the other side of 1.  In general, we can see that as the difference $\lvert x-1\rvert$ gets smaller, the value of $f(x)$ gets larger and larger,  so we may say $\ds\lim_{x\rightarrow 1}1/{(x-1)^2}=\infty$.
 }\\
 \pagebreak
 

@@ -73,18 +73,16 @@ Therefore $\cos (\sin^{-1} x) = \cos y = \sqrt{1-x^2}/1 = \sqrt{1-x^2}$, resulti
 \vskip-\baselineskip
 }\\
 
-\mnote{.2}{\textbf{Note}: if we set $y=\arcsin x$, then $\sin y = x$, and since $\sin^2y+\cos^2y=1$, we get $\cos^2y = 1-\sin^2y = 1-x^2$. Thus, $\cos(\arcsin x) = \pm \sqrt{1-x^2}$. Here, we see a detail that was overlooked in the main text: we restricting the domain of $\sin x$ to $[-\pi/2,\pi/]$ means that $y$ lies in this interval, and thus, $\cos y\geq 0$, since the cosine function is positive for angles in the first and fourth quadrants. This means that we can safely choose the positive square root.}
+\mnote{.2}{\textbf{Note}: if we set $y=\arcsin x$, then $\sin y = x$, and since $\sin^2y+\cos^2y=1$, we get $\cos^2y = 1-\sin^2y = 1-x^2$. Thus, $\cos(\arcsin x) = \pm \sqrt{1-x^2}$. Here, we see a detail that was overlooked in the main text: restricting the domain of $\sin x$ to $[-\pi/2,\pi/]$ means that $y$ lies in this interval, and thus, $\cos y\geq 0$, since the cosine function is positive for angles in the first and fourth quadrants. This means that we can safely choose the positive square root.}
 
-Remember that the input $x$ of the arcsine function is a ratio of a side of a right triangle to its hypotenuse; the absolute value of this ratio will never be greater than 1. Therefore the inside of the square root will never be negative.
-
-In order to make $y=\sin x$ one to one, we restrict its domain to $[-\pi/2,\pi/2]$; on this domain, the range is $[-1,1]$. Therefore the domain of $y=\arcsin x$ is $[-1,1]$ and the range is $[-\pi/2,\pi/2]$. When $x=\pm 1$, note how the derivative of the arcsine function is undefined; this corresponds to the fact that as $x\to \pm1$, the tangent lines to arcsine approach vertical lines with undefined slopes.
+Of course, the function $f(x)=\sin(x)$ is far from being one to one; in fact, it is periodic! In order to obtain a one to one function from $\sin(x)$, we restrict its domain to $[-\pi/2,\pi/2]$; on this domain, $\sin$ is one to one, and the range is $[-1,1]$, the complete range of the sine function. The arcsine function is defined to be the inverse of this restricted sine function. Therefore the domain of $y=\arcsin x$ is $[-1,1]$ and the range is $[-\pi/2,\pi/2]$. The fact that we have $-1\leq x\leq 1$ means we don't have to worry about negative values under the square root in $\sqrt{1-x^2}$. However, when $x=\pm 1$, note how the derivative of the arcsine function is undefined; this corresponds to the fact that as $x\to \pm1$, the tangent lines to arcsine approach vertical lines with undefined slopes.
 
 
 \mfigure{.5}{Graphs of $\sin x$ and $\sin^{-1}x$ along with corresponding tangent lines.}{fig:inverse4}{figures/figinverse4}
 
 %\mfigure{.35}{Graphs of $\sin x$ and $\sin^{-1}x$}{fig:inverse4b}{figures/figinverse4}
 
-In Figure \ref{fig:inverse4} we see $f(x) = \sin x$ and $f\primeskip^{-1} = \sin^{-1} x$ graphed on their respective domains. The line tangent to $\sin x$ at the point $(\pi/3, \sqrt{3}/2)$ has slope $\cos \pi/3 = 1/2$. The slope of the corresponding point on $\sin^{-1}x$, the point $(\sqrt{3}/2,\pi/3)$, is 
+In Figure \ref{fig:inverse4} we see $f(x) = \sin x$ and $f\primeskip^{-1}(x) = \sin^{-1} x$ graphed on their respective domains. The line tangent to $\sin x$ at the point $(\pi/3, \sqrt{3}/2)$ has slope $\cos \pi/3 = 1/2$. The slope of the corresponding point on $\sin^{-1}x$, the point $(\sqrt{3}/2,\pi/3)$, is 
 \[
 \frac{1}{\sqrt{1-(\sqrt{3}/2)^2}} = \frac{1}{\sqrt{1-3/4}} = \frac{1}{\sqrt{1/4}} = \frac{1}{1/2}=2,
 \]
@@ -92,7 +90,7 @@ In Figure \ref{fig:inverse4} we see $f(x) = \sin x$ and $f\primeskip^{-1} = \sin
 
 Using similar techniques, we can find the derivatives of all the inverse trigonometric functions. In Figure \ref{fig:domain_trig} we show the restrictions of the domains of the standard trigonometric functions that allow them to be invertible.\\
 
-\noindent%\hskip-110pt%
+\noindent\hskip-110pt%
 \noindent\begin{minipage}{\textwidth+200pt}
 \small\noindent
 %\centering%\begin{center}
@@ -102,8 +100,8 @@ Function & Domain & Range &\parbox[b]{40pt}{\centering Inverse Function} & Domai
 \rule{0pt}{12pt} $\sin x$ & $[-\pi/2, \pi/2]$ & $[-1,1]$&$\sin^{-1} x$ & $[-1,1]$ & $[-\pi/2, \pi/2]$ \\
 \rule{0pt}{12pt}$\cos x$ & $[0,\pi]$ & $[-1,1]$&$\cos^{-1}(x)$ & $[-1,1]$ & $[0,\pi]$ \\
 \rule{0pt}{12pt}$\tan x$ & $(-\pi/2,\pi/2)$ & $(-\infty,\infty)$&$\tan^{-1}(x)$ & $(-\infty,\infty)$ & $(-\pi/2,\pi/2)$	\\
-\rule{0pt}{12pt} $\csc x$ & $[-\pi/2,0)\cup (0, \pi/2]$ & $(-\infty,-1]\cup [1,\infty)$&$\csc^{-1} x$ & $(-\infty,-1]\cup [1,\infty)$ & $[-\pi/2,0)\cup (0, \pi/2]$  \\
-\rule{0pt}{12pt}$\sec x$ & $[0,\pi/2)\cup (\pi/2,\pi]$ & $(-\infty,-1]\cup [1,\infty)$&$\sec^{-1}(x)$ & $(-\infty,-1]\cup [1,\infty)$ & $[0,\pi/2)\cup (\pi/2,\pi]$ \\
+\rule{0pt}{12pt} $\csc x$ & $(0, \pi/2]\cup (\pi,3\pi/2]$ & $(-\infty,-1]\cup [1,\infty)$&$\csc^{-1} x$ & $(-\infty,-1]\cup [1,\infty)$ & $[-\pi/2,0)\cup (0, \pi/2]$  \\
+\rule{0pt}{12pt}$\sec x$ & $[0,\pi/2)\cup [\pi,3\pi/2)$ & $(-\infty,-1]\cup [1,\infty)$&$\sec^{-1}(x)$ & $(-\infty,-1]\cup [1,\infty)$ & $[0,\pi/2)\cup (\pi/2,\pi]$ \\
 \rule{0pt}{12pt}$\cot x$ & $(0,\pi)$ & $(-\infty,\infty)$&$\cot^{-1}(x)$ &  $ (-\infty,\infty)$ & $(0,\pi)$	
 \end{tabular}
 \captionsetup{type=figure}
@@ -151,14 +149,14 @@ Function & Domain & Range &\parbox[b]{40pt}{\centering Inverse Function} & Domai
 \noindent	\begin{minipage}{.5\specialboxlength}\small
 	\begin{enumerate}
 	\item		$\ds \frac{d}{dx}\big(\sin^{-1}(x)\big) = \frac{1}{\sqrt{1-x^2}}$ 
-	\item		$\ds \frac{d}{dx}\big(\sec^{-1}(x)\big) = \frac{1}{|x|\sqrt{x^2-1}}$
+	\item		$\ds \frac{d}{dx}\big(\sec^{-1}(x)\big) = \frac{1}{x\sqrt{x^2-1}}$
 	\item		$\ds \frac{d}{dx}\big(\tan^{-1}(x)\big) = \frac{1}{1+x^2}$
 	\end{enumerate}
 	\end{minipage}
 	\begin{minipage}{.5\specialboxlength}\small
 	\begin{enumerate}\addtocounter{enumi}{3}
 	\item		$\ds \frac{d}{dx}\big(\cos^{-1}(x)\big) = -\frac{1}{\sqrt{1-x^2}}$ 
-	\item		$\ds \frac{d}{dx}\big(\csc^{-1}(x)\big) = -\frac{1}{|x|\sqrt{x^2-1}}$
+	\item		$\ds \frac{d}{dx}\big(\csc^{-1}(x)\big) = -\frac{1}{x\sqrt{x^2-1}}$
 	\item		$\ds \frac{d}{dx}\big(\cot^{-1}(x)\big) = -\frac{1}{1+x^2}$
 	\end{enumerate}\index{derivative!inverse trig.}
 	\normalsize
@@ -166,6 +164,18 @@ Function & Domain & Range &\parbox[b]{40pt}{\centering Inverse Function} & Domai
 }			
 
 Note how the last three derivatives are merely the opposites of the first three, respectively. Because of this, the first three are used almost exclusively throughout this text.\\
+
+
+
+\mnote{.3}{\textbf{Note:} Some textbooks assign the restricted domains $[-\pi/2,0)\cup (0, \pi/2]$ for $\csc(x)$ and $[0,\pi/2)\cup(\pi/2,\pi]$ for $\sec(x)$ when defining $\csc^{-1}(x)$ and $\sec^{-1}(x)$. While these domains are more convenient for trigonometry, they are not idea for calculus. If we use these domains instead of the ones given in Figure \ref{fig:domain_trig}, then we must modify the derivative formulas given in Theorem \ref{thm:deriv_inverse_trig} as follows:
+\[
+\frac{d}{dx}(\sec^{-1}(x)) = \frac{1}{\lvert x\rvert\sqrt{1-x^2}},
+\]
+and
+\[
+\frac{d}{dx}(\csc^{-1}(x)) = -\frac{1}{\lvert x\rvert\sqrt{1-x^2}}.
+\]
+See Exercise \ref{prob_inverse_trig} for details.\label{note:trig_domains}}
 
 In Section \ref{sec:basic_diff_rules}, we stated without proof or explanation that $\ds \frac{d}{dx}\big(\ln x\big) = \frac{1}{x}$. We can justify that now using Theorem \ref{thm:deriv_inverse_functions}, as shown in the example.\\
 
@@ -200,7 +210,7 @@ In this chapter we have defined the derivative, given rules to facilitate its co
 	\item		$\frac{d}{dx}\big(\csc x\big) = -\csc x\cot x$\addtocounter{enumi}{1}
 	\item		$\frac{d}{dx}\big(\tan x\big) = \sec^2x$\addtocounter{enumi}{1}
 	\item		$\frac{d}{dx}\big(\sin^{-1}x\big) = \frac{1}{\sqrt{1-x^2}}$\addtocounter{enumi}{1}
-	\item		$\frac{d}{dx}\big(\csc^{-1}x\big) = -\frac{1}{|x|\sqrt{x^2-1}}$\addtocounter{enumi}{1}
+	\item		$\frac{d}{dx}\big(\csc^{-1}x\big) = -\frac{1}{x\sqrt{x^2-1}}$\addtocounter{enumi}{1}
 	\item		$\frac{d}{dx}\big(\tan^{-1}x\big) = \frac{1}{1+x^2}$\addtocounter{enumi}{1}
 	\end{enumerate}
 \normalsize
@@ -217,11 +227,13 @@ In this chapter we have defined the derivative, given rules to facilitate its co
 	\item		$\frac{d}{dx}\big(\sec x\big) = \sec x\tan x$\addtocounter{enumi}{1}
 	\item		$\frac{d}{dx}\big(\cot x\big) = -\csc^2x$\addtocounter{enumi}{1}
 	\item		$\frac{d}{dx}\big(\cos^{-1}x\big) = -\frac{1}{\sqrt{1-x^2}}$\addtocounter{enumi}{1}
-	\item		$\frac{d}{dx}\big(\sec^{-1}x\big) = \frac{1}{|x|\sqrt{x^2-1}}$\addtocounter{enumi}{1}
+	\item		$\frac{d}{dx}\big(\sec^{-1}x\big) = \frac{1}{x\sqrt{x^2-1}}$\addtocounter{enumi}{1}
 	\item		$\frac{d}{dx}\big(\cot^{-1}x\big) = -\frac{1}{1+x^2}$
 	\end{enumerate}
 \normalsize
 \end{minipage}
 }
+\mnote{.5}{\textbf{Note:} In this section we have used the two most common notations for the inverse trigonometric functions: $\arcsin(x), \arccos(x)$, etc., and $\sin^{-1}(x), \cos^{-1}(x)$, etc. The latter notation is probably the more common (and most likely the one you'll find on your calculator), but it does have a couple of flaws. First, as noted above, we cannot take the inverse of an entire trigonometric function, because none of these functions are one to one. So, for example, $\sin^{-1}(x)$ is not the inverse of $\sin(x)$: it is only the inverse of the new function obtained by restricting the domain of $\sin(x)$. The other, perhaps more serious problem, is that this notation collides unfortunately with the notation $\sin^2(x), \cos^2(x)$, etc. used for powers of trigonometric functions. While $\sin^2(x) = (\sin(x))^2$, $\sin^{-1}(x)$ is \textbf{not} the same thing as $(\sin(x))^{-1}$ (the latter function being, in fact, $\csc(x)$)!
 
+For these reasons, the somewhat more clumsy `arc' notation is preferred by many authors. We will use both notations in this textbook; the reader is warned to beware of the issues mentioned above when using the `$-1$' notation for inverse trigonometric functions.}
 \printexercises{exercises/02_07_exercises}
