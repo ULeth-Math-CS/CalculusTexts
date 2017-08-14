@@ -17,17 +17,58 @@ $\fpp(0) = 2$ && $f\,^{(5)}(0)=-19$
 }
 
 One shortcoming of this approximation is that the tangent line only matches the slope of $f$; it does not, for instance, match the concavity of $f$. We can find a polynomial, $p_2(x)$, that does match the concavity without much difficulty, though. The table in Figure \ref{fig:taypoly1introa1} gives the following information:
-$$f(0) = 2 \qquad \fp(0) = 1\qquad \fp'(0) = 2.$$
-Therefore, we want our polynomial $p_2(x)$ to have these same properties. That is, we need $$p_2(0) = 2 \qquad p_2'(0) = 1 \qquad p_2''(0) = 2.$$
+\[
+f(0) = 2 \qquad \fp(0) = 1\qquad \fp'(0) = 2.
+\]
+Therefore, we want our polynomial $p_2(x)$ to have these same properties. That is, we need 
+\[
+p_2(0) = 2 \qquad p_2'(0) = 1 \qquad p_2''(0) = 2.
+\]
 
-This is simply an initial--value problem. We can solve this using the techniques first described in Section \ref{sec:antider}. To keep $p_2(x)$ as simple as possible, we'll assume that not only  $p_2''(0)=2$, but that $p_2''(x)=2$. That is, the second derivative of $p_2$ is  constant.
+Let's start with a general quadratic function
+\[
+p(x) = a_0+a_1x+a_2x^2
+\]
+We find the following:
+\begin{align*}
+p_2(x) &= a_0+a_1x+a_2x^2 & p_2(0)=a_0\\
+p_2\primeskip '(x) &= a_1+2a_2x & p_2\primeskip '(0) &= a_1\\
+p_2\primeskip ''(x) & = 2a_2 & p_2\primeskip''(0) & = 2a_2.
+\end{align*}
+To get the desired properties above, we must have 
+\[
+a_0 = f(0) = 2,\, a_1 = \fp(0) = 1,\, 2a_2 = \fpp(0) = 2,
+\]
+so $a_0=2, a_1=1$, and $a_2 = 2/2=1$, giving us the polynomial
+\[
+p_2(x) = 2+x+x^2.
+\]
+We can repeat this approximation process by creating polynomials of higher degree that match more of the derivatives of $f$ at $x=0$. In general, a polynomial of degree $n$ can be created to match the first $n$ derivatives of $f$. Figure \ref{fig:taypoly1introb1} also shows $p_4(x)= -x^4/2-x^3/6+x^2+x+2$, whose first four derivatives at 0 match those of $f$. (Using the table in Figure \ref{fig:taypoly1introa1}, start with $p_4^{(4)}(x)=-12$ and solve the related initial--value problem.) For a general degree-$n$ polynomial
+\[
+p_n(x) = a_0+a_1x+\cdots +a_nx^n,
+\]
+we find that after $k$ derivatives,
+\[
+p_n^{(k)}(x) = k(k-1)(k-2)\cdots (2)(1)a_k + (k+1)k\cdots (2)a_{k+1}x + \cdots + n(n-1)\cdots (n-k+1)a_nx^{n-k}.
+\]
+Recalling the notation $k! = 1\cdot 2\cdot 3\cdots k$ for the product of the first $k$ integers, we have that
+\[
+p_n^{(k)}(0) = k!a_k.
+\]
+If we want the derivatives of $p_n$ to agree with some unknown function $f$ when $x=0$, then we must have
+\[
+a_k = \frac{f^{(k)}(0)}{k!}.
+\]
+%This is simply an initial--value problem. We can solve this using the techniques first described in Section \ref{sec:antider}. To keep $p_2(x)$ as simple as possible, we'll assume that not only  $p_2''(0)=2$, but that $p_2''(x)=2$. That is, the second derivative of $p_2$ is  constant.
 
-If $p_2''(x) = 2$, then $p_2'(x) = 2x+C$ for some constant $C$. Since we have determined that $p_2'(0) = 1$, we find that $C=1$ and so $p_2'(x) = 2x+1$. Finally, we can compute $p_2(x) = x^2+x+C$. Using our initial values, we know $p_2(0) = 2$ so $C=2.$ We conclude that $p_2(x) = x^2+x+2.$ This function is plotted with $f$ in Figure \ref{fig:taypoly1introb1}.
+%If $p_2''(x) = 2$, then $p_2'(x) = 2x+C$ for some constant $C$. Since we have determined that $p_2'(0) = 1$, we find that $C=1$ and so $p_2'(x) = 2x+1$. Finally, we can compute $p_2(x) = x^2+x+C$. Using our initial values, we know $p_2(0) = 2$ so $C=2.$ We conclude that $p_2(x) = x^2+x+2.$ This function is plotted with $f$ in Figure \ref{fig:taypoly1introb1}.
+\mnote{.65}{The notation $k!$ is read as ``$k$ factorial''. By convention, we also define $0!=1$, mostly because it makes our formulas look a lot nicer.}
+
 
 \mfigure{.52}{Plotting $f$, $p_2$ and $p_4$.}{fig:taypoly1introb1}{figures/figtaypolyintrob}
 \mfigure{.3}{Plotting $f$ and $p_{13}$.}{fig:taypoly1introc1}{figures/figtaypolyintroc}
 
-We can repeat this approximation process by creating polynomials of higher degree that match more of the derivatives of $f$ at $x=0$. In general, a polynomial of degree $n$ can be created to match the first $n$ derivatives of $f$. Figure \ref{fig:taypoly1introb1} also shows $p_4(x)= -x^4/2-x^3/6+x^2+x+2$, whose first four derivatives at 0 match those of $f$. (Using the table in Figure \ref{fig:taypoly1introa1}, start with $p_4^{(4)}(x)=-12$ and solve the related initial--value problem.)
+
 
 As we use more and more derivatives, our polynomial approximation to $f$ gets better and better. In this example, the interval on which the approximation is ``good'' gets bigger and bigger. Figure \ref{fig:taypoly1introc1} shows $p_{13}(x)$; we can visually affirm that this polynomial approximates $f$ very well on $[-2,3]$. (The polynomial $p_{13}(x)$ is not particularly ``nice''. It is {\scriptsize $$ \frac{16901x^{13}}{6227020800}+\frac{13x^{12}}{1209600}-\frac{1321x^{11}}{39916800}-\frac{779x^{10}}{1814400}-\frac{359x^9}{362880}+\frac{x^8}{240}+\frac{139x^7}{5040}+\frac{11 x^6}{360}-\frac{19x^5}{120}-\frac{x^4}{2}-\frac{x^3}{6}+x^2+x+2.)$$}
 
@@ -51,6 +92,8 @@ The polynomials we have created are examples of \emph{Taylor polynomials}, named
 \restoreboxwidth
 
 We will practice creating Taylor and Maclaurin polynomials in the following examples.\\
+
+\mnote{.7}{Colin Maclaurin was a Scottish mathematician, born in 1698. He lived until 1746, and made a number of contributions to the development of mathematics and physics. He was elected professor of mathematics at the University of Aberdeen at the age of 19, setting a record as the world's youngest professor, which he held until 2008! He was also a staunch foe of the Jacobite Rebellion, and organized the defence of Edinburgh against the army of Bonnie Prince Charlie.}
 
 \example{ex_taypoly11}{Finding and using Maclaurin polynomials}{
 \begin{enumerate}
@@ -332,7 +375,16 @@ It turns out that the differential equation we started with, $y\primeskip'=y^2$,
 
 It is beyond the scope of this text to pursue error analysis when using Taylor polynomials to approximate solutions to differential equations. This topic is often broached in introductory Differential Equations courses and usually covered in depth in Numerical Analysis courses. Such an analysis is very important; one needs to know how good their approximation is. We explored this example simply to demonstrate the usefulness of Taylor polynomials. \\
 
-Most of this chapter has been devoted to the study of infinite series. This section has taken a step back from this study, focusing instead on finite summation of terms. In the next section, we explore \sword{Taylor Series}, where we represent a function with an infinite series.
+We first learned of the derivative in the context of instantaneous rates of change and slopes of tangent lines. We furthered our understanding of the power of the derivative by studying how it relates to the graph of a function (leading to ideas of increasing/decreasing and concavity). This chapter has put the derivative to yet more uses:
+\begin{itemize}
+\item Equation solving (Newton's Method)
+\item	Related Rates (furthering our use of the derivative to find instantaneous rates of change)
+\item	Optimization (applied extreme values), and
+\item	Differentials (useful for various approximations and for something called integration).
+\item Taylor Polynomials (useful when we need more precise approximations than those given by differentials).
+\end{itemize}
+
+In the next chapters, we will consider the ``reverse'' problem to computing the derivative: given a function $f$, can we find a function whose derivative is $f$\hskip.75pt ? Be able to do so opens up an incredible world of mathematics and applications.
 
 
 %\refstepcounter{definitioncounter}

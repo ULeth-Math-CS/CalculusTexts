@@ -19,11 +19,13 @@ We explore both types of use of $\infty$ in turn.
 {We say $\ds \lim_{x\rightarrow c} f(x)=\infty$ if we can make the value of $f(x)$ arbitrarily large by choosing $x\neq c$ sufficiently close to $c$. \index{limit!of infinity}  
 }
 
-\mnote{.5}{The precise version of Definition \ref{def:limit_of_infinity} analgous to the $\epsilon$--$\delta$ definition from Section \ref{sec:limit_def} is as follows: $\ds \lim_{x\to c}f(x) = \infty$ if and only if for every $M>0$ there exists some $\delta>0$ such that if $0<\lvert x-c\rvert<\delta$, then $f(x)>M$.
+This is once again an informal definition, like Definition \ref{def:limit_informal}: we say that if we get close enough to $c$, then we can make $f(x)$ as large as we want, without giving precise answers to the questions ``How close?'' or ``How large?''  We can define limits equal to $-\infty$ in a similar way by requiring $f(x)$ to be large (in absolute value) but negative.
 
-That is, given any (large) value $M$, if we let $x$ get close enough to $c$ (within $\delta$ units of $c$), then $f(x)$ will be at least as large as $M$.}
+%\mnote{.5}{The precise version of Definition \ref{def:limit_of_infinity} analgous to the $\epsilon$--$\delta$ definition from Section \ref{sec:limit_def} is as follows: $\ds \lim_{x\to c}f(x) = \infty$ if and only if for every $M>0$ there exists some $\delta>0$ such that if $0<\lvert x-c\rvert<\delta$, then $f(x)>M$.
 
-In other words, if we get close enough to $c$, then we can make $f(x)$ as large as we want.  We can define limits equal to $-\infty$ in a similar way.
+%That is, given any (large) value $M$, if we let $x$ get close enough to $c$ (within $\delta$ units of $c$), then $f(x)$ will be at least as large as $M$.}
+
+%In other words, if we get close enough to $c$, then we can make $f(x)$ as large as we want.  We can define limits equal to $-\infty$ in a similar way.
 
 It is important to note that by saying $\ds \lim_{x\to c}f(x) = \infty$ we are implicitly stating that \textit{the} limit of $f(x)$, as $x$ approaches $c$, \textit{does not exist.} A limit only exists when $f(x)$ approaches an actual numeric value. We use the concept of limits that approach infinity because it is helpful and descriptive.\\
 
@@ -32,6 +34,14 @@ It is important to note that by saying $\ds \lim_{x\to c}f(x) = \infty$ we are i
 \mfigure{.25}{Observing infinite limit as $x\to 1$ in Example \ref{ex_inflim1}.}{fig:inflim1}{figures/fignolimit2}}
 {In Example \ref{ex_no_limit2} of Section \ref{sec:limit_intro}, by inspecting values of $x$ close to 1 we concluded that this limit does not exist.  That is, it cannot equal any real number.  But the limit could be infinite.  And in fact, we see that the function does appear to be growing larger and larger, as $f(.99)=10^4$, $f(.999)=10^6$, $f(.9999)=10^8$.  A similar thing happens on the other side of 1.  In general, we can see that as the difference $\lvert x-1\rvert$ gets smaller, the value of $f(x)$ gets larger and larger,  so we may say $\ds\lim_{x\rightarrow 1}1/{(x-1)^2}=\infty$.
 }\\
+%{In Example \ref{ex_no_limit2} of Section \ref{sec:limit_intro}, by inspecting values of $x$ close to 1 we concluded that this limit does not exist.  That is, it cannot equal any real number.  But the limit could be infinite.  And in fact, we see that the function does appear to be growing larger and larger, as $f(.99)=10^4$, $f(.999)=10^6$, $f(.9999)=10^8$.  A similar thing happens on the other side of 1.  In general, let $M$ denote some ``large'' value. How close should $x$ be to 1 in order to have $1/(x-1)^2$ larger than $M$? Let $\delta=1/\sqrt{M}$. If $x$ is within $\delta$ of 1, i.e., if $|x-1|<1/\sqrt{M}$, then:
+%	\begin{align*}
+%	|x-1| &< \frac{1}{\sqrt{M}} \\
+%	(x-1)^2 &< \frac{1}{M}\\
+%	\frac{1}{(x-1)^2} &> M.
+%	\end{align*}
+%Thus, we can make $\dfrac{1}{(x-1)^2}$ larger than any value ($M$) by taking $x$ close enough to 1 (within a distance of $1/\sqrt{M}$).  So we may say $\ds\lim_{x\rightarrow 1}1/{(x-1)^2}=\infty$.
+%}\\
 \pagebreak
 
 \example{ex_inflim2}{Evaluating limits involving infinity}{
@@ -113,11 +123,11 @@ Graphically, it concerns the behaviour of the function to the ``far right'' of t
 \restoreboxwidth
 %\setlength{\specialboxlength}{\textwidth-2\specialboxinnerseplength}
 
-\mnote{.7}{The precise versions of the definitions in Definition \ref{def:limit_at_infinity} are given as follows:
+%\mnote{.7}{The precise versions of the definitions in Definition \ref{def:limit_at_infinity} are given as follows:
 
-We say $\ds\lim_{x\rightarrow\infty} f(x)=L$ if for every $\epsilon>0$ there exists $M>0$ such that if $x\geq M$, then $|f(x)-L|<\epsilon$.
+%We say $\ds\lim_{x\rightarrow\infty} f(x)=L$ if for every $\epsilon>0$ there exists $M>0$ such that if $x\geq M$, then $|f(x)-L|<\epsilon$.
 
-Similarly, we say $\ds\lim_{x\rightarrow-\infty} f(x)=L$ if for every $\epsilon>0$ there exists $M<0$ such that if $x\leq M$, then $|f(x)-L|<\epsilon$.}
+%Similarly, we say $\ds\lim_{x\rightarrow-\infty} f(x)=L$ if for every $\epsilon>0$ there exists $M<0$ such that if $x\leq M$, then $|f(x)-L|<\epsilon$.}
 
 %We can define $\lim_{x\rightarrow-\infty} f(x)=L$ in an analogous way.  
 We can also define limits such as $\ds\lim_{x\rightarrow\infty}f(x)=\infty$ by combining this definition with Definition \ref{def:limit_of_infinity}. \\ %It is a good exercise to try this.
@@ -179,7 +189,7 @@ Figure \ref{fig:hzasy}(c) shows that $f(x) = (\sin x)/x$ has even more interesti
 
 We can analytically evaluate limits at infinity for rational functions once we understand $\ds\lim_{x\rightarrow\infty} 1/x$.  As $x$ gets larger and larger, the $1/x$ gets smaller and smaller, approaching 0.  We can, in fact, make $1/x$ as small as we want by choosing a large enough value of $x$.  
 
-\mnote{.6}{To prove that $\ds\lim_{x\to\infty} 1/x=0$ using the precise definition, note that given $\epsilon>0$, we can make $1/x<\epsilon$  by choosing $x>M=1/\epsilon$.  }
+%\mnote{.6}{To prove that $\ds\lim_{x\to\infty} 1/x=0$ using the precise definition, note that given $\epsilon>0$, we can make $1/x<\epsilon$  by choosing $x>M=1/\epsilon$.  }
 
 %\mfigure{.3}{Graphing $f(x) = \dfrac{\sin x}{x}$ to display the oscillating behavior of its horizontal asymptote.}{fig:hzasy4}{figures/fighzasy4}
 
