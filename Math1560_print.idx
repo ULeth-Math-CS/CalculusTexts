@@ -47,34 +47,34 @@
 \indexentry{derivative!Power Rule|hyperpage}{67}
 \indexentry{Power Rule!differentiation|hyperpage}{67}
 \indexentry{derivative!basic rules|hyperpage}{67}
-\indexentry{derivative!Sum/Difference Rule|hyperpage}{68}
-\indexentry{Sum/Difference Rule!of derivatives|hyperpage}{68}
-\indexentry{derivative!Constant Multiple Rule|hyperpage}{68}
-\indexentry{Constant Multiple Rule!of derivatives|hyperpage}{68}
-\indexentry{derivative!higher order|hyperpage}{69}
-\indexentry{derivative!notation|hyperpage}{69}
-\indexentry{derivative!higher order!interpretation|hyperpage}{70}
-\indexentry{Power Rule!differentiation|hyperpage}{73}
-\indexentry{derivative!Product Rule|hyperpage}{73}
-\indexentry{derivative!Quotient Rule|hyperpage}{75}
-\indexentry{Quotient Rule|hyperpage}{75}
-\indexentry{derivative!trigonometric functions|hyperpage}{76}
-\indexentry{derivative!Power Rule|hyperpage}{78}
-\indexentry{Power Rule!differentiation|hyperpage}{78}
-\indexentry{derivative!Chain Rule|hyperpage}{83}
-\indexentry{Chain Rule|hyperpage}{83}
-\indexentry{derivative!Generalized Power Rule|hyperpage}{83}
-\indexentry{Generalized Power Rule|hyperpage}{83}
-\indexentry{derivative!exponential functions|hyperpage}{87}
-\indexentry{Chain Rule!notation|hyperpage}{87}
-\indexentry{derivative!Chain Rule|hyperpage}{87}
-\indexentry{implicit differentiation|hyperpage}{90}
-\indexentry{derivative!implicit|hyperpage}{90}
-\indexentry{derivative!Power Rule|hyperpage}{94}
-\indexentry{Power Rule!differentiation|hyperpage}{94}
-\indexentry{logarithmic differentiation|hyperpage}{95}
-\indexentry{derivative!inverse function|hyperpage}{99}
-\indexentry{derivative!inverse trig.|hyperpage}{101}
+\indexentry{derivative!Sum/Difference Rule|hyperpage}{70}
+\indexentry{Sum/Difference Rule!of derivatives|hyperpage}{70}
+\indexentry{derivative!Constant Multiple Rule|hyperpage}{70}
+\indexentry{Constant Multiple Rule!of derivatives|hyperpage}{70}
+\indexentry{derivative!higher order|hyperpage}{71}
+\indexentry{derivative!notation|hyperpage}{71}
+\indexentry{derivative!higher order!interpretation|hyperpage}{72}
+\indexentry{Power Rule!differentiation|hyperpage}{74}
+\indexentry{derivative!Product Rule|hyperpage}{74}
+\indexentry{derivative!Quotient Rule|hyperpage}{76}
+\indexentry{Quotient Rule|hyperpage}{76}
+\indexentry{derivative!trigonometric functions|hyperpage}{77}
+\indexentry{derivative!Power Rule|hyperpage}{79}
+\indexentry{Power Rule!differentiation|hyperpage}{79}
+\indexentry{derivative!Chain Rule|hyperpage}{84}
+\indexentry{Chain Rule|hyperpage}{84}
+\indexentry{derivative!Generalized Power Rule|hyperpage}{84}
+\indexentry{Generalized Power Rule|hyperpage}{84}
+\indexentry{derivative!exponential functions|hyperpage}{88}
+\indexentry{Chain Rule!notation|hyperpage}{88}
+\indexentry{derivative!Chain Rule|hyperpage}{88}
+\indexentry{implicit differentiation|hyperpage}{91}
+\indexentry{derivative!implicit|hyperpage}{91}
+\indexentry{derivative!Power Rule|hyperpage}{95}
+\indexentry{Power Rule!differentiation|hyperpage}{95}
+\indexentry{logarithmic differentiation|hyperpage}{96}
+\indexentry{derivative!inverse function|hyperpage}{100}
+\indexentry{derivative!inverse trig.|hyperpage}{102}
 \indexentry{extreme values|hyperpage}{105}
 \indexentry{absolute minimum|hyperpage}{105}
 \indexentry{minimum!absolute|hyperpage}{105}
@@ -126,8 +126,8 @@
 \indexentry{Taylor Polynomial!definition|hyperpage}{163}
 \indexentry{Maclaurin Polynomial!definition|hyperpage}{163}
 \indexentry{Maclaurin Polynomial|hyperindexformat{\see{Taylor Polynomial}}}{163}
-\indexentry{Taylor Polynomial!Taylor's Theorem|hyperpage}{165}
-\indexentry{Taylor's Theorem|hyperpage}{165}
+\indexentry{Taylor Polynomial!Taylor's Theorem|hyperpage}{166}
+\indexentry{Taylor's Theorem|hyperpage}{166}
 \indexentry{antiderivative|hyperpage}{173}
 \indexentry{indefinite integral|hyperpage}{173}
 \indexentry{integration!indefinite|hyperpage}{173}

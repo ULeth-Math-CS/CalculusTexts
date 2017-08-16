@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2015.11.18)  7 JUL 2017 11:48
+This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2015.11.18)  15 AUG 2017 21:55
 entering extended mode
 **Math1560_ebook.tex
 (Math1560_ebook.tex
@@ -110,10 +110,13 @@ File: ppxetex.def 2015/09/18 v0.5d Pdfpages driver for XeTeX (AM)
 \c@AM@survey=\count92
 \AM@templatesizebox=\box27
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\refcount.sty"
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\xr.sty"
 Package: xr 1994/05/28 v5.02 eXternal References (DPC)
 )
-Package xr Info: IMPORTING LABELS FROM Math2560_ebook.aux on input line 23.
+Package xr Info: IMPORTING LABELS FROM Math2560_ebook.aux on input line 17.
 
 (headers/Page_Size_Calculus.tex
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
@@ -927,7 +930,7 @@ Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
 Package: xcolor-patch 2011/01/30 xcolor patch
 Package hobsub Info: Skipping package `atveryend' (already loaded).
 Package hobsub Info: Skipping package `atbegshi' (already loaded).
-Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package hobsub Info: Skipping package `refcount' (already loaded).
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
@@ -1483,24 +1486,24 @@ ex-text;" at 10.0pt
 \symLatin:m:it=\mathgroup9
 \symGreek:m:n=\mathgroup10
 \symGreek:m:it=\mathgroup11
-LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 45.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 38.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
 (Font)                  EU1/Calibri(0)/m/n --> EU1/Calibri(0)/bx/n on input lin
-e 45.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 45.
+e 38.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 38.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> EU1/Calibri(0)/m/it on input line 45.
+(Font)                  OT1/cmr/m/it --> EU1/Calibri(0)/m/it on input line 38.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> EU1/Calibri(0)/m/it on input line 45.
+(Font)                  OT1/cmr/bx/it --> EU1/Calibri(0)/m/it on input line 38.
 
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 45.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 38.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> EU1/Calibri(0)/bx/n on input line 45.
+(Font)                  OT1/cmr/bx/n --> EU1/Calibri(0)/bx/n on input line 38.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> EU1/Calibri(0)/bx/n on input line 45.
+(Font)                  OT1/cmr/bx/n --> EU1/Calibri(0)/bx/n on input line 38.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  EU1/Calibri(0)/m/it --> EU1/Calibri(0)/bx/it on input l
-ine 45.
+ine 38.
 \symOperators:m:n=\mathgroup12
 Requested font "[cmmi10]" at 10.0pt
  -> C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
@@ -1558,48 +1561,48 @@ Requested font "[cmmi10]/I/OT" at 10.0pt
 . and font adjustment code:
 . 
 .................................................
-LaTeX Font Info:    Redeclaring symbol font `Greek:m:n' on input line 45.
+LaTeX Font Info:    Redeclaring symbol font `Greek:m:n' on input line 38.
 LaTeX Font Info:    Overwriting symbol font `Greek:m:n' in version `normal'
 (Font)                  EU1/Calibri(0)/m/n --> EU1/[cmmi10](0)/m/n on input lin
-e 45.
+e 38.
 LaTeX Font Info:    Overwriting symbol font `Greek:m:n' in version `bold'
 (Font)                  EU1/Calibri(0)/m/n --> EU1/[cmmi10](0)/m/n on input lin
-e 45.
-LaTeX Font Info:    Redeclaring symbol font `Greek:m:it' on input line 45.
+e 38.
+LaTeX Font Info:    Redeclaring symbol font `Greek:m:it' on input line 38.
 LaTeX Font Info:    Overwriting symbol font `Greek:m:it' in version `normal'
 (Font)                  EU1/Calibri(0)/m/it --> EU1/[cmmi10](0)/m/it on input l
-ine 45.
+ine 38.
 LaTeX Font Info:    Overwriting symbol font `Greek:m:it' in version `bold'
 (Font)                  EU1/Calibri(0)/m/it --> EU1/[cmmi10](0)/m/it on input l
-ine 45.
+ine 38.
 Requested font "[cmmi10]/OT:mapping=tex-text;" at 10.0pt
  -> C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 
 (Math1560_ebook.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 63.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 63.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 56.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 56.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\tipa\t3cmr.fd"
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    ... okay on input line 56.
 \AtBeginShipoutBox=\box90
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
@@ -1645,7 +1648,7 @@ Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EveryShipout initializing macros
-Package hyperref Info: Link coloring OFF on input line 63.
+Package hyperref Info: Link coloring OFF on input line 56.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1655,9 +1658,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count330
 )
-LaTeX Info: Redefining \ref on input line 63.
-LaTeX Info: Redefining \pageref on input line 63.
-LaTeX Info: Redefining \nameref on input line 63.
+LaTeX Info: Redefining \ref on input line 56.
+LaTeX Info: Redefining \pageref on input line 56.
+LaTeX Info: Redefining \nameref on input line 56.
 
 (Math1560_ebook.out) (Math1560_ebook.out)
 \@outlinefile=\write6
@@ -2548,11 +2551,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 File: figures/figoneoverxsquared.pdf Graphic file (type QTm)
+
 <use  "figures/figoneoverxsquared.pdf" >
 File: figures/fignolimit2.pdf Graphic file (type QTm)
  <use  "figures/fignolimit2.pdf" >
@@ -2563,27 +2570,27 @@ Overfull \hbox (2.99962pt too wide) has occurred while \output is active
 [25
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 51--52
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--70
+Underfull \hbox (badness 10000) in paragraph at lines 72--74
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
 
@@ -2599,32 +2606,32 @@ Underfull \hbox (badness 2096) has occurred while \output is active
  []
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--117
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--117
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
 
  []
 
 
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 117--121
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 121--125
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--121
+Underfull \hbox (badness 10000) in paragraph at lines 121--125
 
  []
 
@@ -2632,17 +2639,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 117--121
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [27]
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--157
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
+Underfull \hbox (badness 10000) in paragraph at lines 170--171
 
  []
 
@@ -2653,17 +2660,17 @@ File: figures/fighzasy3.pdf Graphic file (type QTm)
 File: figures/fighzasy4.pdf Graphic file (type QTm)
 
 <use  "figures/fighzasy4.pdf" >
-Overfull \hbox (53.9989pt too wide) in paragraph at lines 173--178
+Overfull \hbox (53.9989pt too wide) in paragraph at lines 177--182
 [][]
  []
 
 
-Overfull \hbox (100.0pt too wide) in paragraph at lines 172--182
+Overfull \hbox (100.0pt too wide) in paragraph at lines 176--186
 $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--182
+Underfull \hbox (badness 10000) in paragraph at lines 176--186
 
  []
 
@@ -2678,19 +2685,19 @@ Overfull \hbox (7.99963pt too wide) has occurred while \output is active
  []
 
 [28]
-Overfull \hbox (0.95432pt too wide) in paragraph at lines 186--187
+Overfull \hbox (0.95432pt too wide) in paragraph at lines 190--191
 \EU1/Calibri(0)/m/n/10 understand $[] []\OML/cmm/m/it/10 =[]$\EU1/Calibri(0)/m/
 n/10 . As $[]$ gets larger and larger, the $[]\OML/cmm/m/it/10 =[]$ \EU1/Calibr
 i(0)/m/n/10 gets smaller and smaller,
  []
 
 
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 228--229
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 232--233
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--229
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
 
  []
 
@@ -2698,7 +2705,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 228--229
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [29]
-Underfull \hbox (badness 10000) in paragraph at lines 237--239
+Underfull \hbox (badness 10000) in paragraph at lines 241--243
 
  []
 
@@ -2706,22 +2713,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 237--239
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [30]
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
 
  []
 
 
-Overfull \hbox (1.50717pt too wide) in paragraph at lines 294--294
+Overfull \hbox (1.50717pt too wide) in paragraph at lines 298--298
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 294--294
+Underfull \hbox (badness 10000) in paragraph at lines 298--298
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 294--295
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
 
  []
 
@@ -2771,13 +2778,13 @@ Overfull \hbox (22.9996pt too wide) has occurred while \output is active
 
 File: figures/fig01_06_ex_09.pdf Graphic file (type QTm)
  <use  "figures/fig01_06_ex_09.pdf" >
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 298--298
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 302--302
 [][] [] 
  []
 
 File: figures/fig01_06_ex_10.pdf Graphic file (type QTm)
 <use  "figures/fig01_06_ex_10.pdf" >
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 298--298
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 302--302
 [][] [] 
  []
 
@@ -2793,12 +2800,12 @@ File: figures/fig01_06_ex_40.pdf Graphic file (type QTm)
 [32
 
 ]
-Overfull \hbox (1.35645pt too wide) in paragraph at lines 298--298
+Overfull \hbox (1.35645pt too wide) in paragraph at lines 302--302
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--298
+Underfull \hbox (badness 10000) in paragraph at lines 302--302
 
  []
 
@@ -5923,7 +5930,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--76
  []
 
 [145]
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
 
  []
 
@@ -5940,7 +5947,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 File: figures/figrr4.pdf Graphic file (type QTm)
 <use  "figures/figrr4.pdf" > [146]
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
 
  []
 
@@ -6208,34 +6215,6 @@ Overfull \hbox (3.55072pt too wide) in paragraph at lines 19--20
 n/10 , that does match the concavity without much difficulty, though.
  []
 
-
-Overfull \hbox (5.64442pt too wide) detected at line 32
-[] \OT1/cmr/m/n/7 + [] \OMS/cmsy/m/n/7 ^^@ [] ^^@ [] ^^@ [] \OT1/cmr/m/n/7 + []
- + [] + [] \OMS/cmsy/m/n/7 ^^@ [] ^^@ [] ^^@ [] \OT1/cmr/m/n/7 + [][] + [] + []
-\OML/cmm/m/it/7 :\OT1/cmr/m/n/7 )
- []
-
-
-Overfull \hbox (0.24686pt too wide) in paragraph at lines 34--35
-[]\EU1/Calibri(0)/m/n/10 The polynomials we have created are examples of \EU1/C
-alibri(0)/m/it/10 Taylor polynomials\EU1/Calibri(0)/m/n/10 , named
- []
-
-
-Overfull \hbox (31.39998pt too wide) in paragraph at lines 49--50
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
-
- []
-
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 37--52
-$[]$ 
- []
-
 File: figures/figtaypolyintroa.pdf Graphic file (type QTm)
 <use  "figures/figtaypolyintroa.pdf" >
 Overfull \hbox (6.99963pt too wide) has occurred while \output is active
@@ -6243,84 +6222,114 @@ Overfull \hbox (6.99963pt too wide) has occurred while \output is active
  []
 
 File: figures/figtaypolyintrob.pdf Graphic file (type QTm)
-<use  "figures/figtaypolyintrob.pdf" >
-File: figures/figtaypolyintroc.pdf Graphic file (type QTm)
- <use  "figures/figtaypolyintroc.pdf" >
-[162
+<use  "figures/figtaypolyintrob.pdf" > [162
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
+Overfull \hbox (5.64442pt too wide) detected at line 84
+[] \OT1/cmr/m/n/7 + [] \OMS/cmsy/m/n/7 ^^@ [] ^^@ [] ^^@ [] \OT1/cmr/m/n/7 + []
+ + [] + [] \OMS/cmsy/m/n/7 ^^@ [] ^^@ [] ^^@ [] \OT1/cmr/m/n/7 + [][] + [] + []
+\OML/cmm/m/it/7 :\OT1/cmr/m/n/7 )
+ []
+
+
+Overfull \hbox (0.24686pt too wide) in paragraph at lines 86--87
+[]\EU1/Calibri(0)/m/n/10 The polynomials we have created are examples of \EU1/C
+alibri(0)/m/it/10 Taylor polynomials\EU1/Calibri(0)/m/n/10 , named
+ []
+
+
+Overfull \hbox (31.39998pt too wide) in paragraph at lines 101--102
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--86
+Overfull \hbox (20.0pt too wide) in paragraph at lines 89--104
+$[]$ 
+ []
+
+
+Underfull \vbox (badness 1303) has occurred while \output is active []
+
+File: figures/figtaypolyintroc.pdf Graphic file (type QTm)
+
+<use  "figures/figtaypolyintroc.pdf" >
+Underfull \hbox (badness 1838) has occurred while \output is active
+\EU1/Calibri(0)/m/n/9 Scottish mathematician, born in 1698.
+ []
+
+[163]
+Underfull \hbox (badness 10000) in paragraph at lines 138--138
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--150
+Underfull \hbox (badness 10000) in paragraph at lines 206--206
 
  []
 
-File: figures/figtaypoly1b.pdf Graphic file (type QTm)
-<use  "figures/figtaypoly1b.pdf" > [163]
-Overfull \hbox (0.87009pt too wide) in paragraph at lines 150--150
+
+Overfull \hbox (0.87009pt too wide) in paragraph at lines 206--206
 [] 
  []
 
+File: figures/figtaypoly1b.pdf Graphic file (type QTm)
+<use  "figures/figtaypoly1b.pdf" >
+Overfull \hbox (20.54121pt too wide) has occurred while \output is active
+ [][] 
+ []
 
-Overfull \hbox (0.55269pt too wide) in paragraph at lines 150--150
+[164]
+Overfull \hbox (0.55269pt too wide) in paragraph at lines 206--206
 \EU1/Calibri(0)/m/n/10 This approximation is not terribly impressive: a hand he
 ld calculator shows
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
+Underfull \hbox (badness 10000) in paragraph at lines 206--207
 
- []
-
-
-Overfull \hbox (20.54121pt too wide) has occurred while \output is active
- [][] 
  []
 
 File: figures/figtaypoly2b.pdf Graphic file (type QTm)
 <use  "figures/figtaypoly2b.pdf" >
 File: figures/figtaypoly2c.pdf Graphic file (type QTm)
- <use  "figures/figtaypoly2c.pdf" > [164]
-Overfull \hbox (66.39998pt too wide) in paragraph at lines 177--180
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 177--180
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--184
-
- []
-
-
+ <use  "figures/figtaypoly2c.pdf" >
 Underfull \hbox (badness 1033) has occurred while \output is active
 \EU1/Calibri(0)/m/it/9 could \EU1/Calibri(0)/m/n/9 be used in calculators and c
 om-
  []
 
-[165] [166]
-Underfull \hbox (badness 10000) in paragraph at lines 212--213
+[165]
+Overfull \hbox (31.39998pt too wide) in paragraph at lines 233--234
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--234
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--252
+Underfull \hbox (badness 10000) in paragraph at lines 239--240
+
+ []
+
+[166]
+Underfull \hbox (badness 10000) in paragraph at lines 270--271
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--310
 
  []
 
@@ -6329,58 +6338,44 @@ Overfull \hbox (7.98204pt too wide) has occurred while \output is active
  [][] 
  []
 
-File: figures/figtaypoly4.pdf Graphic file (type QTm)
-<use  "figures/figtaypoly4.pdf" > [167
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 284--284
+[167]
+Underfull \hbox (badness 10000) in paragraph at lines 344--344
 
  []
 
 
-Overfull \hbox (1.66519pt too wide) detected at line 284
+Overfull \hbox (1.66519pt too wide) detected at line 344
 [][]\OT1/cmr/m/n/10 ([]) = [] + []([] \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 ) 
 + []([] \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 )[] + []([] \OMS/cmsy/m/n/10 ^^@
  []\OT1/cmr/m/n/10 )[] + []([] \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 )[]\OML/c
 mm/m/it/10 :
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 284--286
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 287--288
-
- []
-
-
-Overfull \hbox (0.91318pt too wide) in paragraph at lines 330--330
-[]$[]$\EU1/Calibri(0)/m/n/10 One might initially think that not enough informat
-ion is given
- []
-
-
+File: figures/figtaypoly4.pdf Graphic file (type QTm)
+<use  "figures/figtaypoly4.pdf" >
 Overfull \hbox (16.4611pt too wide) has occurred while \output is active
  [][] 
  []
 
 File: figures/figtaypoly5.pdf Graphic file (type QTm)
-<use  "figures/figtaypoly5.pdf" > [168
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 330--331
+<use  "figures/figtaypoly5.pdf" > [168]
+Underfull \hbox (badness 10000) in paragraph at lines 347--348
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--334
-
+Overfull \hbox (0.91318pt too wide) in paragraph at lines 393--393
+[]$[]$\EU1/Calibri(0)/m/n/10 One might initially think that not enough informat
+ion is given
  []
 
 File: figures/figtaypoly6.pdf Graphic file (type QTm)
 <use  "figures/figtaypoly6.pdf" > [169]
+Underfull \hbox (badness 10000) in paragraph at lines 396--397
+
+ []
+
+[170]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: custom
@@ -6413,13 +6408,9 @@ File: figures/figtaypoly6.pdf Graphic file (type QTm)
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- [170
+ [171
 
-] [171]) [172
-
-
-
-]
+] [172])
 Chapter 5.
 (text/05_Antiderivatives.tex
 Underfull \hbox (badness 10000) in paragraph at lines 27--27
@@ -6447,6 +6438,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--39
  []
 
 [173
+
+
+
 
 ]
 File: figures/figanti1.pdf Graphic file (type QTm)
@@ -6627,10 +6621,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
-
-Underfull \vbox (badness 1342) has occurred while \output is active []
-
- [184]
+[184]
 Overfull \hbox (13.4406pt too wide) in paragraph at lines 192--192
 []\EU1/Calibri(0)/m/n/10 Note how the second integral has the bounds “reversed.
 ” Therefore $[][] []\OT1/cmr/m/n/10 ([]) [][]$
@@ -6861,47 +6852,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--141
  []
 
 [192]
-Underfull \hbox (badness 10000) in paragraph at lines 155--156
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
  []
 
 File: figures/figrie5a.pdf Graphic file (type QTm)
 <use  "figures/figrie5a.pdf" >
-Overfull \hbox (1.72498pt too wide) in paragraph at lines 179--180
+Overfull \hbox (1.72498pt too wide) in paragraph at lines 181--182
 []\EU1/Calibri(0)/m/n/10 When using the Right Hand Rule, the height of the $[][
 ]$ rectangle will be $[]\OT1/cmr/m/n/10 ([][])$\EU1/Calibri(0)/m/n/10 . 
  []
 
 
-Overfull \hbox (24.84949pt too wide) in paragraph at lines 181--182
+Overfull \hbox (24.84949pt too wide) in paragraph at lines 183--184
 []\EU1/Calibri(0)/m/n/10 When using the Midpoint Rule, the height of the $[][]$
  rectangle will be $[] []$. 
  []
 
 File: figures/figrie5.pdf Graphic file (type QTm)
 <use  "figures/figrie5.pdf" > [193]
-Underfull \hbox (badness 10000) in paragraph at lines 193--228
+Underfull \hbox (badness 10000) in paragraph at lines 195--230
 
  []
 
-
-Underfull \vbox (badness 1005) has occurred while \output is active []
-
-File: figures/figrie7.pdf Graphic file (type QTm)
-
-<use  "figures/figrie7.pdf" > [194]
-Overfull \hbox (1.57114pt too wide) in paragraph at lines 273--273
+[194]
+Overfull \hbox (1.57114pt too wide) in paragraph at lines 275--275
 []\EU1/Calibri(0)/m/n/10 Using many, many rectangles, we have a likely good app
 roximation of $[][]\OT1/cmr/m/n/10 ([][] \OMS/cmsy/m/n/10 ^^@
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--274
+Underfull \hbox (badness 10000) in paragraph at lines 275--276
 
  []
 
 
-Overfull \hbox (0.5903pt too wide) in paragraph at lines 275--277
+Overfull \hbox (0.5903pt too wide) in paragraph at lines 277--279
 []\EU1/Calibri(0)/m/n/10 Before the above example, we stated what the summation
 s for the Left Hand,
  []
@@ -6909,44 +6895,46 @@ s for the Left Hand,
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [195]
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 302--303
+File: figures/figrie7.pdf Graphic file (type QTm)
+
+<use  "figures/figrie7.pdf" > [195]
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 304--305
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 302--303
+Underfull \hbox (badness 10000) in paragraph at lines 304--305
 
  []
 
 
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 324--346
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 326--348
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--346
+Underfull \hbox (badness 10000) in paragraph at lines 326--348
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--349
+Underfull \hbox (badness 10000) in paragraph at lines 350--351
 
  []
 
 File: figures/figriedef.pdf Graphic file (type QTm)
 <use  "figures/figriedef.pdf" > [196]
-Underfull \hbox (badness 10000) in paragraph at lines 376--377
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 378--379
 
  []
 
 
-Overfull \hbox (2.21948pt too wide) in paragraph at lines 416--416
+Underfull \hbox (badness 10000) in paragraph at lines 380--381
+
+ []
+
+
+Overfull \hbox (2.21948pt too wide) in paragraph at lines 418--418
  $[]$ $[]$[]\EU1/Calibri(0)/bx/n/10 Approximating definite integrals with a for
 mula, using sums 
  []
@@ -6964,44 +6952,44 @@ Underfull \hbox (badness 1817) has occurred while \output is active
  []
 
 [197]
-Overfull \hbox (24.62164pt too wide) in paragraph at lines 416--416
+Overfull \hbox (24.62164pt too wide) in paragraph at lines 418--418
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 416--417
+Underfull \hbox (badness 10000) in paragraph at lines 418--419
 
  []
 
 [198]
-Underfull \hbox (badness 10000) in paragraph at lines 420--421
+Underfull \hbox (badness 10000) in paragraph at lines 422--423
 
  []
 
 
-Overfull \hbox (2.21948pt too wide) in paragraph at lines 451--451
+Overfull \hbox (2.21948pt too wide) in paragraph at lines 453--453
  $[]$ $[]$[]\EU1/Calibri(0)/bx/n/10 Approximating definite integrals with a for
 mula, using sums 
  []
 
 
-Overfull \hbox (14.99422pt too wide) in paragraph at lines 451--451
+Overfull \hbox (14.99422pt too wide) in paragraph at lines 453--453
 [] 
  []
 
 File: figures/figrie9.pdf Graphic file (type QTm)
 <use  "figures/figrie9.pdf" > [199]
-Underfull \hbox (badness 10000) in paragraph at lines 451--452
+Underfull \hbox (badness 10000) in paragraph at lines 453--454
 
  []
 
 [200]
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 500--503
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 502--505
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 500--503
+Underfull \hbox (badness 10000) in paragraph at lines 502--505
 
  []
 
@@ -7843,18 +7831,18 @@ Package atenddvi Info: Last page = 262.
  [18
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 344.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 344.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 186.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 186.
  (Math1560_ebook.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 344.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 344.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 344.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 186.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 186.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
  ) 
 Here is how much of TeX's memory you used:
- 53193 strings out of 428755
- 1125945 string characters out of 3164219
- 1477867 words of memory out of 3000000
- 54319 multiletter control sequences out of 15000+200000
+ 52896 strings out of 428755
+ 1121846 string characters out of 3164219
+ 1457062 words of memory out of 3000000
+ 54019 multiletter control sequences out of 15000+200000
  15093 words of font info for 134 fonts, out of 3000000 for 9000
  1096 hyphenation exceptions out of 8191
  62i,24n,90p,10387b,940s stack positions out of 5000i,500n,10000p,200000b,50000s

@@ -1,0 +1,205 @@
+\RequirePackage{ifthen}
+\newboolean{longpage}
+\setboolean{longpage}{false}
+\ifthenelse{\boolean{longpage}}%
+{\documentclass[10pt]{article}}%
+{\documentclass[10pt]{book}}
+
+\newboolean{printlabelname}
+\setboolean{printlabelname}{false}
+\ifthenelse{\boolean{printlabelname}}{\usepackage[notref,notcite]{showkeys}}{}
+
+\usepackage{refcount}
+\usepackage{pdfpages}
+
+
+%% end detour
+%\usepackage{amsmath}
+\usepackage{xr}
+\externaldocument{Math2570_old_ref}
+
+\input{headers/Page_Size_Calculus}
+\usepackage{APEX_format}
+\input{headers/Header_Calculus}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+
+
+\ifthenelse{\boolean{xetex}}%
+	{\sffamily
+	%%\usepackage{fontspec}
+	\usepackage{mathspec}
+	\setallmainfonts[Mapping=tex-text]{Calibri}
+	\setmainfont[Mapping=tex-text]{Calibri}
+	\setsansfont[Mapping=tex-text]{Calibri}
+	\setmathsfont(Greek){[cmmi10]}}
+	{\usepackage[sfdefault,lf]{carlito}
+%% The 'lf' option for lining figures
+%% The 'sfdefault' option to make the base font sans serif
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{\carlitoOsF #1}}
+	
+	\ifthenelse{\boolean{luatex}}%
+	{\sffamily
+	\usepackage{fontspec}
+	\usepackage{unicode-math}
+	%\usepackage{mathspec}
+	%\setallmainfonts[Mapping=tex-text]{Calibri}
+	\setmainfont{Calibri}
+	%\setsansfont[Mapping=tex-text]{Calibri}
+	\setmathfont[range=\mathup]{Calibri}
+	\setmathfont[range=\mathit]{Calibri Italic}
+	}
+	{}
+
+\makeindex
+
+%%%\tracingonline=1
+\begin{document}
+
+
+\printincolor
+%\printinblackandwhite
+
+%\printexercisenames
+%\printallanswers
+
+\input{text/front_matter_and_coverIII}
+
+
+%\setcounterref{definitioncounter}{29}
+\addtocounter{definitioncounter}{28}
+%\setcounterref{theoremcounter}{62}
+\addtocounter{theoremcounter}{61}
+%\setcounterref{keyideacounter}{31}
+\addtocounter{keyideacounter}{30}
+%\setcounterref{examplecounter}{264}
+\addtocounter{examplecounter}{263}
+
+
+\addtocounter{page}{386}
+\addtocounter{chapter}{8}
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{Curves in the Plane}
+\thispagestyle{empty}
+\input{text/09_Conic_Sections}
+\input{text/09_Parametric_Equations}
+\input{text/09_Parametric_Calculus}
+\input{text/09_Polar_Intro}
+\input{text/09_Polar_Calculus}
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{Sequences and Series}\label{chapter:sequences_series}
+\thispagestyle{empty}
+
+\input{text/08_Sequences}
+\input{text/08_Series}
+\input{text/08_Integral_Comparison_Tests}
+\input{text/08_Ratio_Root_Tests}
+\input{text/08_Alternating_Series}
+\input{text/08_Power_Series}
+\input{text/08_Taylor_Polynomials}
+\input{text/08_Taylor_Series}
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+
+%%
+%%%\addtocounter{chapter}{8}
+%
+%
+%%%\addtocounter{chapter}{9}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{Vectors}
+\thispagestyle{empty}
+\input{text/10_Space_Intro}
+\input{text/10_Vector_Introduction}
+\input{text/10_Dot_Product}
+\input{text/10_Cross_Product}
+\input{text/10_Lines}
+\input{text/10_Planes}
+
+%\addtocounter{chapter}{10}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{Vector Valued Functions}\label{chap:vvf}
+\thispagestyle{empty}
+\input{text/11_Vector_Functions_Intro}
+\input{text/11_Vector_Functions_Calc}
+\input{text/11_Vector_Functions_Motion}
+\input{text/11_Vector_Tangent_Normal}
+\input{text/11_Arc_Length_Parameter_Curvature}
+%
+%%%\addtocounter{chapter}{11}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{Functions of Several Variables}\label{chap:multi}
+\thispagestyle{empty}
+%\input{text/10_Space_Intro_Mod}
+\input{text/12_Multivariable_Intro}
+\input{text/12_Multivariable_Limit}
+\input{text/12_Partial_Derivatives}
+\input{text/12_Total_Differential}
+\input{text/12_Multivariable_Chain_Rule}
+\input{text/12_Directional_Derivatives}
+\input{text/12_Tangent_Planes_Lines}
+\input{text/12_Extrema}
+
+
+%
+%%%\addtocounter{chapter}{12}
+%\clearpage{\pagestyle{empty}\cleardoublepage}
+%\chapter{Multiple Integration}
+%\thispagestyle{empty}
+%\input{text/13_Iterated_Integrals}
+%\input{text/13_Double_Integrals_Volume}
+%\input{text/13_Double_Integrals_Polar}
+%\input{text/13_Center_of_Mass}
+%\input{text/13_Surface_Area}
+%\input{text/13_Triple_Integration}
+
+
+%%%\layout
+
+% counters are reset in the Taylor Polynomial section, not here
+% I do not recall why this didn't seem to work here
+
+
+
+\appendix
+\clearpage{\pagestyle{empty}\cleardoublepage}
+%%%%%
+%%%%\makeexercisesection{Solutions To Selected Problems}
+\pagenumbering{arabic}\renewcommand{\thepage}{A.\arabic{page}}
+\makeexercisesection{Solutions To Selected Problems}
+%%%\printexercisesection
+
+
+%
+%
+%%%%
+%%%%%%%%%
+%%%%%%%		 The following makes the index and includes
+%%%%%%%		it in the file
+%%%%%%%%%
+%%%
+%%%\clearpage{\pagestyle{empty}\cleardoublepage}
+%%%\phantomsection
+%%%\addcontentsline{toc}{chapter}{\indexname}
+%%%\printindex
+%%
+%
+
+
+\qendheader
+\eendgeometry
+
+\phantomsection
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\indexname}
+\printindex
+%\includepdf[pages={863-868}]{Calculus.pdf}
+
+%\cleardoublepage
+\input{text/Inside_Cover_Of_The_Text_Material_Complete}
+
+
+\end{document}
+

@@ -15,15 +15,15 @@
 
   \indexspace
 
-  \item Chain Rule, \hyperpage{83}
-    \subitem notation, \hyperpage{87}
+  \item Chain Rule, \hyperpage{84}
+    \subitem notation, \hyperpage{88}
   \item concave down, \hyperpage{124}
   \item concave up, \hyperpage{124}
   \item concavity, \hyperpage{124}
     \subitem inflection point, \hyperpage{124}
     \subitem test for, \hyperpage{124}
   \item Constant Multiple Rule
-    \subitem of derivatives, \hyperpage{68}
+    \subitem of derivatives, \hyperpage{70}
     \subitem of integration, \hyperpage{176}
   \item continuous function, \hyperpage{40}
     \subitem properties, \hyperpage{42}
@@ -44,30 +44,30 @@
     \subitem as a function, \hyperpage{55}
     \subitem at a point, \hyperpage{51}
     \subitem basic rules, \hyperpage{67}
-    \subitem Chain Rule, \hyperpage{83}, \hyperpage{87}
-    \subitem Constant Multiple Rule, \hyperpage{68}
+    \subitem Chain Rule, \hyperpage{84}, \hyperpage{88}
+    \subitem Constant Multiple Rule, \hyperpage{70}
     \subitem Constant Rule, \hyperpage{67}
     \subitem differential, \hyperpage{156}
-    \subitem exponential functions, \hyperpage{87}
+    \subitem exponential functions, \hyperpage{88}
     \subitem First Deriv. Test, \hyperpage{120}
-    \subitem Generalized Power Rule, \hyperpage{83}
-    \subitem higher order, \hyperpage{69}
-      \subsubitem interpretation, \hyperpage{70}
-    \subitem implicit, \hyperpage{90}
+    \subitem Generalized Power Rule, \hyperpage{84}
+    \subitem higher order, \hyperpage{71}
+      \subsubitem interpretation, \hyperpage{72}
+    \subitem implicit, \hyperpage{91}
     \subitem interpretation, \hyperpage{61}
-    \subitem inverse function, \hyperpage{99}
-    \subitem inverse trig., \hyperpage{101}
+    \subitem inverse function, \hyperpage{100}
+    \subitem inverse trig., \hyperpage{102}
     \subitem Mean Value Theorem, \hyperpage{113}
     \subitem motion, \hyperpage{63}
     \subitem normal line, \hyperpage{53}
-    \subitem notation, \hyperpage{55}, \hyperpage{69}
-    \subitem Power Rule, \hyperpage{67}, \hyperpage{78}, \hyperpage{94}
-    \subitem Product Rule, \hyperpage{73}
-    \subitem Quotient Rule, \hyperpage{75}
+    \subitem notation, \hyperpage{55}, \hyperpage{71}
+    \subitem Power Rule, \hyperpage{67}, \hyperpage{79}, \hyperpage{95}
+    \subitem Product Rule, \hyperpage{74}
+    \subitem Quotient Rule, \hyperpage{76}
     \subitem Second Deriv. Test, \hyperpage{127}
-    \subitem Sum/Difference Rule, \hyperpage{68}
+    \subitem Sum/Difference Rule, \hyperpage{70}
     \subitem tangent line, \hyperpage{51}
-    \subitem trigonometric functions, \hyperpage{76}
+    \subitem trigonometric functions, \hyperpage{77}
     \subitem velocity, \hyperpage{63}
   \item differentiable, \hyperpage{51}
   \item differential, \hyperpage{156}
@@ -100,11 +100,11 @@
 
   \indexspace
 
-  \item Generalized Power Rule, \hyperpage{83}
+  \item Generalized Power Rule, \hyperpage{84}
 
   \indexspace
 
-  \item implicit differentiation, \hyperpage{90}
+  \item implicit differentiation, \hyperpage{91}
   \item increasing function, \hyperpage{117}
     \subitem finding intervals, \hyperpage{118}
     \subitem strictly, \hyperpage{117}
@@ -149,7 +149,7 @@
     \subitem pseudo-definition, \hyperpage{2}
     \subitem right handed, \hyperpage{34}
     \subitem Squeeze Theorem, \hyperpage{18}
-  \item logarithmic differentiation, \hyperpage{95}
+  \item logarithmic differentiation, \hyperpage{96}
 
   \indexspace
 
@@ -185,13 +185,13 @@
 
   \item point of inflection, \hyperpage{125}
   \item Power Rule
-    \subitem differentiation, \hyperpage{67}, \hyperpage{73}, 
-		\hyperpage{78}, \hyperpage{94}
+    \subitem differentiation, \hyperpage{67}, \hyperpage{74}, 
+		\hyperpage{79}, \hyperpage{95}
     \subitem integration, \hyperpage{177}
 
   \indexspace
 
-  \item Quotient Rule, \hyperpage{75}
+  \item Quotient Rule, \hyperpage{76}
 
   \indexspace
 
@@ -207,7 +207,7 @@
   \item signed area, \hyperpage{183}
   \item Squeeze Theorem, \hyperpage{18}
   \item Sum/Difference Rule
-    \subitem of derivatives, \hyperpage{68}
+    \subitem of derivatives, \hyperpage{70}
     \subitem of integration, \hyperpage{176}
   \item summation
     \subitem notation, \hyperpage{191}
@@ -218,8 +218,8 @@
   \item tangent line, \hyperpage{51}
   \item Taylor Polynomial
     \subitem definition, \hyperpage{163}
-    \subitem Taylor's Theorem, \hyperpage{165}
-  \item Taylor's Theorem, \hyperpage{165}
+    \subitem Taylor's Theorem, \hyperpage{166}
+  \item Taylor's Theorem, \hyperpage{166}
   \item total signed area, \hyperpage{183}
 
   \indexspace

@@ -15,19 +15,21 @@
 \setboolean{printlabelname}{false}
 \ifthenelse{\boolean{printlabelname}}{\usepackage[notref,notcite]{showkeys}}{}
 \usepackage{pdfpages}
+\usepackage{refcount}
 
+\newboolean{colour}
+\setboolean{colour}{true}
 
 %% end detour
 %\usepackage{amsmath}
-\usepackage{xr}
-\externaldocument{Math2570_old}
+%\usepackage{xr}
+%\externaldocument{Math2570_old}
 
 \input{headers/Page_Size_Calculus}
 \usepackage{APEX_format}
 \input{headers/Header_Calculus}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.8}
-\usepackage{pdfpages}
 
 
 \ifthenelse{\boolean{xetex}}%
@@ -121,7 +123,8 @@
 \input{text/04_Related_Rates}
 \input{text/04_Optimization}
 \input{text/04_Differentials}
-\input{text/06_LHopitals_Rule}
+
+%\input{text/06_LHopitals_Rule}
 %
 %
 \refstepcounter{definitioncounter}
@@ -147,12 +150,13 @@
 \addtocontents{toc}{\protect\thispagestyle{empty}}
 
 \input{text/05_Antiderivatives}
-\input{text/06_Hyperbolic_Functions}
 \addtocontents{toc}{\protect\thispagestyle{empty}}
 \input{text/05_Definite_Integral}
 \input{text/05_Riemann_Sums}
 \input{text/05_FTC}
 \input{text/05_Numerical_Integration}
+\input{text/06_Substitution}
+\input{text/07_Area_Between_Curves}
 %%
 %%%%%
 %%%%%%
@@ -162,13 +166,13 @@
 \chapter{Techniques of Antidifferentiation}\label{chapter:anti_tech}
 \thispagestyle{empty}
 
-\input{text/06_Substitution}
+
 \input{text/06_Int_By_Parts}
 \input{text/06_Trigonometric_Integrals}
 \input{text/06_Trig_Sub}
 \input{text/06_Partial_Fractions}
-%\input{text/06_Hyperbolic_Functions}
-%\input{text/06_LHopitals_Rule}
+\input{text/06_Hyperbolic_Functions}
+\input{text/06_LHopitals_Rule}
 \input{text/06_Improper_Integration}
 %%
 %%
@@ -179,7 +183,7 @@
 \chapter{Applications of Integration}\label{chapter:app_of_int}
 \thispagestyle{empty}
 %
-\input{text/07_Area_Between_Curves}
+
 \input{text/07_Disk_Washer_Method}
 \input{text/07_Shell_Method}
 \input{text/07_Arc_Length}
@@ -337,7 +341,7 @@
 \cleardoublepage
 \addcontentsline{toc}{chapter}{\indexname}
 %\printindex
-\includepdf[pages={863-868}]{Calculus.pdf}
+%\includepdf[pages={863-868}]{Calculus.pdf}
 
 \input{text/Inside_Cover_Of_The_Text_Material_Complete}
 

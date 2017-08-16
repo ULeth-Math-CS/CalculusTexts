@@ -259,108 +259,108 @@ The following equalities are very useful when evaluating integrals using Trigono
 \end{enumerate}
 }
 
-\subsection*{Hyperbolic substitution}
-For integrands containing terms of the form $\sqrt{x^2+a^2}$ or $\sqrt{x^2-a^2}$, it is also possible to make use of \sword{hyperbolic substitution} \index{substitution ! hyperbolic}. Recall from Section \ref{sec:hyperbolic} of the Math 1560 textbook that the hyperbolic functions are defined by
-\[
-\cosh(x) = \frac{e^x+e^{-x}}{2} \quad \text{ and } \quad \sinh(x) = \frac{e^x-e^{-x}}{2},
-\]
-with $\tanh(x) = \dfrac{\sinh(x)}{\cosh(x)}$, and so on. Recall that the hyperbolic functions satisfy the identity
-\[
-\cosh^2(x)-\sinh^2(x)  = 1.
-\]
-If we're given $\sqrt{x^2+a^2}$, we can let $x=a\sinh(t)$, then
-\[
-x^2+a^2 = (a\sinh(t))^2+a^2 = a^2(\sinh^2(t)+1) = a^2\cosh^2(t),
-\]
-and $dx = a\cosh(t)\,dt$. Since $\cosh(t)>0$ for all real numbers $t$, we have $\sqrt{a^2+x^2}=\cosh(t)$.
+%\subsection*{Hyperbolic substitution}
+%For integrands containing terms of the form $\sqrt{x^2+a^2}$ or $\sqrt{x^2-a^2}$, it is also possible to make use of \sword{hyperbolic substitution} \index{substitution ! hyperbolic}. Recall from Section \ref{sec:hyperbolic} of the Math 1560 textbook that the hyperbolic functions are defined by
+%\[
+%\cosh(x) = \frac{e^x+e^{-x}}{2} \quad \text{ and } \quad \sinh(x) %= \frac{e^x-e^{-x}}{2},
+%\]
+%with $\tanh(x) = \dfrac{\sinh(x)}{\cosh(x)}$, and so on. Recall that the hyperbolic functions satisfy the identity
+%\[
+%\cosh^2(x)-\sinh^2(x)  = 1.
+%\]
+%If we're given $\sqrt{x^2+a^2}$, we can let $x=a\sinh(t)$, then
+%\[
+%x^2+a^2 = (a\sinh(t))^2+a^2 = a^2(\sinh^2(t)+1) = a^2\cosh^2(t),
+%\]
+%and $dx = a\cosh(t)\,dt$. Since $\cosh(t)>0$ for all real numbers $t$, we have $\sqrt{a^2+x^2}=\cosh(t)$.
 
-If we're given $\sqrt{x^2-a^2}$, we can let $x=a\cosh(t)$; then
-\[
-x^2-a^2 = (a\cosh(t))^2-a^2 = a^2(\cosh^2(t)-1) = a^2\sinh^2(t),
-\]
-and $dx = a\sinh(t)$. (One of the convenient aspects of working with hyperbolic functions is that there are no signs to worry about when taking derivatives.)
-Note that $\cosh(t)>0$ for all $t$, so the substitution $x=a\cosh(t)$ works in the case that $x\geq a>0$. In this case, $\sqrt{x^2-a^2} = a\sinh(t)$. For $x<-a<0$, technically we would need to let $x=-a\cosh(t)$. We illustrate this method with a couple of examples.\\
+%If we're given $\sqrt{x^2-a^2}$, we can let $x=a\cosh(t)$; then
+%\[
+%x^2-a^2 = (a\cosh(t))^2-a^2 = a^2(\cosh^2(t)-1) = a^2\sinh^2(t),
+%\]
+%and $dx = a\sinh(t)$. (One of the convenient aspects of working with hyperbolic functions is that there are no signs to worry about when taking derivatives.)
+%Note that $\cosh(t)>0$ for all $t$, so the substitution $x=a\cosh(t)$ works in the case that $x\geq a>0$. In this case, $\sqrt{x^2-a^2} = a\sinh(t)$. For $x<-a<0$, technically we would need to let $x=-a\cosh(t)$. We illustrate this method with a couple of examples.\\
 
-\example{ex_hypsub1}{Using hyperbolic substitution}{
-Use hyperbolic substitution to evaluate the integral $\displaystyle \int\frac{3}{\sqrt{x^2+4}}\,dx$.
-}
-{
-Here we encounter the form $\sqrt{x^2+4} = \sqrt{x^2+2^2}$, so we use the substitution $x=2\sinh(t)$, or $t=\sinh^{-1}(x/2)$. This gives us
-\[
-\sqrt{x^2+4} = \sqrt{4\sinh^2(t)+4} = \sqrt{4\cosh^2(t)}=2\cosh(t),
-\]
-and $dx = 4\cosh(t)\,dt$. Substituting these into the integral, we have
-\begin{align*}
-\int\frac{3}{\sqrt{x^2+4}}\,dx &= \int \frac{3(2\cosh(t))}{2\cosh(t)}\,dt\\
-& = \int 3 \,dt = 3t+C\\
-& = 3\sinh^{-1}\left(\frac{x}{2}\right)+C.
-\end{align*}
+%\example{ex_hypsub1}{Using hyperbolic substitution}{
+%Use hyperbolic substitution to evaluate the integral $\displaystyle \int\frac{3}{\sqrt{x^2+4}}\,dx$.
+%}
+%{
+%Here we encounter the form $\sqrt{x^2+4} = \sqrt{x^2+2^2}$, so we use the substitution $x=2\sinh(t)$, or $t=\sinh^{-1}(x/2)$. This gives us
+%\[
+%\sqrt{x^2+4} = \sqrt{4\sinh^2(t)+4} = \sqrt{4\cosh^2(t)}=2\cosh(t),
+%\]
+%and $dx = 4\cosh(t)\,dt$. Substituting these into the integral, we have
+%\begin{align*}
+%\int\frac{3}{\sqrt{x^2+4}}\,dx &= \int \frac{3(2\cosh(t))}{2\cosh(t)}\,dt\\
+%& = \int 3 \,dt = 3t+C\\
+%& = 3\sinh^{-1}\left(\frac{x}{2}\right)+C.
+%\end{align*}
 
-Of course, we could also evaluate the integral using the substitution $x=2\tan\theta$. In this case, the hyperbolic substitution turns out to be much simpler. Let's go through the details to confirm this. If $x=2\tan\theta$, then we have $dx = 2\sec^2\theta\,d\theta$, and
-\[
-\sqrt{x^2+4} = \sqrt{4\tan^2\theta+4} = \sqrt{4\sec^2\theta} = 2\sec\theta.
-\]
-In terms of $\theta$, our integral is
-\begin{align*}
-\int\frac{3}{\sqrt{x^2+4}}\,dx & = \int \frac{3(2\sec^2\theta)}{2\sec\theta}\,d\theta\\
- & = \int 3\sec\theta\,d\theta\\
- & = 3\ln\lvert \sec\theta +\tan\theta\rvert+C\\
- & = 3\ln\left( \frac{\sqrt{x^2+4}}{2} + \frac{x}{2}\right) +C.
-\end{align*}
-(Note that since $\sqrt{x^2+4}>x$ for all values of $x$, we can drop the absolute value in the argument of the logarithm.)
+%Of course, we could also evaluate the integral using the substitution $x=2\tan\theta$. In this case, the hyperbolic substitution turns out to be much simpler. Let's go through the details to confirm this. If $x=2\tan\theta$, then we have $dx = 2\sec^2\theta\,d\theta$, and
+%\[
+%\sqrt{x^2+4} = \sqrt{4\tan^2\theta+4} = \sqrt{4\sec^2\theta} = 2\sec\theta.
+%\]
+%In terms of $\theta$, our integral is
+%\begin{align*}
+%\int\frac{3}{\sqrt{x^2+4}}\,dx & = \int \frac{3(2\sec^2\theta)}{2\sec\theta}\,d\theta\\
+% & = \int 3\sec\theta\,d\theta\\
+% & = 3\ln\lvert \sec\theta +\tan\theta\rvert+C\\
+% & = 3\ln\left( \frac{\sqrt{x^2+4}}{2} + \frac{x}{2}\right) +C.
+%\end{align*}
+%(Note that since $\sqrt{x^2+4}>x$ for all values of $x$, we can drop the absolute value in the argument of the logarithm.)
 
-The answer using the hyperbolic substitution certainly looks simpler, and it was easier to obtain, but are the two results equivalent? That is, is it true that
-\[
-\sinh^{-1}\left(\frac{x}{2}\right) = \ln\left(\frac{\sqrt{x^2+4}+x}{2}\right)?
-\]
-To check, let's take the hyperbolic sine of both sides. On the left, this yields $\frac{x}{2}$. On the right, we get
-\begin{align*}
-\sinh\left[\ln\left(\frac{\sqrt{x^2+4}+x}{2}\right)\right] & = \frac{1}{2}\left[e^{\ln\left(\frac{\sqrt{x^2+4}+x}{2}\right)}-e^{\ln\left(\frac{\sqrt{x^2+4}+x}{2}\right)}\right]\\
-& = \frac{1}{2}\left[\frac{\sqrt{x^2+4}+x}{2}-\frac{2}{\sqrt{x^2+4}+x}\right]\\
-& = \frac{1}{2}\left[\frac{(\sqrt{x^2+4}+x)^2-4}{2(\sqrt{x^2+4}+x)}\right]\\
-& = \frac{1}{4}\left[\frac{(x^2+4)+2x\sqrt{x^2+4}+x^2-4}{\sqrt{x^2+4}+x}\right]\\
-& = \frac{1}{4}\left[\frac{2x(\sqrt{x^2+4}+x)}{\sqrt{x^2+4}+x}\right]\\
-& = \frac{x}{2},
-\end{align*}
-so the results agree!
-}\\
+%The answer using the hyperbolic substitution certainly looks simpler, and it was easier to obtain, but are the two results equivalent? That is, is it true that
+%\[
+%\sinh^{-1}\left(\frac{x}{2}\right) = \ln\left(\frac{\sqrt{x^2+4}+x}{2}\right)?
+%\]
+%To check, let's take the hyperbolic sine of both sides. On the left, this yields $\frac{x}{2}$. On the right, we get
+%\begin{align*}
+%\sinh\left[\ln\left(\frac{\sqrt{x^2+4}+x}{2}\right)\right] & = \frac{1}{2}\left[e^{\ln\left(\frac{\sqrt{x^2+4}+x}{2}\right)}-e^{\ln\left(\frac{\sqrt{x^2+4}+x}{2}\right)}\right]\\
+%& = \frac{1}{2}\left[\frac{\sqrt{x^2+4}+x}{2}-\frac{2}{\sqrt{x^2+4}+x}\right]\\
+%& = \frac{1}{2}\left[\frac{(\sqrt{x^2+4}+x)^2-4}{2(\sqrt{x^2+4}+x)}\right]\\
+%& = \frac{1}{4}\left[\frac{(x^2+4)+2x\sqrt{x^2+4}+x^2-4}{\sqrt{x^2+4}+x}\right]\\
+%& = \frac{1}{4}\left[\frac{2x(\sqrt{x^2+4}+x)}{\sqrt{x^2+4}+x}\right]\\
+%& = \frac{x}{2},
+%\end{align*}
+%so the results agree!
+%}\\
 
-\example{ex_hypsub2}{Using hyperbolic substitution}{
-Evaluate the integral $\displaystyle \int\frac{x^2}{\sqrt{x^2-16}}\,dx$ using a hyperbolic substitution.
-}
-{Once again, we \textit{could} use the substitution $x=4\sec\theta$, but doing so leads us to a $\sec^3\theta$ integral, and those are never fun. (Feel free to try it this way) Instead, we decide to read (and follow) the instructions, and use a hyperbolic substitution.
+%\example{ex_hypsub2}{Using hyperbolic substitution}{
+%Evaluate the integral $\displaystyle \int\frac{x^2}{\sqrt{x^2-16}}\,dx$ using a hyperbolic substitution.
+%}
+%{Once again, we \textit{could} use the substitution $x=4\sec\theta$, but doing so leads us to a $\sec^3\theta$ integral, and those are never fun. (Feel free to try it this way) Instead, we decide to read (and follow) the instructions, and use a hyperbolic substitution.
 
-The form $\sqrt{x^2-16}$ tells us that we should try the substitution $x=4\cosh(t)$.  This gives us $dx = 4\sinh(t)$, and
- \[
- \sqrt{x^2-16} = \sqrt{16(\cosh^2(t)-1)} = \sqrt{16\sinh^2(t)} = 4\sinh(t).
- \]
- Thus,
- \[
- \int \frac{x^2}{\sqrt{x^2-16}}\,dx = \int \frac{16\cosh^2(t)}{4\sinh(t)}(4\sinh(t))\,dt = \int 16\cosh^2(t)\,dt.
- \]
- Now we have to know how to integrate $\cosh^2(t)$. If we recall how $\cosh(t)$ is defined, we have
- \[
- \cosh^2(t) = \left(\frac{e^t+e^{-t}}{2}\right)^2 = \frac{e^{2t}+e^{-2t}+2}{4}.
- \]
- So you could simply write $\cosh^2(t)$ in terms of exponentials as above, and integrate term-by-term. The other option is to notice that there's an identity sitting there: $\dfrac{e^{2t}+e^{-2t}}{4} = \frac{1}{2}\cosh(2t)$, so
- \[
- \int \cosh^2(t)\,dt = \int\left( \frac{1}{2}\cosh(2t)+\frac{1}{2}\right)\,dt = \frac{1}{4}\sinh(2t)+\frac{t}{2}+C.
- \]
- Finally, we have to substitute back in terms of $x$. Would it surprise you to learn that $\sinh(2t)=2\sinh(t)\cosh(t)$, just as it is with trig functions? Well, that turns out to be true (verify this!). Since $\sinh(t) = \frac{\sqrt{x^2-16}}{4}$ and $\cosh(t) = \frac{x}{4}$, we get
- \begin{align*}
- \int \frac{x^2}{\sqrt{x^2-16}}\,dx & =  16\int\cosh^2(t)\,dt\\
- & = \frac{1}{2}x\sqrt{x^2-16}+8\cosh^{-1}\left(\frac{x}{4}\right)+C.
- \end{align*}
- Again, if you chose the secant substitution route, you would have ended up with a very different-looking answer. This method gives
- \[
- \int\frac{x^2}{\sqrt{x^2-16}}\,dx = \frac{1}{2}x\sqrt{x^2-16}+8\ln\left(\frac{x+\sqrt{x^2-16}}{4}\right),
- \]
-and as with the last example, you might be wondering is whether the two answers are the same.  It's a good exercise to see if you can show that
- \[
- \ln\left(\frac{x+\sqrt{x^2-16}}{4}\right) = \cosh^{-1}(x/4).
- \]
-You can perform algebraic manipulations as before, or check that the derivatives of both sides are the same (it's enough for the answers to agree up to a constant).
-}\\
+%The form $\sqrt{x^2-16}$ tells us that we should try the substitution $x=4\cosh(t)$.  This gives us $dx = 4\sinh(t)$, and
+% \[
+% \sqrt{x^2-16} = \sqrt{16(\cosh^2(t)-1)} = \sqrt{16\sinh^2(t)} = 4\sinh(t).
+% \]
+% Thus,
+% \[
+% \int \frac{x^2}{\sqrt{x^2-16}}\,dx = \int \frac{16\cosh^2(t)}{4\sinh(t)}(4\sinh(t))\,dt = \int 16\cosh^2(t)\,dt.
+% \]
+% Now we have to know how to integrate $\cosh^2(t)$. If we recall how $\cosh(t)$ is defined, we have
+% \[
+% \cosh^2(t) = \left(\frac{e^t+e^{-t}}{2}\right)^2 = \frac{e^{2t}+e^{-2t}+2}{4}.
+% \]
+% So you could simply write $\cosh^2(t)$ in terms of exponentials as above, and integrate term-by-term. The other option is to notice that there's an identity sitting there: $\dfrac{e^{2t}+e^{-2t}}{4} = \frac{1}{2}\cosh(2t)$, so
+% \[
+% \int \cosh^2(t)\,dt = \int\left( \frac{1}{2}\cosh(2t)+\frac{1}{2}\right)\,dt = \frac{1}{4}\sinh(2t)+\frac{t}{2}+C.
+% \]
+% Finally, we have to substitute back in terms of $x$. Would it surprise you to learn that $\sinh(2t)=2\sinh(t)\cosh(t)$, just as it is with trig functions? Well, that turns out to be true (verify this!). Since $\sinh(t) = \frac{\sqrt{x^2-16}}{4}$ and $\cosh(t) = \frac{x}{4}$, we get
+% \begin{align*}
+% \int \frac{x^2}{\sqrt{x^2-16}}\,dx & =  16\int\cosh^2(t)\,dt\\
+% & = \frac{1}{2}x\sqrt{x^2-16}+8\cosh^{-1}\left(\frac{x}{4}\right)+C.
+% \end{align*}
+% Again, if you chose the secant substitution route, you would have ended up with a very different-looking answer. This method gives
+% \[
+% \int\frac{x^2}{\sqrt{x^2-16}}\,dx = \frac{1}{2}x\sqrt{x^2-16}+8\ln\left(\frac{x+\sqrt{x^2-16}}{4}\right),
+% \]
+%and as with the last example, you might be wondering is whether the two answers are the same.  It's a good exercise to see if you can show that
+% \[
+% \ln\left(\frac{x+\sqrt{x^2-16}}{4}\right) = \cosh^{-1}(x/4).
+% \]
+%You can perform algebraic manipulations as before, or check that the derivatives of both sides are the same (it's enough for the answers to agree up to a constant).
+%}\\
 
 The next section introduces Partial Fraction Decomposition, which is an algebraic technique that turns ``complicated'' fractions into sums of ``simpler'' fractions, making integration easier.
 
