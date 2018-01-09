@@ -5,8 +5,8 @@
   \item acceleration, \hyperpage{63}
   \item antiderivative, \hyperpage{173}
   \item asymptote
-    \subitem horizontal, \hyperpage{28}
-    \subitem vertical, \hyperpage{26}
+    \subitem horizontal, \hyperpage{34}
+    \subitem vertical, \hyperpage{32}
   \item average value of function, \hyperpage{210}
 
   \indexspace
@@ -109,7 +109,7 @@
     \subitem finding intervals, \hyperpage{118}
     \subitem strictly, \hyperpage{117}
   \item indefinite integral, \hyperpage{173}
-  \item indeterminate form, \hyperpage{1}, \hyperpage{27}
+  \item indeterminate form, \hyperpage{1}, \hyperpage{33}
   \item inflection point, \hyperpage{125}
   \item initial value problem, \hyperpage{177}
   \item integration
@@ -136,18 +136,18 @@
 
   \item Left Hand Rule, \hyperpage{190}, \hyperpage{194}
   \item limit
-    \subitem at infinity, \hyperpage{28}
+    \subitem at infinity, \hyperpage{34}
     \subitem definition, \hyperpage{6}, \hyperpage{8}
     \subitem difference quotient, \hyperpage{5}
-    \subitem does not exist, \hyperpage{4}, \hyperpage{35}
-    \subitem indeterminate form, \hyperpage{1}, \hyperpage{27}
+    \subitem does not exist, \hyperpage{4}, \hyperpage{26}
+    \subitem indeterminate form, \hyperpage{1}, \hyperpage{33}
     \subitem informal definition, \hyperpage{6}
-    \subitem left handed, \hyperpage{34}
-    \subitem of infinity, \hyperpage{25}
-    \subitem one sided, \hyperpage{34}
+    \subitem left handed, \hyperpage{25}
+    \subitem of infinity, \hyperpage{31}
+    \subitem one sided, \hyperpage{25}
     \subitem properties, \hyperpage{15}
     \subitem pseudo-definition, \hyperpage{2}
-    \subitem right handed, \hyperpage{34}
+    \subitem right handed, \hyperpage{25}
     \subitem Squeeze Theorem, \hyperpage{18}
   \item logarithmic differentiation, \hyperpage{96}
 

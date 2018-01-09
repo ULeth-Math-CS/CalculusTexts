@@ -5,8 +5,8 @@
 \contentsline {section}{\numberline {1.1}An Introduction To Limits}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Formal Definition of a Limit}{8}{section.1.2}
 \contentsline {section}{\numberline {1.3}Finding Limits Analytically}{15}{section.1.3}
-\contentsline {section}{\numberline {1.4}Limits Involving Infinity}{25}{section.1.4}
-\contentsline {section}{\numberline {1.5}One Sided Limits}{35}{section.1.5}
+\contentsline {section}{\numberline {1.4}One Sided Limits}{25}{section.1.4}
+\contentsline {section}{\numberline {1.5}Limits Involving Infinity}{31}{section.1.5}
 \contentsline {section}{\numberline {1.6}Continuity}{41}{section.1.6}
 \contentsline {chapter}{\numberline {2}Derivatives}{51}{chapter.2}
 \contentsline {section}{\numberline {2.1}Instantaneous Rates of Change: The Derivative}{51}{section.2.1}
