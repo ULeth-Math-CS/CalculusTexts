@@ -1,4 +1,4 @@
-In the previous chapter, we learned about vectors and were introduced to the power of vectors within mathematics. In this chapter, we'll build on this foundation to define functions whose input is a real number and whose output is a vector. We'll see how to graph these functions and apply calculus techniques to analyze their behavior. Most importantly, we'll see \textit{why} we are interested in doing this: we'll see beautiful applications to the study of moving objects.
+In the previous chapter, we learned about vectors and were introduced to the power of vectors within mathematics. In this chapter, we'll build on this foundation to define functions whose input is a real number and whose output is a vector. We'll see how to graph these functions and apply calculus techniques to analyze their behaviour. Most importantly, we'll see \textit{why} we are interested in doing this: we'll see beautiful applications to the study of moving objects.
 
 \section{Vector--Valued Functions}\label{sec:vvf}
 
@@ -6,7 +6,9 @@ We are very familiar with \textbf{real valued functions}, that is, functions who
 
 \definition{def:vvf}{Vector--Valued Functions}
 {A \textbf{vector--valued function} is a function of the form 
-$$\vec r(t) = \la\, f(t),g(t)\,\ra \quad \text{or}\quad \vec r(t) = \la \,f(t),g(t),h(t)\,\ra,$$
+\[
+\vec r(t) = \la\, f(t),g(t)\,\ra \quad \text{or}\quad \vec r(t) = \la \,f(t),g(t),h(t)\,\ra,
+\]
 where $f$, $g$ and $h$ are real valued functions.\\
 
 The \textbf{domain} of $\vec r$ is the set of all values of $t$ for which $\vec r(t)$ is defined. The \textbf{range} of $\vec r$ is the set of all possible output vectors $\vec r(t)$.
@@ -49,7 +51,7 @@ Graph $\ds \vec r(t) = \la t^3-t, \frac{1}{t^2+1}\ra$, for $-2\leq t\leq 2$. Ske
 
 \example{ex_vvf2}{Graphing vector--valued functions.}{
 Graph $\vec r(t) = \la \cos t,\sin t,t\ra$ for $0\leq t\leq 4\pi$.}
-{We can again plot points, but careful consideration of this function is very revealing. Momentarily ignoring the third component, we see the $x$ and $y$ components trace out a circle of radius 1 centered at the origin. Noticing that the $z$ component is $t$, we see that as the graph winds around the $z$-axis, it is also increasing at a constant rate in the positive $z$ direction, forming a spiral. This is graphed in Figure \ref{fig:vvf2}. In the graph $\vec r(7\pi/4)\approx (0.707,-0.707,5.498) $ is highlighted to help us understand the graph.
+{We can again plot points, but careful consideration of this function is very revealing. Momentarily ignoring the third component, we see the $x$ and $y$ components trace out a circle of radius 1 centred at the origin. Noticing that the $z$ component is $t$, we see that as the graph winds around the $z$-axis, it is also increasing at a constant rate in the positive $z$ direction, forming a spiral. This is graphed in Figure \ref{fig:vvf2}. In the graph $\vec r(7\pi/4)\approx (0.707,-0.707,5.498) $ is highlighted to help us understand the graph.
 %\mfigure[scale=1.25]{.4}{The graph of $\vec r(t)$ in Example \ref{ex_vvf2}.}{fig:vvf2}{figures/figvvf2}
 \mfigurethree{width=150pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=1.5110919487882861,
@@ -57,7 +59,7 @@ Graph $\vec r(t) = \la \cos t,\sin t,t\ra$ for $0\leq t\leq 4\pi$.}
 3Dc2c=0.6482614874839783 0.682218074798584 0.338135302066803,
 3Dcoo=1.5296688079833984 -8.776086807250977 69.70178985595703,
 3Droo=399.99999354879714,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25}{.4}{Viewing a vector--valued function, and its derivative at one point.}{fig:vvf2}{figures/figvvf2} 
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=150pt}{.4}{The graph of $\vec r(t)$ in Example \ref{ex_vvf2}.}{fig:vvf2}{figures/figvvf2} 
 }\\
 
 \noindent\textbf{\large Algebra of Vector--Valued Functions}\\
@@ -80,7 +82,7 @@ Let $\vec r_1(t) = \la\,0.2t,0.3t\,\ra$, $\vec r_2(t) = \la\,\cos t,\sin t\,\ra$
 
 We can rewrite $\vec r_1(t) = \la\, 0.2t,0.3t\,\ra$ as $ \vec r_1(t) = t\la 0.2,0.3\ra$. That is, the function $\vec r_1$ scales the vector $\la 0.2,0.3\ra$ by $t$. This scaling of a vector produces a line in the direction of $\la 0.2,0.3\ra$. 
 
-We are familiar with $\vec r_2(t) = \la\, \cos t,\sin t\,\ra$; it traces out a circle, centered at the origin, of radius 1. Figure \ref{fig:vvf3}(a) graphs $\vec r_1(t)$ and $\vec r_2(t)$.
+We are familiar with $\vec r_2(t) = \la\, \cos t,\sin t\,\ra$; it traces out a circle, centred at the origin, of radius 1. Figure \ref{fig:vvf3}(a) graphs $\vec r_1(t)$ and $\vec r_2(t)$.
 
 Adding $\vec r_1(t)$ to $\vec r_2(t)$ produces $\vec r(t) = \la\,\cos t + 0.2t,\sin t+0.3t\,\ra$, graphed in Figure \ref{fig:vvf3}(b). The linear movement of the line combines with the circle to create loops that move in the direction of $\la 0.2,0.3\ra$.  (We encourage the reader to experiment by changing $\vec r_1(t)$ to $\la 2t,3t\ra$, etc., and observe the effects on the loops.)
 
@@ -100,14 +102,14 @@ Multiplying $\vec r(t)$ by 5 scales the function by 5, producing $5\vec r(t) =  
 
 \example{ex_vvf4}{Adding and scaling vector--valued functions.}{
 A \textbf{cycloid} is a graph traced by a point $p$ on a rolling circle, as shown in Figure \ref{fig:vvf4}. Find an equation describing the cycloid, where the circle has radius 1.
-\index{cycloid}\addtocounter{figure}{1}
+\index{cycloid}%\addtocounter{figure}{1}
 \begin{center}
 \myincludegraphics{figures/figvvf4}
 \captionsetup{type=figure}
 \caption{Tracing a cycloid.}\label{fig:vvf4}
-\end{center}\addtocounter{figure}{-2}%
+\end{center}%\addtocounter{figure}{-2}%
 }
-{This problem is not very difficult if we approach it in a clever way. We start by letting $\vec p(t)$ describe the position of the point $p$ on the circle, where the circle is centered at the origin and only rotates clockwise (i.e., it  does not roll). This is relatively simple given our previous experiences with parametric equations; $\vec p(t) = \la \cos t, -\sin t\ra$. 
+{This problem is not very difficult if we approach it in a clever way. We start by letting $\vec p(t)$ describe the position of the point $p$ on the circle, where the circle is centred at the origin and only rotates clockwise (i.e., it  does not roll). This is relatively simple given our previous experiences with parametric equations; $\vec p(t) = \la \cos t, -\sin t\ra$. 
 
 We now want the circle to roll. We represent this by letting $\vec c(t)$ represent the location of the center of the circle. It should be clear that the $y$ component of $\vec c(t)$ should be 1; the center of the circle is always going to be 1 if it rolls on a horizontal surface.
 
@@ -119,13 +121,16 @@ We now combine $\vec p$ and $\vec c$ together to form the equation of the cycloi
 
 \noindent\textbf{\large Displacement}\\
 
-\addtocounter{figure}{1}
+%\addtocounter{figure}{1}
 \mfigure{.2}{The cycloid in Example \ref{ex_vvf4}.}{fig:vvfa}{figures/figvvf4a}
 
 A vector--valued function $\vec r(t)$ is often used to describe the position of a moving object at time $t$. At $t=t_0$, the object is at $\vec r(t_0)$; at $t=t_1$, the object is at $\vec r(t_1)$. Knowing the locations $\vec r(t_0)$ and $\vec r(t_1)$ give no indication of the path taken between them, but often we only care about the difference of the locations, $\vec r(t_1)-\vec r(t_0)$, the \sword{displacement}.\index{displacement}\index{vector--valued function!displacement}
 
 \definition{def:displacement}{Displacement}
-{Let $\vec r(t)$ be a vector--valued function and let $t_0<t_1$ be values in the domain. The \textbf{displacement} $\vec d$ of $\vec r$, from $t=t_0$ to $t=t_1$, is $$\vec d=\vec r(t_1)-\vec r(t_0).$$
+{Let $\vec r(t)$ be a vector--valued function and let $t_0<t_1$ be values in the domain. The \textbf{displacement} $\vec d$ of $\vec r$, from $t=t_0$ to $t=t_1$, is 
+\[
+\vec d=\vec r(t_1)-\vec r(t_0).
+\]
 }\\
 
 When the displacement vector is drawn with initial point at $\vec r(t_0)$, its terminal point is $\vec r(t_1)$. We think of it as the vector which points from a starting position to an ending position.\\
@@ -134,29 +139,35 @@ When the displacement vector is drawn with initial point at $\vec r(t_0)$, its t
 Let $\vec r(t) = \la \cos (\frac{\pi}{2}t),\sin (\frac{\pi}2 t)\ra$. Graph $\vec r(t)$ on $-1\leq t\leq 1$, and find the displacement of $\vec r(t)$ on this interval.}
 {The function $\vec r(t)$ traces out the unit circle, though at a different rate than the ``usual'' $\la \cos t,\sin t\ra$ parametrization. At $t_0=-1$, we have $\vec r(t_0) = \la 0,-1\ra$; at $t_1=1$, we have $\vec r(t_1) = \la 0,1\ra$. The displacement of $\vec r(t)$ on $[-1,1]$ is thus $\vec d = \la 0,1\ra - \la 0,-1\ra = \la 0,2\ra.$
 
-\mfigure{.45}{Graphing the displacement of a position function in Example \ref{ex_vvf5}.}{fig:vvf5}{figures/figvvf5}
+\mfigure{.75}{Graphing the displacement of a position function in Example \ref{ex_vvf5}.}{fig:vvf5}{figures/figvvf5}
 A graph of $\vec r(t)$ on $[-1,1]$ is given in Figure \ref{fig:vvf5}, along with the displacement vector $\vec d$ on this interval.
 }\\
 
-Measuring displacement makes us contemplate related, yet very different, concepts. Considering the semi--circular path the object in Example \ref{ex_vvf5} took, we can quickly verify that the object ended up a distance of 2 units from its initial location. That is, we can compute $\vnorm{d} = 2$. However, measuring \emph{distance from the starting point} is different from measuring \emph{distance traveled}. Being a semi--circle, we can measure the distance traveled by this object as $\pi\approx 3.14$ units. Knowing \emph{distance from the starting point} allows us to compute \textbf{average rate of change.}
+Measuring displacement makes us contemplate related, yet very different, concepts. Considering the semi--circular path the object in Example \ref{ex_vvf5} took, we can quickly verify that the object ended up a distance of 2 units from its initial location. That is, we can compute $\vnorm{d} = 2$. However, measuring \emph{distance from the starting point} is different from measuring \emph{distance travelled}. Being a semi--circle, we can measure the distance travelled by this object as $\pi\approx 3.14$ units. Knowing \emph{distance from the starting point} allows us to compute \textbf{average rate of change.}
 
 \definition{def:av_rate_of_change_vect}{Average Rate of Change}
 {Let $\vec r(t)$ be a vector--valued function, where each of its component functions is continuous on its domain, and let $t_0<t_1$. The \textbf{average rate of change} of $\vec r(t)$ on $[t_0,t_1]$ is
 \index{average rate of change}\index{vector--valued function!average rate of change}
-$$\text{average rate of change} = \frac{\vec r(t_1) - \vec r(t_0)}{t_1-t_0}.$$
+\[
+\text{average rate of change} = \frac{\vec r(t_1) - \vec r(t_0)}{t_1-t_0}.
+\]
 }\\
 
 \example{ex_vvf6}{Average rate of change}{
 Let $\vec r(t) = \la \cos(\frac{\pi}2t),\sin(\frac{\pi}2t)\ra$ as in Example \ref{ex_vvf5}. Find the average rate of change of $\vec r(t)$ on $[-1,1]$ and on $[-1,5]$.}
 {We computed in Example \ref{ex_vvf5} that the displacement of $\vec r(t)$ on $[-1,1]$ was $\vec d = \la 0,2\ra$. Thus the average rate of change of $\vec r(t)$ on $[-1,1]$ is:
-$$\frac{\vec r(1) -\vec r(-1)}{1-(-1)} = \frac{\la 0,2\ra}{2} = \la 0,1\ra.$$
+\[
+\frac{\vec r(1) -\vec r(-1)}{1-(-1)} = \frac{\la 0,2\ra}{2} = \la 0,1\ra.
+\]
 We interpret this as follows: the object followed a semi--circular path, meaning it moved towards the right then moved back to the left, while climbing slowly, then quickly, then slowly again. \emph{On average}, however, it progressed straight up at a constant rate of $\la 0,1\ra$ per unit of time.
 
 We can quickly see that the displacement on $[-1,5]$ is the same as on $[-1,1]$, so $\vec d = \la 0,2\ra$. The average rate of change is different, though:
-$$\frac{\vec r(5)-\vec r(-1)}{5-(-1)} = \frac{\la 0,2\ra}{6} = \la 0,1/3\ra.$$
+\[
+\frac{\vec r(5)-\vec r(-1)}{5-(-1)} = \frac{\la 0,2\ra}{6} = \la 0,1/3\ra.
+\]
 As it took ``3 times as long'' to arrive at the same place, this average rate of change on $[-1,5]$ is $1/3$ the average rate of change on $[-1,1]$.
 }\\
 
-We considered average rates of change in Sections \ref{sec:limit_intro} and \ref{sec:derivative} as we studied limits and derivatives. The same is true here; in the following section we apply calculus concepts to vector--valued functions as we find limits, derivatives, and integrals. Understanding the average rate of change will give us an understanding of the derivative; displacement gives us one application of integration.
+We considered average rates of change in Sections \ref{I-sec:limit_intro} and \ref{I-sec:derivative} as we studied limits and derivatives. The same is true here; in the following section we apply calculus concepts to vector--valued functions as we find limits, derivatives, and integrals. Understanding the average rate of change will give us an understanding of the derivative; displacement gives us one application of integration.
 
 \printexercises{exercises/11_01_exercises}

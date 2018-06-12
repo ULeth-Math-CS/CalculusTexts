@@ -13,45 +13,48 @@ Consider Figure \ref{fig:shell_intro}, where the region shown in (a) is rotated 
 3Dc2c=0.3376615047454834 0.4032796025276184 0.8504999876022339,
 3Dcoo=3.760643243789673 66.28701782226562 -12.64914608001709,
 3Droo=149.99997892897957,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{}{figures/figshell_intro_b}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figshell_intro_b}\\
 %\\myincludegraphics{figures/figshell_intro_b}\\
-(a)\\[5pt]
+(a)\\[10pt]
 \myincludegraphicsthree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=134.9923368693739,
 3Dortho=0.00484071671962738,
 3Dc2c=0.3376615047454834 0.4032796025276184 0.8504999876022339,
 3Dcoo=3.760643243789673 66.28701782226562 -12.64914608001709,
 3Droo=149.99997892897957,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{}{figures/figshell_intro_a}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figshell_intro_a}\\
 %\myincludegraphics{figures/figshell_intro_a}\\
-(b)\\[5pt]
+(b)\\[10pt]
 \myincludegraphicsthree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=134.9923368693739,
 3Dortho=0.00484071671962738,
 3Dc2c=0.3376615047454834 0.4032796025276184 0.8504999876022339,
 3Dcoo=3.760643243789673 66.28701782226562 -12.64914608001709,
 3Droo=149.99997892897957,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{}{figures/figshell_intro_d}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figshell_intro_d}\\
 %\myincludegraphics{figures/figshell_intro_d}\\
 (c)
 \end{tabular}
 }
 
-To compute the volume of one shell, first consider the paper label on a soup can with radius $r$ and height $h$. What is the area of this label? A simple way of determining this is to cut the label and lay it out flat, forming a rectangle with height $h$ and length $2\pi r$. Thus the area is $A = 2\pi rh$; see Figure \ref{fig:soupcan} (a).
+To compute the volume of one shell, first consider the paper label on a soup can with radius $r$ and height $h$. What is the area of this label? A simple way of determining this is to cut the label and lay it out flat, forming a rectangle with height $h$ and length $2\pi r$. Thus the area is $A = 2\pi rh$; see Figure \ref{fig:soupcan}(a).
 
-Do a similar process with a cylindrical shell, with height $h$, thickness $\Delta x$, and approximate radius $r$. Cutting the shell and laying it flat forms a rectangular solid with length $2\pi r$, height $h$ and depth $\dx$. Thus the volume is $V \approx 2\pi rh\dx$; see Figure \ref{fig:soupcan} (b). (We say ``approximately'' since our radius was an approximation.)
+Do a similar process with a cylindrical shell, with height $h$, thickness $\Delta x$, and approximate radius $r$. Cutting the shell and laying it flat forms a rectangular solid with length $2\pi r$, height $h$ and depth $\dx$. Thus the volume is $V \approx 2\pi rh\dx$; see Figure \ref{fig:soupcan}(b). (We say ``approximately'' since our radius was an approximation.)
 
 %\enlargethispage{2\baselineskip}
 By breaking the solid into $n$ cylindrical shells, we can approximate the volume of the solid as
-$$V = \sum_{i=1}^n 2\pi r_ih_i\dx_i,$$ where $r_i$, $h_i$ and $\dx_i$ are the radius, height and thickness of the $i\,^\text{th}$ shell, respectively. 
+\[
+V = \sum_{i=1}^n 2\pi r_ih_i\dx_i,
+\]
+where $r_i$, $h_i$ and $\dx_i$ are the radius, height and thickness of the $i\,^\text{th}$ shell, respectively. 
 
 This is a Riemann Sum. Taking a limit as the thickness of the shells approaches 0 leads to a definite integral.
 
 \pagebreak
 
 %\vskip 7pt
-\noindent %\hskip-\marginparwidth \hskip -\marginparsep%
-\begin{minipage}{\textwidth+\marginparwidth+\marginparsep}
+\noindent\ifthenelse{\isodd{\thepage}}{}{\hskip-\marginparwidth}%
+\noindent\begin{minipage}{\textwidth+\marginparwidth+\marginparsep}
 \begin{tabular}{cc}
 \myincludegraphics[scale=.9]{figures/figshell_soupcan} & \myincludegraphics[scale=.9]{figures/figshell_unwrapshell}\\
 (a) & (b)
@@ -68,7 +71,9 @@ This is a Riemann Sum. Taking a limit as the thickness of the shells approaches 
 \keyidea{idea:shell_method}{The Shell Method}
 {Let a solid be formed by revolving a region $R$, bounded by $x=a$ and $x=b$, around a vertical axis. Let $r(x)$ represent the distance from the axis of rotation to $x$ (i.e., the radius of a sample shell) and let $h(x)$ represent the height of the solid at $x$ (i.e., the height of the shell). The volume of the solid is 
 \index{integration!volume!Shell Method}\index{Shell Method}
-$$V = 2\pi\int_a^b r(x)h(x)\ dx.$$
+\[
+V = 2\pi\int_a^b r(x)h(x)\ dx.
+\]
 }
 
 \textbf{Special Cases:}
@@ -107,7 +112,7 @@ Note: in order to find this volume using the Disk Method, two integrals would be
 3Dc2c=0.16831636428833008 0.19470007717609406 0.966313362121582,
 3Dcoo=74.36175537109375 71.21556854248047 -40.660457611083984,
 3Droo=149.9999886313645,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{}{figures/figshell2b}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figshell2b}\\
 %\myincludegraphics{figures/figshell2b}\\
 (b)\\ \\
 \myincludegraphicsthree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
@@ -116,7 +121,7 @@ Note: in order to find this volume using the Disk Method, two integrals would be
 3Dc2c=0.16831636428833008 0.19470007717609406 0.966313362121582,
 3Dcoo=74.36175537109375 71.21556854248047 -40.660457611083984,
 3Droo=149.9999886313645,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{}{figures/figshell2c}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figshell2c}\\
 (c)
 \end{tabular}
 }
@@ -168,7 +173,7 @@ At the beginning of this section it was stated that ``it is good to have options
 3Dc2c=0.34401965141296387 0.04830114170908928 0.9377192854881287,
 3Dcoo=71.46640014648438 9.081968307495117 -11.759183883666992,
 3Droo=149.99998743176678,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{}{figures/figshell3b}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figshell3b}\\
 %\myincludegraphics{figures/figshell3b}\\
 (b)\\
 \myincludegraphicsthree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
@@ -177,7 +182,7 @@ At the beginning of this section it was stated that ``it is good to have options
 3Dc2c=0.34401965141296387 0.04830114170908928 0.9377192854881287,
 3Dcoo=71.46640014648438 9.081968307495117 -11.759183883666992,
 3Droo=149.99998743176678,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{}{figures/figshell3c}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figshell3c}\\
 (c)
 \end{tabular}}
 
@@ -195,7 +200,11 @@ V &=	2\pi\int_0^{\pi} x\sin x\ dx. \\
 	&= 2\pi^2 \approx 19.74 \ \text{units}^3.
 	\end{align*}
 
-Note that in order to use the Washer Method, we would need to solve $y=\sin x$ for $x$, requiring the use of the arcsine function. We leave it to the reader to verify that the outside radius function is $R(y) = \pi-\arcsin y$ and the inside radius function is $r(y)=\arcsin y$. Thus the volume can be computed as $$\pi\int_0^1 \Big[ (\pi-\arcsin y)^2-(\arcsin y)^2\Big]\ dy.$$	This integral isn't terrible given that the $\arcsin^2 y$ terms cancel, but it is more onerous than the integral created by the Shell Method.
+Note that in order to use the Washer Method, we would need to solve $y=\sin x$ for $x$, requiring the use of the arcsine function. We leave it to the reader to verify that the outside radius function is $R(y) = \pi-\arcsin y$ and the inside radius function is $r(y)=\arcsin y$. Thus the volume can be computed as 
+\[
+\pi\int_0^1 \Big[ (\pi-\arcsin y)^2-(\arcsin y)^2\Big]\ dy.
+\]
+This integral isn't terrible given that the $\arcsin^2 y$ terms cancel, but it is more onerous than the integral created by the Shell Method.
 }\\
 
 
@@ -217,23 +226,23 @@ As in the previous section, the real goal of this section is not to be able to c
 \mtable{.6}{Graphing a region in Example \ref{ex_shell4}.}{fig:shell4}{%
 \begin{tabular}{c}
 \myincludegraphics{figures/figshell4a}\\
-(a) \\
+(a) \\[10pt]
 \myincludegraphicsthree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=97.25039174241927,
 3Dortho=0.0048407199792563915,
 3Dc2c=0.34401965141296387 0.04830114170908928 0.9377192854881287,
 3Dcoo=71.46640014648438 9.081968307495117 -11.759183883666992,
 3Droo=149.99998743176678,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{}{figures/figshell4c}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figshell4c}\\
 %\myincludegraphics{figures/figshell4b}\\
-(b)\\
+(b)\\[10pt]
 \myincludegraphicsthree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=97.25039174241927,
 3Dortho=0.0048407199792563915,
 3Dc2c=0.34401965141296387 0.04830114170908928 0.9377192854881287,
 3Dcoo=71.46640014648438 9.081968307495117 -11.759183883666992,
 3Droo=149.99998743176678,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{}{figures/figshell4b}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figshell4b}\\
 (c)
 \end{tabular}}
 We use this same principle again in the next section, where we find the length of curves in the plane.

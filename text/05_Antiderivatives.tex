@@ -1,4 +1,5 @@
-We have spent considerable time considering the derivatives of a function and their applications. In the following chapters, we are going to starting thinking in ``the other direction.'' That is, given a function $f(x)$, we are going to consider functions $F(x)$ such that $F\primeskip'(x) = f(x)$. There are numerous reasons this will prove to be useful: these functions will help us compute areas, volumes, mass, force, pressure, work, and much more.
+\ifthenelse{\boolean{1010}}{We have spent considerable time considering the derivatives of a function and their applications. In this section, we are going to starting thinking in ``the other direction.'' That is, given a function $f(x)$, we are going to consider functions $F(x)$ such that $F\primeskip'(x) = f(x)$. Here, we will only consider very basic examples, and leave most of the heavy lifting to later courses. The importance of antiderivatives becomes apparent in Math 1560, once integration and the Fundamental Theorem of Calculus have been introduced. More advanced techniques for finding antiderivatives are taught in Math 2560.}
+{We have spent considerable time considering the derivatives of a function and their applications. In the following chapters, we are going to starting thinking in ``the other direction.'' That is, given a function $f(x)$, we are going to consider functions $F(x)$ such that $F\primeskip'(x) = f(x)$. There are numerous reasons this will prove to be useful: these functions will help us compute area, volume, mass, force, pressure, work, and much more.}
 
 
 
@@ -21,7 +22,8 @@ Hopefully one was able to come up with at least one solution: $y = x^2$. ``Findi
 \definition{def:antider}{Antiderivatives and Indefinite Integrals}
 {Let a function $f(x)$ be given. An \textbf{antiderivative} of $f(x)$ is a function $F(x)$ such that $\Fp(x) = f(x)$.\index{antiderivative}\index{indefinite integral}\index{integration!indefinite}\\
 
-The set of all antiderivatives of $f(x)$ is the \textbf{indefinite integral of $f$}, denoted by \[
+The set of all antiderivatives of $f(x)$ is the \textbf{indefinite integral of $f$}, denoted by 
+\[
 \int f(x) \ dx.
 \]
 }
@@ -31,13 +33,13 @@ Make a note about our definition: we refer to \textit{an} antiderivative of $f$,
 Knowing one antiderivative of $f$ allows us to find infinitely more, simply by adding a constant. Not only does this give us \textit{more} antiderivatives, it gives us \textit{all} of them.
 
 \theorem{thm:antideriv_const}{Antiderivative Forms}
-{Let $F(x)$ and $G(x)$ be antiderivatives of $f(x)$. Then there exists a constant $C$ such that 
+{Let $F(x)$ and $G(x)$ be antiderivatives of $f(x)$ on an interval $I$. Then there exists a constant $C$ such that, on $I$,  
 \[
 G(x) = F(x) + C.
 \]
 }
 
-Given a function $f$ and one of its antiderivatives $F$, we know \textit{all} antiderivatives of $f$ have the form $F(x) + C$ for some constant $C$. Using Definition \ref{def:antider}, we can say that 
+Given a function $f$ defined on an interval $I$ and one of its antiderivatives $F$, we know \textit{all} antiderivatives of $f$ on $I$ have the form $F(x) + C$ for some constant $C$. Using Definition \ref{def:antider}, we can say that 
 \[
 \int f(x) \ dx = F(x) + C.
 \]
@@ -116,7 +118,8 @@ We also see that taking the derivative of our answer returns the function in the
 \]
 Differentiation ``undoes'' the work done by antidifferentiation. 
 
-Theorem \ref{thm:deriv_glossary} gave a list of the derivatives of common functions we had learned at that point. We restate part of that list here to stress the relationship between derivatives and antiderivatives. This list will also be useful as a glossary of common antiderivatives as we learn.
+\ifthenelse{\boolean{1010}}{For ease of reference, and to stress the relationship between derivatives and antiderivatives, we include below a list of many of the common differentiation rules we have learned, along with the corresponding antidifferentiation rules.}
+{Theorem \ref{thm:deriv_glossary} gave a list of the derivatives of common functions we had learned at that point. We restate part of that list here to stress the relationship between derivatives and antiderivatives. This list will also be useful as a glossary of common antiderivatives as we learn.}
 
 \newlength{\bh}%box height
 \newlength{\bd}%box depth
@@ -251,7 +254,7 @@ We highlight a few important points from Theorem \ref{thm:indef_alg}:
 \noindent\textbf{\large Initial Value Problems}
 \vskip\baselineskip
 
-In Section \ref{sec:basic_diff_rules} we saw that the derivative of a position function gave a velocity function, and the derivative of a velocity function describes  acceleration.\index{initial value problem} We can now go ``the other way:'' the antiderivative of an acceleration function gives a velocity function, etc. While there is just one derivative of a given function, there are infinite antiderivatives. Therefore we cannot ask ``What is \textit{the} velocity of an object whose acceleration is $-32$ft/s$^2$?'', since there is more than one answer. 
+In Section \ref{sec:basic_diff_rules} we saw that the derivative of a position function gave a velocity function, and the derivative of a velocity function describes  acceleration.\index{initial value problem} We can now go ``the other way:'' the antiderivative of an acceleration function gives a velocity function, etc. While there is just one derivative of a given function, there are infinitely many antiderivatives. Therefore we cannot ask ``What is \textit{the} velocity of an object whose acceleration is $-32$ft/s$^2$?'', since there is more than one answer. 
 
 We can find \textit{the} answer if we provide more information with the question, as done in the following example. Often the additional information comes in the form of an \textit{initial value}, a value of the function that one knows beforehand.\\
 
@@ -311,8 +314,9 @@ C &= 6
  Thus $f(t) = -\cos t + 3t + 6$.
 }\\
 
-This section introduced antiderivatives and the indefinite integral. We found they are needed when finding a function given information about its derivative(s). For instance, we found a position function given a velocity function.
+This section introduced antiderivatives and the indefinite integral. We found they are needed when finding a function given information about its derivative(s). For instance, we found a velocity function given an acceleration function.
 
-In the next section, we will see how position and velocity are unexpectedly related by the areas of certain regions on a graph of the velocity function. Then, in Section \ref{sec:FTC}, we will see how areas and antiderivatives are closely tied together.
+\ifthenelse{\boolean{1010}}{If you continue on to Math 1560, you will see how position and velocity are unexpectedly related by the areas of certain regions on a graph of the velocity function, and how the Fundamental Theorem of Calculus ties together areas and antiderivatives.}
+{In the next section, we will see how position and velocity are unexpectedly related by the areas of certain regions on a graph of the velocity function. Then, in Section \ref{sec:FTC}, we will see how areas and antiderivatives are closely tied together. This connection is incredibly important, as indicated by the name of the theorem that describes it: The Fundamental Theorem of Calculus.}
 
 \printexercises{exercises/05_01_exercises}

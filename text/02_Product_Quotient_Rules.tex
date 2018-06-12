@@ -65,7 +65,7 @@ It is often true that we can recognize that a theorem is true through its proof 
 
 \example{ex_prod2}{Exploring alternate derivative methods}{
 Let $y = (x^2+3x+1)(2x^2-3x+1)$. Find $y\primeskip'$ two ways: first, by expanding the given product and then taking the derivative, and second, by applying the Product Rule. Verify that both methods give the same answer.}
-{We first expand the expression for $y$; a little algebra shows that $y = 2x^4+3x^3-6x^2+1$. It is easy to compute $y\primeskip'$; 
+{We first expand the expression for $y$; a little algebra shows that $y = 2x^4+3x^3-6x^2+1$. It is easy to compute $y\primeskip'$: 
 \[
 y\primeskip' = 8x^3+9x^2-12x.
 \]
@@ -89,7 +89,7 @@ The uninformed usually assume that ``the derivative of the product is the produc
 		&= 3x^2\big(\ln x\cos x\big) + (x^3)\big(\frac1x\cos x + \ln x(-\sin x)\big)\\
 		&= 3x^2\ln x\cos x + x^3\frac1x\cos x + x^3\ln x(-\sin x)
 \end{align*} 
-Recognize the pattern in our answer above: when applying the Product Rule to a product of three functions, there are three terms added together in the final derivative. Each terms contains only one derivative of one of the original functions, and each function's derivative shows up in only one term. It is straightforward to extend this pattern to finding the derivative of a product of 4 or more functions.
+Recognize the pattern in our answer above: when applying the Product Rule to a product of three functions, there are three terms added together in the final derivative. Each term contains only one derivative of one of the original functions, and each function's derivative shows up in only one term. It is straightforward to extend this pattern to finding the derivative of a product of 4 or more functions.
 }\\
 
 We consider one more example before discussing another derivative rule.\\
@@ -116,7 +116,7 @@ This seems significant; if the natural log function $\ln x$ is an important func
 We have learned how to compute the derivatives of sums, differences, and products of functions. We now learn how to find the derivative of a quotient of functions.\\
 
 \theorem{thm:QuotientRule}{Quotient Rule}
-{Let $f$ and $g$ be functions defined on an open interval $I$, where $g(x) \neq 0$ on $I$.\index{derivative!Quotient Rule}\index{Quotient Rule} Then $f/g$ is differentiable on $I$, and 
+{Let $f$ and $g$ be differentiable functions defined on an open interval $I$, where $g(x) \neq 0$ on $I$.\index{derivative!Quotient Rule}\index{Quotient Rule} Then $f/g$ is differentiable on $I$, and 
 \[
 \left(\frac{f}{g}\right)\primeskip'(x) = \frac{\fp(x)g(x) - f(x)g\primeskip'(x)}{g(x)^2}.
 \]
@@ -152,7 +152,7 @@ The Quotient Rule allows us to fill in holes in our understanding of derivatives
 																	&= \frac{1}{\cos^2x} \\
 																	&= \sec ^2 x.
 		\end{align*}
-This is beautiful result. To confirm its truth, we can find the equation of the tangent line to $y=\tan x$ at $x=\pi/4$. The slope is $\sec^2(\pi/4) = 2$; $y=\tan x$, along with its tangent line, is graphed in Figure \ref{fig:tanx}.
+This is a beautiful result. To confirm its truth, we can find the equation of the tangent line to $y=\tan x$ at $x=\pi/4$. The slope is $\sec^2(\pi/4) = 2$; $y=\tan x$, along with its tangent line, is graphed in Figure \ref{fig:tanx}.
 \mfigure{.5}{A graph of $y=\tan x$ along with its tangent line at $x=\pi/4$.}{fig:tanx}{figures/figtanx}
 }\\
 

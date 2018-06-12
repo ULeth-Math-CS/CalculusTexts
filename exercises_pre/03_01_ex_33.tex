@@ -1,0 +1,26 @@
+{According to US Postal regulations, a rectangular shipping box must satisfy the inequality ``Length + Girth $\leq$ 130 inches'' for Parcel Post and ``Length + Girth $\leq$ 108 inches'' for other services. Let's assume we have a closed rectangular box with a square face of side length $x$ as drawn below.  The length is the longest side and is clearly labeled.  The girth is the distance around the box in the other two dimensions so in our case it is the sum of the four sides of the square, $4x$.  
+
+\begin{enumerate}
+
+\item \label{girthbox1} Assuming that we'll be mailing a box via Parcel Post where Length + Girth $=$ 130 inches, express the length of the box in terms of $x$ and then express the volume $V$ of the box in terms of $x$.
+
+\item \label{girthbox2} Find the dimensions of the box of maximum volume that can be shipped via Parcel Post.
+
+\item Repeat parts \ref{girthbox1} and \ref{girthbox2} if the box is shipped using ``other services''.
+
+\end{enumerate}
+
+\begin{center}
+\myincludegraphics{figures/PolynomialsGraphics/GraphsofPolynomials-20}
+\end{center}
+}
+{\begin{enumerate}
+
+\item Our ultimate goal is to maximize the volume, so we'll start with the maximum Length $+$ Girth of $130.$  This means the length is $130 - 4x$.  The volume of a rectangular box is always length $\times$ width $\times$ height so we get $V(x) = x^{2}(130 - 4x) = -4x^{3} + 130x^{2}$.  
+
+\item Graphing $y = V(x)$ on $[0, 33] \times [0, 21000]$ shows a maximum at $(21.67, 20342.59)$ so the dimensions of the box with maximum volume are $21.67\mbox{in.} \times 21.67\mbox{in.} \times 43.32\mbox{in.}$ for a volume of $20342.59\mbox{in.}^{3}$.
+
+\item If we start with Length $+$ Girth $= 108$ then the length is $108 - 4x$ and the volume is $V(x) = -4x^{3} + 108x^{2}$.  Graphing $y = V(x)$ on $[0, 27] \times [0, 11700]$ shows a maximum at $(18.00, 11664.00)$ so the dimensions of the box with maximum volume are $18.00\mbox{in.} \times 18.00\mbox{in.} \times 36\mbox{in.}$ for a volume of $11664.00\mbox{in.}^{3}$.  (Calculus will confirm that the measurements which maximize the volume are \underline{exactly} 18in. by 18in. by 36in., however, as I'm sure you are aware by now, we treat all calculator results as approximations and list them as such.)
+
+\end{enumerate}
+}

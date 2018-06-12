@@ -12,11 +12,14 @@
 
 \newboolean{colour}
 \setboolean{colour}{false}
+\newboolean{CalcI}
+\setboolean{CalcI}{false}
+
 
 %% end detour
 %\usepackage{amsmath}
 \usepackage{xr}
-\externaldocument{Math1560_print}
+\externaldocument[I-]{Math1560_ebook}
 
 \input{headers/Page_Size_Calculus}
 \usepackage{APEX_format}
@@ -25,6 +28,7 @@
 \pgfplotsset{compat=1.8}
 \usepackage{refcount}
 %\usepackage{pdfpages}
+%\usepackage{mathrsfs}
 
 
 \ifthenelse{\boolean{xetex}}%
@@ -35,16 +39,20 @@
 	\setmainfont[Mapping=tex-text]{Calibri}
 	\setsansfont[Mapping=tex-text]{Calibri}
 	\setmathsfont(Greek){[cmmi10]}}
-	{}
+	{\usepackage[sfdefault,lf]{carlito}
+	%% The 'lf' option for lining figures
+	%% The 'sfdefault' option to make the base font sans serif
+	\usepackage[T1]{fontenc}
+	\renewcommand*\oldstylenums[1]{\carlitoOsF #1}}
 	
 	\ifthenelse{\boolean{luatex}}%
 	{\sffamily
 	\usepackage{fontspec}
 	\usepackage{unicode-math}
-	%\usepackage{mathspec}
-	%\setallmainfonts[Mapping=tex-text]{Calibri}
+	\usepackage{mathspec}
+	\setallmainfonts[Mapping=tex-text]{Calibri}
 	\setmainfont{Calibri}
-	%\setsansfont[Mapping=tex-text]{Calibri}
+	\setsansfont[Mapping=tex-text]{Calibri}
 	\setmathfont[range=\mathup]{Calibri}
 	\setmathfont[range=\mathit]{Calibri Italic}
 	}
@@ -55,6 +63,7 @@
 %%%\tracingonline=1
 \begin{document}
 
+
 \ifthenelse{\boolean{colour}}{\printincolor}{\printinblackandwhite}
 
 %\printexercisenames
@@ -63,21 +72,9 @@
 \input{text/front_matter_and_coverII}
 
 
-
-
-
-\setcounterref{definitioncounter}{lastdefcount1}
-\addtocounter{definitioncounter}{-1}
-\setcounterref{theoremcounter}{lastthmcount1}
-\addtocounter{theoremcounter}{-1}
-\setcounterref{keyideacounter}{lastideacount1}
-\addtocounter{keyideacounter}{-1}
-\setcounterref{examplecounter}{lastexamplecount1}
-\addtocounter{examplecounter}{-1}
-
-
-\setcounter{page}{235}
+\addtocounter{page}{\getpagerefnumber{I-1560lastpage}}
 \addtocounter{chapter}{5}
+
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \chapter{Techniques of Antidifferentiation}\label{chapter:anti_tech}
@@ -96,7 +93,7 @@
 \chapter{Applications of Integration}\label{chapter:app_of_int}
 \thispagestyle{empty}
 
-\input{text/07_Area_Between_Curves}
+\input{text/07_Area_Between_Curves2560}
 \input{text/07_Disk_Washer_Method}
 \input{text/07_Shell_Method}
 \input{text/07_Arc_Length}
@@ -106,12 +103,12 @@
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \chapter{Differential Equations}
 \thispagestyle{empty}
-\input{text/14_ODE_Intro}
-\input{text/14_ODE_Integral_Sol}
-\input{text/14_ODE_Slope_Fields}
-\input{text/14_ODE_Separable_Eq}
-\input{text/14_ODE_Linear_Eq}
-\input{text/14_ODE_Euler}
+\input{text/15_ODE_Intro}
+\input{text/15_ODE_Integral_Sol}
+\input{text/15_ODE_Slope_Fields}
+\input{text/15_ODE_Separable_Eq}
+\input{text/15_ODE_Linear_Eq}
+\input{text/15_ODE_Euler}
 
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
@@ -130,22 +127,17 @@
 % counters are reset in the Taylor Polynomial section, not here
 % I do not recall why this didn't seem to work here
 %
-\refstepcounter{definitioncounter}
-\label{lastdefcount2}
-\refstepcounter{theoremcounter}
-\label{lastthmcount2}
-\refstepcounter{keyideacounter}
-\label{lastideacount2}
-\refstepcounter{examplecounter}
-\label{lastexamplecount2}
 
+%\clearpage
+\label{2560lastpage}
 
 \appendix
+\thispagestyle{empty}
 \clearpage{\pagestyle{empty}\cleardoublepage}
 %%%%%
 %%%%\makeexercisesection{Solutions To Selected Problems}
-%\pagenumbering{arabic}\renewcommand{\thepage}{A.\arabic{page}}
-%\makeexercisesection{Solutions To Selected Problems}
+\pagenumbering{arabic}\renewcommand{\thepage}{A.\arabic{page}}
+\makeexercisesection{Solutions To Selected Problems}
 %%%\printexercisesection
 
 
@@ -179,4 +171,3 @@
 
 
 \end{document}
-

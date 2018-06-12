@@ -1,0 +1,41 @@
+\documentclass[11pt]{book}
+\oddsidemargin 0in
+\evensidemargin 0in
+\marginparwidth 0in
+\textheight 8in
+\textwidth 6.5in
+\topmargin 0in
+\usepackage{amssymb,amsmath,amsthm,fancyhdr,supertabular,longtable,hhline}
+\usepackage{colortbl}
+\usepackage{import, multicol,boxedminipage}
+\usepackage{chapterfolder}
+\usepackage[metapost,truebbox,mplabels]{mfpic}
+\usepackage[pdflatex]{graphicx}
+\usepackage{makeidx}
+\usepackage[colorlinks, hyperindex, plainpages=false, linkcolor=blue, urlcolor=blue, pdfpagelabels]{hyperref}
+\usepackage[all]{hypcap}
+\usepackage{cancel}
+\usepackage{sectsty}
+\usepackage{textcomp}
+\allsectionsfont{\mdseries \scshape}
+\definecolor{ResultColor}{gray}{0.9}
+\theoremstyle{definition}  % this prevents the text in definitions, theorems, and corollaries from being italicized
+\newtheorem{defn}{Definition}[chapter]
+\newtheorem{thm}{Theorem}[chapter]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{eqn}{Equation}[chapter]
+\newtheorem{ex}{Example}[section]
+\setlength{\parindent}{0in}
+\newcommand{\bbm}{\begin{boxedminipage}{6.41in}}
+\newcommand{\ebm}{\end{boxedminipage}}
+\setlength{\extrarowheight}{2pt}
+\newcounter{HW}
+\newcounter{HWindent}
+
+\begin{document}
+
+\chapter{\sc Linear and Quadratic Functions}
+
+\include{LinearQuadratic}
+
+\end{document}

@@ -8,7 +8,7 @@ Let's abstract once more. Let's find the derivative of the general quadratic fun
 		\begin{align*}
 		\fp(x) 	&=	\lim_{h\to 0}\frac{a(x+h)^2+b(x+h)+c-(ax^2+bx+c)}{h} \\
 						&=	\lim_{h\to 0} \frac{ah^2+2ahx+bh}{h} \\
-						&=	\lim_{h\to 0} ah+2ax+b\\
+						&=	\lim_{h\to 0} (ah+2ax+b)\\
 						&= 2ax+b.
 		\end{align*}
 		
@@ -16,31 +16,65 @@ So if $y = 6x^2+11x-13$, we can immediately compute $y\primeskip' = 12x+11$. \\
 
 In this section (and in some sections to follow) we will learn some of what mathematicians have already discovered about the derivatives of certain functions and how derivatives interact with arithmetic operations. We start with a theorem.
 
-\setboxwidth{110pt}
-\noindent%\hskip-110pt
-\begin{minipage}{\specialboxlength}
+%\setboxwidth{110pt}
+%\noindent\hskip-110pt
+%\begin{minipage}{\specialboxlength}
 \theorem{thm:deriv_common}{Derivatives of Common Functions}{
-		\noindent\begin{minipage}[t]{175pt}
+		\noindent\begin{minipage}[t]{.6\linewidth}
 		\begin{enumerate}
 		\item		\sword{Constant Rule:}\index{derivative!Constant Rule} 
 		
-		$\ds \frac{d}{dx}\big( c\big) = 0$, where $c$ is a constant.\addtocounter{enumi}{1}
-		\item		$\ds \frac{d}{dx}(\sin x) = \cos x$\addtocounter{enumi}{1}
-		\item		$\ds \frac{d}{dx}\left(e^x\right) = e^x$
-		\end{enumerate}
-		\end{minipage}
-		\begin{minipage}[t]{210pt}
-		\begin{enumerate}\addtocounter{enumi}{1}
+		$\ds \frac{d}{dx}\big( c\big) = 0$, where $c$ is a constant.
+		
 		\item		\sword{Power Rule:}\index{derivative!Power Rule}\index{Power Rule!differentiation}
 		
-		$\ds \frac{d}{dx}\left(x^n\right) = nx^{n-1}$, where $n$ is an integer, $n>0$.\addtocounter{enumi}{1}
-		\item		$\ds \frac{d}{dx}(\cos x) = -\sin x$\addtocounter{enumi}{1}
+		$\ds \frac{d}{dx}\big(x^n\big) = nx^{n-1}$, \parbox[t]{60pt}{where $n$ is an integer, $n>0$.}
+		
+		
+		
+		\end{enumerate}
+		\end{minipage}
+		\begin{minipage}[t]{.39\linewidth}
+		\begin{enumerate}\addtocounter{enumi}{4}
+		 
+		\item		$\ds \frac{d}{dx}(\sin x) = \cos x$
+		
+		\item		$\ds \frac{d}{dx}(\cos x) = -\sin x$
+		
+		\item		$\ds \frac{d}{dx}\left(e^x\right) = e^x$
+		
 		\item		$\ds \frac{d}{dx}(\ln x) = \frac{1}{x}$
 		\end{enumerate}\index{derivative!basic rules}
 		\end{minipage}
 }
-\end{minipage}
-\restoreboxwidth
+%\end{minipage}
+%\restoreboxwidth
+
+%\setboxwidth{110pt}
+%\noindent\hskip-110pt
+%\begin{minipage}{\specialboxlength}
+%\theorem{thm:deriv_common}{Derivatives of Common Functions}{
+		%\noindent\begin{minipage}[t]{175pt}
+		%\begin{enumerate}
+		%\item		\sword{Constant Rule:}\index{derivative!Constant Rule} 
+		%
+		%$\ds \frac{d}{dx}\big( c\big) = 0$, where $c$ is a constant.\addtocounter{enumi}{1}
+		%\item		$\ds \frac{d}{dx}(\sin x) = \cos x$\addtocounter{enumi}{1}
+		%\item		$\ds \frac{d}{dx}\left(e^x\right) = e^x$
+		%\end{enumerate}
+		%\end{minipage}
+		%\begin{minipage}[t]{210pt}
+		%\begin{enumerate}\addtocounter{enumi}{1}
+		%\item		\sword{Power Rule:}\index{derivative!Power Rule}\index{Power Rule!differentiation}
+		%
+		%$\ds \frac{d}{dx}\left(x^n\right) = nx^{n-1}$, where $n$ is an integer, $n>0$.\addtocounter{enumi}{1}
+		%\item		$\ds \frac{d}{dx}(\cos x) = -\sin x$\addtocounter{enumi}{1}
+		%\item		$\ds \frac{d}{dx}(\ln x) = \frac{1}{x}$
+		%\end{enumerate}\index{derivative!basic rules}
+		%\end{minipage}
+%}
+%\end{minipage}
+%\restoreboxwidth
 
 This theorem starts by stating an intuitive fact: constant functions have no rate of change as they are \textit{constant}. Therefore their derivative is 0 (they change at the rate of 0). The theorem then states some fairly amazing things. The Power Rule states that the derivatives of Power Functions (of the form $y=x^n$) are very straightforward: multiply by the power, then subtract 1 from the power. We see something incredible about the function $y=e^x$: it is its own derivative. We also see a new connection between the sine and cosine functions. 
 
@@ -109,7 +143,7 @@ In particular, note that:
 
 With Theorem \ref{thm:binomial} in hand, we can quickly establish the Power Rule using the definition of the derivative. Given $f(x)=x^n$, where $n$ is a positive integer, we have:
 \begin{align*}
-f'(x) & = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\\
+\fp(x) & = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\\
 & = \lim_{h\to 0}\frac{(x+h)^n-x^n}{h}\\
 & = \lim_{h\to 0}\frac{(x^n+nx^{n-1}h+\cdots + h^n)-x^n}{h} \tag{Using Theorem \ref{thm:binomial}}\\
 & = \lim_{h\to 0}\frac{nx^{n-1}h \binom{n}{2}x^{n-2}h^2 + \cdots + h^n}{h} \tag{Cancelling the $x^n$ terms}\\
@@ -119,7 +153,7 @@ f'(x) & = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\\
 
 The fact that the derivative of $\sin(x)$ is $\cos(x)$ was established in Example \ref{ex_deriv_sinx}; the fact that the derivative of $\cos(x)$ is $-\sin(x)$ is established similarly, and left as an exercise. We aren't yet in a position to rigorously establish the derivative formulas for $e^x$ and $\ln(x)$, but we can show that it's at least plausible that the exponential function is its own derivative. For $f(x)=e^x$, Definition \ref{def:the_derivative} tells us:
 \begin{align*}
-f'(x) & = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\\
+\fp(x) & = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\\
 & = \lim_{h\to 0}\frac{e^{x+h}-e^x}{h}\\
 & = \lim_{h\to 0}\frac{e^x\cdot e^h - e^x}{h} \tag{Laws of exponents}\\
 & = \lim_{h\to 0}\frac{e^x(e^h-1)}{h} \tag{Factoring}\\
@@ -129,13 +163,14 @@ It seems we are stuck on this last limit. But notice that
 \[
 \lim_{h\to 0}\frac{e^h-1}{h} = \lim_{h\to 0}\frac{e^{0+h}-e^0}{h} = f'(0),
 \]
-so $f'(x) = f'(0)e^x$, where $f'(0)$ is simply the slope of the tangent line to the graph $y=e^x$ at $x=0$. Looking at the graph of $y=a^x$ for several values of $a>1$, we see that this slope depends on the value of $a$. One way of defining the number $e$ used as the base of the natural exponential is that this is the value of $a$ such that the slope of the tangent line at $x=0$ is exactly one; that is, such that $f'(0)=1$. With this definition, we immediately find that $f'(x)=e^x$, as expected.
+so $\fp(x) = \fp(0)e^x$, where $\fp(0)$ is simply the slope of the tangent line to the graph $y=e^x$ at $x=0$. Looking at the graph of $y=a^x$ for several values of $a>1$, we see that this slope depends on the value of $a$. One way of defining the number $e$ used as the base of the natural exponential is that this is the value of $a$ such that the slope of the tangent line at $x=0$ is exactly one; that is, such that $f'(0)=1$. With this definition, we immediately find that $\fp(x)=e^x$, as expected.
 
 \mfigure[width=0.95\marginparwidth]{.4}{The graph $y=a^x$, for three values of $a>1$}{fig:exp_values}{figures/fig_exp_values}
 
-We will establish the formula for the derivative of $f(x)=\ln(x)$ in Section \ref{sec:deriv_inverse_function} as a special case of Theorem \ref{thm:deriv_inverse_functions} (see Example \ref{ex_deriv_lnx}).
+\ifthenelse{\boolean{1010}}{The derivative of $\ln(x)$ can be obtained using the Chain Rule (Section \ref{sec:chainrule}, and the fact that $e^{\ln(x)}=x$. We will state the result here without proof.}
+{We will establish the formula for the derivative of $f(x)=\ln(x)$ in Section \ref{sec:deriv_inverse_function} as a special case of Theorem \ref{thm:deriv_inverse_functions} (see Example \ref{ex_deriv_lnx}).
 
-\mnote{.15}{In some Calculus textbooks, the derivatives of $f(x)=e^x$ and $g(x)=\ln(x)$ are left until after the Fundamental Theorem of Calculus (see Theorem \ref{thm:FTC1}). In this approach, the logarithm is defined as an integral, and the exponential function as its inverse. Interestingly enough, all of the familiar properties of the logarithm can be derived using properties of the integral.}
+\mnote{.15}{In some Calculus textbooks, the derivatives of $f(x)=e^x$ and $g(x)=\ln(x)$ are left until after the Fundamental Theorem of Calculus (see Theorem \ref{thm:FTC1}). In this approach, the logarithm is defined as an integral, and the exponential function as its inverse. Interestingly enough, all of the familiar properties of the logarithm can be derived using properties of the integral.}}
 
 Theorem \ref{thm:deriv_common} gives useful information, but we will need much more. For instance, using the theorem, we can easily find the derivative of $y=x^3$, but it does not tell how to compute the derivative of $y=2x^3$, $y=x^3+\sin x$ nor $y=x^3\sin x$. The following theorem helps with the first two of these examples (the third is answered in the next section).
 \enlargethispage{\baselineskip}
@@ -161,7 +196,7 @@ Theorem \ref{thm:deriv_prop} allows us to find the derivatives of a wide variety
 																		&= 6x+5.
 		\end{align*}
 
-We were a bit pedantic here, showing every step. Normally we would do all the arithmetic and steps in our head and readily find $\ds \frac{d}{dx}\Big(3x^2+5x+7\Big) = 6x+5.$
+We were a bit pedantic here, showing every step. Normally we would do all the arithmetic and steps in our head and readily find $\ds \frac{d}{dx}\Big(3x^2+5x+7\Big) = 6x+5.$\\
 
 Both rules in Theorem \ref{thm:deriv_prop} are easily established using the definition of the derivative. We will leave the Constant Multiple Rule as an exercise, and demonstrate that the Sum Rule is true. Suppose that we are given two differentiable functions $f$ and $g$. Recalling how the sum $f+g$ is defined, and using Definition \ref{def:the_derivative}, we have:
 \begin{align*}
@@ -197,17 +232,17 @@ The derivative of a function $f$ is itself a function, therefore we can take its
 %\clearpage
 %\small
 \definition{def:Higher_Deriv}{Higher Order Derivatives}
-{Let $y=f(x)$ be a differentiable function on $I$. \index{derivative!higher order}\index{derivative!notation}
+{Let $y=f(x)$ be a differentiable function on $I$. The following are defined, provided the corresponding limits exist. \index{derivative!higher order}\index{derivative!notation}\index{derivative!second}\index{derivative!third}
 		\begin{enumerate}
-		\item		The \textit{second derivative} of $f$ is: 
+		\item		The \sword{second derivative of $f$} is: 
 \[
  \fp'(x) = \frac{d}{dx}\Big(\fp(x)\Big) = \frac{d}{dx}\left(\frac{dy}{dx}\right) = \frac{d\primeskip^2y}{dx^2}=y\primeskip''.
 \]
-				\item		The \textit{third derivative} of $f$ is: 
+				\item		The \sword{third derivative of $f$} is: 
 \[
 \fp''(x) = \frac{d}{dx}\Big(\fp'(x)\Big) = \frac{d}{dx}\left(\frac{d\primeskip^2y}{dx^2}\right) = \frac{d\primeskip^3y}{dx^3}=y\primeskip'''.
 \]
-				\item		The \textit{n$^{\text{th}}$ derivative} of $f$ is:
+				\item		The \sword{n$^{\text{th}}$ derivative of $f$} is:
 \[
  f\,^{(n)}(x) = \frac{d}{dx}\left(f\,^{(n-1)}(x)\right) = \frac{d}{dx}\left(\frac{d\primeskip^{n-1}y}{dx^{n-1}}\right) = \frac{d\primeskip^ny}{dx^n}=y^{(n)}.
 \]
@@ -215,7 +250,7 @@ The derivative of a function $f$ is itself a function, therefore we can take its
 }
 \normalsize
 
-In general, when finding the fourth derivative and on, we resort to the $f\,^{(4)}(x)$ notation, not $\fp'''(x)$; after a while, too many ticks is too confusing.\\
+In general, when finding the fourth derivative and on, we resort to the $f\,^{(4)}(x)$ notation, not $\fp'''(x)$; after a while, too many ticks is  confusing.\\
 
 Let's practice using this new concept.\\
 
@@ -233,7 +268,7 @@ Find the first four derivatives of the following functions:
 	\begin{enumerate}\addtocounter{enumi}{2}
 	\item		$f(x) = 5e^x$
 	\end{enumerate}
-	\end{minipage}\pagebreak
+	\end{minipage}%\pagebreak
 }
 {\begin{enumerate}
 	\item		Using the Power and Constant Multiple Rules, we have: $\fp(x) = 8x$. Continuing on, we have 

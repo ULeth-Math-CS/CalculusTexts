@@ -1,0 +1,395 @@
+\section{Polynomial Arithmetic}
+\label{PolyArith}
+
+
+The previous section introduced all the important polynomial terminology and taught us the basic techniques for graphing polynomial functions. We saw that a necessary ingredient for obtaining the graph of a polynomial function is knowledge of the zeros of the polynomial. In the next few sections, we will cover the algebraic techniques needed to obtain this information.
+
+In this section our focus is entirely on algebraic manipulation, so we will pause briefly in our discussion of functions, and simply consider polynomial \textit{expressions}. (That is, we simply dispense with writing ``$p(x)=$'' in front of every polynomial.)
+
+We begin with (you guessed it) a bit more terminology that can come in handy when comparing polynomials.
+
+\definition{polynomialterminology}{Polynomial Vocabulary, Part 2}{
+
+\begin{itemize}
+
+\item  \textbf{Like Terms:} Terms in a polynomial are called \sword{like} terms if they have the same variables each with the same corresponding exponents.
+
+\item  \textbf{Simplified:} A polynomial is said to be \sword{simplified} if all arithmetic operations have been completed and there are no longer any like terms.
+
+\item  \textbf{Classification by Number of Terms:}  A simplified polynomial  is  called a 
+
+\begin{itemize}
+
+\item   \textbf{monomial} if it has exactly one nonzero term
+
+\item   \textbf{binomial} if it has exactly two nonzero terms
+
+\item   \textbf{trinomial} if it has exactly three nonzero terms
+
+\end{itemize}
+
+\end{itemize}
+}
+
+\medskip
+
+For example, $x^2 + x\sqrt{3} +4$ is a trinomial of degree $2$.  The coefficient of $x^2$ is $1$ and the constant term is $4$.  The polynomial $27x^2y + \frac{7x}{2}$ is a binomial of degree $3$ ($x^2y = x^2 y^1$) with constant term $0$.  
+
+\medskip
+
+The concept of `like' terms really amounts to finding terms which can be combined using the Distributive Property.  For example, in the polynomial $17x^2y - 3xy^2 + 7xy^2$, $-3xy^2$ and $7xy^2$ are like terms, since they have the same variables with the same corresponding exponents. This allows us to combine these two terms as follows:  \[17x^2y -  3xy^2 + 7xy^2 = 17x^2y + (-3)xy^2 + 7xy^2 + 17x^2y +(-3 + 7)xy^2 = 17x^2y + 4xy^2\]  Note that even though $17x^2y$ and $4xy^2$ have the same variables, they are not like terms since in the first term we have $x^2$ and $y = y^1$ but in the second we have $x = x^1$ and $y = y^2$ so the corresponding exponents aren't the same.  Hence,  $17x^2y + 4xy^2$ is the simplified form of the polynomial.  
+
+\smallskip
+
+There are four basic operations we can perform with polynomials:  addition, subtraction, multiplication and division. The first three of these operations follow directly from properties of real number arithmetic and will be discussed together first.  Division, on the other hand, is a bit more complicated and will be discussed separately.
+
+\subsection{Polynomial Addition, Subtraction and Multiplication.}
+\label{polyaddsubtmult}
+
+Adding and subtracting polynomials comes down to identifying like terms and then adding or subtracting the coefficients of those like terms.  Multiplying polynomials comes to us courtesy of the Generalized Distributive Property.
+
+\medskip
+
+\theorem{generaldistprop}{Generalized Distributive Property}{  To multiply a quantity of $n$ terms by a quantity of $m$ terms, multiply each of the $n$ terms of the first quantity by each of the $m$ terms in the second quantity and add the resulting $n \cdot m$ terms together. 
+}
+
+\medskip
+
+In particular, Theorem \ref{generaldistprop} says that, before combining like terms, a product of an $n$-term polynomial and an $m$-term polynomial will generate $(n \cdot m)$-terms.  For example, a binomial times a trinomial will produce six terms some of which may be like terms.  Thus the simplified end result may have fewer than six terms but you will start with six terms. 
+
+\medskip
+
+A special case of Theorem \ref{generaldistprop}  is the famous \textbf{F.O.I.L.}, listed here:
+
+\mnote{.5}{We caved to peer pressure on this one.  Apparently all of the cool Precalculus books have FOIL in them even though it's redundant once you know how to distribute multiplication across addition.  In general, we don't like mechanical short-cuts that interfere with a student's understanding of the material and FOIL is one of the worst.}
+
+\medskip
+
+\keyidea{FOIL}{F.O.I.L:}{ The terms generated from the product of two binomials: $(a + b)(c+d)$ can be verbalized as follows ``Take the sum of:
+
+\begin{itemize}
+
+\item the product of the \textbf{F}irst terms $a$ and $c$, $ac$
+
+\item the product of the \textbf{O}uter terms $a$ and $d$, $ad$
+
+\item  the product of the \textbf{I}nner terms $b$ and $c$, $bc$
+
+\item  the product of the \textbf{L}ast terms $b$ and $d$, $bd$.''
+
+\end{itemize}
+
+That is, $(a+b)(c+d) = ac + ad + bc + bd$.
+}
+
+\medskip
+
+Theorem \ref{generaldistprop} is best proved using the technique known as Mathematical Induction which is covered in Math 2000.  The result is really nothing more than repeated applications of the Distributive Property so it seems reasonable and we'll use it without proof for now.  The other major piece of polynomial multiplication is the law of exponents  $a^n a^m = a^{n+m}$.  The Commutative and Associative Properties of addition and multiplication are also used extensively.  We put all of these properties to good use in the next example.
+
+%pagebreak
+
+\medskip
+
+\example{polyaddsubtmultex}{Addition and subtraction of polynomials}{
+Perform the indicated operations and simplify.
+
+\begin{enumerate}
+
+\item  $\left(3x^2 - 2x + 1\right) - (7x-3)$
+
+\item  $4xz^2 - 3z(xz - x + 4)$
+
+\item $(2t+1)(3t - 7)$ \vphantom{$\left(3y - \sqrt[3]{2}\right)\left(9y^2 + 3\sqrt[3]{2} y + \sqrt[3]{4}\right)$}
+
+\item  $\left(3y - \sqrt[3]{2}\right)\left(9y^2 + 3\sqrt[3]{2} y + \sqrt[3]{4}\right)$
+
+\item  $\left(4w - \dfrac{1}{2} \right)^2$
+
+\item  $\left[2(x+h) - (x+h)^2\right] - \left(2x - x^2 \right)$ \vphantom{ $\left(4w - \dfrac{1}{2} \right)^2$}
+
+\setcounter{HW}{\value{enumi}}
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item  We begin `distributing the negative', then we rearrange and combine like terms:
+\begin{align*}
+\left(3x^2 - 2x + 1\right) - (7x-3) &  =  3x^2-2x+1 - 7x + 3  \tag*{Distribute} \\
+                       & =  3x^2  -2x - 7x + 1 + 3  \tag*{Rearrange terms} \\							   & =  3x^2 - 9x + 4  \tag*{Combine like terms}
+\end{align*}
+Our answer is $3x^2 - 9x + 4$.
+
+\item  Following in our footsteps from the previous example, we first distribute the $-3z$ through, then rearrange and combine like terms.
+\begin{align*}
+4xz^2 - 3z(xz - x + 4) & =  4xz^2 - 3z(xz) + 3z (x) - 3z(4)  \tag*{Distribute} \\
+                       & =  4xz^2 - 3xz^2 + 3xz - 12 z  \tag*{Multiply} \\
+					   & =  xz^2+ 3xz - 12 z  \tag*{Combine like terms}
+\end{align*}
+We get our final answer: $xz^2+ 3xz - 12z$
+
+
+\item  At last, we have a chance to use our F.O.I.L. technique:
+\begin{align*}
+(2t+1)(3t - 7) & =  (2t)(3t) + (2t)(-7) + (1)(3t) + (1)(-7)  \tag*{F.O.I.L.} \\
+               & =  6t^2 - 14t + 3t - 7  \tag*{Multiply} \\
+			   & =  6t^2 - 11t - 7  \tag*{Combine like terms}
+\end{align*} 
+We get $6t^2 - 11t - 7$ as our final answer.
+
+\item  We use the Generalized Distributive Property here, multiplying each term in the second quantity first by $3y$, then by $-\sqrt[3]{2}$:
+
+\noindent\hskip-50pt
+\begin{minipage}{1.1\textwidth}
+\begin{align*}
+\left(3y - \sqrt[3]{2}\right)\left(9y^2 + 3\sqrt[3]{2} y + \sqrt[3]{4}\right)  &=3y\left(9y^2\right) +3y\left(3\sqrt[3]{2} y\right) + 3y\left(\sqrt[3]{4}\right) \\
+       &\quad \quad \quad -\sqrt[3]{2} \left(9y^2\right) - \sqrt[3]{2} \left(3\sqrt[3]{2} y\right) -\sqrt[3]{2} \left(\sqrt[3]{4}\right)  \\
+			  & =  27y^3 + 9y^2 \sqrt[3]{2} + 3y \sqrt[3]{4} - 9y^2\sqrt[3]{2} - 3y \sqrt[3]{4} - \sqrt[3]{8}  \\
+				& =  27y^3 + 9y^2 \sqrt[3]{2} - 9y^2 \sqrt[3]{2} + 3y \sqrt[3]{4} - 3y \sqrt[3]{4} - 2  \\
+				& =  27y^3 - 2 \\ 
+\end{align*}
+\end{minipage}
+
+To our surprise and delight, this product reduces to $27y^3 - 2$.
+
+\item Since exponents do \textbf{not} distribute across powers,  $\left(4w - \frac{1}{2} \right)^2 \neq (4w)^2 - \left(\frac{1}{2}\right)^2$.  (We know you knew that.)  Instead, we proceed as follows:
+\begin{align*}
+\left(4w - \dfrac{1}{2} \right)^2 & =  \left(4w - \dfrac{1}{2} \right)\left(4w - \dfrac{1}{2} \right)  \\
+                                 & =  (4w)(4w) + (4w)\left(-\dfrac{1}{2}\right) + \left(-\dfrac{1}{2}\right)(4w) + \left(-\dfrac{1}{2}\right)\left(-\dfrac{1}{2}\right)  \\															
+	& =  16w^2 - 2w - 2w + \dfrac{1}{4}  \tag*{Multiply} \\ 
+                                & =  16w^2 - 4w + \dfrac{1}{4}   \tag*{Combine like terms} \\ 
+\end{align*}
+Our (correct) final answer is $16w^2 - 4w + \frac{1}{4}$.
+
+\item  Our last example has two levels of grouping symbols.  We begin simplifying the quantity inside the brackets, squaring out the binomial $(x+h)^2$ in the same way we expanded the square in our last example: \[ (x+h)^2 = (x+h)(x+h) = (x)(x) + (x)(h) + (h)(x) + (h)(h) = x^2 + 2xh + h^2 \]  When we substitute this into our expression, we envelope it in parentheses, as usual, so we don't forget to distribute the negative.\[ \begin{array}{rclr}
+					
+\left[2(x+h) - (x+h)^2\right] - \left(2x - x^2 \right) & = & \left[2(x+h) - \left( x^2 + 2xh + h^2\right) \right] - \left(2x - x^2 \right) & \hspace*{-.6in}\text{Substitute} \\
+	                                                     & = & \left[2x+2h - x^2-2xh-h^2\right] - \left(2x - x^2 \right) & \hspace*{-6in} \text{Distribute}\\ 
+                                                      & = & 2x+2h - x^2-2xh-h^2 -2x + x^2 & \hspace*{-.6in}\text{Distribute} \\ 
+																											 & = & 2x - 2x+2h - x^2 + x^2 -2xh-h^2& \hspace*{-.6in}\text{Rearrange terms}\\
+																											 & = & 2h-2xh-h^2& \hspace*{-.6in}\text{Combine like terms}\\
+																											\end{array} \] We find no like terms in $2h-2xh-h^2$ so we are finished.                                           
+
+\end{enumerate}
+}
+
+
+
+We conclude our discussion of polynomial multiplication by showcasing two special products which happen often enough they should be committed to memory.
+
+\medskip
+
+\keyidea{SpecialProducts}{Special Products}{ Let $a$ and $b$ be real numbers:
+
+\begin{itemize}
+
+\item \textbf{Perfect Square:}  $(a+b)^2 = a^2 + 2ab + b^2$ and $(a-b)^2 = a^2 - 2ab + b^2$
+
+\item \textbf{Difference of Two Squares:}  $(a-b)(a+b) = a^2 - b^2$ 
+
+\end{itemize}
+}
+
+\medskip
+
+The formulas in Theorem \ref{SpecialProducts} can be verified by working through the multiplication. (These are both special cases of F.O.I.L.)
+
+\subsection{Polynomial Long Division.}
+\label{polylongdiv}
+
+We now turn our attention to polynomial long division.  Dividing two polynomials follows the same algorithm, in principle, as dividing two natural numbers so we review that process first.  Suppose we wished to divide $2585$ by $79$.  The standard division tableau is given below. 
+
+\setlength\arraycolsep{0.1pt}
+\setlength\extrarowheight{2pt}
+
+\[ \begin{array}{cccccc}
+
+    &             &      &    & 3   & 2  \\ \hhline{~~|----}
+
+  7 & 9 \, \vline & \, 2 & 5 & 8 & 5  \\
+
+    &            -&    2 & 3 & 7 & \downarrow \\ \hhline{~~---} 
+    &             &      & 2 & 1 &  5   \\ 
+    &             &     - & 1 & 5 & 8    \\ \hhline{~~~---} 
+    &             &      &   & 5 & 7    \\
+
+ 
+\end{array}\]
+
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+
+In this case, $79$ is called the \sword{divisor}, $2585$ is called the \sword{dividend}, $32$ is called the \sword{quotient} and $57$ is called the \sword{remainder}.  We can check our answer by showing:  \[ \text{dividend} = (\text{divisor})( \text{quotient}) + \text{remainder}\] or in this case, $2585 = 
+ (79)(32) + 57 \checkmark$.  We hope that the long division tableau evokes warm, fuzzy memories of your formative years as opposed to feelings of hopelessness and frustration.  If you experience the latter, keep in mind that the Division Algorithm essentially is a two-step process, iterated over and over again.  First, we guess the number of times the divisor goes into the dividend and  then we subtract off our guess.  We repeat those steps with what's left over until what's left over (the remainder) is less than what we started with (the divisor).  That's all there is to it!
+
+\smallskip
+
+The division algorithm for polynomials has the same basic two steps but when we subtract polynomials, we must take care to subtract \emph{like terms} only.  As a transition to polynomial division, let's write out our previous division tableau in expanded form.
+
+
+\setlength\arraycolsep{0.1pt}
+\setlength\extrarowheight{2pt}
+
+\[ \begin{array}{cccccccccc}
+
+& & & & & & & 3 \cdot 10 & + & 2 \\ \hhline{~~~|-------}
+
+7 \cdot 10 & + & 9 \, \vline& 2\cdot 10^3 & + & 5 \cdot 10^2 & + & 8 \cdot 10 & + & 5 \\
+
+ &  &  -& \left(2 \cdot 10^3 \right. & + &  3 \cdot 10^2  & + & \left. 7 \cdot 10 \right) &  &  \downarrow \\ \hhline{~~~-----~~} 
+ &  &  &   &  & 2 \cdot 10^2 & +  & 1 \cdot 10 & + & 5 \\ 
+ &  &  &   & - & \left(1 \cdot 10^2 \right. & +  &  5 \cdot 10 &  + &\left.  8 \right) \\ \hhline{~~~~~---~~} 
+ &  &  &   &   &  & & 5 \cdot 10  & + & 7 \\
+
+ 
+\end{array}\]
+
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+
+Written this way, we see that when we line up the digits we are really lining up the coefficients of the corresponding powers of $10$ - much like how we'll have to keep the powers of $x$ lined up in the same columns.  The big difference between polynomial division and the division of natural numbers is that the value of $x$ is an unknown quantity.  So unlike using the known value of $10$, when we subtract there can be no regrouping of coefficients as in our previous example. (The subtraction $215 - 158$ requires us to `regroup' or `borrow' from the tens digit, then the hundreds digit.) This actually makes polynomial division easier. (In our opinion - you can judge for yourself.)  Before we dive into examples, we first make note of Theorem \ref{polydiv} from the next section, which states that for any polynomial functions $d(x)$ and $p(x)$ such that the degree of $p$ is greater than or equal to the degree of $d$, there exist unique polynomial functions $q(x)$ and $r(x)$ such that
+\[
+p(x) = d(x)q(x)+r(x),
+\]
+and either $r(x)=0$, or the degree of $r$ is less than the degree of $d$. This result tells us that we can divide polynomials whenever the degree of the divisor is less than or equal to the degree of the dividend.  We know we're done with the division when the polynomial left over (the remainder) has a degree strictly less than the divisor.  It's time to walk through a few examples to refresh your memory.
+
+\example{polynomiallongdivex}{Polynomial long division}{  Perform the indicated division.  Check your answer by showing \[\text{dividend} = (\text{divisor})( \text{quotient}) + \text{remainder}\]
+
+\begin{enumerate}
+
+\item  $\left(x^3 + 4x^2 - 5x - 14\right) \div (x-2)$
+
+\item  $\left(2t +  7\right) \div \left(3t - 4\right)$
+
+\item  $\left(6y^2 - 1 \right) \div \left(2y + 5\right)$
+
+\item  $\left(w^3 \right) \div \left(w^2 - \sqrt{2}\right)$.
+
+\setcounter{HW}{\value{enumi}}
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item  To begin $\left(x^3 + 4x^2 - 5x - 14\right) \div (x-2)$, we divide the first term in the dividend, namely $x^3$, by the first term in the divisor, namely $x$, and get $\frac{x^3}{x} = x^2$. This then becomes the first term in the quotient.  We proceed as in regular long division at this point: we multiply the entire divisor, $x-2$, by this first term in the quotient to get $x^{2}(x - 2) = x^3 - 2x^2$.  We then subtract this result from the dividend.\setlength\arraycolsep{0.1pt}\setlength\extrarowheight{2pt}\[ \begin{array}{cccccccccc}
+
+& & & & & x^2 & & &  &  \\ \hhline{~~~|-------}
+
+x & - & 2 \, \vline& x^3 & + & 4x^2 & - & 5x & - & 14 \\
+
+ &  &  -& \left(x^3 \right. & - & \left.  2x^2\right) &  & \downarrow &  &  \\ \hhline{~~~---~~~~} 
+ &  &  &   &  & 6 x^2 & - & 5x &  &  \\ 
+% &  &  &   & - & \left(6 x^2 \right. & - & \left. 12x \right) &  &  \\ \hhline{~~~~~---~~} 
+% &  &  &   &   &  & & 7x  & - & 14 \\
+% &  &  &   &   &  & - & \left( 7x \right. & - & \left. 14 \right) \\ \hhline{~~~~~~~---} 
+% &   &  &  &  &  &  &  &  & 0
+ 
+\end{array}\]
+
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt} 
+
+Now we `bring down' the next term of the quotient, namely $-5x$, and repeat the process. We divide $\frac{6x^2}{x} = 6x$, and add this to the quotient polynomial, multiply it by the divisor (which yields $6x(x - 2) = 6x^{2} - 12x$) and subtract. \setlength\arraycolsep{0.1pt}\setlength\extrarowheight{2pt}\[ \begin{array}{cccccccccc}
+
+& & & & & x^2 & + & 6x &  &  \\ \hhline{~~~|-------}
+
+x & - & 2 \, \vline& x^3 & + & 4x^2 & - & 5x & - & 14 \\
+
+ &  &  -& \left(x^3 \right. & - & \left.  2x^2\right) &  & &  & \downarrow  \\ \hhline{~~~---~~~~} 
+ &  &  &   &  & 6 x^2 & - & 5x &  &  \downarrow \\ 
+ &  &  &   & - & \left(6 x^2 \right. & - & \left. 12x \right) &  & \downarrow \\ \hhline{~~~~~---~~} 
+ &  &  &   &   &  & & 7x  & - & 14 \\
+% &  &  &   &   &  & - & \left( 7x \right. & - & \left. 14 \right) \\ \hhline{~~~~~~~---} 
+% &   &  &  &  &  &  &  &  & 0
+ 
+\end{array}\]
+
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+
+Finally, we `bring down' the last term of the dividend, namely $-14$, and repeat the process.  We divide $\frac{7x}{x} = 7$, add this to the quotient, multiply it by the divisor (which yields $7(x - 2) = 7x - 14$) and subtract.\setlength\arraycolsep{0.1pt}\setlength\extrarowheight{2pt}\[ \begin{array}{cccccccccc}
+
+& & & & & x^2 & + & 6x & + & 7 \\ \hhline{~~~|-------}
+
+x & - & 2 \, \vline& x^3 & + & 4x^2 & - & 5x & - & 14 \\
+
+ &  &  -& \left(x^3 \right. & - & \left.  2x^2\right) &  &  &  &  \\ \hhline{~~~---~~~~} 
+ &  &  &   &  & 6 x^2 & - & 5x &  &  \\ 
+ &  &  &   & - & \left(6 x^2 \right. & - & \left. 12x \right) &  &  \\ \hhline{~~~~~---~~} 
+ &  &  &   &   &  & & 7x  & - & 14 \\
+ &  &  &   &   &  & - & \left( 7x \right. & - & \left. 14 \right) \\ \hhline{~~~~~~~---} 
+ &   &  &  &  &  &  &  &  & 0
+ 
+\end{array}\]
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+
+In this case, we get a quotient of $x^2 + 6x + 7$ with a remainder of $0$.  To check our answer, we compute  \[(x-2)\left(x^2 + 6x + 7\right) + 0 = x^3 + 6x^2 + 7x - 2x^2 - 12x -14 =  x^3 + 4x^2 - 5x - 14 \, \checkmark \]
+
+
+\item    To compute  $\left(2t +  7\right) \div \left(3t - 4\right)$, we start as before.  We find $\frac{2t}{3t} = \frac{2}{3}$, so that becomes the first (and only) term in the quotient.  We multiply the divisor $(3t-4)$ by $\frac{2}{3}$ and get $2t - \frac{8}{3}$.  We subtract this from the divided and get $\frac{29}{3}$.\setlength\arraycolsep{0.1pt}\setlength\extrarowheight{5pt}\[ \begin{array}{cccccc}
+
+& & & & & \dfrac{2}{3} \\ \hhline{~~~|---}
+
+3t & - & 4 \, \vline& 2t & + & 7  \\
+
+ &  &  -& \left(2t\vphantom{\dfrac{8}{3}} \right. & - & \left.  \dfrac{8}{3}\right)  \\ \hhline{~~~---}
+ &  &  &   &  & \dfrac{29}{3} \vphantom{\sqrt{\dfrac{7}{7}}} \\ 
+
+ 
+\end{array}\]
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+
+Our answer is $\frac{2}{3}$ with a remainder of $\frac{29}{3}$.  To check our answer, we compute \[(3t-4) \left(\frac{2}{3}\right) + \frac{29}{3} = 2t - \frac{8}{3} + \frac{29}{3} = 2t + \frac{21}{3} = 2t + 7 \, \checkmark\]
+
+\item When we set-up the tableau for   $\left(6y^2 - 1 \right) \div \left(2y + 5\right)$, we must first issue a `placeholder' for the `missing' $y$-term in the dividend, $6y^2 -1 = 6y^2 + 0y - 1$.  We then proceed as before.  Since $\frac{6y^2}{2y} = 3y$, $3y$ is the first term in our quotient. We multiply $(2y+5)$ times $3y$ and subtract it from the dividend.  We bring down the $-1$, and repeat.  \setlength\arraycolsep{0.1pt}\setlength\extrarowheight{5pt}\[ \begin{array}{cccccccc}
+
+& & & & & 3y & - & \dfrac{15}{2}  \\ \hhline{~~~|-----}
+
+2y& + & 5 \, \vline& 6y^2 & + & 0y & - & 1  \\
+
+ &  &  -& \left(6y^2 \right. & + & \left.  15y\right) &  & \downarrow  \\ \hhline{~~~---~~} 
+ &  &  &   &  & -15y & - & 1  \\ 
+ &  &  &   & - & \left(-15y\vphantom{\dfrac{75}{2}} \right. & - & \left. \dfrac{75}{2} \right) \\ \hhline{~~~~~---} 
+ &  &  &   &   &  & & \dfrac{73}{2} \vphantom{\sqrt{\dfrac{73}{2}}}\\
+ 
+\end{array}\]
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+ 
+Our answer is $3y - \frac{15}{2}$ with a remainder of $\frac{73}{2}$.  To check our answer, we compute:
+
+\[ (2y + 5)\left(3y - \dfrac{15}{2}\right) + \dfrac{73}{2} = 6y^2 - 15y + 15y - \dfrac{75}{2} + \dfrac{73}{2} = 6y^2 - 1 \, \checkmark\]
+
+
+\item For our last example, we need `placeholders' for both the divisor  $w^2 - \sqrt{2} = w^2 + 0w -\sqrt{2}$ and the dividend $w^3 = w^3 + 0w^2 + 0w + 0$.  The first term in the quotient is $\frac{w^3}{w^2} = w$, and when we multiply and subtract this from the dividend, we're left with just $0w^2 + w\sqrt{2} + 0 = w\sqrt{2}$.
+
+\setlength\arraycolsep{0.1pt}
+\setlength\extrarowheight{2pt}
+
+\[ \begin{array}{cccccccccccc}
+
+    &   &    &   &                    &     &   &      &   &  w &   & \\ \hhline{~~~~~|-------}
+
+w^2 & + & 0w & - & \sqrt{2} \, \vline & w^3 & + & 0w^2 & + & 0w & + & 0  \\
+    
+		&   &    &    &                  -&\left(w^3\vphantom{w\sqrt{2}} \right. & + & 0w^2 & - & \left.  w\sqrt{2} \right) & & \downarrow \\ \hhline{~~~~~-----~~}
+    &   &    &    &                   &                                       &  &  0w^2     &  + &   w\sqrt{2}  & + & 0\\ 
+ 
+\end{array}\]
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+
+Since the degree of $w\sqrt{2}$ (which is $1$) is less than the degree of the divisor (which is $2$), we are done.\footnote{Since $\frac{0w^2}{w^2} = 0$, we could proceed, write our quotient as $w+0$, and move on\ldots but even pedants have limits.}  Our answer is $w$ with a remainder of $w \sqrt{2}$.  To check, we compute:
+
+\[ \left(w^2 - \sqrt{2}\right)w + w\sqrt{2} = w^3 - w\sqrt{2} + w\sqrt{2} = w^3 \, \checkmark\]
+
+\end{enumerate}
+}
+
+\printexercises{exercises_pre/03_00_exercises}
+
+

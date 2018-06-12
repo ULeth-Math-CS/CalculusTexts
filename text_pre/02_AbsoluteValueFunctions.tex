@@ -1,0 +1,232 @@
+\section{Absolute Value Functions}
+\label{AbsoluteValueFunctions}
+
+There are a few ways to describe what is meant by the absolute value $|x|$ of a real number $x$.  You may have been taught that $|x|$ is the distance from the real number $x$ to $0$ on the number line.  So, for example, $|5| = 5$ and $|-5| = 5$, since each is $5$ units from $0$ on the number line.
+
+\begin{center}
+
+\myincludegraphics[width=0.7\textwidth]{figures/LinearQuadraticGraphics/AbsoluteValueFunctions-1}
+
+\end{center}
+
+Another way to define absolute value is by the equation $|x| = \sqrt{x^2}$. Using this definition, we have $|5| = \sqrt{(5)^2} = \sqrt{25} = 5$ and $|-5| = \sqrt{(-5)^2} = \sqrt{25} = 5$.  The long and short of both of these procedures is that $|x|$ takes negative real numbers and assigns them to their positive counterparts while it leaves positive numbers alone.  This last description is the one we shall adopt, and is summarized in the following definition.
+
+\smallskip
+
+\definition{absolutevalue}{Absolute value function}{
+
+The \index{absolute value ! definition of}\index{function ! absolute value}\sword{absolute value} of a real number $x$, denoted $|x|$, is given by 
+\[
+ |x| = \begin{cases} -x, & \mbox{ if }  x < 0  \\
+ 					  x, & \mbox{ if }  x \geq 0 \\
+		\end{cases}
+\]
+}
+
+\smallskip
+
+In Definition \ref{absolutevalue}, we define $|x|$ using a piecewise-defined function.  (See page \pageref{piecewisefunction} in Section \ref{FunctionNotation}.)  To check that this definition agrees with what we previously understood as absolute value, note that since $5 \geq 0$, to find $|5|$ we use the rule $|x| = x$, so $|5|=5$.  Similarly, since $-5 < 0$, we use the rule $|x| = -x$, so that $|-5| = -(-5) = 5$.  This is one of the times when it's best to interpret the expression `$-x$' as `the opposite of $x$' as opposed to `negative $x$'.  Before we begin studying absolute value functions, we remind ourselves of the properties of absolute value.
+
+\smallskip
+
+\theorem{absolutevalueprops}{Properties of Absolute Value}{
+Let $a$, $b$ and $x$ be real numbers and let $n$ be an integer.  Then \index{absolute value ! properties of}
+
+\begin{itemize}
+
+\item {\bf Product Rule:} $|ab|= |a||b|$ \index{product rule ! for absolute value}
+
+\item {\bf Power Rule:} $\left| a^{n} \right| = |a|^{n}$ whenever $a^{n}$ is defined \index{power rule ! for absolute value}
+
+\item {\bf Quotient Rule:} $\left| \dfrac{a}{b} \right| = \dfrac{|a|}{|b|}$, provided $b \neq 0$ \index{quotient rule ! for absolute value}
+
+\end{itemize}
+
+{\bf Equality Properties:}
+
+\begin{itemize}
+
+\item  $|x| = 0$ if and only if $x = 0$.
+
+\item  For $c > 0$, $|x| = c$ if and only if $x = c$ or $-x = c$.
+
+\item  For $c < 0$, $|x| = c$ has no solution.
+
+\end{itemize}
+}
+
+\medskip
+
+
+\example{absvalueeqnex}{Solving equations with absolute values}{
+Solve each of the following equations.
+
+\begin{multicols}{2}
+\begin{enumerate}
+
+\item  $|3x-1| = 6$
+\item  $3 - |x+5| = 1$
+
+\setcounter{HW}{\value{enumi}}
+\end{enumerate}
+\end{multicols}
+
+\begin{multicols}{2}
+\begin{enumerate}
+\setcounter{enumi}{\value{HW}}
+
+\item  $3|2x+1| - 5 = 0$
+\item  $4 - |5x+3| = 5$
+\end{enumerate}
+\end{multicols}
+}
+{
+\begin{enumerate}
+
+\item  The equation  $|3x-1| = 6$ is of the form $|x| = c$ for $c>0$, so by the Equality Properties, $|3x-1| = 6$ is equivalent to $3x-1=6$ or $3x-1 = -6$.  Solving the former, we arrive at $x = \frac{7}{3}$, and solving the latter, we get $x = -\frac{5}{3}$.  We may check both of these solutions by substituting them into the original equation and showing that the arithmetic works out.
+
+\item  To use the Equality Properties to solve $3 - |x+5| = 1$, we first isolate the absolute value. 
+\begin{align*}
+3 - |x+5| & =  1 \\
+-|x+5| & =  -2  \tag*{subtract $3$} \\
+|x+5| & =  2 \tag*{divide by $-1$}  
+\end{align*}
+
+From the Equality Properties, we have $x+5 = 2$ or $x+5 = -2$, and get our solutions to be $x = -3$ or $x = -7$.  We leave it to the reader to check both answers in the original equation.
+
+\item As in the previous example, we first isolate the absolute value in the equation $3|2x+1| - 5 = 0$ and get $|2x+1| = \frac{5}{3}$.  Using the Equality Properties, we have $2x+1 = \frac{5}{3}$ or $2x+1 = -\frac{5}{3}$.  Solving the former gives $x = \frac{1}{3}$ and solving the latter gives $x = -\frac{4}{3}$.  As usual, we may substitute both answers in the original equation to check.
+
+\item  Upon isolating the absolute value in the equation $4 - |5x+3| = 5$, we get $|5x+3| = -1$.  At this point, we know there cannot be any real solution, since, by definition, the absolute value of \textit{anything} is never negative.  We are done. 
+\end{enumerate}
+}
+
+\medskip
+
+Next, we turn our attention to graphing absolute value functions.  Our strategy in the next example is to make liberal use of Definition \ref{absolutevalue} along with what we know about graphing linear functions (from Section \ref{LinearFunctions}) and piecewise-defined functions (from Section \ref{FunctionNotation}).
+
+\pagebreak
+
+\example{absvaluegraph1}{Graphing absolute value functions}{
+Graph each of the following functions.  
+\begin{multicols}{3}
+
+\begin{enumerate}
+
+\item  $f(x) = |x|$
+\item  $g(x) = |x-3|$
+\item  $h(x) = |x| -3$
+
+\end{enumerate}
+
+\end{multicols}
+
+Find the zeros of each function and the $x$- and $y$-intercepts of  each graph, if any exist.  From the graph, determine the domain and range of each function, list the intervals on which the function is increasing, decreasing  or constant, and find the relative and absolute extrema, if they exist.
+}
+{
+\begin{enumerate}
+
+\item  To find the zeros of $f$, we set $f(x)= 0$.  We get $|x|=0$, which, by Theorem \ref{absolutevalueprops} gives us $x=0$.  Since the zeros of $f$ are the $x$-coordinates of the $x$-intercepts of the graph of $y=f(x)$, we get $(0,0)$ as our only $x$-intercept.  To find the $y$-intercept, we set $x=0$, and find $y = f(0) = 0$, so that $(0,0)$ is our $y$-intercept as well. Using Definition \ref{absolutevalue}, we get 
+\[
+ f(x) = |x| =  \begin{cases} -x, & \mbox{ if }  x < 0  \\
+ 							  x, & \mbox{ if }  x \geq 0
+ 							  
+ 				\end{cases}.
+\]
+Hence, for $x < 0$, we are graphing the line $y = -x$;  for $x \geq 0$, we have the line $y = x$.  Proceeding as we did in Section \ref{GraphsofFunctions}, we get the first two graphs in Figure \ref{fig:absvalgraph}.
+
+\mnote{.7}{Since functions can have at most one $y$-intercept (Do you know why?), as soon as we found $(0,0)$ as the $x$-intercept for $f(x)$ in Example \ref{absvaluegraph1}, we knew this was also the $y$-intercept.} 
+
+\mtable{.35}{Constructing the graph of $f(x)=\lvert x\rvert$}{fig:absvalgraph}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.9\marginparwidth]{figures/LinearQuadraticGraphics/AbsoluteValueFunctions-2}\\
+$f(x) = |x|$, $x < 0$\\
+\\
+\myincludegraphics[width=0.9\marginparwidth]{figures/LinearQuadraticGraphics/AbsoluteValueFunctions-3}\\
+$f(x) = |x|$, $x \geq 0$\\
+\\
+\myincludegraphics[width=0.9\marginparwidth]{figures/LinearQuadraticGraphics/AbsoluteValueFunctions-4}\\
+$f(x)=\lvert x\rvert$
+\end{tabular}
+}
+
+\smallskip
+
+Notice that we have an `open circle' at $(0,0)$ in the graph when $x<0$. As we have seen before, this is due to the fact that the points on $y = -x$ approach $(0,0)$ as the $x$-values approach $0$.  Since $x$ is required to be strictly less than zero on this stretch, the open circle is drawn at the origin.  However, notice that when $x \geq 0$, we get to fill in the point at $(0,0)$, which effectively `plugs' the hole indicated by the open circle.  Thus our final result is the graph at the bottom of Figure \ref{fig:absvalgraph}.
+
+
+By projecting the graph to the $x$-axis, we see that the domain is $(-\infty, \infty)$.  Projecting to the $y$-axis gives us the range $[0,\infty)$.  The function is increasing on $[0,\infty)$ and decreasing on $(-\infty,0]$.  The relative minimum value of $f$ is the same as the absolute minimum, namely $0$ which occurs at $(0,0)$.  There is no relative maximum value of $f$.  There is also no absolute maximum value of $f$, since the $y$ values on the graph extend infinitely upwards.
+
+\item  To find the zeros of $g$, we set $g(x) = |x-3|=0$.  By Theorem \ref{absolutevalueprops}, we get $x-3=0$ so that $x=3$.  Hence, the $x$-intercept is $(3,0)$.  To find our $y$-intercept, we set $x=0$ so that $y = g(0) = |0-3| = 3$, which yields $(0,3)$ as our $y$-intercept.  To graph $g(x) = |x-3|$, we use Definition \ref{absolutevalue} to rewrite $g$ as
+
+\[ g(x) = |x-3| =  \begin{cases} -(x-3), & \mbox{ if }  (x-3) < 0  \\
+								  (x-3), & \mbox{ if }  (x-3) \geq 0
+					\end{cases}.
+\]
+Simplifying, we get
+\[
+ g(x) = \begin{cases} -x+3, & \mbox{ if }  x<3  \\
+ 					   x-3, & \mbox{ if }  x \geq 3
+ 		\end{cases}.
+\]
+
+As before, the open circle we introduce at $(3,0)$ from the graph of $y = -x+3$ is filled by the point $(3,0)$ from the line $y = x-3$. We determine the domain as $(-\infty, \infty)$ and the range as $[0,\infty)$.  The function $g$ is increasing on $[3,\infty)$ and decreasing on $(-\infty,3]$.  The relative and absolute minimum value of $g$ is $0$ which occurs at $(3,0)$.  As before, there is no relative or absolute maximum value of $g$.
+
+\item  Setting $h(x) = 0$ to look for zeros gives $|x|-3=0$. As in Example \ref{absvalueeqnex},  we isolate the absolute value to get  $|x| = 3$ so that $x =3$ or $x=-3$.  As a result, we have a pair of $x$-intercepts:  $(-3,0)$ and $(3,0)$.  Setting $x=0$ gives $y = h(0) = |0|-3 = -3$, so our $y$-intercept is $(0,-3)$.  As before, we rewrite the absolute value in $h$ to get
+
+\[
+ h(x) = \begin{cases} -x-3, & \mbox{ if }  x<0  \\
+						 x-3, & \mbox{ if }  x \geq 0 
+		\end{cases}.
+\]
+
+\mfigure{.8}{$g(x) = |x-3|$}{fig:absvalgr2}{figures/LinearQuadraticGraphics/AbsoluteValueFunctions-5}
+
+Once again, the open circle at $(0,-3)$ from one piece of the graph of $h$ is filled by the point $(0,-3)$ from the other piece of $h$.  From the graph, we determine the domain of $h$ is $(-\infty, \infty)$ and the range is $[-3,\infty)$.   On $[0,\infty)$, $h$ is increasing;  on $(-\infty,0]$ it is decreasing.  The relative minimum occurs at the point $(0,-3)$ on the graph, and we see $-3$ is both the relative and absolute minimum value of $h$.  Also, $h$ has no relative or absolute maximum value.
+
+
+\mfigure{.6}{$h(x) = |x|-3$}{fig:absvalgr3}{figures/LinearQuadraticGraphics/AbsoluteValueFunctions-6}
+
+
+\end{enumerate}
+}
+
+Note that all of the functions in the previous example bear the characteristic `$\vee$' shape of the graph of $y=|x|$.  We could have graphed the functions $g$, $h$ and $i$ in Example \ref{absvaluegraph1} starting with the graph of $f(x)=|x|$ and applying transformations as in Section \ref{Transformations} as our next example illustrates.
+
+\pagebreak
+
+\example{ex_absvaltrans}{Graphing using transformations}{
+Graph the following functions starting with the graph of $f(x) = |x|$ and using transformations.  
+
+\begin{enumerate}
+
+\item $g(x) = |x-3|$
+
+\item  $h(x) = |x| - 3$
+
+\end{enumerate}
+}
+{
+We begin by graphing $f(x) = |x|$ and labelling three points, $(-1,1)$, $(0,0)$ and $(1,1)$, as in Figure \ref{fig:absvalgr5}
+
+\mfigure{.85}{$f(x) = \lvert x\rvert$ with three labelled points}{fig:absvalgr5}{figures/LinearQuadraticGraphics/AbsoluteValueFunctions-8}
+
+\begin{enumerate}
+
+\item Since $g(x) = |x-3| = f(x-3)$, Theorem \ref{transformationsthm} tells us to \textit{add} $3$ to each of the $x$-values of the points on the graph of $y=f(x)$ to obtain the graph of $y=g(x)$.   This shifts the graph of $y=f(x)$ to the \textit{right} $3$ units and moves the point $(-1,1)$ to $(2,1)$,  $(0,0)$ to $(3,0)$ and $(1,1)$ to $(4,1)$.  Connecting these points in the classic `$\vee$' fashion produces the graph of $y = g(x)$ in Figure \ref{fig:absvalgr6}.
+
+\mfigure{.68}{$g(x) = |x-3| = f(x-3)$}{fig:absvalgr6}{figures/LinearQuadraticGraphics/AbsoluteValueFunctions-10}
+
+\item For $h(x) = |x| - 3 = f(x) -3$, Theorem \ref{transformationsthm} tells us to \textit{subtract} $3$ from each of the $y$-values of the points on the graph of $y=f(x)$ to obtain the graph of $y = h(x)$.  This shifts the graph of $y=f(x)$ \textit{down} $3$ units and moves $(-1,1)$ to $(-1,-2)$, $(0,0)$ to $(0,-3)$ and $(1,1)$ to $(1,-2)$.  Connecting these points with the `$\vee$' shape produces our graph of $y=h(x)$: see Figure \ref{fig:absvalgr7}.
+
+\mfigure{.5}{$h(x)=\lvert x\rvert -3 = f(x)-3$}{fig:absvalgr7}{figures/LinearQuadraticGraphics/AbsoluteValueFunctions-12}
+
+\end{enumerate}
+}
+
+\medskip
+
+While the methods in Section \ref{Transformations} can be used to graph an entire family of absolute value functions, not all functions involving absolute values posses the characteristic `$\vee$' shape.  As the next example illustrates, often there is no substitute for appealing directly to the definition.
+
+
+
+\printexercises{exercises_pre/02_02_exercises}

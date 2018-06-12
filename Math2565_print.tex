@@ -11,19 +11,29 @@
 
 \newboolean{colour}
 \setboolean{colour}{false}
-\usepackage{refcount}
+
+\newboolean{CalcI}
+\setboolean{CalcI}{false}
+\newboolean{CalcIII}
+\setboolean{CalcIII}{false}
+\newboolean{CalcIV}
+\setboolean{CalcIV}{false}
+
 \usepackage{pdfpages}
+\usepackage{refcount}
+
+
 %% end detour
 %\usepackage{amsmath}
 \usepackage{xr}
-\externaldocument{Math1565_print}
+\externaldocument[I-]{Math1565_print}
 
 \input{headers/Page_Size_Calculus}
 \usepackage{APEX_format}
 \input{headers/Header_Calculus}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.8}
-
+\usepackage{mathrsfs}
 
 
 \ifthenelse{\boolean{xetex}}%
@@ -31,8 +41,8 @@
 	%%\usepackage{fontspec}
 	\usepackage{mathspec}
 	\setallmainfonts[Mapping=tex-text]{Calibri}
-	\setmainfont[Mapping=tex-text]{Calibri}
-	\setsansfont[Mapping=tex-text]{Calibri}
+	\setmainfont[Mapping=tex-text,Ligatures=NoCommon]{Calibri}
+	\setsansfont[Mapping=tex-text,Ligatures=NoCommon]{Calibri}
 	\setmathsfont(Greek){[cmmi10]}}
 	{}
 	
@@ -54,6 +64,7 @@
 %%%\tracingonline=1
 \begin{document}
 
+
 \ifthenelse{\boolean{colour}}{\printincolor}{\printinblackandwhite}
 
 %\printexercisenames
@@ -62,20 +73,11 @@
 \input{text/front_matter_and_coverIIA}
 
 
+
+\addtocounter{page}{\getpagerefnumber{I-1565lastpage}}
 \addtocounter{chapter}{5}
 
-\clearpage{\pagestyle{empty}\cleardoublepage}
 
-\setcounterref{definitioncounter}{lastdefcount1}
-\addtocounter{definitioncounter}{-1}
-\setcounterref{theoremcounter}{lastthmcount1}
-\addtocounter{theoremcounter}{-1}
-\setcounterref{keyideacounter}{lastideacount1}
-\addtocounter{keyideacounter}{-1}
-\setcounterref{examplecounter}{lastexamplecount1}
-\addtocounter{examplecounter}{-1}
-\setcounter{page}{268}
-\thispagestyle{empty}
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \chapter{Techniques of Antidifferentiation}\label{chapter:anti_tech}
@@ -96,7 +98,7 @@
 \chapter{Applications of Integration}\label{chapter:app_of_int}
 \thispagestyle{empty}
 
-\input{text/07_Area_Between_CurvesA}
+\input{text/07_Area_Between_Curves2565}
 \input{text/07_Disk_Washer_Method}
 \input{text/07_Shell_Method}
 \input{text/07_Arc_Length}
@@ -106,14 +108,14 @@
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \chapter{Differential Equations}
 \thispagestyle{empty}
-\input{text/14_ODE_Intro}
-\input{text/14_ODE_Integral_Sol}
-\input{text/14_ODE_Slope_Fields}
-\input{text/14_ODE_Separable_Eq}
-\input{text/14_ODE_Linear_Eq}
-\input{text/14_ODE_Euler}
+\input{text/15_ODE_Intro}
+\input{text/15_ODE_Integral_Sol}
+\input{text/15_ODE_Slope_Fields}
+\input{text/15_ODE_Separable_Eq}
+\input{text/15_ODE_Linear_Eq}
+\input{text/15_ODE_Euler}
 
-%%\addtocounter{chapter}{7}
+%%%\addtocounter{chapter}{7}
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \chapter{Sequences and Series}\label{chapter:sequences_series}
 \thispagestyle{empty}
@@ -131,8 +133,6 @@
 %%%
 %%%    Begins Calc III
 %
-
-
 %%
 %%%\addtocounter{chapter}{8}
 \clearpage{\pagestyle{empty}\cleardoublepage}
@@ -145,20 +145,21 @@
 \input{text/09_Polar_Calculus}
 %
 %
-%
 %%%\addtocounter{chapter}{11}
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \chapter{Functions of Several Variables}\label{chap:multi}
 \thispagestyle{empty}
-\input{text/10_Space_Intro_Mod}
+\input{text/10_Space_Intro_2565}
 \input{text/12_Multivariable_Intro}
 \input{text/12_Multivariable_Limit}
 \input{text/12_Partial_Derivatives}
 %\input{text/12_Total_Differential}
 %\input{text/12_Multivariable_Chain_Rule}
 %\input{text/12_Directional_Derivatives}
-\input{text/12_Tangent_Planes_Lines}
+\input{text/12_Tangent_Planes_Lines2570}
 %\input{text/12_Extrema}
+
+
 
 %%%\layout
 
@@ -215,4 +216,3 @@
 
 
 \end{document}
-

@@ -1,0 +1,689 @@
+\section{Operations on Functions}
+\subsection{Arithmetic with Functions}
+\label{FunctionArithmetic}
+
+In the previous section we used the newly defined function notation to make sense of expressions such as `$f(x) + 2$' and `$2f(x)$' for a given function $f$.  It would seem natural, then, that functions should have their own arithmetic which is consistent with the arithmetic of real numbers.  The following definitions allow us to add, subtract, multiply and divide functions using the arithmetic we already know for real numbers.
+
+\smallskip
+
+\definition{def:functarith}{Function Arithmetic}{ \index{function ! arithmetic}
+Suppose $f$ and $g$ are functions and $x$ is in both the domain of $f$ and the domain of $g$.
+
+\mnote{.7}{Recall that if $x$ is in the domains of both $f$ and $g$, then we can say that $x$ is an element of the intersection of the two domains.}
+
+\begin{itemize}
+
+\item  The \index{function ! sum} \sword{sum} of $f$ and $g$, denoted $f+g$, is the function defined by the formula \[(f+g)(x) = f(x) + g(x)\]
+
+\item  The \index{function ! difference} \sword{difference} of $f$ and $g$, denoted $f-g$, is the function defined by the formula \[(f-g)(x) = f(x) - g(x)\]
+
+\item  The \index{function ! product} \sword{product} of $f$ and $g$, denoted $fg$, is the function defined by the formula \[(fg)(x) = f(x)g(x)\]
+
+\item  The \index{function ! quotient} \sword{quotient} of $f$ and $g$, denoted $\dfrac{f}{g}$, is the function defined by the formula \[\left(\dfrac{f}{g}\right)(x) = \dfrac{f(x)}{g(x)},\] provided $g(x) \neq 0$.
+
+\end{itemize}
+}
+
+\smallskip
+
+In other words, to add two functions, we add their outputs;  to subtract two functions, we subtract their outputs, and so on.  Note that while the formula $(f+g)(x) = f(x) + g(x)$ looks suspiciously like some kind of distributive property, it is nothing of the sort;  the addition on the left hand side of the equation is \textit{function} addition, and we are using this equation to \textit{define} the output of the new function $f+g$ as the sum of the real number outputs from $f$ and $g$.
+
+\medskip
+
+\example{funcarithex}{Arithmetic with functions}{
+Let $f(x) = 6x^2 - 2x$ and $g(x) = 3-\dfrac{1}{x}$.  
+
+
+\begin{multicols}{2}
+\begin{enumerate}
+
+\item Find  $(f+g)(-1)$
+
+\item Find $(fg)(2)$
+
+\setcounter{HW}{\value{enumi}}
+\end{enumerate}
+
+\end{multicols}
+
+\begin{enumerate}
+\setcounter{enumi}{\value{HW}}
+
+\item  Find the domain of $g-f$ then find and simplify a formula for  $(g-f)(x)$.
+
+\item  \label{quotdomainex} Find the domain of $\left(\dfrac{g}{f}\right)$ then find and simplify a formula for  $\left(\dfrac{g}{f}\right)(x)$.
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item  To find $(f+g)(-1)$ we first find $f(-1) = 8$ and $g(-1) = 4$. By definition, we have that $(f+g)(-1) = f(-1) + g(-1) = 8+4 = 12$.
+
+
+\item To find $(fg)(2)$, we first need $f(2)$ and $g(2)$. Since $f(2) = 20$ and $g(2) = \frac{5}{2}$, our formula yields $(fg)(2) = f(2) g(2) = (20)\left(\frac{5}{2}\right) = 50$.
+
+\item One method to find the domain of $g-f$ is to find the domain of $g$ and of $f$ separately, then find the intersection of these two sets.  Owing to the denominator in the expression $g(x) = 3 - \frac{1}{x}$, we get that the domain of $g$ is $(-\infty, 0) \cup (0, \infty)$.  Since $f(x) = 6x^2-2x$ is valid for all real numbers, we have no further restrictions.  Thus the domain of $g-f$ matches the domain of $g$, namely, $(-\infty, 0) \cup (0, \infty)$.
+
+A second method is to analyze the formula for $(g-f)(x)$ \textit{before simplifying} and look for the usual domain issues.  In this case, 
+
+\[
+ (g-f)(x) = g(x) - f(x) = \left(3-\dfrac{1}{x}\right) - \left(6x^2 - 2x\right),
+\]
+
+so we find, as before, the domain is $(-\infty, 0) \cup (0, \infty)$.
+
+Moving along, we need to simplify a formula for $(g-f)(x)$.  One issue here is that what it means to `simplify' this function may depend on the context. On a most basic level, we could simply clear the parentheses:
+
+\[
+(g-f)(x) = \left(3-\dfrac{1}{x}\right) - \left(6x^2 - 2x\right) = 3 - \dfrac{1}{x} - 6x^2 + 2x.
+\]
+
+In many contexts (computing a derivative comes to mind), this would be the preferred result. In other contexts, we may instead want to express our result as a single fraction. Getting a common denominator, we would write
+\[
+(g-f)(x) =  \dfrac{3x}{x} - \dfrac{1}{x} - \dfrac{6x^3}{x} + \dfrac{2x^2}{x}  =   \dfrac{-6x^3-2x^2+3x-1}{x}.
+\]
+
+\drawexampleline
+
+\item  As in the previous example, we have two ways to approach finding the domain of $\frac{g}{f}$.  First, we can find the domain of $g$ and $f$ separately, and find the intersection of these two sets.  In addition, since $\left(\frac{g}{f}\right)(x) = \frac{g(x)}{f(x)}$, we are introducing a new denominator, namely $f(x)$, so we need to guard against this being $0$ as well.  Our previous work tells us that the domain of $g$ is $(-\infty, 0) \cup (0, \infty)$ and the domain of $f$ is $(-\infty, \infty)$.  Setting $f(x) = 0$ gives $6x^2 - 2x = 0$ or $x = 0, \frac{1}{3}$.  As a result, the domain of $\frac{g}{f}$ is all real numbers except $x = 0$ and $x = \frac{1}{3}$, or $(-\infty, 0) \cup \left(0, \frac{1}{3} \right) \cup \left( \frac{1}{3}, \infty \right)$.
+
+Alternatively, we may proceed as above and analyze the expression $\left(\frac{g}{f}\right)(x) = \frac{g(x)}{f(x)}$ \textit{before} simplifying.  In this case, \[ \left(\dfrac{g}{f}\right)(x) = \dfrac{g(x)}{f(x)}  = \dfrac{3-\dfrac{1}{x}\vphantom{\left(\dfrac{1}{x}\right)}}{6x^2 - 2x}\]
+
+We see immediately from the `little' denominator that $x \neq 0$.  To keep the `big' denominator away from $0$, we solve $6x^2 - 2x = 0$ and get $x = 0$ or $x = \frac{1}{3}$.  Hence, as before, we find the domain of $\dfrac{g}{f}$ to be 
+\[
+(-\infty, 0) \cup \left(0, \frac{1}{3}\right) \cup \left(\frac{1}{3}, \infty\right).
+\]
+
+Next, we find and simplify a formula for $\left(\dfrac{g}{f}\right)(x)$.
+
+\begin{align*} 
+\left( \dfrac{g}{f}\right)(x) & = \dfrac{g(x)}{f(x)} = \dfrac{3-\dfrac{1}{x}}{6x^2 - 2x} \\[5pt]
+& = \dfrac{3-\dfrac{1}{x}}{6x^2 - 2x} \cdot \dfrac{x}{x} \tag*{simplify compound fractions}  \\[5pt]
+& = \dfrac{\left(3-\dfrac{1}{x}\right) x}{\left(6x^2 - 2x\right)x} = \dfrac{3x-1}{\left(6x^2 - 2x\right)x}  \\[5pt]
+& = \dfrac{3x-1}{2x^2(3x-1)}  \tag*{factor} \\[5pt]
+& = \dfrac{\cancelto{1}{(3x-1)}}{2x^2\cancel{(3x-1)}}  \tag*{cancel} \\[5pt]
+& = \dfrac{1}{2x^2}  
+\end{align*}
+\end{enumerate}
+}
+
+\medskip
+
+Please note the importance of finding the domain of a function \textit{before} simplifying its expression.  In number \ref{quotdomainex} in Example \ref{funcarithex} above, had we waited to find the domain of $\dfrac{g}{f}$ until \text{after} simplifying, we'd just have the formula $\dfrac{1}{2x^2}$ to go by, and we would (incorrectly!) state the domain as $(-\infty, 0) \cup (0,\infty)$, since the other troublesome number, $x = \frac{1}{3}$, was cancelled away.
+
+\newpage
+
+\subsection{Function Composition}
+
+\label{FunctionComposition}
+
+The four types of arithmetic operations with functions described so far are not the only ways to combine functions. There is one more especially important operation, known as function composition.
+
+\smallskip
+
+\mfigure[width=0.95\marginparwidth]{.7}{Composition of functions}{fig:funccomp1}{figures/FurtherGraphics/FunctionComposition-1}
+
+\definition{functioncompositiondefn}{Composition of Functions}{ Suppose $f$ and $g$ are two functions.  The \index{function ! composite ! definition of}\index{composite function ! definition of}\sword{composite} of $g$ with $f$, denoted $g \circ f$, is defined by the formula $(g \circ f) (x) = g(f(x))$, provided $x$ is an element of the domain of $f$ and $f(x)$ is an element of the domain of $g$. 
+}
+
+\smallskip
+
+The quantity $g \circ f$ is also read `$g$ composed with $f$' or, more simply `$g$ of $f$.' At its most basic level, Definition \ref{functioncompositiondefn} tells us to obtain the formula for $\left(g \circ f\right)(x)$, we replace every occurrence of $x$ in the formula for $g(x)$ with the formula we have for $f(x)$.  If we take a step back and look at this from a procedural, `inputs and outputs' perspective, Defintion \ref{functioncompositiondefn} tells us  the output from $g \circ f$ is found by taking the output from $f$, $f(x)$,  and then making that the input to $g$.  The result, $g(f(x))$, is the output from $g \circ f$.  From this perspective, we see $g \circ f$ as a two step process taking an input $x$ and first applying the procedure $f$ then applying the procedure $g$.  This is diagrammed abstractly in Figure \ref{fig:funccomp1}.
+
+
+
+\medskip
+
+
+
+\example{functioncompex0}{Evaluating composite functions}{
+Let $f(x) = x^2-4x$ and $g(x) = 2-\sqrt{x+3}$.  
+
+Find the indicated function value for each of the following:
+
+\begin{multicols}{3}
+\begin{enumerate}
+
+\item  $(f \circ g)(1)$
+
+\item  $(g \circ f)(1)$ 
+
+\item  $(g \circ f)(2)$ 
+
+\end{enumerate}
+\end{multicols}}
+{\begin{enumerate}
+
+\item As before, we use Definition \ref{functioncompositiondefn} to write $(f \circ g)(1) = f(g(1))$.  We find $g(1) = 0$, so \[(f \circ g)(1) = f(g(1)) = f(0) = 0 \] 
+
+\item  Using Definition \ref{functioncompositiondefn}, $(g \circ f)(1) = g(f(1))$.  We find $f(1) = -3$, so \[(g \circ f)(1) = g(f(1)) = g(-3) = 2 \]
+
+\item  We proceed as in the previous example by first finding $f(2)=-4$. However, we now run into trouble, since $(g\circ f)(2) = g(f(2)) = g(-4)$ is undefined! We can't compute $\sqrt(-4+3)=\sqrt{-1}$ if we are working over the real numbers. Here we see the importance of domain for composite functions: it is not enough for $x$ to be in the domain of $f$: only those $x$ values such that $f(x)$ belongs to the domain of $g$ are permitted. We consider this problem more generally in the next example.
+\end{enumerate}}
+
+\pagebreak
+
+\example{functioncompex1}{Domain of composite functions}{
+With $f(x) = x^2-4x$, $g(x) = 2-\sqrt{x+3}$ as in Example \ref{functioncompex0} find and simplify the composite functions
+$(g\circ f)(x)$  and $(f\circ g)(x)$.
+State the domain of each function.}
+{
+By definition, $(g \circ f)(x) = g(f(x))$. 
+We insert the expression $f(x)$ into $g$ to get  
+\begin{align*}
+(g \circ f)(x) &= g(f(x)) = g\left(x^2-4x\right) = 2 - \sqrt{\left(x^2-4x\right)+3}\\
+& = 2 - \sqrt{x^2-4x+3}
+\end{align*}
+Hence, $(g \circ f)(x) = 2 - \sqrt{x^2-4x+3}$.
+
+To find the domain of $g \circ f$, we need to find the elements in the domain of $f$ whose outputs $f(x)$ are in the domain of $g$.  We accomplish this by following the rule set forth in Section \ref{FunctionNotation}, that is, we find the domain \textit{before} we simplify.  To that end, we examine $(g \circ f)(x) = 2 - \sqrt{\left(x^2-4x\right)+3}$.  To keep the square root happy, we solve the inequality $x^2-4x+3 \geq 0$ by creating a sign diagram.  If we let $r(x) = x^2-4x+3$, we find the zeros of $r$ to be $x = 1$ and $x = 3$.  We obtain the sign diagram in Figure \ref{fig:funcompsd1}.
+
+\mfigure{.7}{The sign diagram of $r(x)=x^2-4x+3$}{fig:funcompsd1}{figures/FurtherGraphics/FunctionComposition-2}
+
+Our solution to $x^2-4x+3 \geq 0$, and hence the domain of $g \circ f$, is $(-\infty, 1] \cup [3,\infty)$.
+
+\medskip
+
+To find $(f \circ g)(x)$, we find $f(g(x))$. 
+ We insert the expression $g(x)$ into $f$ to get  
+\begin{align*}
+(f \circ g)(x) & =  f(g(x)) = f\left(2-\sqrt{x+3}\right)  \\
+ & =  \left(2-\sqrt{x+3}\right)^2 - 4\left(2-\sqrt{x+3}\right)  \\ 
+ & =  4 - 4\sqrt{x+3} + \left(\sqrt{x+3}\right)^2 - 8 + 4 \sqrt{x+3}  \\ 
+ & =  4 + x+3 - 8  \\ 
+ & =  x-1  \\
+ \end{align*}
+
+Thus we get $(f \circ g)(x) = x-1$.  To find the domain of $(f \circ g)$, we look to the step before we did any simplification and find $(f \circ g)(x) = \left(2-\sqrt{x+3}\right)^2 - 4\left(2-\sqrt{x+3}\right)$.  To keep the square root happy, we set $x+3 \geq 0$ and find our domain to be $[-3, \infty)$.  
+}\\
+
+\medskip
+
+Notice that in Example \ref{functioncompex1}, we found $(g\circ f)(x)\neq (f\circ g)(x)$. In Example \ref{functioncompex2} we add evidence that this is the rule, rather than the exception.\\
+
+\medskip
+
+\example{functioncompex2}{Comparing order of composition}{
+Find and simplify the functions $(g\circ h)(x)$ and $(h\circ g)(x)$, where we  take $g(x) = 2-\sqrt{x+3}$ and $h(x) = \dfrac{2x}{x+1}$. State the domain of each function.}
+{
+To find $(g \circ h)(x)$, we compute $g(h(x))$.  We insert the expression $h(x)$ into $g$ first to get 
+\begin{align*}
+(g \circ h)(x) & = g(h(x)) = g\left(\dfrac{2x}{x+1}\right)\\
+ & = 2 - \sqrt{\left(\dfrac{2x}{x+1}\right)+3}\\
+ & = 2 - \sqrt{\dfrac{2x}{x+1} + \dfrac{3(x+1)}{x+1}} \tag*{get common denominators}\\ 
+ & = 2 - \sqrt{\dfrac{5x+3}{x+1}}
+ \end{align*}
+
+%\mnote{.4}{This shows us function composition isn't \sword{commutative}. \index{commutative property ! function composition does not have} An example of an operation we perform on two functions which is commutative is function addition, which we defined in Section \ref{FunctionArithmetic}.  In other words, the functions $f+g$ and $g+f$ are always equal.  Which of the remaining operations on functions we have discussed are commutative?}
+
+To find the domain of $(g \circ h)$, we look to the step before we began to simplify: \[(g \circ h)(x) = 2 - \sqrt{\left(\frac{2x}{x+1}\right)+3}\]  To avoid division by zero, we need $x \neq -1$. To keep the radical happy, we need to solve \[\frac{2x}{x+1} +3  = \frac{5x+3}{x+1}\geq 0\] Defining $r(x) = \dfrac{5x+3}{x+1}$, we see $r$ is undefined at $x=-1$ and $r(x) = 0$ at $x = -\frac{3}{5}$. Our sign diagram is given in Figure \ref{fig:funcompsd2}.
+
+\mfigure{.75}{The sign diagram of \\$r(x)=\dfrac{5x+3}{x+1}$}{fig:funcompsd2}{figures/FurtherGraphics/FunctionComposition-3}
+
+Our domain is $(-\infty, -1) \cup \left[-\frac{3}{5}, \infty\right)$.
+
+\medskip
+
+
+Next, we find $(h \circ g)(x)$ by finding $h(g(x))$. We insert the expression $g(x)$ into $h$ first to get
+\begin{align*}
+(h \circ g)(x) & = h(g(x)) =h\left(2-\sqrt{x+3}\right) \\
+ & = \dfrac{2 \left(2-\sqrt{x+3} \right)}{\left(2-\sqrt{x+3}\right)+1}\\
+ & = \dfrac{4-2\sqrt{x+3}}{3-\sqrt{x+3}}
+  \end{align*}
+
+
+To find the domain of $h \circ g$, we look to the step before any simplification:  \[(h \circ g)(x) =  \frac{2 \left(2-\sqrt{x+3} \right)}{\left(2-\sqrt{x+3}\right)+1}\]  To keep the square root happy, we require $x+3 \geq 0$ or $x \geq -3$.  Setting the denominator equal to zero gives $\left(2-\sqrt{x+3}\right)+1=0$ or $\sqrt{x+3} = 3$.  Squaring both sides gives us $x+3=9$, or $x=6$.  Since $x=6$ checks in the original equation, $\left(2-\sqrt{x+3}\right)+1=0$, we know $x=6$ is the only zero of the denominator.  Hence, the domain of $h \circ g$ is $[-3,6) \cup (6, \infty)$.
+}\\
+
+
+\medskip
+%\pagebreak
+
+%\example{functioncompex4}{Composing three functions}{
+%Let $f(x) = x^2-4x$, $g(x) = 2-\sqrt{x+3}$, and $h(x) = \dfrac{2x}{x+1}$.  Find and simplify the functions $(h \circ (g \circ f))(x)$  and $((h \circ g) \circ f)(x)$. State the domain of each function.
+%}
+%{
+%The expression $(h \circ (g \circ f))(x)$ indicates that we first find the composite, $g \circ f$ and compose the function $h$ with the result.  We know from Example \ref{functioncompex1} that $(g \circ f)(x) =  2 - \sqrt{x^2-4x+3}$.  We can thus insert this expression into $h(x)$, as follows:
+
+%\begin{align*}
+%h \circ (g \circ f))(x) & = h((g \circ f)(x))=h\left(2 - \sqrt{x^2-4x+3}\right)\\[3pt]
+% & = \dfrac{2 \left(2 - \sqrt{x^2-4x+3}\right)}{\left(2 - \sqrt{x^2-4x+3}\right)+1} \\[3pt]
+% & = \dfrac{4 - 2\sqrt{x^2-4x+3}}{3 - \sqrt{x^2-4x+3}}
+%\end{align*}
+
+%To find the domain of $(h \circ (g \circ f))$, we look at the step before we began to simplify, \[(h \circ (g \circ f))(x) = \frac{2 \left(2 - \sqrt{x^2-4x+3}\right)}{\left(2 - \sqrt{x^2-4x+3}\right)+1}\]  For the square root, we need $x^2-4x+3 \geq 0$, which we determined in number 1 to be $(-\infty, 1] \cup [3,\infty)$.  Next, we set the denominator to zero and solve:  $\left(2 - \sqrt{x^2-4x+3}\right)+1 = 0$.  We get $\sqrt{x^2-4x+3} = 3$, and, after squaring both sides, we have $x^2-4x+3 = 9$.  To solve $x^2-4x-6 = 0$, we use the quadratic formula and get $x = 2 \pm \sqrt{10}$.  The reader is encouraged to check that both of these numbers satisfy the original equation, $\left(2 - \sqrt{x^2-4x+3}\right)+1 = 0$.  Hence we must exclude these numbers from the domain of $h \circ (g \circ f)$.  Our final domain for $h \circ (f \circ g)$ is $(-\infty, 2 -\sqrt{10}) \cup (2 - \sqrt{10}, 1] \cup \left[3, 2 + \sqrt{10}\right) \cup \left(2+\sqrt{10}, \infty\right)$.
+
+%\medskip  
+
+
+%The expression $((h \circ g) \circ f)(x)$ indicates that we first find the composite $h \circ g$ and then compose that with $f$.  From Example \ref{functioncompex2}, we have \[(h \circ g)(x) = \frac{4-2\sqrt{x+3}}{3-\sqrt{x+3}}.\]  Thus, we can insert the expression $f(x)$ into $h \circ g$ first to get 
+%\begin{align*}
+%((h \circ g) \circ f)(x) & =  (h \circ g)(f(x)) = (h \circ g)\left(x^2-4x\right) \\
+%                         & =  \dfrac{4-2\sqrt{\left(x^2-4x\right)+3}}{3-\sqrt{\left(x^2-4x\right)+3}} \\[3pt]
+%                         & =  \dfrac{4 - 2\sqrt{x^2-4x+3}}{3 - \sqrt{x^2-4x+3}}
+%\end{align*}
+
+ 
+%We note that the formula for $((h \circ g) \circ f)(x)$ before simplification is identical to that of $(h \circ (g \circ f))(x)$ before we simplified it.  Hence, the two functions have the same domain, $h \circ (f \circ g)$ is $(-\infty, 2 -\sqrt{10}) \cup (2 - \sqrt{10}, 1] \cup \left[3, 2 + \sqrt{10}\right) \cup \left(2+\sqrt{10}, \infty\right)$. 
+%}
+
+%\medskip
+
+
+
+%From the above examples, we see that while the order of composition matters, when we compose three or more functions, grouping does not. That is, function composition satisfies the \index{associative property ! for function composition} \sword{associative} property.  That is, when composing three (or more) functions, as long as we keep the order the same, it doesn't matter which two functions we compose first. This property as well as another important property are listed in the theorem below.
+
+
+
+%\smallskip
+
+%\theorem{functioncompprops}{Properties of Function Composition}{ Suppose $f$, $g$, and $h$ are functions. \index{function ! composite ! properties of} \index{composite function ! properties of}
+
+%\begin{itemize}
+
+%\item  $h \circ (g \circ f) = (h \circ g) \circ f$, provided the composite functions are defined.
+
+%\item  If $I$ is defined as $I(x) = x$ for all real numbers $x$, then $ I \circ f = f \circ I =f$.
+
+%\end{itemize}
+%}\\
+
+
+A useful skill in Calculus is to be able to take a complicated function and break it down into a composition of easier functions which our last example illustrates.
+
+%\mnote{.4}{When we get to Calculus, we'll see that being able to decompose a complicated function into simpler pieces is a necessary skill for applying the Chain Rule for derivatives.}
+
+\pagebreak
+
+\example{ex_decomp}{Decomposing functions}{  Write each of the following functions as a composition of two or more (non-identity) functions.  Check your answer by performing the function composition.
+
+\begin{enumerate}
+
+\item $F(x) = |3x-1|$
+
+\item $G(x) = \dfrac{2}{x^2+1}$
+
+\item  $H(x) = \dfrac{\sqrt{x}+1}{\sqrt{x}-1}$
+
+\end{enumerate}
+}
+{
+There are many approaches to this kind of problem, and we showcase a different methodology in each of the solutions below.
+
+\begin{enumerate}
+
+\item  Our goal is to express the function $F$ as $F = g \circ f$ for functions $g$ and $f$.  From Definition \ref{functioncompositiondefn}, we know $F(x) = g(f(x))$, and we can think of $f(x)$ as being the `inside' function and $g$ as being the `outside' function.  Looking at $F(x) = |3x-1|$ from an `inside versus outside' perspective, we can think of $3x-1$ being inside the absolute value symbols.  Taking this cue, we define $f(x) = 3x-1$.  At this point, we have $F(x) = |f(x)|$.  What is the outside function?  The function which takes the absolute value of its input, $g(x) = |x|$. Sure enough,  $(g \circ f)(x) = g(f(x)) = |f(x)| = |3x-1| = F(x)$, so we are done.
+
+\item  We attack deconstructing $G$ from an operational approach.  Given an input $x$, the first step is to square $x$, then add $1$, then divide the result into $2$.  We will assign each of these steps a function so as to write $G$ as a composite of three functions: $f$, $g$ and $h$.  Our first function, $f$, is the function that squares its input, $f(x) = x^2$.  The next function is the function that adds $1$ to its input, $g(x) = x+1$.  Our last function takes its input and divides it into $2$, $h(x) = \frac{2}{x}$.  The claim is that $G = h \circ g \circ f$. We find  \[(h \circ g \circ f)(x) = h(g(f(x))) = h(g\left(x^2\right)) = h\left(x^2+1\right)= \frac{2}{x^2+1} = G(x),\] so we are done.
+\item  If we look $H(x) = \dfrac{\sqrt{x}+1}{\sqrt{x}-1}$ with an eye towards building a complicated function from simpler functions, we see the expression $\sqrt{x}$ is a simple piece of the larger function.  If we define $f(x) = \sqrt{x}$, we have $H(x) = \frac{f(x)+1}{f(x)-1}$.  If we want to decompose $H = g \circ f$, then we can glean the formula for $g(x)$ by looking at what is being done to $f(x)$.  We take $g(x) = \frac{x+1}{x-1}$, so \[(g \circ f)(x) = g(f(x)) = \frac{f(x)+1}{f(x)-1} = \frac{\sqrt{x}+1}{\sqrt{x}-1} = H(x),\] as required.  
+
+\end{enumerate}
+}
+
+\newpage
+
+\subsection{Inverse Functions}
+
+\label{InverseFunctions}
+
+Thinking of a function as a process like we did in Section \ref{FunctionNotation}, in this section we seek another function which might reverse that process.  As in real life, we will find that some processes (like putting on socks and shoes) are reversible while some (like cooking a steak) are not.  We start by discussing a very basic function which is reversible, $f(x) = 3x+4$.  Thinking of $f$ as a process, we start with an input $x$ and apply two steps, as we saw in Section \ref{FunctionNotation} \index{function ! as a process}
+
+\begin{enumerate}
+
+\item multiply by $3$ 
+
+\item add $4$ 
+
+\end{enumerate}
+
+To reverse this process, we seek a function $g$ which will undo each of these steps and take the output from $f$, $3x+4$, and return the input $x$.  If we think of the real-world reversible two-step process of first putting on socks then putting on shoes, to reverse the process, we first take off the shoes, and then we take off the socks.  In much the same way, the function $g$ should undo the second step of $f$ first.  That is, the function $g$ should
+
+\begin{enumerate}
+
+\item  \textit{subtract} $4$ 
+
+\item  \textit{divide} by $3$
+
+\end{enumerate}
+
+Following this procedure,   we get $g(x) = \dfrac{x-4}{3}$.  Let's check to see if the function $g$ does the job.  If $x=5$, then $f(5) = 3(5)+4 = 15+4 = 19$.  Taking the output $19$ from $f$, we substitute it into $g$ to get $g(19) = \frac{19-4}{3} = \frac{15}{3} = 5$, which is our original input to $f$. To check that $g$ does the job for all $x$ in the domain of $f$, we take the generic output from $f$, $f(x) = 3x+4$, and substitute that into $g$.  That is, $g(f(x)) = g(3x+4) = \dfrac{(3x+4)-4}{3} = \frac{3x}{3} = x$, which is our original input to $f$.  If we carefully examine the arithmetic as we simplify $g(f(x))$, we actually see $g$ first `undoing' the addition of $4$, and then `undoing' the multiplication by $3$.  Not only does $g$ undo $f$, but $f$ also undoes $g$.  That is, if we take the output from $g$, $g(x) = \dfrac{x-4}{3}$, and put that into $f$, we get $f(g(x)) = f\left(\dfrac{x-4}{3}\right) = 3 \left(\dfrac{x-4}{3}\right) + 4 = (x-4) + 4 = x$.  Using the language of function composition developed in Section \ref{FunctionComposition}, the statements $g(f(x)) = x$ and $f(g(x)) = x$ can be written as $(g \circ f)(x) = x$ and $(f \circ g)(x) = x$, respectively.   Abstractly, we can visualize the relationship between $f$ and $g$ in Figure \ref{fig:inverse1}.
+
+\mfigure[width=0.95\marginparwidth]{.3}{The relationship between a function and its inverse}{fig:inverse1}{figures/FurtherGraphics/InverseFunctions-1}
+
+
+The main idea to get from Figure \ref{fig:inverse1} is that $g$ takes the outputs from $f$ and returns them to their respective inputs, and conversely, $f$ takes outputs from $g$ and returns them to their respective inputs.  We now have enough background to state the central definition of the section.
+
+\smallskip
+
+\definition{inversefunctiondefn}{Inverse of a function}{ Suppose $f$ and $g$ are two functions such that
+
+\begin{enumerate}
+
+\item  $(g \circ f)(x) = x$ for all $x$ in the domain of $f$ \textbf{and}
+
+\item  $(f \circ g)(x) = x$ for all $x$ in the domain of $g$
+
+\end{enumerate}
+
+then $f$ and $g$ are \index{function ! inverse ! definition of}\index{inverse ! of a function ! definition of}\sword{inverses} of each other and the functions $f$ and $g$ are said to be \sword{invertible}. \index{invertible ! function}
+}
+
+\smallskip
+
+We now formalize the concept that inverse functions exchange inputs and outputs.
+
+\smallskip
+
+\theorem{inversefunctionprops}{Properties of Inverse Functions}{ Suppose $f$ and $g$ are inverse functions. \index{inverse ! of a function ! properties of} \index{function ! inverse ! properties of}
+
+\begin{itemize}
+
+\item  The range (recall this is the set of all outputs of a function) of $f$ is the domain of $g$ and the domain of $f$ is the range of $g$
+
+\item  $f(a) = b$ if and only if $g(b) = a$
+
+\item  $(a,b)$ is on the graph of $f$ if and only if $(b,a)$ is on the graph of $g$
+
+\end{itemize}
+}
+
+\smallskip
+
+
+
+\mfigure[width=0.95\marginparwidth]{.78}{Reflecting $y=f(x)$ across $y=x$ to obtain $y=g(x)$}{fig:inverse2}{figures/FurtherGraphics/InverseFunctions-2}
+
+
+
+
+\phantomsection \label{inversefunctionuniqueness}
+
+\smallskip
+
+\theorem{inverseuniquegraph}{Uniqueness of Inverse Functions and Their Graphs}{ Suppose $f$ is an invertible function. \index{inverse ! of a function ! uniqueness of} \index{function ! inverse ! uniqueness of}
+
+\begin{itemize}
+
+\item  There is exactly one inverse function for $f$, denoted $f^{-1}$ (read $f$-inverse)
+
+\item  The graph of $y=f^{-1}(x)$ is the reflection of the graph of $y=f(x)$ across the line $y=x$.
+
+\end{itemize}
+}
+
+
+
+\smallskip
+
+Let's turn our attention to the function $f(x) = x^2$.  Is $f$ invertible?  A likely candidate for the inverse is the function $g(x) = \sqrt{x}$.  Checking the composition yields $(g\circ f)(x) = g(f(x)) = \sqrt{x^2} = |x|$, which is not equal to $x$ for all $x$ in the domain $(-\infty, \infty)$.  For example, when $x=-2$,  $f(-2)= (-2)^2 = 4$, but $g(4) = \sqrt{4}=2$, which means $g$ failed to return the input $-2$ from its output $4$.  What $g$ did, however, is match the output $4$ to a \textit{different} input, namely $2$, which satisfies $f(2) = 4$.  This issue is presented schematically in Figure \ref{fig:inverse3}.
+
+\mfigure[width=0.95\marginparwidth]{.58}{The function $f(x)=x^2$ is not invertible}{fig:inverse3}{figures/FurtherGraphics/InverseFunctions-3}
+
+
+
+We see from the diagram that since both $f(-2)$ and $f(2)$ are $4$, it is impossible to construct a \textit{function} which takes $4$ back to \textit{both} $x=2$ and $x=-2$. (By definition, a function matches a real number with exactly one other real number.)  From a graphical standpoint, we know that if $y=f^{-1}(x)$ exists, its graph can be obtained by reflecting $y=x^2$ about the line $y=x$, in accordance with Theorem \ref{inverseuniquegraph}.  Doing so takes the graph in Figure \ref{fig:inverse4} (a) to the one in Figure \ref{fig:inverse4} (b).
+
+\mtable{.28}{Reflecting $y=x^2$ across the line $y=x$ does not produce a function}{fig:inverse4}{
+\begin{tabular}{c}
+\myincludegraphics{figures/FurtherGraphics/InverseFunctions-4}\\
+(a) $y=f(x)=x^2$\\
+\\
+\myincludegraphics{figures/FurtherGraphics/InverseFunctions-5}\\
+(b) $y=f^{-1}(x)$?
+\end{tabular}}
+
+We see that the line $x=4$ intersects the graph of the supposed inverse twice - meaning the graph fails the Vertical Line Test, and as such, does not represent $y$ as a function of $x$.  The vertical line $x=4$ on the graph on the right corresponds to the \textit{horizontal line} $y=4$ on the graph of $y=f(x)$.  The fact that the horizontal line $y=4$ intersects the graph of $f$ twice means two \textit{different} inputs, namely $x=-2$ and $x=2$, are matched with the \textit{same} output, $4$, which is the cause of all of the trouble.  In general, for a function to have an inverse, \textit{different} inputs must go to \textit{different} outputs, or else we will run into the same problem we did with $f(x) = x^2$.  We give this property a name.
+
+\smallskip
+
+\definition{onetoone}{One-to-one function}{ A function $f$ is said to be \index{function ! one-to-one} \sword{one-to-one} if $f$ matches different inputs to different outputs.  Equivalently, $f$ is one-to-one if and only if  whenever $f(c) = f(d)$, then $c=d$. \index{one-to-one function}
+}
+
+\smallskip
+
+Graphically, we detect one-to-one functions using the test below.
+
+\smallskip
+
+\theorem{HLT}{The Horizontal Line Test}{\index {Horizontal Line Test (HLT)} A function $f$ is one-to-one if and only if no horizontal line intersects the graph of $f$ more than once.
+}
+
+\smallskip
+
+We say that the graph of a function \sword{passes} the Horizontal Line Test  if no horizontal line intersects the graph more than once; otherwise, we say the graph of the function \sword{fails} the Horizontal Line Test.  We have argued that if $f$ is invertible, then $f$ must be one-to-one, otherwise the graph given by reflecting the graph of $y = f(x)$ about the line $y = x$ will fail the Vertical Line Test. It turns out that being one-to-one is also enough to guarantee invertibility.  To see this, we think of $f$ as the set of ordered pairs which constitute its graph.  If switching the $x$- and $y$-coordinates of the points results in a function, then $f$ is invertible and we have found $f^{-1}$. This is precisely what the Horizontal Line Test does for us:  it checks to see whether or not a set of points describes $x$ as a function of $y$.  We summarize these results below.
+  
+\smallskip
+
+\theorem{inversefunctionequivalency}{Equivalent Conditions for Invertibility}{ Suppose $f$ is a function.  The following statements are equivalent. \index{invertibility ! function}
+
+\vspace{-.1in}
+
+\begin{itemize}
+
+\item  $f$ is invertible
+
+\item $f$ is one-to-one
+
+\item  The graph of $f$ passes the Horizontal Line Test
+
+\end{itemize}
+}
+
+\medskip
+
+We put this result to work in the next example.
+
+\medskip
+
+\example{inversefunctiononetooneex}{Finding one-to-one functions}{ Determine if the following functions are one-to-one in two ways: (a) analytically using Definition \ref{onetoone} and (b) graphically using the Horizontal Line Test.
+
+\begin{enumerate}
+
+\item  $f(x) = \dfrac{1-2x}{5}$
+
+\item  $g(x) = \dfrac{2x}{1-x}$
+
+\item  $h(x) = x^2 - 2x+4$
+
+\end{enumerate}\pagebreak
+}
+{
+\begin{enumerate}
+
+\item  \begin{enumerate} \item To determine if $f$ is one-to-one analytically, we assume $f(c) = f(d)$ and attempt to deduce that $c=d$. 
+
+\[ \begin{array}{rclr}
+
+f(c) & = & f(d) & \\ [3pt]
+\dfrac{1-2c}{5} & = & \dfrac{1-2d}{5} & \\ [5pt]
+1-2c & = & 1-2d & \\
+-2c & = & -2d & \\
+c & = & d \, \, \checkmark & \\
+
+\end{array} \]
+
+Hence, $f$ is one-to-one.
+
+\item  To check if $f$ is one-to-one graphically, we look to see if the graph of $y=f(x)$ passes the Horizontal Line Test.  We have that $f$ is a non-constant linear function, which means its graph is a non-horizontal line.  Thus the  graph of $f$ passes the Horizontal Line Test: see Figure \ref{fig:inverse5}.
+
+\mfigure{.75}{The function $f$ is one-to-one}{fig:inverse5}{figures/FurtherGraphics/InverseFunctions-6}
+
+\end{enumerate}
+
+\item \begin{enumerate} \item We begin with the assumption that $g(c) = g(d)$ and try to show $c=d$.
+
+\[ \begin{array}{rclr}
+g(c) & = & g(d) & \\ [3pt]
+\dfrac{2c}{1-c} & = & \dfrac{2d}{1-d} & \\ [6pt]
+2c(1-d) & = & 2d(1-c) & \\
+2c - 2cd & = & 2d - 2dc & \\
+2c & = & 2d & \\
+c & = & d \, \, \checkmark \\ 
+\end{array} \]
+
+We have shown that $g$ is one-to-one.  
+
+\drawexampleline
+
+\item  The graph of $g$ is shown in Figure \ref{fig:inverse6}.  We get the sole intercept at $(0,0)$, a vertical asymptote $x=1$ and a horizontal asymptote (which the graph never crosses) $y = -2$. We see from that the graph of $g$ in Figure \ref{fig:inverse6} that $g$ passes the Horizontal Line Test.
+
+\end{enumerate}
+
+\mfigure{.5}{The function $g$ is one-to-one}{fig:inverse6}{figures/FurtherGraphics/InverseFunctions-7}
+
+\item  \begin{enumerate} \item  We begin with $h(c) = h(d)$.  As we work our way through the problem, we encounter a nonlinear equation.  We move the non-zero terms to the left, leave a $0$ on the right and factor accordingly.
+
+\[ \begin{array}{rclr}
+
+h(c) & = & h(d) & \\
+c^2 - 2c+4 & = & d^2 - 2d+4 & \\
+
+c^2 - 2c & = & d^2 - 2d & \\
+
+c^2 - d^2 - 2c + 2d & = & 0 & \\
+
+(c+d)(c-d) - 2(c-d) & = & 0 & \\
+
+(c-d)((c+d) -2) & = & 0 & \mbox{factor by grouping} \\
+
+c-d = 0 & \mbox{or} & c+d -2 = 0 & \\
+
+c = d & \mbox{or} & c = 2-d & \\
+
+\end{array} \]
+
+We get $c=d$ as one possibility, but we also get the possibility that $c=2-d$.  This suggests that $f$ may not be one-to-one.  Taking $d=0$, we get $c = 0$ or $c = 2$.  With $h(0) = 4$ and $h(2) = 4$, we have produced two different inputs with the same output meaning $h$ is not one-to-one.
+
+\item  We note that $h$ is a quadratic function and we graph $y=h(x)$ using the techniques presented in Section \ref{QuadraticFunctions}.  The vertex is $(1,3)$ and the parabola opens upwards.  We see immediately from the graph in Figure \ref{fig:inverse7} that $h$ is not one-to-one, since there are several horizontal lines which cross the graph more than once.
+
+\end{enumerate}
+
+\mfigure{.8}{The function $h$ is not one-to-one}{fig:inverse7}{figures/FurtherGraphics/InverseFunctions-8}
+
+
+\end{enumerate}
+
+}
+
+\medskip
+
+We have shown that the functions $f$ and $g$ in Example \ref{inversefunctiononetooneex} are one-to-one.  This means they are invertible, so it is natural to wonder what $f^{-1}(x)$ and $g^{-1}(x)$ would be.  For $f(x) =  \frac{1-2x}{5}$, we can think our way through the inverse since there is only one occurrence of $x$. We can track step-by-step what is done to $x$ and reverse those steps as we did at the beginning of the chapter.  The function $g(x) = \frac{2x}{1-x}$ is a bit trickier since $x$ occurs in two places.  When one evaluates $g(x)$ for a specific value of $x$, which is first, the $2x$ or the $1-x$?  We can imagine functions more complicated than these so we need to develop a general methodology to attack this problem.  Theorem \ref{inversefunctionprops} tells us equation $y = f^{-1}(x)$ is equivalent to $f(y) = x$ and this is the basis of our algorithm.
+
+\smallskip
+
+\keyidea{inverseprocedure}{Steps for finding the Inverse of a One-to-one Function}{ \index{inverse ! of a function ! solving for} \index{function ! inverse ! solving for}
+
+\begin{enumerate}
+
+\item  Write $y=f(x)$
+
+\item Interchange $x$ and $y$
+
+\item  Solve $x = f(y)$ for $y$ to obtain $y=f^{-1}(x)$
+
+\end{enumerate}
+}
+
+\smallskip 
+
+Note that we could have simply written `Solve $x=f(y)$ for $y$' and be done with it.  The act of interchanging the $x$ and $y$ is there to remind us that we are finding the inverse function by switching the inputs and outputs.  
+
+\medskip
+
+\example{ex_inverse1}{Computing inverse functions}{ Find the inverse of the following one-to-one functions. Check your answers analytically using function composition and graphically.
+
+\begin{enumerate}
+
+\item  $f(x) =  \dfrac{1-2x}{5}$
+
+\item  $g(x) = \dfrac{2x}{1-x}$
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item  As we mentioned earlier, it is possible to think our way through the inverse of $f$ by recording the steps we apply to $x$ and the order in which we apply them and then reversing those steps in the reverse order.  We encourage the reader to do this.  We, on the other hand, will practice the algorithm.  We write $y=f(x)$ and proceed to switch $x$ and $y$
+
+\[ \begin{array}{rclr}
+
+y & = & f(x) & \\ [3pt]
+y & = &  \dfrac{1-2x}{5} & \\ [6pt]
+x & = & \dfrac{1-2y}{5} & \mbox{switch $x$ and $y$} \\ [6pt]
+5x & = & 1 - 2y & \\
+5x-1 & = & -2y & \\ 
+\dfrac{5x-1}{-2} & = & y & \\ 
+y & = & -\dfrac{5}{2} x + \dfrac{1}{2} & \\
+\end{array} \]
+
+We have $f^{-1}(x) = -\frac{5}{2} x + \frac{1}{2}$.  To check this answer analytically, we first check that $\left(f^{-1} \circ f \right)(x) = x $ for all $x$ in the domain of $f$, which is all real numbers.
+
+\[ \begin{array}{rclr}
+\left(f^{-1} \circ f \right)(x) & = & f^{-1}(f(x)) & \\ 
+& = & -\dfrac{5}{2} f(x) + \dfrac{1}{2} & \\ [6pt]
+& = & -\dfrac{5}{2} \left(\dfrac{1-2x}{5}\right) + \dfrac{1}{2} & \\ 
+& = & -\dfrac{1}{2} (1-2x) + \dfrac{1}{2} & \\ [6pt]
+& = & -\dfrac{1}{2} + x + \dfrac{1}{2} & \\ 
+& = & x \, \, \checkmark \\
+
+\end{array}\]
+
+\drawexampleline
+
+We now check that $\left(f \circ f^{-1} \right)(x) = x $ for all $x$ in the range of $f$ which is also all real numbers.  (Recall that the domain of $f^{-1}$) is the range of $f$.)
+
+\begin{align*}
+\left(f \circ f^{-1} \right)(x) & =  f(f^{-1}(x)) = \dfrac{1-2f^{-1}(x)}{5}  \\
+& = \dfrac{1-2\left(  -\frac{5}{2} x + \frac{1}{2} \right)}{5}  = \dfrac{1+5x-1}{5} \\ 
+& = \dfrac{5x}{5}  = x \, \, \checkmark
+\end{align*}
+
+To check our answer graphically, we graph $y=f(x)$ and $y=f^{-1}(x)$ on the same set of axes in Figure \ref{fig:inverse9}.  They appear to be reflections across the line $y=x$.
+
+\mfigure[width=0.95\marginparwidth]{.5}{The graphs of $f$ and $f^{-1}$ from Example \ref{ex_inverse1}}{fig:inverse9}{figures/FurtherGraphics/InverseFunctions-10}
+
+
+\item  To find $g^{-1}(x)$, we start with $y=g(x)$.  We note that the domain of $g$ is $(-\infty,1) \cup (1, \infty)$.
+
+\begin{align*}
+y & = g(x)  \dfrac{2x}{1-x} \\
+x & = \dfrac{2y}{1-y}  \tag*{switch $x$ and $y$} \\
+x(1-y) & =  2y  \\
+x-xy & = 2y  \\
+x & =  xy + 2y = y(x+2)  \tag*{factor}\\
+y & = \dfrac{x}{x+2}
+\end{align*}
+
+
+We obtain $g^{-1}(x) = \dfrac{x}{x+2}$.  To check this analytically, we first check $\left(g^{-1} \circ g \right)(x) = x$ for all $x$ in the domain of $g$, that is, for all $x \neq 1$.
+
+\begin{align*}
+\left(g^{-1} \circ g \right)(x) & =  g^{-1}(g(x)) = g^{-1} \left(\dfrac{2x}{1-x}\right) \\ 
+& = \dfrac{ \left(\dfrac{2x}{1-x}\right)}{ \left(\dfrac{2x}{1-x}\right)+2} \\
+& = \dfrac{ \left(\dfrac{2x}{1-x}\right)}{ \left(\dfrac{2x}{1-x}\right)+2} \cdot \dfrac{(1-x)}{(1-x)} \tag*{clear denominators} \\
+& = \dfrac{ 2x}{ 2x + 2(1-x)} = \dfrac{2x}{2x+2-2x} \\
+& = \dfrac{2x}{2} = x \, \, \checkmark \\
+\end{align*}
+
+Next, we check $g\left(g^{-1}(x)\right)= x$ for all $x$ in the range of $g$.  From the graph of $g$ in Example \ref{inversefunctiononetooneex}, we have that the range of $g$ is $(-\infty, -2) \cup (-2,\infty)$.  This matches the domain we get from the formula $g^{-1}(x) = \frac{x}{x+2}$, as it should.  
+
+\begin{align*}
+\left(g \circ g^{-1} \right)(x) & =  g\left(g^{-1}(x)\right) = g \left(\dfrac{x}{x+2}\right)  \\
+& = \dfrac{ 2\left(\dfrac{x}{x+2}\right)}{ 1-\left(\dfrac{x}{x+2}\right)} \\ 
+& =  \dfrac{ 2\left(\dfrac{x}{x+2}\right)}{ 1-\left(\dfrac{x}{x+2}\right)} \cdot \dfrac{(x+2)}{(x+2)}   \tag*{clear denominators} \\
+& =  \dfrac{ 2x}{ (x+2) -x} =  \dfrac{2x}{2} \\
+& =  x \, \, \checkmark \\
+\end{align*}
+
+Graphing $y=g(x)$ and  $y = g^{-1}(x)$ on the same set of axes is busy, but we can see the symmetric relationship if we thicken the curve for $y=g^{-1}(x)$.  Note that the vertical asymptote $x=1$ of the graph of $g$ corresponds to the horizontal asymptote $y=1$ of the graph of $g^{-1}$, as it should since $x$ and $y$ are switched.  Similarly, the horizontal asymptote $y=-2$ of the graph of $g$ corresponds to the vertical asymptote $x=-2$ of the graph of $g^{-1}$. See Figure \ref{fig:inverse10}
+
+\mfigure[width=0.95\marginparwidth]{.65}{The graphs of $g$ and $g^{-1}$ from Example \ref{ex_inverse1}}{fig:inverse10}{figures/FurtherGraphics/InverseFunctions-11}
+
+
+
+\end{enumerate}
+}
+
+\printexercises{exercises_pre/01_05_exercises}

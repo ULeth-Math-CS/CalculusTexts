@@ -1,0 +1,422 @@
+\begin{theindex}
+
+  \item $\in $, \hyperpage{2}
+  \item $\notin  $, \hyperpage{2}
+  \item $x$-axis, \hyperpage{10}
+  \item $x$-coordinate, \hyperpage{10}
+  \item $y$-axis, \hyperpage{10}
+  \item $y$-coordinate, \hyperpage{10}
+
+  \indexspace
+
+  \item abscissa, \hyperpage{10}
+  \item absolute value 
+    \subitem  definition of, \hyperpage{46}
+    \subitem  properties of, \hyperpage{47}
+  \item amplitude, \hyperpage{141}
+  \item angle 
+    \subitem  reference, \hyperpage{108}
+  \item arccosecant 
+    \subitem  calculus friendly 
+      \subsubitem  definition of, \hyperpage{162}
+      \subsubitem  graph of, \hyperpage{162}
+      \subsubitem  properties of, \hyperpage{162}
+    \subitem  trigonometry friendly 
+      \subsubitem  definition of, \hyperpage{160}
+      \subsubitem  graph of, \hyperpage{159}
+      \subsubitem  properties of, \hyperpage{160}
+  \item arccosine 
+    \subitem  definition of, \hyperpage{154}
+    \subitem  graph of, \hyperpage{153}
+    \subitem  properties of, \hyperpage{154}
+  \item arccotangent 
+    \subitem  definition of, \hyperpage{157}
+    \subitem  graph of, \hyperpage{156}
+    \subitem  properties of, \hyperpage{157}
+  \item arcsecant 
+    \subitem  calculus friendly 
+      \subsubitem  definition of, \hyperpage{162}
+      \subsubitem  graph of, \hyperpage{162}
+      \subsubitem  properties of, \hyperpage{162}
+    \subitem  trigonometry friendly 
+      \subsubitem  definition of, \hyperpage{160}
+      \subsubitem  graph of, \hyperpage{159}
+      \subsubitem  properties of, \hyperpage{160}
+  \item arcsine 
+    \subitem  definition of, \hyperpage{154}
+    \subitem  graph of, \hyperpage{153}
+    \subitem  properties of, \hyperpage{154}
+  \item arctangent 
+    \subitem  definition of, \hyperpage{157}
+    \subitem  graph of, \hyperpage{156}
+    \subitem  properties of, \hyperpage{157}
+  \item argument 
+    \subitem  of a function, \hyperpage{17}
+    \subitem  of a logarithm, \hyperpage{92}
+    \subitem  of a trigonometric function, \hyperpage{139}
+  \item asymptote 
+    \subitem  horizontal 
+      \subsubitem  formal definition of, \hyperpage{75}
+      \subsubitem  intuitive definition of, \hyperpage{75}
+      \subsubitem  location of, \hyperpage{77}
+    \subitem  slant 
+      \subsubitem  determination of, \hyperpage{79}
+      \subsubitem  formal definition of, \hyperpage{79}
+    \subitem  slant (oblique), \hyperpage{79}
+    \subitem  vertical 
+      \subsubitem  formal definition of, \hyperpage{75}
+      \subsubitem  intuitive definition of, \hyperpage{75}
+      \subsubitem  location of, \hyperpage{76}
+
+  \indexspace
+
+  \item Cartesian coordinate plane, \hyperpage{10}
+  \item Cartesian coordinates, \hyperpage{10}
+  \item change of base formulas, \hyperpage{99}
+  \item circular function, \hyperpage{115}
+  \item codomain, \hyperpage{17}
+  \item Cofunction Identities, \hyperpage{125}
+  \item common base, \hyperpage{87}
+  \item common logarithm, \hyperpage{89}
+  \item complex number 
+    \subitem  definition of, \hyperpage{4}
+    \subitem  set of, \hyperpage{4}
+  \item composite function 
+    \subitem  definition of, \hyperpage{26}
+  \item constant function 
+    \subitem  as a horizontal line, \hyperpage{44}
+  \item constant term of a polynomial, \hyperpage{57}
+  \item continuous, \hyperpage{60}
+  \item coordinates 
+    \subitem  Cartesian, \hyperpage{10}
+  \item cosecant 
+    \subitem  graph of, \hyperpage{143}
+    \subitem  of an angle, \hyperpage{115}
+    \subitem  properties of, \hyperpage{145}
+  \item cosine 
+    \subitem  graph of, \hyperpage{139}
+    \subitem  of an angle, \hyperpage{105}, \hyperpage{115}
+    \subitem  properties of, \hyperpage{138}
+  \item cotangent 
+    \subitem  graph of, \hyperpage{147}
+    \subitem  of an angle, \hyperpage{115}
+    \subitem  properties of, \hyperpage{149}
+
+  \indexspace
+
+  \item degree of a polynomial, \hyperpage{57}
+  \item dependent variable, \hyperpage{17}
+  \item depreciation, \hyperpage{87}
+  \item diagram 
+    \subitem  Venn Diagram, \hyperpage{3}
+  \item Difference Identity 
+    \subitem  for cosine, \hyperpage{123}, \hyperpage{128}
+    \subitem  for sine, \hyperpage{126}, \hyperpage{128}
+    \subitem  for tangent, \hyperpage{128}
+  \item discriminant 
+    \subitem  of a quadratic equation, \hyperpage{52}
+    \subitem  trichotomy, \hyperpage{52}
+  \item distance 
+    \subitem  definition, \hyperpage{13}
+    \subitem  distance formula, \hyperpage{14}
+  \item domain, \hyperpage{17}
+  \item domain 
+    \subitem  implied, \hyperpage{19}
+  \item Double Angle Identities, \hyperpage{128}
+
+  \indexspace
+
+  \item empty set, \hyperpage{3, 4}
+  \item end behaviour 
+    \subitem  of $f(x) = ax^{n}, n$ even, \hyperpage{59}
+    \subitem  of $f(x) = ax^{n}, n$ odd, \hyperpage{60}
+    \subitem  of a function graph, \hyperpage{58}
+    \subitem  polynomial, \hyperpage{62}
+  \item Even/Odd Identities, \hyperpage{123}
+  \item exponential function 
+    \subitem  algebraic properties of, \hyperpage{95}
+    \subitem  change of base formula, \hyperpage{99}
+    \subitem  common base, \hyperpage{87}
+    \subitem  definition of, \hyperpage{86}
+    \subitem  graphical properties of, \hyperpage{87}
+    \subitem  inverse properties of, \hyperpage{95}
+    \subitem  natural base, \hyperpage{87}
+    \subitem  one-to-one properties of, \hyperpage{95}
+
+  \indexspace
+
+  \item frequency 
+    \subitem  of a sinusoid, \hyperpage{141}
+  \item function 
+    \subitem  absolute value, \hyperpage{46}
+    \subitem  argument, \hyperpage{17}
+    \subitem  arithmetic, \hyperpage{23}
+    \subitem  as a process, \hyperpage{17}, \hyperpage{30}
+    \subitem  circular, \hyperpage{115}
+    \subitem  composite 
+      \subsubitem  definition of, \hyperpage{26}
+    \subitem  constant, \hyperpage{44}
+    \subitem  continuous, \hyperpage{60}
+    \subitem  definition, \hyperpage{17}
+    \subitem  dependent variable of, \hyperpage{17}
+    \subitem  difference, \hyperpage{23}
+    \subitem  exponential, \hyperpage{86}
+    \subitem  independent variable of, \hyperpage{17}
+    \subitem  inverse 
+      \subsubitem  definition of, \hyperpage{30}
+      \subsubitem  properties of, \hyperpage{31}
+      \subsubitem  solving for, \hyperpage{34}
+      \subsubitem  uniqueness of, \hyperpage{31}
+    \subitem  linear, \hyperpage{43}
+    \subitem  logarithmic, \hyperpage{89}
+    \subitem  notation, \hyperpage{17}
+    \subitem  one-to-one, \hyperpage{32}
+    \subitem  periodic, \hyperpage{138}
+    \subitem  piecewise, \hyperpage{46}
+    \subitem  polynomial, \hyperpage{56}
+    \subitem  product, \hyperpage{23}
+    \subitem  quadratic, \hyperpage{49}
+    \subitem  quotient, \hyperpage{23}
+    \subitem  rational, \hyperpage{73}
+    \subitem  smooth, \hyperpage{60}
+    \subitem  sum, \hyperpage{23}
+  \item fundamental cycle 
+    \subitem  of $y = \cos(x)$, \hyperpage{139}
+
+  \indexspace
+
+  \item graph 
+    \subitem  hole in, \hyperpage{76}
+
+  \indexspace
+
+  \item Half-Angle Formulas, \hyperpage{131}
+  \item hole 
+    \subitem  in a graph, \hyperpage{76}
+    \subitem  location of, \hyperpage{76}
+  \item horizontal asymptote 
+    \subitem  formal definition of, \hyperpage{75}
+    \subitem  intuitive definition of, \hyperpage{75}
+    \subitem  location of, \hyperpage{77}
+  \item Horizontal Line Test (HLT), \hyperpage{32}
+
+  \indexspace
+
+  \item implied domain of a function, \hyperpage{19}
+  \item independent variable, \hyperpage{17}
+  \item integer 
+    \subitem  definition of, \hyperpage{4}
+    \subitem  set of, \hyperpage{4}
+  \item Intermediate Value Theorem 
+    \subitem  polynomial zero version, \hyperpage{60}
+  \item intersection of two sets, \hyperpage{2}
+  \item interval 
+    \subitem  definition of, \hyperpage{6}
+    \subitem  notation for, \hyperpage{6}
+  \item inverse 
+    \subitem  of a function 
+      \subsubitem  definition of, \hyperpage{30}
+      \subsubitem  properties of, \hyperpage{31}
+      \subsubitem  solving for, \hyperpage{34}
+      \subsubitem  uniqueness of, \hyperpage{31}
+  \item invertibility 
+    \subitem  function, \hyperpage{32}
+  \item invertible 
+    \subitem  function, \hyperpage{30}
+  \item irrational number 
+    \subitem  definition of, \hyperpage{4}
+    \subitem  set of, \hyperpage{4}
+
+  \indexspace
+
+  \item leading coefficient of a polynomial, \hyperpage{57}
+  \item leading term of a polynomial, \hyperpage{57}
+  \item line 
+    \subitem  linear function, \hyperpage{43}
+    \subitem  point-slope form, \hyperpage{43}
+    \subitem  slope of, \hyperpage{41}
+    \subitem  slope-intercept form, \hyperpage{43}
+  \item linear function, \hyperpage{43}
+  \item logarithm 
+    \subitem  algebraic properties of, \hyperpage{96}
+    \subitem  change of base formula, \hyperpage{99}
+    \subitem  common, \hyperpage{89}
+    \subitem  general, ``base $b$'', \hyperpage{89}
+    \subitem  graphical properties of, \hyperpage{90}
+    \subitem  inverse properties of, \hyperpage{95}
+    \subitem  natural, \hyperpage{89}
+    \subitem  one-to-one properties of, \hyperpage{95}
+
+  \indexspace
+
+  \item midpoint 
+    \subitem  definition of, \hyperpage{15}
+    \subitem  midpoint formula, \hyperpage{15}
+  \item multiplicity 
+    \subitem  effect on the graph of a polynomial, \hyperpage{63}
+    \subitem  of a zero, \hyperpage{63}
+
+  \indexspace
+
+  \item natural base, \hyperpage{87}
+  \item natural logarithm, \hyperpage{89}
+  \item natural number 
+    \subitem  definition of, \hyperpage{4}
+    \subitem  set of, \hyperpage{4}
+  \item Newton's Law of Cooling, \hyperpage{88}
+
+  \indexspace
+
+  \item oblique asymptote, \hyperpage{79}
+  \item one-to-one function, \hyperpage{32}
+  \item ordered pair, \hyperpage{10}
+  \item ordinate, \hyperpage{10}
+  \item origin, \hyperpage{10}
+
+  \indexspace
+
+  \item parabola 
+    \subitem  graph of a quadratic function, \hyperpage{49}
+    \subitem  vertex, \hyperpage{49}
+  \item period 
+    \subitem  of a function, \hyperpage{138}
+  \item periodic function, \hyperpage{138}
+  \item phase, \hyperpage{141}
+  \item phase shift, \hyperpage{141}
+  \item point-slope form of a line, \hyperpage{43}
+  \item polynomial function 
+    \subitem  constant term, \hyperpage{57}
+    \subitem  definition of, \hyperpage{56}
+    \subitem  degree, \hyperpage{57}
+    \subitem  end behaviour, \hyperpage{58}
+    \subitem  leading coefficient, \hyperpage{57}
+    \subitem  leading term, \hyperpage{57}
+    \subitem  zero 
+      \subsubitem  multiplicity, \hyperpage{63}
+  \item Power Reduction Formulas, \hyperpage{130}
+  \item power rule 
+    \subitem  for absolute value, \hyperpage{47}
+    \subitem  for exponential functions, \hyperpage{95}
+    \subitem  for logarithms, \hyperpage{96}
+  \item product rule 
+    \subitem  for absolute value, \hyperpage{47}
+    \subitem  for exponential functions, \hyperpage{95}
+    \subitem  for logarithms, \hyperpage{96}
+  \item Product to Sum Formulas, \hyperpage{133}
+  \item Pythagorean Identities, \hyperpage{117}
+
+  \indexspace
+
+  \item quadrants, \hyperpage{12}
+  \item quadratic formula, \hyperpage{51}
+  \item quadratic function 
+    \subitem  definition of, \hyperpage{49}
+    \subitem  general form, \hyperpage{50}
+    \subitem  standard form, \hyperpage{50}
+  \item Quotient Identities, \hyperpage{116}
+  \item quotient rule 
+    \subitem  for absolute value, \hyperpage{47}
+    \subitem  for exponential functions, \hyperpage{95}
+    \subitem  for logarithms, \hyperpage{96}
+
+  \indexspace
+
+  \item rate of change 
+    \subitem  slope of a line, \hyperpage{42}
+  \item rational functions, \hyperpage{73}
+  \item rational number 
+    \subitem  definition of, \hyperpage{4}
+    \subitem  set of, \hyperpage{4}
+  \item real number 
+    \subitem  definition of, \hyperpage{3, 4}
+    \subitem  set of, \hyperpage{3, 4}
+  \item Reciprocal Identities, \hyperpage{116}
+  \item reference angle, \hyperpage{108}
+  \item Reference Angle Theorem 
+    \subitem  for cosine and sine, \hyperpage{109}
+  \item reflection 
+    \subitem  of a point, \hyperpage{13}
+
+  \indexspace
+
+  \item secant 
+    \subitem  graph of, \hyperpage{143}
+    \subitem  of an angle, \hyperpage{115}
+    \subitem  properties of, \hyperpage{145}
+  \item set 
+    \subitem  definition of, \hyperpage{1}
+    \subitem  empty, \hyperpage{3, 4}
+    \subitem  exclusion, \hyperpage{2}
+    \subitem  inclusion, \hyperpage{2}
+    \subitem  intersection, \hyperpage{2}
+    \subitem  roster method, \hyperpage{1}
+    \subitem  set-builder notation, \hyperpage{1}
+    \subitem  sets of numbers, \hyperpage{4}
+    \subitem  union, \hyperpage{2}
+    \subitem  verbal description, \hyperpage{1}
+  \item set-builder notation, \hyperpage{1}
+  \item sign diagram 
+    \subitem  polynomial function, \hyperpage{61}
+  \item sine 
+    \subitem  graph of, \hyperpage{139}
+    \subitem  of an angle, \hyperpage{105}, \hyperpage{115}
+    \subitem  properties of, \hyperpage{138}
+  \item sinusoid 
+    \subitem  amplitude, \hyperpage{141}
+    \subitem  graph of, \hyperpage{141}
+    \subitem  phase shift, \hyperpage{141}
+  \item slant asymptote, \hyperpage{79}
+  \item slant asymptote 
+    \subitem  determination of, \hyperpage{79}
+    \subitem  formal definition of, \hyperpage{79}
+  \item slope 
+    \subitem  definition, \hyperpage{41}
+    \subitem  of a line, \hyperpage{41}
+    \subitem  rate of change, \hyperpage{42}
+  \item slope-intercept form of a line, \hyperpage{43}
+  \item smooth, \hyperpage{60}
+  \item subset 
+    \subitem  definition of, \hyperpage{2}
+  \item Sum Identity 
+    \subitem  for cosine, \hyperpage{123}, \hyperpage{128}
+    \subitem  for sine, \hyperpage{126}, \hyperpage{128}
+    \subitem  for tangent, \hyperpage{128}
+  \item Sum to Product Formulas, \hyperpage{133}
+  \item symmetry 
+    \subitem  about the $x$-axis, \hyperpage{12}
+    \subitem  about the $y$-axis, \hyperpage{12}
+    \subitem  about the origin, \hyperpage{12}
+
+  \indexspace
+
+  \item tangent 
+    \subitem  graph of, \hyperpage{146}
+    \subitem  of an angle, \hyperpage{115}
+    \subitem  properties of, \hyperpage{149}
+  \item trichotomy, \hyperpage{5}
+
+  \indexspace
+
+  \item union of two sets, \hyperpage{2}
+  \item Unit Circle 
+    \subitem  important points, \hyperpage{110}
+
+  \indexspace
+
+  \item variable 
+    \subitem  dependent, \hyperpage{17}
+    \subitem  independent, \hyperpage{17}
+  \item Venn Diagram, \hyperpage{3}
+  \item vertex 
+    \subitem  of a parabola, \hyperpage{49}
+  \item vertical asymptote 
+    \subitem  formal definition of, \hyperpage{75}
+    \subitem  intuitive definition of, \hyperpage{75}
+    \subitem  location of, \hyperpage{76}
+
+  \indexspace
+
+  \item zero 
+    \subitem  multiplicity of, \hyperpage{63}
+
+\end{theindex}

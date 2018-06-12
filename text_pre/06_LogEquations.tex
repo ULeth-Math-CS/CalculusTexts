@@ -1,0 +1,273 @@
+\section{Logarithmic Equations and Inequalities}
+
+\label{LogEquations}
+
+In Section \ref{ExpEquations} we solved equations and inequalities involving exponential functions using one of two basic strategies.  We now turn our attention to equations and inequalities involving logarithmic functions, and not surprisingly, there are two basic strategies to choose from.  For example, suppose we wish  to solve $\log_{2}(x) = \log_{2}(5)$.  Theorem \ref{explogsonetoone} tells us that the \textit{only} solution to this equation is $x=5$.  Now suppose we wish to solve $\log_{2}(x) = 3$.  If we want to use Theorem \ref{explogsonetoone}, we need to rewrite $3$ as a logarithm base $2$.   We can use Theorem \ref{invpropslogs} to do just that: $3 = \log_{2}\left(2^{3}\right) = \log_{2}(8)$.  Our equation then becomes  $\log_{2}(x) =  \log_{2}(8)$ so that $x = 8$.  However, we could have arrived at the same answer,  in fewer steps, by using Theorem \ref{invpropslogs} to rewrite the equation $\log_{2}(x) = 3$ as $2^{3} = x$, or $x=8$.  We summarize the two common ways to solve log equations below.
+
+\smallskip
+
+\keyidea{idea:logeqn}{Steps for Solving an Equation involving Logarithmic Functions}{ \index{logarithm ! solving equations with} 
+
+\begin{enumerate}
+
+\item  Isolate the logarithmic function.
+
+\item  \begin{enumerate}
+
+\item  If convenient, express both sides as logs with the same base and equate the arguments of the log functions.
+
+\item  Otherwise, rewrite the log equation as an exponential equation.
+
+
+\end{enumerate}
+
+\end{enumerate}
+}
+
+\medskip
+
+\example{LogEqnsEx1}{Logarithmic equations}{ Solve the following equations.  Check your solutions graphically using a computer or calculator.
+
+\begin{multicols}{2}
+\begin{enumerate}
+
+\item  $\log_{117}(1-3x) = \log_{117}\left(x^2-3\right)$
+
+\item  $2 - \ln(x-3) = 1$
+
+\setcounter{HW}{\value{enumi}}
+\end{enumerate}
+\end{multicols}
+
+\begin{multicols}{2}
+\begin{enumerate}
+\setcounter{enumi}{\value{HW}}
+
+\item  $\log_{6}(x+4) + \log_{6}(3-x) = 1$
+
+\item  $\log_{7}(1-2x) = 1 - \log_{7}(3-x)$
+\setcounter{HW}{\value{enumi}}
+\end{enumerate}
+\end{multicols}
+
+\begin{multicols}{2}
+\begin{enumerate}
+\setcounter{enumi}{\value{HW}}
+
+\item  $\log_{2}(x+3) = \log_{2}(6-x)+3$
+
+\item  $1 + 2 \log_{4}(x+1) = 2 \log_{2}(x)$
+
+\end{enumerate}
+\end{multicols}
+}
+{
+\begin{enumerate}
+
+\item  Since we have the same base on both sides of the equation $\log_{117}(1-3x) = \log_{117}\left(x^2-3\right)$, we equate what's inside the logs to get $1-3x = x^2-3$.  Solving $x^2+3x-4 = 0$ gives $x=-4$ and $x=1$. To check these answers using the calculator, we make use of the change of base formula and graph $f(x) = \frac{\ln(1-3x)}{\ln(117)}$ and $g(x) = \frac{\ln\left(x^2-3\right)}{\ln(117)}$ and we see they intersect only at $x=-4$.  To see what happened to the solution $x=1$, we substitute it into our original equation to obtain  $\log_{117}(-2) =  \log_{117}(-2)$.  While these expressions look identical, neither is a real number, which means $x=1$ is not in the domain of the original equation, and is not a solution. Using GeoGebra to solve the equation graphically gives us Figure \ref{fig:logeqn1}.
+
+\ifthenelse{\boolean{colour}}{
+\mfigure{.4}{{\color{red} $y=f(x)=\log_{117}(1-3x)$} \\ and {\color{blue} $y=g(x)=\log_{117}(x^2-3)$}}{fig:logeqn1}{figures/ExpLogsGraphics/ExpLogs15}}
+{\mfigure{.4}{{\color{gray} $y=f(x)=\log_{117}(1-3x)$}  \\ and  $y=g(x)=\log_{117}(x^2-3)$}{fig:logeqn1}{figures/ExpLogsGraphics/ExpLogs15}}
+
+\item  Our first objective in solving $2 - \ln(x-3) = 1$ is to isolate the logarithm.  We get $\ln(x-3)=1$, which, as an exponential equation, is $e^{1} = x-3$.  We get our solution $x=e+3$. In Figure \ref{fig:logeqn2}, we see the graph of $f(x) = 2 - \ln(x-3)$ intersects  the graph of $g(x) = 1$ at $x = e+3 \approx 5.718$.
+
+\ifthenelse{\boolean{colour}}{
+\mfigure{.18}{{\color{red} $y=f(x)=2-\ln(x-3)$}  \\ and {\color{blue} $y=g(x)=1$}}{fig:logeqn2}{figures/ExpLogsGraphics/ExpLogs16}}
+{\mfigure{.18}{{\color{gray} $y=f(x)=2-\ln(x-3)$}  \\ and  $y=g(x)=1$}{fig:logeqn2}{figures/ExpLogsGraphics/ExpLogs16}}
+
+
+\item We can start solving $\log_{6}(x+4) + \log_{6}(3-x) = 1$ by using the Product Rule for logarithms to rewrite the equation as  $\log_{6}\left[(x+4)(3-x)\right] = 1$.  Rewriting this as an exponential equation, we get $6^{1} = (x+4)(3-x)$.  This reduces to $x^2+x-6 = 0$, which gives $x=-3$ and $x=2$.   Graphing $y=f(x) =  \frac{\ln(x+4)}{\ln(6)} + \frac{\ln(3-x)}{\ln(6)}$ and $y=g(x) = 1$, we see they intersect twice, at $x=-3$ and $x=2$ (Figure \ref{fig:logeqn3}).
+
+\ifthenelse{\boolean{colour}}{
+\mfigure{.8}{{\color{red} $y=f(x)=\log_6(x+4)+\log_6(3-x)$} and  {\color{blue} $y=g(x)=1$}}{fig:logeqn3}{figures/ExpLogsGraphics/ExpLogs17}}
+{\mfigure{.8}{{\color{gray} $y=f(x)=\log_6(x+4)+\log_6(3-x)$} and   $y=g(x)=1$}{fig:logeqn3}{figures/ExpLogsGraphics/ExpLogs17}}
+
+\item  Taking a cue from the previous problem, we begin solving $\log_{7}(1-2x) = 1 - \log_{7}(3-x)$ by first collecting the logarithms on the same side, $\log_{7}(1-2x) +  \log_{7}(3-x) = 1$, and then using the Product Rule to get $\log_{7}[(1-2x)(3-x)] = 1$.  Rewriting this as an exponential equation gives $7^{1} = (1-2x)(3-x)$ which gives the quadratic equation $2x^2-7x-4=0$.  Solving, we find  $x = -\frac{1}{2}$ and $x=4$.  Graphing, we find $y = f(x) = \frac{\ln(1-2x)}{\ln(7)}$ and $y=g(x) = 1 - \frac{\ln(3-x)}{\ln(7)}$ intersect only at $x=-\frac{1}{2}$: see Figure \ref{fig:logeqn4}.  Checking $x=4$ in the original equation produces $\log_{7}(-7) = 1 - \log_{7}(-1)$, which is a clear domain violation.
+
+\ifthenelse{\boolean{colour}}{
+\mfigure{.6}{{\color{red} $y=f(x)=\log_7(1-2x)$} \\ and  {\color{blue} $y=g(x)=1-\log_7(3-x)$}}{fig:logeqn4}{figures/ExpLogsGraphics/ExpLogs18}}
+{\mfigure{.6}{{\color{gray} $y=f(x)=\log_7(1-2x)$}  \\ and $y=g(x)=1-\log_7(3-x)$}{fig:logeqn4}{figures/ExpLogsGraphics/ExpLogs18}}
+
+\item Starting with  $\log_{2}(x+3) = \log_{2}(6-x)+3$, we gather the logarithms to one side and get $\log_{2}(x+3) - \log_{2}(6-x) = 3$.  We then use the Quotient Rule and convert to an exponential equation 
+\[
+\log_{2}\left(\frac{x+3}{6-x}\right) = 3 \iff 2^{3} = \frac{x+3}{6-x}
+\] 
+ This reduces to the linear equation $8(6-x) = x+3$, which gives us $x = 5$.  When we graph $f(x) = \frac{\ln(x+3)}{\ln(2)}$ and $g(x) =  \frac{\ln(6-x)}{\ln(2)} + 3$, we find they intersect at $x=5$: see Figure \ref{fig:logeqn5}.
+
+\ifthenelse{\boolean{colour}}{
+\mfigure{.4}{{\color{red} $y=f(x)=\log_2(x+3)$} \\ and  {\color{blue} $y=g(x)=log_2(6-x)+3$}}{fig:logeqn5}{figures/ExpLogsGraphics/ExpLogs19}}
+{\mfigure{.4}{{\color{gray} $y=f(x)=\log_2(x+3)$} \\  and  $y=g(x)=log_2(6-x)+3$}{fig:logeqn5}{figures/ExpLogsGraphics/ExpLogs19}}
+
+\item Starting with $1 + 2 \log_{4}(x+1) = 2 \log_{2}(x)$, we gather the logs to one side to get the equation $1 = 2 \log_{2}(x) - 2 \log_{4}(x+1)$.  Before we can combine the logarithms, however, we need a common base.  Since $4$ is a power of $2$, we use change of base to convert  
+\[
+\log_{4}(x+1) = \frac{\log_{2}(x+1)}{\log_{2}(4)} = \frac{1}{2} \log_{2}(x+1)
+\] 
+Hence, our original equation becomes  
+\begin{align*}
+1 & =  2 \log_{2}(x) - 2 \left(\frac{1}{2} \log_{2}(x+1)\right) \\
+1 &=  2\log_{2}(x) - \log_{2}(x+1) \\
+1 & = \log_{2}\left(x^2\right) - \log_{2}(x+1) \tag*{Power Rule} \\[3pt]
+1 & =  \log_{2}\left( \dfrac{x^{2}}{x+1}\right) & \tag*{Quotient Rule}
+\end{align*}
+
+Rewriting this in exponential form, we get $ \frac{x^{2}}{x+1} = 2$ or $x^2 -2x-2 = 0$.  Using the quadratic formula, we get $x = 1 \pm \sqrt{3}$.  Graphing $f(x) = 1 + \frac{2\ln(x+1)}{\ln(4)}$ and $g(x) = \frac{2 \ln(x)}{\ln(2)}$, we see in Figure \ref{fig:logeqn6} that the graphs intersect only at $x = 1 + \sqrt{3} \approx 2.732$.  The solution $x = 1 - \sqrt{3} < 0$, which means if substituted into the original equation, the term $2 \log_{2}\left(1 - \sqrt{3}\right)$ is undefined.
+
+\ifthenelse{\boolean{colour}}{
+\mfigure{.2}{{\color{red} $y=f(x)=1+2\log_4(x+1)$} \\ and {\color{blue} $y=g(x)=2\log_2(x)$}}{fig:logeqn6}{figures/ExpLogsGraphics/ExpLogs20}}
+{\mfigure{.2}{{\color{gray} $y=f(x)=1+2\log_4(x+1)$} \\ and  $y=g(x)=2\log_2(x)$}{fig:logeqn6}{figures/ExpLogsGraphics/ExpLogs20}}
+
+\end{enumerate}
+}
+
+
+
+\pagebreak
+
+If nothing else,  Example \ref{LogEqnsEx1} demonstrates the importance of checking for extraneous solutions when solving equations involving logarithms.  (Recall that an extraneous solution is an answer obtained analytically which does not satisfy the original equation.) Even though we checked our answers graphically, extraneous solutions are easy to spot - any supposed solution which causes a negative number inside a logarithm needs to be discarded.  As with the equations in Example \ref{expeqnsex1}, much can be learned from checking all of the answers in Example \ref{LogEqnsEx1} analytically.  We leave this to the reader and turn our attention to inequalities involving logarithmic functions.  Since logarithmic functions are continuous on their domains, we can use sign diagrams.  
+
+\medskip
+
+\example{logineq}{Logarithmic inequalities}{Solve the following inequalities.  Check your answer graphically using a computer or calculator.
+
+\begin{multicols}{3}
+
+\begin{enumerate}
+
+\item  $\dfrac{1}{\ln(x)+1} \leq 1$
+
+\item  $\left(\log_{2}(x)\right)^2 < 2 \log_{2}(x) + 3$
+
+\item  $x \log(x+1) \geq x$
+
+
+\end{enumerate}
+
+\end{multicols}
+}
+{
+\begin{enumerate}
+
+\item  We start solving $\dfrac{1}{\ln(x)+1} \leq 1$ by getting $0$ on one side of the inequality: $\dfrac{1}{\ln(x)+1}  - 1 \leq 0$.  Getting a common denominator yields $\dfrac{1}{\ln(x)+1}  - \dfrac{\ln(x)+1}{\ln(x)+1} \leq 0$ which reduces to $\dfrac{-\ln(x)}{\ln(x)+1} \leq 0$, or $ \dfrac{\ln(x)}{\ln(x)+1} \geq 0$.  We define $r(x) = \dfrac{\ln(x)}{\ln(x)+1}$ and set about finding the domain and the zeros of $r$.  Due to the appearance of the term $\ln(x)$, we require  $x > 0$.  In order to keep the denominator away from zero, we solve $\ln(x)+1 = 0$ so $\ln(x) = -1$, so $x = e^{-1} = \frac{1}{e}$.  Hence, the domain of $r$ is $\left(0, \frac{1}{e}\right) \cup \left(\frac{1}{e}, \infty\right)$.  To find the zeros of $r$, we set $r(x) = \dfrac{\ln(x)}{\ln(x)+1} = 0$ so that $\ln(x) = 0$, and we find $x = e^{0} = 1$.  In order to determine test values for $r$ without resorting to the calculator, we need to find numbers between $0$, $\frac{1}{e}$, and $1$ which have a base of $e$.  Since $e \approx 2.718 > 1$, $0 < \frac{1}{e^2} < \frac{1}{e} < \frac{1}{\sqrt{e}} < 1 < e$.  To determine the sign of $r\left( \frac{1}{e^2} \right)$, we use the fact that $\ln\left(\frac{1}{e^2}\right) = \ln\left(e^{-2}\right) = -2$, and find $r\left( \frac{1}{e^2} \right) = \frac{-2}{-2+1} = 2$, which is $(+)$.  The rest of the test values are determined similarly.   From our sign diagram, we find the solution to be $\left(0, \frac{1}{e}\right) \cup [1, \infty)$. Graphing $f(x) =  \frac{1}{\ln(x)+1}$ and $g(x) = 1$, we see in Figure \ref{fig:logineq1} the graph of $f$ is below the graph of $g$ on the solution intervals, and that the graphs intersect at $x=1$.
+
+\ifthenelse{\boolean{colour}}{
+\mtable{.6}{Solving $\dfrac{1}{\ln(x)+1}\leq 1$}{fig:logineq1}{
+\begin{tabular}{c}
+\myincludegraphics{figures/ExpLogsGraphics/LogEquations-1}\\
+Sign diagram for $r(x)=\dfrac{\ln(x)}{\ln(x)+1}$\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/ExpLogsGraphics/ExpLogs21}\\
+{\color{red} $y=f(x)=\dfrac{1}{\ln(x)+1}$}\\
+and {\color{blue} $y=g(x)=1$}
+\end{tabular}}}
+{\mtable{.6}{Solving $\dfrac{1}{\ln(x)+1}\leq 1$}{fig:logineq1}{
+\begin{tabular}{c}
+\myincludegraphics{figures/ExpLogsGraphics/LogEquations-1}\\
+Sign diagram for $r(x)=\dfrac{\ln(x)}{\ln(x)+1}$\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/ExpLogsGraphics/ExpLogs21}\\
+{\color{gray} $y=f(x)=\dfrac{1}{\ln(x)+1}$}\\
+and  $y=g(x)=1$
+\end{tabular}}}
+
+
+
+\item  Moving all of the nonzero terms of  $\left(\log_{2}(x)\right)^2 < 2 \log_{2}(x) + 3$ to one side of the inequality, we have $\left(\log_{2}(x)\right)^2 - 2 \log_{2}(x) - 3 < 0$. Defining $r(x) = \left(\log_{2}(x)\right)^2 - 2 \log_{2}(x) - 3$, we get the domain of $r$ is $(0, \infty)$, due to the presence of the logarithm.  To find the zeros of $r$, we set $r(x) =\left(\log_{2}(x)\right)^2 - 2 \log_{2}(x) - 3= 0$ which results in a `quadratic in disguise.'  We set $u = \log_{2}(x)$ so our equation becomes $u^2-2u-3 = 0$ which gives us $u=-1$ and $u=3$.  Since $u = \log_{2}(x)$, we get $\log_{2}(x) = -1$, which gives us $x = 2^{-1} = \frac{1}{2}$, and $\log_{2}(x) = 3$, which yields $x = 2^{3} = 8$.  We use test values which are powers of $2$: $0 < \frac{1}{4} < \frac{1}{2} < 1 < 8 < 16$, and from our sign diagram, we see $r(x)< 0$ on $\left(\frac{1}{2}, 8 \right)$. Geometrically, we see the graph of $f(x)= \left(\frac{\ln(x)}{\ln(2)}\right)^2$ is below  the graph of $y = g(x) = \frac{2 \ln(x)}{\ln(2)} + 3$ on the solution interval: see Figure \ref{fig:logineq2}.
+
+\ifthenelse{\boolean{colour}}{
+\mtable{.25}{Solving\\ $(\log_2(x))^2<2\log_2(x)+3$}{fig:logineq2}{
+\begin{tabular}{c}
+\myincludegraphics{figures/ExpLogsGraphics/LogEquations-2}\\
+Sign diagram for\\ $r(x)=(\log_2(x))^2-2\log_2(x)-3$\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/ExpLogsGraphics/ExpLogs22}\\
+{\color{red} $y=f(x)=(\log_2(x))^2$} and\\
+{\color{blue} $y=g(x)=2\log_2(x)+3$}
+\end{tabular}}}
+{\mtable{.25}{Solving\\ $(\log_2(x))^2<2\log_2(x)+3$}{fig:logineq2}{
+\begin{tabular}{c}
+\myincludegraphics{figures/ExpLogsGraphics/LogEquations-2}\\
+Sign diagram for \\$r(x)=(\log_2(x))^2-2\log_2(x)-3$\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/ExpLogsGraphics/ExpLogs22}\\
+{\color{gray} $y=f(x)=(\log_2(x))^2$} and\\
+ $y=g(x)=2\log_2(x)+3$
+\end{tabular}}}
+
+
+\item  We begin to solve $x \log(x+1) \geq x$ by subtracting $x$ from both sides to get $x \log(x+1)  - x \geq 0$.  We define $r(x) = x \log(x+1)  - x $ and due to the presence of the logarithm, we require $x+1 > 0$, or $x > -1$.  To find the zeros of $r$, we set $r(x) = x \log(x+1)  - x = 0$.  Factoring, we get $x \left(\log(x+1) - 1\right) = 0$, which gives $x=0$ or $\log(x+1) - 1=0$.  The latter gives $\log(x+1) = 1$, or $x+1 = 10^{1}$, which admits $x = 9$.  We select test values $x$ so that $x+1$ is a power of $10$, and we obtain $-1 < -0.9 < 0 < \sqrt{10} -1 < 9 < 99$.  Our sign diagram gives the solution to be $(-1,0] \cup [9, \infty)$. Figure \ref{fig:logineq3} indicates the graph of $y= f(x) = x \log(x+1)$ is above $y=g(x) = x$ on the solution intervals, and the graphs intersect at $x=0$ and $x=9$.
+
+
+\ifthenelse{\boolean{colour}}{
+\mtable{.75}{Solving $x\log(x+1)\geq x$}{fig:logineq3}{
+\begin{tabular}{c}
+\myincludegraphics{figures/ExpLogsGraphics/LogEquations-3}\\
+Sign diagram for $r(x)=x\log(x+1)-x$\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/ExpLogsGraphics/ExpLogs23}\\
+{\color{red} $y=f(x)=x\log(x+1)$} \\
+and {\color{blue} $y=g(x)=x$}
+\end{tabular}}}
+{\mtable{.75}{Solving $x\log(x+1)\geq x$}{fig:logineq3}{
+\begin{tabular}{c}
+\myincludegraphics{figures/ExpLogsGraphics/LogEquations-3}\\
+Sign diagram for $r(x)=x\log(x+1)-x$\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/ExpLogsGraphics/ExpLogs23}\\
+{\color{gray} $y=f(x)=x\log(x+1)$} \\
+and $y=g(x)=x$
+\end{tabular}}}
+
+\end{enumerate}
+}
+
+
+\medskip
+
+Our next example revisits the concept of pH first seen in Exercise \ref{pHexercise} in Section \ref{IntroExpLogs}.  
+
+\medskip
+
+\example{ex_fishph}{Calculating pH range}{
+In order to successfully breed Ippizuti fish the pH of a freshwater tank must be at least 7.8 but can be no more than 8.5.  Determine the corresponding range of hydrogen ion concentration, and check your answer using a calculator.
+}
+{
+Recall from Exercise \ref{pHexercise} in Section \ref{IntroExpLogs} that $\mbox{pH} = -\log[\mbox{H}^{+}]$ where $[\mbox{H}^{+}]$ is the hydrogen ion concentration in moles per liter.  We require $7.8 \leq -\log[\mbox{H}^{+}] \leq 8.5$ or $-7.8 \geq \log[\mbox{H}^{+}] \geq -8.5$.  To solve this compound inequality we solve $-7.8 \geq \log[\mbox{H}^{+}]$ and $ \log[\mbox{H}^{+}] \geq -8.5$ and take the intersection of the solution sets. (Refer to page \pageref{intersectionunion} for a discussion of what this means.)  The former inequality yields $0 < [\mbox{H}^{+}] \leq 10^{-7.8}$ and the latter yields $[\mbox{H}^{+}] \geq 10^{-8.5}$.  Taking the intersection gives us our final answer $10^{-8.5} \leq [\mbox{H}^{+}] \leq 10^{-7.8}$.  (Your Chemistry professor may want the answer written as $3.16 \times 10^{-9} \leq [\mbox{H}^{+}] \leq 1.58 \times 10^{-8}$.)  After carefully adjusting the viewing window on GeoGebra we see that the graph of $f(x) = -\log(x)$ lies between the lines $y = 7.8$ and $y = 8.5$ on the interval $[3.16 \times 10^{-9}, 1.58 \times 10^{-8}]$: see Figure \ref{fig:pHlog}.
+
+
+\ifthenelse{\boolean{colour}}{
+\mfigure{.3}{The graphs of {\color{red} $y = f(x) = -\log(x)$}, {\color{green} $y = 7.8$} and {\color{orange} $y = 8.5$}}{fig:pHlog}{figures/ExpLogsGraphics/ExpLogs24}}
+{\mfigure{.3}{The graphs of $y = f(x) = -\log(x)$, {\color{gray} $y = 7.8$} and {\color{gray} $y = 8.5$}}{fig:pHlog}{figures/ExpLogsGraphics/ExpLogs24}}
+}
+
+\medskip
+
+We close this section by finding an inverse of a one-to-one function which involves logarithms.
+
+\pagebreak
+
+\example{logfracinverse}{Inverting a fractional logarithmic function}{ The function $f(x) = \dfrac{\log(x)}{1-\log(x)}$ is one-to-one.  Find a formula for $f^{-1}(x)$ and check your answer graphically using your calculator.
+}
+{
+We first write $y=f(x)$ then interchange the $x$ and $y$ and solve for $y$.
+\begin{align*}
+y & =  f(x)  \\ 
+y  & =  \dfrac{\log(x)}{1-\log(x)}  \\[3pt]
+x  & =  \dfrac{\log(y)}{1-\log(y)}  \tag*{Interchange $x$ and $y$.}\\[3pt]
+x\left(1-\log(y)\right) & =  \log(y)  \\ 
+x - x\log(y)  & =  \log(y)  \\ 
+x & =  x \log(y) + \log(y)  \\ 
+x & =  (x+1) \log(y)  \\ 
+\dfrac{x}{x+1}  & =  \log(y)  \\ 
+y & =  10^{\frac{x}{x+1}}  \tag*{Rewrite as an exponential equation.}
+\end{align*}
+We have $f^{-1}(x) = 10^{\frac{x}{x+1}}$.  Graphing $f$ and $f^{-1}$ in GeoGebra gives us Figure \ref{fig:loginverse}.
+
+\ifthenelse{\boolean{colour}}{
+\mfigure{.75}{{\color{red} $y=f(x)=\dfrac{\log(x)}{1-\log(x)}$}\\ and {\color{blue} $y=g(x)=10^{\frac{x}{x+1}}$}}{fig:loginverse}{figures/ExpLogsGraphics/ExpLogs25}}
+{\mfigure{.75}{{\color{gray} $y=f(x)=\dfrac{\log(x)}{1-\log(x)}$}\\ and  $y=g(x)=10^{\frac{x}{x+1}}$}{fig:loginverse}{figures/ExpLogsGraphics/ExpLogs25}}
+}
+
+
+\printexercises{exercises_pre/06_04_exercises}
+

@@ -7,14 +7,19 @@
 %This process has its shortcomings, not the least of which is the fact that $\epsilon$--$\delta$ proofs are cumbersome. This section gives a series of theorems which allow us to find limits much more quickly and intuitively. 
 %\end{minipage}
 
-In Section \ref{sec:limit_intro} we explored the concept of the limit without a strict definition, meaning we could only make approximations. In the previous section we gave the definition of the limit and demonstrated how to use it to verify our approximations were correct. Thus far, our method of finding a limit is 1) make a really good approximation either graphically or numerically, and 2) verify our approximation is correct using a $\epsilon$-$\delta$ proof.
+\ifthenelse{\boolean{1010}}{In Section \ref{sec:limit_intro} we explored the concept of the limit without a strict definition, meaning we could only make approximations. We ended with what we called an ``informal'' definition of the limit. This definition allows us to make intuitive sense of limits, but it does not allow us to prove theorems about limits. 
 
-Recognizing that $\epsilon$-$\delta$ proofs are cumbersome (and in all likelihood beyond the scope of your course), this section gives a series of theorems which allow us to find limits much more quickly and intuitively. \\
+Since we will not discuss how to formally define limits in this course, we will have to take the results in this section on faith. However, we will see that the algebraic rules given below for manipulating limits make the process of calculating limits much more straightforward.\\
+
+\mnote{.7}{The rigorous definition of limits is often known as the ``$\epsilon, \delta$'' definition of the limit. You might have a few brief encounters with this definition as you make your way through the calculus sequence, but a careful treatment of limits is usually not encountered until a course in Analysis.}
+}{In Section \ref{sec:limit_intro} we explored the concept of the limit without a strict definition, meaning we could only make approximations. In the previous section we gave the definition of the limit and demonstrated how to use it to verify our approximations were correct. Thus far, our method of finding a limit is 1) make a really good approximation either graphically or numerically, and 2) verify our approximation is correct using a $\epsilon$-$\delta$ proof.
+
+Recognizing that $\epsilon$-$\delta$ proofs are cumbersome (and in all likelihood beyond the scope of your course), this section gives a series of theorems which allow us to find limits much more quickly and intuitively. \\}
 %\vskip \baselineskip
 
 Suppose that $\lim_{x\to 2} f(x)=2$ and $\lim_{x\to 2} g(x) = 3$. What is $\lim_{x\to 2}(f(x)+g(x))$? Intuition tells us that the limit should be 5, as we expect limits to behave in a nice way. The following theorem states that already established limits do behave nicely.
 
-%\enlargethispage{4\baselineskip}
+%\enlargethispage{1\baselineskip}
 
 \theorem{thm:limit_algebra}{Basic Limit Properties}{\small
 Let $b$, $c$, $L$ and $K$ be real numbers, let $n$ be a positive integer, and let $f$ and $g$ be functions with the following limits: \index{limit!properties}
@@ -30,10 +35,10 @@ The following limits hold.
 \item	\parbox{80pt}{Products:}	$\displaystyle \lim_{x\to c} f(x)\cdot g(x) = LK$
 \item	\parbox{80pt}{Quotients:} $\displaystyle \lim_{x\to c} f(x)/g(x) = L/K$, ($K\neq 0)$
 \item	\parbox{80pt}{Powers:} 	$\displaystyle \lim_{x\to c} f(x)^n = L^n$
-\item	\parbox{80pt}{Roots:}		\parbox[t]{185pt}{$\displaystyle \lim_{x\to c} \sqrt[n]{f(x)} = \sqrt[n]{L}$}% \qquad \small (if $n$ is even then $L$ must be greater than 0; when $n$ is odd, it is true for all $L$.)}
+\item	\parbox{80pt}{Roots:}		\parbox[t]{185pt}{$\displaystyle \lim_{x\to c} \sqrt[n]{f(x)} = \sqrt[n]{L}$ \par \small (If $n$ is even then require $f(x)\geq 0$ on $I$.)}
 \item	\parbox{80pt}{Compositions:} \parbox[t]{200pt}{Adjust our previously given limit situation to: 
 \[
-\lim_{x\to c}f(x) = L \text{\ and\ } \lim_{x\to L} g(x) = K.
+\lim_{x\to c}f(x) = L,\ \lim_{x\to L} g(x) = K \text{\ and\ } g(L)=K .
 \]
 Then $\ds \lim_{x\to c}g(f(x)) = K$.}
 \end{enumerate}
@@ -101,18 +106,21 @@ Using Theorem \ref{thm:poly_rat}, find
 \vskip -2\baselineskip
 }\\
 
-It was likely frustrating in Section \ref{sec:limit_def} to do a lot of work to prove that 
+\ifthenelse{\boolean{1010}}{Using approximations (or worse -- the rigorous definition) to deal with limits such as 
 \[
 \lim_{x\to 2} x^2 = 4
 \]
-as it seemed fairly obvious. The previous theorems state that many functions behave in such an ``obvious'' fashion, as demonstrated by the rational function in Example \ref{ex_limit_rat}. 
+can be frustrating, since the result seems fairly obvious. The previous theorems state that many functions behave in such an ``obvious'' fashion, as demonstrated by the rational function in Example \ref{ex_limit_rat}. 
+}{It was likely frustrating in Section \ref{sec:limit_def} to do a lot of work to prove that 
+\[
+\lim_{x\to 2} x^2 = 4
+\]
+as it seemed fairly obvious. The previous theorems state that many functions behave in such an ``obvious'' fashion, as demonstrated by the rational function in Example \ref{ex_limit_rat}. }
 
 Polynomial and rational functions are not the only functions to behave in such a predictable way. The following theorem gives a list of functions whose behaviour is particularly ``nice'' in terms of limits. In the next section, we will give a formal name to these functions that behave ``nicely.''
 
-\enlargethispage{2\baselineskip}
-\ifthenelse{\boolean{longpage}}{}
-{\setboxwidth{100pt}
-}
+\enlargethispage{2\baselineskip}%
+\setboxwidth{100pt}%
 \noindent\ifthenelse{\isodd{\thepage}}{}{\hskip -100pt}%
 \noindent\begin{minipage}{\specialboxlength}
 \theorem{thm:lim_continuous}{Special Limits}{%
@@ -185,7 +193,7 @@ using the Constant limit rule. Either way, we find the limit is 1.
 
 \item		Again, we can approach this in two ways. First, we can use the exponential/logarithmic identity that $e^{\ln x} = x$ and evaluate $\ds \lim_{x\to 1} e^{\ln x} = \lim_{x\to 1} x = 1.$ 
 
-We can also use the Composition limit rule of Theorem \ref{thm:limit_algebra}. Using Theorem \ref{thm:lim_continuous}, we have $\ds \lim_{x\to 1}\ln x = \ln 1 = 0$. Applying the Composition rule, 
+We can also use the limit Composition Rule of Theorem \ref{thm:limit_algebra}. Using Theorem \ref{thm:lim_continuous}, we have $\ds \lim_{x\to 1}\ln x = \ln 1 = 0$. Applying the Composition rule, 
 \[
  \lim_{x\to 1} e^{\ln x} = \lim_{x\to 0} e^x = e^0 = 1.
 \] 
@@ -302,11 +310,11 @@ Evaluate the following limit:
 \[
 \lim_{x\to 1}\frac{x^2-1}{x-1}.
 \]}
-{We begin by attempting to apply Theorem \ref{thm:lim_continuous} and substituting 1 for $x$ in the quotient. This gives:
+{We begin by attempting to apply Theorem \ref{thm:poly_rat} and substituting 1 for $x$ in the quotient. This gives:
 \[
 \lim_{x\to 1}\frac{x^2-1}{x-1} = \frac{1^2-1}{1-1} = \raisebox{8pt}{\text{``\ }}\frac{0}{0}\raisebox{8pt}{\text{\ ''}},
 \]
-and indeterminate form. We cannot apply the theorem.
+an indeterminate form. We cannot apply the theorem.
 
 \mfigure{.6}{Graphing $f$ in Example \ref{ex_limit_onept} to understand a limit.}{fig:limitxplus1}{figures/fig_LimitXplus1}
 		
@@ -335,9 +343,11 @@ The key to the above example is that the functions $y=(x^2-1)/(x-1)$ and $y=x+1$
 The Fundamental Theorem of Algebra tells us that when dealing with a rational function of the form $g(x)/f(x)$ and directly evaluating the limit $\ds \lim_{x\to c} \frac{g(x)}{f(x)}$ returns ``0/0'', % $\ds\raisebox{8pt}{\text{``\ }}\frac{0}{0}\raisebox{8pt}{\text{\ ''}}$, 
 then $(x-c)$ is a factor of both $g(x)$ and $f(x)$. One can then use algebra to factor this term out, cancel, then apply Theorem \ref{thm:limit_allbut1}. We demonstrate this once more.\\
 
+\enlargethispage{\baselineskip}
+
 \example{ex_limit_allbut1}{Evaluating a limit using Theorem \ref{thm:limit_allbut1}}
 {Evaluate $\ds \lim_{x\to 3} \frac{x^3-2 x^2-5 x+6}{2 x^3+3 x^2-32 x+15}$.}
-{We begin by applying Theorem \ref{thm:lim_continuous} and substituting 3 for $x$. This returns the familiar indeterminate form of ``0/0''. %\zerooverzero. 
+{We attempt to apply Theorem \ref{thm:poly_rat} by substituting 3 for $x$. This returns the familiar indeterminate form of ``0/0''. %\zerooverzero. 
 Since the numerator and denominator are each polynomials, we know that $(x-3)$ is factor of each. Using whatever method is most comfortable to you, factor out $(x-3)$ from each (using polynomial division, synthetic division, a computer algebra system, etc.). We find that 
 \[
 \frac{x^3-2 x^2-5 x+6}{2 x^3+3 x^2-32 x+15} = \frac{(x-3)(x^2+x-2)}{(x-3)(2 x^2+9 x-5)}.
@@ -350,17 +360,21 @@ We can cancel the $(x-3)$ terms as long as $x\neq 3$. Using Theorem \ref{thm:lim
 		\end{align*}
 \vskip -\baselineskip
 }\\
-																															
-
+															
 
 We end this section by revisiting a limit first seen in Section \ref{sec:limit_intro}, a limit of a difference quotient. Let $f(x) = -1.5x^2+11.5x$; we approximated the limit $\ds \lim_{h\to 0}\frac{f(1+h)-f(1)}{h}\approx 8.5.$ We formally evaluate this limit in the following example.\\
 
 \example{ex_limit_diffquot}{Evaluating the limit of a difference quotient}{
 Let $f(x) = -1.5x^2+11.5x$; find $\ds \lim_{h\to 0}\frac{f(1+h)-f(1)}{h}.$}
-{Since $f$ is a polynomial, our first attempt should be to employ Theorem \ref{thm:lim_continuous} and substitute 0 for $h$. However, we see that this gives us ``$0/0$.'' %\zerooverzero.
+{Since $f$ is a polynomial, our first attempt should be to employ Theorem \ref{thm:poly_rat} and substitute 0 for $h$. However, we see that this gives us ``$0/0$.'' %\zerooverzero.
  Knowing that we have a rational function hints that some algebra will help. Consider the following steps:
 		\begin{align*}
-		\lim_{h\to 0}\frac{f(1+h)-f(1)}{h} 	&= 	\lim_{h\to 0}\frac{-1.5(1+h)^2 + 11.5(1+h) - \left(-1.5(1)^2+11.5(1)\right)}{h} \\			&=	\lim_{h\to 0}\frac{-1.5(1+2h+h^2) + 11.5+11.5h - 10}{h}\\			&=	\lim_{h\to 0}\frac{-1.5h^2 +8.5h}{h}\\								&= 	\lim_{h\to 0}\frac{h(-1.5h+8.5)}h\\									&=	\lim_{h\to 0}(-1.5h+8.5) \tag{using Theorem \ref{thm:limit_allbut1}, as $h\neq 0$} \\										&= 	8.5 \tag{using Theorem \ref{thm:lim_continuous}}
+		\lim_{h\to 0}\frac{f(1+h)-f(1)}{h} 	&= 	\lim_{h\to 0}\frac{-1.5(1+h)^2 + 11.5(1+h) - \left(-1.5(1)^2+11.5(1)\right)}{h} \\
+							&=	\lim_{h\to 0}\frac{-1.5(1+2h+h^2) + 11.5+11.5h - 10}{h}\\
+							&=	\lim_{h\to 0}\frac{-1.5h^2 +8.5h}{h}\\
+							&= 	\lim_{h\to 0}\frac{h(-1.5h+8.5)}h\\
+							&=	\lim_{h\to 0}(-1.5h+8.5) \quad (\text{\small using Theorem \ref{thm:limit_allbut1}, as $h\neq 0$}) \\
+							&= 	8.5 \quad (\text{\small using Theorem \ref{thm:lim_continuous}})
 		\end{align*}																		
 
 This matches our previous approximation.
@@ -368,7 +382,7 @@ This matches our previous approximation.
 
 %\noindent\parbox{60pt}{\textbf{\itshape Preview:}}
 %\begin{minipage}[t]{\textwidth-63pt}
-This section contains several valuable tools for evaluating limits. One of the main results of this section is Theorem \ref{thm:lim_continuous}; it states that many functions that we use regularly behave in a very nice, predictable way. In Section \ref{sec:continuity} we give a name to this nice behaviour; we label such functions as \textit{continuous.} Defining that term will require us to look again at what a limit is and what causes limits to not exist. In the next section, we examine another aspect of limits: limits that involve infinity.
+This section contains several valuable tools for evaluating limits. One of the main results of this section is Theorem \ref{thm:lim_continuous}; it states that many functions that we use regularly behave in a very nice, predictable way. In Section \ref{sec:continuity} we give a name to this nice behaviour; we label such functions as \textit{continuous.} Defining that term will require us to look again at what a limit is and what causes limits to not exist.
 %\end{minipage}\\
 
 %\clearpage

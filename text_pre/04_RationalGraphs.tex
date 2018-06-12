@@ -1,0 +1,312 @@
+\section{Graphs of Rational Functions}
+
+\label{RationalGraphs}
+
+In this section, we take a closer look at graphing rational functions.  In Section \ref{IntroRational}, we learned that the graphs of rational functions may have holes in them and could have vertical, horizontal and slant asymptotes.  Theorems \ref{vavshole}, \ref{hathm} and \ref{sathm} tell us exactly when and where these behaviours will occur, and if we combine these results with what we already know about graphing functions, we will quickly be able to generate reasonable graphs of rational functions.  
+
+\smallskip
+
+One of the standard tools we will use is the sign diagram which was first introduced in Section \ref{Inequalities}, and then revisited in Section \ref{GraphsofPolynomials}.  In those sections, we operated under the belief that a function couldn't change its sign without its graph crossing through the $x$-axis.  The major theorem we used to justify this belief was the Intermediate Value Theorem, Theorem \ref{IVT}.   It turns out the Intermediate Value Theorem applies to all \textit{continuous} functions,  not just polynomials.  Although rational functions are continuous on their domains, (another result from Calculus) Theorem \ref{vavshole} tells us that vertical asymptotes and holes occur at the values excluded from their domains.  In other words, rational functions aren't continuous at these excluded values which leaves open the possibility that the function could change sign \textit{without} crossing through the $x$-axis.  Consider the graph of $y=h(x)$ from Example \ref{ratfuncex}, reproduced in Figure \ref{fig:ratgraph1} for convenience.  We have added its $x$-intercept at $\left(\frac{1}{2},0\right)$ for the discussion that follows. Suppose we wish to construct a sign diagram for $h(x)$.    Recall that the intervals where $h(x)>0$, or $(+)$, correspond to the $x$-values where the graph of $y=h(x)$ is \textit{above} the $x$-axis; the intervals on which $h(x) < 0$, or $(-)$ correspond to where the graph is \textit{below} the $x$-axis.  
+
+\mnote{.6}{Recall that at this stage (prior to discussing calculus), continuity of a function means that its graph is devoid of any breaks, jumps or holes. We'll define continuity more carefully once we've introduced limits.}
+
+\mfigure[width=0.95\marginparwidth]{.35}{The graph $y=h(x)$ from Example \ref{ratfuncex}}{fig:ratgraph1}{figures/RationalsGraphics/RationalGraphs-1}
+
+
+As we examine the graph of $y=h(x)$, reading from left to right, we note that from $(-\infty,-1)$, the graph is above the $x$-axis, so $h(x)$ is $(+)$ there.  At $x=-1$, we have a vertical asymptote, at which point the graph `jumps' across the $x$-axis.  On the interval $\left(-1,\frac{1}{2}\right)$, the graph is below the $x$-axis, so $h(x)$ is $(-)$ there.  The graph crosses through the $x$-axis at $\left(\frac{1}{2},0\right)$ and remains above the $x$-axis until $x=1$, where we have a `hole' in the graph.  Since $h(1)$ is undefined, there is no sign here.  So we have $h(x)$ as $(+)$ on the interval $\left(\frac{1}{2}, 1\right)$.  Continuing, we see that on $(1, \infty)$, the graph of $y=h(x)$ is above the $x$-axis, so we mark $(+)$ there.  To construct a sign diagram from this information, we not only need to denote the zero of $h$, but also the places not in the domain of $h$.  As is our custom, we write `$0$' above $\frac{1}{2}$ on the sign diagram to remind us that it is a zero of $h$.  We need a different notation for $-1$ and $1$, and we have chosen to use `\textinterrobang' - a nonstandard symbol called the \href{http://en.wikipedia.org/wiki/Interrobang}{\underline{interrobang}}.  \index{interrobang} We use this symbol to convey a sense of surprise, caution and wonderment - an appropriate attitude to take when approaching these points.   The moral of the story is that when constructing sign diagrams for rational functions, we include the zeros as well as the values excluded from the domain. The final result is shown in Figure \ref{fig:ratsd1}.
+
+\mfigure[width=0.9\marginparwidth]{.13}{The sign diagram for the function $h(x)$ from Example \ref{ratfuncex}}{fig:ratsd1}{figures/RationalsGraphics/RationalGraphs-2}
+
+
+
+\medskip
+
+
+\keyidea{rationalsigndiagram}{Steps for Constructing a Sign Diagram for a  Rational Function}{
+Suppose $r$ is a rational function. \index{sign diagram ! rational function}
+
+\begin{enumerate}
+
+\item  Place any values excluded from the domain of  $r$ on the number line with an `\textinterrobang' above them.
+
+\item  Find the zeros of $r$ and place them on the number line with the number $0$ above them.
+
+\item  Choose a test value in each of the intervals determined in steps 1 and 2.
+
+\item  Determine the sign of $r(x)$ for each test value in step 3, and write that sign above the corresponding interval.
+
+\end{enumerate}
+}
+
+\medskip 
+
+We now present our procedure for graphing rational functions and apply it to a few exhaustive examples.  Please note that we decrease the amount of detail given in the explanations as we move through the examples.  The reader should be able to fill in any details in those steps which we have abbreviated.
+
+\medskip
+
+\keyidea{idea:ratgraph}{Steps for Graphing Rational Functions}{
+Suppose $r$ is a rational function. \index{graph ! rational function} To plot the graph $y=r(x)$, we use the following steps:
+
+\begin{enumerate}
+
+\item  Find the domain of $r$.
+
+\item  Reduce $r(x)$ to lowest terms, if applicable.
+
+\item  Find the $x$- and $y$-intercepts of the graph of $y=r(x)$, if they exist.
+
+\item  Determine the location of any vertical asymptotes or holes in the graph, if they exist.  Analyze the behaviour of $r$ on either side of the vertical asymptotes, if applicable.
+
+\item  Analyze the end behaviour of $r$.  Find the horizontal or slant asymptote, if one exists.
+
+\item  Use a sign diagram and plot additional points, as needed, to sketch the graph of $y=r(x)$.
+
+\end{enumerate}
+}
+
+\bigskip
+
+\example{ex_ratgraph1}{Graphing a rational function}{ Sketch a detailed graph of $f(x) = \dfrac{3x}{x^2-4}$.}
+{We follow the six step procedure outlined in Key Idea \ref{idea:ratgraph}.
+
+\begin{enumerate}
+
+\item  As usual, we set the denominator equal to zero to get $x^2 - 4 = 0$.  We find $x = \pm 2$, so our domain is $(-\infty, -2) \cup (-2,2) \cup (2,\infty)$.
+
+\item  To reduce $f(x)$ to lowest terms, we factor the numerator and denominator which yields $f(x) = \dfrac{3x}{(x-2)(x+2)}$.  There are no common factors which means $f(x)$ is already in lowest terms.
+
+\item  To find the $x$-intercepts of the graph of $y=f(x)$, we set $y=f(x) = 0$.  Solving $ \dfrac{3x}{(x-2)(x+2)} = 0$ results in $x=0$.  Since $x=0$ is in our domain, $(0,0)$ is the $x$-intercept.  To find the $y$-intercept, we set $x=0$ and find $y = f(0) = 0$, so that $(0,0)$ is our $y$-intercept as well.
+
+\mnote{.75}{As we mentioned at least once earlier, since functions can have at most one $y$-intercept, once we find that $(0,0)$ is on the graph, we know it is the $y$-intercept as well as an $x$-intercept.}
+
+\item  The two numbers excluded from the domain of $f$ are $x = -2$ and $x=2$.  Since $f(x)$ didn't reduce at all, both of these values of $x$ still cause trouble in the denominator. Thus by Theorem \ref{vavshole}, $x=-2$ and $x=2$ are vertical asymptotes of the graph.  We can actually go a step further at this point and determine exactly how the graph approaches the asymptote near each of these values. Though not absolutely necessary, it is good practice for when we reach calculus.  For the discussion that follows, it is best to use the factored form of $f(x) = \dfrac{3x}{(x-2)(x+2)}$.
+
+\mnote{.4}{It's worth going through the analysis below to make sure we understand what's going on near the vertical asymptotes, but it's not 100\% necessary. The sign diagram we construct in step 6 is the easiest way to determine the behaviour near the vertical asymptotes: once we know the value of $f(x)$ is going to be infinite, it only remains to determine if it will be $+\infty$ or $-\infty$. Keep this in mind --- it will come in handy once we reach the discussion of infinite limits in our Calculus material.}
+
+\drawexampleline
+
+\begin{itemize}
+
+\item  \textit{The behaviour of $y=f(x)$ as $x \rightarrow -2$:}  Suppose $x \rightarrow -2^{-}$.  If we were to build a table of values, we'd use $x$-values a little less than $-2$, say $-2.1$, $-2.01$ and $-2.001$.  While there is no harm in actually building a table like we did in Section \ref{IntroRational}, we want to develop a `number sense' here.  Let's think about each factor in the formula of $f(x)$ as we imagine substituting a number like $x=-2.000001$ into $f(x)$. The quantity $3x$ would be very close to $-6$, the quantity $(x-2)$ would be very close to $-4$, and the factor $(x+2)$ would be very close to $0$.  More specifically, $(x+2)$ would be a little less than $0$, in this case, $-0.000001.$  We will call such a number a `very small $(-)$', `very small' meaning close to zero in absolute value. So, mentally, as $x \rightarrow -2^{-}$, we estimate  
+\begin{align*}
+ f(x)  & = \dfrac{3x}{(x-2)(x+2)} \approx \dfrac{-6}{(-4)\left( \mbox{very small $(-)$}\right)}\\
+ & = \dfrac{3}{2 \left( \mbox{very small $(-)$}\right)}
+ \end{align*}
+Now, the closer $x$ gets to $-2$, the smaller $(x+2)$ will become, so even though we are multiplying our `very small $(-)$' by $2$, the denominator will continue to get smaller and smaller, and remain negative.  The result is a fraction whose numerator is positive, but whose denominator is very small and negative.  Mentally, \[f(x) \approx \dfrac{3}{2 \left( \mbox{very small $(-)$}\right)} \approx \dfrac{3}{\mbox{very small $(-)$}} \approx \mbox{very big $(-)$}\]  The term `very big $(-)$' means a number with a large absolute value which is negative. (The actual retail value of $f(-2.000001)$ is approximately $-1,\!500,\!000$.)  What all of this means is that as $x \rightarrow -2^{-}$, $f(x) \rightarrow -\infty$.  Now suppose we wanted to determine the behaviour of $f(x)$ as $x \rightarrow -2^{+}$.  If we imagine substituting something a little larger than $-2$ in for $x$, say $-1.999999$, we mentally estimate 
+\begin{align*}
+f(x) & \approx \dfrac{-6}{(-4)\left( \mbox{very small $(+)$}\right)} = \dfrac{3}{2 \left( \mbox{very small $(+)$}\right)}\\
+&  \approx \dfrac{3}{\mbox{very small $(+)$}} \approx \mbox{very big $(+)$}
+\end{align*}
+We conclude that as $x \rightarrow -2^{+}$, $f(x) \rightarrow \infty$.
+
+\item  \textit{The behaviour of $y=f(x)$ as $x \rightarrow 2$:} Consider $x \rightarrow 2^{-}$. We imagine substituting $x = 1.999999$.  Approximating $f(x)$ as we did above, we get 
+\begin{align*}
+f(x) &\approx \dfrac{6}{\left( \mbox{very small $(-)$}\right)(4)} = \dfrac{3}{2 \left( \mbox{very small $(-)$}\right)}\\
+  &\approx \dfrac{3}{\mbox{very small $(-)$}} \approx \mbox{very big $(-)$}
+\end{align*}
+We conclude that as $x \rightarrow 2^{-}$, $f(x) \rightarrow -\infty$.  Similarly, as $x \rightarrow 2^{+}$, we imagine substituting $x = 2.000001$ to get $f(x) \approx \frac{3}{\mbox{\scriptsize very small $(+)$}} \approx \mbox{very big (+)}$.  So as $x \rightarrow 2^{+}, f(x) \rightarrow \infty$.
+\end{itemize}
+
+The appearance of the graph $y=f(x)$  near $x=-2$ and $x=2$ is shown in Figure \ref{fig:ratgraph2}.
+
+\mnote{.63}{We have deliberately left off the labels on the $y$-axis because we know only the behaviour near $x=\pm 2$, not the actual function values.}
+
+\mfigure{.8}{The graph $y=\frac{3x}{x^2-4}$ near its vertical asymptotes}{fig:ratgraph2}{figures/RationalsGraphics/RationalGraphs-3}
+
+\drawexampleline
+
+\item  Next, we determine the end behaviour of the graph of $y=f(x)$.  Since the degree of the numerator is $1$, and the degree of the denominator is $2$, Theorem \ref{hathm} tells us that $y=0$ is the horizontal asymptote.  As with the vertical asymptotes, we can glean more detailed information using `number sense'. For the discussion below, we use the formula $f(x) = \dfrac{3x}{x^2-4}$. 
+
+\begin{itemize}
+
+\item  \textit{The behaviour of $y=f(x)$ as $x \rightarrow -\infty$:}  If we were to make a table of values to discuss the behaviour of $f$ as $x \rightarrow -\infty$, we would substitute very `large' negative numbers in for $x$, say for example, $x = \mbox{$-1$ billion}$.  The numerator $3x$ would then be $-3 \, \mbox{billion}$, whereas the denominator $x^2-4$ would be $(\mbox{$-1$ billion})^2 - 4$, which is pretty much the same as  $1(\mbox{billion})^2$.  Hence, 
+\[f\left(\mbox{$-1$ billion}\right) \approx \dfrac{-3 \, \mbox{billion}}{1(\mbox{billion})^2} \approx - \dfrac{3}{\mbox{billion}} \approx \mbox{very small $(-)$} \]
+
+Notice that if we substituted in $x = \mbox{$-1$ trillion}$, essentially the same kind of cancellation would happen, and we would be left with an even `smaller' negative number.  This not only confirms the fact that as $x \rightarrow -\infty$, $f(x) \rightarrow 0$, it tells us that $f(x) \rightarrow 0^{-}$. In other words, the graph of $y=f(x)$ is a little bit \textit{below} the $x$-axis as we move to the far left.
+
+
+\item  \textit{The behaviour of $y=f(x)$ as $x \rightarrow \infty$:}  On the flip side, we can imagine substituting very large positive numbers in for $x$ and looking at the behaviour of $f(x)$.   For example, let $x = \mbox{$1$ billion}$. Proceeding as before, we get \[f\left(\mbox{$1$ billion}\right) \approx \dfrac{3 \, \mbox{billion}}{1(\mbox{billion})^2} \approx \dfrac{3}{\mbox{billion}} \approx \mbox{very small $(+)$} \]  The larger the number we put in, the smaller the positive number we would get out.  In other words, as $x \rightarrow \infty$, $f(x) \rightarrow 0^{+}$, so the graph of $y=f(x)$ is a little bit \emph{above} the $x$-axis as we look toward the far right. See Figure \ref{fig:ratgraph3}
+
+\end{itemize}
+
+
+
+\mnote{.42}{As with the vertical asymptotes in the previous step, we know only the behaviour of the graph as $x \rightarrow \pm \infty$.  For that reason, we provide no $x$-axis labels.}
+
+\mfigure[width=0.95\marginparwidth]{.55}{The end behavhiour of the graph $y=\frac{3x}{x^2-4}$}{fig:ratgraph3}{figures/RationalsGraphics/RationalGraphs-4}
+
+
+\item  Lastly, we construct a sign diagram for $f(x)$.  The $x$-values excluded from the domain of $f$ are $x = \pm 2$, and the only zero of $f$ is $x=0$.  Displaying these appropriately on the number line gives us four test intervals, and we choose the test values $x=-3$, $x=-1$, $x=1$ and $x=3$.  We find $f(-3)$ is $(-)$, $f(-1)$ is $(+)$, $f(1)$ is $(-)$ and $f(3)$ is $(+)$.  Combining this with our previous work, we get the graph of $y=f(x)$ in Figure \ref{fig:ratgraph4}. 
+
+%\mnote{.5}{In this particular case, we can eschew test values, since our analysis of the behaviour of $f$ near the vertical asymptotes and our end behaviour analysis have given us the signs on each of the test intervals.  In general, however, this won't always be the case, so for demonstration purposes, we continue with our usual construction.}
+
+\mfigure[width=0.9\marginparwidth]{.31}{The sign diagram for $f(x)=\frac{3x}{x^2-4}$}{fig:ratsd2}{figures/RationalsGraphics/RationalGraphs-5}
+
+\mfigure[width=0.95\marginparwidth]{.16}{The complete graph $y=\frac{3x}{x^2-4}$ for Example \ref{ex_ratgraph1}}{fig:ratgraph4}{figures/RationalsGraphics/RationalGraphs-6}
+
+\end{enumerate}}
+
+\medskip
+
+A couple of notes are in order.  First, the graph of $y=f(x)$ certainly seems to possess symmetry with respect to the origin.  In fact, we can check $f(-x) = -f(x)$ to see that $f$ is an odd function.  In some textbooks, checking for symmetry is part of the standard procedure for graphing rational functions; but since it happens comparatively rarely we'll just point it out when we see it.  Also note that while $y=0$ is the horizontal asymptote, the graph of $f$ actually crosses the $x$-axis at $(0,0)$.  The myth that graphs of rational functions can't cross their horizontal asymptotes is completely false, (that's why we called it a MYTH!) as we shall see again in our next example.
+
+\medskip
+
+\example{ex_ratgraph2}{Graphing a rational function}{  Sketch a detailed graph of $g(x) = \dfrac{2x^2-3x-5}{x^2-x-6}$.}
+{
+\begin{enumerate}
+
+\item  Setting $x^2-x-6 = 0$ gives $x = -2$ and $x=3$.  Our domain is $(-\infty, -2) \cup (-2,3) \cup (3,\infty)$.
+
+\item  Factoring $g(x)$ gives $g(x) = \dfrac{(2x-5)(x+1)}{(x-3)(x+2)}$.  There is no cancellation, so $g(x)$ is in lowest terms.
+
+\item  To find the $x$-intercept  we set $y = g(x) = 0$.  Using the factored form of $g(x)$ above, we find the zeros to be the solutions of $(2x-5)(x+1)=0$.  We obtain $x = \frac{5}{2}$ and $x=-1$. Since both of these numbers are in the domain of $g$, we have two $x$-intercepts, $\left( \frac{5}{2},0\right)$ and $(-1,0)$.  To find the $y$-intercept, we set $x=0$ and find $y = g(0) = \frac{5}{6}$, so our $y$-intercept is $\left(0, \frac{5}{6}\right)$.
+
+\item  Since $g(x)$ was given to us in lowest terms, we have, once again by Theorem \ref{vavshole} vertical asymptotes $x=-2$ and $x=3$.  Keeping in mind $g(x) = \dfrac{(2x-5)(x+1)}{(x-3)(x+2)}$, we proceed to our analysis near each of these values.
+
+\begin{itemize}
+
+\item  \textit{The behaviour of $y=g(x)$ as $x \rightarrow -2$:}  As $x \rightarrow -2^{-}$, we imagine substituting a number a little bit less than $-2$. We have \[g(x) \approx \frac{(-9)(-1)}{(-5)(\mbox{very small $(-)$})} \approx \frac{9}{\mbox{very small $(+)$}} \approx \mbox{very big (+)}\] so as $x \rightarrow -2^{-}$, $g(x) \rightarrow \infty$. On the flip side, as $x \rightarrow -2^{+}$, we get \[g(x) \approx \frac{9}{\mbox{ very small $(-)$}} \approx \mbox{very big $(-)$}\] so $g(x) \rightarrow -\infty$.
+
+\item  \textit{The behaviour of $y=g(x)$ as $x \rightarrow 3$:}  As $x \rightarrow 3^{-}$, we imagine plugging in a number just shy  of $3$. We have \[g(x) \approx \frac{(1)(4)}{(\mbox{ very small $(-)$}) (5)} \approx \frac{4}{\mbox{very small $(-)$}} \approx \mbox{very big $(-)$}\] Hence, as $x \rightarrow 3^{-}$, $g(x) \rightarrow -\infty$. As $x \rightarrow 3^{+}$, we get \[g(x) \approx \frac{4}{\mbox{ very small $(+)$}} \approx \mbox{very big $(+)$}\] so $g(x) \rightarrow \infty$.
+
+\end{itemize}
+
+Our results are given graphically (again, without labels on the $y$-axis) in Figure \ref{fig:ratgraph5}.
+
+\mfigure[width=0.95\marginparwidth]{.75}{The graph $y=\frac{2x^2-3x-5}{x^2-x-6}$ near the vertical asymptotes}{fig:ratgraph5}{figures/RationalsGraphics/RationalGraphs-7}
+
+
+
+\item  Since the degrees of the numerator and denominator of $g(x)$ are the same, we know from Theorem \ref{hathm} that we can find the horizontal asymptote of the graph of $g$ by taking the ratio of the leading terms coefficients, $y = \frac{2}{1} = 2$.  However, if we take the time to do a more detailed analysis, we will be able to reveal some `hidden' behaviour which would be lost otherwise.(That is, if you use a calculator to graph. Once again, Calculus is the ultimate graphing power tool.)  As in the discussion following Theorem \ref{hathm}, we use the result of the long division $\left(2x^2-3x-5\right) \div \left(x^2-x-6\right)$ to rewrite $g(x) = \dfrac{2x^2-3x-5}{x^2-x-6}$ as $g(x) = 2 - \dfrac{x-7}{x^2-x-6}.$  We focus our attention on the term $\dfrac{x-7}{x^2-x-6}$.  
+
+\drawexampleline
+
+\begin{itemize}
+
+\item  \textit{The behaviour of $y=g(x)$ as $x \rightarrow -\infty$:} If imagine substituting $x = \mbox{$-1$ billion}$ into $\dfrac{x-7}{x^2-x-6}$, we estimate $\dfrac{x-7}{x^2-x-6} \approx \dfrac{\mbox{\scriptsize $-1$ billion}}{1 \mbox{\scriptsize billion}^2} \approx \mbox{very small $(-)$}$.  Hence, \[g(x) =  2 - \dfrac{x-7}{x^2-x-6} \approx 2 - \mbox{very small $(-)$} = 2 + \mbox{very small $(+)$}\]  In other words, as $x \rightarrow -\infty$, the graph of $y=g(x)$ is a little bit \textit{above} the line $y=2$.
+
+\mnote{.5}{In the denominator for $g(-1000000000)$, we would have $(1 \mbox{billion})^2 - 1 \mbox{billion} - 6$. It's easy to see why the $6$ is insignificant, but to ignore the $1$ billion seems criminal.  However, compared to ($1$ billion)$^{2}$, it's on the insignificant side;  it's $10^{18}$ versus $10^9$.  We are once again using the fact that for polynomials, end behaviour is determined by the leading term, so in the denominator, the $x^2$ term wins out over the $x$ term.}
+
+\item  \textit{The behaviour of $y=g(x)$ as $x \rightarrow \infty$.}  To consider $\dfrac{x-7}{x^2-x-6}$ as $x \rightarrow \infty$, we imagine substituting $x = \mbox{$1$ billion}$ and, going through the usual mental routine, find \[\dfrac{x-7}{x^2-x-6} \approx \mbox{very small $(+)$}\]  Hence, $g(x) \approx 2 - \ \mbox{very small $(+)$}$, in other words, the graph of $y=g(x)$ is just \textit{below} the line $y=2$ as $x \rightarrow \infty$.
+
+\end{itemize}
+
+Our end behaviour (again, without labels on the $x$-axis) is given in Figure \ref{fig:ratgraph6}.
+
+\mfigure[width=0.95\marginparwidth]{.35}{The end behaviour of $y=\frac{2x^2-3x-5}{x^2-x-6}$}{fig:ratgraph6}{figures/RationalsGraphics/RationalGraphs-8}
+
+\mfigure[width=0.95\marginparwidth]{.15}{The sign diagram for $g(x)=\frac{2x^2-3x-5}{x^2-x-6}$}{fig:ratsd3}{figures/RationalsGraphics/RationalGraphs-9}
+
+\item  Finally we construct our sign diagram.  We place an `\textinterrobang' above $x=-2$ and $x=3$, and a `$0$' above $x = \frac{5}{2}$ and $x=-1$.  Choosing test values in the test intervals gives us $f(x)$ is $(+)$ on the intervals $(-\infty, -2)$, $\left(-1, \frac{5}{2}\right)$ and $(3, \infty)$, and $(-)$ on the intervals $(-2,-1)$ and $\left(\frac{5}{2}, 3\right)$, giving us the sign diagram in Figure \ref{fig:ratsd3}.  As we piece together all of the information, we note that the graph must cross the horizontal asymptote at some point after $x=3$ in order for it to approach $y=2$ from underneath.  This is the subtlety that we would have missed had we skipped the long division and subsequent end behaviour analysis.  We can, in fact, find exactly when the graph crosses $y=2$.  As a result of the long division, we have $g(x) =  2 - \dfrac{x-7}{x^2-x-6}$.  For $g(x) = 2$, we would need $\dfrac{x-7}{x^2-x-6} = 0$. This gives $x-7= 0$, or $x=7$.  Note that $x-7$ is the remainder when $2x^2-3x-5$ is divided by $x^2-x-6$, so it makes sense that for $g(x)$ to equal the quotient $2$, the remainder from the division must be $0$.  Sure enough, we find $g(7)=2$.  Moreover, it stands to reason that $g$ must attain a relative minimum at some point past $x=7$.  Calculus verifies that at $x=13$, we have such a minimum at exactly $(13, 1.96)$.  
+
+
+
+\mfigure[width=0.95\marginparwidth]{.8}{The complete graph $y=\frac{2x^2-3x-5}{x^2-x-6}$ for Example \ref{ex_ratgraph2}}{fig:ratgraph7}{figures/RationalsGraphics/RationalGraphs-10}
+
+
+\end{enumerate}
+}
+
+\medskip
+
+Our next example gives us an opportunity to more thoroughly analyze a slant asymptote.
+
+\medskip
+
+\example{ex_ratgraph3}{A graph with a slant asymptote}{  Sketch a detailed graph of $h(x) = \dfrac{2x^3+5x^2+4x+1}{x^2+3x+2}$.}
+{
+\begin{enumerate}
+
+\item  For domain, you know the drill.  Solving $x^2+3x+2 = 0$ gives $x = -2$ and $x=-1$.  Our answer is $(-\infty, -2) \cup (-2, -1) \cup (-1, \infty)$.
+
+\item  To reduce $h(x)$, we need to factor the numerator and denominator.  To factor the numerator, we use the techniques set forth in Section \ref{RealZeros} and we get  
+\begin{align*}
+h(x) & =  \dfrac{2x^3+5x^2+4x+1}{x^2+3x+2} = \dfrac{(2x+1)(x+1)^2}{(x+2)(x+1)}\\
+& = \dfrac{ (2x+1) (x+1)^{\cancelto{1}{2}}  }{(x+2)\cancel{(x+1)}} = \dfrac{(2x+1)(x+1)}{x+2}
+\end{align*}
+
+We will use this reduced formula for $h(x)$ as long as we're not substituting $x=-1$.  To make this exclusion specific, we write $h(x) = \dfrac{(2x+1)(x+1)}{x+2}$, $x \neq -1$.
+
+\item  To find the $x$-intercepts, as usual, we set $h(x) = 0$ and solve.  Solving $\dfrac{(2x+1)(x+1)}{x+2}=0$ yields $x=-\frac{1}{2}$ and $x=-1$.  The latter isn't in the domain of $h$, so we exclude it.  Our only $x$-intercept is $\left(-\frac{1}{2}, 0\right)$.  To find the $y$-intercept, we set $x=0$.  Since $0 \neq -1$, we can use the reduced formula for $h(x)$ and we get $h(0) = \frac{1}{2}$ for a $y$-intercept of $\left(0,\frac{1}{2}\right)$.
+
+\item  From Theorem \ref{vavshole}, we know that since $x=-2$ still poses a threat in the denominator of the reduced function, we have a vertical asymptote there.  As for $x=-1$, the factor $(x+1)$ was cancelled from the denominator when we reduced $h(x)$, so it no longer causes trouble there.  This means that we get a hole when $x=-1$.  To find the $y$-coordinate of the hole, we substitute $x=-1$ into $\dfrac{(2x+1)(x+1)}{x+2}$, per Theorem \ref{vavshole} and get $0$.  Hence, we have a hole on the $x$-axis at $(-1,0)$.  It should make you uncomfortable plugging $x=-1$ into the reduced formula for $h(x)$, especially since we've made such a big deal concerning the stipulation about not letting $x=-1$ for that formula.  What we are really doing is taking a Calculus short-cut to the more detailed kind of analysis near $x=-1$ which we will show below.  Speaking of which, for the discussion that follows,  we will use the formula $h(x) = \dfrac{(2x+1)(x+1)}{x+2}$, $x \neq -1$.
+
+\begin{itemize}
+
+\item  \textit{The behaviour of $y=h(x)$ as $x \rightarrow -2$:}  As $x \rightarrow -2^{-}$, we imagine substituting a number a little bit less than $-2$. We have $h(x) \approx \frac{(-3)(-1)}{(\mbox{\scriptsize very small $(-)$})} \approx \frac{3}{(\mbox{\scriptsize very small $(-)$})}\approx \mbox{very big $(-)$}$ thus as $x \rightarrow -2^{-}$, $h(x) \rightarrow -\infty$. On the other side of $-2$, as $x \rightarrow -2^{+}$, we find that $h(x) \approx \frac{3}{\mbox{\scriptsize very small $(+)$}} \approx \mbox{very big $(+)$}$, so $h(x) \rightarrow \infty$.
+
+\mfigure{.8}{The behaviour of $y=h(x)$ near the hole and vertical asymptote}{fig:ratgraph8}{figures/RationalsGraphics/RationalGraphs-11}
+
+\item  \textit{The behaviour of $y=h(x)$ as $x \rightarrow -1$.}  As $x \rightarrow -1^{-}$, we imagine plugging in a number a bit less than $x=-1$. We have $h(x) \approx \frac{(-1)(\mbox{\scriptsize very small $(-)$})}{1} = \mbox{very small $(+)$}$ Hence, as $x \rightarrow -1^{-}$, $h(x) \rightarrow 0^{+}$. This means that as $x \rightarrow -1^{-}$, the graph is a bit above the point $(-1,0)$.  As $x \rightarrow -1^{+}$, we get $h(x) \approx \frac{(-1)(\mbox{\scriptsize very small $(+)$})}{1} = \mbox{very small $(-)$}$.  This gives us that as $x \rightarrow -1^{+}$, $h(x) \rightarrow 0^{-}$, so the graph is a little bit lower than $(-1,0)$ here. Our results are shown graphically in Figure \ref{fig:ratgraph8}. 
+
+\end{itemize}
+
+
+
+\item  For end behaviour, we note that the degree of the numerator of $h(x)$, $2x^3+5x^2+4x+1$, is $3$ and the degree of the denominator, $x^2+3x+2$, is $2$ so by Theorem \ref{sathm}, the graph of $y = h(x)$ has a slant asymptote.  For $x\rightarrow \pm \infty$, we are far enough away from $x=-1$ to use the reduced formula, $h(x) = \dfrac{(2x+1)(x+1)}{x+2}$, $x \neq -1$.  To perform long division, we multiply out the numerator and get $h(x) = \dfrac{2x^2+3x+1}{x+2}$, $x \neq -1$, and rewrite $h(x) = 2x-1+\dfrac{3}{x+2}$, $x \neq -1$.  By Theorem \ref{sathm}, the slant asymptote is $y = 2x-1$, and to better see \textit{how} the graph approaches the asymptote, we focus our attention on the term generated from the remainder, $\dfrac{3}{x+2}$.
+
+\begin{itemize}
+
+\item  \textit{The behaviour of $y=h(x)$ as $x \rightarrow -\infty$:} Substituting  $x = \mbox{$-1$ billion}$ into $\dfrac{3}{x+2}$, we get the estimate $\frac{3}{\mbox{\scriptsize $-1$ billion}} \approx \mbox{very small $(-)$}$.  Hence, $h(x) = 2x-1+\dfrac{3}{x+2} \approx 2x-1 + \mbox{very small $(-)$}$.  This means the graph of $y=h(x)$ is a little bit \textit{below} the line $y=2x-1$ as $x \rightarrow -\infty$.
+
+\item  \textit{The behaviour of $y=h(x)$ as $x \rightarrow \infty$:}  If $x \rightarrow \infty$, then $\dfrac{3}{x+2} \approx \mbox{very small $(+)$}$.  This means $h(x) \approx 2x-1 + \mbox{very small $(+)$}$, or that the graph of $y=h(x)$ is a little bit \textit{above} the line $y=2x-1$ as $x \rightarrow \infty$. The end behaviour is shown in Figure \ref{fig:ratgraph9}
+
+\end{itemize}
+
+\mfigure[width=0.95\marginparwidth]{.55}{End behaviour for $y=h(x)$}{fig:ratgraph9}{figures/RationalsGraphics/RationalGraphs-12}
+
+\item  To make our sign diagram, we place an `\textinterrobang' above $x=-2$ and $x=-1$ and a `$0$' above $x=-\frac{1}{2}$.  On our four test intervals, we find $h(x)$ is $(+)$ on $(-2,-1)$ and $\left(-\frac{1}{2}, \infty\right)$ and $h(x)$ is $(-)$ on $(-\infty, -2)$ and $\left(-1,-\frac{1}{2}\right)$, giving us the sign diagram in Figure \ref{fig:ratsd4}.  Putting all of our work together yields the graph in Figure \ref{fig:ratgraph10}.
+
+\end{enumerate}
+
+\mfigure[width=0.95\marginparwidth]{.37}{The sign diagram for\\ $h(x)=\frac{2x^3+5x^2+4x+1}{x^2+3x+2}$}{fig:ratsd4}{figures/RationalsGraphics/RationalGraphs-13}
+
+\mfigure[width=0.95\marginparwidth]{.2}{The graph $y=h(x)$ for Example \ref{ex_ratgraph3}}{fig:ratgraph10}{figures/RationalsGraphics/RationalGraphs-14}
+
+We could ask whether the graph of $y=h(x)$ crosses its slant asymptote.  From the formula $h(x) = 2x-1+\dfrac{3}{x+2}$, $x \neq -1$, we see that if $h(x) = 2x-1$, we would have $\dfrac{3}{x+2} = 0$.  Since this will never happen, we conclude the graph never crosses its slant asymptote. (But rest assured, some graphs do!)
+}
+
+\medskip
+
+We end this section with an example that shows it's not all pathological weirdness when it comes to rational functions and technology still has a role to play in studying their graphs at this level (that is, prior to introducing the techniques of Calculus).
+
+\medskip
+
+\example{calcisneededhere}{A graph requiring calculus for the details}{ Sketch the graph of $r(x) = \dfrac{x^4+1}{x^2+1}$.}
+{
+\begin{enumerate}
+
+\item  The denominator $x^2+1$ is never zero so the domain is $(-\infty, \infty)$.
+
+\item  With no real zeros in the denominator, $x^2+1$ is an irreducible quadratic.  Our only hope of reducing $r(x)$ is if $x^2+1$ is a factor of $x^4+1$.  Performing long division gives us \[\dfrac{x^4+1}{x^2+1} = x^2-1+\dfrac{2}{x^2+1}\] The remainder is not zero so $r(x)$ is already reduced.
+
+\item  To find the $x$-intercept, we'd set $r(x) = 0$.  Since there are no real solutions to $\dfrac{x^4+1}{x^2+1}=0$, we have no $x$-intercepts.  Since $r(0) = 1$, we get $(0,1)$ as the $y$-intercept.
+
+\item  This step doesn't apply to $r$, since its domain is all real numbers.
+
+\item  For end behaviour, we note that since the degree of the numerator is exactly \textit{two} more than the degree of the denominator, neither Theorems \ref{hathm} nor \ref{sathm} apply. We know from our attempt to reduce $r(x)$ that we can rewrite $r(x) = x^2-1+\dfrac{2}{x^2+1}$, so we focus our attention on the term corresponding to the remainder, $\dfrac{2}{x^2+1}$  It should be clear that as $x \rightarrow \pm \infty$, $\dfrac{2}{x^2+1} \approx \mbox{very small $(+)$}$, which means $r(x) \approx x^2-1 + \mbox{very small $(+)$}$.  So the graph $y=r(x)$ is a little bit \textit{above} the graph of the parabola $y=x^2-1$ as $x \rightarrow \pm \infty$. Graphically, we have Figure \ref{fig:ratgraph11}.
+
+\mfigure{.65}{Comparing $y=r(x)$ to $y=x^2-1$}{fig:ratgraph11}{figures/RationalsGraphics/RationalGraphs-15}
+
+
+\item  There isn't much work to do for a sign diagram for $r(x)$, since its domain is all real numbers and it has no zeros.  Our sole test interval is $(-\infty, \infty)$, and since we know $r(0) = 1$, we conclude $r(x)$ is $(+)$ for all real numbers. At this point, we don't have much to go on for a graph.  We leave it to the reader to show $r(-x) = r(x)$ so $r$ is even, and, hence, its graph is symmetric about the $y$-axis. Figure \ref{fig:ratgraph12} shows a comparison of what we have determined analytically versus what the computer shows us.  We have no way to detect the relative extrema analytically (without appealing to Calculus, of course) apart from brute force plotting of points, which is done more efficiently by the computer.
+
+\end{enumerate}
+
+\mtable{.3}{The limitations of our Precalculus methods}{fig:ratgraph12}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.95\marginparwidth]{figures/RationalsGraphics/RationalGraphs-16}\\
+Plotting by hand (without calculus)\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/RationalsGraphics/Rationals09}\\
+Plotting with GeoGebra
+\end{tabular}}
+
+}
+
+\medskip
+
+As usual, the authors offer no apologies for what may be construed as `pedantry' in this section.  We feel that the detail presented in this section is necessary to obtain a firm grasp of the concepts presented here and it also serves as an introduction to the methods employed in Calculus.  As we have said many times in the past, your instructor will decide how much, if any, of the kinds of details presented here are `mission critical' to your understanding of Precalculus. Without further delay, we present you with this section's Exercises.
+
+\printexercises{exercises_pre/04_02_exercises}

@@ -1,0 +1,576 @@
+\section{The Polar Form of Complex Numbers}
+
+\label{PolarComplex}
+
+In this section, we return to our study of complex numbers which were first introduced in Section \ref{ComplexZeros}.  Recall that a \index{complex number ! definition of}\sword{complex number} is a number of the form $z = a + bi$ where $a$ and $b$ are real numbers and $i$ is the imaginary unit defined by $i = \sqrt{-1}$. The number $a$ is called the \index{complex number ! real part} \sword{real part} \index{real part of a complex number} of $z$, denoted  $\operatorname{Re}(z)$, while the real number $b$ is called the \index{imaginary part of a complex number} \index{complex number ! imaginary part}\sword{imaginary part} of $z$, denoted $\operatorname{Im}(z)$.  From Intermediate Algebra, we know that if $z = a + bi = c + di$ where $a$, $b$, $c$ and $d$ are real numbers, then $a = c$ and $b = d$, which means $\operatorname{Re}(z)$ and $\operatorname{Im}(z)$ are well-defined. To start off this section, we associate each complex number $z = a+bi$ with the point $(a,b)$ on the coordinate plane.  In this case, the $x$-axis is relabeled as the \index{real axis}\sword{real axis}, which corresponds to the real number line as usual,  and the $y$-axis is relabeled as the \index{imaginary axis}\sword{imaginary axis}, which is demarcated in increments of the imaginary unit $i$.  The plane determined by these two axes is called the \index{complex plane}\sword{complex plane}.
+
+\mnote{.7}{Saying that $\operatorname{Re}(z)$ and $\operatorname{Im}(z)$ are `well-defined' means that no matter how we express $z$, the number $\operatorname{Re}(z)$ is always the same, and the number $\operatorname{Im}(z)$ is always the same.  In other words, $\operatorname{Re}$ and $\operatorname{Im}$ are \textit{functions} of complex numbers.}
+
+\medskip
+
+\noindent\begin{minipage}{\textwidth}
+\begin{center}
+\myincludegraphics[width=0.7\textwidth]{figures/AppExtGraphics/PolarComplex-1}
+\end{center}
+\captionsetup{type=figure}
+\caption{The complex plane}\label{fig:complexplane}
+\end{minipage}
+
+\medskip
+
+Since the ordered pair $(a,b)$ gives the \textit{rectangular} coordinates associated with the complex number $z = a+bi$, the expression $z=a+bi$ is called the \index{complex number ! rectangular form}\index{rectangular form of a complex number}\sword{rectangular form} of $z$. Of course, we could just as easily associate $z$ with a pair of \textit{polar} coordinates $(r,\theta)$.  Although it is not as straightforward as the definitions of $\operatorname{Re}(z)$ and $\operatorname{Im}(z)$, we can still give $r$ and $\theta$ special names in relation to $z$.
+
+\smallskip
+
+\definition{modulusargumentdefn}{The Modulus and Argument of Complex Numbers}{  Let $z = a+bi$ be a complex number with $a = \operatorname{Re}(z)$ and $b=\operatorname{Im}(z)$.  Let $(r,\theta)$ be a polar representation of the point with rectangular coordinates $(a,b)$ where $r \geq 0$.
+
+\begin{itemize}
+
+\item  The \index{complex number ! modulus ! definition of}\index{modulus of a complex number ! definition of}\sword{modulus} of $z$, denoted $|z|$, is defined by $|z| = r$.
+
+\item  The angle $\theta$ is an \index{complex number ! argument ! definition of}\index{argument ! of a complex number ! definition of}\sword{argument} of $z$. The set of all arguments of $z$ is denoted $\operatorname{arg}(z)$.
+
+\item  If $z \neq 0$ and $-\pi < \theta \leq \pi$, then $\theta$ is the \index{complex number ! principal argument}\index{principal argument of a complex number}\sword{principal argument} of $z$, written $\theta = \operatorname{Arg}(z)$. 
+
+\end{itemize}
+}
+
+\smallskip
+
+Some remarks about  Definition \ref{modulusargumentdefn} are in order.  We know from Section \ref{IntroPolar} that every point in the plane has infinitely many polar coordinate representations $(r,\theta)$ which means it's worth our time to make sure the quantities `modulus', `argument' and `principal argument' are well-defined. Concerning the modulus, if $z = 0$ then the point associated with $z$ is the origin. In this case, the \textit{only} $r$-value which can be used here is $r=0$.  Hence for $z= 0$, $|z| = 0$ is well-defined. If $z \neq 0$, then the point associated with $z$ is not the origin, and there are \textit{two} possibilities for $r$:  one positive and one negative.  However, we stipulated $r \geq 0$ in our definition so this pins down the value of $|z|$ to one and only one number. Thus the modulus is well-defined in this case, too. (In case you're wondering, the use of the absolute value notation $|z|$ for modulus will be explained shortly.) Even with the requirement $r \geq 0$,  there are infinitely many angles $\theta$ which can be used in a polar representation of a point $(r,\theta)$. If $z \neq 0$ then the point in question is not the origin, so all of these angles $\theta$ are coterminal.  Since coterminal angles are exactly $2\pi$ radians apart, we are guaranteed that only one of them lies in the interval $(-\pi, \pi]$, and this angle is what we call the principal argument of $z$, $\operatorname{Arg}(z)$. In fact, the set $\operatorname{arg}(z)$ of \text{all} arguments of $z$ can be described using set-builder notation as  $\operatorname{arg}(z) = \left\{ \operatorname{Arg}(z) + 2\pi k \, | \, \text{$k$ is an integer} \right\}$.  Note that since $\operatorname{arg}(z)$ is a \textit{set}, we will write `$\theta \in \operatorname{arg}(z)$' to mean `$\theta$ is in the set of arguments of $z$'.   If $z=0$ then the point in question is the origin, which we know can be represented in polar coordinates as $(0,\theta)$ for \textit{any} angle $\theta$. In this case, we have $\operatorname{arg}(0) = (-\infty, \infty)$ and since there is no one value of $\theta$ which lies $(-\pi, \pi]$, we leave $\operatorname{Arg}(0)$ undefined. It is time for an example.
+
+\medskip
+
+\example{plotmodargex}{Components of a complex number}{  For each of the following complex numbers find $\operatorname{Re}(z)$, $\operatorname{Im}(z)$, $|z|$, $\operatorname{arg}(z)$ and $\operatorname{Arg}(z)$.  Plot $z$ in the complex plane.
+
+\begin{multicols}{2}
+
+\begin{enumerate}
+
+\item  $z = \sqrt{3}-i$
+
+\item  $z = -2+4i$
+
+\item  $z = 3i$
+
+\item  $z = -117$
+
+\end{enumerate}
+
+\end{multicols}}
+{
+\begin{enumerate}
+
+\item For $z = \sqrt{3} -i = \sqrt{3} + (-1)i$, we have $\operatorname{Re}(z) = \sqrt{3}$ and $\operatorname{Im}(z) = -1$.   To find $|z|$, $\operatorname{arg}(z)$ and $\operatorname{Arg}(z)$, we need to find a polar representation $(r,\theta)$ with $r \geq 0$ for the point $P(\sqrt{3},-1)$ associated with $z$.   We know $r^2 = (\sqrt{3})^2 + (-1)^2 = 4$, so $r = \pm 2$.  Since we require $r \geq 0$, we choose $r =2$, so $|z| = 2$.  Next, we find a corresponding angle $\theta$.  Since $r>0$ and $P$ lies in Quadrant IV, $\theta$ is a Quadrant IV angle.  We know $\tan(\theta) = \frac{-1}{\sqrt{3}} = -\frac{\sqrt{3}}{3}$, so $\theta = -\frac{\pi}{6} + 2\pi k$ for integers $k$.  Hence, $\operatorname{arg}(z) = \left\{-\frac{\pi}{6} + 2\pi k \, | \, \text{$k$ is an integer} \right\}$. Of these values, only  $\theta = -\frac{\pi}{6}$  satisfies the requirement that $-\pi < \theta \leq \pi$, hence $\operatorname{Arg}(z) = -\frac{\pi}{6}$.  
+
+\item The complex number $z = -2+4i$ has  $\operatorname{Re}(z) = -2$,   $\operatorname{Im}(z) = 4$, and is associated with the point $P(-2,4)$.  Our next task is to find a polar representation $(r,\theta)$ for $P$ where $r \geq 0$. Running through the usual calculations gives $r = 2\sqrt{5}$, so $|z| = 2\sqrt{5}$.  To find $\theta$, we get $\tan(\theta) = -2$, and since $r > 0$ and $P$ lies in Quadrant II, we know $\theta$  is a Quadrant II angle.  We find $\theta = \pi + \arctan(-2) + 2\pi k$, or, more succinctly  $\theta = \pi - \arctan(2) + 2\pi k$ for integers $k$.  Hence $\operatorname{arg}(z) = \left\{\pi - \arctan(2) + 2\pi k \, | \, \text{$k$ is an integer}\right\}$.  Only  $\theta = \pi - \arctan(2)$ satisfies the requirement $-\pi < \theta \leq \pi$,  so $\operatorname{Arg}(z) = \pi - \arctan(2)$. 
+
+\item    We rewrite $z = 3i$ as $z = 0+3i$ to find $\operatorname{Re}(z) = 0$ and $\operatorname{Im}(z) = 3$.  The point in the plane which corresponds to $z$ is $(0,3)$ and while we could go through the usual calculations to find the required polar form of this point, we can almost `see' the answer.  The point  $(0,3)$ lies $3$ units away from the origin on the positive $y$-axis.  Hence, $r=|z|=3$ and $\theta = \frac{\pi}{2} + 2\pi k$ for integers $k$. We get $\operatorname{arg}(z) = \left\{ \frac{\pi}{2} + 2\pi k \, | \, \text{$k$ is an integer} \right\}$ and $\operatorname{Arg}(z) = \frac{\pi}{2}$. 
+
+\item As in the previous problem, we write $z = -117 = -117 + 0i$ so $\operatorname{Re}(z) = -117$ and $\operatorname{Im}(z) = 0$. The number $z = -117$ corresponds to the point $(-117,0)$, and this is another instance where  we can determine the polar form `by eye'.  The point $(-117,0)$ is $117$ units away from the origin along the negative $x$-axis.  Hence, $r=|z|=117$ and $\theta = \pi + 2\pi  = (2k+1)\pi k$ for integers $k$. We have  $\operatorname{arg}(z) = \left\{ (2k+1)\pi \, | \, k \text{ is an  integer} \right\}$.  Only one of these values, $\theta = \pi$, just barely lies in the interval $(-\pi, \pi]$ which means and $\operatorname{Arg}(z) =\pi$. We plot $z$ along with the other numbers in this example in Figure \ref{fig:polarcom1} below.
+
+\medskip
+
+\noindent\begin{minipage}{\textwidth}
+\begin{center}
+\myincludegraphics[width=0.7\textwidth]{figures/AppExtGraphics/PolarComplex-2}
+\end{center}
+\captionsetup{type=figure}
+\caption{Plots of the four complex numbers in Example \ref{plotmodargex}}\label{fig:polarcom1}
+\end{minipage}
+
+\end{enumerate}
+}
+
+\medskip
+
+Now that we've had some practice computing the modulus and argument of some complex numbers, it is time to explore their properties.  We have the following theorem.
+
+\smallskip
+
+\theorem{modprops}{Properties of the Modulus}{  Let $z$ and $w$ be complex numbers. \index{complex number ! modulus ! properties of} \index{modulus of a complex number ! properties of}
+
+\begin{itemize}
+
+\item  $|z|$ is the distance from $z$ to $0$ in the complex plane
+
+\item  $|z| \geq 0$ and $|z| = 0$ if and only if $z=0$
+
+\item  $|z| = \sqrt{\operatorname{Re}(z)^2 + \operatorname{Im}(z)^2}$
+
+\item  \textbf{Product Rule:}  $|zw| = |z||w|$ \index{product rule ! for the modulus of a complex number}
+
+\item  \textbf{Power Rule:}  $\left|z^{n}\right| = |z|^{n}$ for all natural numbers, $n$ \index{power rule ! for the modulus of a complex number}
+
+\item  \textbf{Quotient Rule:}  $\left| \dfrac{z}{w} \right| = \dfrac{|z|}{|w|}$, provided $w \neq 0$ \index{quotient rule ! for the modulus of a complex number}
+
+\end{itemize}
+}
+
+\smallskip
+
+To prove the first three properties in Theorem \ref{modprops}, suppose $z = a + bi$ where $a$ and $b$ are real numbers.  To determine $|z|$, we find a polar representation $(r,\theta)$ with $r \geq 0$ for the point $(a,b)$.  From Section \ref{IntroPolar}, we know $r^2 = a^2 + b^2$ so that $r = \pm \sqrt{a^2+b^2}$.  Since we require $r \geq 0$, then it must be that $r = \sqrt{a^2 +b^2}$, which means $|z| = \sqrt{a^2+b^2}$.  Using the distance formula, we find the distance from $(0,0)$ to $(a,b)$ is also $\sqrt{a^2+b^2}$, establishing the first property.  For the second property, note that since $|z|$ is a distance, $|z| \geq 0$.  Furthermore,  $|z| = 0$ if and only if the distance from $z$ to $0$ is $0$, and the latter happens if and only if $z = 0$, which is what we were asked to show.  For the third property, we note that since $a = \operatorname{Re}(z)$ and $b = \operatorname{Im}(z)$, $z = \sqrt{a^2+b^2} = \sqrt{\operatorname{Re}(z)^2 + \operatorname{Im}(z)^2}$.
+
+
+\mnote{.25}{Since the absolute value $|x|$ of a real number $x$ can be viewed as the distance from $x$ to $0$ on the number line, the first property in Theorem \ref{modprops} justifies the notation $|z|$ for modulus.  We leave it to the reader to show that if $z$ is real, then the definition of modulus coincides with absolute value so the notation $|z|$ is unambiguous.}
+
+
+
+\smallskip
+
+To prove the product rule, suppose $z = a + bi$ and  $w = c + di$ for real numbers $a$, $b$, $c$ and $d$.  Then $zw = (a+bi)(c+di)$.  After the usual arithmetic  we get $zw = (ac-bd) + (ad+bc)i$. (See Example \ref{complexzeroex1} in Section \ref{CmpNums} for a review of complex number arithmetic.) Therefore,
+
+\begin{align*}
+|zw| & =  \sqrt{(ac-bd)^2+(ad+bc)^2}  \\
+	 & =  \sqrt{a^2c^2 - 2abcd + b^2d^2 + a^2d^2 +2abcd + b^2c^2}  \tag*{Expand} \\
+	 & = \sqrt{a^2c^2 + a^2d^2 + b^2c^2 + b^2d^2}  \tag*{Rearrange terms} \\
+	 & =  \sqrt{a^2\left(c^2+d^2\right) + b^2\left(c^2+d^2\right)}  \tag*{Factor} \\
+	 & =  \sqrt{\left(a^2+b^2\right)\left(c^2+d^2\right)}  \tag*{Factor}\\
+	 & = \sqrt{a^2+b^2} \sqrt{c^2+d^2}  \tag*{Product Rule for Radicals} \\
+	 & =  |z| |w|  \tag*{Definition of $|z|$ and $|w|$}
+\end{align*}
+		 
+Hence $|zw| = |z| |w|$ as required.  
+
+\smallskip
+
+\mnote{.75}{In case you were not convinced by the argument for the second property in Theorem \ref{modprops}, we can work through the underlying Algebra to see this is true.  We know  $|z| = 0$ if and only if $\sqrt{a^2+b^2} = 0$ if and only if $a^2+b^2 = 0$, which is true if and only if $a = b = 0$.  The latter happens if and only if $z = a + bi =0$.  There.}
+
+Now that the Product Rule has been established, we use it and the Principle of Mathematical Induction to 	prove the power rule.  Let $P(n)$ be the statement $\left|z^{n}\right| = |z|^n$.  Then $P(1)$ is true since $\left|z^{1}\right| = |z| = |z|^1$.  Next, assume $P(k)$ is true.  That is, assume $\left|z^{k}\right| = |z|^k$ for some $k \geq 1$.  Our job is to show that $P(k+1)$ is true, namely $\left|z^{k+1}\right| = |z|^{k+1}$.  As is customary with induction proofs, we first try to reduce the problem in such a way as to  use the Induction Hypothesis.
+
+\begin{align*}
+\left|z^{k+1}\right| & =  \left|z^{k} z\right|  \tag*{Properties of Exponents} \\[3pt]
+										 & =  \left|z^{k}\right| |z|  \tag*{Product Rule} \\[3pt]
+										 & =   |z|^{k} |z|  \tag*{Induction Hypothesis} \\[3pt]
+										 & =   |z|^{k+1}  \tag*{Properties of Exponents} 
+\end{align*}
+Hence, $P(k+1)$ is true, which means $\left|z^{n}\right| = |z|^{n}$ is true for all natural numbers $n$.  
+
+\smallskip
+
+Like the Power Rule, the Quotient Rule can also be established with the help of the Product Rule. We assume $w \neq 0$ (so $|w| \neq 0$) and we get
+\begin{align*}
+\left| \dfrac{z}{w} \right| &  =  \left| (z) \left( \dfrac{1}{w} \right) \right|  \\ [3pt] 
+							& =  |z| \left| \dfrac{1}{w}\right|  \tag*{Product Rule.}
+\end{align*}
+Hence, the proof really boils down to showing $\left| \frac{1}{w} \right| = \frac{1}{|w|}$.  This is left as an exercise.
+
+\smallskip
+
+Next, we characterize the argument of a complex number in terms of its real and imaginary parts.
+
+\smallskip
+
+\theorem{argprops}{Properties of the Argument}{  Let $z$ be a complex number. \index{complex number ! argument ! properties of} \index{argument ! of a complex number ! properties of}
+ 
+\begin{itemize}
+
+\item  If $\operatorname{Re}(z) \neq 0$ and $\theta \in \operatorname{arg}(z)$, then $\tan(\theta) = \frac{\operatorname{Im}(z)}{\operatorname{Re}(z)}$.
+
+\item  If $\operatorname{Re}(z) = 0$ and  $\operatorname{Im}(z) > 0$, then $\operatorname{arg}(z) = \left\{ \frac{\pi}{2} + 2\pi k \, | \, \text{$k$ is an integer} \right\}$.
+
+\item  If $\operatorname{Re}(z) = 0$ and $\operatorname{Im}(z) < 0$, then $\operatorname{arg}(z) = \left\{ -\frac{\pi}{2} + 2\pi k \, | \, \text{$k$ is an integer} \right\}$.
+
+\item  If $\operatorname{Re}(z) = \operatorname{Im}(z) = 0$, then $z = 0$ and $\operatorname{arg}(z) = (-\infty, \infty)$.
+
+\end{itemize}
+}
+
+\smallskip
+
+To prove Theorem \ref{argprops}, suppose $z = a + bi$ for real numbers $a$ and $b$.  By definition, $a = \operatorname{Re}(z)$ and $b = \operatorname{Im}(z)$, so the point associated with $z$ is $(a,b) = \left(\operatorname{Re}(z), \operatorname{Im}(z)\right)$.  From Section \ref{IntroPolar}, we know that if $(r,\theta)$ is a polar representation for $\left(\operatorname{Re}(z), \operatorname{Im}(z)\right)$, then $\tan(\theta) = \frac{\operatorname{Im}(z)}{\operatorname{Re}(z)}$, provided $\operatorname{Re}(z) \neq 0$.  If $\operatorname{Re}(z) = 0$ and $\operatorname{Im}(z) > 0$, then $z$ lies on the positive imaginary axis.  Since we take $r > 0$,  we have that $\theta$ is coterminal with $\frac{\pi}{2}$, and the result follows.   If $\operatorname{Re}(z) = 0$ and $\operatorname{Im}(z) < 0$, then $z$ lies on the negative imaginary axis, and a similar argument shows $\theta$ is coterminal with $-\frac{\pi}{2}$.  The last property in the theorem was already discussed in the remarks following Definition \ref{modulusargumentdefn}.  
+
+\smallskip
+
+
+Our next goal is to completely marry the Geometry and the Algebra of the complex numbers.  To that end,  consider Figure \ref{fig:polarcom2} below.
+
+\medskip
+
+\noindent\begin{minipage}{\textwidth}
+\begin{center}
+\myincludegraphics[width=0.75\textwidth]{figures/AppExtGraphics/PolarComplex-3}
+\end{center}
+\captionsetup{type=figure}
+\caption{Polar coordinates, $(r, \theta)$ associated with $z = a+bi$ with $r \geq 0$.}\label{fig:polarcom2}
+\end{minipage}
+
+\medskip
+
+We know from  Theorem \ref{polarrectangularconversion} that $a = r\cos(\theta)$ and $b = r\sin(\theta)$. Making these substitutions for $a$ and $b$ gives $z = a + bi = r\cos(\theta) + r \sin(\theta) i = r \left[\cos(\theta) + i \sin(\theta)\right]$. The expression `$\cos(\theta) + i\sin(\theta)$' is abbreviated $\operatorname{cis}(\theta)$\index{cis($\theta$)} so we can write  $z = r\operatorname{cis}(\theta)$.	Since  $r = |z|$ and $\theta \in \operatorname{arg}(z)$, we get
+
+\medskip
+
+\definition{polarformcomplex}{A Polar Form of a Complex Number}{ \index{complex number ! polar form ! cis-notation} \index{polar form of a complex number}  Suppose $z$ is a complex number and $\theta \in \operatorname{arg}(z)$.  The expression:  \[|z| \operatorname{cis}(\theta) = |z|\left[ \cos(\theta) + i \sin(\theta)\right]\]
+
+is called a polar form for $z$.
+}
+
+\medskip										
+
+Since there are infinitely many choices for $\theta \in \operatorname{arg}(z)$, there infinitely many polar forms for $z$, so we used the indefinite article `a' in Definition \ref{polarformcomplex}.  It is time for an example.
+
+\medskip
+
+\example{polarcomplexex}{Converting between rectangular and polar form}{
+\begin{enumerate}
+
+\item Find the rectangular form of the following complex numbers. Find $\operatorname{Re}(z)$ and $\operatorname{Im}(z)$.
+
+\begin{multicols}{2}
+
+\begin{enumerate}
+
+\item  $z = 4 \operatorname{cis}\left(\frac{2\pi}{3}\right)$
+
+\item  $z = 2 \operatorname{cis}\left(-\frac{3\pi}{4}\right)$
+
+\item  $z = 3 \operatorname{cis}(0)$
+
+\item  $z = \operatorname{cis}\left(\frac{\pi}{2}\right)$
+
+\end{enumerate}
+
+\end{multicols}
+
+\item  Use the results from Example \ref{plotmodargex} to find a polar form of the following complex numbers.
+
+\begin{multicols}{2}
+
+\begin{enumerate}
+
+\item  $z = \sqrt{3}-i$
+
+\item  $z = -2+4i$
+
+\item  $z = 3i$
+
+\item  $z = -117$
+
+\end{enumerate}
+
+\end{multicols}
+
+
+
+\end{enumerate}}
+{
+\begin{enumerate}
+
+
+\item The key to this problem is to write out $\operatorname{cis}(\theta)$ as $\cos(\theta) + i\sin(\theta)$.
+
+\begin{enumerate}
+
+\item By definition, $z =4 \operatorname{cis}\left(\frac{2\pi}{3}\right) = 4\left[\cos\left(\frac{2\pi}{3}\right) + i \sin\left(\frac{2\pi}{3}\right)\right]$. After some simplifying, we get $z = -2 + 2i\sqrt{3}$, so that $\operatorname{Re}(z) = -2$ and $\operatorname{Im}(z) = 2\sqrt{3}$.
+
+\item Expanding, we get $z = 2 \operatorname{cis}\left(-\frac{3\pi}{4}\right) = 2\left[\cos\left(-\frac{3\pi}{4}\right) + i \sin\left(-\frac{3\pi}{4}\right)\right]$. From this, we find $z= -\sqrt{2} - i\sqrt{2}$, so $\operatorname{Re}(z) = -\sqrt{2} = \operatorname{Im}(z)$.
+
+\item  We get  $z = 3 \operatorname{cis}(0) = 3\left[\cos(0) + i\sin(0)\right] = 3$.  Writing $3 = 3 + 0i$, we get $\operatorname{Re}(z) = 3$ and $\operatorname{Im}(z) = 0$, which makes sense seeing as $3$ is a real number.
+
+\item  Lastly, we have  $z = \operatorname{cis}\left(\frac{\pi}{2}\right) = \cos\left(\frac{\pi}{2}\right)+ i\sin\left(\frac{\pi}{2}\right) = i$.  Since $i = 0 + 1i$, we get $\operatorname{Re}(z) = 0$ and $\operatorname{Im}(z) = 1$.  Since $i$ is called the `imaginary unit,'  these answers make perfect sense.
+
+\end{enumerate}
+
+\item  To write a polar form of a complex number $z$, we need two pieces of information:  the modulus $|z|$ and an argument (not necessarily the principal argument) of $z$.   We shamelessly mine our solution to  Example \ref{plotmodargex} to find what we need.
+
+\begin{enumerate}
+
+\item  For $z = \sqrt{3}-i$, $|z| = 2$ and $\theta = -\frac{\pi}{6}$, so $z = 2 \operatorname{cis}\left(-\frac{\pi}{6}\right)$.  We can check our answer by converting it back to rectangular form to see that it simplifies to $z = \sqrt{3} - i$.
+
+\item  For $z = -2+4i$, $|z| = 2\sqrt{5}$ and $\theta = \pi - \arctan(2)$.  Hence, $z = 2\sqrt{5} \operatorname{cis}(\pi - \arctan(2))$.  It is a good exercise to actually show that this polar form reduces to $z=-2+4i$.
+
+\item  For $z = 3i$, $|z| = 3$ and $\theta = \frac{\pi}{2}$.  In this case, $z = 3 \operatorname{cis}\left(\frac{\pi}{2}\right)$.  This can be checked geometrically.  Head out $3$ units from $0$ along the positive real axis. Rotating $\frac{\pi}{2}$ radians counter-clockwise lands you exactly $3$ units above $0$ on the imaginary axis at $z = 3i$.
+
+\item  Last but not least, for $z = -117$, $|z| = 117$ and $\theta = \pi$. We get $z = 117 \operatorname{cis}(\pi)$. As with the previous problem, our answer is easily checked geometrically. 
+
+\end{enumerate}
+
+\end{enumerate}
+}
+
+\medskip
+
+The following theorem summarizes the advantages of working with complex numbers in polar form.
+
+\medskip
+
+\theorem{prodquotpolarcomplex}{Products, Powers and Quotients Complex Numbers in Polar Form}{  Suppose $z$ and $w$ are complex numbers with polar forms $z = |z|\operatorname{cis}(\alpha)$ and $w = |w|\operatorname{cis}(\beta)$.  Then
+
+\begin{itemize}
+
+\item  \textbf{Product Rule:} $zw = |z||w| \operatorname{cis}(\alpha + \beta)$ \index{product rule ! for complex numbers}
+
+\item  \textbf{Power Rule} (\index{DeMoivre's Theorem}\textbf{\href{http://en.wikipedia.org/wiki/Abraham_de_Moivre}{\underline{DeMoivre's Theorem}}}) \textbf{:}  $z^{n} = |z|^{n} \operatorname{cis}(n \theta)$ for every natural number $n$ \index{power rule ! for complex numbers}
+
+\item  \textbf{Quotient Rule:} $\dfrac{z}{w} = \dfrac{|z|}{|w|} \operatorname{cis}(\alpha - \beta)$, provided $|w| \neq 0$ \index{quotient rule ! for complex numbers}
+
+\end{itemize}
+}
+
+\medskip
+
+\mnote{.5}{While the notation $\operatorname{cis}(\theta) = \cos(\theta)+ i\sin(\theta)$ is not uncommon, it is not the most popular. In light of Theorem \ref{prodquotpolarcomplex}, one can make sense of the polar form using \sword{Euler's formula}
+\[
+e^{i\theta} = \cos(\theta)+i\sin(\theta).
+\]
+The appearance of the exponential function in this context might seem strange, but note that the three properties in Theorem \ref{prodquotpolarcomplex} can then be understood in terms of laws of exponents. If $z=re^{i\alpha}$ and $w=se^{i\beta}$, we have
+\[
+zw = (rs)\left(e^{i\alpha}e^{i\beta}\right) = (rs)e^{i(\alpha+\beta)},
+\]
+\[
+z^n = r^n(e^{i\alpha})^n = r^ne^{in\alpha},
+\]
+and so on. For more details, see Exercise \ref{eulerformulaexercise}.}
+
+The proof of Theorem \ref{prodquotpolarcomplex} requires a healthy mix of definition, arithmetic and identities.  We first start with the product rule.
+
+\begin{align*}
+zw & =  \left[|z|\operatorname{cis}(\alpha)\right] \left[|w|\operatorname{cis}(\beta)\right]  \\[3pt]
+   & =  |z||w|\left[\cos(\alpha) + i\sin(\alpha)\right]\left[\cos(\beta) + i \sin(\beta)\right]
+\end{align*}
+
+We now focus on the quantity in brackets on the right hand side of the equation.
+
+\begin{align*}
+\left[\cos(\alpha) + i\sin(\alpha)\right]&\left[\cos(\beta) + i \sin(\beta)\right]\\
+ & = \cos(\alpha)\cos(\beta) + i\cos(\alpha)\sin(\beta) \\	
+ & \quad\quad + i\sin(\alpha)\cos(\beta) + i^2 \sin(\alpha)\sin(\beta) \\																		 & =  \cos(\alpha)\cos(\beta) +  i^2 \sin(\alpha) \sin(\beta) \tag*{Rearranging terms}  \\
+ & \quad\quad + \, i\sin(\alpha)\cos(\beta) +i\cos(\alpha)\sin(\beta)  \\
+ & =  \left(\cos(\alpha)\cos(\beta) - \sin(\alpha) \sin(\beta)\right)\tag*{Since $i^2 = -1$}\\
+ & + \quad\quad i\left(\sin(\alpha)\cos(\beta)+ \cos(\alpha)\sin(\beta)\right)  \tag*{Factor out $i$}\\	
+ & = \cos(\alpha + \beta) + i \sin(\alpha+\beta)  \tag*{Sum identities} \\
+ & = \operatorname{cis}(\alpha + \beta)  \tag*{Definition of `cis'}
+\end{align*}
+
+Putting this together with our earlier work, we get $zw = |z| |w| \operatorname{cis}(\alpha + \beta)$, as required.  
+
+\smallskip
+
+Moving right along, we next take aim at the Power Rule, better known  as DeMoivre's Theorem. (Compare this proof with the proof of the Power Rule in Theorem \ref{modprops}.) We proceed by induction on $n$. Let $P(n)$ be the sentence $z^{n} = |z|^{n} \operatorname{cis}(n \theta)$.  Then $P(1)$ is true, since $z^{1} = z = |z| \operatorname{cis}(\theta) = |z|^{1} \operatorname{cis}(1\cdot \theta)$.  We now assume $P(k)$ is true, that is, we assume  $z^{k} = |z|^{k} \operatorname{cis}(k \theta)$ for some $k \geq 1$. Our goal is to show that $P(k+1)$ is true, or that $z^{k+1} = |z|^{k+1} \operatorname{cis}((k+1)\theta)$. We have
+
+\begin{align*}
+z^{k+1} & =  z^{k} z  \tag*{Properties of Exponents} \\
+				& =  \left(|z|^{k} \operatorname{cis}(k \theta)\right) \left(|z| \operatorname{cis}(\theta)\right) \tag*{Induction Hypothesis}\\
+				& =  \left(|z|^k |z|\right) \operatorname{cis}(k \theta + \theta)  \tag*{Product Rule}\\
+				& =  |z|^{k+1} \operatorname{cis}((k+1)\theta) 
+\end{align*}
+
+Hence, assuming $P(k)$ is true, we have that $P(k+1)$ is true, so by the Principle of Mathematical Induction, $z^{n} = |z|^{n} \operatorname{cis}(n \theta)$ for all natural numbers $n$. 
+
+\smallskip
+
+The last property in Theorem \ref{prodquotpolarcomplex} to prove is the quotient rule.   Assuming $|w| \neq 0$ we have
+
+\begin{align*}
+\dfrac{z}{w} & =  \dfrac{|z| \operatorname{cis}(\alpha)}{|w| \operatorname{cis}(\beta)}  \\ [3pt]
+			 & =  \left( \dfrac{|z|}{|w|}\right) \dfrac{\cos(\alpha) + i \sin(\alpha)}{\cos(\beta) + i \sin(\beta)}
+\end{align*}
+						 
+Next, we multiply both the numerator and denominator of the right hand side by $(\cos(\beta) - i \sin(\beta))$ which is the complex conjugate of $(\cos(\beta) + i \sin(\beta))$ to get
+
+\[
+\dfrac{z}{w}	 =  \left( \dfrac{|z|}{|w|}\right) \dfrac{\cos(\alpha) + i \sin(\alpha)}{\cos(\beta) + i \sin(\beta)} \cdot \dfrac{\cos(\beta) - i \sin(\beta)}{\cos(\beta) - i \sin(\beta)} 
+\]
+
+If we let the numerator be $N = \left[\cos(\alpha) + i \sin(\alpha)\right] \left[\cos(\beta) - i \sin(\beta)\right]$ and simplify we get
+
+\begin{align*}
+N & = \left[\cos(\alpha) + i \sin(\alpha)\right] \left[\cos(\beta) - i \sin(\beta)\right]  \\ 
+  & =  \cos(\alpha)\cos(\beta)-i\cos(\alpha)\sin(\beta)\\
+  &\quad\quad\quad  + i \sin(\alpha)\cos(\beta) - i^2 \sin(\alpha)\sin(\beta)  \tag*{Expand} \\
+	& =  \left[\cos(\alpha)\cos(\beta)+\sin(\alpha)\sin(\beta)\right]\\
+	&\quad\quad\quad + i\left[\sin(\alpha)\cos(\beta) -\cos(\alpha)\sin(\beta)  \right]  \tag*{Rearrange and Factor} \\
+	& = \cos(\alpha - \beta) + i \sin(\alpha - \beta)   \tag*{Difference Identities}  \\
+	& =  \operatorname{cis}(\alpha - \beta) \tag*{Definition of `cis'} 
+\end{align*}
+	
+\medskip
+
+If we call the denominator $D$ then we get
+
+
+\begin{align*}
+D & =  \left[\cos(\beta) + i\sin(\beta)\right]\left[\cos(\beta) - i\sin(\beta)\right]  \\ 
+  & =  \cos^{2}(\beta) - i\cos(\beta)\sin(\beta)\\
+  &\quad\quad\quad  + i\cos(\beta)\sin(\beta) - i^2 \sin^{2}(\beta)  \tag*{Expand}  \\
+  & =  \cos^{2}(\beta) - i^2 \sin^{2}(\beta)  \tag*{Simplify}  \\
+  & =  \cos^{2}(\beta) + \sin^{2}(\beta)   \tag*{Again, $i^{2} = -1$}\\
+  & =  	1   \tag*{Pythagorean Identity}
+\end{align*}
+
+
+\medskip
+																										 
+Putting it all together, we get
+
+\begin{align*}
+\dfrac{z}{w} & =  \left( \dfrac{|z|}{|w|}\right) \dfrac{\cos(\alpha) + i \sin(\alpha)}{\cos(\beta) + i \sin(\beta)} \cdot \dfrac{\cos(\beta) - i \sin(\beta)}{\cos(\beta) - i \sin(\beta)}  \\[3pt]
+						 & =  \left( \dfrac{|z|}{|w|}\right) \dfrac{\operatorname{cis}(\alpha - \beta)}{1}    \\[3pt]	 
+						 & =   \dfrac{|z|}{|w|} \operatorname{cis}(\alpha - \beta)
+\end{align*}
+and we are done.  The next example makes good use of Theorem \ref{prodquotpolarcomplex}.
+
+\medskip
+
+\example{polararithmeticex}{Complex arithmetic using the polar form}{ Let $z = 2\sqrt{3} + 2i$ and $w = -1 + i\sqrt{3}$.  Use Theorem \ref{prodquotpolarcomplex} to find the following.
+
+\begin{multicols}{3}
+
+\begin{enumerate}
+
+\item $zw$
+
+\item  $w^5$
+
+\item $\dfrac{z}{w}$
+
+\end{enumerate}
+
+\end{multicols}
+
+Write your final answers in rectangular form.}
+{In order to use Theorem \ref{prodquotpolarcomplex}, we need to write $z$ and $w$ in polar form.  For $z=2\sqrt{3} + 2i$, we find $|z| = \sqrt{(2\sqrt{3})^2 + (2)^2} = \sqrt{16} = 4$.  If $\theta \in \operatorname{arg}(z)$, we know $\tan(\theta) = \frac{\operatorname{Im}(z)}{\operatorname{Re}(z)} = \frac{2}{2\sqrt{3}} = \frac{\sqrt{3}}{3}$.  Since $z$ lies in Quadrant I, we have $\theta = \frac{\pi}{6} + 2\pi k$ for integers $k$.  Hence, $z = 4 \operatorname{cis}\left(\frac{\pi}{6}\right)$. For $w = -1 + i\sqrt{3}$, we have $|w| = \sqrt{(-1)^2+(\sqrt{3})^2} = 2$.  For an argument $\theta$ of $w$, we have $\tan(\theta) = \frac{\sqrt{3}}{-1} = -\sqrt{3}$.  Since $w$ lies in Quadrant II,  $\theta = \frac{2\pi}{3} + 2\pi k$ for integers $k$ and $w = 2\operatorname{cis}\left(\frac{2\pi}{3}\right)$.  We can now proceed.
+
+\begin{enumerate}
+
+\item  We get $zw = \left(4 \operatorname{cis}\left(\frac{\pi}{6}\right)\right) \left(2\operatorname{cis}\left(\frac{2\pi}{3}\right)\right) = 8\operatorname{cis}\left(\frac{\pi}{6} + \frac{2\pi}{3}\right) = 8\operatorname{cis}\left(\frac{5\pi}{6}\right) = 8\left[ \cos\left(\frac{5\pi}{6}\right) + i\sin\left(\frac{5\pi}{6}\right) \right]$.  After simplifying, we get $zw = -4\sqrt{3} + 4i$.
+
+\item We use DeMoivre's Theorem which yields 
+\[
+w^{5} = \left[2\operatorname{cis}\left(\frac{2\pi}{3}\right)\right]^{5} = 2^{5} \operatorname{cis} \left(5\cdot \frac{2\pi}{3}\right) = 32 \operatorname{cis}\left(\frac{10\pi}{3}\right).
+\]
+Since $\frac{10\pi}{3}$ is coterminal with $\frac{4\pi}{3}$, we get
+\[
+w^{5} = 32\left[ \cos\left(\frac{4\pi}{3}\right) + i\sin\left(\frac{4\pi}{3}\right) \right] = -16-16i\sqrt{3}.
+\]
+
+\item  Last, but not least, we have $\dfrac{z}{w} = \frac{4 \operatorname{cis}\left(\frac{\pi}{6}\right)}{2\operatorname{cis}\left(\frac{2\pi}{3}\right)} = \frac{4}{2} \operatorname{cis}\left(\frac{\pi}{6} - \frac{2\pi}{3}\right) = 2\operatorname{cis}\left(-\frac{\pi}{2}\right)$.  Since $-\frac{\pi}{2}$ is a quadrantal angle, we can `see' the rectangular form by moving out $2$ units along the positive real axis, then rotating $\frac{\pi}{2}$ radians \textit{clockwise} to arrive at the point $2$ units below $0$ on the imaginary axis.  The long and short of it is that $\frac{z}{w} = -2i$. 
+\end{enumerate}
+}
+
+\medskip
+
+Some remarks are in order.  First, the reader may not be sold on using the polar form of complex numbers to multiply complex numbers -- especially if they aren't given in polar form to begin with. Indeed, a lot of work was needed to convert the numbers $z$ and $w$ in Example \ref{polararithmeticex} into polar form, compute their product, and convert back to rectangular form -- certainly more work than is required to multiply out $zw =  (2\sqrt{3} + 2i)(-1 + i\sqrt{3})$ the old-fashioned way.  However, Theorem \ref{prodquotpolarcomplex} pays huge dividends when computing powers of complex numbers.  Consider how we computed $w^{5}$ above and compare that to using the Binomial Theorem to accomplish the same feat by expanding  $(-1 + i\sqrt{3})^{5}$.  Division is tricky in the best of times, and we saved ourselves a lot of time and effort using Theorem \ref{prodquotpolarcomplex} to find and simplify $\frac{z}{w}$ using their polar forms as opposed to starting with $\frac{2\sqrt{3} + 2i}{-1 + i\sqrt{3}}$, rationalizing the denominator, and so forth.    
+
+\smallskip
+
+There is geometric reason for studying these polar forms and we would be derelict in our duties if we did not mention the Geometry hidden in Theorem \ref{prodquotpolarcomplex}.  Take the product rule, for instance. If $z = |z| \operatorname{cis}(\alpha)$ and $w = |w| \operatorname{cis}(\beta)$, the formula $zw = |z||w| \operatorname{cis}(\alpha + \beta)$ can be viewed geometrically as a two step process.  The multiplication of $|z|$ by $|w|$ can be interpreted as magnifying the distance $|z|$ from $z$ to $0$, by the factor $|w|$.  (Assuming $|w| > 1$.) Adding the argument of $w$ to the argument of $z$ can be interpreted geometrically as a rotation of $\beta$ radians counter-clockwise. (Assuming $\beta > 0$.) Focusing on $z$ and $w$ from Example \ref{polararithmeticex}, we can arrive at the product $zw$ by plotting $z$, doubling its distance from $0$ (since $|w| = 2$), and rotating $\frac{2\pi}{3}$ radians counter-clockwise. The sequence of diagrams in Figure \ref{fig:polarcomp} below attempts to describe this process geometrically.
+
+\medskip
+
+\ifthenelse{\isodd{\thepage}}{}{\hskip-0.9\marginparwidth}
+\begin{minipage}{\textwidth+\marginparwidth}
+\begin{center}
+\begin{tabular}{cc}
+\myincludegraphics{figures/AppExtGraphics/PolarComplex-4}
+& \myincludegraphics{figures/AppExtGraphics/PolarComplex-5}\\
+{\scriptsize Multiplying $z$ by $|w| = 2$}. &
+{\scriptsize Rotating counter-clockwise by $\operatorname{Arg}(w) = \frac{2\pi}{3}$ radians.} \\
+\end{tabular}
+\end{center}
+\captionsetup{type=figure}
+\caption{Visualizing $zw$ for $z = 4\operatorname{cis}\left(\frac{\pi}{6}\right)$ and $w = 2 \operatorname{cis}\left(\frac{2\pi}{3}\right)$.}\label{fig:polarcomp}
+\end{minipage}
+
+\medskip
+
+We may also visualize division similarly. Here, the formula  $\frac{z}{w} = \frac{|z|}{|w|} \operatorname{cis}(\alpha - \beta)$ may be interpreted as shrinking (again, assuming $|w| > 1$) the distance from $0$ to $z$ by the factor $|w|$, followed up by a \textit{clockwise}  rotation (again, assuming $\beta > 0$) of $\beta$ radians.  In the case of $z$ and $w$ from Example \ref{polararithmeticex}, we arrive at $\frac{z}{w}$ by first halving the distance from $0$ to $z$, then rotating clockwise $\frac{2\pi}{3}$ radians.
+
+\medskip
+%\noindent\ifthenelse{\isodd{\thepage}}{}{\hskip-\marginparwidth}
+\noindent\begin{minipage}{\textwidth}
+\begin{center}
+\begin{tabular}{cc}
+\myincludegraphics{figures/AppExtGraphics/PolarComplex-6} & 
+\myincludegraphics{figures/AppExtGraphics/PolarComplex-7}\\
+{\scriptsize Dividing $z$ by $|w| = 2$}. &
+{\scriptsize Rotating clockwise by $\operatorname{Arg}(w) = \frac{2\pi}{3}$ radians.} \\
+\end{tabular}
+\end{center}
+\captionsetup{type=figure}
+\caption{Visualizing $\dfrac{z}{w}$ for $z = 4\operatorname{cis}\left(\frac{\pi}{6}\right)$ and $w = 2 \operatorname{cis}\left(\frac{2\pi}{3}\right)$.}
+\end{minipage}
+
+\medskip
+
+Our last goal of the section is to reverse DeMoivre's Theorem to extract roots of complex numbers.
+
+\smallskip
+
+\definition{nthrootcomplex}{Complex $n^{\textrm{th}}$ roots}{ Let $z$ and $w$ be complex numbers.  If there is a natural number $n$ such that $w^{n} = z$, then $w$ is an $n^{\textrm th}$ \sword{root} of $z$. \index{$n^{\textrm{th}}$ root ! of a complex number} \index{complex number ! $n^{\textrm{th}}$ root} 
+}
+
+\smallskip
+
+Unlike Definition \ref{principalnthrootdefn2} in Section \ref{AlgebraicFunctions}, we do not specify one particular \textit{prinicpal} $n^{\text{th}}$ root, hence the use of the indefinite article `an' as in `an $n^{\text{th}}$ root of $z$'.  Using this definition, both $4$ and $-4$ are square roots of $16$, while $\sqrt{16}$ means the principal square root of $16$ as in $\sqrt{16}= 4$.  Suppose we wish to find all complex third (cube) roots of $8$.  Algebraically, we are trying to solve $w^{3} = 8$.  We know that there is only one \textit{real} solution to this equation, namely $w = \sqrt[3]{8} = 2$, but if we take the time to rewrite this equation as $w^3 - 8 = 0$ and factor, we get $(w-2)\left(w^2 + 2w + 4\right) = 0$.  The quadratic factor gives two more cube roots $w = -1 \pm i \sqrt{3}$, for a total of three cube roots of $8$. In accordance with Theorem \ref{complexfactorization}, since the degree of $p(w) = w^3 -8$ is three, there are three complex zeros, counting multiplicity.  Since we have found three distinct zeros, we know these are all of the zeros, so there are exactly three distinct cube roots of $8$.  Let us now solve this same problem using the machinery developed in this section.  To do so, we express $z = 8$ in polar form. Since $z=8$ lies $8$ units away on the positive real axis, we get $z = 8 \operatorname{cis}(0)$.  If we let $w = |w| \operatorname{cis}(\alpha)$ be a polar form of $w$, the equation $w^3 = 8$ becomes
+
+\begin{align*}
+w^3 & =  8  \\
+\left(|w| \operatorname{cis}(\alpha)\right)^3 & = 8 \operatorname{cis}(0)  \\
+|w|^3 \operatorname{cis}(3\alpha) & =  8 \operatorname{cis}(0)  \tag*{DeMoivre's Theorem} \\
+\end{align*}
+
+The complex number on the left hand side of the equation corresponds to the point with polar coordinates $\left(|w|^3, 3\alpha\right)$,   while the complex number on the right hand side corresponds to the point with polar coordinates $(8,0)$.  Since $|w| \geq 0$, so is $|w|^3$, which means  $\left(|w|^3, 3\alpha\right)$ and $(8,0)$ are two polar representations corresponding to the same complex number, both with positive $r$ values.  From Section \ref{IntroPolar}, we know $|w|^3 = 8$ and $3\alpha = 0 + 2\pi k$ for integers $k$.  Since $|w|$ is a real number, we solve $|w|^3 = 8$ by extracting the principal cube root to get  $|w| = \sqrt[3]{8} = 2$.  As for $\alpha$, we get  $\alpha = \frac{2\pi k}{3}$ for integers $k$.  This produces three distinct points with polar coordinates corresponding to $k = 0$, $1$ and $2$: specifically $(2,0)$, $\left(2, \frac{2\pi}{3}\right)$ and $\left(2, \frac{4\pi}{3}\right)$.  These correspond to the complex numbers  $w_{0} = 2 \operatorname{cis}(0)$, $w_{1} = 2 \operatorname{cis}\left(\frac{2\pi}{3}\right)$ and $w_{2} = 2 \operatorname{cis}\left(\frac{4\pi}{3}\right)$, respectively.  Writing these out in rectangular form yields $w_{0} = 2$, $w_{1} = -1 + i\sqrt{3}$ and $w_{2} = -1-i\sqrt{3}$. While this process seems a tad more involved than our previous factoring approach, this procedure can be generalized to find, for example, all of the fifth roots of $32$. (Try using Chapter \ref{Polynomials} techniques on that!) If we start with a generic complex number in polar form $z = |z| \operatorname{cis}(\theta)$ and solve $w^{n} = z$ in the same manner as above, we arrive at the following theorem.
+
+\smallskip
+
+\theorem{nthrootscomplexthm}{The $n^{\textrm{th}}$ roots of a complex number}{ Let $z \neq 0$ be a complex number with polar form $z = r\operatorname{cis}(\theta)$. For each natural number $n$, $z$ has $n$ distinct $n^{\text{th}}$ roots, which we denote by $w_{0}$, $w_{1}$, \ldots, $w_{n-1}$, and they are given by the formula \index{$n^{\textrm{th}}$ root ! of a complex number} \index{complex number ! $n^{\textrm{th}}$ root} 
+
+\[ w_{k} = \sqrt[n]{r}\operatorname{cis}\left(\frac{\theta}{n} + \frac{2\pi}{n} k \right) \]
+}
+
+\smallskip
+
+The proof of Theorem \ref{nthrootscomplexthm} breaks into to two parts:  first, showing that each $w_{k}$ is an $n^{\text{th}}$ root, and second, showing that the set  $\left\{ w_{k} \, | \, k = 0, 1, \ldots, (n-1)\right\}$ consists of $n$ different  complex numbers.  To show $w_{k}$ is an  $n^{\text{th}}$ root of $z$, we use DeMoivre's Theorem to show $\left(w_{k}\right)^n = z$.
+
+\begin{align*}
+\left(w_{k}\right)^n & =  \left(\sqrt[n]{r}\operatorname{cis}\left(\frac{\theta}{n} + \frac{2\pi}{n} k \right)\right)^n  \\ 																	 & =  \left(\sqrt[n]{r}\right)^{n} \operatorname{cis}\left( n \cdot \left[\frac{\theta}{n} + \frac{2\pi}{n} k \right] \right)  \tag*{DeMoivre's Theorem}\\ 													 & =  r \operatorname{cis}\left(\theta + 2\pi k\right)
+\end{align*}
+																	 
+Since $k$ is a whole number, $\cos(\theta + 2\pi k) = \cos(\theta)$ and $\sin(\theta + 2\pi k) = \sin(\theta)$. Hence, it follows that $\operatorname{cis}(\theta + 2\pi k) = \operatorname{cis}(\theta)$, so $\left(w_{k}\right)^n = r \operatorname{cis}(\theta) = z$, as required.  To show that the formula in Theorem  \ref{nthrootscomplexthm} generates $n$ distinct numbers, we assume $n \geq 2$ (or else there is nothing to prove) and note that the modulus of each of the  $w_{k}$  is the same, namely $\sqrt[n]{r}$.  Therefore, the only way any two of these polar forms correspond to  the same number is if their arguments are coterminal -- that is, if the arguments differ by an integer multiple of $2\pi$. Suppose $k$ and $j$ are whole numbers between $0$ and $(n-1)$, inclusive,  with $k \neq j$.  Since $k$ and $j$ are different, let's assume for the sake of argument that  $k > j$.  Then $\left( \frac{\theta}{n} + \frac{2\pi}{n} k \right)  - \left( \frac{\theta}{n} + \frac{2\pi}{n} j \right) = 2\pi \left(\frac{k-j}{n}\right)$. For this to be an integer multiple of $2\pi$, $(k-j)$ must be a multiple of $n$.  But because of the restrictions on $k$ and $j$, $0 < k - j \leq n-1$. (Think this through.)  Hence, $(k-j)$ is a positive number less  than $n$, so it cannot be a multiple of $n$.  As a result, $w_{k}$ and $w_{j}$ are different complex numbers, and we are done.  By Theorem  \ref{complexfactorization}, we know there at most $n$ distinct solutions to $w^{n} = z$, and we have just found all of them.   We illustrate Theorem \ref{nthrootscomplexthm} in the next example.
+
+\medskip
+
+\example{nthrootscomplexex}{Finding complex roots}{  Use Theorem \ref{nthrootscomplexthm} to find the following:
+
+\begin{enumerate}
+
+\item  both square roots of $z = -2  + 2i\sqrt{3}$
+
+\item  \label{fourthrootsneg16} the four fourth roots of $z = -16$
+
+\item  \label{halfanglecuberoot} the three cube roots of $z = \sqrt{2} + i \sqrt{2}$
+
+\item  \label{calculatorfifthroot} the five fifth roots of $z = 1$.
+
+\end{enumerate}}
+{
+\begin{enumerate}
+
+\item  We start by writing $z= - 2 + 2i\sqrt{3} = 4 \operatorname{cis}\left(\frac{2\pi}{3}\right)$.  To use Theorem \ref{nthrootscomplexthm}, we identify $r =4$,  $\theta = \frac{2\pi}{3}$ and $n=2$.  We know that $z$ has two square roots, and in keeping with the notation in Theorem \ref{nthrootscomplexthm}, we'll call them  $w_{0}$ and $w_{1}$.  We get $w_{0} = \sqrt{4} \operatorname{cis}\left(\frac{(2\pi/3)}{2} + \frac{2\pi}{2} (0)\right) = 2\operatorname{cis}\left(\frac{\pi}{3}\right)$ and $w_{1} = \sqrt{4} \operatorname{cis}\left(\frac{(2\pi/3)}{2} + \frac{2\pi}{2} (1)\right) = 2\operatorname{cis}\left(\frac{4\pi}{3}\right)$.  In rectangular form, the two square roots of $z$ are $w_{0} = 1+i\sqrt{3}$ and $w_{1} = -1-i\sqrt{3}$.  We can check our answers by squaring them and showing that we get $z= -2 + 2i\sqrt{3}$. We've plotted the position of the two square roots along the circle $r=2$ in Figure \ref{fig:polarroot1}.
+
+\mfigure{.82}{The two square roots of $z=-2+2\sqrt{3}i$}{fig:polarroot1}{figures/AppExtGraphics/PolarComplex01}
+
+\item  Proceeding as above, we get $z = -16 = 16 \operatorname{cis}(\pi)$.  With $r = 16$, $\theta = \pi$ and $n = 4$, we get the four fourth roots of $z$ to be  $w_{0} = \sqrt[4]{16} \operatorname{cis}\left(\frac{\pi}{4} + \frac{2\pi}{4} (0)\right) = 2\operatorname{cis}\left(\frac{\pi}{4}\right)$, $w_{1} = \sqrt[4]{16} \operatorname{cis}\left(\frac{\pi}{4} + \frac{2\pi}{4} (1)\right) = 2\operatorname{cis}\left(\frac{3\pi}{4}\right)$, $w_{2} = \sqrt[4]{16} \operatorname{cis}\left(\frac{\pi}{4} + \frac{2\pi}{4} (2)\right) = 2\operatorname{cis}\left(\frac{5\pi}{4}\right)$ and $w_{3} = \sqrt[4]{16} \operatorname{cis}\left(\frac{\pi}{4} + \frac{2\pi}{4} (3)\right) = 2\operatorname{cis}\left(\frac{7\pi}{4}\right)$.  Converting these to rectangular form gives $w_{0} = \sqrt{2} + i\sqrt{2}$,  $w_{1} = -\sqrt{2} + i\sqrt{2}$,  $w_{2} = -\sqrt{2} - i\sqrt{2}$ and  $w_{3} = \sqrt{2} - i\sqrt{2}$. We've plotted the four roots in Figure \ref{fig:polarroot2}. Note how the roots are placed symmetrically about the circle $r=2$.
+
+\mfigure{.61}{The four fourth roots of $z=-16$}{fig:polarroot2}{figures/AppExtGraphics/PolarComplex02}
+
+\item  For $z = \sqrt{2} + i \sqrt{2}$, we have $z = 2\operatorname{cis}\left(\frac{\pi}{4}\right)$.  With $r = 2$, $\theta = \frac{\pi}{4}$ and $n =3$ the usual computations yield $w_{0} = \sqrt[3]{2} \operatorname{cis}\left(\frac{\pi}{12}\right)$,  $w_{1} = \sqrt[3]{2} \operatorname{cis}\left(\frac{9\pi}{12}\right) = \sqrt[3]{2} \operatorname{cis}\left(\frac{3\pi}{4}\right) $ and  $w_{2} = \sqrt[3]{2} \operatorname{cis}\left(\frac{17\pi}{12}\right)$.  If we were to  convert these to rectangular form, we would need to use either the Sum and Difference Identities in Theorem \ref{circularsumdifference} or the Half-Angle Identities in Theorem \ref{halfangle} to evaluate $w_{0}$ and  $w_{2}$.  Since we are not explicitly told to do so, we leave this as a good, but messy, exercise, and plot the points in Figure \ref{fig:polarroot3}.
+
+\mfigure{.39}{The three third roots of $z=\sqrt{2}+i\sqrt{2}$}{fig:polarroot3}{figures/AppExtGraphics/PolarComplex03}
+
+\item  To find the five fifth roots of $1$, we write $1 = 1 \operatorname{cis}(0)$.  We have $r = 1$, $\theta = 0$ and $n = 5$. Since $\sqrt[5]{1} = 1$, the roots are  $w_{0} = \operatorname{cis}(0) = 1$, $w_{1} = \operatorname{cis}\left(\frac{2\pi}{5}\right)$, $w_{2} = \operatorname{cis}\left(\frac{4\pi}{5}\right)$, $w_{3} = \operatorname{cis}\left(\frac{6\pi}{5}\right)$ and $w_{4} = \operatorname{cis}\left(\frac{8\pi}{5}\right)$.  The situation here is even graver than in the previous example, since we have not developed any identities to help us determine the cosine or sine of $\frac{2\pi}{5}$.  At this stage, we could approximate our answers using a calculator, and we leave this as an exercise. Once more, we plot the roots, which in this case all lie on the unit circle.
+
+\mfigure{.17}{The five fifth roots of $1$}{fig:polarroot4}{figures/AppExtGraphics/PolarComplex04}
+
+\end{enumerate}
+}
+
+\medskip
+
+Notice the geometric interpretation given in Figures \ref{fig:polarroot1}-\ref{fig:polarroot4}.  Essentially,  Theorem \ref{nthrootscomplexthm} says that to find the $n^{\text{th}}$ roots of a complex number,  we first take the $n^{\text{th}}$ root of the modulus and divide the argument by $n$.  This gives the first root  $w_{0}$. Each successive root is found by adding  $\frac{2\pi}{n}$ to the argument, which amounts to rotating $w_{0}$ by $\frac{2\pi}{n}$ radians.  This results in $n$ roots, spaced equally around the complex plane.  
+
+We have only glimpsed at the beauty of the complex numbers in this section.  The complex plane is without a doubt one of the most important mathematical constructs ever devised.  Coupled with Calculus, it is the venue for incredibly important Science and Engineering applications.  For now, the following exercises will have to suffice.
+
+\printexercises{exercises/08_05_exercises}

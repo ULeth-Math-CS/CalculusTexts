@@ -1,0 +1,568 @@
+\section{Linear and Quadratic Functions}
+\subsection{Linear Functions}
+
+\label{LinearFunctions}
+
+We now begin the study of families of functions.  Our first family, linear functions, are old friends as we shall soon see.  Recall from Geometry that two distinct points in the plane determine a unique line containing those points, as indicated in Figure \ref{fig:linfun1}.
+
+\mfigure{.75}{The line between two points $P$ and $Q$}{fig:linfun1}{figures/LinearQuadraticGraphics/LinearFunctions-1}
+
+To give a sense of the `steepness' of the line, we recall that we can compute the \sword{slope} of the line using the formula below.
+
+\smallskip
+
+\definition{slope}{Slope}{
+The \index{slope ! definition} \sword{slope} $m$ of the line containing the points $P\left(x_{0}, y_{0}\right)$ and $Q\left(x_{1}, y_{1}\right)$ is: \index{line ! slope of} \index{slope ! of a line}
+
+\[ m  = \dfrac{y_{1} - y_{0}}{x_{1} - x_{0}},\]
+
+provided $x_{1} \neq x_{0}$.
+}
+
+\smallskip
+
+A couple of notes about Definition \ref{slope} are in order.  First, don't ask why we use the letter `$m$' to represent slope.  There are many explanations out there, but apparently no one really knows for sure. Secondly, the stipulation  $x_{1} \neq x_{0}$ ensures that we aren't trying to divide by zero.  The reader is invited to pause to think about what is happening geometrically; the anxious reader can skip along to the next example.
+
+\mnote{.5}{See  \href{http://mathforum.org/dr.math/faq/faq.terms.html}{\underline{www.mathforum.org}} or \href{http://mathworld.wolfram.com/Slope.html}{\underline{www.mathworld.wolfram.com}} for discussions on the use of the letter $m$ to indicate slope.}
+
+\medskip
+
+\example{slopeex}{Finding the slope of a line}{
+ Find the slope of the line containing the following pairs of points, if it exists.  Plot each pair of points and the line containing them.
+
+\begin{multicols}{2}
+\begin{enumerate}
+
+\item  $P(0,0)$, $Q(2,4)$
+\item  $P(-2,3)$, $Q(2,-3)$
+
+\setcounter{HW}{\value{enumi}}
+\end{enumerate}
+\end{multicols}
+
+\begin{multicols}{2}
+\begin{enumerate}
+\setcounter{enumi}{\value{HW}}
+
+
+\item  $P(-3,2)$, $Q(4,2)$
+\item  $P(2,3)$, $Q(2,-1)$
+
+\setcounter{HW}{\value{enumi}}
+\end{enumerate}
+\end{multicols}
+}
+{
+In each of these examples, we apply the slope formula, from Definition \ref{slope}.
+
+\begin{enumerate}
+
+\item  \begin{tabular}{m{2.5in}m{2.5in}} $ m = \dfrac{4 - 0}{2 - 0} = \dfrac{4}{2} = 2$ & 
+
+\myincludegraphics{figures/LinearQuadraticGraphics/LinearFunctions-2} \\
+
+\end{tabular}
+
+\item  \begin{tabular}{m{2.5in}m{2.5in}} $ m = \dfrac{-3 - 3}{2 - (-2)} = \dfrac{-6}{4} = -\dfrac{3}{2}$ &
+
+\myincludegraphics{figures/LinearQuadraticGraphics/LinearFunctions-4}\\
+
+\end{tabular}
+
+\item  \begin{tabular}{m{2.5in}m{2.5in}} $ m = \dfrac{2 - 2}{4 - (-3)} = \dfrac{0}{7} = 0$ &
+
+\myincludegraphics[scale=0.8]{figures/LinearQuadraticGraphics/LinearFunctions-5} \\
+
+\end{tabular}
+
+\item  \begin{tabular}{m{3in}m{2in}} $ m = \dfrac{-1 - 3}{2 - 2} = \dfrac{-4}{0}$, which is undefined &
+
+\myincludegraphics{figures/LinearQuadraticGraphics/LinearFunctions-6} \\
+
+\end{tabular}
+
+\end{enumerate}
+} 
+
+\medskip
+
+You may recall from high school that slope can be described as the ratio `$\frac{\mbox{\small rise}}{\mbox{\small run}}$'.  For example, in the second part of Example \ref{slopeex}, we found the slope to be $\frac{1}{2}$.  We can interpret this as a rise of 1 unit upward for every $2$ units to the right we travel along the line, as shown in Figure \ref{fig:riserun}.
+
+\mfigure{.25}{Slope as ``rise over run''}{fig:riserun}{figures/LinearQuadraticGraphics/LinearFunctions-8}
+
+
+Using more formal notation, given points $\left(x_{0}, y_{0}\right)$ and $\left(x_{1}, y_{1}\right)$, we use the Greek letter delta `$\Delta$' to write $\Delta y = y_{1} - y_{0}$ and $\Delta x = x_{1} - x_{0}$.  In most scientific circles, the symbol $\Delta$ means `change in'.  
+
+\smallskip
+
+Hence, we may write \[ m = \dfrac{\Delta y}{\Delta x},\] which describes the slope as the \index{slope ! rate of change}\index{rate of change ! slope of a line}\sword{rate of change} of $y$ with respect to $x$.  
+Given a slope $m$ and a point $(x_0,y_0)$ on a line, suppose $(x,y)$ is another point on our line, as in Figure \ref{fig:linfun2}.
+Definition \ref{slope} yields
+\begin{align*} 
+	m & = \dfrac{y - y_{0}}{x-x_{0}} \\
+	m\left(x - x_{0}\right) & =  y - y_{0} \\
+	y - y_{0} & = m\left(x - x_{0}\right)
+\end{align*}
+
+We have just derived the \textbf{point-slope form} of a line.
+
+
+
+\smallskip
+
+\keyidea{pointslope}{The point-slope form of a line}{
+The \index{line ! point-slope form}\sword{point-slope form} of the equation of a line with slope $m$ containing the point $\left(x_{0}, y_{0}\right)$ is the equation $y - y_{0}  =  m\left(x - x_{0}\right)$. \index{point-slope form of a line}
+}
+
+\medskip
+
+\mfigure{.8}{Deriving the point-slope formula}{fig:linfun2}{figures/LinearQuadraticGraphics/LinearFunctions-9}
+
+\example{ex_pointslope}{Using the point-slope form}{
+Write the equation of the line containing the points $(-1,3)$ and $(2,1)$.
+}
+{
+In order to use Key Idea \ref{pointslope} we need to find the slope of the line in question so we use Definition \ref{slope} to get $m = \frac{\Delta y}{\Delta x} = \frac{1 - 3}{2 - (-1)} = -\frac{2}{3}$.  We are spoiled for choice for a point $\left(x_{0}, y_{0}\right)$. We'll use $(-1,3)$ and leave it to the reader to check that using $(2,1)$ results in the same equation.  Substituting into the point-slope form of the line, we get 
+\begin{align*}
+	y - y_{0} & = m\left(x - x_{0}\right)\\
+	y - 3 & =  -\dfrac{2}{3} \left(x - (-1)\right)\\[2pt]
+	y - 3 & =  -\dfrac{2}{3} \left(x +1 \right)\\[2pt]
+	y - 3 & =  -\dfrac{2}{3}x - \dfrac{2}{3}\\[2pt]
+	y     & =  -\dfrac{2}{3} x + \dfrac{7}{3}. 
+\end{align*}
+}
+
+\medskip
+
+In simplifying the equation of the line in the previous example, we produced another form of a line, the \sword{slope-intercept form}.  This is the familiar $y = mx + b$ form you have probably seen in high school. The `intercept' in `slope-intercept' comes from the fact that if we set $x=0$, we get $y = b$.  In other words, the $y$-intercept of the line $y = mx + b$ is $(0,b)$.
+
+\smallskip
+
+\keyidea{slopeintercept}{Slope intercept form of a line}{
+The \index{line ! slope-intercept form}\sword{slope-intercept form} of the line with slope $m$ and $y$-intercept $(0,b)$ is the equation $y  =  mx + b.$ \index{slope-intercept form of a line}
+}
+
+\smallskip
+
+Note that if we have slope $m = 0$, we get the equation $y = b$.  The formula given in Key Idea \ref{slopeintercept} can be used to describe all lines except vertical lines.  All lines except vertical lines are functions (Why is this?) so we have finally reached a good point to introduce \sword{linear functions}.
+
+\smallskip
+
+\definition{linearfunction}{Linear function}{
+A \index{function ! linear}\index{line ! linear function}\index{linear function}\sword{linear function} is a function of the form \[ f(x) = mx + b,\] where $m$ and $b$ are real numbers with $m \neq 0$.  The domain of a linear function is $(-\infty, \infty)$.
+}
+
+\smallskip
+
+For the case $m=0$, we get $f(x) = b$.  These are given their own classification.
+
+\smallskip
+
+\definition{constantfunction}{Constant function}{
+A \index{function ! constant}\index{constant function ! as a horizontal line}\sword{constant function} is a function of the form \[ f(x) =  b,\] where $b$ is real number.  The domain of a constant function is $(-\infty, \infty)$.
+}
+
+\smallskip
+
+Recall that to graph a function, $f$, we graph the equation $y=f(x)$. Hence, the graph of a linear function is a line with slope $m$ and $y$-intercept $(0,b)$; the graph of a constant function is a horizontal line (a line with slope $m = 0$) and a $y$-intercept of $(0,b)$.  A line with positive slope is called an increasing line because a linear function with $m > 0$ is an increasing function.  Similarly, a line with a negative slope is called a decreasing line because a linear function with $m < 0$ is a decreasing function.  And horizontal lines were called constant because, well, we hope you've already made the connection.  
+
+\medskip
+
+\example{ex_linfungraph}{Graphing linear functions}{
+Graph the following functions.  Identify the slope and $y$-intercept.
+
+\begin{multicols}{2}
+
+\begin{enumerate}
+
+\item  $f(x) = 3$
+
+\item  $f(x) = 3x - 1$
+
+\item  $f(x) = \dfrac{3 - 2x}{4}$
+
+\item  $f(x) = \dfrac{x^2 - 4}{x-2}$
+
+\end{enumerate}
+
+\end{multicols}
+}
+{
+\begin{enumerate}
+
+\item To graph $f(x) = 3$, we graph $y=3$.  This is a horizontal line ($m=0$) through $(0,3)$: see Figure \ref{fig:linfun3}.
+
+\mfigure{.35}{The graph of $f(x)=3$}{fig:linfun3}{figures/LinearQuadraticGraphics/LinearFunctions-10}
+
+\item The graph of $f(x) = 3x-1$ is the graph of the line $y = 3x-1$.  Comparison of this equation with Equation \ref{slopeintercept} yields $m=3$ and $b = -1$.  Hence, our slope is $3$ and our $y$-intercept is $(0,-1)$.  To get another point on the line, we can plot $(1,f(1)) = (1,2)$.  Constructing the line through these points gives us Figure \ref{fig:linfun4}.
+
+\mfigure{.18}{The graph of $f(x)=3x-1$}{fig:linfun4}{figures/LinearQuadraticGraphics/LinearFunctions-11}
+
+\item  At first glance, the function $f(x) = \dfrac{3 - 2x}{4}$ does not fit the form in Definition \ref{linearfunction} but after some rearranging we get $f(x) = \frac{3 - 2x}{4} = \frac{3}{4} - \frac{2x}{4} = -\frac{1}{2} x + \frac{3}{4}$.  We identify $m = -\frac{1}{2}$ and $b = \frac{3}{4}$.  Hence, our graph is a line with a slope of $-\frac{1}{2}$ and a $y$-intercept of $\left(0, \frac{3}{4}\right)$.  Plotting an additional point, we can choose $(1,f(1))$ to get $\left(1, \frac{1}{4}\right)$: see Figure \ref{fig:linfun5}.
+
+\mfigure{.8}{The graph of $f(x)=\dfrac{3-2x}{4}$}{fig:linfun5}{figures/LinearQuadraticGraphics/LinearFunctions-12}
+
+\item  If we simplify the expression for $f$, we get
+
+\[ f(x) = \dfrac{x^2-4}{x-2} = \dfrac{\cancel{(x-2)}(x+2)}{\cancel{(x-2)}} = x+2.\]
+
+If we were to state $f(x) = x+2$, we would be committing a sin of omission.  Remember, to find the domain of a function, we do so \textbf{before} we simplify! In this case, $f$ has big problems when $x=2$, and as such,  the domain of $f$ is $(-\infty, 2) \cup (2,\infty)$.  To indicate this, we write $f(x) = x+2,$ $x \neq 2$.  So, except at $x=2$, we graph the line $y = x+2$.  The slope $m =1$ and the $y$-intercept is $(0,2)$.  A second point on the graph is $(1,f(1)) = (1,3)$.  Since our function $f$ is not defined at $x=2$, we put an open circle at the point that would be on the line $y=x+2$ when $x=2$, namely $(2,4)$, as shown in Figure \ref{fig:linfun6}.
+\end{enumerate}
+}
+
+\medskip
+
+\mfigure{.6}{The graph of $f(x)=\dfrac{x^2-4}{x-2}$}{fig:linfun6}{figures/LinearQuadraticGraphics/LinearFunctions-13}
+
+The last two functions in the previous example showcase some of the difficulty in defining a linear function using the phrase `of the form' as in Definition \ref{linearfunction}, since some algebraic manipulations may be needed to rewrite a given function to match `the form'. Keep in mind that the domains of linear and constant functions are all real numbers $(-\infty, \infty)$, so while $f(x) = \frac{x^2-4}{x-2}$ simplified to a formula $f(x) = x+2$, $f$ is not considered a linear function since its domain excludes $x=2$.  However, we would consider \[f(x) = \dfrac{2x^2 + 2}{x^2+1}\] to be a constant function since its domain is all real numbers (Can you tell us why?) and \[ f(x) = \dfrac{2x^2 + 2}{x^2+1} = \dfrac{2\cancel{\left(x^2+1\right)}}{\cancel{\left(x^2+1\right)}} = 2.\]
+
+\newpage
+
+\subsection{Absolute Value Functions}
+\label{AbsoluteValueFunctions}
+Before we move on to quadratic functions, we pause to consider the absolute value. The absolute value function is an example of a \sword{piecewise}\index{function ! piecewise} function, given by different formulas on different parts of its domain. The absolute value function is in particular a \textit{piecewise linear} function, so we've chosen to place it between linear and quadratic functions.
+
+There are a few ways to describe what is meant by the absolute value $|x|$ of a real number $x$.  You may have been taught that $|x|$ is the distance from the real number $x$ to $0$ on the number line.  So, for example, $|5| = 5$ and $|-5| = 5$, since each is $5$ units from $0$ on the number line.
+
+\begin{center}
+
+\myincludegraphics[width=0.7\textwidth]{figures/LinearQuadraticGraphics/AbsoluteValueFunctions-1}
+
+\end{center}
+
+Another way to define absolute value is by the equation $|x| = \sqrt{x^2}$. Using this definition, we have $|5| = \sqrt{(5)^2} = \sqrt{25} = 5$ and $|-5| = \sqrt{(-5)^2} = \sqrt{25} = 5$.  The long and short of both of these procedures is that $|x|$ takes negative real numbers and assigns them to their positive counterparts while it leaves positive numbers alone.  This last description is the one we shall adopt, and is summarized in the following definition.
+
+\smallskip
+
+\definition{absolutevalue}{Absolute value function}{
+
+The \index{absolute value ! definition of}\index{function ! absolute value}\sword{absolute value} of a real number $x$, denoted $|x|$, is given by 
+\[
+ |x| = \begin{cases} -x, & \mbox{ if }  x < 0  \\
+ 					  x, & \mbox{ if }  x \geq 0 \\
+		\end{cases}
+\]
+}
+
+\smallskip
+
+In Definition \ref{absolutevalue}, we define $|x|$ using a piecewise-defined function.   To check that this definition agrees with what we previously understood as absolute value, note that since $5 \geq 0$, to find $|5|$ we use the rule $|x| = x$, so $|5|=5$.  Similarly, since $-5 < 0$, we use the rule $|x| = -x$, so that $|-5| = -(-5) = 5$.  This is one of the times when it's best to interpret the expression `$-x$' as `the opposite of $x$' as opposed to `negative $x$'.  Before we begin studying absolute value functions, we remind ourselves of the properties of absolute value.
+
+\smallskip
+
+\theorem{absolutevalueprops}{Properties of Absolute Value}{
+Let $a$, $b$ and $x$ be real numbers and let $n$ be an integer.  Then \index{absolute value ! properties of}
+
+\begin{itemize}
+
+\item {\bf Product Rule:} $|ab|= |a||b|$ \index{product rule ! for absolute value}
+
+\item {\bf Power Rule:} $\left| a^{n} \right| = |a|^{n}$ whenever $a^{n}$ is defined \index{power rule ! for absolute value}
+
+\item {\bf Quotient Rule:} $\left| \dfrac{a}{b} \right| = \dfrac{|a|}{|b|}$, provided $b \neq 0$ \index{quotient rule ! for absolute value}
+
+\end{itemize}
+
+{\bf Equality Properties:}
+
+\begin{itemize}
+
+\item  $|x| = 0$ if and only if $x = 0$.
+
+\item  For $c > 0$, $|x| = c$ if and only if $x = c$ or $-x = c$.
+
+\item  For $c < 0$, $|x| = c$ has no solution.
+
+\end{itemize}
+}
+
+\medskip
+
+
+\example{absvalueeqnex}{Solving equations with absolute values}{
+Solve each of the following equations.
+
+\begin{multicols}{2}
+\begin{enumerate}
+
+\item  $|3x-1| = 6$
+\item  $3 - |x+5| = 1$
+
+\setcounter{HW}{\value{enumi}}
+\end{enumerate}
+\end{multicols}
+
+\begin{multicols}{2}
+\begin{enumerate}
+\setcounter{enumi}{\value{HW}}
+
+\item  $3|2x+1| - 5 = 0$
+\item  $4 - |5x+3| = 5$
+\end{enumerate}
+\end{multicols}
+}
+{
+\begin{enumerate}
+
+\item  The equation  $|3x-1| = 6$ is of the form $|x| = c$ for $c>0$, so by the Equality Properties, $|3x-1| = 6$ is equivalent to $3x-1=6$ or $3x-1 = -6$.  Solving the former, we arrive at $x = \frac{7}{3}$, and solving the latter, we get $x = -\frac{5}{3}$.  We may check both of these solutions by substituting them into the original equation and showing that the arithmetic works out.
+
+\item  To use the Equality Properties to solve $3 - |x+5| = 1$, we first isolate the absolute value. 
+\begin{align*}
+3 - |x+5| & =  1 \\
+-|x+5| & =  -2  \tag*{subtract $3$} \\
+|x+5| & =  2 \tag*{divide by $-1$}  
+\end{align*}
+
+From the Equality Properties, we have $x+5 = 2$ or $x+5 = -2$, and get our solutions to be $x = -3$ or $x = -7$.  We leave it to the reader to check both answers in the original equation.
+
+\item As in the previous example, we first isolate the absolute value in the equation $3|2x+1| - 5 = 0$ and get $|2x+1| = \frac{5}{3}$.  Using the Equality Properties, we have $2x+1 = \frac{5}{3}$ or $2x+1 = -\frac{5}{3}$.  Solving the former gives $x = \frac{1}{3}$ and solving the latter gives $x = -\frac{4}{3}$.  As usual, we may substitute both answers in the original equation to check.
+
+\item  Upon isolating the absolute value in the equation $4 - |5x+3| = 5$, we get $|5x+3| = -1$.  At this point, we know there cannot be any real solution, since, by definition, the absolute value of \textit{anything} is never negative.  We are done. 
+\end{enumerate}
+\enlargethispage{\baselineskip}}
+
+\pagebreak
+
+Next, we turn our attention to graphing absolute value functions.  Our strategy in the next example is to make liberal use of Definition \ref{absolutevalue} along with what we know about graphing linear functions (from Section \ref{LinearFunctions}) and piecewise-defined functions (from Section \ref{FunctionNotation}).
+
+\example{absvaluegraph1}{Graphing the absolute value function}{
+Graph the function $f(x)=\lvert x\rvert$.  
+}
+{
+To find the zeros of $f$, we set $f(x)= 0$.  We get $|x|=0$, which, by Theorem \ref{absolutevalueprops} gives us $x=0$.  Since the zeros of $f$ are the $x$-coordinates of the $x$-intercepts of the graph of $y=f(x)$, we get $(0,0)$ as our only $x$-intercept, and this of course is our $y$-intercept as well. Using Definition \ref{absolutevalue}, we get 
+\[
+ f(x) = |x| =  \begin{cases} -x, & \mbox{ if }  x < 0  \\
+ 							  x, & \mbox{ if }  x \geq 0
+ 							  
+ 				\end{cases}.
+\]
+Hence, for $x < 0$, we are graphing the line $y = -x$;  for $x \geq 0$, we have the line $y = x$.  Plotting these gives us the first two graphs in Figure \ref{fig:absvalgraph}.
+
+%\mnote{.7}{Since functions can have at most one $y$-intercept (Do you know why?), as soon as we found $(0,0)$ as the $x$-intercept for $f(x)$ in Example \ref{absvaluegraph1}, we knew this was also the $y$-intercept.} 
+
+\mtable{.6}{Constructing the graph of $f(x)=\lvert x\rvert$}{fig:absvalgraph}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.9\marginparwidth]{figures/LinearQuadraticGraphics/AbsoluteValueFunctions-2}\\
+$f(x) = |x|$, $x < 0$\\
+\\
+\myincludegraphics[width=0.9\marginparwidth]{figures/LinearQuadraticGraphics/AbsoluteValueFunctions-3}\\
+$f(x) = |x|$, $x \geq 0$\\
+\\
+\myincludegraphics[width=0.9\marginparwidth]{figures/LinearQuadraticGraphics/AbsoluteValueFunctions-4}\\
+$f(x)=\lvert x\rvert$
+\end{tabular}
+}
+
+\smallskip
+
+Notice that we have an `open circle' at $(0,0)$ in the graph when $x<0$. As we have seen before, this is due to the fact that the points on $y = -x$ approach $(0,0)$ as the $x$-values approach $0$.  Since $x$ is required to be strictly less than zero on this stretch, the open circle is drawn at the origin.  However, notice that when $x \geq 0$, we get to fill in the point at $(0,0)$, which effectively `plugs' the hole indicated by the open circle.  Thus our final result is the graph at the bottom of Figure \ref{fig:absvalgraph}.
+
+
+%By projecting the graph to the $x$-axis, we see that the domain is $(-\infty, \infty)$.  Projecting to the $y$-axis gives us the range $[0,\infty)$.  The function is increasing on $[0,\infty)$ and decreasing on $(-\infty,0]$.  The relative minimum value of $f$ is the same as the absolute minimum, namely $0$ which occurs at $(0,0)$.  There is no relative maximum value of $f$.  There is also no absolute maximum value of $f$, since the $y$ values on the graph extend infinitely upwards.
+
+}\\
+
+%Note that all of the functions in the previous example bear the characteristic `$\vee$' shape of the graph of $y=|x|$.  We could have graphed the functions $g$, $h$ and $i$ in Example \ref{absvaluegraph1} starting with the graph of $f(x)=|x|$ and applying transformations as in Section \ref{Transformations} as our next example illustrates.
+
+%\pagebreak
+
+
+\newpage
+
+\subsection{Quadratic Functions}
+\label{QuadraticFunctions}
+
+You may recall studying quadratic equations in high school.  In this section, we review those equations in the context of our next family of functions: the quadratic functions.
+
+\smallskip
+
+\definition{quadraticfunction}{Quadratic function}{
+ A \index{function ! quadratic} \index{quadratic function ! definition of} \sword{quadratic function} is a function of the form \[ f(x) = ax^2 + bx + c,\] where $a$, $b$ and $c$ are real numbers with $a \neq 0$.  The domain of a quadratic function is $(-\infty, \infty)$.
+}
+
+\smallskip
+
+The most basic quadratic function is $f(x) = x^2$, whose graph is given in Figure \ref{fig:parabstd}. Its shape should look familiar from high school -- it is called a \index{parabola ! graph of a quadratic function}\sword{parabola}. The point $(0,0)$ is called the  \index{parabola ! vertex}\index{vertex ! of a parabola}\sword{vertex} of the parabola.  In this case, the vertex is a relative minimum and is also the where the absolute minimum value of $f$ can be found. 
+
+\mfigure{.6}{The graph of the basic quadratic function $f(x)=x^2$}{fig:parabstd}{figures/LinearQuadraticGraphics/QuadraticFunctions-1}
+
+Much like many of the absolute value functions in Section \ref{AbsoluteValueFunctions}, knowing the graph of $f(x) = x^2$ enables us to graph an entire family of quadratic functions using transformations.
+
+\medskip
+
+
+\example{parabolaex1}{Graphics quadratic functions}{
+Graph the following functions starting with the graph of $f(x) = x^2$ and using transformations.  Find the vertex, state the range and find the $x$- and $y$-intercepts, if any exist.
+
+\begin{enumerate}
+
+\item  $g(x) = (x+2)^2 - 3$
+
+\item  $h(x) = -2(x-3)^2+1$
+
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\mfigure{.4}{The graph $y=x^2$ with points labelled}{fig:parabgr1}{figures/LinearQuadraticGraphics/QuadraticFunctions-2}
+
+\item  Since $g(x) = (x+2)^2 - 3 = f(x+2) - 3$, we shift the graph of $y = f(x)$ to the \textit{left} $2$ units, and then \textit{down} three units. We move our marked points accordingly and connect the dots in parabolic fashion to get the graph in Figure \ref{fig:parabgr2}.
+
+\mfigure{.2}{$g(x)=f(x+2)-3 = (x+2)^2-3$}{fig:parabgr2}{figures/LinearQuadraticGraphics/QuadraticFunctions-3}
+
+From the graph, we see that the vertex has moved from $(0,0)$ on the graph of $y = f(x)$ to $(-2,-3)$ on the graph of $y = g(x)$.  This sets $[-3, \infty)$ as the range of $g$.  We see that the graph of $y=g(x)$ crosses the $x$-axis twice, so we expect two $x$-intercepts.  To find these, we set $y = g(x) = 0$ and solve.  Doing so yields the equation $(x+2)^2 - 3 = 0$, or $(x+2)^2 = 3$.  Extracting square roots gives $x + 2 = \pm \sqrt{3}$, or $x = -2 \pm \sqrt{3}$.  Our $x$-intercepts are $(-2-\sqrt{3}, 0) \approx (-3.73, 0)$ and $(-2+\sqrt{3}, 0) \approx (-0.27, 0)$.  The $y$-intercept of the graph, $(0,1)$ was one of the points we originally plotted, so we are done.
+
+
+\item  To graph  $h(x) = -2(x-3)^2+1 = -2f(x-3)+1$, we first shift \textit{right} $3$ units.  Next, we \textit{multiply} each of our $y$-values first by $-2$ and then \textit{add} $1$ to that result.  Geometrically, this is a vertical \textit{stretch} by a factor of $2$, followed by a reflection about the $x$-axis, followed by a vertical shift \textit{up} $1$ unit.  This gives us the graph in Figure \ref{fig:parabgr3}.
+
+\mfigure{.8}{$h(x) = -2f(x-3)+1 = -2(x-3)^2+1$}{fig:parabgr3}{figures/LinearQuadraticGraphics/QuadraticFunctions-5}
+
+
+
+
+The vertex is $(3,1)$ which makes the range of $h$ $(-\infty, 1]$.  From our graph, we know that there are two $x$-intercepts, so we set $y = h(x) = 0$ and solve.  We get $-2(x-3)^2+1 = 0$ which gives $(x-3)^2 = \frac{1}{2}$.  Extracting square roots gives $x - 3 = \pm \frac{1}{\sqrt{2}}$, so that when we add $3$ to each side,  we get $x = 3\pm \frac{1}{\sqrt{2}}$.   Although our graph doesn't show it, there is a $y$-intercept which can be found by setting $x=0$.  With $h(0) = -2(0-3)^2+1 = -17$, we have that our $y$-intercept is $(0,-17)$. 
+\end{enumerate}
+}
+
+\medskip
+
+In the previous example, note that neither the formula given for $g(x)$ nor the one given for $h(x)$ match the form given in Definition \ref{quadraticfunction}. We could, of course, convert both $g(x)$ and $h(x)$ into that form by expanding and collecting like terms. Doing so, we find $g(x) = (x+2)^2 - 3 = x^2 + 4x+1$ and  $h(x) = -2(x-3)^2+1 = -2x^2+12x-17$.  While these `simplified' formulas for $g(x)$ and $h(x)$ satisfy  Definition \ref{quadraticfunction}, they do not lend themselves to graphing easily.  For that reason, the form of $g$ and $h$ presented in Example \ref{parabolaex2} is given a special name, which we list below, along with the form presented in  Definition \ref{quadraticfunction}.
+
+
+\smallskip
+
+\definition{standardgeneralformofparabolas}{Standard and General Form of Quadratic Functions}{
+Suppose $f$ is a quadratic function. 
+
+\begin{itemize}
+
+\item The \index{quadratic function ! general form} \sword{general form} of the quadratic function $f$ is $f(x) = ax^2+bx+c$, where $a$, $b$ and $c$ are real numbers with $a \neq 0$.
+
+\item The \index{quadratic function ! standard form} \sword{standard form} of the quadratic function $f$ is $f(x) = a(x-h)^2 + k$, where $a$, $h$ and $k$ are real numbers with $a\neq 0$.
+
+\end{itemize}
+}
+
+\smallskip
+
+One of the advantages of the standard form is that we can immediately read off the location of the vertex:
+
+\smallskip
+
+\theorem{standardformvertex}{Vertex Formula for Quadratics in Standard Form}{
+For the quadratic function $f(x) = a(x-h)^2 + k$, where $a$, $h$ and $k$ are real numbers with $a\neq 0$, the vertex of the graph of $y = f(x)$ is $(h,k)$.
+}
+
+\smallskip
+
+To convert a quadratic function given in general form into standard form, we employ the ancient rite of `Completing the Square'.  We remind the reader how this is done in our next example.
+
+\medskip
+
+
+\example{parabolaex2}{Converting from general to standard form}{
+Convert the functions below from general form to standard form.
+
+\begin{enumerate}
+
+\item  $f(x) = x^2-4x+3$.
+\item  $g(x) = 6-x-x^2$
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item   To convert from general form to standard form, we complete the square. First, we verify that the coefficient of $x^2$ is $1$.  Next, we find the coefficient of $x$, in this case $-4$, and take half of it to get $\frac{1}{2}(-4) = -2$.  This tells us that our target perfect square quantity is $(x-2)^2$.  To get an expression equivalent to $(x-2)^2$, we need to add $(-2)^2 = 4$ to the $x^2-4x$ to create a perfect square trinomial, but to keep the balance, we must also subtract it.  We collect the terms which create the perfect square and gather the remaining constant terms. Putting it all together, we get 
+
+\mnote{.8}{If you forget why we do what we do to complete the square, start with $a(x-h)^2 + k$, multiply it out, step by step, and then reverse the process.} 
+
+\begin{align*}
+f(x) & =  x^2-4x+3  \tag*{(Compute $\frac{1}{2} (-4) = -2$.)} \\
+     & =  \left(x^2 - 4x + \underline{4}  - \underline{4}\right) + 3  \tag*{(Add and subtract $(-2)^2 = 4$.)}\\
+          & =  \left(x^2 - 4x + 4\right)  - 4 + 3  \tag*{(Group the perfect square trinomial.)}\\
+     & =  (x-2)^2 - 1  \tag*{(Factor the perfect square trinomial.)}
+\end{align*}
+
+\smallskip
+
+\mfigure{.6}{$f(x) = x^2-4x+3$}{fig:parabgr4}{figures/LinearQuadraticGraphics/QuadraticFunctions-8}
+
+%Of course, we can always check our answer by multiplying out $f(x) = (x-2)^2 -1$ to see that it simplifies to $f(x) = x^2 - 4x - 1$. In the form $f(x) = (x-2)^2-1$, we readily find the vertex to be $(2,-1)$ which makes the axis of symmetry $x = 2$.  To find the $x$-intercepts, we set $y = f(x) = 0$.  We are spoiled for choice, since we have \textit{two} formulas for $f(x)$.  Since we recognize $f(x) = x^2-4x+3$ to be easily factorable, (experience pays off, here!) we proceed to solve $x^2-4x+3 = 0$.  Factoring gives $(x-3)(x-1) = 0$ so that $x = 3$ or $x=1$.  The $x$-intercepts are then $(1,0)$ and $(3,0)$.  To find the $y$-intercept, we set $x=0$.  Once again, the general form $f(x) = x^2-4x+3$ is easiest to work with here,  and we find $y = f(0) = 3$.  Hence, the $y$-intercept is $(0,3)$.  With the vertex, axis of symmetry and the intercepts, we get a pretty good graph without the need to plot additional points.  We see that the range of $f$ is $[-1,\infty)$ and we are done. The graph of $f$ is given in Figure \ref{fig:parabgr4}.
+
+From the standard form we can immediately (if desired) produce a sketch of the graph of $f$,  as shown in Figure \ref{fig:parabgr4}.
+
+\item  To get started, we rewrite $g(x) = 6-x-x^2 = -x^2-x+6$ and note that the coefficient of $x^2$ is $-1$, not $1$.  This means our first step is to factor out the $(-1)$ from both the $x^2$ and $x$ terms.  We then follow the completing the square recipe as above. 
+
+\begin{align*}
+g(x) & =  -x^2-x+6  \\
+	   & = (-1)\left(x^2 + x \right) + 6  \tag*{(Factor the coefficient of $x^2$ from $x^2$ and $x$.)} \\
+		 & = (-1)\left(x^2 + x + \underline{\frac{1}{4}} - \underline{\frac{1}{4}} \right) + 6  \\[3pt]
+		 & =  (-1)\left(x^2 + x + \frac{1}{4}\right) + (-1)\left(-\frac{1}{4}\right) + 6  \tag*{(Group the perfect square trinomial.)}\\
+		  & =  -\left(x +\frac{1}{2}\right)^2 + \frac{25}{4}
+\end{align*}
+
+\mfigure{.3}{$g(x) = 6-x-x^2$}{fig:parabgr5}{figures/LinearQuadraticGraphics/QuadraticFunctions-9}	
+%\pagebreak
+
+Using the standard form, we can again obtain the graph of $g$, as shown in Figure \ref{fig:parabgr5}.  
+\end{enumerate}
+}
+
+\medskip
+
+In addition to making it easy for us to sketch the graph of a quadratic function by finding the standard form, completing the square is also the technique needed to obtain the famous \index{quadratic formula} \sword{quadratic formula}.
+
+\smallskip
+
+\theorem{quadraticformula}{The Quadratic Formula}{
+If $a$, $b$ and $c$ are real numbers with $a \neq 0$, then the solutions to $ax^2 + bx + c = 0$ are \[ x = \dfrac{-b \pm \sqrt{b^2-4ac}}{2a}.\]
+}
+
+\smallskip
+
+Assuming the conditions of Equation \ref{quadraticformula}, the solutions to $ax^2+bx+c = 0$ are precisely the zeros of $f(x) = ax^2 + bx + c$. To find these zeros (if possible), we proceed as follows:
+
+\begin{align*}
+ax^2+bx+c&=0\\
+a\left(x^2+\frac{b}{a}x\right) & = -c\\[3pt]
+a\left(x^2+\frac{b}{a}x+\frac{b^2}{4a^2}\right) & = -c+\frac{b^2}{4a}\\[3pt]
+a\left(x+\frac{b}{2a}\right)^2 & = \frac{b^2-4ac}{4a}\\[3pt]
+\left(x+\frac{b}{2a}\right)^2 & = \frac{b^2-4ac}{4a^2}\\[3pt]
+x+\frac{b}{2a} & = \pm\frac{\sqrt{b^2-4ac}}{2a}\\[3pt]
+x & = \frac{-b\pm\sqrt{b^2-4ac}}{2a}.
+\end{align*}
+
+
+In our discussions of domain, we were warned against having negative numbers underneath the square root.  Given that $\sqrt{b^{2} - 4ac}$ is part of the Quadratic Formula, we will need to pay special attention to the radicand $b^{2} - 4ac$.  It turns out that the quantity $b^2-4ac$ plays a critical role in determining the nature of the solutions to a quadratic equation.  It is given a special name.
+
+\smallskip
+
+\definition{discriminant}{Discriminant}{
+If $a$, $b$ and $c$ are real numbers with $a \neq 0$, then the \index{discriminant ! of a quadratic equation} \sword{discriminant} of the quadratic equation $ax^2+bx+c=0$ is the quantity $b^2 - 4ac.$
+}
+
+\medskip
+
+The discriminant `discriminates' between the kinds of solutions we get from a quadratic equation.  These cases, and their relation to the discriminant, are summarized below.
+
+\medskip
+
+\theorem{discriminanttrichotomy}{Discriminant Trichotomy}{
+ \index{discriminant ! trichotomy}   Let $a$, $b$ and $c$ be real numbers with $a \neq 0$. 
+
+\begin{itemize}
+
+\item If $b^2 - 4ac < 0$, the equation $ax^2 + bx + c = 0$ has no real solutions.
+
+\item If $b^2 - 4ac = 0$, the equation $ax^2 + bx + c = 0$ has exactly one real solution.
+
+\item If $b^2 - 4ac > 0$, the equation $ax^2 + bx + c = 0$ has exactly two real solutions.
+
+\end{itemize}
+}
+
+
+\printexercises{exercises_pre/02_01_exercises}

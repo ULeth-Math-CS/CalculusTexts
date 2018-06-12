@@ -1,0 +1,180 @@
+\section{Law of Cosines}
+
+\label{LawofCosines}
+
+In Section \ref{LawofSines}, we developed the Law of Sines (Theorem \ref{lawofsines}) to enable us to solve triangles in the `Angle-Angle-Side' (AAS), the `Angle-Side-Angle' (ASA) and the ambiguous `Angle-Side-Side' (ASS) cases.  In this section, we develop the Law of Cosines which handles solving triangles in the \index{Side-Angle-Side triangle} `Side-Angle-Side' (SAS) and \index{Side-Side-Side triangle} `Side-Side-Side' (SSS) cases. (Here, `Side-Angle-Side' means that we are given two sides and the `included' angle - that is, the given angle is adjacent to both of the given sides.)  We state and prove the theorem below.
+
+\smallskip
+
+\setboxwidth{70pt}
+\noindent\begin{minipage}{\specialboxlength}
+\theorem{lawofcosines}{Law of Cosines}{ \index{Law of Cosines}   Given a triangle with angle-side opposite pairs $(\alpha, a)$, $(\beta, b)$ and $(\gamma, c)$, the following equations hold
+
+\[ a^2 = b^2 + c^2 - 2bc \cos(\alpha) \qquad  b^2 = a^2 + c^2 - 2ac \cos(\beta)  \qquad   c^2 = a^2 + b^2 - 2ab \cos(\gamma)  \]
+
+or, solving for the cosine in each equation, we have
+ 
+\[ \cos(\alpha) = \dfrac{b^2+c^2 - a^2}{2bc} \qquad \cos(\beta) = \dfrac{a^2+c^2 - b^2}{2ac} \qquad \cos(\gamma) = \dfrac{a^2+b^2 - c^2}{2ab} \]
+}
+
+\end{minipage}
+\restoreboxwidth
+
+\smallskip
+
+To prove the theorem, we consider a generic triangle with the vertex of angle $\alpha$ at the origin with side $b$ positioned along the positive $x$-axis as in Figure \ref{fig:cosines1}.  
+
+\medskip
+
+\begin{minipage}{\textwidth}
+\begin{center}
+\myincludegraphics{figures/AppExtGraphics/LawofCosines-1}
+\end{center}
+\captionsetup{type=figure}
+\caption{Generic triangle for the proof of Theorem \ref{lawofcosines}}
+\label{fig:cosines1}
+\end{minipage}
+
+\medskip
+
+From this set-up, we immediately find that the coordinates of $A$ and $C$ are $A(0,0)$ and $C(b,0)$.  From Theorem \ref{cosinesinecircle}, we know that since the point $B(x,y)$ lies on a circle of radius $c$, the coordinates of $B$ are $B(x,y) = B(c \cos(\alpha), c \sin(\alpha))$.  (This would be true even if $\alpha$ were an obtuse or right angle so although we have drawn the case when $\alpha$ is acute, the following computations hold for any angle $\alpha$ drawn in standard position where $0 < \alpha < 180^{\circ}$.)  We note that the distance between the points $B$ and $C$ is none other than the length of side $a$.  Using the distance formula, Equation \ref{distanceformula}, we get
+
+\begin{align*}
+a & =  \sqrt{(c \cos(\alpha) - b)^{2} + (c \sin(\alpha) - 0)^2} & \\
+a^{2} & =  \left(\sqrt{(c \cos(\alpha) - b)^{2} + c^2 \sin^2(\alpha)}\right)^2  \\
+a^2 & =   (c \cos(\alpha) - b)^{2} + c^2 \sin^2(\alpha) \\
+a^2 & =  c^2 \cos^2(\alpha) - 2bc \cos(\alpha) + b^2 + c^2 \sin^2(\alpha) \\
+a^2 & =  c^2\left(\cos^2(\alpha) + \sin^2(\alpha)\right) + b^2 - 2bc \cos(\alpha) \\
+a^2 & =  c^2(1) + b^2 - 2bc \cos(\alpha)  \tag*{Since $\cos^2(\alpha) + \sin^2(\alpha) = 1$}\\
+a^2 & =  c^2 + b^2 - 2bc \cos(\alpha) \\
+\end{align*}
+
+The remaining formulas given in Theorem \ref{lawofcosines} can be shown by simply reorienting the triangle to place a different vertex at the origin.  We leave these details to the reader.  What's important about $a$ and $\alpha$ in the above proof is that $(\alpha,a)$ is an angle-side opposite pair and $b$ and $c$ are the sides adjacent to $\alpha$ -- the same can be said of any other angle-side opposite pair in the triangle.   Notice that the proof of the Law of Cosines relies on the distance formula which has its roots in the Pythagorean Theorem.  That being said, the Law of Cosines can be thought of as a generalization of the Pythagorean Theorem.  If we have a triangle in which $\gamma = 90^{\circ}$, then $\cos(\gamma) = \cos\left(90^{\circ}\right) = 0$ so we get the familiar relationship  $c^2 = a^2 + b^2$.  What this means is that in the larger mathematical sense, the Law of Cosines and the Pythagorean Theorem amount to pretty much the same thing. (This shouldn't come as too much of a shock.  All of the theorems in Trigonometry can ultimately be traced back to the definition of the circular functions along with the distance formula and hence, the Pythagorean Theorem.)
+
+\medskip
+
+\example{locex}{Using the Law of Cosines}{  Solve the following triangles.  Give exact answers and decimal approximations (rounded to hundredths) and sketch the triangle.
+
+\begin{enumerate}
+
+\item  \label{locsas} $\beta = 50^{\circ}$, $a = 7$ units, $c=2$ units
+
+\item  \label{locsss} $a=4$ units, $b=7$ units, $c = 5$ units
+
+\end{enumerate}}
+{\begin{enumerate}
+
+\item  We are given the lengths of two sides, $a=7$ and $c = 2$, and the measure of the included angle, $\beta = 50^{\circ}$.  With no angle-side opposite pair to use, we apply  the Law of Cosines.  We get  $b^2 = 7^2 + 2^2 - 2(7)(2)\cos\left(50^{\circ}\right)$ which yields $b = \sqrt{53-28\cos\left(50^{\circ}\right)} \approx 5.92$ units.  In order to determine the measures of the remaining angles $\alpha$ and $\gamma$, we are forced to used the derived value for $b$. There are two ways to proceed at this point.  We could use the Law of Cosines again, or, since  we have the angle-side opposite pair $(\beta, b)$ we could use the Law of Sines. The advantage to using the Law of Cosines over the Law of Sines in cases like this is that unlike the sine function, the cosine function distinguishes between acute and obtuse angles.  The cosine of an acute is positive, whereas the cosine of an obtuse angle is negative.  Since the sine of both acute and obtuse angles are positive, the sine of an angle alone is not enough to determine if the angle in question is acute or obtuse.  Since both authors of the textbook prefer the Law of Cosines, we proceed with this method first.  When using the Law of Cosines, it's always best to find the measure of the largest unknown angle first, since this will give us the obtuse angle of the triangle if there is one.  Since the largest angle is opposite the longest side, we choose to find $\alpha$ first. To that end, we use the formula $\cos(\alpha) = \frac{b^2+c^2-a^2}{2bc}$ and substitute $a = 7$, $b =  \sqrt{53-28\cos\left(50^{\circ}\right)}$ and $c = 2$. We get (after simplifying) \[\cos(\alpha) = \frac{2-7\cos\left(50^{\circ}\right)}{\sqrt{53-28\cos\left(50^{\circ}\right)}}\]  Since $\alpha$ is an angle in a triangle, we know the radian measure of $\alpha$ must lie between $0$ and $\pi$ radians.  This matches the range of the arccosine function, so we have \[\alpha = \arccos\left(\frac{2-7\cos\left(50^{\circ}\right)}{\sqrt{53-28\cos\left(50^{\circ} \right)}}\right) \, \text{radians} \, \approx  114.99^{\circ}\] At this point, we could find $\gamma$ using $\gamma = 180^{\circ} - \alpha - \beta \approx 180^{\circ} - 114.99^{\circ} - 50^{\circ} = 15.01^{\circ}$, that is if we trust our approximation for $\alpha$. To minimize propagation of error, however, we could use the Law of Cosines again, in this case using $\cos(\gamma) = \frac{a^2+b^2-c^2}{2ab}$.  Plugging in $a = 7$, $b = \sqrt{53-28\cos\left(50^{\circ} \right)}$ and $c=2$, we get  $\gamma = \arccos\left(\frac{7-2 \cos\left(50^{\circ}\right)}{\sqrt{53-28\cos\left(50^{\circ} \right)}} \right)$ radians $\approx 15.01^{\circ}$.  We sketch the triangle in Figure \ref{fig:cosines2} below.
+
+\drawexampleline
+
+\medskip
+
+\begin{minipage}{\textwidth}
+\begin{center}
+\myincludegraphics{figures/AppExtGraphics/LawofCosines-2}
+\end{center}
+\captionsetup{type=figure}
+\caption{Triangle for Example \ref{locex}.\ref{locsas}}
+\label{fig:cosines2}
+\end{minipage}
+
+\medskip
+
+As we mentioned earlier, once we've determined $b$ it is possible to use the Law of Sines to find the remaining angles.  Here, however, we must proceed with caution as we are in the ambiguous (ASS) case.  It is advisable to first find the \textit{smallest} of the unknown angles, since we are guaranteed it will be acute. (There can only be one \textit{obtuse} angle in the triangle, and if there is one, it must be the largest.)  In this case, we would find $\gamma$ since the side opposite $\gamma$ is smaller than the side opposite the other unknown angle, $\alpha$.   Using the angle-side opposite pair $(\beta, b)$, we get $\frac{\sin(\gamma)}{2} = \frac{\sin(50^{\circ})}{ \sqrt{53-28\cos\left(50^{\circ}\right)}}$.  The usual calculations produces $\gamma \approx  15.01^{\circ}$ and $\alpha = 180^{\circ} - \beta - \gamma \approx 180^{\circ} - 50^{\circ} - 15.01^{\circ} = 114.99^{\circ}$.
+
+
+\item  Since all three sides and no angles are given, we are forced to use the Law of Cosines.  Following our discussion in the previous problem, we find $\beta$ first, since it is opposite the longest side, $b$. We get $\cos(\beta) = \frac{a^2+c^2-b^2}{2ac} = -\frac{1}{5}$, so we get $\beta = \arccos\left(-\frac{1}{5}\right)$ radians $\approx 101.54^{\circ}$.  As in the previous problem, now that we have obtained an angle-side opposite pair $(\beta, b)$, we could proceed using the Law of Sines.  The Law of Cosines, however, offers us a rare opportunity to find the remaining angles using \textit{only} the data given to us in the statement of the problem. Using this, we get  $\gamma = \arccos\left(\frac{5}{7}\right)$ radians $\approx 44.42^{\circ}$ and  $\alpha = \arccos\left(\frac{29}{35}\right)$ radians $\approx 34.05^{\circ}$.  
+
+\begin{minipage}{\textwidth}
+\begin{center}
+\myincludegraphics{figures/AppExtGraphics/LawofCosines-3}
+\end{center}
+\captionsetup{type=figure}
+\caption{Triangle for Example \ref{locex}.\ref{locsss}}
+\label{fig:cosines3}
+\end{minipage}
+
+\end{enumerate}
+}
+
+\medskip
+
+We note that, depending on how many decimal places are carried through successive calculations, and depending on which approach is used to solve the problem, the approximate answers you obtain may differ slightly from those the authors obtain in the Examples and the Exercises.  A great example of this is number   \ref{locsss} in  Example \ref{locex}, where the \textit{approximate} values we record for the measures of the angles sum to $180.01^{\circ}$, which is geometrically impossible. Next, we have an application of the Law of Cosines.
+
+\medskip
+
+\example{locapplication}{Applying the Law of Cosines}{  A researcher wishes to determine the width of a vernal pond as drawn in Figure \ref{fig:cosines4}. From a point $P$, he finds the distance to the eastern-most point of the pond to be $950$ feet, while the distance to the western-most point of the pond from $P$ is $1000$ feet. If the angle between the two lines of sight is $60^{\circ}$, find the width of the pond.
+
+\mfigure[width=0.95\marginparwidth]{.4}{The pond in Example \ref{locapplication}}{fig:cosines4}{figures/AppExtGraphics/LawofCosines-4}
+}
+{We are given the lengths of two sides and the measure of an included angle, so we may apply the Law of Cosines to find the length of the missing side opposite the given angle.  Calling this length $w$ (for \textit{width}), we get  $w^2 = 950^2 + 1000^2 - 2(950)(1000)\cos\left(60^{\circ}\right) = 952500$ from which we get $w = \sqrt{952500} \approx 976$ feet.  }
+
+\medskip
+
+In Section \ref{LawofSines}, we used the proof of the Law of Sines to develop Theorem \ref{areaformulasine} as an alternate formula for the area enclosed by a triangle.  In this section, we use the Law of Cosines to derive another such formula - Heron's Formula.
+
+\smallskip
+
+\theorem{HeronsFormula}{Heron's Formula}{  \index{Heron's Formula} Suppose $a$, $b$ and $c$ denote the lengths of the three sides of a triangle.  Let $s$ be the semiperimeter of the triangle, that is, let $s = \frac{1}{2}(a + b + c)$.  Then the area $A$ enclosed by the triangle is given by
+
+\[
+ A = \sqrt{s (s-a) (s-b) (s-c)}
+\]
+}
+
+\smallskip
+
+We prove Theorem \ref{HeronsFormula} using Theorem \ref{areaformulasine}.  Using the convention that the angle $\gamma$ is opposite the side $c$,  we have $A = \frac{1}{2} ab \sin(\gamma)$ from Theorem \ref{areaformulasine}.  In order to simplify computations, we start by manipulating the expression for $A^2$.
+
+
+
+\begin{align*}
+A^2 & =  \left(\dfrac{1}{2} ab \sin(\gamma)\right)^2 \\[3pt] 
+    & =  \dfrac{1}{4} a^2 b^2 \sin^{2}(\gamma) \\[3pt]
+    & =  \dfrac{a^2b^2}{4} \left(1 - \cos^{2}(\gamma)\right) \tag*{Since $\sin^2(\gamma) = 1 - \cos^{2}(\gamma)$.}
+\end{align*}
+
+The Law of Cosines tells us $\cos(\gamma) = \frac{a^2 + b^2 - c^2}{2ab}$, so substituting this into our equation for $A^2$ gives
+
+\begin{align*}
+A^2 & =   \dfrac{a^2b^2}{4} \left(1 - \cos^{2}(\gamma)\right)\\[3pt]
+    & =  \dfrac{a^2b^2}{4} \left[1 - \left( \dfrac{a^2 + b^2 - c^2}{2ab} \right)^2\right] \\[3pt]
+    & =  \dfrac{a^2b^2}{4} \left[1 - \dfrac{\left(a^2 + b^2 - c^2\right)^2}{4a^2b^2} \right] \\[3pt]
+	& =  \dfrac{a^2b^2}{4} \left[\dfrac{4a^2 b^2  - \left(a^2 + b^2 - c^2\right)^2}{4a^2b^2} \right]  \\[3pt]	 	
+	& =  \dfrac{4a^2 b^2  - \left(a^2 + b^2 - c^2\right)^2}{16}\\[3pt] 	
+	& =  \dfrac{(2ab)^2  - \left(a^2 + b^2 - c^2\right)^2}{16}\\[3pt] 	
+	& =  \dfrac{\left( 2ab - \left[a^2+b^2 - c^2\right]\right)  \left( 2ab + \left[a^2+b^2 - c^2\right]\right)}{16}  \tag*{difference of squares.} \\[3pt]
+	& =  \dfrac{\left(c^2 - a^2 + 2ab - b^2 \right)\left( a^2 + 2ab + b^2- c^2\right)}{16} \\[3pt] 
+	& =  \dfrac{\left(c^2 - \left[a^2 - 2ab + b^2\right] \right)  \left( \left[a^2 + 2ab + b^2\right]- c^2\right)}{16}    \\[3pt] 
+    & =  \dfrac{\left(c^2 - (a-b)^2 \right)  \left( (a+b)^2- c^2\right)}{16}    \tag*{perfect square trinomials.}\\[3pt] 
+    & =  \dfrac{ (c-(a-b))(c+(a-b))((a+b) -c)((a+b)+c)}{16}    \tag*{difference of squares.} \\[3pt]
+ 	& =  \dfrac{ (b+c-a)(a+c-b)(a+b-c)(a+b+c)}{16}    \\[3pt]
+    & =  \dfrac{(b+c-a)}{2} \cdot \dfrac{(a+c-b)}{2} \cdot \dfrac{(a+b-c)}{2} \cdot \dfrac{(a+b+c)}{2} 	 		
+\end{align*}
+
+At this stage, we recognize the last factor as the semiperimeter, 
+\[
+ s = \frac{1}{2}(a+b+c) = \dfrac{a+b+c}{2}.
+\]  
+To complete the proof, we note that
+\[
+ (s - a) = \dfrac{a+b+c}{2} - a = \dfrac{a+b+c-2a}{2} = \dfrac{b+c-a}{2} .
+\]  			
+Similarly, we find $(s-b) = \dfrac{a+c-b}{2}$ and $(s-c) = \dfrac{a+b-c}{2}$.  Hence, we get
+\begin{align*}
+A^2 & =  \dfrac{(b+c-a)}{2} \cdot \dfrac{(a+c-b)}{2} \cdot \dfrac{(a+b-c)}{2} \cdot \dfrac{(a+b+c)}{2}  \\[3pt]
+ 	& =  (s-a) (s-b) (s-c) s  
+\end{align*}
+so that  $A = \sqrt{s(s-a)(s-b)(s-c)}$ as required. 
+
+\bigskip
+
+We close with an example of Heron's Formula.
+
+\medskip
+
+\example{heronex}{Using Heron's Fomrula}{  Find the area enclosed of the triangle in Example \ref{locex} number \ref{locsss}.}
+{ We are given $a = 4$, $b=7$ and $c = 5$.  Using these values, we find $s = \frac{1}{2}(4+7+5) = 8$, $(s - a) = 8 - 4 = 4$, $(s-b) = 8-7 =1$ and $(s-c) = 8-5=3$. Using Heron's Formula, we get $A = \sqrt{s(s-a)(s-b)(s-c)} = \sqrt{(8)(4)(1)(3)} = \sqrt{96} = 4\sqrt{6} \approx 9.80$ square units.}
+
+\printexercises{exercises/08_03_exercises}

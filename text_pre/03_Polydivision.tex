@@ -1,0 +1,276 @@
+\section{The Factor Theorem and the Remainder Theorem}
+\label{Polydivision}
+
+
+Suppose we wish to find the zeros of $f(x) = x^3 + 4x^2-5x-14$.  Setting $f(x)=0$ results in the polynomial equation $x^3 + 4x^2-5x-14=0$.   Despite all of the factoring techniques we learned (and probably forgot) in high school, this equation foils us at every turn.  If we graph $f$ using GeoGebra, we get the result in Figure \ref{fig:polyzeros1}.
+
+\mfigure{.75}{The graph $y=x^3+4x^2-5x-14$}{fig:polyzeros1}{figures/PolynomialsGraphics/CubicIrrRootZeros}
+
+The graph suggests that the function has three zeros, one of which is $x=2$.  It's easy to show that $f(2) = 0$, but the other two zeros seem to be less friendly. Asking GeoGebra to intersect the graph with the $x$-axis gives us the decimal approximations shown in the figure, but we seek a method to find the remaining zeros \emph{exactly}.  Based on our experience, if $x=2$ is a zero, it seems that there should be a factor of $(x-2)$ lurking around in the factorization of $f(x)$.  In other words, we should expect that $x^3 + 4x^2-5x-14=(x-2) \, q(x)$, where $q(x)$ is some other polynomial.  How could we find such a $q(x)$, if it even exists?  The answer comes from our old friend, polynomial division. Dividing $x^3 + 4x^2-5x-14$ by $x-2$ gives
+
+
+\setlength\arraycolsep{0.1pt}
+\setlength\extrarowheight{2pt}
+
+\[ \begin{array}{cccccccccc}
+
+& & & & & x^2 & + & 6x & + & 7 \\ \hhline{~~~|-------}
+
+x & - & 2 \, \vline& x^3 & + & 4x^2 & - & 5x & - & 14 \\
+
+ &  &  -& \left(x^3 \right. & - & \left.  2x^2\right) &  &  &  &  \\ \hhline{~~~---~~~~} 
+ &  &  &   &  & 6 x^2 & - & 5x &  &  \\ 
+ &  &  &   & - & \left(6 x^2 \right. & - & \left. 12x \right) &  &  \\ \hhline{~~~~~---~~} 
+ &  &  &   &   &  & & 7x  & - & 14 \\
+ &  &  &   &   &  & - & \left( 7x \right. & - & \left. 14 \right) \\ \hhline{~~~~~~~---} 
+ &   &  &  &  &  &  &  &  & 0
+ 
+\end{array}\]
+
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+
+As you may recall, this means $x^3 + 4x^2-5x-14=(x-2)\left(x^2+6x+7\right)$, so to find the zeros of $f$, we now solve $(x-2)\left(x^2+6x+7\right)=0$.   We get $x-2=0$ (which gives us our known zero, $x=2$) as well as $x^2+6x+7=0$.   The latter doesn't factor nicely, so we apply the Quadratic Formula to get $x = -3 \pm \sqrt{2}$.  The point of this section is to generalize the technique applied here.  First up is a friendly reminder of what we can expect when we divide polynomials.
+
+\smallskip
+
+\theorem{polydiv}{Polynomial Division}{
+Suppose $d(x)$ and $p(x)$ are nonzero polynomials where the degree of $p$ is greater than or equal to the degree of $d$.  There exist two unique polynomials, $q(x)$ and $r(x)$, such that $p(x) = d(x) \, q(x) + r(x),\,$ where either $r(x) = 0$ or the degree of $r$ is strictly less than the degree of $d$.
+}
+
+\smallskip
+
+As you may recall, all of the polynomials in Theorem \ref{polydiv} have special names.  The polynomial $p$ is called the \index{polynomial division ! dividend} \sword{dividend}; $d$ is the \index{polynomial division ! divisor} \sword{divisor}; $q$ is the \index{polynomial division ! quotient} \sword{quotient}; $r$ is the \index{polynomial division ! remainder} \sword{remainder}.  If $r(x)=0$ then $d$ is called a \index{polynomial division ! factor} \sword{factor} of $p$.  The proof of Theorem \ref{polydiv} is usually relegated to a course in Abstract Algebra, but we can still use the result to establish two important facts which are the basis of the rest of the chapter.
+
+\smallskip
+
+\theorem{remainderthm}{The Remainder Theorem}{
+\index{Remainder Theorem}  Suppose $p$ is a polynomial of degree at least $1$ and $c$ is a real number.  When $p(x)$ is divided by $x-c$ the remainder is $p(c)$.  
+}
+
+\smallskip
+
+
+The proof of Theorem \ref{remainderthm} is a direct consequence of Theorem \ref{polydiv}.  When a polynomial is divided by $x-c$, the remainder is either $0$ or has degree less than the degree of $x-c$.  Since $x-c$ is degree $1$, the degree of the remainder must be $0$, which means the remainder is a constant.  Hence, in either case, $p(x) = (x-c) \, q(x) + r$, where $r$, the remainder, is a real number, possibly $0$.  It follows that $p(c) = (c-c) \, q(c) + r = 0 \cdot q(c) + r = r$, so we get $r = p(c)$ as required.  There is one more piece of `low hanging fruit' to collect, which we present below.
+
+\smallskip
+
+\theorem{factorthm}{The Factor Theorem}{
+\index{Factor Theorem}  Suppose $p$ is a nonzero polynomial.  The real number $c$ is a zero of $p$ if and only if $(x-c)$ is a factor of $p(x)$.  
+}
+
+\smallskip
+
+The proof of The Factor Theorem is a consequence of what we already know.  If $(x-c)$ is a factor of $p(x)$, this means $p(x) = (x-c) \, q(x)$ for some polynomial $q$.  Hence, $p(c) = (c-c) \, q(c) = 0$, so $c$ is a zero of $p$.  Conversely, if $c$ is a zero of $p$, then $p(c) = 0$. In this case, The Remainder Theorem tells us the remainder when $p(x)$ is divided by $(x-c)$, namely $p(c)$, is $0$, which means $(x-c)$ is a factor of $p$.  What we have established is the fundamental connection between zeros of polynomials and factors of polynomials.  
+
+\smallskip
+
+%%%%%
+%Set boolean "synthetic" to true in preamble to include synthetic division
+%%%%%
+
+\ifthenelse{\boolean{synthetic}}{\input{text_pre/03_SyntheticDivision}}{}
+
+The next example pulls together all of the concepts discussed in this section.  
+
+\medskip
+
+\example{ex_polytheorems}{Factoring a cubic polynomial}{
+ Let $p(x) = 2x^3-5x+3$.
+
+\begin{enumerate}
+
+\item  Find $p(-2)$ using The Remainder Theorem.  Check your answer by substitution.
+
+\item  Use the fact that $x=1$ is a zero of $p$ to factor $p(x)$ and then find all of the real zeros of $p$.
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item  The Remainder Theorem states $p(-2)$ is the remainder when $p(x)$ is divided by 
+\ifthenelse{\boolean{synthetic}}{$x-(-2)$.  We set up our synthetic division tableau below.  We are careful to record the coefficient of $x^2$ as $0$, and proceed as above.
+
+\[\begin{array}{rrrrr}
+ -2 \, \, \vline& 2 & 0 & -5  & 3 \\
+
+   & \downarrow &  -4  &  8  & -6 \\ \hhline{~----} 
+  & 2  &   -4  & 3 &  \fbox{$-3$}  \\  
+\end{array}\]}{by $x-(-2)=x+2$. Using long division, we get:
+
+\setlength\arraycolsep{0.1pt}
+\setlength\extrarowheight{2pt}
+
+\[ \begin{array}{cccccccccc}
+
+& & & & & 2x^2 & - & 4x & + & 3 \\ \hhline{~~~|-------}
+
+x & + & 2 \, \vline& 2x^3 &  &  & - & 5x & + & 3 \\
+
+ &  &  -& \left(2x^3 \right. & + & \left.  4x^2\right) &  &  &  &  \\ \hhline{~~~---~~~~} 
+ &  &  &   & - & 4 x^2 & - & 5x &  &  \\ 
+ &  &  &   & - & \left(4 x^2 \right. & + & \left. 8x \right) &  &  \\ \hhline{~~~~~---~~} 
+ &  &  &   &   &  & & 3x  & + & 3 \\
+ &  &  &   &   &  & - & \left( 3x \right. & + & \left. 6 \right) \\ \hhline{~~~~~~~---} 
+ &   &  &  &  &  &  &  &  & -3
+ 
+\end{array}\]
+
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}}
+
+According to the Remainder Theorem, $p(-2) = -3$.  We can check this by direct substitution into the formula for $p(x)$:  $p(-2) = 2(-2)^3-5(-2)+3 = -16+10+3=-3$.
+
+\item The Factor Theorem tells us that since $x=1$ is a zero of $p$, $x-1$ is a factor of $p(x)$.  To factor $p(x)$, we divide by $x-1$, giving us
+
+\ifthenelse{\boolean{synthetic}}{\[\begin{array}{rrrrr}
+ 1 \, \, \vline& 2 & 0 & -5  & 3 \\
+
+   & \downarrow &  2  &  2  & -3 \\ \hhline{~----} 
+  & 2  &   2  & -3 &  \fbox{$0$}  \\  
+\end{array}\]}{
+
+\setlength\arraycolsep{0.1pt}
+\setlength\extrarowheight{2pt}
+
+\[ \begin{array}{cccccccccc}
+
+& & & & & 2x^2 & + & 2x & - & 3 \\ \hhline{~~~|-------}
+
+x & - & 1 \, \vline& 2x^3 &  &  & + & x & - & 3 \\
+
+ &  &  -& \left(2x^3 \right. & - & \left.  2x^2\right) &  &  &  &  \\ \hhline{~~~---~~~~} 
+ &  &  &   & - & 4 x^2 & - & 5x &  &  \\ 
+ &  &  &   & - & \left(2 x^2 \right. & - & \left. 2x \right) &  &  \\ \hhline{~~~~~---~~} 
+ &  &  &   &   &  &- & 3x  & + & 3 \\
+ &  &  &   &   &  & - & \left( 3x \right. & + & \left. 3 \right) \\ \hhline{~~~~~~~---} 
+ &   &  &  &  &  &  &  &  & 0
+ 
+\end{array}\]
+
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}}
+
+We get a remainder of $0$ which verifies that, indeed, $p(1) = 0$.  Our quotient polynomial is a second degree polynomial with coefficients $2$, $2$, and $-3$. So $q(x) = 2x^2 + 2x - 3$.  Theorem \ref{polydiv} tells us $p(x) = (x-1)\left( 2x^2 + 2x - 3\right)$.  To find the remaining real zeros of $p$, we need to solve $2x^2 + 2x - 3=0$ for $x$.  Since this doesn't factor nicely, we use the quadratic formula to find that the remaining zeros are $x = \frac{-1 \pm \sqrt{7}}{2}$.
+\end{enumerate}
+}
+
+\medskip
+
+In Section \ref{GraphsofPolynomials}, we discussed the notion of the multiplicity of a zero.  Roughly speaking, a zero with multiplicity $2$ can be divided twice into a polynomial;  multiplicity $3$, three times and so on.  This is illustrated in the next example.
+
+\medskip
+
+
+\ifthenelse{\boolean{synthetic}}{\example{ex_factormult}{Factoring out a zero of multiplicity two}{  Let $p(x) = 4x^4-4x^3-11x^2+12x-3$.  Given that $x=\frac{1}{2}$ is a zero of multiplicity $2$,  find all of the real zeros of $p$.
+}
+{ We set up for synthetic division.  Since we are told the multiplicity of $\frac{1}{2}$ is two, we continue our tableau and divide $\frac{1}{2}$ into the quotient polynomial
+
+\[\begin{array}{rrrrrr}
+ \frac{1}{2} \, \, \vline& 4 & -4 & -11  & 12 & -3 \\
+
+   & \downarrow &  2  &  -1  & -6 & 3\\ \hhline{~-----} 
+  
+  \frac{1}{2} \, \, \vline&  4  &   -2  & -12 & 6 &  \fbox{$0$}  \\
+    
+      & \downarrow &  2  &  0  & -6 &\\ \hhline{~----} 
+      
+       & 4  &   0  & -12 & \fbox{0} &   \\  
+\end{array}\]
+
+From the first division, we get $4x^4-4x^3-11x^2+12x-3=\left(x-\frac{1}{2}\right) \left(4x^3-2x^2-12x+6\right)$.  The second division tells us $4x^3-2x^2-12x+6=\left(x-\frac{1}{2}\right)\left(4x^2-12\right)$.  Combining these results, we have  $4x^4-4x^3-11x^2+12x-3 = \left(x-\frac{1}{2}\right)^2\left(4x^2-12\right)$.  To find the remaining zeros of $p$, we set $4x^2-12=0$ and get $x = \pm \sqrt{3}$.}}
+{\example{ex_factormult}{Factoring out a zero of multiplicity two}{  Let $p(x) = 4x^4-4x^3-11x^2+12x-3$.  Given that $x=\frac{1}{2}$ is a zero of multiplicity $2$,  find all of the real zeros of $p$.
+}{Since $x=\frac{1}{2}$ is a zero of multiplicity 2, the Factor Theorem guarantees that $\left(x-\frac{1}{2}\right)$ is a factor of $p(x)$, \textit{twice}; that is, that $\left(x-\frac{1}{2}\right)^2 = x^2-x+\frac{1}{4}$ is a factor of $p(x)$. Using long division, we have
+
+\setlength\arraycolsep{0.1pt}
+\setlength\extrarowheight{2pt}
+
+\[ \begin{array}{cccccccccccccc}
+
+& & & & & & & & & 4x^2 &  &  & - & 12 \\ \hhline{~~~~~|---------}
+
+x^2 & - & x & + & \frac{1}{4} \, \vline& 4x^4 & - & 4x^3 & - & 11x^2 & + & 12x & - & 3 \\
+
+&  &  &  &  -& \left(4x^4 \right.& - & 4x^3 & + & \left.  x^2\right) &  &  &  &  \\ \hhline{~~~~~-----~~~~} 
+&  &  &  &   &                   &   &      & - & 12x^2 & + & 12x & - & 3 \\ 
+&  &  &  &   &                   &   &      & - &\left(12x^2\right. & + & 12x & - & \left.3\right)  \\ \hhline{~~~~~~~~~-----} 
+& & & & &   &  &  &  &  &  &  &  & 0
+ \end{array}\]
+ 
+ \setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+
+We obtain a remainder of 0, confirming that $\left(x-\frac{1}{2}\right)$ is a factor, and our quotient of $4x^2-12$ tells us that $p(x) = \left(x-\frac{1}{2}\right)^2(4x^2-12)$. Setting $4x^2-12=0$ gives us $x=\pm \sqrt{3}$, so the remaining zeros of $p$ are $x=\sqrt{3}$ and $x=-\sqrt{3}$.}}
+
+\medskip
+
+\ifthenelse{\boolean{synthetic}}{
+A couple of things about the last example are worth mentioning. First, the extension of the synthetic division tableau for repeated divisions will be a common sight in the sections to come. Typically, we will start with a higher order polynomial and peel off one zero at a time until we are left with a quadratic, whose roots can always be found using the Quadratic Formula.  Secondly, we found $x = \pm \sqrt{3}$ are zeros of $p$.  The Factor Theorem guarantees $\left(x-\sqrt{3}\right)$ and $\left(x - \left(-\sqrt{3}\right)\right)$ are both factors of $p$.  We can certainly put the Factor Theorem to the test and continue the synthetic division tableau from above to see what happens.
+
+\[\begin{array}{rrrrrr}
+ \frac{1}{2} \, \, \vline& 4 & -4 & -11  & 12 & -3 \\
+
+  & \downarrow &  2  &  -1  & -6 & 3\\ \hhline{~-----} 
+  
+  \frac{1}{2} \, \, \vline&  4  &   -2  & -12 & 6 &  \fbox{$0$}  \\
+    
+  & \downarrow &  2  &  0  & -6 &\\ \hhline{~----} 
+ 
+  
+ \sqrt{3} \, \, \vline  & 4  &   0  & -12 & \fbox{0} &   \\
+  
+                        & \downarrow &  4\sqrt{3}  & 12  & &\\ \hhline{~---} 
+ 
+   -\sqrt{3} \, \, \vline  & 4  &  4\sqrt{3}  & \fbox{0} &  &   \\  
+       
+                          & \downarrow &  -4\sqrt{3}  &   & &\\ \hhline{~--} 
+       
+													& 4  &  \fbox{0}  &  &  &   \\
+
+\end{array}\]
+
+This gives us $4x^4-4x^3-11x^2+12x-3=\left(x-\frac{1}{2}\right)^2 \left(x-\sqrt{3}\right)\left(x - \left(-\sqrt{3}\right)\right) (4)$, or, when written with the constant in front \[ p(x) = 4\left(x-\frac{1}{2}\right)^2 \left(x-\sqrt{3}\right)\left(x - \left(-\sqrt{3}\right)\right)\]
+}{Since we found that $x=\pm \sqrt{3}$ are zeros of $p$, the Factor Theorem guarantees that $(x-\sqrt{3})$ and $(x+\sqrt{3})$ are factors of $p$. Of course, you were probably able to spot this yourself: since $4x^2-12$ has a common factor of $4$, we have
+\[
+4x^2-12 = 4(x^2-3) = 4(x-\sqrt{3})(x+\sqrt{3}),
+\]
+by recognizing $x^2-3$ as a difference of squares. (If you're rusty on your factoring, see Review Worksheet \#5.) Thus, we obtain 
+\[
+p(x)=4\left(x-\frac{1}{2}\right)^2(x-\sqrt{3})(x+\sqrt{3})
+\]
+in completely factored form.}
+
+We have shown that $p$ is a product of its leading coefficient times linear factors of the form $(x-c)$ where $c$ are zeros of $p$. It may surprise and delight the reader that, in theory, all polynomials can be reduced to this kind of factorization; however, some of the zeros may be \sword{complex} numbers.   Our final theorem in the section gives us an upper bound on the number of real zeros. 
+
+\medskip
+
+\theorem{nzerosreal}{Number of zeros is bounded above by degree}{
+Suppose $f$ is a polynomial of degree $n \geq 1$.  Then $f$ has at most $n$ real zeros, counting multiplicities.
+}
+
+\medskip
+
+Theorem \ref{nzerosreal} is a consequence of the Factor Theorem and polynomial multiplication.  Every zero $c$ of $f$ gives us a factor of the form $(x-c)$ for $f(x)$.  Since $f$ has degree $n$, there can be at most $n$ of these factors.  The next section provides us some tools which not only help us determine where the real zeros are to be found, but which real numbers they may be.
+
+\medskip
+
+We close this section with a summary of several concepts previously presented.  You should take the time to look back through the text to see where each concept was first introduced and where each connection to the other concepts was made.
+
+\medskip
+
+\keyidea{idea:zerofactor}{Connections Between Zeros, Factors and Graphs of Polynomial Functions}{
+ Suppose $p$ is a polynomial function of degree $n \geq 1$.  The following statements are equivalent:
+
+\begin{itemize}
+
+\item The real number $c$ is a zero of $p$
+\item $p(c) = 0$
+\item $x = c$ is a solution to the polynomial equation $p(x) = 0$
+\item $(x - c)$ is a factor of $p(x)$
+\item The point $(c, 0)$ is an $x$-intercept of the graph of $y = p(x)$
+
+\end{itemize}
+}
+
+\printexercises{exercises_pre/03_02_exercises}

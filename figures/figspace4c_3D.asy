@@ -39,7 +39,7 @@ path3 mypath=graph(g,-2,2,operator ..); draw(mypath,blue);
 triple f(pair t) {
   return (t.x,t.y,(t.y)^2);
 }
-surface s=surface(f,(-2,-2),(2,2),8,32,Spline);
+surface s=surface(f,(-2,-2),(2,2),8,32,usplinetype=new splinetype[] {notaknot,notaknot,monotonic},vsplinetype=new splinetype[] {notaknot,notaknot,monotonic});
 pen p=rgb(0,0,.7);
 draw(s,rgb(.6,.6,1)+opacity(.7),meshpen=p);
 

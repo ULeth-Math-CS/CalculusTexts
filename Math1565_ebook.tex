@@ -10,11 +10,18 @@
 \ifthenelse{\boolean{printlabelname}}{\usepackage[notref,notcite]{showkeys}}{}
 \usepackage{pdfpages}
 
+\newboolean{colour}
+\setboolean{colour}{true}
+
+\newboolean{CalcI}
+\setboolean{CalcI}{true}
+\newboolean{1010}
+\setboolean{1010}{false}
 
 %% end detour
 %\usepackage{amsmath}
 \usepackage{xr}
-\externaldocument{Math2565_ebook}
+\externaldocument[II-]{Math2565_ebook}
 
 \input{headers/Page_Size_Calculus}
 \usepackage{APEX_format}
@@ -29,8 +36,8 @@
 	%%\usepackage{fontspec}
 	\usepackage{mathspec}
 	\setallmainfonts[Mapping=tex-text]{Calibri}
-	\setmainfont[Mapping=tex-text]{Calibri}
-	\setsansfont[Mapping=tex-text]{Calibri}
+	\setmainfont[Mapping=tex-text,Ligatures=NoCommon]{Calibri}
+	\setsansfont[Mapping=tex-text,Ligatures=NoCommon]{Calibri}
 	\setmathsfont(Greek){[cmmi10]}}
 	{\usepackage[sfdefault,lf]{carlito}
 	%% The 'lf' option for lining figures
@@ -56,8 +63,7 @@
 %%%\tracingonline=1
 \begin{document}
 %\printexercisenames
-\printincolor
-%\printinblackandwhite
+\ifthenelse{\boolean{colour}}{\printincolor}{\printinblackandwhite}
 %\printallanswers
 
 
@@ -111,7 +117,7 @@
 \input{text/04_Related_Rates}
 \input{text/04_Optimization}
 \input{text/04_Differentials}
-\input{text/08_Taylor_Polynomials1}
+\input{text/08_Taylor_Polynomials}
 \input{text/06_LHopitals_Rule}
 %
 %
@@ -130,25 +136,11 @@
 \input{text/05_Riemann_Sums}
 \input{text/05_FTC}
 \input{text/05_Numerical_Integration}
-\input{text/06_Substitution1}
+\input{text/06_Substitution1560}
 \input{text/06_Hyperbolic_Functions}
-\input{text/07_Area_Between_Curves1A}
+\input{text/07_Area_Between_Curves1565}
 %%
-%%%%%
-%%%%%%
-\refstepcounter{definitioncounter}
-\label{lastdefcount1}
-\refstepcounter{theoremcounter}
-\label{lastthmcount1}
-\refstepcounter{keyideacounter}
-\label{lastideacount1}
-\refstepcounter{examplecounter}
-\label{lastexamplecount1}
-\addtocounter{definitioncounter}{-1}
-\addtocounter{theoremcounter}{-1}
-\addtocounter{keyideacounter}{-1}
-\addtocounter{examplecounter}{-1}
-%
+
 
 
 %%%\layout

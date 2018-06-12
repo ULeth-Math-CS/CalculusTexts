@@ -1,0 +1,228 @@
+\section{Introduction to Functions}
+\label{IntrotoFunctions}
+
+One of the core concepts in College Algebra is the \textbf{function}.  There are many ways to describe a function and we begin by defining a function as a special kind of relation.
+
+\smallskip
+
+\definition{functiondefn}{Function}{
+A relation in which each $x$-coordinate is matched with only one $y$-coordinate is said to describe $y$ as a \index{function ! definition as a relation} \textbf{function} of $x$.
+}
+
+\medskip
+
+\example{ex_functrel}{Determining if a relation is a function}
+{
+Which of the following relations describe $y$ as a function of $x$?
+
+\begin{enumerate}
+
+\item  $R_{1} = \{ (-2,1), (1,3), (1,4), (3,-1) \}$
+
+\item  $R_{2} = \{ (-2,1), (1,3), (2,3), (3,-1) \}$
+
+\end{enumerate}
+}
+{ 
+A quick scan of the points in $R_{1}$ reveals that the $x$-coordinate $1$ is matched with two \emph{different} $y$-coordinates:  namely $3$ and $4$.  Hence in $R_{1}$, $y$ is not a function of $x$.  On the other hand, every $x$-coordinate in $R_{2}$ occurs only once which means each $x$-coordinate has only one corresponding $y$-coordinate.  So, $R_{2}$  does represent $y$ as a function of $x$.
+}
+
+\medskip
+
+Note that in the previous example, the relation $R_{2}$ contained two different points with the same $y$-coordinates, namely $(1,3)$ and $(2,3)$. Remember, in order to say $y$ is a function of $x$, we just need to ensure the same $x$-coordinate isn't used in more than one point.
+\mnote{.6}{We will have occasion later in the text to concern ourselves with the concept of $x$ being a function of $y$.  In this case, $R_{1}$ represents $x$ as a function of $y$;  $R_{2}$ does not.} 
+
+
+
+
+\mfigure{.47}{The graph of $R_{1}$}{fig:relfunct1}{figures/RelationsandFunctionsGraphics/IntrotoFunctions-1}
+
+\mfigure{.28}{The graph of $R_{2}$}{fig:relfunct2}{figures/RelationsandFunctionsGraphics/IntrotoFunctions-2}
+
+
+
+
+To see what the function concept means geometrically, we graph $R_{1}$ and $R_{2}$ in the plane.
+The fact that the $x$-coordinate $1$ is matched with two different $y$-coordinates in $R_{1}$ presents itself graphically as the points $(1,3)$ and $(1,4)$ lying on the same vertical line, $x=1$.  If we turn our attention to the graph of $R_{2}$, we see that no two points of the relation lie on the same vertical line.  We can generalize this idea as follows
+
+\smallskip
+
+\theorem{VLT}{ The Vertical Line Test}{
+\index{Vertical Line Test (VLT)}  A set of points in the plane represents $y$ as a function of $x$ if and only if no two points lie on the same vertical line.
+}
+
+\smallskip
+
+%\pagebreak
+
+It is worth taking some time to meditate on the Vertical Line Test; it will check to see how well you understand the concept of `function' as well as the concept of `graph'.
+
+\pagebreak
+
+\example{ex_vlt}{Using the Vertical Line Test}{
+ Use the Vertical Line Test to determine which of the following relations describes $y$ as a function of $x$.
+
+\begin{center}
+
+\begin{tabular}{cc}
+\myincludegraphics{figures/RelationsandFunctionsGraphics/IntrotoFunctions-3} & \myincludegraphics{figures/RelationsandFunctionsGraphics/IntrotoFunctions-4}\\
+The graph of $R$ & The graph of $S$
+\end{tabular}
+
+\end{center}
+}
+{
+Looking at the graph of $R$, we can easily imagine a vertical line crossing the graph more than once.  Hence, $R$ does not represent $y$ as a function of $x$.  However, in the graph of $S$, every vertical line crosses the graph at most once, so $S$ does represent $y$ as a function of $x$. 
+}
+
+
+\medskip
+
+In the previous test, we say that the graph of the relation $R$ \textbf{fails} the Vertical Line Test, whereas the graph of $S$ \textbf{passes} the Vertical Line Test.  Note that in the graph of $R$ there are infinitely many vertical lines which cross the graph more than once. However, to fail the Vertical Line Test, all you need is one vertical line that fits the bill, as the next example illustrates.
+
+\medskip
+
+\example{ex_vlt2}{Using the Vertical Line Test}{
+Use the Vertical Line Test to determine which of the following relations describes $y$ as a function of $x$.
+
+\begin{center}
+\begin{tabular}{cc}
+\myincludegraphics{figures/RelationsandFunctionsGraphics/IntrotoFunctions-5} & \myincludegraphics{figures/RelationsandFunctionsGraphics/IntrotoFunctions-6}\\
+The graph of $S_{1}$ & The graph of $S_{2}$
+\end{tabular}
+\end{center}
+}
+{
+Both $S_{1}$ and $S_{2}$ are slight modifications to the relation $S$ in the previous example whose graph we determined passed the Vertical Line Test.  In both $S_{1}$ and $S_{2}$, it is the addition of the point $(1,2)$ which threatens to cause trouble.  In $S_{1}$, there is a point on the curve with $x$-coordinate 1 just below $(1,2)$, which means that both $(1,2)$ and this point on the curve lie on the vertical line $x=1$.  (See the picture below and the left.)  Hence, the graph of  $S_{1}$ fails the Vertical Line Test, so $y$ is not a function of $x$ here.  However, in $S_{2}$ notice that the point with $x$-coordinate 1 on the curve has been omitted, leaving an `open circle' there.  Hence, the vertical line $x=1$ crosses the graph of $S_{2}$ only at the point $(1,2)$.  Indeed, any vertical line will cross the graph at most once, so we have that the graph of $S_{2}$ passes the Vertical Line Test.  Thus it describes $y$ as a function of $x$.
+}
+\mtable{.2}{$S_{1}$ and the line $x=1$}{fig:vlteg2}{ \myincludegraphics{figures/RelationsandFunctionsGraphics/IntrotoFunctions-7}}
+
+
+\medskip
+
+Suppose a relation $F$ describes $y$ as a function of $x$.  The sets of $x$- and $y$-coordinates are given special names which we define below.
+
+\smallskip
+
+\definition{domainrangedefn}{Domain and range}{
+Suppose $F$ is a relation which describes $y$ as a function of $x$.
+
+\begin{itemize}
+
+\item  The set of the $x$-coordinates of the points in $F$ is called the \index{function ! domain}\index{domain ! definition of}\textbf{domain} of $F$.
+
+\item  The set of the $y$-coordinates of the points in $F$ is called the \index{function ! range}\index{range ! definition of}\textbf{range} of $F$.
+
+%\smallskip
+
+\end{itemize}
+}
+\mtable{.8}{The graph of $G$ for Example \ref{firstdomainexample}}{fig:domaineg}{ \myincludegraphics{figures/RelationsandFunctionsGraphics/IntrotoFunctions-8}}
+
+\smallskip
+
+We demonstrate finding the domain and range of functions given to us either graphically or via the roster method in the following example.
+
+\medskip
+
+
+\example{firstdomainexample}{Finding domain and range}{
+Find the domain and range of the function $F = \{ (-3, 2), (0, 1), (4, 2), (5, 2) \}$ and of the function $G$ whose graph is given in Figure \ref{fig:domaineg}.
+}
+{
+The domain of $F$ is the set of the $x$-coordinates of the points in $F$, namely  $\{ -3, 0, 4, 5 \}$ and the range of $F$ is the set of the $y$-coordinates, namely $\{ 1,2 \}.$
+
+\smallskip
+
+\noindent To determine the domain and range of $G$, we need to determine which $x$ and $y$ values occur as coordinates of points on the given graph.  To find the domain, it may be helpful to imagine collapsing the curve to the $x$-axis and determining the portion of the $x$-axis that gets covered.  This is called \index{projection ! $x-$axis} \textbf{projecting} the curve to the $x$-axis.  Before we start projecting, we need to pay attention to two subtle notations on the graph:  the arrowhead on the lower left corner of the graph indicates that the graph continues to curve downwards to the left forever more; and the open circle at $(1,3)$ indicates that the point $(1,3)$ isn't on the graph, but all points on the curve leading up to that point are.
+
+\mtable{.55}{Projecting the graph onto the $x$-axis  in Example \ref{firstdomainexample}}{fig:domainegprojx}{ \myincludegraphics[scale=0.8]{figures/RelationsandFunctionsGraphics/IntrotoFunctions-9}}
+
+\mtable{.3}{The domain of $G$ in Example \ref{firstdomainexample}}{fig:domainegdom}{ \myincludegraphics[scale=0.8]{figures/RelationsandFunctionsGraphics/IntrotoFunctions-10}}
+
+We see from Figures \ref{fig:domainegprojx} and \ref{fig:domainegdom} that if we project the graph of $G$ to the $x$-axis, we get all real numbers less than $1$.  Using interval notation, we write the domain of $G$ as $(-\infty, 1)$.  To determine the range of $G$, we project the curve to the $y$-axis as follows: \index{projection ! $y-$axis}
+
+
+Note that even though there is an open circle at $(1,3)$, we still include the $y$ value of $3$ in our range, since the point $(-1,3)$ is on the graph of $G$.  Referring to Figures \ref{fig:domainegprojy} and \ref{fig:domainegran}, we see that the range of $G$ is all real numbers less than or equal to $4$, or, in interval notation,  $(-\infty, 4]$. 
+}
+
+\medskip
+
+All functions are relations, but not all relations are functions.  Thus the equations which described the relations in Section \ref{Relations} may or may not describe $y$ as a function of $x$.  The algebraic representation of functions is possibly the most important way to view them so we need a process for determining whether or not an equation of a relation represents a function.  (We delay the discussion of finding the domain of a function given algebraically until Section \ref{FunctionNotation}.)
+
+
+
+\pagebreak
+
+\example{introfunctionlastexample}{Functions defined by equations}{
+Determine which equations represent $y$ as a function of $x$. 
+
+\begin{multicols}{3}
+
+\begin{enumerate}
+
+\item $x^3 + y^2 = 1$
+
+\item $x^2 + y^3 = 1$
+
+\item  $x^2y = 1 - 3y$
+
+\end{enumerate}
+
+\end{multicols}
+}
+{
+For each of these equations, we solve for $y$ and determine whether each choice of $x$ will determine only one corresponding value of $y$.
+
+\begin{enumerate}
+
+\item   \begin{align*}
+         x^3 + y^2 & =  1  \\
+               y^2 & =  1 - x^3  \\
+        \sqrt{y^2} & =  \sqrt{1 - x^3}  \tag*{extract square roots} \\
+                 y & =  \pm \sqrt{1 - x^3}  
+		\end{align*}
+
+If we substitute $x=0$ into our equation for $y$, we get  $y = \pm \sqrt{1 - 0^3} = \pm 1$, so that $(0,1)$ and $(0,-1)$ are on the graph of this equation. Hence, this equation does not represent $y$ as a function of $x$.
+
+\item  \begin{align*}
+          x^2 + y^3 & =  1  \\
+          y^3 & =  1 - x^2  \\
+          \sqrt[3]{y^3} & =  \sqrt[3]{1 - x^2}\\
+          y & = \sqrt[3]{1 - x^2}
+       \end{align*}
+
+For every choice of $x$, the equation $y =  \sqrt[3]{1 - x^2}$ returns only \textbf{one} value of $y$.  Hence, this equation describes $y$ as a function of $x$.
+
+\item   \begin{align*}
+          x^2y & =  1 - 3y  \\
+          x^2y + 3y & =  1  \\
+          y \left(x^2 + 3\right) & =  1  \tag*{factor} \\
+          y & =  \dfrac{1}{x^2 + 3} 
+		\end{align*}
+		
+\end{enumerate}
+
+For each choice of $x$, there is only one value for $y$, so this equation describes $y$ as a function of~$x$.
+}
+\mtable{.8}{Projecting the graph onto the $y$-axis in Example \ref{firstdomainexample}}{fig:domainegprojy}{ \myincludegraphics[scale=0.8]{figures/RelationsandFunctionsGraphics/IntrotoFunctions-11}}
+
+\mtable{.55}{The range of $G$ in Example \ref{firstdomainexample}}{fig:domainegran}{ \myincludegraphics[scale=0.8]{figures/RelationsandFunctionsGraphics/IntrotoFunctions-12}}
+
+%\medskip
+
+%We could try to use our graphing calculator to verify our responses to the previous example, but we immediately run into trouble.  The calculator's ``Y='' menu requires that the equation be of the form `$y$ = some expression of $x$'. If we wanted to verify that the first equation in Example \ref{introfunctionlastexample} does not represent $y$ as a function of $x$, we would need to enter two separate expressions into the calculator: one for the positive square root and one for the negative square root we found when solving the equation for $y$. As predicted, the resulting graph shown below clearly fails the Vertical Line Test, so the equation does not represent $y$ as a function of $x$. 
+
+%\begin{center}
+
+%\begin{tabular}{cc}
+
+%\myincludegraphics[width=2in]{./RelationsandFunctionsGraphics/IntrotoFunctions01.jpg} & \hspace{.75in} \myincludegraphics[width=2in]{./RelationsandFunctionsGraphics/IntrotoFunctions02.jpg} \\
+
+%\end{tabular}
+
+%\end{center}
+
+%Thus in order to use the calculator to show that $x^3 + y^2 = 1$ does not represent $y$ as a function of $x$ we needed to know \emph{analytically} that $y$ was not a function of $x$ so that we could use the calculator properly. There are more advanced graphing utilities out there which can do implicit function plots, but you need to know even more Algebra to make them work properly.  Do you get the point we're trying to make here?  We believe it is in your best interest to learn the analytic way of doing things so that you are always smarter than your calculator.
+
+\printexercises{exercises_pre/01_03_exercises}

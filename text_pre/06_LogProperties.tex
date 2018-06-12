@@ -1,0 +1,300 @@
+\section{Properties of Logarithms}
+
+\label{LogProperties}
+
+In Section \ref{IntroExpLogs}, we introduced the logarithmic functions as inverses of exponential functions and discussed a few of their functional properties from that perspective.  In this section, we explore the algebraic properties of logarithms.  Historically, these have played a huge role in the scientific development of our society since, among other things, they were used to develop analog computing devices called \href{http://en.wikipedia.org/wiki/Slide_rule}{\underline{slide rules}} which enabled scientists and engineers to perform accurate calculations leading to such things as space travel and the \href{http://www.redorbit.com/news/space/73297/nasa_marks_35th_anniversary_of_first_moon_landing/}{\underline{moon landing}}.  As we shall see shortly, logs inherit analogs of all of the properties of exponents you learned in Elementary and Intermediate Algebra.  We first extract two properties from Theorem \ref{logfcnprops} to remind us of the definition of a logarithm as the inverse of an exponential function.
+\smallskip
+
+\theorem{invpropslogs}{Inverse Properties of Exponential and Logarithmic Functions}{
+
+Let $b > 0$, $b \neq 1$. \index{exponential function ! inverse properties of}\index{logarithm ! inverse properties of}
+
+
+\begin{itemize}
+
+\item   $b^{a} = c$ if and only if $\log_{b}(c) = a$
+
+\item  $\log_{b} \left(b^{x}\right) = x$ for all $x$ and $b^{\log_{b}(x)} = x$ for all $x > 0$
+
+\end{itemize}
+}
+
+\smallskip
+
+Next, we spell out what it means for exponential and logarithmic functions to be one-to-one.
+
+\smallskip
+
+\theorem{explogsonetoone}{One-to-one Properties of Exponential and Logarithmic Functions}{ Let $f(x) = b^{x}$ and $g(x) = \log_{b}(x)$ where $b>0$, $b\neq 1$.  Then $f$ and $g$ are one-to-one and  \index{exponential function ! one-to-one properties of}\index{logarithm ! one-to-one properties of}
+
+\begin{itemize}
+
+\item  $b^{u} = b^{w}$ if and only if $u=w$ for all real numbers $u$ and $w$.
+
+\item  $\log_{b}(u) = \log_{b}(w)$ if and only if $u=w$ for all real numbers $u > 0$, $w > 0$.
+
+\end{itemize}
+}
+
+\smallskip
+
+We now state the algebraic properties of exponential functions which will serve as a basis for the properties of logarithms.  While these properties may look identical to the ones you learned in Elementary and Intermediate Algebra, they apply to real number exponents, not just rational exponents.  Note that in the theorem that follows, we are interested in the properties of exponential functions, so the base $b$ is restricted to $b > 0$, $b \neq 1$.  %An added benefit of this restriction is that it eliminates the pathologies discussed in Section \ref{AlgebraicFunctions} when, for example, we simplified $\left(x^{2/3}\right)^{3/2}$ and obtained $|x|$ instead of what we had expected from the arithmetic in the exponents, $x^{1} = x$. 
+
+\smallskip
+
+\theorem{algpropexpfcns}{Algebraic Properties of Exponential Functions}{  Let $f(x) = b^{x}$ be an exponential function ($b > 0$, $b\neq 1$) and let $u$ and $w$ be real numbers. \index{exponential function ! algebraic properties of}
+
+\begin{itemize}
+
+\item  \sword{Product Rule:} \index{product rule ! for exponential functions} $f(u+w) = f(u) f(w)$.  In other words, $b^{u+w} = b^{u} b^{w}$
+
+\item  \sword{Quotient Rule:} \index{quotient rule ! for exponential functions} $f(u-w) = \dfrac{f(u)}{f(w)}$.  In other words, $b^{u-w} = \dfrac{b^{u}}{b^{w}}$
+
+\item  \sword{Power Rule:} \index{power rule ! for exponential functions} $\left(f(u)\right)^w = f(uw)$.  In other words, $\left(b^{u}\right)^{w} = b^{uw}$
+
+\end{itemize}
+}
+
+\smallskip
+
+While the properties listed in Theorem \ref{algpropexpfcns} are certainly believable based on similar properties of integer and rational exponents, the full proofs require Calculus.  To each of these properties of exponential functions corresponds an analogous property of logarithmic functions.  We list these below in our next theorem.
+
+\smallskip
+
+\theorem{algproplogfcns}{Algebraic Properties of Logarithmic Functions}{  Let $g(x) =\log_{b}(x)$ be a logarithmic function ($b > 0$, $b\neq 1$) and let $u>0$ and $w>0$ be real numbers. \index{logarithm ! algebraic properties of}
+
+\begin{itemize}
+
+\item  \sword{Product Rule:} \index{product rule ! for logarithms} $g(uw) = g(u)+ g(w)$.  In other words, $\log_{b}(uw) = \log_{b}(u) + \log_{b}(w)$
+
+\item  \sword{Quotient Rule:} \index{quotient rule ! for logarithms} $g\left(\dfrac{u}{w} \right) = g(u) - g(w)$.  In other words, $\log_{b} \left( \dfrac{u}{w} \right) = \log_{b}(u) - \log_{b}(w)$
+
+\item  \sword{Power Rule:} \index{power rule ! for logarithms} $g\left(u^{w}\right) =w g(u)$.  In other words, $\log_{b}\left(u^{w}\right) = w \log_{b}(u)$
+
+\end{itemize}
+}
+
+\smallskip
+
+There are a couple of different ways to understand why Theorem \ref{algproplogfcns} is true.  Consider the product rule: $\log_{b}(uw) = \log_{b}(u) + \log_{b}(w)$.  Let $a = \log_{b}(uw)$, $c = \log_{b}(u)$, and $d = \log_{b}(w)$.  Then, by definition, $b^{a} = uw$, $b^{c} = u$ and $b^{d} = w$.  Hence, $b^{a} = uw = b^{c} b^{d} = b^{c+d}$, so that $b^{a} = b^{c+d}$.  By the one-to-one property of $b^{x}$, we have $a = c+d$. In other words, $\log_{b}(uw) = \log_{b}(u) + \log_{b}(w)$.  The remaining properties are proved similarly.  From a purely functional approach, we can see the properties in Theorem \ref{algproplogfcns} as an example of how inverse functions interchange the roles of inputs in outputs.  For instance, the Product Rule for exponential functions given in Theorem  \ref{algpropexpfcns}, $f(u+w) = f(u)f(w)$, says that adding inputs results in multiplying outputs.  Hence, whatever $f^{-1}$ is, it must take the products of outputs from $f$ and return them to the sum of their respective inputs.  Since the outputs from $f$ are the inputs to $f^{-1}$ and vice-versa, we have that that $f^{-1}$ must take products of its inputs to the sum of their respective outputs. This is precisely what the Product Rule for Logarithmic functions states in Theorem \ref{algproplogfcns}:  $g(uw) = g(u) + g(w)$.  The reader is encouraged to view the remaining properties listed in Theorem \ref{algproplogfcns} similarly.  The following examples help build familiarity with these properties.  In our first example, we are asked to `expand' the logarithms.  This means that we read the properties in Theorem \ref{algproplogfcns} from left to right and rewrite products inside the log as sums outside the log, quotients inside the log as  differences outside the log, and powers inside the log as factors outside the log.
+
+
+\medskip
+
+
+\example{expandlogex}{Expanding logarithmic expressions}{ Expand the following using the properties of logarithms and simplify.  Assume when necessary that all quantities represent positive real numbers.
+
+\mnote{.75}{Interestingly enough, expanding logarithms is the exact \textit{opposite} process (which we will practice later) that is most useful in Algebra. The utility of expanding logarithms becomes apparent in Calculus.}
+
+
+\begin{multicols}{2}
+\begin{enumerate}
+
+\item $\log_{2}\left(\dfrac{8}{x}\right)$ \vphantom{$\ln \left(\dfrac{3}{ex}\right)^2$}
+
+\item $\log_{0.1} \left(10 x^2 \right)$ \vphantom{$\ln \left(\dfrac{3}{ex}\right)^2$}
+
+\item  $\ln \left(\dfrac{3}{ex}\right)^2$
+
+
+\item  $\log \sqrt[3]{\dfrac{100 x^2}{yz^5}}$
+
+\item  $\vphantom{\log \sqrt[3]{\dfrac{100 x^2}{yz^5}}} \log_{117}\left(x^2 - 4\right)$
+
+\end{enumerate}
+\end{multicols}
+}
+{
+\begin{enumerate}
+
+
+\item  To expand $\log_{2}\left(\frac{8}{x}\right)$, we use the Quotient Rule identifying $u = 8$ and $w=x$ and simplify.
+
+\begin{align*}
+\log_{2}\left(\dfrac{8}{x}\right) & =   \log_{2}(8) - \log_{2}(x) \tag*{Quotient Rule} \\
+& =   3 - \log_{2}(x)  \tag*{Since $2^{3} = 8$} \\
+& =  - \log_{2}(x) + 3  \\
+\end{align*}
+
+\item   In the expression $\log_{0.1} \left(10 x^2 \right)$, we have a power (the $x^2$) and a product.  In order to use the Product Rule, the \textit{entire} quantity inside the logarithm must be raised to the same exponent.  Since the exponent $2$ applies only to the $x$, we first apply the Product Rule with $u=10$ and $w=x^2$.  Once we get the $x^2$ by itself inside the log, we may apply the Power Rule with $u=x$ and $w=2$ and simplify. 
+
+\begin{align*}
+\log_{0.1} \left(10 x^2 \right) & =   \log_{0.1} (10) +  \log_{0.1} \left(x^2 \right) \tag*{Product Rule} \\                               
+            & =   \log_{0.1} (10)+ 2 \log_{0.1} (x)  \tag*{Power Rule} \\
+            & =   -1 + 2 \log_{0.1} (x)  \tag*{Since $(0.1)^{-1} = 10$} \\
+            & =   2 \log_{0.1} (x) - 1  
+\end{align*}
+
+
+\item  We have a power, quotient and product occurring in $\ln \left(\frac{3}{ex}\right)^2$.  Since the exponent $2$ applies to the entire quantity inside the logarithm, we begin with the Power Rule with $u=\frac{3}{ex}$ and $w = 2$.  Next, we see the Quotient Rule is applicable, with $u=3$ and $w=ex$, so we replace $\ln\left(\frac{3}{ex}\right)$  with the quantity $\ln(3) - \ln(ex)$. Since $\ln \left(\frac{3}{ex}\right)$ is being multiplied by $2$, the entire quantity $\ln(3) - \ln(ex)$ is multiplied by $2$.  Finally, we apply the Product Rule with $u=e$ and $w=x$, and replace $\ln(ex)$ with the quantity $\ln(e) + \ln(x)$, and simplify, keeping in mind that the natural log is log base $e$.
+
+\begin{align*}
+\ln \left(\dfrac{3}{ex}\right)^2 & =  2 \ln \left(\dfrac{3}{ex}\right)  \tag*{Power Rule} \\
+      & =  2 \left[ \ln(3) - \ln(ex) \right]  \tag*{Quotient Rule} \\
+      & =  2 \ln(3) - 2\ln(ex)  \\
+      & =  2 \ln(3) - 2\left[\ln(e) + \ln(x)\right]  \tag*{Product Rule} \\
+      & =  2 \ln(3) - 2\ln(e) - 2 \ln(x)  \\
+      & =  2\ln(3) - 2 - 2 \ln(x)  \tag*{Since $e^{1} = e$} \\
+      & =  - 2 \ln(x) + 2\ln(3) - 2  \\
+\end{align*}
+                        
+
+\item In Theorem \ref{algproplogfcns}, there is no mention of how to deal with radicals.  However, thinking back to Definition \ref{rationalexponentdefn}, we can rewrite the cube root as a $\frac{1}{3}$ exponent.  We begin by using the Power Rule, and we keep in mind that the common log is log base $10$. 
+
+\mnote{.5}{At this point in the text, the reader is encouraged to carefully read through each step and think of which quantity is playing the role of $u$ and which is playing the role of $w$ as we apply each property.}
+
+\begin{align*}
+\log \sqrt[3]{\dfrac{100 x^2}{yz^5}} & =  \log \left(\dfrac{100 x^2}{yz^5}\right)^{1/3}  \\ 
+& =  \frac{1}{3} \log\left(\dfrac{100 x^2}{yz^5}\right)  \tag*{Power Rule} \\ 
+& =  \frac{1}{3} \left[ \log\left(100x^2\right) - \log\left(yz^5\right) \right]  \tag*{Quotient Rule} \\ 
+& = \frac{1}{3}\log\left(100x^2\right) - \frac{1}{3}\log\left(yz^5\right) \\
+& =  \frac{1}{3}\left[ \log(100) + \log\left(x^2\right)\right] - \frac{1}{3} \left[ \log(y) + \log\left(z^5\right) \right]  \tag*{Product Rule} \\
+& = \frac{1}{3} \log(100) + \frac{1}{3} \log\left(x^2\right) - \frac{1}{3} \log(y) - \frac{1}{3} \log\left(z^5\right) \\
+& =  \frac{1}{3} \log(100) + \frac{2}{3} \log(x) - \frac{1}{3} \log(y) - \frac{5}{3} \log(z)  \tag*{Power Rule} \\
+& =  \frac{2}{3} + \frac{2}{3} \log(x) - \frac{1}{3} \log(y) - \frac{5}{3} \log(z)  \tag*{Since $10^2=100$} \\
+& =   \frac{2}{3} \log(x) - \frac{1}{3} \log(y) - \frac{5}{3} \log(z) + \frac{2}{3} 
+\end{align*}
+
+\item  At first it seems as if we have no means of simplifying $\log_{117}\left(x^2-4\right)$, since none of the properties of logs addresses the issue of expanding a difference \textit{inside} the logarithm.  However, we may factor $x^2 - 4 = (x+2)(x-2)$ thereby introducing a product which gives us license to use the Product Rule.
+
+\begin{align*}
+\log_{117}\left(x^2-4\right) & =  \log_{117} \left[(x+2)(x-2)\right]  \tag*{Factor} \\
+ & =  \log_{117}(x+2) + \log_{117}(x-2)  \tag*{Product Rule} 
+\end{align*}
+
+\end{enumerate}
+}
+
+\medskip
+
+A couple of remarks about Example \ref{expandlogex} are in order.  First, while not explicitly stated in the above example, a general rule of thumb to determine which log property to apply first to a complicated problem is `reverse order of operations.'  For example, if we were to substitute a number for $x$ into the expression $\log_{0.1} \left(10 x^2 \right)$, we would first square the $x$, then multiply by $10$.  The last step is the multiplication, which tells us the first log property to apply is the Product Rule.  In a multi-step problem, this rule can give the required guidance on which log property to apply at each step.  The reader is encouraged to look through the solutions to Example \ref{expandlogex} to see this rule in action.  Second, while we were instructed to assume when necessary that all quantities represented positive real numbers, the authors would be committing a sin of omission if we failed to point out that, for instance, the functions $f(x) = \log_{117}\left(x^2-4\right)$ and $g(x) = \log_{117}(x+2) + \log_{117}(x-2)$ have different domains, and, hence, are different functions. We leave it to the reader to verify the domain of $f$ is $(-\infty, -2) \cup (2,\infty)$ whereas the domain of $g$ is $(2,\infty)$.  In general, when using log properties to expand a logarithm, we may very well be restricting the domain as we do so.  One last comment before we move to reassembling logs from their various bits and pieces. The authors are well aware of the propensity for some students to become overexcited and invent their own properties of logs like $\log_{117}\left(x^2-4\right) = \log_{117}\left(x^2\right) - \log_{117}(4)$, which simply isn't true, in general.  The unwritten (the authors relish the irony involved in writing what follows) property of logarithms is that if it isn't written in a textbook, it probably isn't true.    
+
+\medskip
+
+\example{contractlogex}{Combining logarithmic expressions}{ Use the properties of logarithms to write the following as a single logarithm.
+
+\begin{multicols}{2}
+\begin{enumerate}
+
+\item  $\log_{3}(x-1) - \log_{3}(x+1)$
+
+\item  $\log(x) + 2\log(y) - \log(z)$
+
+\setcounter{HW}{\value{enumi}}
+\end{enumerate}
+\end{multicols}
+
+\begin{multicols}{2}
+\begin{enumerate}
+\setcounter{enumi}{\value{HW}}
+
+\item  $4\log_{2}(x) + 3$
+
+\item  $-\ln(x) - \frac{1}{2}$
+
+
+\end{enumerate}
+\end{multicols}
+}
+{
+Whereas in Example \ref{expandlogex} we read the properties in Theorem \ref{algproplogfcns} from left to right to expand logarithms, in this example we read them from right to left.
+
+\begin{enumerate}
+
+\item The difference of logarithms requires the Quotient Rule: $\log_{3}(x-1) - \log_{3}(x+1) = \log_{3}\left(\frac{x-1}{x+1}\right)$.
+
+\item  In the expression, $\log(x) + 2\log(y) - \log(z)$, we have both a sum and difference of logarithms.  However, before we use the product rule to combine $\log(x) + 2\log(y)$, we note that we need to somehow deal with the coefficient $2$ on $\log(y)$.  This can be handled using the Power Rule. We can then apply the Product and Quotient Rules as we move from left to right. Putting it all together, we have
+
+\begin{align*}
+\log(x) + 2\log(y) - \log(z) & =  \log(x) + \log\left(y^2\right) - \log(z)  \tag*{Power Rule} \\
+                             & =  \log\left(xy^2\right) - \log(z)  \tag*{Product Rule} \\
+                             & =  \log\left( \dfrac{xy^2}{z}\right)  \tag*{Quotient Rule}
+\end{align*}
+                             
+\item  We can certainly get started rewriting $4\log_{2}(x) + 3$ by applying the Power Rule to  $4\log_{2}(x)$ to obtain $\log_{2}\left(x^4\right)$, but in order to use the Product Rule to handle the addition, we need to rewrite $3$ as a logarithm base $2$.  From Theorem \ref{invpropslogs}, we know $3 = \log_{2}\left(2^3\right)$, so we get
+
+\begin{align*}
+4\log_{2}(x) + 3 & =  \log_{2}\left(x^4\right) + 3   \tag*{Power Rule} \\ 
+  & =  \log_{2}\left(x^4\right) + \log_{2}\left(2^3\right) \tag*{Since $3 = \log_{2}\left(2^3\right)$} \\
+  & =  \log_{2}\left(x^4\right) + \log_{2}(8) \\
+  & =  \log_{2}\left( 8x^4\right)  \tag*{Product Rule}
+\end{align*}
+
+\item To get started with $-\ln(x) - \frac{1}{2}$, we rewrite  $-\ln(x)$ as $(-1) \ln(x)$.  We can then use the Power Rule to obtain $(-1)\ln(x) = \ln\left(x^{-1}\right)$. In order to use the Quotient Rule, we need to write $\frac{1}{2}$ as a natural logarithm. Theorem \ref{invpropslogs} gives us $\frac{1}{2} = \ln\left(e^{1/2}\right) = \ln\left(\sqrt{e}\right)$.  We have 
+
+\begin{align*}
+-\ln(x) - \frac{1}{2} & =  (-1)\ln(x) - \frac{1}{2}    \\ 
+   & =  \ln\left(x^{-1}\right) - \frac{1}{2}  \tag*{Power Rule} \\
+   & =  \ln\left(x^{-1}\right) - \ln\left(e^{1/2}\right) \tag*{Since $\frac{1}{2} = \ln\left(e^{1/2}\right)$} \\
+   & =  \ln\left(x^{-1}\right) - \ln\left(\sqrt{e} \right) \\ 
+   & =  \ln\left(\dfrac{x^{-1}}{\sqrt{e}}\right)  \tag*{Quotient Rule} \\ 
+   & =  \ln\left(\dfrac{1}{x\sqrt{e}}\right) 
+\end{align*}
+\end{enumerate}
+}
+
+\medskip
+
+As we would expect, the rule of thumb for re-assembling logarithms is the opposite of what it was for dismantling them.  That is, if we are interested in rewriting an expression as a single logarithm, we apply log properties following the usual order of operations:  deal with multiples of logs first with the Power Rule, then deal with addition and subtraction using the Product and Quotient Rules, respectively. Additionally, we find that using log properties in this fashion can increase the domain of the expression.  For example, we leave it to the reader to verify the domain of $f(x) = \log_{3}(x-1) - \log_{3}(x+1)$ is $(1,\infty)$ but the domain of $g(x) = \log_{3}\left(\frac{x-1}{x+1}\right)$ is $(-\infty, -1) \cup (1, \infty)$.  %We will need to keep this in mind when we solve equations involving logarithms in Section \ref{LogEquations} - it is precisely for this reason we will have to check for extraneous solutions.
+
+\smallskip
+
+The two logarithm buttons commonly found on calculators are the `LOG' and `LN' buttons which correspond to the common and natural logs, respectively.  Suppose we wanted an approximation to $\log_{2}(7)$.  The answer should be a little less than $3$, (Can you explain why?) but how do we coerce the calculator into telling us a more accurate answer?  We need the following theorem.
+
+\smallskip
+
+\theorem{changeofbase}{Change of Base Formulas}{ Let $a,b >0$, $a,b \neq 1$. \index{change of base formulas} \index{exponential function ! change of base formula} \index{logarithm ! change of base formula}
+
+\begin{itemize}
+
+\item  $a^{x} = b^{x \log_{b}(a)}$ for all real numbers $x$.
+
+\item  $\log_{a}(x) = \dfrac{\log_{b}(x)}{\log_{b}(a)}$ for all real numbers $x > 0$.
+
+\end{itemize}
+}
+
+\smallskip
+
+The proofs of the Change of Base formulas are a result of the other properties studied in this section.  If we start with $b^{x \log_{b}(a)}$ and use the Power Rule in the exponent to rewrite $x \log_{b}(a)$ as $\log_{b}\left(a^{x}\right)$ and then apply one of the Inverse Properties in Theorem \ref{invpropslogs}, we get \[ b^{x \log_{b}(a)} = b^{\log_{b}\left(a^{x}\right)} = a^{x},\] as required.  To verify the logarithmic form of the property, we also use the Power Rule and an Inverse Property. We note that \[\log_{a}(x) \cdot \log_{b}(a) =  \log_{b} \left(a^{\log_{a}(x)}\right) = \log_{b}(x),\] and we get the result by dividing through by $\log_{b}(a)$.  Of course, the authors can't help but point out the inverse relationship between these two change of base formulas.  To change the base of an exponential expression, we \textit{multiply} the \textit{input} by the factor $\log_{b}(a)$.  To change the base of a logarithmic expression, we \textit{divide} the \textit{output} by the factor $\log_{b}(a)$.   What Theorem \ref{changeofbase} really tells us is that all exponential and logarithmic functions are just scalings of one another.  Not only does this explain why their graphs have similar shapes, but it also tells us that we could do all of mathematics with a single base - be it $10$, $e$, $42$, or $117$. 
+
+\mnote{.75}{While, in the grand scheme of things, both change of base formulas are really saying the same thing, the logarithmic form is the one usually encountered in Algebra while the exponential form isn't usually introduced until Calculus. The authors feel so strongly about showing students that every property of logarithms comes from and corresponds to a property of exponents that we have broken tradition with the vast majority of other authors in this field.  This isn't the first time this happened, and it certainly won't be the last.}
+
+\medskip
+
+\example{ex_basechange}{Using change of base formulas}{ Use an appropriate change of base formula to convert the following expressions to ones with the indicated base.  Verify your answers using a computer or calculator, as appropriate.
+
+\begin{enumerate}
+
+\item  $3^{2}$ to base $10$
+
+\item  $2^{x}$ to base $e$
+
+
+\item $\log_{4}(5)$ to base $e$
+
+\item $\ln(x)$ to base $10$
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item  We apply the Change of Base formula with $a=3$ and $b=10$ to obtain $3^2 = 10^{2 \log(3)}$. Typing the latter in the calculator produces an answer of $9$ as required.
+
+\item  Here, $a=2$ and $b = e$ so we have $2^{x} = e^{x \ln(2)}$.  To verify this on our calculator, we can graph $f(x) = 2^x$ \ifthenelse{\boolean{colour}}{(in red)}{(in black)} and $g(x) = e^{x \ln(2)}$ \ifthenelse{\boolean{colour}}{(in blue)}{(in grey)}.  Their graphs are indistinguishable which provides evidence that they are the same function: see Figure \ref{fig:logprop1}.
+
+\mfigure{.4}{$y=f(x)=2^x$ and $y=g(x)=e^{x\ln(2)}$}{fig:logprop1}{figures/ExpLogsGraphics/ExpLogs03}
+
+\item  Applying the change of base with $a=4$ and $b=e$ leads us to write $\log_{4}(5) = \frac{\ln(5)}{\ln(4)}$.  Evaluating this in the calculator gives $\frac{\ln(5)}{\ln(4)} \approx 1.16$.  How do we check this really is the value of $\log_{4}(5)$?  By definition, $\log_{4}(5)$ is the exponent we put on $4$ to get $5$.  The plot from GeoGebra in Figure \ref{fig:logprop2} confirms this. (Which means if it is lying to us about the first answer it gave us, at least it is being consistent.) 
+
+\item  We write $\ln(x) = \log_{e}(x) = \frac{\log(x)}{\log(e)}$.  We graph both $f(x) = \ln(x)$ and $g(x) = \frac{\log(x)}{\log(e)}$ and find both graphs appear to be identical.
+
+\mfigure{.2}{$y=f(x)=2^x$ and $y=g(x)=e^{x\ln(2)}$}{fig:logprop2}{figures/ExpLogsGraphics/ExpLogs04}
+
+\end{enumerate}
+
+}
+
+\printexercises{exercises_pre/06_02_exercises}
+

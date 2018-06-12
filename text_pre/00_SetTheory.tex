@@ -1,0 +1,460 @@
+
+
+\section{Some Basic Set Theory Notions}
+\label{SetTheory}
+
+%\label{SetTheoryNotions}
+
+
+%\label{SetsofNumbers}
+While the authors would like nothing more than to delve quickly and deeply into the sheer excitement that is \textit{Precalculus}, experience has taught us that a brief refresher on some basic notions is welcome, if not completely necessary, at this stage.  To that end, we present a brief summary of `set theory' and some of the associated vocabulary and notations we use in the text. Like all good Math books, we begin with a definition.
+
+
+\definition{setdef}{Set}{
+A \sword{set}\index{set ! definition of} is a well-defined collection of objects which are called the `elements' of the set.  Here, `well-defined' means that it is possible to determine if something belongs to the collection or not, without prejudice. 
+}
+
+\smallskip
+
+For example, the collection of letters that make up the word ``pronghorns'' is well-defined and is a set, but  the collection of the worst math teachers in the world is \textbf{not} well-defined, and so is \textbf{not} a set.  In general, there are three ways to describe sets.  They are
+
+\mnote{.55}{One thing that student evaluations teach us is that any given Mathematics instructor can be simultaneously the best and worst teacher ever, depending on who is completing the evaluation.}
+
+\smallskip
+
+\keyidea{idea:setdescription}{Ways to Describe Sets}{
+\begin{enumerate}
+
+\item \textbf{The Verbal Method:} Use a sentence to define a set.\index{set ! verbal description}
+
+\item \textbf{The Roster Method:}  Begin with a left brace `$\{$', list each element of the set \textit{only once} and then end with a right brace `$\}$'.\index{set ! roster method}
+
+\item \textbf{The Set-Builder Method:} A combination of the verbal and roster methods using a ``dummy variable'' such as $x$.\index{set ! set-builder notation}\index{set-builder notation}
+
+\end{enumerate}
+}
+\smallskip
+
+For example, let $S$ be the set described \textit{verbally} as the set of letters that make up the word ``pronghorns''.  A  \sword{roster} description of $S$ would be  $\left\{ p, r, o, n, g, h, s \right\}$. Note that we listed `r', `o', and `n' only once, even though they appear twice in ``pronghorns.''  Also, the \textit{order} of the elements doesn't matter, so $\left\{ o, n, p, r, g, s, h \right\}$ is also a roster description of $S$.   A \sword{set-builder} description of $S$ is: \[ \{ x \, | \, \mbox{$x$ is a
+letter in the word ``pronghorns''.}\} \]
+
+The way to read this is: `The set of elements $x$ \underline{such that} $x$ is a letter in the word ``pronghorns.'''   In each of the above cases, we may use the familiar equals sign `$=$' and write  $S = \left\{  p, r, o, n, g, h, s  \right\}$ or $S = \{ x \, | \, \mbox{$x$ is a
+letter in the word ``pronghorns''.}\}$.  Clearly $r$ is in $S$ and $q$ is not in $S$.  We express these sentiments mathematically by writing  $r \in S$ and $q \notin S$. 
+
+More precisely, we have the following.
+
+\medskip
+
+\definition{notationforsetinclusion}{Notation for set inclusion}{ Let $A$ be a set.
+
+\begin{itemize}
+
+\item If $x$ is an element of $A$ then we write $x \in A$\index{set ! inclusion}\index{$\in$} which is read `$x$ is in $A$'.
+
+\item If $x$ is \emph{not} an element of $A$ then we write $x \notin A$\index{set ! exclusion}\index{$\notin$} which is read `$x$ is not in $A$'.
+
+\end{itemize}
+}
+
+\medskip
+
+Now let's consider the set $C =  \{ x \, | \, \mbox{$x$ is a consonant in the word ``pronghorns''}\}$.  A roster description of $C$ is  $C = \{ p, r, n, g, h, s\}$.  Note that by construction, every element of $C$ is also in $S$.  We express this relationship by stating that the set $C$ is a \textbf{subset} of the set $S$, which is written in symbols as $C \subseteq S$.  The more formal definition is given below.
+
+\medskip
+
+\definition{subsetdef}{Subset}{
+Given sets $A$ and $B$, we say that the set $A$ is a \textbf{subset}\index{subset ! definition of} of the set $B$ and write `$A \subseteq B$' if every element in $A$ is also an element of $B$.  
+}
+
+\medskip
+
+Note that in our example above $C \subseteq S$, but not vice-versa, since $o \in S$ but $o \notin C$.  Additionally, the set of vowels $V = \{ a, e, i, o, u\}$, while it does have an element in common with $S$, is not a subset of $S$. (As an added note,  $S$ is not a subset of $V$, either.)  We could, however, \textit{build} a set which contains both $S$ and $V$ as subsets by gathering all of the elements in both $S$ and $V$ together into a single set, say $U = \{ p, r, o, n, g, h, s, a, e, i, u\}$.   Then $S \subseteq U$ and $V \subseteq U$.  The set $U$ we have built is called the \textbf{union} of the sets $S$ and $V$ and is denoted $S \cup V$.    Furthermore, $S$ and $V$ aren't completely \textit{different} sets since they both contain the letter `o.' (Since the word `different' could be ambiguous, mathematicians use the word \textit{disjoint} to refer to two sets that have no elements in common.) The \textbf{intersection} of two sets is the set of elements (if any) the two sets have in common. In this case, the intersection of $S$ and $V$ is $\{ o\}$, written $S \cap V = \{ o \}$.  We formalize these ideas below.
+
+\medskip
+
+\definition{intersectionunion}{Intersection and Union}{
+ Suppose $A$ and $B$ are sets.
+
+\begin{itemize}
+
+\item The \textbf{intersection}\index{set ! intersection}\index{intersection of two sets} of $A$ and $B$ is $A \cap B = \{ x \, | \, x \in A \, \text{and} \,\, x \in B \}$
+
+\item The \textbf{union}\index{set ! union}\index{union of two sets} of $A$ and $B$ is $A \cup B = \{ x \, | \, x \in A \, \text{or} \,\, x \in B \, \, \text{(or both)} \}$
+
+\end{itemize}
+}
+
+\medskip
+
+The key words in Definition \ref{intersectionunion} to focus on are the conjunctions:  `intersection' corresponds to `and' meaning the elements have to be in \textit{both} sets to be in the intersection, whereas `union' corresponds to `or' meaning the elements have to be in one set, or the other set (or both).  In other words, to belong to the union of two sets an element must belong to \textit{at least one} of them.
+
+\smallskip
+
+Returning to the sets $C$ and $V$  above, $C \cup V = \{ p, r, n, g, h, s, a, e, i, o, u\}$. When it comes to their intersection, however, we run into a bit of notational awkwardness since $C$ and $V$ have no elements in common.  While we could write $C \cap V = \{ \}$, this sort of thing happens often enough that we give the set with no elements a name. 
+
+\medskip
+
+\definition{emptysetdefn}{Empty set}{
+The \textbf{Empty Set} $\emptyset$ is the set which contains no elements.\index{set ! empty}\index{empty set}  That is, \[\emptyset=\{ \}=\{x\,|\,\mbox{$x \neq x$}\}.\]  
+}
+
+\medskip
+
+As promised, the empty set is the set containing no elements since no matter what `$x$' is, `$x = x$.'  Like the number `$0$,'  the empty set plays a vital role in mathematics. We introduce it here more as a symbol of convenience as opposed to a contrivance.
+\mnote{.85}{The full extent of the empty set's role will not be explored in this text, but it is of fundamental importance in Set Theory. In fact, the empty set can be used to generate numbers -  mathematicians can create something from nothing! If you're interested, read about the \href{https://en.wikipedia.org/wiki/Natural_number\#von_Neumann_construction}{von Neumann construction of the natural numbers} or consider signing up for Math 2000.}   
+Using this new bit of notation, we have for the sets $C$ and $V$ above that $C \cap V = \emptyset$.    A nice way to visualize relationships between sets and set operations is to draw a  \href{http://en.wikipedia.org/wiki/Venn_diagram}{\underline{\textbf{Venn Diagram}}}\index{diagram ! Venn Diagram}\index{Venn Diagram}.  A Venn Diagram for the sets $S$, $C$ and $V$ is drawn in Figure \ref{venndiagram}.
+
+\mtable{.68}{A Venn diagram for $C$, $S$, and $V$}{venndiagram}{
+\myincludegraphics[width=0.95\marginparwidth]{figures/RelationsandFunctionsGraphics/SetTheory-1}
+}
+
+In Figure \ref{venndiagram} we have three circles - one for each of the sets $C$, $S$ and $V$.  We visualize the area enclosed by each of these circles as the elements of each set.  Here, we've spelled out the elements for definitiveness.  Notice that the circle representing the set $C$ is completely inside the circle representing $S$.  This is a geometric way of  showing that $C \subseteq S$.  Also, notice that the circles representing $S$ and $V$ overlap on the letter `o'.  This common region is how we visualize $S \cap V$.  Notice that since $C \cap V = \emptyset$, the circles which represent $C$ and $V$ have no overlap whatsoever.  
+
+\medskip
+
+All of these circles lie in a rectangle labelled $U$ (for `universal' set).  A universal set contains all of the elements under discussion, so it could always be taken as the union of all of the sets in question, or an even larger set.  In this case, we could take $U = S \cup V$ or $U$ as the set of letters in the entire alphabet.    The usual triptych of Venn Diagrams indicating generic sets $A$ and  $B$ along with $A \cap B$ and $A \cup B$ is given below.
+
+(The reader may well wonder if there is an ultimate universal set which contains \textit{everything}.  The short answer is `no'. Our definition of a set turns out to be overly simplistic, but correcting this takes us well beyond the confines of this course. If you want the longer answer, you can begin by reading about \href{http://en.wikipedia.org/wiki/Russell's_paradox}{\underline{Russell's Paradox}} on Wikipedia.)
+
+\mtable{.32}{Venn diagrams for intersection and union}{fig:intunion}{
+\begin{tabular}{c}
+\myincludegraphics[scale=0.8]{figures/RelationsandFunctionsGraphics/SetTheory-2}\\
+Sets $A$ and $B$.\\
+\\
+\myincludegraphics[scale=0.8]{figures/RelationsandFunctionsGraphics/SetTheory-3}\\
+$A\cap B$ is shaded.\\
+\\
+\myincludegraphics[scale=0.8]{figures/RelationsandFunctionsGraphics/SetTheory-4}\\
+$A\cup B$ is shaded.
+\end{tabular}
+}
+
+\subsection{Sets of Real Numbers}
+\label{SetsofNumbers}
+
+The playground for most of this text is the set of \textbf{Real Numbers}.  Many quantities in the `real world' can be quantified using real numbers: the temperature at a given time, the revenue generated by selling a certain number of products and the maximum population of Sasquatch which can inhabit a particular region are just three basic examples.   A succinct, but nonetheless incomplete definition of a real number is given below.
+
+\medskip
+
+\definition{realnumberdefn}{The real numbers}{
+
+A \sword{real number}\index{real number ! set of}\index{real number ! definition of} is any number which possesses a decimal representation.  The set of real numbers is denoted by the character $\mathbb{R}$.
+}
+
+\medskip
+
+Certain subsets of the real numbers are worthy of note and are listed below.  In more advanced courses like Analysis, you learn that the real numbers can be {\em constructed} from the rational numbers, which in turn can be constructed from the integers (which themselves come from the natural numbers, which in turn can be defined as sets...).
+
+\medskip
+
+\phantomsection
+\label{setsofnumbersboxonthispage}
+\setboxwidth{30pt}
+\noindent\hskip-12pt
+\begin{minipage}{1.2\linewidth}
+\definition{def:numbersets}{Sets of Numbers}{\index{set ! sets of numbers}
+
+\begin{enumerate}
+
+\item The \sword{Empty Set}:\index{set ! empty}\index{empty set} $\emptyset=\{ \}=\{x\,|\,\mbox{$x
+\neq x$}\}$.  This is the set with no elements.  Like the number `$0$,' it  plays a vital role in mathematics.
+
+\item The \sword{Natural Numbers}:\index{natural number ! set of}\index{natural number ! definition of} $\mathbb N= \{ 1, 2, 3,  \ldots\}$ The periods of ellipsis here indicate that the natural numbers contain $1$, $2$, $3$, `and so forth'.
+
+%\item The \sword{Whole Numbers}:\index{whole number ! set of}\index{whole number ! definition of} $\mathbb W = \{ 0, 1, 2, \ldots \}$
+
+\item The \sword{Integers}:\index{integer ! set of}\index{integer ! definition of} $\mathbb Z=\{ \ldots, -3, -2, -1, 0, 1, 2, 3, \ldots \}$
+
+\item The \sword{Rational Numbers}:\index{rational number ! set of}\index{rational number ! definition of} $\mathbb Q=\left\{\frac{a}{b} \, | \, a \in \mathbb Z \, \mbox{and} \, b \in \mathbb Z \right\}$.  \underline{Ratio}nal numbers are the \underline{ratio}s of integers (provided the denominator is not zero!)  It turns out that another way to describe the rational numbers is: \[\mathbb Q=\{x\,|\,\mbox{$x$ possesses a repeating or terminating decimal representation.}\}\]
+
+\item The \sword{Real Numbers}:\index{real number ! set of}\index{real number ! definition of} $\mathbb R = \{ x\,|\,\mbox{$x$ possesses a decimal representation.}\}$
+
+\item The \sword{Irrational Numbers}:\index{irrational number ! set of}\index{irrational number ! definition of} Real numbers that are not rational are called \sword{irrational}.  As a set, we have  $\{x\in\mathbb{R}\,|\, x\notin \mathbb{Q}\}$. (There is no standard symbol for this set.)  Every \underline{ir}rational number has a decimal expansion which neither repeats nor terminates.
+
+\item The \sword{Complex Numbers}:\index{complex number ! set of}\index{complex number ! definition of} $\mathbb C=\{a+bi\,|\,\mbox{$a$,$b \in \mathbb R$ and $i=\sqrt{-1}$}\}$  (We will not deal with complex numbers in Math 1010, although they usually make an appearance in Math 1410.)
+
+\end{enumerate}
+}
+\end{minipage}
+\restoreboxwidth
+%\enlargethispage{.05in}
+
+\medskip
+
+\mnote{.65}{An example of a number with a repeating decimal expansion is $a=2.13234234234\ldots$. This is rational since $100a = 213.2342342342...$, and $100000a = 213234.234234...$ so $99900a = 100000a-100a = 213021$. This gives us the rational expression $a = \dfrac{213021}{99900}$.}
+\mnote{.52}{The classic example of an irrational number is the number $\pi$, but numbers like $\sqrt{2}$ and $0.101001000100001\ldots$ are other fine representatives.}
+
+\medskip
+
+
+It is important to note that every natural number is a whole number is an integer.   Each integer is a rational number (take $b =1$ in the above definition for $\mathbb Q$) and the rational numbers are all real numbers, since they possess decimal representations (via long division!). If we take $b=0$ in the above definition of $\mathbb C$, we see that every real number is a complex number.  In this sense, the sets $\mathbb N$, $\mathbb Z$, $\mathbb Q$, $\mathbb R$, and $\mathbb C$ are `nested' like \href{http://en.wikipedia.org/wiki/Matryoshka_doll}{\underline{Matryoshka dolls}}. More formally, these sets form a subset chain:  $\mathbb{N} \subseteq \mathbb Z \subseteq \mathbb{Q} \subseteq \mathbb{R}$.  The reader is encouraged to sketch a Venn Diagram depicting $\mathbb{R}$ and all of the subsets mentioned above.  
+
+\medskip
+
+As you may recall, we often visualize the set of real numbers $\mathbb{R}$ as a line where each point on the line corresponds to one and only one real number.  Given two different real numbers $a$ and $b$,  we write $a < b$ if $a$ is located to the left of $b$ on the number line, as shown in Figure \ref{fig:numline}.
+
+
+
+
+While this notion seems innocuous, it is worth pointing out that this convention is rooted in two deep properties of real numbers.  The first property is that $\mathbb{R}$ is  \href{http://en.wikipedia.org/wiki/Complete_metric_space}{\underline{complete}}. This means that there are no `holes' or `gaps' in the real number line. (This intuitive feel for what it means to be `complete' is as good as it gets at this level.  Completeness does get a much more precise meaning later in courses like Analysis and Topology.) Another way to think about this is that if you choose any two distinct (different) real numbers, and look between them, you'll find a solid line segment (or interval) consisting of infinitely many real numbers.  
+
+
+
+The next result tells us what types of numbers we can expect to find.
+
+\medskip
+
+\theorem{densityofqandp}{Density Property of $\mathbb{Q}$ in $\mathbb{R}$}{
+
+Between any two distinct real numbers, there is at least one rational number and irrational number.  It then follows that between any two distinct real numbers there will be \underline{infinitely many} rational and irrational numbers.
+}
+
+\medskip
+
+The root word `dense' here communicates the idea that rationals and irrationals are `thoroughly mixed' into $\mathbb{R}$.   The reader is encouraged to think about how one would find both a rational and an irrational number between, say, $0.9999$ and $1$. Once you've done that, ask yourself whether there is any difference between the numbers $0.\overline{9}$ and $1$. 
+
+\smallskip
+
+\mfigure{.5}{The real number line with two numbers $a$ and $b$, where $a<b$.}{fig:numline}{figures/RelationsandFunctionsGraphics/SetTheory-5}
+
+The second property $\mathbb{R}$ possesses that lets us view it as a line is that the set is \href{http://en.wikipedia.org/wiki/Total_order}{\underline{totally ordered}}. This means that given any two real numbers $a$ and $b$, either $a < b$, $a > b$ or $a = b$ which allows us to arrange the numbers from least (left) to greatest (right). You may have heard this property given as the `Law of Trichotomy'.\index{trichotomy}
+
+\medskip
+
+\definition{trichotomy}{Law of Trichotomy}{
+If $a$ and $b$ are real numbers then {\bf exactly one} of the following statements is true: \vspace{-.15in} 
+\[
+  \begin{array}{lclcl}
+  a < b & \hspace*{1.25in} & a > b & \hspace*{1.25in} & a = b 
+  \end{array} 
+\]
+}
+\mnote{.35}{The Law of Trichotomy, strictly speaking, is an \textit{axiom} of the real numbers: a basic requirement that we assume to be true. However, in any \textit{construction} of the real numbers, such as the method of \href{https://en.wikipedia.org/wiki/Dedekind_cut}{Dedekind cuts}, it is necessary to \textit{prove} that the Law of Trichotomy is satisfied.}
+
+\medskip
+
+The reader is probably familiar with the relations $a<b$ and $a>b$ in the context of \textit{solving inequalities}. The \textbf{order properties} of the real number system can be summarized as a collection of rules for manipulating inequalities, as follows:\\
+
+\keyidea{inequalityrules}{Rules for inequalities}{
+Let $a$, $b$, and $c$ be any real numbers. Then:
+\begin{itemize}
+\item If $a<b$, then $a+c<b+c$.
+\item If $a<b$, then $a-c<b-c$.
+\item If $a<b$ \textbf{and} $c>0$, then $ac<bc$.
+\item If $a<b$ and $c<0$, then $ac>bc$. (In particular, $-a>-b$.)
+\item If $0<a<b$, then $\dfrac{1}{b}<\dfrac{1}{a}$.
+\end{itemize}
+}
+
+Note the emphasis in rule \#3 above: caution must always be exercised when manipulating inequalities: multiplying by a negative number reverses the sign. This is especially important to remember when dealing with inequalities involving variable quantities, for example, with rational inequalities (see Example \ref{ex_ratineq}).
+
+\medskip
+
+ Segments of the real number line are called \sword{intervals}\index{interval ! definition of} of numbers. Below is a summary of the so-called \sword{interval notation}\index{interval ! notation for} associated with given sets of numbers.  For intervals with finite endpoints, we list the left endpoint, then the right endpoint.  We use square brackets, `$[$' or `$]$', if the endpoint is included in the interval and use a filled-in or `closed' dot to indicate membership in the interval. Otherwise, we use parentheses, `$($' or `$)$' and an `open' circle to indicate that the endpoint is not part of the set.  If the interval does not have finite endpoints, we use the symbols $-\infty$ to indicate that the interval extends indefinitely to the left and $\infty$ to indicate that the interval extends indefinitely to the right.  Since infinity is a concept, and not a number, we always use parentheses when using these symbols in interval notation, and use an appropriate arrow to indicate that the interval extends indefinitely in one (or both) directions.
+
+\medskip
+\setboxwidth{10pt}
+\noindent\begin{minipage}{1.1\linewidth}
+\definition{def:intervalnot}{Interval Notation}{
+Let $a$ and $b$ be real numbers with $a<b$.
+
+\smallskip
+
+%\begin{center}
+
+\noindent\hskip-10pt\begin{tabular}{|c|c|c|} \hline
+
+Set of Real Numbers & Interval Notation &  Region on the Real Number Line  \\
+\hline
+
+ &  & \\
+\shortstack{$\{x\,|\,a<x<b\}$ \\ \hfill}& \shortstack{$(a,b)$ \\ \hfill} & 
+
+\myincludegraphics{figures/RelationsandFunctionsGraphics/CartesianPlane-1}  \\ \hline
+
+& &  \\
+\shortstack{$\{x\,|\,a\leq x<b\}$ \\ \hfill}& \shortstack{$[a,b)$ \\ \hfill} & 
+
+\myincludegraphics{figures/RelationsandFunctionsGraphics/CartesianPlane-2}   \\
+\hline
+
+ &  & \\
+\shortstack{$\{x\,|\,a<x\leq b\}$ \\ \hfill}&\shortstack{$(a,b]$ \\ \hfill} & 
+
+\myincludegraphics{figures/RelationsandFunctionsGraphics/CartesianPlane-3}   \\
+\hline
+
+ &  & \\
+\shortstack{$\{x\,|\,a\leq x \leq b\}$ \\ \hfill}& \shortstack{$[a,b]$ \\ \hfill}& 
+
+\myincludegraphics{figures/RelationsandFunctionsGraphics/CartesianPlane-4}   \\
+\hline
+
+ & & \\
+\shortstack{$\{x\,| \, x<b\}$ \\ \hfill}& \shortstack{$(-\infty,b)$ \\ \hfill}& 
+
+\myincludegraphics{figures/RelationsandFunctionsGraphics/CartesianPlane-5}   \\
+\hline
+
+
+&  & \\
+
+\shortstack{$\{x\,| \, x \leq b\}$ \\ \hfill} & \shortstack{$(-\infty,b]$ \\ \hfill}& 
+
+\myincludegraphics{figures/RelationsandFunctionsGraphics/CartesianPlane-6}   \\
+\hline
+
+ &  & \\
+\shortstack{$\{x\,| \, x>a\}$ \\ \hfill}& \shortstack{$(a,\infty)$ \\ \hfill}& 
+
+\myincludegraphics{figures/RelationsandFunctionsGraphics/CartesianPlane-7}   \\
+\hline
+
+ &  & \\
+\shortstack{$\{x\,| \, x \geq a \}$ \\ \hfill}& \shortstack{$[a,\infty)$ \\ \hfill} & 
+
+\myincludegraphics{figures/RelationsandFunctionsGraphics/CartesianPlane-8}   \\
+\hline
+
+&  & \\
+\shortstack{$\mathbb R$ \\ \hfill}& \shortstack{$(-\infty,\infty)$ \\ \hfill} & 
+
+\myincludegraphics{figures/RelationsandFunctionsGraphics/CartesianPlane-9}   \\
+\hline
+
+\end{tabular}
+
+%\end{center}
+}
+\end{minipage}
+%\pagebreak
+\restoreboxwidth
+
+\medskip
+
+
+As you can glean from the table, for intervals with finite endpoints we start by writing `left endpoint, right endpoint'.  We use square brackets, `$[$' or `$]$', if the endpoint is included in the interval. This corresponds to a `filled-in' or `closed' dot on the number line to indicate that the number is included in the set.  Otherwise, we use parentheses, `$($' or `$)$' that correspond to an `open' circle which indicates that the endpoint is not part of the set.  If the interval does not have finite endpoints, we use the symbol $-\infty$ to indicate that the interval extends indefinitely to the left and the symbol $\infty$ to indicate that the interval extends indefinitely to the right.  Since infinity is a concept, and not a number, we always use parentheses when using these symbols in interval notation, and use the appropriate arrow to indicate that the interval extends indefinitely in one or both directions. 
+
+\mnote{.5}{The importance of understanding interval notation in Calculus cannot be overstated. If you don't find yourself getting the hang of it through repeated use, you may need to take the time to just memorize this chart.} 
+
+Let's do a few examples to make sure we have the hang of the notation:
+
+\medskip
+
+
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|} \hline
+
+Set of Real Numbers & Interval Notation &  Region on the Real Number Line  \\
+\hline
+
+& &  \\
+\shortstack{$\{x\,|\,1\leq x< 3\}$ \\ \hfill} & \shortstack{$[1,3)$ \\ \hfill} & 
+
+\myincludegraphics{figures/RelationsandFunctionsGraphics/CartesianPlane-10}  \\
+\hline
+
+ &  & \\
+\shortstack{$\{x\,|\,-1\leq x \leq 4\}$ \\ \hfill}& \shortstack{$[-1,4]$ \\ \hfill} & 
+
+\myincludegraphics{figures/RelationsandFunctionsGraphics/CartesianPlane-11}   \\
+\hline
+
+&  & \\
+
+\shortstack{$\{x\,| \, x \leq 5 \}$ \\ \hfill} & \shortstack{$(-\infty, 5]$ \\ \hfill} &
+
+\myincludegraphics{figures/RelationsandFunctionsGraphics/CartesianPlane-12}   \\
+\hline
+
+ &  & \\
+\shortstack{$\{x\,| \, x > -2 \}$ \\ \hfill} & \shortstack{$(-2, \infty)$ \\ \hfill} &  
+
+\myincludegraphics{figures/RelationsandFunctionsGraphics/CartesianPlane-13}   \\
+\hline
+
+\end{tabular}
+
+\end{center}
+
+
+\medskip
+
+We defined the intersection and union of arbitrary sets in Definition \ref{intersectionunion}. Recall that  the union of two sets consists of the totality of the elements in each of the sets, collected together. For example,  if $A = \{ 1,2,3 \}$ and $B = \{2,4,6 \}$, then $A \cap B = \{2\}$ and $A \cup B = \{1,2,3,4,6\}$.   If $A = [-5,3)$ and $B = (1, \infty)$, then we can find $A \cap B$ and $A\cup B$ graphically.  To find $A\cap B$, we shade  the overlap of the two and obtain $A \cap B = (1,3)$.  To find $A \cup B$, we shade each of $A$ and $B$ and describe the resulting shaded region to find  $A \cup B = [-5,\infty)$.
+
+\mtable{.75}{Union and intersection of intervals}{fig:venn1}{%
+\begin{tabular}{c}
+\myincludegraphics{figures/RelationsandFunctionsGraphics/CartesianPlane-14}\\
+$A = [-5,3)$,  $B = (1, \infty)$\\
+\\
+\myincludegraphics{figures/RelationsandFunctionsGraphics/CartesianPlane-15}\\
+$A \cap B = (1,3)$\\
+\\
+\myincludegraphics{figures/RelationsandFunctionsGraphics/CartesianPlane-16}\\
+$A \cup B = [-5,\infty)$
+\end{tabular}
+}
+
+
+While both intersection and union are important, we have more occasion to use union in this text than intersection, simply because most of the sets of real numbers we will be working with are either intervals or are unions of intervals, as the following example illustrates.
+
+\medskip
+
+
+\example{unionex}{Expressing sets as unions of intervals}{
+Express the following sets of numbers using interval notation.
+
+\begin{multicols}{2}
+
+\begin{enumerate}
+
+\item  $\{ x \, | \, x \leq -2 \, \, \text{or} \, \,  x \geq 2 \}$
+
+\item  $\{ x \, | \, x \neq 3 \}$
+
+%\setcounter{HW}{\value{enumi}}
+
+\end{enumerate}
+
+\end{multicols}
+
+\begin{multicols}{2}
+
+\begin{enumerate}
+
+\setcounter{enumi}{2}
+
+\item  $\{ x \, | \, x \neq \pm 3 \}$
+
+\item  $\{ x \, | \, -1 < x \leq 3 \,\, \text{or} \,\, x = 5\}$
+
+\end{enumerate}
+
+\end{multicols}
+}
+{
+\begin{enumerate}
+
+\item  The best way to proceed here is to graph the set of numbers on the number line and glean the answer from it.  The inequality $x \leq -2$ corresponds to the interval $(-\infty, -2]$ and the inequality $x \geq 2$ corresponds to the interval $[2, \infty)$.  Since we are looking to describe the real numbers $x$ in one of these \textit{or} the other, we have $\{ x \, | \, x \leq -2 \, \, \text{or} \, \,  x \geq 2 \} = (-\infty, -2] \cup [2, \infty)$.
+
+\mfigure{.54}{The set $(-\infty, -2] \cup [2, \infty)$}{fig:eg1-1}{figures/RelationsandFunctionsGraphics/CartesianPlane-17}
+
+\item For the set $\{ x \, | \, x \neq 3 \}$, we shade the entire real number line except $x=3$, where we leave an open circle.  This divides the real number line into two intervals, $(-\infty, 3)$ and $(3,\infty)$.  Since the values of $x$ could be in either one of these intervals \textit{or} the other, we have that $\{ x \, | \, x \neq 3 \} = (-\infty, 3) \cup (3,\infty)$
+ 
+\mfigure{.46}{The set  $(-\infty, 3) \cup (3, \infty)$}{fig:eg1-2}{figures/RelationsandFunctionsGraphics/CartesianPlane-18}
+
+\item  For the set $\{ x \, | \, x \neq \pm 3 \}$, we proceed as before and exclude both $x=3$ and $x=-3$ from our set.  This breaks the number line into \textit{three} intervals, $(-\infty, -3)$, $(-3,3)$ and $(3, \infty)$.   Since the set describes real numbers which come from the first, second \textit{or} third interval, we have $\{ x \, | \, x \neq \pm 3 \} = (-\infty, -3) \cup (-3,3) \cup (3, \infty)$.
+
+\mfigure{.38}{The set $(-\infty, -3) \cup (-3,3) \cup (3, \infty)$}{fig:eg1-3}{figures/RelationsandFunctionsGraphics/CartesianPlane-19}
+
+
+\item  Graphing the set $\{ x \, | \, -1 < x \leq 3 \,\, \text{or} \,\, x = 5\}$, we get one interval, $(-1,3]$ along with a single number, or point, $\{ 5\}$.  While we \textit{could} express the latter as $[5,5]$ (Can you see why?), we choose to write our answer as $\{ x \, | \, -1 < x \leq 3 \,\, \text{or} \,\, x = 5\} = (-1,3] \cup \{ 5\}$.
+
+\mfigure{.3}{The set $(-1,3] \cup \{ 5\}$}{fig:eg1-4}{figures/RelationsandFunctionsGraphics/CartesianPlane-20}
+\end{enumerate}
+}
+
+
+\printexercises{exercises_pre/00_01_exercises}

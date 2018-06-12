@@ -26,7 +26,7 @@
 
 \pagestyle{fancy}
 \fancyhead{}
-%\fancyfoot{}
+\fancyfoot{}
 \renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ \ \ \ {#1}}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ \ \ \  #1}}
 \fancyhf{}         %Clears all header and footer fields, in preparation.
@@ -128,7 +128,7 @@
 \makeatletter
 \def\@makechapterhead#1{%
   {\parindent \z@ \raggedright \reset@font
-    {\Huge \thechapter: \scshape \textsc #1}
+    {\Huge \thechapter: \parbox[t]{.85\linewidth}{\parindent \z@ \raggedright \reset@font\scshape \textsc #1}}
     \par\vskip 10\p@
     \hrule height 1pt
     \vskip 10\p@
@@ -160,6 +160,7 @@
 %%%    \endwrapfigure%
 %%%}
 
+\counterwithin{figure}{section}
 
 \ifthenelse{\boolean{longpage}}%
 		{\newcommand{\mfigure}[5][]{%
@@ -224,7 +225,7 @@
 \ifthenelse{\boolean{longpage}}%
 		{\newcommand{\mnote}[2]{%
 					\hskip 25pt%
-					\begin{minipage}{\marginparwidth}%
+					\begin{minipage}{250pt}%
 					\small%
 					#2%
 					\end{minipage}%
@@ -244,6 +245,28 @@
  						 #2
 					\end{minipage}}}}
 		}}
+
+
+\newcommand{\showheightguidelines}{%
+\AddToShipoutPicture{\put(10,\LenToUnit{.1\paperheight}){\tiny 10\%\rule{10pt}{1pt}}}
+\AddToShipoutPicture{\put(10,\LenToUnit{.2\paperheight}){\tiny 20\%\rule{10pt}{1pt}}}
+\AddToShipoutPicture{\put(10,\LenToUnit{.3\paperheight}){\tiny 30\%\rule{10pt}{1pt}}}
+\AddToShipoutPicture{\put(10,\LenToUnit{.4\paperheight}){\tiny 40\%\rule{10pt}{1pt}}}
+\AddToShipoutPicture{\put(10,\LenToUnit{.5\paperheight}){\tiny 50\%\rule{10pt}{1pt}}}
+\AddToShipoutPicture{\put(10,\LenToUnit{.6\paperheight}){\tiny 60\%\rule{10pt}{1pt}}}
+\AddToShipoutPicture{\put(10,\LenToUnit{.7\paperheight}){\tiny 70\%\rule{10pt}{1pt}}}
+\AddToShipoutPicture{\put(10,\LenToUnit{.8\paperheight}){\tiny 80\%\rule{10pt}{1pt}}}
+\AddToShipoutPicture{\put(10,\LenToUnit{.9\paperheight}){\tiny 90\%\rule{10pt}{1pt}}}
+\AddToShipoutPicture{\put(580,\LenToUnit{.1\paperheight}){\rule{10pt}{1pt}\tiny 10\%}}
+\AddToShipoutPicture{\put(580,\LenToUnit{.2\paperheight}){\rule{10pt}{1pt}\tiny 20\%}}
+\AddToShipoutPicture{\put(580,\LenToUnit{.3\paperheight}){\rule{10pt}{1pt}\tiny 30\%}}
+\AddToShipoutPicture{\put(580,\LenToUnit{.4\paperheight}){\rule{10pt}{1pt}\tiny 40\%}}
+\AddToShipoutPicture{\put(580,\LenToUnit{.5\paperheight}){\rule{10pt}{1pt}\tiny 50\%}}
+\AddToShipoutPicture{\put(580,\LenToUnit{.6\paperheight}){\rule{10pt}{1pt}\tiny 60\%}}
+\AddToShipoutPicture{\put(580,\LenToUnit{.7\paperheight}){\rule{10pt}{1pt}\tiny 70\%}}
+\AddToShipoutPicture{\put(580,\LenToUnit{.8\paperheight}){\rule{10pt}{1pt}\tiny 80\%}}
+\AddToShipoutPicture{\put(580,\LenToUnit{.9\paperheight}){\rule{10pt}{1pt}\tiny 90\%}}
+}
 
 %\ifthenelse{\boolean{longpage}}%
 		%{}
@@ -273,8 +296,9 @@
 			\begin{minipage}{\marginparwidth}%
 				\centering%
 				\ifthenelse{\boolean{in_threeD}}{% in 3D
-	  		\includemedia[#1]{\includegraphics{#6_3D\colornamesuffix}}{#6_3D.prc}}%now not in 3D
-				{\myincludegraphics[#2]{#6}}%
+	  		\includemedia[#1]{\includegraphics[#2]{#6_3D\colornamesuffix}}{#6_3D.prc}}%now not in 3D
+				%{\includegraphics[width=150pt]{#6_3D\colornamesuffix}}%
+				{\myincludegraphics[#2]{#6_3D}}%
   			\captionsetup{type=figure}%
   			%#1%
 	  		\caption{#4}\label{#5}%
@@ -283,8 +307,9 @@
 			\begin{minipage}{\marginparwidth}%
 			  \centering%
   			\ifthenelse{\boolean{in_threeD}}{% in 3D
-	  		\includemedia[#1]{\includegraphics{#6_3D\colornamesuffix}}{#6_3D.prc}}%now not in 3D
-				{\myincludegraphics[#2]{#6}}%
+	  		\includemedia[#1]{\includegraphics[#2]{#6_3D\colornamesuffix}}{#6_3D.prc}}%now not in 3D
+				%{\includegraphics[width=150pt]{#6_3D\colornamesuffix}}%
+				{\myincludegraphics[#2]{#6_3D}}%
   			\captionsetup{type=figure}%
   			%#1%
 	  		\caption{#4}\label{#5}%
@@ -353,9 +378,9 @@
 \newcommand{\ddz}{\ensuremath{\Delta z}}
 
 \newcommand{\thet}{\ensuremath{\theta}}
-\newcommand{\norm}[1]{\ensuremath{||\ #1\ ||}}
+\newcommand{\norm}[1]{\ensuremath{\lVert\ #1\ \rVert}}
 \newcommand{\vnorm}[1]{\ensuremath{\norm{\vec #1}}}
-\newcommand{\snorm}[1]{\ensuremath{\left|\left|\ #1\ \right|\right|}}
+\newcommand{\snorm}[1]{\ensuremath{\left\lVert\ #1\ \right\rVert}}
 \newcommand{\la}{\left\langle}
 \newcommand{\ra}{\right\rangle}
 \newcommand{\dotp}[2]{\ensuremath{\vec #1 \cdot \vec #2}}
@@ -381,6 +406,8 @@
 \newcommand{\pf}{\ensuremath{\partial f}}
 \newcommand{\underlinespace}{\underline{\phantom{xxxxxx}}}
 
+\newcommand{\surfaceS}{\ensuremath{\mathcal{S}}}
+
 \newcommand{\mathN}{\ensuremath{\mathbb{N}}}
 
 \newcommand{\zerooverzero}{\ensuremath{\ds \raisebox{8pt}{\text{``\ }}\frac{0}{0}\raisebox{8pt}{\text{\ ''}}}}
@@ -394,6 +421,8 @@
 
 \DeclareMathOperator{\sech}{sech}
 \DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\curl}{curl}
+\DeclareMathOperator{\divv}{div}
 
 \newcommand{\sword}[1]{\textbf{#1}}
 
@@ -466,14 +495,14 @@
 %%
 %%%%
 
-\newcounter{myfigurecounter}[chapter]
-\renewcommand\themyfigurecounter{\thechapter.\arabic{myfigurecounter}}
-\newenvironment{myfigure}{\refstepcounter{myfigurecounter}}{}
-\newcommand{\mycaption}[1]{%
-\begin{center}%
-\vskip -1.5\baselineskip
-\begin{tikzpicture}%
-\draw (0,0) node [text width=\textwidth,align=center] {Figure \themyfigurecounter: #1};%
-\end{tikzpicture}%
-\end{center}%
-}
+%\newcounter{myfigurecounter}[chapter]
+%\renewcommand\themyfigurecounter{\thechapter.\arabic{myfigurecounter}}
+%\newenvironment{myfigure}{\refstepcounter{myfigurecounter}}{}
+%\newcommand{\mycaption}[1]{%
+%\begin{center}%
+%\vskip -1.5\baselineskip
+%\begin{tikzpicture}%
+%\draw (0,0) node [text width=\textwidth,align=center] {Figure \themyfigurecounter: #1};%
+%\end{tikzpicture}%
+%\end{center}%
+%}

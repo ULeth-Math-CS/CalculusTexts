@@ -32,7 +32,7 @@ The expression ``$0/0$'' has no value; it is \emph{indeterminate.} \index{limit!
 \[
 \lim_{x\to 1} y = \lim_{x\to 1} f(x) = L.
 \]
-This is not a complete definition; this is a pseudo-definition that will allow us to explore the idea of a limit. \index{limit!pseudo-definition} A more detailed, but still informal, definition of the limit is given in Definition \ref{def:limit_informal} at the end of this section. The precise definition is given in the next section.
+This is not a complete definition; this is a pseudo-definition that will allow us to explore the idea of a limit. \index{limit!pseudo-definition} A more detailed, but still informal, definition of the limit is given in Definition \ref{def:limit_informal} at the end of this section. \ifthenelse{\boolean{1010}}{A more precise definition is beyond the scope of this text.}{The precise definition is given in the next section.}
 
 
 
@@ -42,7 +42,7 @@ Above, where $f(x) = \sin(x)/x$, we approximated
 \]
 (We \textit{approximated} these limits, hence used the ``$\approx$'' symbol, since we are working with the pseudo-definition of a limit, not the actual definition.)
 
-Once we have the true definition of a limit, we will find limits \textit{analytically}; that is, exactly using a variety of mathematical tools. For now, we will \textit{approximate} limits both graphically and numerically. Graphing a function can provide a good approximation, though often not very precise. Numerical methods can provide a more accurate approximation. We have already approximated limits graphically, so we now turn our attention to numerical approximations.
+\ifthenelse{\boolean{1010}}{In the next section}{Once we have the true definition of a limit}, we will find limits \textit{analytically}; that is, exactly using a variety of mathematical tools. For now, we will \textit{approximate} limits both graphically and numerically. Graphing a function can provide a good approximation, though often not very precise. Numerical methods can provide a more accurate approximation. We have already approximated limits graphically, so we now turn our attention to numerical approximations.
 
 
 Consider again $\lim_{x\to 1}\sin (x)/x$. To approximate this limit numerically, we can create a table of $x$ and $f(x)$ values where $x$ is ``near'' 1. This is done in Figure \ref{table:sinx_1}.\par
@@ -113,20 +113,21 @@ f(x) = \left\{\begin{array}{rl} x+1 & x< 0 \\ -x^2+1 & x > 0 \end{array}\right..
 
 The table shown in Figure \ref{table:limit2} shows values of $f(x)$ for values of $x$ near 0. It is clear that as $x$ takes on values very near 0, $f(x)$ takes on values very near 1. It turns out that if we let $x=0$ for either ``piece'' of $f(x)$, 1 is returned; this is significant and we'll return to this idea later.
 
-The graph and table allow us to say that $\lim_{x\to 0}f(x) \approx 1$; in fact, we are probably very sure it \textit{equals} 1.
+The graph and table allow us to say that $\lim_{x\to 0}f(x) \approx 1$; in fact, we are probably very sure it \emph{equals} 1.
 }\\
 
+\enlargethispage{\baselineskip}
 \vskip \baselineskip
 
 \pagebreak
 
 \noindent\textbf{\large Identifying When Limits Do Not Exist}\\
 
-A function may not have a limit for all values of $x$. That is, we cannot say $\lim_{x\to c}f(x)=L$ for some numbers $L$ for all values of $c$, for there may not be a number that $f(x)$ is approaching. There are three ways in which a limit may fail to exist. \index{limit!does not exist}
+A function may not have a limit for all values of $x$. That is, we cannot say $\lim_{x\to c}f(x)=L$ for some numbers $L$ for all values of $c$, for there may not be a number that $f(x)$ is approaching. There are three common ways in which a limit may fail to exist. \index{limit!does not exist}
 \begin{enumerate}
 \item		The function $f(x)$ may approach different values on either side of $c$.
 \item		The function may grow without upper or lower bound as $x$ approaches $c$.
-\item		The function may oscillate as $x$ approaches $c$.
+\item		The function may oscillate as $x$ approaches $c$ without approaching a specific value.
 \end{enumerate}
 
 We'll explore each of these in turn.\\
@@ -142,7 +143,7 @@ Explore why $\ds\lim_{x\to 1} f(x)$ does not exist, where
 f(x) = \left\{\begin{array}{cl} x^2-2x+3 & x\leq 1 \\ x & x>1 \end{array}\right.
 \]}%
 {
-A graph of $f(x)$ around $x=1$ and a table are given Figures \ref{fig:nolimit1} and \ref{table:nolimit1}, respectively. It is clear that as $x$ approaches 1, $f(x)$ does not seem to approach a single number. Instead, it seems as though $f(x)$ approaches two different numbers. When considering values of $x$ less than 1 (approaching 1 from the left), it seems that $f(x)$ is approaching 2; when considering values of $x$ greater than 1 (approaching 1 from the right), it seems that $f(x)$ is approaching 1. Recognizing this behaviour is important; we'll study this in greater depth later. Right now, it suffices to say that the limit does not exist since $f(x)$ is not approaching one value as $x$ approaches 1.
+A graph of $f(x)$ around $x=1$ and a table are given in Figures \ref{fig:nolimit1} and \ref{table:nolimit1}, respectively. It is clear that as $x$ approaches 1, $f(x)$ does not seem to approach a single number. Instead, it seems as though $f(x)$ approaches two different numbers. When considering values of $x$ less than 1 (approaching 1 from the left), it seems that $f(x)$ is approaching 2; when considering values of $x$ greater than 1 (approaching 1 from the right), it seems that $f(x)$ is approaching 1. Recognizing this behaviour is important; we'll study this in greater depth later. Right now, it suffices to say that the limit does not exist since $f(x)$ is not approaching one value as $x$ approaches 1.
 \mfigure{.8}{Observing no limit as $x\to 1$ in Example \ref{ex_no_limit1}.}{fig:nolimit1}{figures/fignolimit1}
 \mtable{.6}{Values of $f(x)$ near $x=1$ in Example \ref{ex_no_limit1}.}{table:nolimit1}{\input{figures/table_nolimit1}}
 }\\
@@ -169,8 +170,7 @@ Since $f(x)$ is not approaching a single number, we conclude that
 does not exist.
 }\\
 
-%\vskip \baselineskip
-%\noindent\textbf{The Function Oscillates}\\
+\pagebreak
 
 \example{ex_no_limit3}{The Function Oscillates}{
 Explore why $\ds\lim_{x\to 0}\sin(1/x)$ does not exist.}%
@@ -292,10 +292,11 @@ We say that the \sword{limit of $f(x)$, as $x$ approaches $c$, is $L$}, and writ
 \]
 if we can make the value of $f(x)$ arbitrarily close to $L$ by choosing $x\neq c$ sufficiently close to $c$.}
 
+\enlargethispage{2\baselineskip}
 
 The formal definition of the limit makes precise the meaning of the phrases ``arbitrarily close'' and ``sufficiently close''. The problem with the definition we have given is that, while it gives an intuitive understanding of the meaning of the limit, it's of no use for \textit{proving} theorems about limits. In Section \ref{sec:limit_analytically} we will state (but not prove) several theorems about limits which will allow use to compute their values analytically, without recourse to tables of values.
 
-In the next section we give the formal definition of the limit and begin our study of finding limits analytically. Your Math 1560 instructor will likely choose to skip Section \ref{sec:limit_def}, in which case it can be considered optional reading for the interested reader.  In the following exercises, we continue our introduction and approximate the value of limits.\\
+\ifthenelse{\boolean{1010}}{}{In the next section we give the formal definition of the limit and begin our study of finding limits analytically. Your instructor may choose to skip Section \ref{sec:limit_def}, in which case it can be considered optional reading for the interested reader.  In the following exercises, we continue our introduction and approximate the value of limits.\\}
 
 \printexercises{exercises/01_01_exercises}
 

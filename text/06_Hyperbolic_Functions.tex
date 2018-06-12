@@ -28,7 +28,7 @@ We begin with their definition.
 
 These hyperbolic functions are graphed in Figure \ref{fig:hyperbolic}. In the graphs of $\cosh x$ and $\sinh x$, graphs of $e^x/2$ and $e^{-x}/2$ are included with dashed lines. As $x$ gets ``large,'' $\cosh x$ and $\sinh x$ each act like $e^x/2$; when $x$ is a large negative number, $\cosh x$ acts like $e^{-x}/2$ whereas $\sinh x$ acts like $-e^{-x}/2$.
 
-Notice the domains of $\tanh x$ and $\sech x$ are $(-\infty,\infty)$, whereas both $\coth x$ and $\csch x$ have vertical asymptotes at $x=0$. Also note the ranges of these functions, especially $\tanh x$: as $x\to\infty$, both $\sinh x$ and $\cosh x$ approach $e^{-x}/2$, hence $\tanh x$ approaches $1$.
+Notice the domains of $\tanh x$ and $\sech x$ are $(-\infty,\infty)$, whereas both $\coth x$ and $\csch x$ have vertical asymptotes at $x=0$. Also note the ranges of these functions, especially $\tanh x$: as $x\to\infty$, both $\sinh x$ and $\cosh x$ approach $e^{x}/2$, hence $\tanh x$ approaches $1$.
 
 %It is no coincidence that these functions share a name similar to the trigonometric functions. 
 The following example explores some of the properties of these functions that bear remarkable resemblance to the properties of their trigonometric counterparts.\\
@@ -48,7 +48,6 @@ The following example explores some of the properties of these functions that be
 \vskip\baselineskip
 
 \example{ex_hf1}{Exploring properties of hyperbolic functions}{
-
 \noindent Use Definition \ref{def:hyperbolic_functions} to rewrite the following expressions.
 
 \noindent\begin{minipage}{.5\linewidth}
@@ -89,7 +88,7 @@ So $\cosh^2 x-\sinh^2x=1$.
 
 So $\tanh^2 x+\sech^2 x=1$.
 
-\drawexampleline
+
 
 \item \hfill$\begin{aligned}[t]
 	2\cosh x\sinh x &= 2\left(\frac{e^x+e^{-x}}2\right)\left(\frac{e^x-e^{-x}}2\right) \\
@@ -197,19 +196,25 @@ Just to demonstrate that it works, let's also use the Basic Identity found in Ke
 Using another Basic Identity, we can see that $4\cosh x\sinh x = 2\sinh 2x$. We get the same answer either way.
 
 \item	  We employ substitution, with $u = 7t-3$ and $du = 7dt$. Applying Key Ideas \ref{idea:linearsub}  and \ref{idea:hyperbolic_identities} we have:
-$$ \int \sech^2 (7t-3)\ dt = \frac17\tanh (7t-3) + C.$$
+\[
+ \int \sech^2 (7t-3)\ dt = \frac17\tanh (7t-3) + C.
+\]
 
-\item		$$\int_0^{\ln 2} \cosh x\ dx = \sinh x\Big|_0^{\ln 2} = \sinh (\ln 2) - \sinh 0 = \sinh(\ln 2).$$
+\item		\[
+			\int_0^{\ln 2} \cosh x\ dx = \sinh x\Big|_0^{\ln 2} = \sinh (\ln 2) - \sinh 0 = \sinh(\ln 2).
+			\]
 
 We can simplify this last expression as $\sinh x$ is based on exponentials:
-$$\sinh(\ln 2) = \frac{e^{\ln 2}-e^{-\ln 2}}2 = \frac{2-1/2}{2} = \frac34.$$
+\[
+\sinh(\ln 2) = \frac{e^{\ln 2}-e^{-\ln 2}}2 = \frac{2-1/2}{2} = \frac34.
+\]
 \end{enumerate}
-%\vskip-1.5\baselineskip
-}\\
+\vskip-1.5\baselineskip
+}\pagebreak
 
 \noindent\textbf{\large Inverse Hyperbolic Functions}\\
 
-Just as the inverse trigonometric functions are useful in certain integrations, the inverse hyperbolic functions are useful with others. Figure \ref{fig:hfinverse2} shows the restrictions on the domains to make each function one-to-one and the resulting domains and ranges of their inverse functions. Their graphs are shown in Figure \ref{fig:hfinverse1}.\index{hyperbolic function!inverse}
+Just as the inverse trigonometric functions are useful in certain integration problems, the inverse hyperbolic functions are useful with others. Figure \ref{fig:hfinverse2} shows the restrictions on the domains to make each function one-to-one and the resulting domains and ranges of their inverse functions. Their graphs are shown in Figure \ref{fig:hfinverse1}.\index{hyperbolic function!inverse}
 
 Because the hyperbolic functions are defined in terms of exponential functions, their inverses can be expressed in terms of logarithms as shown in Key Idea \ref{idea:hyperbolic_log}. It is often more convenient to refer to $\sinh^{-1}x$ than to $\ln\big(x+\sqrt{x^2+1}\big)$, especially when one is working on theory and does not need to compute actual values. On the other hand, when computations are needed, technology is often helpful but many hand-held calculators lack a \textit{convenient} $\sinh^{-1}x$ button. (Often it can be accessed under a menu system, but not conveniently.) In such a situation, the logarithmic representation is useful. The reader is not encouraged to memorize these, but rather know they exist and know how to use them when needed.
 %\clearpage
@@ -221,7 +226,7 @@ Because the hyperbolic functions are defined in terms of exponential functions, 
 
 %\clearpage
 
-%\hskip-.5\textwidth
+\hskip-.5\textwidth
 \noindent\begin{minipage}{1.3\textwidth}
 %\centering
 \small
@@ -252,7 +257,7 @@ $\coth^{-1} x$ & $(-\infty,-1) \cup (1,\infty)$ & $(-\infty,0) \cup (0,\infty)$
 \captionsetup{type=figure}%
 \caption{Domains and ranges of the hyperbolic and inverse hyperbolic functions.}\label{fig:hfinverse2}
 \end{minipage}
-\enlargethispage{3\baselineskip}
+%\enlargethispage{3\baselineskip}
 
 %\hskip-100pt
 \noindent \begin{minipage}{1.3\textwidth}
@@ -287,7 +292,7 @@ $\coth^{-1} x$ & $(-\infty,-1) \cup (1,\infty)$ & $(-\infty,0) \cup (0,\infty)$
 \end{minipage}
 \restoreboxwidth
 
-The following Key Ideas give the derivatives and integrals relating to the inverse hyperbolic functions. In Key Idea \ref{idea:hyperbolic_inverse_integrals}, both the inverse hyperbolic and logarithmic function representations of the antiderivative are given, based on Key Idea \ref{idea:hyperbolic_log}. Again, these latter functions are often more useful than the former. Note how inverse hyperbolic functions can be used to solve integrals we used Trigonometric Substitution to solve in Section \ref{sec:trig_sub}.
+The following Key Ideas give the derivatives and integrals relating to the inverse hyperbolic functions. In Key Idea \ref{idea:hyperbolic_inverse_integrals}, both the inverse hyperbolic and logarithmic function representations of the antiderivative are given, based on Key Idea \ref{idea:hyperbolic_log}. Again, these latter functions are often more useful than the former. \ifthenelse{\boolean{CalcI}}{}{Note how inverse hyperbolic functions can be used to solve integrals we used Trigonometric Substitution to solve in Section \ref{sec:trig_sub}.}
 
 
 
@@ -303,8 +308,8 @@ The following Key Ideas give the derivatives and integrals relating to the inver
 %}
 
 \setboxwidth{120pt}
-\noindent\hskip -120pt%
-\begin{minipage}{\specialboxlength}
+%\noindent\hskip -120pt%
+\noindent\begin{minipage}{\specialboxlength}
 \keyidea{idea:hyperbolic_inverse_derivatives}{Derivatives Involving Inverse Hyperbolic Functions}
 {%
 \begin{minipage}[t]{.45\specialboxlength}
@@ -327,8 +332,8 @@ The following Key Ideas give the derivatives and integrals relating to the inver
 \\
 
 \setboxwidth{120pt}
-\noindent\hskip -120pt%
-\begin{minipage}{\specialboxlength}
+%\noindent\hskip -120pt%
+\noindent\begin{minipage}{\specialboxlength}
 \keyidea{idea:hyperbolic_inverse_integrals}{Integrals Involving Inverse Hyperbolic Functions}
 {%
 \begin{enumerate}
@@ -337,7 +342,7 @@ The following Key Ideas give the derivatives and integrals relating to the inver
 \item \parbox{70pt}{$\ds\int \frac{1}{\sqrt{x^2+a^2}}\ dx$} \parbox{180pt}{$\ds=\qquad \sinh^{-1}\left(\frac xa\right)+C;\ a>0$} $\ds=\ln\Big|x+\sqrt{x^2+a^2}\Big|+C$
 
 \item \parbox{70pt}{$\ds\int \frac{1}{a^2-x^2}\ dx$} \parbox{180pt}{$\ds=\qquad \left\{\begin{array}{ccc} \frac1a\tanh^{-1}\left(\frac xa\right)+C & & x^2<a^2 \\ \\
-\frac1a\coth^{-1}\left(\frac xa\right)+C & & a^2<x^2 \end{array}\right.$} $\ds=\frac12\ln\left|\frac{a+x}{a-x}\right|+C$
+\frac1a\coth^{-1}\left(\frac xa\right)+C & & a^2<x^2 \end{array}\right.$} $\ds=\frac1{2a}\ln\left|\frac{a+x}{a-x}\right|+C$
 
 \item \parbox{70pt}{$\ds\int \frac{1}{x\sqrt{a^2-x^2}}\ dx $} \parbox{180pt}{$\ds=\qquad -\frac1a\sech^{-1}\left(\frac xa\right)+C;\ 0<x<a$} $\ds= \frac1a \ln\left(\frac{x}{a+\sqrt{a^2-x^2}}\right)+C $
 
@@ -347,12 +352,11 @@ The following Key Ideas give the derivatives and integrals relating to the inver
 }
 \end{minipage}
 \restoreboxwidth
-\\
+\\ \clearpage
 
 We practice using the derivative and integral formulas in the following example.\\
-\clearpage
 
-\example{ex_hf3}{Derivatives and integrals involving inverse hyperbolic functions}
+\example{ex_hf3}{\parbox[t]{220pt}{Derivatives and integrals involving inverse hyperbolic functions}}
 {Evaluate the following.
 
 \noindent%
@@ -370,7 +374,9 @@ We practice using the derivative and integral formulas in the following example.
 }
 {\begin{enumerate}
 \item		Applying Key Idea \ref{idea:hyperbolic_inverse_derivatives} with the Chain Rule gives:
-		$$\frac{d}{dx}\left[\cosh^{-1}\left(\frac{3x-2}5\right)\right] = \frac{1}{\sqrt{\left(\frac{3x-2}5\right)^2-1}}\cdot\frac35.$$
+		\[
+		\frac{d}{dx}\left[\cosh^{-1}\left(\frac{3x-2}5\right)\right] = \frac{1}{\sqrt{\left(\frac{3x-2}5\right)^2-1}}\cdot\frac35.
+		\]
 
 \item		Multiplying the numerator and denominator by $(-1)$ gives: $\ds \int \frac{1}{x^2-1}\ dx = \int \frac{-1}{1-x^2}\ dx$. The second integral can be solved with a direct application of item \#3 from Key Idea \ref{idea:hyperbolic_inverse_integrals}, with $a=1$. Thus
 \begin{align}
@@ -381,7 +387,7 @@ We practice using the derivative and integral formulas in the following example.
      &=\frac12\ln\left|\frac{x-1}{x+1}\right|+C.\label{eq:hf3}
      \end{align}
 
-We should note that this exact problem was solved at the beginning of Section \ref{sec:partial_fraction}. In that example the answer was given as $\frac12\ln|x-1|-\frac12\ln|x+1|+C.$ Note that this is equivalent to the answer given in Equation \ref{eq:hf3}, as $\ln(a/b) = \ln a - \ln b$.
+\ifthenelse{\boolean{CalcI}}{}{We should note that this exact problem is solved at the beginning of Section \ref{sec:partial_fraction}. In that example the answer is given as $\frac12\ln|x-1|-\frac12\ln|x+1|+C.$ Note that this is equivalent to the answer given in Equation \ref{eq:hf3}, as $\ln(a/b) = \ln a - \ln b$.}
 
 %The key to linking the two seemingly different answers together is Figure \ref{fig:hfinverse5}, where the logarithmic definitions of the inverse hyperbolic functions are given. Note that the definitions of $\tanh^{-1}x$ and $\coth^{-1}x$ are very similar; the conditions placed on $|x|$ ensure that the argument of $\ln$ is always positive. Thus one could say 
 %$$\frac12\ln\left|\frac{x+1}{x-1}\right| = \left\{\begin{array}{ccc} \tanh^{-1}x+C & & |x|<1 \\ \\
@@ -396,6 +402,7 @@ We should note that this exact problem was solved at the beginning of Section \r
 %			&= -\frac12\ln|x+1| + \frac12\ln|x-1| +C,
 %\end{align*}
 %matching the answer previously obtained.
+\enlargethispage{\baselineskip}
 
 \item		This requires a substitution, then item \#2 of Key Idea \ref{idea:hyperbolic_inverse_integrals} can be applied.
 
@@ -408,7 +415,7 @@ Let $u = 3x$, hence $du = 3dx$. We have
 \end{align*}
 \end{enumerate}
 \vskip-\baselineskip
-}\\
+}\pagebreak
 
 This section covers a lot of ground. New functions were introduced, along with some of their fundamental identities, their derivatives and antiderivatives, their inverses, and the derivatives and antiderivatives of these inverses. Four Key Ideas were presented, each including quite a bit of information.
 

@@ -1,0 +1,169 @@
+\RequirePackage{ifthen}
+\newboolean{longpage}
+\setboolean{longpage}{false}
+\ifthenelse{\boolean{longpage}}%
+{\documentclass[10pt]{article}}%
+{\documentclass[10pt]{book}}
+
+\newboolean{printlabelname}
+\setboolean{printlabelname}{false}
+\ifthenelse{\boolean{printlabelname}}{\usepackage[notref,notcite]{showkeys}}{}
+
+\usepackage{refcount}
+\usepackage{pdfpages}
+
+\newboolean{colour}
+\setboolean{colour}{true}
+\newboolean{CalcIII}
+\setboolean{CalcIII}{false}
+\newboolean{CalcIV}
+\setboolean{CalcIV}{true}
+
+
+%% end detour
+%\usepackage{amsmath}
+\usepackage{xr}
+\externaldocument[I-]{Math1560_ebook}\externaldocument[II-]{Math2560_ebook}
+\externaldocument[III-]{Math2570_ebook}
+
+\input{headers/Page_Size_Calculus}
+\usepackage{APEX_format}
+\input{headers/Header_Calculus}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+
+
+\ifthenelse{\boolean{xetex}}%
+	{\sffamily
+	%%\usepackage{fontspec}
+	\usepackage{mathspec}
+	\setallmainfonts[Mapping=tex-text]{Calibri}
+	\setmainfont[Mapping=tex-text,Ligatures=NoCommon]{Calibri}
+	\setsansfont[Mapping=tex-text,Ligatures=NoCommon]{Calibri}
+	\setmathsfont(Greek){[cmmi10]}}
+	{\usepackage[sfdefault,lf]{carlito}
+%% The 'lf' option for lining figures
+%% The 'sfdefault' option to make the base font sans serif
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{\carlitoOsF #1}}
+	
+	\ifthenelse{\boolean{luatex}}%
+	{\sffamily
+	\usepackage{fontspec}
+	\usepackage{unicode-math}
+	%\usepackage{mathspec}
+	%\setallmainfonts[Mapping=tex-text]{Calibri}
+	\setmainfont{Calibri}
+	%\setsansfont[Mapping=tex-text]{Calibri}
+	\setmathfont[range=\mathup]{Calibri}
+	\setmathfont[range=\mathit]{Calibri Italic}
+	}
+	{}
+
+\makeindex
+
+%%%\tracingonline=1
+\begin{document}
+
+
+\ifthenelse{\boolean{colour}}{\printincolor}{\printinblackandwhite}
+
+%\printexercisenames
+%\printallanswers
+
+\input{text/front_matter_and_coverIV}
+
+
+\setcounter{page}{\getpagerefnumber{III-2570lastpage}}
+\addtocounter{chapter}{12}
+
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+%
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{Functions of Several Variables}\label{chapter:multi}
+\thispagestyle{empty}
+\input{text/10_Space_Intro_2580}
+\input{text/12_Multivariable_Intro}
+\input{text/12_Multivariable_Limit}
+\input{text/12_Partial_Derivatives}
+\input{text/12_Total_Differential}
+\input{text/12_Multivariable_Chain_Rule}
+\input{text/12_Directional_Derivatives}
+\input{text/12_Tangent_Planes_Lines}
+\input{text/12_Extrema}
+
+
+%
+%%%\addtocounter{chapter}{12}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{Multiple Integration}\label{chapter:mult_int}
+\thispagestyle{empty}
+\input{text/13_Iterated_Integrals}
+\input{text/13_Double_Integrals_Volume}
+\input{text/13_Double_Integrals_Polar}
+\input{text/13_Center_of_Mass}
+\input{text/13_Surface_Area}
+\input{text/13_Triple_Integration}
+\input{text/13_Cylindrical_Spherical}
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{Vector Analysis}\label{chapter:vector_calc}
+\thispagestyle{empty}
+\input{text/14_Line_Integral_Intro}
+\input{text/14_Vector_Fields}
+\input{text/14_Line_Integral_Vector_Fields}
+\input{text/14_Line_Integral_Greens_Theorem}
+\input{text/14_Parametrized_Surfaces}
+\input{text/14_Surface_Integrals}
+\input{text/14_Stokes_Divergence}
+
+%%%\layout
+
+% counters are reset in the Taylor Polynomial section, not here
+% I do not recall why this didn't seem to work here
+
+
+
+\appendix
+\clearpage{\pagestyle{empty}\cleardoublepage}
+%%%%%
+%%%%\makeexercisesection{Solutions To Selected Problems}
+\pagenumbering{arabic}\renewcommand{\thepage}{A.\arabic{page}}
+\makeexercisesection{Solutions To Selected Problems}
+%%%\printexercisesection
+
+
+%
+%
+%%%%
+%%%%%%%%%
+%%%%%%%		 The following makes the index and includes
+%%%%%%%		it in the file
+%%%%%%%%%
+%%%
+%%%\clearpage{\pagestyle{empty}\cleardoublepage}
+%%%\phantomsection
+%%%\addcontentsline{toc}{chapter}{\indexname}
+%%%\printindex
+%%
+%
+
+
+\qendheader
+\eendgeometry
+
+\phantomsection
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\indexname}
+\printindex
+%\includepdf[pages={863-868}]{Calculus.pdf}
+
+%\cleardoublepage
+\input{text/Inside_Cover_Of_The_Text_Material_Complete}
+
+
+\end{document}
+

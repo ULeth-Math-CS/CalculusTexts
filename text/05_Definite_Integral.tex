@@ -6,7 +6,7 @@ We approach this problem with the familiar ``Distance $=$ Rate $\times$ Time'' e
 
 It is interesting to note that this solution of 50 feet can be represented graphically. Consider Figure \ref{fig:defint1}, where the constant velocity of 5ft/s is graphed on the axes. Shading the area under the line from $t=0$ to $t=10$ gives a rectangle with an area of 50 square units; when one considers the units of the axes, we can say this area represents 50 ft.
 
-\mfigure{.8}{The area under a constant velocity function corresponds to distance traveled.}{fig:defint1}{figures/figdefint1}
+\mfigure{.8}{The area under a constant velocity function corresponds to distance travelled.}{fig:defint1}{figures/figdefint1}
 
 Now consider a slightly harder situation (and not particularly realistic): an object travels in a straight line with a constant velocity of 5ft/s for 10 seconds, then instantly reverses course at a rate of 2ft/s for 4 seconds. (Since the object is travelling in the opposite direction when reversing course, we say the velocity is a constant $-2$ft/s.) How far away from the starting point is the object -- what is its \textit{displacement}?
 
@@ -66,8 +66,9 @@ Recall how in our previous work that the displacement of the object (in this cas
 which matches our previous calculation of the maximum height.
 
 %\enlargethispage{3\baselineskip}
-\drawexampleline
-Finally, we find the total \textit{signed} area under the velocity function from $t=0$ to $t=2$ to find the $s(2)$, the height at $t=2$, which is a displacement, the distance from the current position to the starting position. That is,
+%\drawexampleline
+%Finally, we find the total \textit{signed} area under the velocity function from $t=0$ to $t=2$ to find the $s(2)$, the height at $t=2$, which is a displacement, the distance from the current position to the starting position. 
+Finally, to find the height of the object at time $t=2$ we calculate the total ``signed area'' (where some area is negative) under the velocity function from $t=0$ to $t=2$. This signed area is equal to $s(2)$, the displacement (i.e., signed distance) from the starting position at $t=0$ to the position at time $t=2$. That is,
 	\begin{center}
 	Displacement = Area above the $t$--axis $-$ Area below $t$--axis.
 	\end{center}
@@ -128,7 +129,7 @@ Consider the function $f$ given in Figure \ref{fig:defint4}.
 		\item		$ \int_0^3 f(x)\ dx$ is the area under $f$ on the interval $[0,3]$. This region is a triangle, so the area is $\int_0^3 f(x)\ dx=\frac12(3)(1) = 1.5$. 
 		\item		$\int_3^5 f(x)\ dx$ represents the area of the triangle found under the $x$--axis on $[3,5]$. The area is $\frac12(2)(1) = 1$; since it is found \textit{under} the $x$--axis, this is ``negative area.'' Therefore $ \int_3^5 f(x)\ dx = -1$.
 		\item		$ \int_0^5f(x)\ dx$ is the total signed area under $f$ on $[0,5]$. This is $1.5 + (-1) = 0.5$.
-		\item		$ \int_0^35f(x)\ dx$ is the area under $5f$ on $[0,3]$. This is sketched in Figure \ref{fig:defint4a}. Again, the region is a triangle, with height 5 times that of the height of the original triangle. Thus the area is $ \int_0^35f(x)\ dx = 15/2 = 7.5.$
+		\item		$ \int_0^35f(x)\ dx$ is the area under $5f$ on $[0,3]$. This is sketched in Figure \ref{fig:defint4a}. Again, the region is a triangle, with height 5 times that of the height of the original triangle. Thus the area is $ \int_0^35f(x)\ dx = \frac12(15)(1) = 7.5.$
 		
 \mfigure{.2}{A graph of $5f$ in Example \ref{ex_defint4}. (Yes, it looks just like the graph of $f$ in Figure \ref{fig:defint4}, just with a different $y$-scale.)}{fig:defint4a}{figures/figdefint4a}		
 		
@@ -170,17 +171,18 @@ Property $(3)$ justifies changing the sign and switching the bounds of integrati
 The conclusion is this: by adopting the convention of Property (3), Property (2) holds no matter the order of $a$, $b$ and $c$. Again, in the next section we will see another justification for this property.
 	\item[4,5.]	Each of these may be non--intuitive. Property (5) states that when one scales a function by, for instance, 7, the area of the enclosed region also is scaled by a factor of 7. Both Properties (4) and (5)  can be proved using geometry. The details are not complicated but are not discussed here.
 \end{enumerate}
+%\vskip\baselineskip
 
 %\enlargethispage{2\baselineskip}%\clearpage
 \example{ex_defint5}{Evaluating definite integrals using Theorem \ref{thm:defintprop}.}
 {Consider the graph of a function $f(x)$ shown in Figure \ref{fig:defint5}. 
-\mfigure{.5}{A graph of a function in Example \ref{ex_defint5}.}{fig:defint5}{figures/figdefint5}
+\mfigure{.35}{A graph of a function in Example \ref{ex_defint5}.}{fig:defint5}{figures/figdefint5}
 Answer the following:
 		\begin{enumerate}
 		\item		Which value is greater: $\ds \int_a^b f(x)\ dx$ or $\ds \int_b^c f(x)\ dx$?
 		\item		Is $\ds \int_a^c f(x)\ dx$ greater or less than 0?
 		\item		Which value is greater: $\ds \int_a^b f(x)\ dx$ or $\ds \int_c^b f(x)\ dx$?
-		\end{enumerate}
+		\end{enumerate}%\pagebreak
 		
 }
 {\begin{enumerate}
@@ -189,9 +191,9 @@ Answer the following:
 		\item		Note how the second integral has the bounds ``reversed.'' Therefore $\int_c^b f(x)\ dx$ represents a positive number, greater than the area described by the first definite integral. Hence $\int_c^b f(x)\ dx$ is greater.
 		\end{enumerate}
 \vskip-1.5\baselineskip
-}\pagebreak
+}\clearpage
 
-The area definition of the definite integral allows us to use geometry compute the definite integral of some simple functions.\\
+The area definition of the definite integral allows us to use geometry to compute the definite integral of some simple functions.\\
 
 \example{ex_defint8}{Evaluating definite integrals using geometry}{
 Evaluate the following definite integrals:
@@ -219,7 +221,7 @@ Region $R_1$ lies under the $x$--axis, hence it is counted as negative area (we 
 }\\
 
 %\mfigure{.6}{A graph of $f(x) = \sqrt{9-x^2}$ in Example \ref{ex_defint8}.}{fig:defint8b}{figures/figdefint8b}
-\mtable{.72}{A graph of $f(x) = 2x-4$ in (a) and $f(x) = \sqrt{9-x^2}$ in (b), from Example \ref{ex_defint8}.}{fig:defint8}{%
+\mtable{.7}{A graph of $f(x) = 2x-4$ in (a) and $f(x) = \sqrt{9-x^2}$ in (b), from Example \ref{ex_defint8}.}{fig:defint8}{%
 \begin{tabular}{c}
 \myincludegraphics{figures/figdefint8a}\\
 (a)\\[10pt]

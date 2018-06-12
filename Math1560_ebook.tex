@@ -10,11 +10,17 @@
 \ifthenelse{\boolean{printlabelname}}{\usepackage[notref,notcite]{showkeys}}{}
 \usepackage{pdfpages,refcount}
 
+\newboolean{colour}
+\setboolean{colour}{true}
 
-%% end detour
-%\usepackage{amsmath}
+\newboolean{CalcI}
+\setboolean{CalcI}{true}
+\newboolean{1010}
+\setboolean{1010}{false}
+
+
 \usepackage{xr}
-\externaldocument{Math2560_ebook}
+\externaldocument[II-]{Math2560_ebook}
 
 \input{headers/Page_Size_Calculus}
 \usepackage{APEX_format}
@@ -55,8 +61,7 @@
 %%%\tracingonline=1
 \begin{document}
 %\printexercisenames
-\printincolor
-%\printinblackandwhite
+\ifthenelse{\boolean{colour}}{\printincolor}{\printinblackandwhite}
 %\printallanswers
 
 
@@ -110,7 +115,7 @@
 \input{text/04_Related_Rates}
 \input{text/04_Optimization}
 \input{text/04_Differentials}
-\input{text/08_Taylor_Polynomials1}
+\input{text/08_Taylor_Polynomials}
 %\input{text/06_LHopitals_Rule}
 %
 %%%
@@ -127,25 +132,12 @@
 \input{text/05_Riemann_Sums}
 \input{text/05_FTC}
 %\input{text/05_Numerical_Integration}
-\input{text/06_Substitution1}
+\input{text/06_Substitution1560}
 %\input{text/06_Hyperbolic_Functions}
-\input{text/07_Area_Between_Curves1}
+\input{text/07_Area_Between_Curves1560}
 %%
 
-\refstepcounter{definitioncounter}
-\label{lastdefcount1}
-\refstepcounter{theoremcounter}
-\label{lastthmcount1}
-\refstepcounter{keyideacounter}
-\label{lastideacount1}
-\refstepcounter{examplecounter}
-\label{lastexamplecount1}
-\addtocounter{definitioncounter}{-1}
-\addtocounter{theoremcounter}{-1}
-\addtocounter{keyideacounter}{-1}
-\addtocounter{examplecounter}{-1}
-
-
+\label{1560lastpage}
 %%%\layout
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
@@ -179,7 +171,6 @@
 \addcontentsline{toc}{chapter}{\indexname}
 \printindex
 %\includepdf[pages={863-868}]{Calculus.pdf}
-
 \input{text/Inside_Cover_Of_The_Text_Material_Complete}
 
 

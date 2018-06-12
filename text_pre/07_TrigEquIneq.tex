@@ -1,0 +1,530 @@
+\section{Trigonometric Equations and Inequalities}
+
+%%%For mfpics, file names are TrigEquIneq_new-xx
+
+\label{TrigEquIneq}
+
+In Sections \ref{TheUnitCircle}, \ref{CircularFunctions} and most recently \ref{ArcTrig}, we solved some basic equations involving the trigonometric functions. Below we summarize the techniques we've employed thus far.  Note that we use the neutral letter `$u$' as the argument of each circular function for generality. 
+
+\smallskip
+
+\keyidea{trigeqnstrategy1}{Strategies for Solving Basic Equations Involving Trigonometric Functions}{
+\begin{itemize}
+
+\item To solve $\cos(u) = c$ or $\sin(u) = c$ for $-1 \leq c \leq 1$, first solve for $u$ in the interval $[0,2\pi)$ and add integer multiples of the period $2\pi$.  If $c < -1$ or of $c > 1$, there are no real solutions.
+
+\item To solve $\sec(u) = c$ or $\csc(u) = c$ for $c \leq -1$ or $c \geq 1$,  convert to cosine or sine, respectively, and solve as above.  If $-1 < c < 1$, there are no real solutions.
+
+\item To solve  $\tan(u) = c$ for any real number $c$,  first solve for $u$ in the interval $\left(-\frac{\pi}{2}, \frac{\pi}{2}\right)$ and add integer multiples of the period $\pi$.
+
+\item  To solve  $\cot(u) = c$ for $c \neq 0$, convert to tangent and solve as above.  If $c = 0$, the solution to $\cot(u) = 0$ is $u = \frac{\pi}{2} + \pi k$ for integers $k$.
+
+\end{itemize}
+}
+
+\smallskip
+
+Using the above guidelines, we can comfortably solve $\sin(x) = \frac{1}{2}$ and find the solution $x = \frac{\pi}{6} + 2\pi k$ or $x = \frac{5\pi}{6} + 2\pi k$ for integers $k$. How do we solve something like $\sin(3x) = \frac{1}{2}$?  Since this equation has the \textit{form} $\sin(u) = \frac{1}{2}$, we know the solutions take the form  $u= \frac{\pi}{6} + 2\pi k$ or $u = \frac{5\pi}{6} + 2\pi k$ for integers $k$. Since the argument of sine here is $3x$, we have $3x= \frac{\pi}{6} + 2\pi k$ or $3x = \frac{5\pi}{6} + 2\pi k$ for integers $k$. To solve for $x$, we divide both sides of these equations by $3$, (Don't forget to divide the $2\pi k$ by $3$ as well!) and obtain $x = \frac{\pi}{18} + \frac{2\pi}{3} k$ or $x = \frac{5\pi}{18} + \frac{2\pi}{3}k$ for integers $k$.  This is the technique employed in the example below.
+
+\example{TrigEqnEx1}{Solving basic trigonometric equations}{ Solve the following equations and check your answers analytically.  List the solutions which lie in the interval $[0,2\pi)$ and verify them using a graphing utility.
+
+
+\begin{multicols}{2}
+
+\begin{enumerate}
+
+\item  $\cos(2x) = -\frac{\sqrt{3}}{2}$
+\item  $\csc\left(\frac{1}{3}x-\pi \right) = \sqrt{2}$
+\item  $\cot\left(3x \right) = 0$
+\item  $\sec^{2}(x) = 4$
+\item  \label{arctanin02pi} $\tan\left(\frac{x}{2}\right) = -3$
+\item  $\sin(2x) = 0.87$
+
+\end{enumerate}
+
+\end{multicols}}
+{
+\begin{enumerate}
+
+\item  The solutions to $\cos(u) =-\frac{\sqrt{3}}{2}$ are $u = \frac{5\pi}{6} + 2\pi k$ or $u = \frac{7\pi}{6} + 2\pi k$ for integers $k$.  Since the argument of cosine here is $2x$, this means $2x = \frac{5\pi}{6} + 2\pi k$ or $2x = \frac{7\pi}{6} + 2\pi k$ for integers $k$.  Solving for $x$ gives $x = \frac{5\pi}{12} + \pi k$ or $x = \frac{7\pi}{12} + \pi k$ for integers $k$.  To check these answers analytically, we substitute them into the original equation.  For any integer $k$ we have
+
+\begin{align*}
+\cos\left( 2\left[\frac{5\pi}{12} + \pi k\right]\right) &  =   \cos\left(\frac{5\pi}{6} + 2\pi k\right)  \\ 															& =     \cos\left(\frac{5\pi}{6}\right)  \tag*{the period of cosine is $2\pi$} \\															& =   -\frac{\sqrt{3}}{2}
+\end{align*}
+
+Similarly, we find $\cos\left( 2\left[\frac{7\pi}{12} + \pi k\right]\right) = \cos\left(\frac{7\pi}{6} + 2\pi k\right) = \cos\left(\frac{7\pi}{6}\right) = -\frac{\sqrt{3}}{2}$.  To determine which of our solutions lie in $[0,2\pi)$, we substitute integer values for $k$.  The solutions we keep come from the values of $k = 0$ and $k =1$ and are  $x = \frac{5\pi}{12}$,  $\frac{7\pi}{12}$, $\frac{17\pi}{12}$ and $\frac{19\pi}{12}$.  Using GeoGebra, we graph $y = \cos(2x)$ and $y = -\frac{\sqrt{3}}{2}$ and examine where these two graphs intersect on $[0,2\pi)$.  We see in Figure \ref{fig:trigeg1-1} that the $x$-coordinates of the intersection points correspond to the decimal representations of our exact answers.
+
+\mfigure[width=0.95\marginparwidth]{.7}{Solving $\cos(2x)=-\frac{\sqrt{3}}{2}$}{fig:trigeg1-1}{figures/IntroTrigGraphics/TrigEquIneq01}
+
+\item  Since this equation has the form $\csc(u) = \sqrt{2}$, we rewrite this as $\sin(u) = \frac{\sqrt{2}}{2}$ and find $u = \frac{\pi}{4} + 2\pi k$ or $u = \frac{3\pi}{4} + 2\pi  k$ for integers $k$.  Since the argument of cosecant here is $\left(\frac{1}{3}x-\pi \right)$,
+
+\[
+ \frac{1}{3}x-\pi = \frac{\pi}{4} + 2\pi k \quad \text{or} \quad  \frac{1}{3}x-\pi = \frac{3\pi}{4} + 2\pi k
+\]
+
+\drawexampleline
+
+To solve $\frac{1}{3}x-\pi = \frac{\pi}{4} + 2\pi k$, we first add $\pi$ to both sides
+
+\[
+ \frac{1}{3} x = \frac{\pi}{4} + 2\pi k + \pi
+\]
+
+A common error is to treat the `$2\pi k$' and `$\pi$' terms as `like' terms and try to combine them when they are not. (Do you see why?)  We can, however, combine the `$\pi$' and `$\frac{\pi}{4}$' terms to get
+
+\[
+ \frac{1}{3} x = \frac{5\pi}{4} + 2\pi k
+\]
+
+We now finish by multiplying both sides by $3$ to get
+
+\[
+ x = 3 \left( \frac{5\pi}{4} + 2\pi k \right) = \frac{15 \pi}{4} + 6\pi k 
+\]
+
+Solving the other equation, $\frac{1}{3}x-\pi = \frac{3\pi}{4} + 2\pi k$ produces $x = \frac{21\pi}{4} + 6 \pi k$ for integers $k$. To check the first family of answers, we substitute, combine line terms, and simplify.
+
+\begin{align*}
+\csc\left(\frac{1}{3} \left[ \frac{15\pi}{4} + 6 \pi  k \right] - \pi   \right) & =   \csc\left(\frac{5\pi}{4} + 2\pi k - \pi \right)  \\ 					& =   \csc\left(\frac{\pi}{4} + 2\pi k\right)   \\ 
+		& =   \csc\left(\frac{\pi}{4}\right)  \tag*{the period of cosecant is $2\pi$} \\
+		& =  \sqrt{2}
+\end{align*}
+
+
+
+The family $x= \frac{21\pi}{4} + 6 \pi  k$ checks similarly.  Despite having infinitely many solutions, we find that \textit{none} of them lie in $[0,2\pi)$.  To verify this graphically, plot $y=\csc\left(\frac{1}{3}x-\pi\right)$ and $y =\sqrt{2}$ in GeoGebra and find that do not intersect at all over the interval $[0,2\pi)$: see Figure \ref{fig:trigeg1-2}.
+
+\mfigure[width=0.95\marginparwidth]{.2}{Solving $\csc\left(\frac{1}{3}x-\pi\right)=\sqrt{2}$}{fig:trigeg1-2}{figures/IntroTrigGraphics/TrigEquIneq02}
+
+\item  Since $\cot(3x) = 0$ has the form $\cot(u) = 0$, we know $u = \frac{\pi}{2} + \pi k$, so, in this case,  $3x =  \frac{\pi}{2} + \pi k$ for integers $k$.  Solving for $x$ yields $x = \frac{\pi}{6} + \frac{\pi}{3} k$.  Checking our answers, we get
+\begin{align*}
+\cot\left(3\left[ \frac{\pi}{6} + \frac{\pi}{3} k\right]\right)  &  =  \cot\left(\frac{\pi}{2} + \pi k\right) \\
+					& =     \cot\left(\frac{\pi}{2}\right)  \tag*{the period of cotangent is $\pi$} \\															& =  0 
+\end{align*}
+As $k$ runs through the integers, we obtain six answers, corresponding to $k=0$ through $k=5$, which lie in $[0, 2\pi)$: $x = \frac{\pi}{6}$, $\frac{\pi}{2}$, $\frac{5\pi}{6}$, $\frac{7\pi}{6}$ , $\frac{3\pi}{2}$ and  $\frac{11\pi}{6}$: see Figure \ref{fig:trigeg1-3}. 
+ 
+\mfigure[width=0.95\marginparwidth]{.8}{Solving $\cot(3x)=0$}{fig:trigeg1-3}{figures/IntroTrigGraphics/TrigEquIneq03}
+
+\mnote{.57}{\textbf{Note:}  To confirm the solution for Example \ref{TrigEqnEx1}.3 graphically using GeoGebra, we simply plot the cotangent function. However, we must be careful when using a graphing calculator. On many calculators, there is no function button for cotangent.  We choose to use the quotient identity  $\cot(3x) = \dfrac{\cos(3x)}{\sin(3x)}$.  Graphing $y = \dfrac{\cos(3x)}{\sin(3x)}$ and $y = 0$ (the $x$-axis), we see that the $x$-coordinates of the intersection points approximately match our solutions. The calculator-using reader is encouraged to see what happens if we had chosen the reciprocal identity $\cot(3x) = \dfrac{1}{\tan(3x)}$ instead.  The graph on the calculator \textit{appears} identical, but what happens when you try to find the intersection points?}
+
+\item The complication in solving an equation like $\sec^{2}(x) = 4$ comes not from the argument of secant, which is just $x$, but rather, the fact the secant is being squared.  To get this equation to look like one of the forms listed on page \pageref{trigeqnstrategy1}, we extract square roots to get $\sec(x) = \pm 2$. Converting to cosines, we have  $\cos(x) = \pm \frac{1}{2}$.  For $\cos(x) = \frac{1}{2}$, we get $x = \frac{\pi}{3} + 2\pi k$ or $x = \frac{5\pi}{3} + 2\pi k$ for integers $k$.  For $\cos(x) = -\frac{1}{2}$, we get $x = \frac{2\pi}{3} + 2\pi k$ or $x = \frac{4\pi}{3} + 2\pi k$ for integers $k$.  If we take a step back and think of these families of solutions geometrically, we see we are finding the measures of all angles with a reference angle of $\frac{\pi}{3}$.  As a result, these solutions can be combined and we may write our solutions as $x = \frac{\pi}{3} + \pi k$ and $x = \frac{2\pi}{3} + \pi k$ for integers $k$.  To check the first family of solutions, we note that, depending on the integer $k$,  $\sec\left(\frac{\pi}{3} + \pi k\right)$ doesn't always equal $\sec\left(\frac{\pi}{3}\right)$.  However, it is true that for all integers $k$,  $\sec\left(\frac{\pi}{3} + \pi k\right) = \pm \sec\left(\frac{\pi}{3}\right) = \pm 2$.  (Can you show this?)  As a result, 
+\begin{align*}
+\sec^{2}\left(\frac{\pi}{3} + \pi k\right)  &  =   \left( \pm \sec\left(\frac{\pi}{3}\right)\right)^2 \\ 
+				& =  (\pm 2)^2   \\														& =  4 
+\end{align*}
+\drawexampleline
+
+The same holds for the family $x =\frac{2\pi}{3} + \pi k$.  The solutions which lie in $[0,2\pi)$ come from the values $k = 0$ and $k=1$, namely $x = \frac{\pi}{3}$, $\frac{2\pi}{3}$, $\frac{4\pi}{3}$ and $\frac{5\pi}{3}$.  To confirm graphically, we simply plot $f(x)=\sec^2(x)$ in GeoGebra: see Figure \ref{fig:trigeg1-4}. (Again, if you're using a calculator, you'll probably have to rely on a reciprocal identity.) The $x$-coordinates of the intersection points of  $y = \frac{1}{(\cos(x))^2}$ and $y = 4$ verify our answers.
+
+\mfigure[width=0.95\marginparwidth]{.29}{Solving $\sec^2(x)=4$}{fig:trigeg1-4}{figures/IntroTrigGraphics/TrigEquIneq04}
+
+\item  The equation  $\tan\left(\frac{x}{2}\right) = -3$ has the form $\tan(u) = -3$, whose solution is $u = \arctan(-3) + \pi k$.  Hence, $\frac{x}{2} = \arctan(-3) + \pi k$, so  $x = 2\arctan(-3) + 2\pi k$ for integers $k$.  To check, we note
+
+\noindent\hskip-25pt\begin{minipage}{\textwidth}
+\begin{align*}
+\tan\left(\frac{2\arctan(-3) + 2\pi k}{2}\right)  &  =  \tan\left( \arctan(-3) + \pi k \right)\\													& =   \tan\left(\arctan(-3) \right)  \tag*{the period of tangent is $\pi$} \\																		& =   -3  \tag*{See Theorem \ref{arctangentcotangentfunctionprops}}
+\end{align*}
+\end{minipage}
+
+\medskip
+
+ To determine which of our answers lie in the interval $[0,2\pi)$, we first need to get an idea of the value of $2\arctan(-3)$.  While we could easily find an approximation using a calculator, we proceed analytically.  Since $-3 < 0$, it follows that $-\frac{\pi}{2} < \arctan(-3) < 0$.  Multiplying through by $2$ gives $-\pi < 2\arctan(-3) < 0$.   We are now in a position to argue which of the solutions $x = 2\arctan(-3) + 2\pi k$ lie in $[0,2\pi)$.  For $k = 0$, we get $x = 2\arctan(-3) < 0$, so we discard this answer and all answers $x = 2\arctan(-3) + 2\pi k$ where $k < 0$.  Next, we turn our attention to $k = 1$ and get $x = 2\arctan(-3) + 2\pi$. Starting with the inequality $-\pi < 2\arctan(-3) < 0$, we add $2\pi$  and get $\pi < 2\arctan(-3) +2\pi < 2\pi$.  This means $x = 2\arctan(-3) + 2\pi$ lies in $[0,2\pi)$.  Advancing $k$ to $2$ produces $x = 2\arctan(-3) + 4\pi$. Once again, we get from $-\pi < 2\arctan(-3) < 0$ that $3\pi < 2\arctan(-3) + 4\pi < 4\pi$.  Since this is outside the interval $[0,2\pi)$,  we discard $x = 2\arctan(-3) + 4\pi$ and all solutions of the form $x = 2\arctan(-3) + 2\pi k$ for $k > 2$.   Graphically, we see in Figure \ref{fig:trigeg1-5} that $y = \tan\left(\frac{x}{2}\right)$ and $y = -3$ intersect only once on $[0,2\pi)$ at $x = 2\arctan(-3) + 2\pi\approx 3.7851$.
+
+\mfigure[width=0.95\marginparwidth]{.8}{Solving $\tan(\frac{x}{2})=-3$}{fig:trigeg1-5}{figures/IntroTrigGraphics/TrigEquIneq05}
+
+\item To solve $\sin(2x) = 0.87$, we first note that it has the form $\sin(u) = 0.87$, which has the family of solutions $u = \arcsin(0.87) + 2\pi k$ or $u =\pi -  \arcsin(0.87) + 2\pi k$ for integers $k$. Since the argument of sine here is $2x$, we get $2x = \arcsin(0.87) + 2\pi k$ or $2x =\pi -  \arcsin(0.87) + 2\pi k$ which gives $x = \frac{1}{2} \arcsin(0.87) + \pi k$ or $x =\frac{\pi}{2} -  \frac{1}{2}\arcsin(0.87) + \pi k$ for integers $k$.  To check,
+\begin{align*}
+\sin\left(2\left[\frac{1}{2} \arcsin(0.87) + \pi k\right]\right)  &  =  \sin\left(\arcsin(0.87) + 2\pi k\right)   \\
+		& =   \sin\left(\arcsin(0.87)\right)  \tag*{the period of sine is $2\pi$} \\
+        & =   0.87 \tag*{See Theorem \ref{arccosinesinefunctionprops}}
+\end{align*}
+
+For the family $x =\frac{\pi}{2} -  \frac{1}{2}\arcsin(0.87) + \pi k$ , we get
+\begin{align*}
+\sin\left(2\left[\frac{\pi}{2} - \frac{1}{2} \arcsin(0.87) + \pi k\right]\right)  &  =  \sin\left(\pi - \arcsin(0.87) + 2\pi k\right) \\			& =   \sin\left(\pi - \arcsin(0.87)\right)  \tag*{the period of sine is $2\pi$} \\
+	& =   \sin\left(\arcsin(0.87)\right)  \tag*{$\sin(\pi - t) = \sin(t)$} \\
+	& =  0.87 \tag*{See Theorem  \ref{arccosinesinefunctionprops}}
+\end{align*}
+
+\drawexampleline
+
+To determine which of these solutions lie in $[0,2\pi)$, we first need to get an idea of the value of $x=\frac{1}{2} \arcsin(0.87)$.  Once again, we could use the calculator, but we adopt an analytic route here.  
+
+By definition, $0 < \arcsin(0.87) < \frac{\pi}{2}$ so that multiplying through by $\frac{1}{2}$ gives us $0 < \frac{1}{2} \arcsin(0.87) < \frac{\pi}{4}$.  Starting with the family of solutions $x = \frac{1}{2} \arcsin(0.87) + \pi k$, we use the same kind of arguments as in our solution to number \ref{arctanin02pi} above and find only the solutions corresponding to $k =0$ and $k=1$ lie in $[0,2\pi)$:  $x = \frac{1}{2} \arcsin(0.87)$ and $x = \frac{1}{2} \arcsin(0.87) + \pi$.  Next, we move to the family $x =\frac{\pi}{2} -  \frac{1}{2}\arcsin(0.87) + \pi k$ for integers $k$. Here, we need to get a better estimate of $\frac{\pi}{2} - \frac{1}{2} \arcsin(0.87)$.  From the inequality $0 < \frac{1}{2}\arcsin(0.87) < \frac{\pi}{4}$, we first multiply through by $-1$ and then add $\frac{\pi}{2}$ to get $\frac{\pi}{2} > \frac{\pi}{2} -\frac{1}{2} \arcsin(0.87) >  \frac{\pi}{4}$, or $\frac{\pi}{4} < \frac{\pi}{2} -\frac{1}{2} \arcsin(0.87) < \frac{\pi}{2}$.  Proceeding with the usual arguments, we find the only solutions which lie in $[0,2\pi)$ correspond to $k = 0$ and $k=1$, namely $x =\frac{\pi}{2} -  \frac{1}{2}\arcsin(0.87)$ and  $x = \frac{3\pi}{2} - \frac{1}{2}\arcsin(0.87)$. All told, we have found four solutions to $\sin(2x) = 0.87$ in $[0,2\pi)$:  $x =\frac{1}{2} \arcsin(0.87)$, $x=\frac{1}{2} \arcsin(0.87) + \pi$, $x =\frac{\pi}{2} -  \frac{1}{2}\arcsin(0.87)$ and  $x = \frac{3\pi}{2} - \frac{1}{2}\arcsin(0.87)$. By graphing $y = \sin(2x)$ and $y = 0.87$ in Figure \ref{fig:trigeg1-6}, we confirm our results.
+
+\mfigure[width=0.95\marginparwidth]{.8}{Solving $\sin(2x)=0.87$}{fig:trigeg1-6}{figures/IntroTrigGraphics/TrigEquIneq06}
+
+\end{enumerate}
+}
+
+\medskip
+
+Each of the problems in Example \ref{TrigEqnEx1} featured one trigonometric function.  If an equation involves two different trigonometric functions or if the equation contains the same trigonometric function but with different arguments, we will need to use identities and Algebra to reduce the equation to the same form as those given on page  \pageref{trigeqnstrategy1}.
+
+\medskip
+ 
+\example{TrigEqIdEx1}{Solving trigonometric equations using identities}{  Solve the following equations and list the solutions which lie in the interval $[0,2\pi)$.  Verify your solutions on $[0,2\pi)$ graphically.
+
+\setlength{\columnsep}{-10pt}
+\begin{multicols}{2}
+
+\begin{enumerate}
+
+\item  $3\sin^{3}(x) = \sin^{2}(x)$
+\item $\sec^{2}(x) = \tan(x) + 3$
+\item   $\cos(2x) = 3\cos(x) - 2$
+\item  $\cos(3x) = 2- \cos(x)$
+\item  $\cos(3x) = \cos(5x)$
+\item $\sin(2x) =\sqrt{3} \cos(x)$
+\item  $\sin(x)\cos\left(\frac{x}{2}\right) + \cos(x)\sin\left(\frac{x}{2}\right) = 1$
+\item  $\cos(x) - \sqrt{3} \sin(x) = 2$
+
+\end{enumerate}
+ 
+\end{multicols}\setlength{\columnsep}{5pt}
+}
+{
+\begin{enumerate}
+
+\item We resist the temptation to divide both sides of $3\sin^{3}(x) = \sin^{2}(x)$ by $\sin^{2}(x)$ (What goes wrong if you do?) and instead gather all of the terms to one side of the equation and factor.
+
+\begin{align*}
+3\sin^{3}(x) & =   \sin^{2}(x) \\
+3\sin^{3}(x) -  \sin^{2}(x) & =  0   \\
+\sin^{2}(x) (3 \sin(x) - 1) & =  0  \tag*{Factor out $\sin^{2}(x)$ from both terms.}
+\end{align*}
+
+We get $\sin^{2}(x) = 0$ or $3\sin(x) - 1 = 0$. Solving for $\sin(x)$, we find  $\sin(x) = 0$ or $\sin(x) = \frac{1}{3}$.  The solution to the first equation is $x = \pi k$, with $x = 0$ and $x = \pi$ being the two solutions which lie in $[0,2\pi)$.  To solve $\sin(x) = \frac{1}{3}$, we use the arcsine function to get $x = \arcsin\left(\frac{1}{3}\right) + 2\pi k$ or $x = \pi - \arcsin\left(\frac{1}{3}\right) + 2\pi k$ for integers $k$. We find the two solutions here which lie in $[0,2\pi)$ to be $x = \arcsin\left(\frac{1}{3}\right)$ and $x = \pi - \arcsin\left(\frac{1}{3}\right)$.  To check graphically, we plot $y = 3(\sin(x))^3$ and $y = (\sin(x))^2$ and find the  $x$-coordinates of the intersection points of these two curves in Figure \ref{fig:trigeg2-1a}.  Some extra zooming is required near $x=0$ and $x=\pi$ to verify that these two curves do in fact intersect four times: see Figure \ref{fig:trigeg2-1b}. (Note that we are \textit{not} counting the point $(2\pi,0)$ in our solution set since $x = 2\pi$ is not in the interval $[0,2\pi)$. In the forthcoming solutions, remember that while  $x = 2\pi$ may be a solution to the equation, it isn't counted among the solutions in $[0,2\pi)$.)
+
+\mfigure[width=0.95\marginparwidth]{.4}{Solving $3\sin^3(x)=\sin^2(x)$}{fig:trigeg2-1a}{figures/IntroTrigGraphics/TrigEquIneq07}
+
+\mfigure[width=0.95\marginparwidth]{.2}{Zooming in on the first two solutions for Example \ref{TrigEqIdEx1}.1}{fig:trigeg2-1b}{figures/IntroTrigGraphics/TrigEquIneq08}
+
+
+\item  Analysis of  $\sec^{2}(x) = \tan(x) + 3$ reveals two different trigonometric functions, so an identity is in order.  Since $\sec^{2}(x) = 1 + \tan^{2}(x)$, we get
+
+\begin{align*}
+\sec^{2}(x) &  =  \tan(x) + 3  \\
+1 + \tan^{2}(x) & =  \tan(x) + 3 \tag*{Since $\sec^{2}(x) = 1 + \tan^{2}(x)$.} \\
+\tan^{2}(x) - \tan(x) -2 & =  0  \\
+u^2 - u - 2 & =  0  \tag*{Let $u = \tan(x)$.} \\
+(u + 1)(u - 2) & = 0
+\end{align*}
+
+This gives $u = -1$ or $u = 2$.  Since $u = \tan(x)$, we have $\tan(x) = -1$ or $\tan(x) = 2$. From $\tan(x) = -1$, we get $x = -\frac{\pi}{4} + \pi k$ for integers $k$.  To solve $\tan(x) = 2$, we employ the arctangent function and get $x = \arctan(2) + \pi k$ for integers $k$.  From the first set of solutions, we get $x = \frac{3\pi}{4}$ and $x = \frac{7\pi}{4}$ as our answers which lie in $[0,2\pi)$.  Using the same sort of argument we saw in Example \ref{TrigEqnEx1},   we get  $x=\arctan(2)$ and $x = \pi + \arctan(2)$ as answers from our second set of solutions which lie in $[0,2\pi)$.  We confirm our answers by plotting $y=\sec^2(x)$ and $y=\tan(x)+3$ in GeoGebra; see Figure \ref{fig:trigeg2-2}. (Again, if you are using a graphing calculator rather than software, you may need to use a reciprocal identity and rewrite the secant as a cosine and graph  $y = \frac{1}{(\cos(x))^2}$ and $y = \tan(x) + 3$ to find the $x$-values of the points where they intersect.)
+
+\mfigure[width=0.95\marginparwidth]{.7}{Solving $\sec^2(x)=\tan(x)+3$}{fig:trigeg2-2}{figures/IntroTrigGraphics/TrigEquIneq09}
+
+
+\item  In the equation $\cos(2x) = 3\cos(x) - 2$, we have the same circular function, namely cosine, on both sides but the arguments differ.  Using the identity $\cos(2x) = 2\cos^{2}(x) - 1$, we obtain a `quadratic in disguise' and proceed as we have done in the past.
+
+\begin{align*}
+\cos(2x) & =  3\cos(x) - 2  \\
+2\cos^{2}(x) -1 & =  3\cos(x) -2  \tag*{Since $\cos(2x) = 2\cos^{2}(x) -1$.} \\
+2\cos^{2}(x) - 3\cos(x) +1 & =  0  \\
+2 u^2 - 3 u + 1 & =  0  \tag*{Let $u = \cos(x)$.}\\
+(2u - 1)(u - 1) & =  0 
+\end{align*}
+
+\drawexampleline
+
+This gives $u = \frac{1}{2}$ or $u = 1$.  Since $u = \cos(x)$, we get $\cos(x) = \frac{1}{2}$ or $\cos(x) = 1$.  Solving  $\cos(x) = \frac{1}{2}$, we get $x = \frac{\pi}{3} + 2\pi k$ or $x = \frac{5\pi}{3} + 2\pi k$ for integers $k$.  From $\cos(x) = 1$, we get $x = 2\pi k$ for integers $k$.  The answers which lie in $[0,2\pi)$ are $x =0$,  $\frac{\pi}{3}$, and $\frac{5\pi}{3}$.  Graphing $y = \cos(2x)$ and $y = 3\cos(x) - 2$ in Figure \ref{fig:trigeg2-3}, we find, after a little extra effort, that the curves intersect in three places on $[0,2\pi)$, and  the $x$-coordinates of these points confirm our results.
+
+\mfigure[width=0.95\marginparwidth]{.4}{Solving $\cos(2x)=3\cos(x)-2$}{fig:trigeg2-3}{figures/IntroTrigGraphics/TrigEquIneq10}
+
+\item  To solve $\cos(3x) = 2- \cos(x)$, we use the same technique as in the previous problem.  From Example \ref{doubleangleex}, number \ref{cosinepolynomial}, we know that $\cos(3x) = 4\cos^{3}(x) - 3\cos(x)$.  This transforms the equation into a polynomial in terms of $\cos(x)$.
+
+
+\begin{align*}
+\cos(3x) & = 2- \cos(x)  \\
+4\cos^{3}(x) - 3\cos(x) & =  2- \cos(x)  \\
+2\cos^{3}(x) - 2\cos(x) -2  & =  0  \\
+4 u^3 - 2 u -2  & =  0  \tag*{Let $u = \cos(x)$.}
+\end{align*}
+
+To solve $4u^3-2u-2=0$, we need the techniques in Chapter \ref{Polynomials} to factor $4u^3-2u-2$ into $(u-1)\left(4u^2+4u+2\right)$.  We get either $u-1 = 0$ or  $4u^2+2u+2=0$, and since the discriminant of the latter is negative, the only real solution to $4u^3-2u-2=0$ is $u = 1$.  Since $u = \cos(x)$, we get $\cos(x) = 1$, so $x = 2\pi k$ for integers $k$.  The only solution which lies in $[0,2\pi)$ is $x = 0$.  Graphing $y = \cos(3x)$ and $y = 2- \cos(x)$ on the same set of axes over $[0,2\pi)$ shows that the graphs intersect at  $(0,1)$, as required: see Figure \ref{fig:trigeg2-4}.
+
+\mfigure[width=0.95\marginparwidth]{.8}{Solving $\cos(3x)=2-\cos(x)$}{fig:trigeg2-4}{figures/IntroTrigGraphics/TrigEquIneq11}
+
+
+\item  While we could approach  $\cos(3x) = \cos(5x)$ in the same manner as we did the previous two problems, we choose instead to showcase the utility of the Sum to Product Identities.  From $\cos(3x) = \cos(5x)$, we get $\cos(5x) - \cos(3x) = 0$, and it is the presence of $0$ on the right hand side that indicates a switch to a product would be a good move. (As always, experience is the greatest teacher here!)  Using Theorem \ref{sumtoproduct}, we have that $\cos(5x) - \cos(3x)  = - 2 \sin\left( \frac{5x + 3x}{2}\right)\sin\left( \frac{5x - 3x}{2}\right) = -2 \sin(4x)\sin(x)$.  Hence, the equation $\cos(5x) = \cos(3x)$ is equivalent to $-2 \sin(4x) \sin(x) = 0$.  From this, we get $\sin(4x) = 0$ or $\sin(x)$ = 0.  Solving $\sin(4x) = 0$ gives $x = \frac{\pi}{4} k$ for integers $k$, and the solution to $\sin(x) = 0$ is $x = \pi k$ for integers $k$.  The second set of solutions is contained in the first set of solutions, (when in doubt, write it out!) so our final solution to $\cos(5x) = \cos(3x)$ is $x = \frac{\pi}{4} k$ for integers $k$.  There are eight of these answers which lie in $[0,2\pi)$:  $x = 0$, $\frac{\pi}{4}$, $\frac{\pi}{2}$, $\frac{3\pi}{4}$, $\pi$, $\frac{5\pi}{4}$, $\frac{3\pi}{2}$ and $\frac{7\pi}{4}$.  Our plot of the graphs of $y = \cos(3x)$ and $y = \cos(5x)$ in Figure \ref{fig:trigeg2-5}  bears this out. 
+
+\mfigure[width=0.95\marginparwidth]{.6}{Solving $\cos(3x)=\cos(5x)$}{fig:trigeg2-5}{figures/IntroTrigGraphics/TrigEquIneq12}
+
+\item  In examining the equation   $\sin(2x) =\sqrt{3} \cos(x)$, not only do we have different circular functions involved, namely sine and cosine, we also have different arguments to contend with, namely $2x$ and $x$.  Using the identity $\sin(2x) = 2 \sin(x) \cos(x)$ makes all of the arguments the same and we proceed as we would solving any nonlinear equation -- gather all of the nonzero terms on one side of the equation and factor.
+
+\drawexampleline
+
+\begin{align*}
+\sin(2x) & =  \sqrt{3} \cos(x)  \\
+2 \sin(x) \cos(x) & =  \sqrt{3} \cos(x)   \tag*{($\sin(2x) = 2\sin(x) \cos(x)$)} \\
+2\sin(x) \cos(x) - \sqrt{3} \cos(x) & =  0  \\
+\cos(x) (2 \sin(x) - \sqrt{3}) & =  0 
+\end{align*}
+
+from which we get $\cos(x) = 0$ or $\sin(x) = \frac{\sqrt{3}}{2}$. From $\cos(x) = 0$, we obtain $x = \frac{\pi}{2} + \pi k$ for integers $k$. From $\sin(x) = \frac{\sqrt{3}}{2}$, we get $x = \frac{\pi}{3} + 2\pi k$ or $x = \frac{2\pi}{3} + 2\pi k$ for integers $k$.  The answers which lie in $[0,2\pi)$ are $x = \frac{\pi}{2}$, $\frac{3\pi}{2}$, $\frac{\pi}{3}$ and $\frac{2\pi}{3}$.  We graph $y = \sin(2x)$ and $y = \sqrt{3} \cos(x)$ in Figure \ref{fig:trigeg2-6} to  verify our answers.
+
+\mfigure[width=0.95\marginparwidth]{.4}{Solving $\sin(2x)-\sqrt{3}\cos(x)$}{fig:trigeg2-6}{figures/IntroTrigGraphics/TrigEquIneq13}
+
+\mfigure[width=0.95\marginparwidth]{.2}{Solving $\sin(x)\cos(\frac{x}{2})+\cos(x)\sin(\frac{x}{2})=1$}{fig:trigeg2-7}{figures/IntroTrigGraphics/TrigEquIneq14}
+
+
+\item Unlike the previous problem, there seems to be no quick way to get the circular functions or their arguments to match in the equation $\sin(x)\cos\left(\frac{x}{2}\right) + \cos(x)\sin\left(\frac{x}{2}\right) = 1$.  If we stare at it long enough, however,  we realize that the left hand side is the expanded form of the sum formula for $\sin\left(x + \frac{x}{2}\right)$.  Hence, our original equation is equivalent to  $\sin\left(\frac{3}{2} x\right) = 1$.  Solving, we find $x = \frac{\pi}{3} + \frac{4\pi}{3} k$ for integers $k$.  Two of these solutions lie in $[0,2\pi)$: $x = \frac{\pi}{3}$ and $x = \frac{5\pi}{3}$. Graphing $y = \sin(x)\cos\left(\frac{x}{2}\right) + \cos(x)\sin\left(\frac{x}{2}\right)$ and $y = 1$ in Figure \ref{fig:trigeg2-7}  validates our solutions.
+
+
+\item  With the absence of double angles or squares, there doesn't seem to be much we can do.  However, since the arguments of the cosine and sine are the same, we can rewrite the left hand side of this equation as a sinusoid. (We are essentially `undoing' the sum / difference formula for cosine or sine, depending on which form we use, so this problem is actually closely related to the previous one!)  To fit $f(x) = \cos(x) - \sqrt{3} \sin(x)$ to the form $A\sin(\omega t + \phi) + B$, we use what we learned in Example \ref{expandedsinusoidex1} and find $A = 2$, $B = 0$, $\omega = 1$ and $\phi = \frac{5\pi}{6}$.   Hence, we can rewrite the equation  $\cos(x) - \sqrt{3} \sin(x) = 2$  as $2 \sin\left(x + \frac{5\pi}{6}\right) = 2$, or $\sin\left(x + \frac{5\pi}{6}\right) = 1$.  Solving the latter, we get $x  = - \frac{\pi}{3} + 2\pi k$ for integers $k$. Only one of these solutions, $x = \frac{5\pi}{3}$, which corresponds to $k=1$, lies in $[0,2\pi)$.  Geometrically, we see in Figure \ref{fig:trigeg2-8} that $y = \cos(x) - \sqrt{3} \sin(x)$ and $y = 2$ intersect just once, supporting our answer.
+
+\mfigure[width=0.95\marginparwidth]{.8}{Solving $\cos(x)-\sqrt{3}\sin(x)=2$}{fig:trigeg2-8}{figures/IntroTrigGraphics/TrigEquIneq15}
+
+\end{enumerate}
+}
+ 
+\medskip
+ 
+Unfortunately there is no systematic approach to solving trigonometric equations. When it comes to solving equations involving the trigonometric functions, it helps to just try something.  
+
+Next, we focus on solving inequalities involving the trigonometric functions.  Since these functions are continuous on their domains, we may use the sign diagram technique we've used in the past to solve the inequalities. 
+
+\mnote{.55}{See page \pageref{firstsigndiagram}, Example \ref{polygraphex}, page \pageref{rationalsigndiagram}, page \pageref{algebraicsigndiagram}, Example \ref{expineq} and Example \ref{logineq} for discussion of the use of sign diagrams in solving inequalities.}
+
+\medskip
+
+\example{TrigIneqEx1}{Solving trigonometric inequalities}{ Solve the following inequalities on $[0,2\pi)$.  Express your answers using interval notation and verify your answers graphically.
+
+\begin{multicols}{3}
+
+\begin{enumerate}
+
+\item  $2\sin(x) \leq 1$
+
+\item  $\sin(2x) > \cos(x)$
+
+\item  $\tan(x) \geq 3$
+
+\end{enumerate}
+
+\end{multicols}}
+{
+\begin{enumerate}
+
+\item  We begin solving $2\sin(x) \leq 1$ by collecting all of the terms on one side of the equation and zero on the other to get $2\sin(x) - 1 \leq 0$.  Next, we let $f(x) = 2\sin(x) - 1$ and note that our original inequality is equivalent to solving $f(x) \leq 0$. We now look to see where, if ever, $f$ is undefined and where $f(x) = 0$.  Since the domain of $f$ is all real numbers, we can immediately set  about finding the zeros of $f$.  Solving $f(x) = 0$, we have $2\sin(x) - 1=0$ or $\sin(x) = \frac{1}{2}$.  The solutions here are $x = \frac{\pi}{6} + 2\pi k$ and $x = \frac{5\pi}{6} + 2\pi k$ for integers $k$.  Since we are restricting our attention to $[0,2\pi)$, only $x = \frac{\pi}{6}$ and $x = \frac{5\pi}{6}$ are of concern to us.  Next, we choose test values in $[0,2\pi)$ other than the zeros and determine if $f$ is positive or negative there.  For $x = 0$ we have $f(0) = -1$, for $x = \frac{\pi}{2}$ we get $f\left(\frac{\pi}{2}\right) = 1$ and for $x = \pi$ we get $f(\pi) = -1$.  Since our original inequality is equivalent to $f(x) \leq 0$, we are looking for where the function is negative $(-)$ or $0$, and we get the intervals $\left[0, \frac{\pi}{6}\right] \cup \left[\frac{5\pi}{6}, 2\pi \right)$.  We can confirm our answer graphically by seeing where the graph of $y = 2\sin(x)$ crosses or is below the graph of $y = 1$: see Figure \ref{fig:trigeg3-1}. 
+
+\mtable{.25}{Solving $2\sin(x)\leq 1$}{fig:trigeg3-1}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.8\marginparwidth]{figures/IntroTrigGraphics/TrigEquIneq_new-1}\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/IntroTrigGraphics/TrigEquIneq16}
+\end{tabular}
+}
+
+
+\item  We first rewrite  $\sin(2x) > \cos(x)$   as $\sin(2x) - \cos(x) > 0$ and let $f(x) = \sin(2x) - \cos(x)$.  Our original inequality is thus equivalent to $f(x) > 0$. The domain of $f$ is all real numbers, so we can advance to finding the zeros of $f$.  Setting $f(x) = 0$ yields $\sin(2x) - \cos(x) = 0$, which, by way of the double angle identity for sine, becomes $2\sin(x)\cos(x) - \cos(x) = 0$ or $\cos(x) (2\sin(x) - 1) = 0$.  From $\cos(x) = 0$, we get $x = \frac{\pi}{2} + \pi k$ for integers $k$ of which only $x = \frac{\pi}{2}$ and $x = \frac{3\pi}{2}$ lie in $[0,2\pi)$.  For $2\sin(x) - 1 = 0$, we get $\sin(x) = \frac{1}{2}$ which gives $x = \frac{\pi}{6} + 2\pi k$ or $x = \frac{5\pi}{6} + 2\pi k$ for integers $k$.  Of those, only $x = \frac{\pi}{6}$ and $x = \frac{5\pi}{6}$ lie in $[0,2\pi)$.  Next, we choose our test values.  For $x =0$ we find $f(0) = -1$; when $x = \frac{\pi}{4}$ we get $f\left(\frac{\pi}{4}\right) =1 - \frac{\sqrt{2}}{2} = \frac{2 - \sqrt{2}}{2}$;  for $x = \frac{3\pi}{4}$ we get $f\left(\frac{3\pi}{4}\right) =-1 + \frac{\sqrt{2}}{2} =  \frac{\sqrt{2} - 2}{2}$;  when $x=\pi$ we have $f(\pi) = 1$, and lastly, for $x = \frac{7\pi}{4}$ we get $f\left(\frac{7\pi}{4}\right) = -1 - \frac{\sqrt{2}}{2} =  \frac{-2 - \sqrt{2}}{2}$.  We see $f(x) > 0$ on $\left(\frac{\pi}{6}, \frac{\pi}{2}\right) \cup \left(\frac{5\pi}{6}, \frac{3\pi}{2}\right)$, so this is our answer.  We can use GeoGebra to check that the graph of $y = \sin(2x)$ is indeed above the graph of $y = \cos(x)$ on those intervals; see Figure \ref{fig:trigeg3-2}. 
+
+\mtable{.75}{Solving $\sin(2x)>\cos(x)$}{fig:trigeg3-2}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.95\marginparwidth]{figures/IntroTrigGraphics/TrigEquIneq_new-2}\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/IntroTrigGraphics/TrigEquIneq17}
+\end{tabular}
+}
+
+\item  Proceeding as in the last two problems, we rewrite  $\tan(x) \geq 3$ as $\tan(x) - 3 \geq 0$ and let $f(x) = \tan(x) - 3$.  We note that on $[0,2\pi)$, $f$ is undefined at $x =\frac{\pi}{2}$ and $\frac{3\pi}{2}$, so those values will need the usual disclaimer on the sign diagram. (See page \pageref{rationalsigndiagram} for a discussion of the non-standard character known as the interrobang.)  Moving along to zeros, solving $f(x) = \tan(x) - 3 = 0$ requires the arctangent function.  We find $x = \arctan(3) + \pi k$ for integers $k$ and of these, only $x = \arctan(3)$ and $x = \arctan(3) + \pi$ lie in $[0,2\pi)$.  Since $3 > 0$, we know $0 < \arctan(3) < \frac{\pi}{2}$ which allows us to position these zeros correctly on the sign diagram. To choose test values, we begin with $x=0$ and find $f(0) = -3$. Finding a convenient test value in the interval $\left(\arctan(3), \frac{\pi}{2}\right)$ is a bit more challenging.  Keep in mind that the arctangent function is increasing and is bounded above by $\frac{\pi}{2}$.  This means that the number $x = \arctan(117)$ is guaranteed to lie between  $\arctan(3)$ and $\frac{\pi}{2}$. (We could have chosen any value $\arctan(t)$ where $t > 3$.)  We see that $f(\arctan(117)) = \tan(\arctan(117)) - 3 = 114$.  For our next test value, we take $x = \pi$ and find $f(\pi) = -3$.  To find our next test value, we note that since $\arctan(3) < \arctan(117) < \frac{\pi}{2}$,  it follows (by adding $\pi$ through the inequality) that $\arctan(3) + \pi < \arctan(117) + \pi < \frac{3\pi}{2}$.  Evaluating $f$ at $x = \arctan(117) + \pi$ yields $f(\arctan(117)+\pi) = \tan(\arctan(117) + \pi) -3 = \tan(\arctan(117)) - 3 = 114$.  We choose our last test value to be $x = \frac{7\pi}{4}$ and find $f\left(\frac{7\pi}{4}\right) = -4$.  Since we want $f(x) \geq 0$, we see that our answer is $\left[ \arctan(3), \frac{\pi}{2}\right) \cup  \left[\arctan(3)+\pi, \frac{3\pi}{2}\right)$.  Using the graphs of $y = \tan(x)$ and $y = 3$, we see in Figure \ref{fig:trigeg3-3} when the graph of the former is above (or meets) the graph of the latter.
+
+\mtable{.4}{Solving $\tan(x)\geq 3$}{fig:trigeg3-3}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.95\marginparwidth]{figures/IntroTrigGraphics/TrigEquIneq_new-3}\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/IntroTrigGraphics/TrigEquIneq18}
+\end{tabular}
+}
+\end{enumerate}
+}
+
+\medskip
+
+Our next example puts solving equations and inequalities to good use -- finding domains of functions.
+
+\medskip
+
+
+\example{TrigDomainEx1}{Determining domains of functions}{ Express the domain of the following functions using extended interval notation. (See page \pageref{extendedinterval} for details about this notation.)
+
+\begin{enumerate}
+
+\item  $f(x) = \csc\left(2x + \frac{\pi}{3}\right)$
+
+\item  $f(x) = \dfrac{\sin(x)}{2\cos(x) - 1}$
+
+\item  $f(x) = \sqrt{1 - \cot(x)}$
+
+\end{enumerate}}
+{
+\begin{enumerate}
+
+\item  To find the domain of $f(x) = \csc\left(2x + \frac{\pi}{3}\right)$, we rewrite $f$ in terms of sine as $f(x) = \dfrac{1}{\sin\left(2x + \frac{\pi}{3}\right)}$.  Since the sine function is defined everywhere, our only concern comes from zeros in the denominator.  Solving $\sin\left(2x + \frac{\pi}{3}\right) = 0$, we get $x = -\frac{\pi}{6} + \frac{\pi}{2} k$ for integers $k$.  In set-builder notation, our domain is  $\left\{ x : x \neq  -\frac{\pi}{6} + \frac{\pi}{2} k \, \text{for integers $k$} \right\}$.  To help visualize the domain,  we follow the old mantra `When in doubt, write it out!' We get 
+\[
+\left\{ x : x \neq  -\frac{\pi}{6}, \frac{2\pi}{6}, -\frac{4\pi}{6}, \frac{5\pi}{6}, -\frac{7\pi}{6}, \frac{8\pi}{6}, \ldots \right\},
+\]
+where we have kept the denominators $6$ throughout to help see the pattern.  Graphing the situation on a number line, we have
+
+\begin{center}
+\myincludegraphics[width=0.6\textwidth]{figures/IntroTrigGraphics/TrigEquIneq_new-4}
+\end{center}
+
+Proceeding as we did on page \pageref{extendedinterval} in Section \ref{circularfunctionsbeyond}, we let $x_{k}$ denote the $k$th number excluded from the domain and we have  $x_{k} = -\frac{\pi}{6} + \frac{\pi}{2} k = \frac{(3k-1)\pi}{6}$ for integers $k$.  The intervals which comprise the domain are of the form $\left(x_{k}, x_{k+1}  \right) = \left(\frac{(3k-1)\pi}{6}, \frac{(3k+2)\pi}{6} \right)$ as $k$ runs through the integers.  Using extended interval notation, we have that the domain is
+\[
+ \bigcup_{k = -\infty}^{\infty}  \left(\dfrac{(3k-1)\pi}{6}, \dfrac{(3k+2)\pi}{6} \right)
+\]
+We can check our answer by substituting in values of $k$ to see that it matches our diagram.
+
+
+\item  Since the domains of $\sin(x)$ and $\cos(x)$ are all real numbers, the only concern when finding the domain of  $f(x) =  \frac{\sin(x)}{2\cos(x) - 1}$ is division by zero so we set the denominator equal to zero and solve. From $2\cos(x) - 1 = 0$ we get $\cos(x) = \frac{1}{2}$ so that $x = \frac{\pi}{3} + 2\pi k$ or $x = \frac{5\pi}{3} + 2\pi k$ for integers $k$.  Using set-builder notation, the domain is $\left\{ x : x \neq \frac{\pi}{3} + 2\pi k \, \text{and} \, x \neq \frac{5\pi}{3} + 2\pi k \, \text{for integers $k$} \right\}$, or  $\left\{ x : x \neq \pm \frac{\pi}{3}, \pm \frac{5\pi}{3}, \pm \frac{7\pi}{3}, \pm \frac{11\pi}{3}, \ldots \right\}$, so we have
+
+\begin{center}
+\myincludegraphics[width=0.75\textwidth]{figures/IntroTrigGraphics/TrigEquIneq_new-5}
+\end{center}
+
+\drawexampleline
+
+Unlike the previous example, we have \textit{two} different families of points to consider, and we present two ways of dealing with this kind of situation.  One way is to generalize what we did in the previous example and use the formulas we found in our domain work to describe the intervals.  To that end, we let  $a_{k} = \frac{\pi}{3} + 2\pi k = \frac{(6k+1)\pi}{3}$ and  $b_{k} = \frac{5\pi}{3} + 2\pi k = \frac{(6k+5) \pi}{3}$ for integers $k$.  The goal now is to write the domain in terms of the $a$'s an $b$'s.  We find $a_{0} =  \frac{\pi}{3}$, $a_{1} =  \frac{7\pi}{3}$,  $a_{-1} =  -\frac{5\pi}{3}$, $a_{2} =  \frac{13\pi}{3}$, $a_{-2} =  -\frac{11\pi}{3}$, $b_{0} =  \frac{5\pi}{3}$,  $b_{1} =  \frac{11\pi}{3}$, $b_{-1} =  -\frac{\pi}{3}$,  $b_{2} =  \frac{17\pi}{3}$  and $b_{-2} =  -\frac{7\pi}{3}$.  Hence, in terms of the $a$'s and $b$'s, our domain is
+\[
+ \ldots  \left(a_{-2}, b_{-2}  \right) \cup \left(b_{-2}, a_{-1}  \right)\cup \left(a_{-1}, b_{-1}  \right)\cup \left(b_{-1}, a_{0}  \right)\cup \left(a_{0}, b_{0}  \right)\cup \left(b_{0}, a_{1}  \right)\cup \left(a_{1}, b_{1}  \right)\cup \dots 
+\]
+
+If we group these intervals in pairs, $ \left(a_{-2}, b_{-2}  \right) \cup \left(b_{-2}, a_{-1}  \right)$, $\left(a_{-1}, b_{-1}  \right)\cup \left(b_{-1}, a_{0}  \right)$, $\left(a_{0}, b_{0}  \right)\cup \left(b_{0}, a_{1}  \right)$ and so forth, we see a pattern emerge of the form  $\left(a_{k}, b_{k}  \right)\cup \left(b_{k}, a_{k+1}  \right)$ for integers $k$ so that our domain can be written as 
+
+\begin{multline*}
+ \bigcup_{k = -\infty}^{\infty} \left(a_{k}, b_{k}  \right)\cup \left(b_{k}, a_{k+1}  \right) = \\ \bigcup_{k = -\infty}^{\infty} \left(\frac{(6k+1)\pi}{3}, \frac{(6k+5) \pi}{3}  \right)\cup \left(\frac{(6k+5) \pi}{3}, \frac{(6k+7)\pi}{3}  \right)
+\end{multline*}
+
+A second approach to the problem exploits the periodic nature of $f$.  Since $\cos(x)$ and $\sin(x)$ have period $2\pi$, it's not too difficult to show the function $f$ repeats itself every $2\pi$ units. (This doesn't necessarily mean the period of $f$ is $2\pi$.  The tangent function is comprised of $\cos(x)$ and $\sin(x)$, but its period is half theirs.  The reader is invited to investigate the period of $f$.)  This means if we can find a formula for the domain on an interval of length $2\pi$, we can express the entire domain by translating our answer left and right on the $x$-axis by adding integer multiples of $2\pi$. One such interval that arises from our domain work is  $\left[\frac{\pi}{3}, \frac{7\pi}{3}\right]$. The portion of the domain here is  $\left(\frac{\pi}{3}, \frac{5\pi}{3}\right) \cup \left(\frac{5\pi}{3}, \frac{7\pi}{3}\right)$.  Adding integer multiples of $2\pi$, we get the family of intervals  $\left(\frac{\pi}{3} + 2\pi k, \frac{5\pi}{3} + 2\pi k \right) \cup \left(\frac{5\pi}{3} + 2\pi k, \frac{7\pi}{3} + 2\pi k\right)$ for integers $k$.  We leave it to the reader to show that getting common denominators leads to our previous answer.
+
+\enlargethispage{2\baselineskip}
+
+\item  To find the domain of $f(x) = \sqrt{1-\cot(x)}$, we first note that, due to the presence of the $\cot(x)$ term, $x \neq \pi k$ for integers $k$.  Next, we recall that for the square root to be defined, we need $1 - \cot(x) \geq 0$.  Unlike the inequalities we solved in Example \ref{TrigIneqEx1}, we are not restricted here to a given interval.  Our strategy is to solve this inequality over $(0,\pi)$  (the same interval which generates a fundamental cycle of cotangent) and then add integer multiples of the period, in this case, $\pi$.  We let $g(x) = 1 - \cot(x)$ and set about making a sign diagram for $g$ over the interval $(0,\pi)$ to find where $g(x) \geq 0$.  We note that $g$ is undefined for $x = \pi k$ for integers $k$, in particular, at the endpoints of our interval $x = 0$ and $x = \pi$. Next, we look for the zeros of $g$.  Solving $g(x) = 0$, we get $\cot(x) = 1$ or $x = \frac{\pi}{4} + \pi k$ for integers $k$ and only one of these, $x = \frac{\pi}{4}$, lies in $(0,\pi)$.   Choosing the test values $x = \frac{\pi}{6}$ and $x = \frac{\pi}{2}$, we get $g\left(\frac{\pi}{6}\right) = 1 - \sqrt{3}$, and $g\left(\frac{\pi}{2}\right) = 1$.  
+
+\begin{center}
+\myincludegraphics[width=0.35\textwidth]{figures/IntroTrigGraphics/TrigEquIneq_new-6}
+\end{center}
+
+We find $g(x) \geq 0$ on $\left[\frac{\pi}{4}, \pi \right)$.  Adding multiples of the period we get our solution to consist of the intervals  $\left[\frac{\pi}{4} + \pi k, \pi + \pi k  \right) = \left[\frac{(4k+1)\pi}{4}, (k+1)\pi \right)$.  Using extended interval notation, we express our final answer as
+
+\[\bigcup_{k = -\infty}^{\infty} \left[\dfrac{(4k+1)\pi}{4}, (k+1)\pi \right)\]
+
+
+
+\end{enumerate}
+}
+
+\pagebreak
+
+We close this section with an example which demonstrates how to solve equations and inequalities involving the inverse trigonometric functions.
+
+\medskip
+
+\example{ex_trigeglast}{Using inverse trigonometric functions}{  Solve the following equations and inequalities analytically.  Check your answers using a graphing utility.
+
+\begin{multicols}{2}
+\begin{enumerate}
+
+\item  $\arcsin(2x) = \frac{\pi}{3}$
+
+\item  $4\arccos(x)-3\pi = 0 $
+
+\item  $3\operatorname{arcsec}(2x-1) + \pi = 2 \pi$
+
+\item  $4\arctan^2(x)-3\pi \arctan(x)-\pi^2 = 0$
+
+\item  $\pi^2-4\arccos^{2}(x) < 0$
+
+\item  $4\operatorname{arccot}(3x) > \pi$
+
+\end{enumerate}
+\end{multicols}}
+{
+\begin{enumerate}
+
+\item  To solve $\arcsin(2x) = \frac{\pi}{3}$, we first note that $\frac{\pi}{3}$ is in the range of the arcsine function (so a solution exists!) Next, we exploit the inverse property of sine and arcsine from Theorem \ref{arccosinesinefunctionprops}.
+\begin{align*}
+\arcsin(2x) & =  \frac{\pi}{3}  \\
+\sin\left(\arcsin(2x)\right) & =  \sin\left(\frac{\pi}{3}\right) \\
+2x & =  \frac{\sqrt{3}}{2}  \tag*{Since $\sin(\arcsin(u)) = u$} \\
+x & =  \frac{\sqrt{3}}{4}
+\end{align*}
+Graphing $y = \arcsin(2x)$ and the horizontal line $y = \frac{\pi}{3}$ in Figure \ref{fig:trigeg4-1}, we see they intersect at $\frac{\sqrt{3}}{4} \approx 0.4430$.
+
+\mfigure[width=0.95\marginparwidth]{.6}{Solving $\arcsin(2x)=\frac{\pi}{3}$}{fig:trigeg4-1}{figures/IntroTrigGraphics/TrigEquIneq19}
+
+\item Our first step in solving $4\arccos(x)-3\pi = 0$ is to isolate the arccosine. Doing so, we get $\arccos(x) = \frac{3\pi}{4}$.  Since $\frac{3\pi}{4}$ is in the range of arccosine, we may apply Theorem \ref{arccosinesinefunctionprops}.
+\begin{align*}
+\arccos(x) & =  \frac{3\pi}{4} \\
+\cos\left(\arccos(x)\right) & =  \cos\left(\frac{3\pi}{4}\right) \\
+x & =  -\frac{\sqrt{2}}{2} \tag*{Since $\cos(\arccos(u)) = u$} \\ 
+\end{align*}
+Figure \ref{fig:trigeg4-2} confirms $y = 4\arccos(x) - 3\pi$ crosses $y = 0$ (the $x$-axis) at $-\frac{\sqrt{2}}{2} \approx -0.7071$.
+
+\mfigure[width=0.95\marginparwidth]{.4}{Solving $4\arccos(x)-3\pi=0$}{fig:trigeg4-2}{figures/IntroTrigGraphics/TrigEquIneq20}
+
+
+
+\item From $3 \, \operatorname{arcsec}(2x-1) + \pi = 2 \pi$, we get $\operatorname{arcsec}(2x-1) = \frac{\pi}{3}$.  As we saw in Section \ref{ArcTrig}, there are two possible ranges for the arcsecant function.  Fortunately, both ranges contain $\frac{\pi}{3}$.  Applying Theorem \ref{arcsecantcosecantfunctionprops1} / \ref{arcsecantcosecantfunctionprops2}, we get
+\begin{align*}
+\operatorname{arcsec}(2x-1)& =  \frac{\pi}{3}  \\
+ \sec(\operatorname{arcsec}(2x-1)) & =  \sec\left(\frac{\pi}{3}\right)  \\ 
+ 2x -1 & =  2  \tag*{Since $\sec(\operatorname{arcsec}(u)) = u$} \\
+    x & = \frac{3}{2}
+\end{align*}
+To check graphically, we need to graph $y=3 \, \operatorname{arcsec}(2x-1) + \pi$.  To do so, we make use of the identity $\operatorname{arcsec}(u) = \arccos\left(\frac{1}{u}\right)$ from Theorems \ref{arcsecantcosecantfunctionprops1} and \ref{arcsecantcosecantfunctionprops2}. Since we are checking for solutions where arcsecant is positive, we know $u = 2x-1 \geq 1$, and so the identity applies in both cases. We see in Figure \ref{fig:trigeg4-3} that the graph of $y=3 \arccos\left(\frac{1}{2x-1}\right) + \pi$ and the horizontal line $y = 2\pi$ intersect at $\frac{3}{2} = 1.5$.
+
+\mfigure[width=0.95\marginparwidth]{.8}{Solving $3\operatorname{arcsec}(2x-1)+\pi=2\pi$}{fig:trigeg4-3}{figures/IntroTrigGraphics/TrigEquIneq21}
+
+\item  With the presence of both $\arctan^{2}(x)$ ( $= (\arctan(x))^2$) and $\arctan(x)$, we substitute $u = \arctan(x)$.  The equation  $4\arctan^2(x)-3\pi \arctan(x)-\pi^2 = 0$ becomes $4u^2 -3\pi u - \pi^2 = 0$.  Factoring, (it's not as bad as it looks...  don't let the $\pi$ throw you!) we get $(4u+\pi)(u - \pi) = 0$, so $u = \arctan(x) = -\frac{\pi}{4}$ or $u = \arctan(x) = \pi$.  Since $-\frac{\pi}{4}$ is in the range of arctangent, but $\pi$ is not, we only get solutions from the first equation.  Using Theorem \ref{arctangentcotangentfunctionprops}, we get
+\begin{align*}
+\arctan(x) & =  -\frac{\pi}{4} \\
+\tan(\arctan(x)) & =  \tan\left(-\frac{\pi}{4}\right) \\
+x & = -1  \tag*{Since $\tan(\arctan(u)) = u$.}
+\end{align*}
+
+Plotting in GeoGebra verifies our result: see Figure \ref{fig:trigeg4-4}.
+
+\mfigure[width=0.95\marginparwidth]{.6}{Solving $4\arctan^2(x)-3\pi\arctan(x)-\pi^2=0$}{fig:trigeg4-4}{figures/IntroTrigGraphics/TrigEquIneq22}
+
+\drawexampleline
+
+\item Since the inverse trigonometric functions are continuous on their domains, we can solve inequalities featuring these functions using sign diagrams. Since all of the nonzero terms of  $\pi^2-4\arccos^{2}(x) < 0$ are on one side of the inequality, we let $f(x) = \pi^2-4\arccos^{2}(x)$ and note the domain of $f$ is limited by the $\arccos(x)$ to $[-1,1]$.  Next, we find the zeros of $f$ by setting $f(x) = \pi^2-4\arccos^{2}(x) = 0$.  We get $\arccos(x) = \pm \frac{\pi}{2}$, and since the range of arccosine is $[0,\pi]$, we focus our attention on $\arccos(x) = \frac{\pi}{2}$.  Using Theorem \ref{arccosinesinefunctionprops}, we get $x = \cos\left(\frac{\pi}{2}\right) = 0$ as our only zero.  Hence, we have two test intervals, $[-1,0)$ and $(0,1]$.  Choosing test values $x = \pm 1$, we get $f(-1) = -3\pi^2 < 0$ and $f(1) = \pi^2 > 0$.  Since we are looking for where $f(x) = \pi^2-4\arccos^{2}(x) < 0$, our answer is $[-1,0)$.  The plot from GeoGebra in Figure \ref{fig:trigeg4-5} confirms that for these values of $x$, the graph of $y = \pi^2-4\arccos^{2}(x)$ is below $y = 0$ (the $x$-axis.)
+
+
+\mtable{.33}{Solving $\pi^2-4\arccos^2(x)<0$}{fig:trigeg4-5}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.8\marginparwidth]{figures/IntroTrigGraphics/TrigEquIneq_new-7}\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/IntroTrigGraphics/TrigEquIneq23}
+\end{tabular}
+}
+
+
+
+\item   To begin, we rewrite $4 \, \operatorname{arccot}(3x) > \pi$ as $4 \, \operatorname{arccot}(3x) -  \pi > 0$.  We let $f(x) = 4 \, \operatorname{arccot}(3x) -  \pi$, and note the domain of $f$ is all real numbers, $(-\infty, \infty)$.  To find the zeros of $f$, we set $f(x) = 4 \, \operatorname{arccot}(3x) -  \pi = 0$ and solve.  We get $\operatorname{arccot}(3x) = \frac{\pi}{4}$, and since $\frac{\pi}{4}$ is in the range of arccotangent, we may apply Theorem \ref{arctangentcotangentfunctionprops} and solve 
+\begin{align*}
+\operatorname{arccot}(3x) & =  \frac{\pi}{4} \\
+\cot(\operatorname{arccot}(3x)) & = \cot\left(\frac{\pi}{4}\right) \\
+3x & =  1  \tag*{Since $\cot(\operatorname{arccot}(u)) = u$.} \\
+x & = \frac{1}{3}
+\end{align*}
+
+Next, we make a sign diagram for $f$.  Since the domain of $f$ is all real numbers, and there is only one zero of $f$, $x = \frac{1}{3}$, we have two test intervals, $\left(-\infty, \frac{1}{3}\right)$ and  $\left(\frac{1}{3}, \infty \right)$. Ideally, we wish to find test values $x$ in these intervals so that $\operatorname{arccot}(4x)$ corresponds to one of our oft-used `common' angles.  After a bit of computation, (set $3x$ equal to the cotangents of the `common angles' and choose accordingly) we choose $x=0$ for $x < \frac{1}{3}$ and for $x > \frac{1}{3}$, we choose $x = \frac{\sqrt{3}}{3}$.  We find $f(0) = \pi > 0$ and $f\left(\frac{\sqrt{3}}{3}\right) = -\frac{\pi}{3} < 0$.  Since we are looking for where $f(x) = 4 \, \operatorname{arccot}(3x) -  \pi > 0$, we get our answer $\left(-\infty, \frac{1}{3}\right)$.  To check graphically, we use the technique in number \ref{arccotangentcalc} of Example \ref{arcstuffoncalc} in Section \ref{ArcTrig} to graph $y = 4 \, \operatorname{arccot}(3x)$  and we see it is above the horizontal line $y = \pi$ on $\left(-\infty, \frac{1}{3}\right) = \left(-\infty, 0.\overline{3}\right)$: see Figure \ref{fig:trigeg4-6}.
+
+\mtable{.75}{Solving $4\operatorname{arccot}(3x)>\pi$}{fig:trigeg4-6}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.8\marginparwidth]{figures/IntroTrigGraphics/TrigEquIneq_new-8}\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/IntroTrigGraphics/TrigEquIneq24}
+\end{tabular}
+}
+
+
+\end{enumerate}
+}
+ 
+
+\printexercises{exercises/07_07_exercises}

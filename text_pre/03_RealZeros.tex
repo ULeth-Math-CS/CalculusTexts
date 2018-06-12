@@ -1,0 +1,613 @@
+\section{Real Zeros of Polynomials}
+\label{RealZeros}
+
+In Section \ref{Polydivision}, we found that we can use \ifthenelse{\boolean{synthetic}}{synthetic}{long} division to determine if a given real number is a zero of a polynomial function.  This section presents results which will help us determine good candidates to test using \ifthenelse{\boolean{synthetic}}{synthetic}{long} division.  
+%There are two approaches to the topic of finding the real zeros of a polynomial.  The first approach (which is gaining popularity) is to use a little bit of Mathematics followed by a good use of technology like graphing calculators.  The second approach (for purists) makes good use of mathematical machinery (theorems) only.  For completeness, we include the two approaches but in separate subsections. 
+Our ability to find zeros of a polynomial depends on a number of factors, including the degree of the polynomial (by now, you should know exactly what to do if handed a linear or quadratic polynomial!) and whether or not we have access to technology. 
+\ifthenelse{\boolean{colour}}{Whatever approach we are using, when searching for zeros, it helps to know where to look. The following theorem by the famous mathematician \href{http://en.wikipedia.org/wiki/Cauchy}{\underline{Augustin Cauchy}}, gives us an interval on which all of the real zeros of a polynomial can be found.
+
+\smallskip
+
+\theorem{CauchysBound}{Cauchy's Bound}{\index{Cauchy's Bound}
+Suppose $f(x) = a_{n} x^{n} + a_{n-1}x^{n-1} + \ldots + a_{1} x + a_{0}$ is a polynomial of degree $n$ with $n \geq 1$.  Let $M$ be the largest of the numbers: $\frac{|a_{0}|}{|a_{n}|}$, $\frac{|a_{1}|}{|a_{n}|}$, \ldots, $\frac{|a_{n-1}|}{|a_{n}|}$.  Then all the real zeros of $f$ lie in in the interval $[-(M+1),M+1]$.}
+
+\smallskip
+
+\mnote{.57}{
+The proof of Theorem \ref{CauchysBound} is not easily explained within the confines of this text.  Fortunately there is no shortage of material available online on this topic for anyone who is interested.}
+
+Like many of the results in this section, Cauchy's Bound is best understood with an example.
+
+\medskip
+
+\example{CBex}{Using Cauchy's Bound}{
+ Let $f(x) = 2x^4+4x^3-x^2-6x-3$.  Determine an interval which contains all of the real zeros of $f$.
+}
+{To find the $M$ stated in Cauchy's Bound, we take the absolute value of the leading coefficient, in this case $|2| = 2$ and divide it into the largest (in absolute value) of the remaining coefficients, in this case $|-6| = 6$.   This yields $M=3$ so it is guaranteed that all of the real zeros of $f$ lie in the interval $[-4,4]$.}
+
+\medskip
+
+}{}
+
+
+\ifthenelse{\boolean{colour}}{
+Whereas the previous result tells us \textit{where} we can find the real zeros of a polynomial, the next theorem gives us a list of \textit{possible} real zeros.}{If we are searching for zeros by hand for polynomials of degree three or higher, we can only realistically hope to find rational roots. The following theorem tells us which rational numbers are possibilities.}
+
+\smallskip
+
+\theorem{RZT}{Rational Zeros Theorem}{\index{Rational Zeros Theorem}
+Suppose $f(x) = a_{n} x^{n} + a_{n-1}x^{n-1} + \ldots + a_{1} x + a_{0}$ is a polynomial of degree $n$ with $n \geq 1$, and $a_{0}$, $a_{1}$, \ldots $a_{n}$ are integers.  If $r$ is a rational zero of $f$, then $r$ is of the form $\pm \frac{p}{q}$, where $p$ is a factor of the constant term $a_{0}$, and $q$ is a factor of the leading coefficient $a_{n}$.  
+}
+
+\smallskip
+
+The Rational Zeros Theorem gives us a list of numbers to try in our \ifthenelse{\boolean{synthetic}}{synthetic}{long} division and that is a lot nicer than simply guessing.  If none of the numbers in the list are zeros, then either the polynomial has no real zeros at all, or all of the real zeros are irrational numbers.  To see why the Rational Zeros Theorem works, suppose $c$ is a zero of $f$ and $c = \frac{p}{q}$ in lowest terms.  This means $p$ and $q$ have no common factors.  Since $f(c) = 0$, we have 
+\[
+a_{n} \left(\frac{p}{q}\right)^{n} + a_{n-1}\left(\frac{p}{q}\right)^{n-1} + \ldots + a_{1} \left(\frac{p}{q}\right) + a_{0} = 0.
+\]  
+Multiplying both sides of this equation by $q^n$, we clear the denominators to get 
+\[
+a_{n}p^{n} + a_{n-1}p^{n-1}q + \ldots + a_{1}p q^{n-1} + a_{0}q^n = 0
+\]  
+Rearranging this equation, we get  
+\[
+a_{n}p^{n} = -a_{n-1}p^{n-1}q - \ldots - a_{1}p q^{n-1} -a_{0}q^n
+\] 
+Now, the left hand side is an integer multiple of $p$, and the right hand side is an integer multiple of $q$. (Can you see why?)  This means $a_{n}p^{n}$ is both a multiple of $p$ and a multiple of $q$.  Since $p$ and $q$ have no common factors, $a_{n}$ must be a multiple of $q$.  If we rearrange the equation 
+\[
+a_{n}p^{n} + a_{n-1}p^{n-1}q + \ldots + a_{1}p q^{n-1} + a_{0}q^n = 0
+\] 
+as 
+\[
+a_{0}q^n = -a_{n}p^{n} - a_{n-1}p^{n-1}q - \ldots - a_{1}p q^{n-1}
+\] 
+we can play the same game and conclude $a_{0}$ is a multiple of $p$, and we have the result.
+
+\medskip
+
+\example{RZTex}{Finding rational zeros}{  Let $f(x) = 2x^4+4x^3-x^2-6x-3$. Use the Rational Zeros Theorem to list all of the possible rational zeros of $f$.}
+{To generate a complete list of rational zeros, we need to take each of the factors of constant term, $a_{0} = -3$, and divide them by each of the factors of the leading coefficient $a_{4} = 2$.  The factors of $-3$ are $\pm \, 1$ and $\pm \, 3$.  Since the Rational Zeros Theorem tacks on a $\pm$ anyway, for the moment, we consider only the positive factors $1$ and $3$.  The factors of $2$ are  $1$ and $2$, so the Rational Zeros Theorem gives the list $\left\{\pm \, \frac{1}{1}, \pm \, \frac{1}{2},  \pm \, \frac{3}{1}, \pm \, \frac{3}{2}\right\}$ or $\left\{\pm \, \frac{1}{2}, \pm \, 1, \pm \, \frac{3}{2}, \pm \, 3\right\}$. }
+
+\medskip
+
+%Our discussion now diverges between those who wish to use technology and those who do not.  
+
+
+%\subsection{For Those Wishing to use Technology}
+
+\ifthenelse{\boolean{colour}}{
+At this stage, we know not only the interval in which all of the zeros of $f(x) = 2x^4+4x^3-x^2-6x-3$ are located, but we also know some potential candidates.  If we have access to software or a graphing calculator, we can use it to help us determine all of the real zeros of $f$, as illustrated in the next example.}{Example \ref{RZTex} gave us a list of possible \textit{rational} zeros for the function $f(x)=2x^4+4x^3-x^2-6x-3$, but it doesn't rule out the possibility of irrational zeros. One way to proceed at this point is to plot $f(x)$ using software or a graphing calculator, as illustrated in the next example.}
+
+\medskip
+
+\example{ex_rzerotech}{Using technology to find the zeros of a polynomial}{Let $f(x) = 2x^4+4x^3-x^2-6x-3$.  
+
+\begin{enumerate}
+
+\item  Graph $y=f(x)$ on the calculator or computer\ifthenelse{\boolean{colour}}{ using the interval obtained in Example \ref{CBex} as a guide.}{.}
+
+\item  Use the graph to shorten the list of possible rational zeros obtained in Example \ref{RZTex}.
+
+\item  Use \ifthenelse{\boolean{synthetic}}{synthetic}{long} division to find the real zeros of $f$, and state their multiplicities.
+
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item  \ifthenelse{\boolean{colour}}{In Example \ref{CBex}, we determined all of the real zeros of $f$ lie in the interval $[-4, 4]$.  We plot $f(x)$ using GeoGebra, and zoom in to show the portion of the graph where $-4\leq x\leq 4$: see Figure \ref{fig:realzero1}.}{We plot $f(x)$ using GeoGebra, and zoom out until it looks like all the main features of the graph are visible: see Figure \ref{fig:realzero1}.}
+
+\mfigure[width=0.95\marginparwidth]{.2}{The graph $y=f(x)=2x^4+4x^3-x^2-6x-3$}{fig:realzero1}{figures/PolynomialsGraphics/RealZero1}
+
+
+\item  In Example \ref{RZTex}, we learned that any rational zero of $f$ must be in the list $\left\{\pm \, \frac{1}{2}, \pm \, 1, \pm \, \frac{3}{2}, \pm \, 3\right\}$.  From the graph, it looks as if we can rule out any of the positive rational zeros, since the graph seems to cross the $x$-axis at a value just a little greater than $1$. On the negative side, $-1$ looks good, so we try that for our \ifthenelse{\boolean{synthetic}}{synthetic}{long} division.
+
+\ifthenelse{\boolean{synthetic}}{
+\[\begin{array}{rrrrrr}
+
+ -1 \, \, \vline& 2 & 4 & -1  & -6 & -3 \\
+
+  & \downarrow     &  -2  &  -2  & 3 & 3\\ \hhline{~-----} 
+  
+  &  2            &   2  & -3 & -3 &  \fbox{$0$}  \\
+
+\end{array}\]
+}
+{
+
+\setlength\arraycolsep{0.1pt}
+\setlength\extrarowheight{2pt}
+
+\[
+\begin{array}{ccccccccccccc}
+
+ & & & & & &2x^3 & +& 2x^2 & - &3x  & - & 3 \\ \hhline{~~~~|---------}
+
+   & x & + & 1 \, \vline& 2x^4 & + & 4x^3 & - & x^2 & - & 6x & - & 3 \\
+
+  &  &  &  -& \left(2x^4 \right.& + & \left.2x^3\right) &  &  &  &  &    \\ \hhline{~~~~---~~~~~~} 
+  &  &  &   &    &   &  2x^3    & - & x^2 &  &  &  &  \\ 
+  &  &  &   &    & - &  \left(2x^3\right. & +  & \left. 2x^2\right) & &  &  &     \\ 
+\hhline{~~~~~~---~~~~} 
+  &  &  &   &    &   &                    &  - & 3x^2 & - & 6x & & \\
+  &  &  &   &    &   &                  - &\left(-\right. & 3x^2 & - & \left.3x\right) & & \\
+ \hhline{~~~~~~~----~~}   
+  &  &  &   &    &   &  &  &  & - & 3x & - &3 \\
+  &  &  &   &    &   &  &  & - &\left(-\right. & 3x & - & \left.3\right)\\
+ \hhline{~~~~~~~~~----}
+  &  &  &   &    &   &  &  &   &               &    &   & 0 
+
+ \end{array}\]
+ 
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+
+}
+We have a winner!  Remembering that $f$ was a fourth degree polynomial, we know that our quotient is a third degree polynomial.  If we can do one more successful division, we will have knocked the quotient down to a quadratic, and, if all else fails, we can use the quadratic formula to find the last two zeros.  Since there seems to be no other rational zeros to try, we continue with $-1$.  Also, the shape of the crossing at $x = -1$ leads us to wonder if the zero $x = -1$ has multiplicity 3.
+
+\ifthenelse{\boolean{synthetic}}{
+
+\[\begin{array}{rrrrrr}
+ -1 \, \, \vline& 2 & 4 & -1  & -6 & -3 \\
+
+  & \downarrow     &  -2  &  -2  & 3 & 3\\ \hhline{~-----} 
+  
+  -1 \, \, \vline&  2 &   2  & -3 & -3 &  \fbox{$0$}  \\
+    
+               & \downarrow &  -2  &  0  & 3 &\\ \hhline{~----} 
+ 
+   & 2  &   0  & -3& \fbox{0} &   \\
+  
+        
+
+\end{array}\]
+
+}
+{
+
+\setlength\arraycolsep{0.1pt}
+\setlength\extrarowheight{2pt}
+
+\[ \begin{array}{cccccccccc}
+
+& & & & & & & 2x^2 & - & 3 \\ \hhline{~~~|-------}
+
+x & + & 1 \, \vline& 2x^3 & + & 2x^2 & - & 3x & - & 3\\
+
+ &  &  -& \left(2x^3 \right. & + & \left.  2x^2\right) &  &  &  &  \\ \hhline{~~~---~~~~} 
+ &  &  &   &   & 0 & - & 3x  & - & 3 \\ 
+ &  &  &   &   & - & \left(-\right. & 3x & - & \left.3\right) \\  \hhline{~~~~~~~---} 
+ &   &  &  &  &  &  &  &  & 0
+ 
+\end{array}\]
+
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+
+}
+Success!  Our quotient polynomial is now $2x^2 - 3$.  Setting this to zero gives $2x^2 - 3 = 0$, or $x^2 = \frac{3}{2}$, which gives us $x = \pm \, \frac{\sqrt{6}}{2}$.  Concerning multiplicities, based on our division, we have that $-1$ has a multiplicity of at least $2$. The Factor Theorem tells us our remaining zeros, $\pm \, \frac{\sqrt{6}}{2}$, each have multiplicity at least $1$.  However, Theorem \ref{nzerosreal} tells us $f$ can have at most $4$ real zeros, counting multiplicity, and so we conclude that $-1$ is of multiplicity exactly $2$ and $\pm \, \frac{\sqrt{6}}{2}$ each has multiplicity $1$.  (Thus, we were \underline{wrong} to think that $-1$ had multiplicity $3$.) 
+
+\end{enumerate}
+}
+
+\medskip
+
+It is interesting to note that we could greatly improve on the graph of $y=f(x)$ in the previous example given to us by GeoGebra. For instance, from our determination of the zeros of $f$ and their multiplicities, we know the graph crosses at $x=-\frac{\sqrt{6}}{2} \approx -1.22$ then turns back upwards to touch the $x-$axis at $x=-1$. This tells us that, despite what the software showed us the first time, there is a relative maximum occurring at $x = -1$ and not a `flattened crossing' as we originally believed.  After zooming in and rescaling the coordinate axes, we see not only the relative maximum but also a relative minimum (this is an example of what is called `hidden behaviour.') just to the left of $x = -1$ which shows us, once again, that Mathematics enhances the technology, instead of vice-versa: see Figure \ref{fig:realzero2}.
+
+\ifthenelse{\boolean{synthetic}}{
+\mnote{.15}{The $y$-axis isn't visible in Figure \ref{fig:realzero2}, so it's worth pointing out that in order to get a good view of the two local extrema, we had to shrink the $y$ scale significantly: the $y$-value of the local minimum at $x=-\sqrt{6}/2$ is just shy of $-0.01$.}
+
+\mfigure[width=0.95\marginparwidth]{.3}{Zooming in on the repeated zero in Example \ref{ex_rzerotech}}{fig:realzero2}{figures/PolynomialsGraphics/RealZero2}}{}
+
+Our next example shows how even a mild-mannered polynomial can cause problems.
+
+
+\ifthenelse{\boolean{synthetic}}{}
+{\mnote{.65}{The $y$-axis isn't visible in Figure \ref{fig:realzero2}, so it's worth pointing out that in order to get a good view of the two local extrema, we had to shrink the $y$ scale significantly: the $y$-value of the local minimum at $x=-\sqrt{6}/2$ is just shy of $-0.01$.}
+
+\mfigure[width=0.95\marginparwidth]{.8}{Zooming in on the repeated zero in Example \ref{ex_rzerotech}}{fig:realzero2}{figures/PolynomialsGraphics/RealZero2}}
+
+\medskip
+
+\example{usubex}{Factoring using a $u$-substitution}{
+Let $f(x) = x^4 + x^2 - 12$.
+
+\begin{enumerate}
+
+\ifthenelse{\boolean{colour}}{\item  Use Cauchy's Bound to determine an interval in which all of the real zeros of $f$ lie.}{}
+
+\item  Use the Rational Zeros Theorem to determine a list of possible rational zeros of $f$.
+
+\item  Graph $y=f(x)$ using your graphing calculator.
+
+\item  Find all of the real zeros of $f$ and their multiplicities.
+
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\ifthenelse{\boolean{colour}}{\item  Applying Cauchy's Bound, we find $M = 12$, so all of the real zeros lie in the interval $[-13,13]$.}{}
+
+\item  Applying the Rational Zeros Theorem with constant term $a_{0} = -12$ and leading coefficient $a_{4} = 1$, we get the list $\{\pm \, 1$, $\pm \, 2$, $\pm \, 3$, $\pm \, 4$, $\pm \, 6$, $\pm \, 12\}$.
+
+\item  Graphing $y=f(x)$ on the interval $[-13,13]$ produces the graph in Figure \ref{fig:realzero3} (a). Zooming in a bit gives the graph (b).  Based on the graph, none of our rational zeros will work. (Do you see why not?)
+
+\ifthenelse{\boolean{synthetic}}{
+\mtable{.6}{Two views of the graph\\ $y=f(x)=x^4+x^2-12$ in Example \ref{usubex}}{fig:realzero3}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.95\marginparwidth]{figures/PolynomialsGraphics/RealZero3}\\
+(a)\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/PolynomialsGraphics/RealZero4}\\
+(b)
+\end{tabular}}}
+{
+\mtable{.3}{Two views of the graph\\ $y=f(x)=x^4+x^2-12$ in Example \ref{usubex}}{fig:realzero3}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.95\marginparwidth]{figures/PolynomialsGraphics/RealZero3}\\
+(a)\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/PolynomialsGraphics/RealZero4}\\
+(b)
+\end{tabular}}
+}
+
+\item  From the graph, we know $f$ has two real zeros, one positive, and one negative.  Our only hope at this point is to try and find the zeros of $f$ by setting $f(x)=x^4+x^2-12=0$ and solving.  If we stare at this equation long enough, we may recognize it as a `quadratic in disguise' or `quadratic in form'.   In other words, we have three terms: $x^4$, $x^2$ and $12$, and the exponent on the first term, $x^4$, is exactly twice that of the second term, $x^2$.  We may rewrite this as $\left(x^2\right)^2 + \left(x^2\right) - 12 = 0$.  To better see the forest for the trees, we momentarily replace $x^2$ with the variable $u$.  In terms of $u$, our equation becomes $u^2 + u - 12 = 0$, which we can readily factor as $(u+4)(u-3) = 0$.  In terms of $x$, this means $x^4+x^2-12= \left(x^2-3\right) \left(x^2 + 4 \right)=0$. We get $x^2 = 3$, which gives us $x = \pm \sqrt{3}$, or $x^2=-4$, which admits no real solutions.  Since $\sqrt{3} \approx 1.73$, the two zeros match what we expected from the graph.  In terms of multiplicity, the Factor Theorem guarantees $\left(x - \sqrt{3}\right)$ and $\left(x + \sqrt{3}\right)$ are factors of $f(x)$.  Since $f(x)$ can be factored as $f(x) = \left(x^2-3\right) \left(x^2 + 4 \right)$, and $x^2 + 4$ has no real zeros, the quantities $\left(x - \sqrt{3}\right)$ and $\left(x + \sqrt{3}\right)$ must both be factors of $x^2-3$.  According to Theorem \ref{nzerosreal}, $x^2-3$ can have at most $2$ zeros, counting multiplicity, hence each of $\pm \sqrt{3}$ is a zero of $f$ of multiplicity $1$. 
+
+\end{enumerate}
+}
+
+\medskip
+
+The technique used to factor $f(x)$ in Example \ref{usubex} is called \index{$u$-substitution} \sword{$u$-substitution}.   In general, substitution can help us identify a `quadratic in disguise' provided that there are exactly three terms and the exponent of the first term is exactly twice that of the second.  It is entirely possible that a polynomial has no real roots at all, or worse, it has real roots but none of the techniques discussed in this section can help us find them exactly.  In the latter case, we are forced to approximate, which in this subsection means we use the `Zero' command on the graphing calculator.  (In GeoGebra, there is a `root' command available, or you can simply use the Intersect tool to plot the points where the graph intersects the $x$-axis.)
+
+
+%\subsection{For Those Wishing NOT to use Technology}
+
+%Suppose now that we wish to find the zeros of $f(x) = 2x^4+4x^3-x^2-6x-3$ \textit{without} using the calculator.  In this subsection, we present some more advanced mathematical tools (theorems) to help us.  Our first result is due to \href{http://en.wikipedia.org/wiki/Descartes}{\underline{Ren\'{e} Descartes}}.
+
+
+%\smallskip
+
+%\theorem{DRS}{Descartes' Rule of Signs}{\index{Descartes' Rule of Signs}
+%Suppose $f(x)$ is the formula for a polynomial function written with descending powers of $x$.
+
+%\begin{itemize}
+
+%\item If $P$ denotes the number of variations of sign in the formula for $f(x)$, then the number of positive real zeros (counting multiplicity) is one of the numbers \{$P$, $P-2$, $P-4$, \ldots \}.
+
+%\item If $N$ denotes the number of variations of sign in the formula for $f(-x)$, then the number of negative real zeros (counting multiplicity) is one of the numbers \{$N$, $N-2$, $N-4$, \dots\}.
+
+%\end{itemize}
+%}
+
+%\smallskip
+
+%A few remarks are in order. First, to use Descartes' Rule of Signs, we need to understand what is meant by a \index{polynomial function ! variations in sign}\index{variations in sign}`\sword{variation in sign}' of a polynomial function.  Consider $f(x) = 2x^4+4x^3-x^2-6x-3$.  If we focus on only the \textit{signs} of the coefficients, we start with a $(+)$, followed by another $(+)$, then switch to $(-)$, and stay $(-)$ for the remaining two coefficients.  Since the signs of the coefficients switched \textit{once} as we read from left to right, we say that $f(x)$ has \textit{one} variation in sign.  When we speak of the variations in sign of a polynomial function $f$ we assume the formula for $f(x)$ is written with descending powers of $x$, as in Definition \ref{polynomialfunction}, and concern ourselves only with the nonzero coefficients.  Second, unlike the Rational Zeros Theorem, Descartes' Rule of Signs gives us an estimate to the \textit{number} of positive and negative real zeros, not the actual \textit{value} of the zeros. Lastly, Descartes' Rule of Signs counts multiplicities.  This means that, for example, if one of the zeros has multiplicity $2$, Descsartes' Rule of Signs would count this as \textit{two} zeros.  Lastly, note that the number of positive or negative real zeros always starts with the number of sign changes and decreases by an even number.  For example, if $f(x)$ has $7$ sign changes, then, counting multplicities, $f$ has either $7$, $5$, $3$ or $1$ positive real zero.  This implies that the graph of $y=f(x)$ crosses the positive $x$-axis at least once.  If $f(-x)$ results in $4$ sign changes, then, counting multiplicities, $f$ has $4$, $2$ or $0$ negative real zeros;  hence, the graph of $y=f(x)$ may not cross the negative $x$-axis at all.  The proof of Descartes' Rule of Signs is a bit technical, and can be found \href{http://www.cut-the-knot.org/fta/ROS2.shtml}{\underline{here}}. 
+
+%\example{DRSex}{Using Descartes' Rule of Signs}{
+%Let $f(x) = 2x^4+4x^3-x^2-6x-3$.  Use Descartes' Rule of Signs to determine the possible number and location of the real zeros of $f$.
+%}
+%{As noted above, the variations of sign of $f(x)$ is $1$. This means, counting multiplicities, $f$ has exactly $1$ positive real zero.  Since $f(-x)=2(-x)^4+4(-x)^3-(-x)^2-6(-x)-3=2x^4-4x^3-x^2+6x-3$ has $3$ variations in sign, $f$ has either $3$ negative real zeros or $1$ negative real zero, counting multiplicities.
+%}
+
+\ifthenelse{\boolean{colour}}{
+\ifthenelse{\boolean{synthetic}}{
+Cauchy's Bound gives us a general bound on the zeros of a polynomial function.  Our next result helps us determine bounds on the real zeros of a polynomial as we synthetically divide which are often sharper (that is, better, or more accurate) bounds than Cauchy's Bound.   
+
+\smallskip
+
+\theorem{ULbounds}{Upper and Lower Bounds}{
+Suppose $f$ is a polynomial of degree $n \geq 1$. \index{Upper and Lower Bounds Theorem}\index{polynomial function ! zero ! upper bound}\index{polynomial function ! zero ! lower bound}\index{zero ! upper and lower bounds}
+
+\begin{itemize}
+
+\item  If $c > 0$ is synthetically divided into $f$ and all of the numbers in the final line of the division tableau have the same signs, then $c$ is an upper bound for the real zeros of $f$.  That is, there are no real zeros greater than $c$.
+
+\item  If $c < 0$ is synthetically divided into $f$ and the numbers in the final line of the division tableau alternate signs, then $c$ is a lower bound for the real zeros of $f$.  That is, there are no real zeros less than $c$.
+
+\textbf{NOTE:}  If the number $0$ occurs in the final line of the division tableau in either of the above cases, it can be treated as $(+)$ or $(-)$ as needed.
+
+\end{itemize}
+}
+
+
+\medskip
+
+The Upper and Lower Bounds Theorem works because of Theorem \ref{polydiv}.  For the upper bound part of the theorem, suppose $c>0$ is divided into $f$ and the resulting line in the division tableau contains, for example, all nonnegative numbers.  This means $f(x) = (x-c) q(x) + r$, where the coefficients of the quotient polynomial and the remainder are nonnegative.  (Note that the leading coefficient of $q$ is the same as $f$ so $q(x)$ is not the zero polynomial.)  If $b > c$, then $f(b) = (b-c) q(b) + r$, where $(b-c)$ and  $q(b)$ are both positive and $r \geq 0$.  Hence $f(b) > 0$ which shows $b$ cannot be a zero of $f$.  Thus no real number $b > c$ can be a zero of $f$, as required.  A similar argument proves $f(b) < 0$ if all of the numbers in the final line of the synthetic division tableau are non-positive.  To prove the lower bound part of the theorem, we note that a lower bound for the negative real zeros of $f(x)$ is an upper bound for the positive real zeros of $f(-x)$.  Applying the upper bound portion to $f(-x)$ gives the result.  (Do you see where the alternating signs come in?) With the additional mathematical machinery of Descartes' Rule of Signs and the Upper and Lower Bounds Theorem, we can find the real zeros of $f(x) = 2x^4+4x^3-x^2-6x-3$ without the use of technology.}{}}{}
+
+Let us now return to the function $f(x) = 2x^4+4x^3-x^2-6x-3$ from Example \ref{ex_rzerotech}, and attempt to find its zeros without the aid of technology.
+
+\medskip
+
+\example{ex_zeronotech}{Finding real zeros by hand}{
+Let $f(x) = 2x^4+4x^3-x^2-6x-3$.
+
+\begin{enumerate}
+
+\item  Find all of the real zeros of $f$ and their multiplicities.
+
+\item Sketch the graph of $y=f(x)$.
+
+\end{enumerate}  
+}
+{
+\begin{enumerate}
+
+\item We know  \ifthenelse{\boolean{colour}}{ from Cauchy's Bound that all of the real zeros lie in the interval $[-4,4]$ and }{}that our possible rational zeros are $\pm \, \frac{1}{2}$, $\pm \, 1$, $\pm \, \frac{3}{2}$ and $\pm \, 3$.  
+%Descartes' Rule of Signs guarantees us at least one negative real zero and exactly one positive real zero, counting multiplicity.  
+We try our positive rational zeros, starting with the smallest, $\frac{1}{2}$.  \ifthenelse{\boolean{synthetic}}{Since the remainder isn't zero, we know $\frac{1}{2}$ isn't a zero.  Sadly, the final line in the division tableau has both positive and negative numbers, so $\frac{1}{2}$ is not an upper bound.  The only information we get from this division is courtesy of the Remainder Theorem which tells us $f\left(\frac{1}{2}\right) =  -\frac{45}{8}$ so the point $\left(\frac{1}{2}, -\frac{45}{8}\right)$ is on the graph of $f$.  We continue to our next possible zero, $1$.  As before, the only information we can glean from this is that $(1,-4)$ is on the graph of $f$.  When we try our next possible zero, $\frac{3}{2}$, we get that it is not a zero,\ifthenelse{\boolean{colour}}{ and we also see that it is an upper bound on the zeros of $f$, since all of the numbers in the final line of the division tableau are positive.  This means there is no point trying our last possible rational zero, $3$.}{{ and the same is true of 3, our last possible positive rational zero.}}}{Plugging in $x=\frac{1}{2}$, we get $f\left(\frac{1}{2}\right) = -\frac{45}{8}\neq 0$, so we know that $x=\frac{1}{2}$ is not a zero of $f$. Trying the next possible rational zero, we find $f(1)=-4\neq 0$, so $x=1$ is not a zero of $f$ either. We can similarly check that $f\left(\frac{3}{2}\right)  = \frac{75}{8}\neq 0$ and $f(3) = 240$, so that none of the possible rational zeros are, in fact zeros.} %Descartes' Rule of Signs guaranteed us a positive real zero, and at this point we have shown this zero is irrational. 
+Although we did not find any positive rational zeros, we can conclude that there must be a positive irrational zero: we found that $f(1) = -4 < 0$ and $f\left(\frac{3}{2}\right) = \frac{75}{8} > 0$, so the Intermediate Value Theorem, Theorem \ref{IVT}, tells us the zero lies between $1$ and $\frac{3}{2}$.   
+
+\smallskip
+
+\ifthenelse{\boolean{synthetic}}{
+\drawexampleline
+
+\begin{tabular}{c}
+
+$\begin{array}{rrrrrr}
+
+ \frac{1}{2} \, \, \vline& 2 & 4 & -1  & -6 & -3 \\
+
+  & \downarrow     &  1  &  \frac{5}{2}  & \frac{3}{4} & -\frac{21}{8} \\ [4pt] \hhline{~-----}
+  
+  &  2            &   5  &  \frac{3}{2} & -\frac{21}{4} &  \fbox{$-\frac{45}{8}$}  \\
+
+\end{array}$ \\     
+
+$\begin{array}{rrrrrr}
+
+1 \, \, \vline& 2 & 4 & -1  & -6 & -3 \\
+
+  & \downarrow     &  2 &  6  & 5 & -1 \\ [4pt] \hhline{~-----}
+  
+  &  2            &   6  &  5 & -1 &  \fbox{$-4$}  \\
+
+\end{array}$  \\
+
+             
+$\begin{array}{rrrrrr}
+
+\frac{3}{2} \, \, \vline& 2 & 4 & -1  & -6 & -3 \\
+
+  & \downarrow     &  3 &  \frac{21}{2}  & \frac{57}{4} & \frac{99}{8} \\ [4pt] \hhline{~-----}
+  
+  &  2            &   7  &  \frac{19}{2} & \frac{33}{4} &  \fbox{$\frac{75}{8}$}  \\
+
+\end{array}$
+
+\end{tabular}
+
+\smallskip}{}
+
+We now turn our attention to negative real zeros.  We try the largest possible zero, $-\frac{1}{2}$.  \ifthenelse{\boolean{synthetic}}{Synthetic division shows us it is not a zero, \ifthenelse{\boolean{colour}}{nor is it a lower bound (since the numbers in the final line of the division tableau do not alternate),}{} so we proceed to $-1$.  This division shows $-1$ is a zero.  %Descartes' Rule of Signs told us that we may have up to three negative real zeros, counting multiplicity, 
+Since we're only aware of one positive real zero and $f$ has degree 4, we may have as many as three negative real zeros, counting multiplicity, so we try $-1$ again, and it works once more.  At this point, we have taken $f$, a fourth degree polynomial, and performed two successful divisions.  Our quotient polynomial is quadratic, so we look at it to find the remaining zeros.
+
+\begin{tabular}{c}
+
+$\begin{array}{rrrrrr}
+
+ -\frac{1}{2} \, \, \vline& 2 & 4 & -1  & -6 & -3 \\
+
+  & \downarrow     &  -1  &  -\frac{3}{2}  & \frac{5}{4} & \frac{19}{8} \\ [4pt] \hhline{~-----}
+  
+  &  2            &   3  &  -\frac{5}{2} & -\frac{19}{4} &  \fbox{$-\frac{5}{8}$}  \\
+
+\end{array}$ \\
+
+$\begin{array}{rrrrrr}
+ -1 \, \, \vline& 2 & 4 & -1  & -6 & -3 \\
+
+  & \downarrow     &  -2  &  -2  & 3 & 3\\ \hhline{~-----} 
+  
+  -1 \, \, \vline&  2 &   2  & -3 & -3 &  \fbox{$0$}  \\
+    
+               & \downarrow &  -2  &  0  & 3 &\\ \hhline{~----} 
+ 
+   & 2  &   0  & -3& \fbox{0} &   \\
+  
+        
+
+\end{array}$  
+
+\end{tabular}}{We calculate $f\left(-\frac{1}{2}\right) = -\frac{5}{8}$, so $x=-\frac{1}{2}$ is not a zero of $f$. Next, we try $f(-1)$, and we find
+\[
+f(-1) = 2(-1)^4+4(-1)^3-(-1)^2-6(-1)-3 = 2-4-1+6-3=0,
+\]
+so $x=-1$ is a zero of $f$! We can now proceed to find the quotient using long division:
+
+\setlength\arraycolsep{0.1pt}
+\setlength\extrarowheight{2pt}
+
+\[
+\begin{array}{ccccccccccccc}
+
+ & & & & & &2x^3 & +& 2x^2 & - &3x  & - & 3 \\ \hhline{~~~~|---------}
+
+   & x & + & 1 \, \vline& 2x^4 & + & 4x^3 & - & x^2 & - & 6x & - & 3 \\
+
+  &  &  &  -& \left(2x^4 \right.& + & \left.2x^3\right) &  &  &  &  &    \\ \hhline{~~~~---~~~~~~} 
+  &  &  &   &    &   &  2x^3    & - & x^2 &  &  &  &  \\ 
+  &  &  &   &    & - &  \left(2x^3\right. & +  & \left. 2x^2\right) & &  &  &     \\ 
+\hhline{~~~~~~---~~~~} 
+  &  &  &   &    &   &                    &  - & 3x^2 & - & 6x & & \\
+  &  &  &   &    &   &                  - &\left(-\right. & 3x^2 & - & \left.3x\right) & & \\
+ \hhline{~~~~~~~----~~}   
+  &  &  &   &    &   &  &  &  & - & 3x & - &3 \\
+  &  &  &   &    &   &  &  & - &\left(-\right. & 3x & - & \left.3\right)\\
+ \hhline{~~~~~~~~~----}
+  &  &  &   &    &   &  &  &   &               &    &   & 0 
+
+ \end{array}\]
+ 
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+
+Since we're only aware of one positive real zero and $f$ has degree 4, we may have as many as three negative real zeros, counting multiplicity, so we try $-1$ again, and it works once more: with $q(x) = 2x^3+2x^2-3x-3$ we get $q(-1) = -2+2+2-3=0$, so the Factor Theorem tells us that the quotient is still divisible by $x+1$. Indeed, long division gives us 
+
+\setlength\arraycolsep{0.1pt}
+\setlength\extrarowheight{2pt}
+
+\[ \begin{array}{cccccccccc}
+
+& & & & & & & 2x^2 & - & 3 \\ \hhline{~~~|-------}
+
+x & + & 1 \, \vline& 2x^3 & + & 2x^2 & - & 3x & - & 3\\
+
+ &  &  -& \left(2x^3 \right. & + & \left.  2x^2\right) &  &  &  &  \\ \hhline{~~~---~~~~} 
+ &  &  &   &   & 0 & - & 3x  & - & 3 \\ 
+ &  &  &   &   & - & \left(-\right. & 3x & - & \left.3\right) \\  \hhline{~~~~~~~---} 
+ &   &  &  &  &  &  &  &  & 0,
+ 
+\end{array}\]
+
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+
+so the quotient after dividing twice by $x+1$ is $2x^2-3$.}
+
+\smallskip
+
+Setting the quotient polynomial equal to zero yields $2x^2 - 3 = 0$, so that $x^2 = \frac{3}{2}$, or $x = \pm \, \frac{\sqrt{6}}{2}$.  %Descartes' Rule of Signs tells us that the positive real zero we found, $\frac{\sqrt{6}}{2}$, has multiplicity $1$.  Descartes also tells us the total multiplicity of negative real zeros is $3$, which forces $-1$ to be a zero of multiplicity $2$ and $- \frac{\sqrt{6}}{2}$ to have multiplicity $1$.  
+We now have two zeros of multiplicity one yielding factors $\left(x-\frac{\sqrt{6}}{2}\right)$ and $\left(x+\frac{\sqrt{6}}{2}\right)$, respectively and one zero of multiplicity two, which yields the factor $(x+1)^2$. Since multiplying the corresponding factors together produces a polynomial of degree 4, we know that we have found all possible zeros of $f$. (If there were another zero, we would have another factor, and multiplying by this factor would produce a polynomial of degree 5 or more.)
+
+\item  We know the end behaviour of $y=f(x)$ resembles that of its leading term $y=2x^4$.  This means that the graph enters the scene in Quadrant II and exits in Quadrant I.  Since $\pm \, \frac{\sqrt{6}}{2}$ are zeros of odd multiplicity, we have that the graph crosses through the $x$-axis at the points $\left( -\frac{\sqrt{6}}{2}, 0 \right)$ and $\left( \frac{\sqrt{6}}{2}, 0 \right)$.  Since $-1$ is a zero of multiplicity $2$, the graph of $y=f(x)$ touches and rebounds off the $x$-axis at $(-1,0)$.  Putting this together, we get the graph in Figure \ref{fig:realzero4}.
+\end{enumerate}
+}
+
+\medskip
+
+\ifthenelse{\boolean{synthetic}}{
+\mfigure[width=0.95\marginparwidth]{.25}{The graph $y=2x^4+4x^3-x^2-6x-3$}{fig:realzero4}{figures/PolynomialsGraphics/RealZeros_New-1}}
+{\mfigure[width=0.95\marginparwidth]{.75}{The graph $y=2x^4+4x^3-x^2-6x-3$}{fig:realzero4}{figures/PolynomialsGraphics/RealZeros_New-1}}
+
+You can see why the `no calculator' approach is not very popular these days.  It requires more computation and more theorems than the alternative. (This is apparently a bad thing.)  In general, no matter how many theorems you throw at a polynomial, it may well be impossible to find their zeros exactly.  The polynomial $f(x) = x^5-x-1$ is one such beast.   The Rational Zeros Test gives us $\pm 1$ as rational zeros to try but neither of these work since $f(1) = f(-1) = -1$.  If we try the substitution technique we used in Example \ref{usubex}, we find $f(x)$ has three terms, but the exponent on the $x^5$ isn't exactly twice the exponent on $x$.  How could we go about approximating the positive zero without resorting to the `Zero' command of a graphing calculator?  We use the \index{Bisection Method} \sword{Bisection Method}.  The first step in the Bisection Method is to find an interval on which $f$ changes sign.  We know $f(1) = -1$ and we find $f(2) = 29$.  By the Intermediate Value Theorem, we know that the zero of $f$ lies in the interval $[1,2]$.  Next, we `bisect' this interval and find the midpoint is $1.5$.  We have that $f(1.5)\approx 5.09$.  This means that our zero is between $1$ and $1.5$, since $f$ changes sign on this interval.  Now, we `bisect' the interval $[1,1.5]$ and find $f(1.25) \approx 0.80$, so now we have the zero between $1$ and $1.25$.  Bisecting $[1,1.25]$, we find $f(1.125) \approx -0.32$, which means the zero of $f$ is between $1.125$ and $1.25$.  We continue in this fashion until we have `sandwiched' the zero between two numbers which differ by no more than a desired accuracy. You can think of the Bisection Method as reversing the sign diagram process:  instead of finding the zeros and checking the sign of $f$ using test values, we are using test values to determine where the signs switch to find the zeros.  It is a slow and tedious, yet fool-proof, method for approximating a real zero.  
+
+\ifthenelse{\boolean{synthetic}}{
+\mnote{.7}{We don't use the word ``impossible'' lightly;  it can be proven that the zeros of some polynomials cannot be expressed using the usual algebraic symbols. For further details, see the Wikipedia page on \href{http://en.wikipedia.org/wiki/Galois_theory}{\underline{Galois Theory}}.}}
+{\mnote{.45}{We don't use the word ``impossible'' lightly;  it can be proven that the zeros of some polynomials cannot be expressed using the usual algebraic symbols. For further details, see the Wikipedia page on \href{http://en.wikipedia.org/wiki/Galois_theory}{\underline{Galois Theory}}.}}
+
+Our next example reminds us of the role finding zeros plays in solving equations and inequalities.
+
+\medskip
+
+\example{polyeqineqexample}{Solving a polynomial equation and inequality}{
+\begin{enumerate}
+
+\item  Find all of the real solutions to the equation $2x^5+6x^3+3 = 3x^4+8x^2$. 
+
+\item  Solve the inequality $2x^5+6x^3+3 \leq 3x^4+8x^2$.
+
+\item  Interpret your answer to part 2 graphically, and verify using a graphing calculator.
+
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item  Finding the real solutions to $2x^5+6x^3+3 = 3x^4+8x^2$ is the same as finding the real solutions to $2x^5-3x^4+6x^3-8x^2+3=0$.  In other words, we are looking for the real zeros of $p(x)=  2x^5-3x^4+6x^3-8x^2+3$. 
+\ifthenelse{\boolean{synthetic}}{Using the techniques developed in this section, we get
+
+\[\begin{array}{rrrrrrr}
+1 \, \, \vline& 2 & -3 & 6  & -8 & 0 &3 \\
+
+  & \downarrow     &  2  &  -1  & 5 & -3 & -3\\ \hhline{~------} 
+
+ 1 \, \, \vline& 2 & -1 & 5  & -3 & -3 & \fbox{$0$} \\
+
+  & \downarrow     &  2 &  1  & 6 & 3 &\\ \hhline{~-----} 
+  
+  -\frac{1}{2} \, \, \vline&  2 &  1  & 6 & 3 &  \fbox{$0$} & \\
+    
+               & \downarrow &  -1  &  0  & -3 &&\\ \hhline{~----} 
+ 
+   & 2  &   0  & 6& \fbox{0} &&   \\
+  
+
+
+\end{array}\]
+
+
+The quotient polynomial is $2x^2 + 6$ which has no real zeros so we get $x=-\frac{1}{2}$ and $x=1$.}
+{The Rational Roots Theorem tells us that the possible zeros of $p$ include $\pm 1, \pm 3, \pm \frac{1}{2}$, and $\pm \frac{3}{2}$. We begin to test values, starting with the easiest ones to plug in. Our first attempt is $p(1) = 2-3+6-8+3=0$, so we get lucky: the Factor Theorem tells us that $x-1$ is a factor. Using long division, we find (exercise) that
+\[
+p(x) = 2x^5-3x^4+6x^3-8x^2+3=(x-1)(2x^4-x^3+5x^2-3x-3).
+\]
+The possible rational zeros of the quotient $q_1(x) = 2x^4-x^3+5x^2-3x-3$ are the same as before, and again we get lucky testing $x=1$ first: we have $q_1(1)=2-1+5-3-3=0$, so $x=1$ is a zero of multiplicity at least 2. Dividing by $x-1$ again, we have
+\[
+p(x) = 2x^5-3x^4+6x^3-8x^2+3 = (x-1)^2(2x^3+x^2+6x+3).
+\]
+This time, trying $x=\pm 1$ in the quotient $q_2(x) = 2x^3+x^2+6x+3$ gets us $q_2(1) = 12\neq 0$ and $q_2(-1) = -4\neq 0$, so neither value is a zero; however, since $q_2(-1)<0$ and $q_2(1)>0$, the Intermediate Value Theorem guarantees us a zero between $-1$ and $1$. Trying possible rational roots first, we find $q_2\left(\frac{1}{2}\right)= \frac{13}{2}\neq 0$, but 
+\[
+q_2\left(-\frac{1}{2}\right) = 2\left(-\frac{1}{8}\right)+\frac{1}{4}+6\left(-\frac{1}{2}\right)+3 = -\frac{1}{4}+\frac{1}{4}-3+3=0,
+\]
+so $x=-\frac{1}{2}$ is a root. Dividing once more by $x+\frac{1}{2}$, we find
+\[
+p(x) = (x-1)^2\left(x+\frac{1}{2}\right)(2x^2+6).
+\]
+The quotient polynomial is $2x^2 + 6$ which has no real zeros so we get $x=-\frac{1}{2}$ and $x=1$ as the zeros of $p$.}
+
+\item To solve this nonlinear inequality, we follow the same guidelines set forth in Section \ref{Inequalities}:  we get $0$ on one side of the inequality and construct a sign diagram.  Our original inequality can be rewritten as $2x^5-3x^4+6x^3-8x^2+3 \leq 0$.  We found the zeros of $p(x) = 2x^5-3x^4+6x^3-8x^2+3$ in part 1 to be $x=-\frac{1}{2}$ and $x=1$. We construct our sign diagram as before, giving us Figure \ref{fig:sdzeros1}.
+
+\ifthenelse{\boolean{synthetic}}{
+\mfigure{.85}{The sign diagram for $p(x)$ in Example \ref{polyeqineqexample}}{fig:sdzeros1}{figures/PolynomialsGraphics/RealZeros_New-2}}
+{\mfigure{.55}{The sign diagram for $p(x)$ in Example \ref{polyeqineqexample}}{fig:sdzeros1}{figures/PolynomialsGraphics/RealZeros_New-2}}
+
+The solution to $p(x) < 0$ is $\left(-\infty, -\frac{1}{2}\right)$, and we know $p(x) = 0$ at $x=-\frac{1}{2}$ and $x=1$.  Hence, the solution to $p(x) \leq 0$ is $\left(-\infty, -\frac{1}{2}\right] \cup \left\{1\right\}$.  
+
+
+\item To interpret this solution graphically, we set $f(x) = 2x^5+6x^3+3$ and $g(x) = 3x^4+8x^2$.  We recall that the solution to $f(x) \leq g(x)$ is the set of $x$ values for which the graph of $f$ is below the graph of $g$ (where $f(x) < g(x)$) along with the $x$ values where the two graphs intersect ($f(x) = g(x)$).  Graphing $f$ and $g$ using GeoGebra produces Figure \ref{fig:realzeroeg1}(a).  (The end behaviour should tell you which is which.)  We see that the graph of $f$ is below the graph of $g$ on $\left(-\infty, -\frac{1}{2}\right)$. However, it is difficult to see what is happening near $x=1$.  Zooming in (and making the graph of $g$ thicker), we see in Figure \ref{fig:realzeroeg1}(b) that the graphs of $f$ and $g$ do intersect at $x=1$, but the graph of $g$ remains below the graph of $f$ on either side of $x = 1$.
+
+\end{enumerate}
+}
+
+\ifthenelse{\boolean{synthetic}}{
+\mtable{.6}{The polynomials $f(x)$ and $g(x)$ from Example \ref{polyeqineqexample}, part 3}{fig:realzeroeg1}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.95\marginparwidth]{figures/PolynomialsGraphics/RealZero5}\\
+(a)\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/PolynomialsGraphics/RealZero6}\\
+(b)
+\end{tabular}
+}}
+{
+\mtable{.75}{The polynomials $f(x)$ and $g(x)$ from Example \ref{polyeqineqexample}, part 3}{fig:realzeroeg1}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.95\marginparwidth]{figures/PolynomialsGraphics/RealZero5}\\
+(a)\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/PolynomialsGraphics/RealZero6}\\
+(b)
+\end{tabular}
+}}
+
+\medskip
+
+Our last example revisits an application from page \pageref{LCDmaxprofit} in the Exercises of Section \ref{GraphsofPolynomials}.
+
+\medskip
+
+\example{ex_zerosappl}{Calculating sales profits}{ Suppose the profit $P$, in \textit{thousands} of dollars, from producing and selling $x$ \textit{hundred} LCD TVs is given by  $P(x)=-5x^3+35x^2-45x-25$, $0 \leq x \leq 10.07$.  How many TVs should be produced to make a profit?  Check your answer using a graphing utility.
+}
+{To `make a profit' means to solve $P(x) = -5x^3+35x^2-45x-25 > 0$, which we do analytically using a sign diagram.  To simplify things, we first factor out the $-5$ common to all the coefficients to get $-5\left(x^3 - 7x^2+9x-5\right) > 0$, so we can just focus on finding the zeros of $f(x) = x^3-7x^2+9x+5$.  The possible rational zeros of $f$ are $\pm 1$ and $\pm 5$, and going through the usual computations, we find $x=5$ is the only rational zero.  Using this, we factor $f(x) = x^3-7x^2+9x+5 = (x-5) \left(x^2-2x-1\right)$, and we find the remaining zeros by applying the Quadratic Formula to $x^2-2x-1 = 0$.  We find three real zeros,  $x=1-\sqrt{2} = -0.414 \ldots$,  $x = 1+\sqrt{2} = 2.414 \ldots$, and $x = 5$, of which only the last two fall in the applied domain of $[0, 10.07]$.  We choose $x=0$, $x=3$ and $x=10.07$ as our test values and plug them into the function $P(x)=-5x^3+35x^2-45x-25$ (not $f(x) =x^3 - 7x^2+9x-5$) to get the sign diagram in Figure \ref{fig:sdzeros2}.
+
+\ifthenelse{\boolean{synthetic}}{
+\mfigure{.35}{The sign diagram for $P(x)$ in Example \ref{ex_zerosappl}}{fig:sdzeros2}{figures/PolynomialsGraphics/RealZeros_New-3}}
+{\mfigure{.5}{The sign diagram for $P(x)$ in Example \ref{ex_zerosappl}}{fig:sdzeros2}{figures/PolynomialsGraphics/RealZeros_New-3}}
+
+
+We see immediately that $P(x)>0$ on $(1+\sqrt{2},5)$.  Since $x$ measures the number of TVs in \textit{hundreds}, $x = 1 + \sqrt{2}$ corresponds to $241.4\ldots$ TVs.  Since we can't produce a fractional part of a TV, we need to choose between producing 241 and 242 TVs.  From the sign diagram, we see that $P(2.41) < 0$ but $P(2.42)>0$ so, in this case we take the next \textit{larger} integer value and set the minimum production to 242 TVs.  At the other end of the interval, we have $x=5$ which corresponds to $500$ TVs.  Here, we take the next \textit{smaller} integer value, $499$ TVs to ensure that we make a profit.  Hence, in order to make a profit, at least 242, but no more than 499 TVs need to be produced.  To check our answer using GeoGebra, we graph $y=P(x)$ and use the Intersect tool to see where $y=P(x)$ intersects the $x$-axis. We see in Figure \ref{fig:applzeroeg} that the software approximations bear out our analysis.
+}
+
+\ifthenelse{\boolean{synthetic}}{
+\mfigure[width=0.95\marginparwidth]{.8}{Plotting the profit function $P(x)$ in Example \ref{ex_zerosappl}}{fig:applzeroeg}{figures/PolynomialsGraphics/RealZero7}}
+{\mfigure[width=0.95\marginparwidth]{.3}{Plotting the profit function $P(x)$ in Example \ref{ex_zerosappl}}{fig:applzeroeg}{figures/PolynomialsGraphics/RealZero7}}
+
+\printexercises{exercises_pre/03_03_exercises}
+

@@ -1,7 +1,7 @@
 
 \section{Formal Definition of a Limit}\label{sec:limit_def}
 
-This section introduces the formal definition of a limit. Many refer to this as ``the epsilon--delta,'' definition, referring to the letters $\epsilon$ and $\delta$ of the Greek alphabet.\\
+This section introduces the formal definition of a limit. Many refer to this as ``the epsilon, delta,'' definition, referring to the letters $\epsilon$ and $\delta$ of the Greek alphabet.\\
 
 Before we give the actual definition, let's consider a few informal ways of describing a limit.  Given a function $y=f(x)$ and an $x$-value, $c$, we say that ``the limit of the function $f$, as $x$ approaches $c$, is a value~$L$'': 
 
@@ -66,7 +66,7 @@ Show that $\displaystyle \lim_{x\rightarrow 4} \sqrt{x} = 2 $.}
 \end{align*}
 
 So, what is the desired $x$ tolerance?  Remember, we want to find a symmetric interval of $x$ values, namely
-$4 - \delta < x < 4 + \delta$.  The lower bound of $2.25$ is $1.75$ units from 4; the upper bound of 6.25 is 2.25 units from 4. We need the smaller of these two distances; we must have $\delta \leq 1.75$. See Figure \ref{fig:choose_e_d}.\\
+$4 - \delta < x < 4 + \delta$.  The lower bound of $2.25$ is $1.75$ units from 4; the upper bound of 6.25 is 2.25 units from 4. We need the smaller of these two distances; we must have $\delta < 1.75$. See Figure \ref{fig:choose_e_d}.\\
 
 %\ifthenelse{\boolean{longpage}}%
 %{\mtable{.4}{Illustrating the $\epsilon-\delta$ process.}{fig:choose_e_d}{%
@@ -88,7 +88,7 @@ $4 - \delta < x < 4 + \delta$.  The lower bound of $2.25$ is $1.75$ units from 4
 
 		
 
-Given the $y$ tolerance $\epsilon =0.5$, we have found an $x$ tolerance, $\delta \leq 1.75$, such that whenever $x$ is within $\delta$ units of 4, then $y$ is within $\epsilon$ units of 2.  That's what we were trying to find.\\
+Given the $y$ tolerance $\epsilon =0.5$, we have found an $x$ tolerance, $\delta < 1.75$, such that whenever $x$ is within $\delta$ units of 4, then $y$ is within $\epsilon$ units of 2.  That's what we were trying to find.\\
   
 Let's try another value of $\epsilon$.\\
 
@@ -97,9 +97,9 @@ $1.99^2 < x < 2.01^2$, or
 \[
 3.9601 < x < 4.0401.
 \]  
-What is the desired $x$ tolerance?  In this case we must have $\delta \leq 0.0399$, which is the minimum distance from 4 of the two bounds given above.  %Note that in some sense, it looks like there are two tolerances (below 4 of 0.0399 units and above 4 of 0.0401 units).  However, we couldn't use the larger value of $0.0401$ for $\delta$ since then the interval for $x$ would be  $3.9599 < x < 4.0401$ resulting in $y$ values of $1.98995 < y < 2.01$ (which contains values NOT within 0.01 units of 2).\\
+What is the desired $x$ tolerance?  In this case we must have $\delta < 0.0399$, which is the minimum distance from 4 of the two bounds given above.  %Note that in some sense, it looks like there are two tolerances (below 4 of 0.0399 units and above 4 of 0.0401 units).  However, we couldn't use the larger value of $0.0401$ for $\delta$ since then the interval for $x$ would be  $3.9599 < x < 4.0401$ resulting in $y$ values of $1.98995 < y < 2.01$ (which contains values NOT within 0.01 units of 2).\\
 
-What we have so far: if $\epsilon =0.5$, then $\delta \leq 1.75$ and if $\epsilon = 0.01$, then $\delta \leq 0.0399$. A pattern is not easy to see, so we switch to general $\epsilon$ try to determine $\delta$ symbolically.  We start by assuming $y=\sqrt{x}$ is within $\epsilon$ units of 2:
+What we have so far: if $\epsilon =0.5$, then $\delta < 1.75$ and if $\epsilon = 0.01$, then $\delta \leq 0.0399$. A pattern is not easy to see, so we switch to general $\epsilon$ try to determine $\delta$ symbolically.  We start by assuming $y=\sqrt{x}$ is within $\epsilon$ units of 2:
 
 \begin{align*}
 |y - 2| & < \epsilon \\
@@ -107,22 +107,22 @@ What we have so far: if $\epsilon =0.5$, then $\delta \leq 1.75$ and if $\epsilo
 -\epsilon < \sqrt{x} - 2 & < \epsilon  \tag{$y=\sqrt{x}$}\\
 2 - \epsilon < \sqrt{x} & < 2+ \epsilon \tag{Add 2}\\
 (2 - \epsilon)^2 < x & < (2+ \epsilon) ^2 \tag{Square all}\\
-4 - 4\epsilon + \epsilon^2 < x & < 4 + 4\epsilon + \epsilon^2 tag{Expand}\\
+4 - 4\epsilon + \epsilon^2 < x & < 4 + 4\epsilon + \epsilon^2 \tag{Expand}\\
 4 - (4\epsilon - \epsilon^2) < x & < 4 + (4\epsilon + \epsilon^2). \tag{Rewrite in the desired form}
 \end{align*}
 
 The ``desired form'' in the last step is ``$4-\textit{something} < x < 4 +\textit{something}$.''
-Since we want this last interval to describe an $x$ tolerance around 4, we have that either $\delta \leq 4\epsilon - \epsilon^2$ or $\delta \leq 4\epsilon + \epsilon^2$, whichever is smaller: 
+Since we want this last interval to describe an $x$ tolerance around 4, we have that either $\delta < 4\epsilon - \epsilon^2$ or $\delta < 4\epsilon + \epsilon^2$, whichever is smaller: 
 \[
-\delta \leq \min\{4\epsilon - \epsilon^2, 4\epsilon + \epsilon^2\}.
+\delta < \min\{4\epsilon - \epsilon^2, 4\epsilon + \epsilon^2\}.
 \]
-Since $\epsilon > 0$, the minimum is $\delta \leq 4\epsilon - \epsilon^2$.  That's the formula: given an $\epsilon$, set $\delta \leq 4\epsilon-\epsilon^2$. 
+Since $\epsilon > 0$, the minimum is $\delta < 4\epsilon - \epsilon^2$.  That's the formula: given an $\epsilon$, set $\delta < 4\epsilon-\epsilon^2$. 
 
 We can check this for our previous values.  If $\epsilon=0.5$, the formula gives
-$\delta \leq 4(0.5) - (0.5)^2 = 1.75$ and when $\epsilon=0.01$, the formula gives $\delta \leq 4(0.01) - (0.01)^2 = 0.399$.
+$\delta < 4(0.5) - (0.5)^2 = 1.75$ and when $\epsilon=0.01$, the formula gives $\delta < 4(0.01) - (0.01)^2 = 0.399$.
 %\drawexampleline
 
-So given any $\epsilon >0$, set $\delta \leq 4\epsilon - \epsilon^2$. Then if $|x-4|<\delta$ (and $x\neq 4$), then $|f(x) - 2| < \epsilon$,  satisfying the definition of the limit.  We have shown formally (and finally!) that $\displaystyle \lim_{x\rightarrow 4} \sqrt{x} = 2 $.
+So given any $\epsilon >0$, set $\delta < 4\epsilon - \epsilon^2$. Then if $|x-4|<\delta$ (and $x\neq 4$), then $|f(x) - 2| < \epsilon$,  satisfying the definition of the limit.  We have shown formally (and finally!) that $\displaystyle \lim_{x\rightarrow 4} \sqrt{x} = 2 $.
 }\\
 
 \mnote{.75}{One word of caution is needed here. It may seem a bit annoying/pedantic, but if we really want to be \textit{precise} in our arguments, we should point out a flaw in our ``proof'': it won't work if $\epsilon \ge 4$.  This shouldn't really occur since $\epsilon$ is supposed to be small, but it could happen.  In the cases where $\epsilon \ge 4$, taking $\delta=1$ would do the job. If we want to cover all possibilities, we should define $\delta$ to be the \textit{minimum} of 1 and $4\epsilon-\epsilon^2$.
@@ -153,7 +153,7 @@ Now, back to the fraction $\displaystyle \frac{\epsilon}{|x+2|}$.  If $1<x<3$, t
 %$\displaystyle \frac{1}{5}<\frac{1}{|x+2|}<\frac{1}{3}$ so that, in particular, 
 %\begin{equation} \frac{\epsilon}{5}<\frac{\epsilon}{|x+2|}.\label{eq:limit2}\end{equation}  
 This suggests that we set 
-$\displaystyle \delta \leq \frac{\epsilon}{5}$. To see why, let consider what follows when we assume $|x-2|<\delta$:
+$\displaystyle \delta < \frac{\epsilon}{5}$. To see why, let consider what follows when we assume $|x-2|<\delta$:
 
 \small
 \begin{align*}
@@ -231,7 +231,7 @@ When we have properly done this, the \textit{something} on the ``greater than'' 
 
 We highlight this process in the following example.\\
 
-\example{ex_compute_lim4}{Evaluating a limit using the definition}{Prove that $\ds \lim_{x\rightarrow 1}x^3-2x = -1$.}
+\example{ex_compute_lim4}{Evaluating a limit using the definition}{Prove that $\ds \lim_{x\rightarrow 1}(x^3-2x) = -1$.}
 {We start our scratch--work by considering $|f(x) - (-1)| < \epsilon$:
 \begin{align}
 |f(x)-(-1)| &< \epsilon \notag\\
@@ -256,9 +256,9 @@ x^2+x-1 &< 5 &\text{which implies that}\notag\\
 \frac15 &< \frac{1}{x^2+x-1} &\text{which implies that}\notag\\
 \frac{\epsilon}5 &< \frac{\epsilon}{x^2+x-1}.\label{eq:lim4b}
 \end{align}
- So we set $\delta \leq \epsilon/5$. This ends our scratch--work, and we begin the formal proof (which also helps us understand why this was a good choice of $\delta$).
+ So we set $\delta < \epsilon/5$. This ends our scratch--work, and we begin the formal proof (which also helps us understand why this was a good choice of $\delta$).
 
-Given $\epsilon$, let $\delta \leq \epsilon/5$. We want to show that when $|x-1|<\delta$, then $|(x^3-2x)-(-1)|<\epsilon$. We start with $|x-1|<\delta$:
+Given $\epsilon$, let $\delta < \epsilon/5$. We want to show that when $|x-1|<\delta$, then $|(x^3-2x)-(-1)|<\epsilon$. We start with $|x-1|<\delta$:
 \begin{align*}
 |x-1| &< \delta \\
 |x-1| &< \frac{\epsilon}5\\
@@ -267,7 +267,7 @@ Given $\epsilon$, let $\delta \leq \epsilon/5$. We want to show that when $|x-1|
 |x^3-2x+1| &< \epsilon\\
 |(x^3-2x)-(-1)| &<\epsilon,
 \end{align*}
-which is what we wanted to show. Thus $\ds \lim_{x\to 1}x^3-2x = -1$.
+which is what we wanted to show. Thus $\ds \lim_{x\to 1}(x^3-2x) = -1$.
 }\\
 
 We illustrate evaluating limits once more.\\

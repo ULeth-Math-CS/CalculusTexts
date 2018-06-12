@@ -1,0 +1,508 @@
+\section{Rational Functions}
+\subsection{Introduction to Rational Functions}
+\label{IntroRational}
+
+If we add, subtract or multiply polynomial functions according to the function arithmetic rules defined in Section \ref{FunctionArithmetic}, we will produce another polynomial function. If, on the other hand, we divide two polynomial functions, the result may not be a polynomial.  In this chapter we study \index{rational functions} \sword{rational functions} - functions which are ratios of polynomials.
+
+\smallskip
+
+\definition{rationalfunction}{Rational Function}{ A \sword{rational function} is a function which is the ratio of polynomial functions.  Said differently, $r$ is a rational function if it is of the form \index{function ! rational}
+
+\[ r(x) = \dfrac{p(x)}{q(x)},\]
+
+where $p$ and $q$ are polynomial functions.
+}
+
+\mnote{.65}{According to Definition \ref{rationalfunction}, all polynomial functions are also  rational functions, since we can take $q(x)=1$.}
+
+\smallskip
+
+As we recall from Section \ref{FunctionNotation}, we have domain issues any time the denominator of a fraction is zero.  In the example below, we review this concept as well as some of the arithmetic of rational expressions.
+
+\medskip
+
+\example{ratfuncex}{Domain of rational functions}{ Find the domain of the following rational functions.  Write them in the form $\dfrac{p(x)}{q(x)}$ for polynomial functions $p$ and $q$ and simplify.
+
+\begin{enumerate}
+
+\item  $f(x) = \dfrac{2x-1}{x+1}$
+\item  $g(x) = 2 - \dfrac{3}{x+1}$
+\item  $h(x) = \dfrac{2x^2-1}{x^2-1} - \dfrac{3x-2}{x^2-1}$
+\item  $r(x) = \dfrac{2x^2-1}{x^2-1} \div \dfrac{3x-2}{x^2-1}$
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item To find the domain of $f$, we proceed as we did in Section \ref{FunctionNotation}: we find the zeros of the denominator and exclude them from the domain.  Setting $x+1=0$ results in  $x=-1$. Hence, our domain is  $(-\infty, -1) \cup (-1,\infty)$.  The expression $f(x)$ is already in the form requested and when we check for common factors among the numerator and denominator we find none, so we are done.
+
+\item  Proceeding as before, we determine the domain of $g$ by solving $x+1=0$.  As before, we find the domain of $g$ is $(-\infty, -1) \cup (-1,\infty)$.  To write $g(x)$ in the form requested, we need to get a common denominator 
+
+\[ \begin{array}{rclclcl}
+g(x) & = & 2 - \dfrac{3}{x+1} & = & \dfrac{2}{1} - \dfrac{3}{x+1} & = & \dfrac{(2)(x+1)}{(1)(x+1)} - \dfrac{3}{x+1} \\ [.15in]
+     & = & \dfrac{(2x+2) - 3}{x+1} & = & \dfrac{2x-1}{x+1} & & 
+\end{array} \]
+
+This formula is now completely simplified.
+
+
+\item  The denominators in the formula for $h(x)$ are both $x^2-1$ whose zeros are  $x = \pm 1$.  As a result, the domain of $h$ is $(-\infty, -1) \cup (-1,1) \cup (1, \infty)$.  We now proceed to simplify $h(x)$.  Since we have the same denominator in both terms, we subtract the numerators.  We then factor the resulting numerator and denominator, and cancel out the common factor.
+
+\[ \begin{array}{rclcl}
+
+h(x) & = & \dfrac{2x^2-1}{x^2-1} - \dfrac{3x-2}{x^2-1} & = & \dfrac{\left(2x^2-1\right) - \left(3x-2\right)}{x^2-1} \\ [.15in]
+     & = & \dfrac{2x^2-1 - 3x+2}{x^2-1} & = &  \dfrac{2x^2 - 3x+1}{x^2-1} \\ [.15in]
+     & = & \dfrac{(2x-1)(x-1)}{(x+1)(x-1)} & = & \dfrac{(2x-1)\cancel{(x-1)}}{(x+1)\cancel{(x-1)}} \\ [.15in]
+     & = & \dfrac{2x-1}{x+1} & & 
+\end{array} \]
+
+\item  To find the domain of $r$, it may help to temporarily rewrite $r(x)$ as
+
+\[ r(x) = \dfrac{\dfrac{2x^2-1}{x^2-1} }{\dfrac{3x-2}{x^2-1}\vphantom{\left(\dfrac{X}{X}\right)}}\]
+
+We need to set all of the denominators equal to zero which means we need to solve not only  $x^2-1= 0$, but also $\dfrac{3x-2}{x^2-1}=0$.  We find $x = \pm 1$ for the former and $x= \frac{2}{3}$ for the latter.  Our domain is $(-\infty, -1) \cup \left(-1,\frac{2}{3}\right) \cup \left(\frac{2}{3},1\right) \cup (1, \infty)$.  We simplify $r(x)$ by rewriting the division as multiplication by the reciprocal and then by cancelling the common factor
+
+\[ \begin{array}{rclcl}
+
+r(x) & = & \dfrac{2x^2-1}{x^2-1} \div \dfrac{3x-2}{x^2-1} & = & \dfrac{2x^2-1}{x^2-1} \cdot \dfrac{x^2-1}{3x-2}\\[.15in]
+ & = & \dfrac{\left(2x^2-1\right)\left(x^2-1\right)}{\left(x^2-1\right)(3x-2)} & = & \dfrac{\left(2x^2-1\right)\cancel{\left(x^2-1\right)}}{\cancel{\left(x^2-1\right)}(3x-2)}\\[.15in]
+  & = & \dfrac{2x^2-1}{3x-2}   & &
+\end{array}\]
+
+\end{enumerate}
+}
+
+\medskip
+
+
+
+
+In Example \ref{ratfuncex}, note that the expressions for $f(x)$, $g(x)$ and $h(x)$ work out to be the same.  However, only two of these functions are actually equal.  For two functions to be equal, they need, among other things, to have the same domain.  Since $f(x) = g(x)$ and $f$ and $g$ have the same domain, they are equal functions.  Even though the formula $h(x)$ is the same as $f(x)$, the domain of $h$ is different than the domain of $f$, and thus they are different functions.  
+
+\medskip
+
+We now turn our attention to the graphs of rational functions. Consider the function $f(x) = \dfrac{2x-1}{x+1}$ from Example \ref{ratfuncex}.  Using GeoGebra, we obtain the graph in Figure \ref{fig:ratgr1}
+
+
+
+
+
+Two behaviours of the graph are worthy of further discussion.  First, note that the graph appears to `break' at $x=-1$. We know from our last example that $x=-1$ is not in the domain of $f$ which means $f(-1)$ is undefined. When we make a table of values to study the behaviour of $f$ \textit{near} $x=-1$ we see that we can get `near' $x=-1$ from two directions.  We can choose values a little less than $-1$, for example $x=-1.1$, $x=-1.01$, $x=-1.001$, and so on.  These values are said to `approach $-1$ from the \textit{left}.'  Similarly, the values $x=-0.9$, $x=-0.99$, $x=-0.999$, etc., are said to `approach $-1$ from the \textit{right}.'  If we make the two tables in Figure \ref{fig:rattab1}, we find that the numerical results confirm what we see graphically.
+
+\mfigure[width=0.95\marginparwidth]{.8}{The graph of $f(x) = \dfrac{2x-1}{x+1}$}{fig:ratgr1}{figures/RationalsGraphics/Rationals01}
+
+\mtable{.6}{Values of $f(x)=\frac{2x-1}{x+1}$ near $x=-1$}{fig:rattab1}{\setlength{\arraycolsep}{2pt}
+\noindent $\begin{array}{|r||c|c|}  \hline
+
+  x & f(x)& (x,f(x)) \\ \hline
+ -1.1 & 32 & (-1.1, 32) \\  \hline
+ -1.01 & 302 & (-1.01, 302) \\  \hline 
+ -1.001 & 3002 & ( -1.001, 3002) \\  \hline 
+  -1.0001 & 30002 & ( -1.001, 30002) \\  \hline 
+  \end{array} $
+  
+\bigskip
+
+\noindent $\begin{array}{|r||c|c|}  \hline 
+  x & f(x) & (x,f(x)) \\ \hline
+  -0.9 & -28 & ( -0.9 , -28) \\  \hline
+  -0.99 & -298 & ( -0.99, -298) \\  \hline
+  -0.999 & -2998& (-0.999,-2998) \\  \hline
+   -0.9999 & -29998& (-0.9999,-29998) \\  \hline 
+\end{array}$
+\setlength{\arraycolsep}{5pt}
+}
+
+As the $x$ values approach $-1$ from the left, the function values become larger and larger positive numbers. (We would need Calculus to confirm this analytically.)  We express this symbolically by stating as $x \rightarrow -1^{-}$, $f(x) \rightarrow \infty$.   Similarly, using analogous notation, we conclude from the table that as $x \rightarrow -1^{+}$, $f(x) \rightarrow -\infty$.  For this type of unbounded behaviour, we say the graph of $y=f(x)$ has a \index{asymptote ! vertical ! intuitive definition of}\index{vertical asymptote ! intuitive definition of}\sword{vertical asymptote} of $x = -1$.  Roughly speaking, this means that near $x=-1$, the graph looks very much like the vertical line $x=-1$. 
+
+\smallskip
+
+The other feature worthy of note about the graph of $y=f(x)$ is that it seems to `level off' on the left and right hand sides of the screen.  This is a statement about the end behaviour of the function.  As we discussed in Section \ref{GraphsofPolynomials}, the end behaviour of a function is its behaviour as $x$ attains larger and larger negative values without bound (here, the word `larger' means larger in absolute value), $x \rightarrow -\infty$, and as $x$ becomes large without bound, $x \rightarrow \infty$.  
+
+\mtable{.35}{Values of $f(x)=\dfrac{2x-1}{x+1}$ for large negative and positive values of $x$}{fig:rattab2}{
+\setlength{\arraycolsep}{2pt}
+\noindent $\begin{array}{|r||c|c|}  \hline
+
+  x & f(x)\approx & (x,f(x))\approx \\ \hline
+ -10 &  2.3333 &  (-10,  2.3333) \\  \hline
+ -100 &  2.0303 &  (-100, 2.0303) \\  \hline 
+ -1000 &   2.0030 &  ( -1000,  2.0030) \\  \hline 
+  -10000 &   2.0003 &  ( -10000, 2.0003) \\  \hline 
+  \end{array} $
+  
+  \bigskip
+  
+\noindent $\begin{array}{|r||c|c|}  \hline
+
+  x & f(x) \approx & (x,f(x)) \approx \\ \hline
+ 10 &  1.7273 &  (10,  1.7273) \\  \hline
+ 100 &  1.9703 &  (100, 1.9703) \\  \hline 
+ 1000 &   1.9970 &  ( 1000,  1.9970) \\  \hline 
+  10000 &   1.9997 &  ( 10000, 1.9997) \\  \hline 
+  \end{array} $ 
+\setlength{\arraycolsep}{5pt}}
+
+From the tables in Figure \ref{fig:rattab2}, we see that as $x \rightarrow -\infty$, $f(x) \rightarrow 2^{+}$ and as $x \rightarrow \infty$, $f(x) \rightarrow 2^{-}$.  Here the `$+$' means `from above' and the `$-$' means `from below'.  In this case, we say the graph of $y=f(x)$ has a \index{asymptote ! horizontal ! intuitive definition of}\index{horizontal asymptote ! intuitive definition of}\sword{horizontal asymptote} of $y=2$.  This means that the end behaviour of $f$ resembles the horizontal line $y=2$, which explains the `levelling off' behaviour we see in Figure \ref{fig:ratgr1}.  We formalize the concepts of vertical and horizontal asymptotes in the following definitions.
+
+\smallskip
+
+\definition{va}{Vertical Asymptote}{ The line $x=c$ is called a \index{asymptote ! vertical ! formal definition of}\index{vertical asymptote ! formal definition of}\sword{vertical asymptote} of the graph of a function $y=f(x)$ if as $x \rightarrow c^{-}$ or as $x \rightarrow c^{+}$, either $f(x) \rightarrow \infty$ or $f(x) \rightarrow -\infty$.
+}
+
+\smallskip
+
+\definition{ha}{Horizontal Asymptote}{ The line $y=c$ is called a \index{asymptote ! horizontal ! formal definition of}\index{horizontal asymptote ! formal definition of}\sword{horizontal asymptote} of the graph of a function $y=f(x)$ if as $x \rightarrow -\infty$ or as $x \rightarrow \infty$, $f(x) \rightarrow c$.}
+
+
+\smallskip
+
+Note that in Definition \ref{ha}, we write $f(x) \rightarrow c$ (not $f(x) \rightarrow c^{+}$ or $f(x) \rightarrow c^{-}$) because we are unconcerned from which direction the values $f(x)$ approach the value $c$, just as long as they do so.
+%\mnote{.2}{As we shall see in the next section, the graphs of rational functions may, in fact, \textit{cross} their horizontal asymptotes.  If this happens, however,  it does so only a \textit{finite} number of times, and so for each choice of $x \rightarrow -\infty$ and $x \rightarrow \infty$, $f(x)$ will approach $c$ from either below (in the case $f(x) \rightarrow c^{-}$) or above (in the case $f(x) \rightarrow c^{+}$.)  We leave $f(x) \rightarrow c$ generic in our definition, however, to allow this concept to apply to less tame specimens in the Precalculus zoo, such as Exercise \ref{exploregraphslast} in Section \ref{TrigGraphs}.}
+
+In our discussion following Example \ref{ratfuncex}, we determined that, despite the fact that the formula for $h(x)$ reduced to the same formula as $f(x)$, the functions $f$ and $h$ are different, since $x=1$ is in the domain of $f$, but $x=1$ is not in the domain of $h$.  If we graph $h(x)=\dfrac{2x^2-1}{x^2-1} - \dfrac{3x-2}{x^2-1}$ using a graphing calculator, we are surprised to find that the graph looks identical to the graph of $y=f(x)$.   There is a vertical asymptote at $x=-1$, but near $x=1$, everything seem fine.  Tables of values provide numerical evidence which supports the graphical observation: see Figure \ref{fig:rattab3}.
+
+We see that as $x \rightarrow 1^{-}$, $h(x) \rightarrow 0.5^{-}$ and as $x \rightarrow 1^{+}$, $h(x) \rightarrow 0.5^{+}$.  In other words, the points on the graph of $y=h(x)$ are approaching $(1,0.5)$, but since $x=1$ is not in the domain of $h$, it would be inaccurate to fill in a point at $(1,0.5)$.  To indicate this, we put an open circle (also called a \sword{hole}\index{hole ! in a graph}\index{graph ! hole in} in this case) at $(1,0.5)$.  Figure \ref{fig:ratgr3} is a detailed graph of $y=h(x)$, with the vertical and horizontal asymptotes as dashed lines.
+
+\mtable{.8}{Values of $h(x)=\frac{2x^2-1}{x^2-1}-\frac{3x-2}{x^2-1}$ near $x=1$}{fig:rattab3}{
+\setlength{\arraycolsep}{2pt}
+$\begin{array}{|r||c|c|}  \hline
+
+  x & h(x)\approx & (x,h(x))\approx \\ \hline
+ 0.9 &  0.4210 &  (0.9, 0.4210) \\  \hline
+ 0.99 &  0.4925 &  (0.99, 0.4925) \\  \hline
+ 0.999 &  0.4992 &  (0.999, 0.4992) \\  \hline
+  0.9999 &  0.4999 &  (0.9999, 0.4999) \\  \hline
+  \end{array} $ 
+  
+  \bigskip
+  
+$\begin{array}{|r||c|c|}  \hline 
+  x & h(x)\approx & (x,h(x))\approx \\ \hline
+  1.1 &  0.5714 &  (1.1, 0.5714) \\  \hline
+  1.01 &   0.5075 &  (1.01, 0.5075) \\  \hline
+  1.001 &  0.5007 &  (1.001, 0.5007) \\  \hline
+  1.0001 &  0.5001 &  (1.0001, 0.5001) \\  \hline
+
+\end{array}$
+\setlength{\arraycolsep}{5pt}
+}
+
+\mnote{.38}{In Calculus, we will see how these `holes' in graphs can be `plugged' once we've made a more advanced study of continuity.}
+
+\mfigure[width=0.95\marginparwidth]{.56}{The graph $y=h(x)$ showing asymptotes and the `hole'}{fig:ratgr3}{figures/RationalsGraphics/IntroRational-1}
+ 
+Neither $x=-1$ nor $x=1$ are in the domain of $h$, yet the behaviour of the graph of $y=h(x)$ is drastically different near these $x$-values.  The reason for this lies in the second to last step when we simplified the formula for $h(x)$ in Example \ref{ratfuncex}, where we had $h(x) = \dfrac{(2x-1)(x-1)}{(x+1)(x-1)}$.  The reason $x=-1$ is not in the domain of $h$ is because the factor $(x+1)$ appears in the denominator of $h(x)$;  similarly, $x=1$ is not in the domain of $h$ because of the factor $(x-1)$ in the denominator of $h(x)$.  The major difference between these two factors is that $(x-1)$ cancels with a factor in the numerator whereas $(x+1)$ does not.  Loosely speaking, the trouble caused by $(x-1)$ in the denominator is cancelled away while the factor $(x+1)$ remains to cause mischief.  This is why the graph of $y=h(x)$ has a vertical asymptote at $x=-1$ but only a hole at $x=1$.  These observations are generalized and summarized in the theorem below, whose proof is found in Calculus.
+
+\smallskip
+
+\theorem{vavshole}{Location of Vertical Asymptotes and Holes}{  Suppose $r$ is a rational function which can be written as $r(x) = \dfrac{p(x)}{q(x)}$ where $p$ and $q$ have no common zeros (in other words, $r(x)$ is in lowest terms). Let $c$ be a real number which is not in the domain of $r$. \index{hole ! location of} \index{asymptote ! vertical ! location of} \index{vertical asymptote ! location of}
+
+\begin{itemize}
+
+\item  If $q(c) \neq 0$, then the graph of $y=r(x)$ has a hole at $\left(c, \dfrac{p(c)}{q(c)}\right)$.
+
+
+\item  If $q(c) = 0$, then the line $x=c$ is a vertical asymptote of the graph of $y=r(x)$.
+
+
+
+\end{itemize}
+}
+\mnote{.2}{In English,  Theorem \ref{vavshole} says that if $x=c$ is not in the domain of $r$ but, when we simplify $r(x)$,  it no longer makes the denominator $0$, then we have a hole at $x=c$.  Otherwise, the line $x=c$ is a vertical asymptote  of the graph of $y=r(x)$. In other words, Theorem \ref{vavshole} tells us `How to tell your asymptote from a hole in the graph.'}
+
+%\pagebreak
+
+  
+
+\example{vavsholeexample}{Finding vertical asymptotes}{ Find the vertical asymptotes of, and/or holes in, the graphs of the following rational functions.  Verify your answers using software or a graphing calculator, and describe the behaviour of the graph near them using proper notation.
+
+\begin{multicols}{2}
+\begin{enumerate}
+
+\item  $f(x) = \dfrac{2x}{x^2-3}$
+
+\item  $g(x) = \dfrac{x^2-x-6}{x^2-9}$
+
+\item  $h(x) = \dfrac{x^2-x-6}{x^2+9}$
+
+\item  $r(x) = \dfrac{x^2-x-6}{x^2+4x+4}$
+
+\end{enumerate}
+\end{multicols}
+}
+{
+\begin{enumerate}
+
+\item  To use Theorem \ref{vavshole}, we first find all of the real numbers which aren't in the domain of $f$.  To do so, we solve $x^2 - 3 = 0$ and get $x = \pm \sqrt{3}$.  Since the expression $f(x)$ is in lowest terms, there is no cancellation possible, and we conclude that the lines $x = -\sqrt{3}$ and $x=\sqrt{3}$ are vertical asymptotes to the graph of $y=f(x)$. Plotting the function in GeoGebra verifies this claim, and from the graph in Figure \ref{fig:ratgr4}, we see that as $x \rightarrow -\sqrt{3}^{\, -}$, $f(x) \rightarrow -\infty$, as $x\rightarrow -\sqrt{3}^{\, +}$, $f(x) \rightarrow \infty$, as $x \rightarrow \sqrt{3}^{\, -}$, $f(x) \rightarrow -\infty$, and finally as $x\rightarrow \sqrt{3}^{\, +}$, $f(x) \rightarrow \infty$.
+
+\mfigure[width=0.95\marginparwidth]{.8}{The graph $y=f(x)$ in Example \ref{vavsholeexample}}{fig:ratgr4}{figures/RationalsGraphics/Rationals02}
+
+\item  Solving $x^2 - 9 = 0$ gives $x = \pm 3$.  In lowest terms $g(x) = \dfrac{x^2-x-6}{x^2-9} = \dfrac{(x-3)(x+2)}{(x-3)(x+3)} = \dfrac{x+2}{x+3}$.  Since $x=-3$ continues to make trouble in the denominator, we know the line $x=-3$ is a vertical asymptote of the graph of $y=g(x)$.  Since $x=3$ no longer produces a $0$ in the denominator,  we have a hole at $x=3$.  To find the $y$-coordinate of the hole, we substitute $x=3$ into $\dfrac{x+2}{x+3}$ and find the hole is at $\left(3, \frac{5}{6}\right)$.  When we graph $y=g(x)$ using GeoGebra, we clearly see the vertical asymptote at $x=-3$, but everything seems calm near $x=3$: see Figure \ref{fig:ratgr5}.  Hence, as $x \rightarrow -3^{-}$, $g(x) \rightarrow \infty$, as $x \rightarrow -3^{+}$, $g(x) \rightarrow -\infty$, as $x \rightarrow 3^{-}$, $g(x) \rightarrow \frac{5}{6}^{-}$, and as $x \rightarrow 3^{+}$, $g(x) \rightarrow \frac{5}{6}^{+}$.
+
+\mfigure[width=0.95\marginparwidth]{.6}{The graph $y=g(x)$ in Example \ref{vavsholeexample}}{fig:ratgr5}{figures/RationalsGraphics/Rationals03}
+
+
+\item  The domain of $h$ is all real numbers, since $x^2+9 = 0$ has no real solutions.  Accordingly, the graph of $y=h(x)$ is devoid of both vertical asymptotes and holes, as see in Figure \ref{fig:ratgr6}.
+
+\mfigure[width=0.95\marginparwidth]{.4}{The graph $y=h(x)$ in Example \ref{vavsholeexample}}{fig:ratgr6}{figures/RationalsGraphics/Rationals04}
+
+
+\item  Setting $x^2+4x+4 = 0$ gives us $x=-2$ as the only real number of concern.  Simplifying, we see  $r(x) = \dfrac{x^2-x-6}{x^2+4x+4} = \dfrac{(x-3)(x+2)}{(x+2)^2} = \dfrac{x-3}{x+2}$.  Since $x=-2$ continues to produce a $0$ in the denominator of the reduced function, we know $x=-2$ is a vertical asymptote to the graph.  The graph in Figure \ref{fig:ratgr7} bears this out, and, moreover, we see that as $x\rightarrow -2^{-}$, $r(x) \rightarrow \infty$ and as $x \rightarrow -2^{+}$, $r(x) \rightarrow -\infty$.
+
+\mfigure[width=0.95\marginparwidth]{.2}{The graph $y=r(x)$ in Example \ref{vavsholeexample}}{fig:ratgr7}{figures/RationalsGraphics/Rationals05}
+
+\end{enumerate}
+}
+
+\medskip
+
+\medskip
+
+Now that we have thoroughly investigated vertical asymptotes, we can turn our attention to horizontal asymptotes.  The next theorem tells us when to expect horizontal asymptotes.
+
+\smallskip
+
+\theorem{hathm}{Location of Horizontal Asymptotes}{ \index{asymptote ! horizontal ! location of}\index{horizontal asymptote ! location of} Suppose $r$ is a rational function and $r(x) = \dfrac{p(x)}{q(x)}$, where $p$ and $q$ are polynomial functions with leading coefficients $a$ and $b$, respectively. 
+
+\begin{itemize}
+
+\item  If the degree of $p(x)$ is the same as the degree of $q(x)$, then $y=\frac{a}{b}$ is the horizontal asymptote of the graph of $y=r(x)$. 
+
+\item  If the degree of $p(x)$ is less than the degree of $q(x)$, then $y=0$ is the horizontal asymptote of the graph of $y=r(x)$.
+
+\item  If the degree of $p(x)$ is greater than the degree of $q(x)$, then the graph of $y=r(x)$ has no horizontal asymptotes.
+
+
+\end{itemize}
+}
+
+\smallskip
+
+
+
+Like Theorem \ref{vavshole}, Theorem \ref{hathm} is proved using Calculus.  Nevertheless, we can understand the idea behind it using our example $f(x) = \dfrac{2x-1}{x+1}$.  If we interpret $f(x)$ as a division problem, $(2x-1) \div (x+1)$, we find that the quotient is $2$ with a remainder of $-3$.  Using what we know about polynomial division,  we get $2x-1 = 2(x+1) -3$.  Dividing both sides by $(x+1)$ gives   $\dfrac{2x-1}{x+1} = 2 - \dfrac{3}{x+1}$.   As $x$ becomes unbounded in either direction, the quantity $\dfrac{3}{x+1}$ gets closer and closer to $0$ so that the values of $f(x)$ become closer and closer (as seen in the tables in Figure \ref{fig:rattab2}) to $2$. In symbols, as $x \rightarrow \pm \infty$, $f(x) \rightarrow 2$, and we have the result.
+
+\mnote{.8}{More specifically, as $x \rightarrow -\infty$, $f(x) \rightarrow 2^{+}$, and as $x \rightarrow \infty$, $f(x) \rightarrow 2^{-}$. Notice that the graph gets close to the same $y$ value as $x \rightarrow -\infty$ or $x \rightarrow \infty$.  This means that the graph can have only \underline{one} horizontal asymptote if it is going to have one at all.  Thus we were justified in using `the' in the previous theorem.}  
+
+\smallskip
+
+%Alternatively, we can use what we know about end behaviour of polynomials to help us understand this theorem.  From Theorem \ref{EBPolynomials}, we know the end behaviour of a polynomial is determined by its leading term.  Applying this to the numerator and denominator of $f(x)$, we get that as $x \rightarrow \pm \infty$, $f(x) = \dfrac{2x-1}{x+1} \approx \dfrac{2x}{x} = 2$.  This last approach is useful in Calculus, and, indeed, is made rigorous there.  (Keep this in mind for the remainder of this paragraph.)  Applying this reasoning to the general case, suppose $r(x) = \dfrac{p(x)}{q(x)}$ where $a$ is the leading coefficient of $p(x)$ and $b$ is the leading coefficient of $q(x)$. As $x \rightarrow \pm \infty$, $r(x) \approx \dfrac{ax^n}{bx^m}$, where $n$ and $m$ are the degrees of $p(x)$ and $q(x)$, respectively.  If the degree of $p(x)$ and the degree of $q(x)$ are the same, then $n=m$ so that $r(x) \approx \frac{a}{b}$, which means $y=\frac{a}{b}$ is the horizontal asymptote in this case.  If the degree of $p(x)$ is less than the degree of $q(x)$, then $n < m$, so $m-n$ is a positive number, and hence, $r(x) \approx \dfrac{a}{bx^{m-n}} \rightarrow 0$ as $x \rightarrow \pm \infty$.  If the degree of $p(x)$ is greater than the degree of $q(x)$, then $n > m$, and hence $n-m$ is a positive number and $r(x) \approx \dfrac{ax^{n-m}}{ b}$, which becomes unbounded as $x \rightarrow \pm \infty$.  As we said before, if a rational function has a horizontal asymptote, then it will have only one.  (This is not true for other types of functions we shall see in later chapters.)
+ 
+\medskip
+
+\example{haexample}{Finding horizontal asymptotes}{ List the horizontal asymptotes, if any, of the graphs of the following functions.  Verify your answers using a graphing calculator, and describe the behaviour of the graph near them using proper notation.
+
+\begin{enumerate}
+
+\item $f(x) = \dfrac{5x}{x^2+1}$  
+
+\item  $g(x) = \dfrac{x^2-4}{x+1}$
+
+\item  $h(x) = \dfrac{6x^3-3x+1}{5-2x^3}$
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item  The numerator of $f(x)$ is $5x$, which has degree $1$.  The denominator of $f(x)$ is $x^2+1$, which has degree $2$.  Applying Theorem \ref{hathm},  $y=0$ is the horizontal asymptote.  Sure enough, we see from the graph that as $x \rightarrow - \infty$, $f(x) \rightarrow 0^{-}$ and as $x \rightarrow \infty$, $f(x) \rightarrow 0^{+}$.
+
+\item  The numerator of $g(x)$, $x^2-4$, has degree $2$, but the degree of the denominator, $x+1$, has degree $1$.  By Theorem \ref{hathm}, there is no horizontal asymptote.  From the graph, we see that the graph of $y=g(x)$ doesn't appear to level off to a constant value, so there is no horizontal asymptote. (Sit tight!  We'll revisit this function and its end behaviour shortly.)
+
+\item  The degrees of the numerator and denominator of $h(x)$ are both three, so Theorem \ref{hathm} tells us $y = \frac{6}{-2} = -3$ is the horizontal asymptote.  We see from the calculator's graph that as $x \rightarrow -\infty$, $h(x) \rightarrow -3^{+}$, and as $x \rightarrow \infty$, $h(x) \rightarrow -3^{-}$.
+
+\mtable{.4}{Graphs of the three functions in Example \ref{haexample}}{fig:ratgr8}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.95\marginparwidth]{figures/RationalsGraphics/Rationals06}\\
+$y=f(x)$\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/RationalsGraphics/Rationals07}\\
+$y=g(x)$\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/RationalsGraphics/Rationals08} \\
+$y=h(x)$
+\end{tabular}
+}
+
+\end{enumerate}
+}
+
+\pagebreak
+
+
+
+
+
+We close this section with a discussion of the \textit{third} (and final!) kind of asymptote which can be associated with the graphs of rational functions. Let us return to the function $g(x) = \dfrac{x^2-4}{x+1}$ in Example \ref{haexample}. Performing long division, (see the remarks following Theorem \ref{hathm}) we get $g(x) = \dfrac{x^2-4}{x+1} = x-1 - \dfrac{3}{x+1}$.  Since the term $\dfrac{3}{x+1} \rightarrow 0$ as $x \rightarrow \pm \infty$, it stands to reason that as $x$ becomes unbounded, the function values   $g(x) = x-1 - \dfrac{3}{x+1} \approx x-1$.  Geometrically, this means that the graph of $y=g(x)$ should resemble the line $y = x-1$ as $x \rightarrow \pm \infty$.  We see this play out both numerically and graphically in Figures \ref{fig:slantas1} and \ref{fig:slantas2}.
+
+\mtable{.55}{The graph $y=\dfrac{x^2-4}{x+1}$ as $x\to -\infty$}{fig:slantas1}{
+\setlength{\arraycolsep}{2pt}
+\begin{center}
+$\begin{array}{|r||c|c|}  \hline
+
+  x & g(x) & x-1 \\ \hline
+ -10 & \approx -10.6667 & -11 \\  \hline
+ -100 & \approx -100.9697 & -101 \\  \hline 
+ -1000 &  \approx -1000.9970&   -1001 \\ \hline 
+  -10000 &  \approx -10000.9997 &  -10001 \\ \hline 
+  \end{array} $
+  
+  \bigskip
+  
+\myincludegraphics[width=0.95\marginparwidth]{figures/RationalsGraphics/SA01}
+\end{center}
+\setlength{\arraycolsep}{5pt}
+} 
+  
+\mtable{.25}{The graph $y=\dfrac{x^2-4}{x+1}$ as $x\to +\infty$}{fig:slantas2}{
+\begin{tabular}{c}
+$\begin{array}{|r||c|c|}  \hline
+
+  x & g(x) & x-1 \\ \hline
+ 10 & \approx 8.7273 &    9 \\\hline
+ 100 & \approx 98.9703 &   99 \\ \hline 
+ 1000 &  \approx 998.9970 &  999 \\ \hline 
+  10000 &  \approx 9998.9997 &   9999 \\ \hline 
+  \end{array} $ \\  
+  \\
+\myincludegraphics[width=0.95\marginparwidth]{figures/RationalsGraphics/SA02}
+\end{tabular}}
+
+The way we symbolize the relationship between the end behaviour of $y=g(x)$ with that of the line $y=x-1$ is to write `as $x \rightarrow \pm \infty$, $g(x)  \to x-1$.'  In this case, we say the line $y=x-1$ is a \index{asymptote ! slant (oblique)} \index{slant asymptote} \index{oblique asymptote} \sword{slant asymptote} (or `oblique' asymptote)  to the graph of $y=g(x)$.  Informally, the graph of a rational function has a slant asymptote if, as $x \rightarrow \infty$ or as $x \rightarrow -\infty$, the graph resembles a non-horizontal, or `slanted' line.  Formally, we define a slant asymptote as follows.
+
+
+\medskip
+
+
+\definition{sa}{Slant Asymptote}{ The line $y = mx+b$ where $m \neq 0$  is called a \index{asymptote ! slant ! formal definition of}\index{slant asymptote ! formal definition of}\textbf{slant asymptote} of the graph of a function $y=f(x)$ if as $x \rightarrow -\infty$ or as $x \rightarrow \infty$, $f(x)  \rightarrow mx+b$.}
+
+\medskip
+
+
+A few remarks are in order.  First, note that the stipulation $m \neq 0$ in Definition \ref{sa} is what makes the `slant' asymptote `slanted' as opposed to the case when $m=0$ in which case we'd have a horizontal asymptote.  Secondly, while we have motivated what me mean intuitively by the notation `$f(x)  \rightarrow mx+b$,' like so many ideas in this section, the formal definition requires Calculus.  Another way to express this sentiment, however, is to rephrase `$f(x)  \rightarrow mx+b$' as `$f(x) - (mx+b) \rightarrow 0$.'  In other words, the graph of $y=f(x)$ has the \textit{slant} asymptote $y = mx+b$ if and only if the graph of $y = f(x) - (mx+b)$ has a \textit{horizontal} asymptote $y=0$.
+
+
+Our next task is to determine the conditions under which the graph of a rational function has a slant asymptote, and if it does, how to find it.  In the case of $g(x) = \dfrac{x^2-4}{x+1}$, the degree of the numerator $x^2-4$ is $2$, which is \textit{exactly one more} than the degree if its denominator $x+1$ which is $1$.  This results in a \textit{linear} quotient polynomial, and it is this quotient polynomial which is the slant asymptote.  Generalizing this situation gives us the following theorem. 
+
+\medskip
+
+\theorem{sathm}{Determination of Slant Asymptotes}{ Suppose $r$ is a rational function and $r(x) = \dfrac{p(x)}{q(x)}$, where the degree of $p$ is \textit{exactly} one more than the degree of $q$.  Then the graph of $y=r(x)$ has \index{asymptote ! slant ! determination of}\index{slant asymptote ! determination of} the slant asymptote $y=L(x)$ where $L(x)$ is the quotient obtained by dividing $p(x)$ by $q(x)$.}
+
+\medskip
+
+In the same way that Theorem \ref{hathm} gives us an easy way to see if the graph of a rational function $r(x) = \dfrac{p(x)}{q(x)}$ has a horizontal asymptote by comparing the degrees of the numerator and denominator, Theorem \ref{sathm} gives us an easy way to check for slant asymptotes.  Unlike Theorem \ref{hathm}, which gives us a quick way to \textit{find} the horizontal asymptotes (if any exist), Theorem \ref{sathm} gives us no such `short-cut'.  If a slant asymptote exists, we have no recourse but to use long division to find it. (That's OK, though.  In the next section, we'll use long division to analyze end behaviour and it's worth the effort!)
+
+\medskip
+
+\example{saexample}{Finding slant asymptotes}{ Find the slant asymptotes of the graphs of the following functions if they exist.  Verify your answers using software or a graphing calculator and describe the behaviour of the graph near them using proper notation.
+
+\begin{enumerate}
+
+\item  $f(x) = \dfrac{x^2-4x+2}{1-x}$  
+
+\item  \label{sacancel} $g(x) = \dfrac{x^2-4}{x-2}$
+
+\item  $h(x) = \dfrac{x^3+1}{x^2-4}$
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item  The degree of the numerator is $2$ and the degree of the denominator is $1$, so Theorem \ref{sathm} guarantees us a slant asymptote.  To find it, we divide $1-x = -x+1$ into $x^2-4x+2$ and get a quotient of $-x+3$, so our slant asymptote is $y=-x+3$.  We confirm this graphically in Figure \ref{fig:ratgr9}, and we see that as $x \rightarrow -\infty$, the graph of $y=f(x)$ approaches the asymptote from below, and as $x \rightarrow \infty$, the graph of $y=f(x)$ approaches the asymptote from above.
+
+\mfigure[width=0.95\marginparwidth]{.6}{The graph $y=f(x)$ in Example \ref{saexample}}{fig:ratgr9}{figures/RationalsGraphics/SAEX01}
+
+\mnote{.45}{Note that we are purposefully avoiding notation like `as $x\rightarrow \infty$, $f(x) \rightarrow (-x+3)^{+}$.  While it is possible to define these notions formally with Calculus, it is not standard to do so.  Besides, with the introduction of the symbol `\textinterrobang' in the next section, the authors feel we are in enough trouble already.}
+
+\item  As with the previous example, the degree of the numerator $g(x) = \dfrac{x^2-4}{x-2}$ is $2$ and the degree of the denominator is $1$, so Theorem \ref{sathm} applies.  
+
+\[ g(x) = \dfrac{x^2-4}{x-2} = \dfrac{(x+2)(x-2)}{(x-2)} = \dfrac{(x+2) \cancel{(x-2)}}{\cancelto{1}{(x-2)}} = x+2, \quad x \neq 2\]
+
+so we have that the slant asymptote $y=x+2$ is identical to the graph of $y=g(x)$ except at $x=2$ (where the latter has a `hole' at $(2,4)$.)  The graph (using GeoGebra) in Figure \ref{fig:ratgr10} supports this claim.
+
+\mfigure[width=0.95\marginparwidth]{.28}{The graph $y=g(x)$ in Example \ref{saexample}}{fig:ratgr10}{figures/RationalsGraphics/SAEX02}
+
+%\mnote{.13}{Note that in part 2 of Example \ref{saexample} the graph of $g$ actually coincides with its slant asymptote. While the word `asymptote' has the connotation of `approaching but not equalling,' Definitions \ref{ha} and \ref{sa} invite the same kind of pathologies we saw with Definitions \ref{maxmindefn} in Section \ref{GraphsofFunctions}.}
+
+\item   For $h(x) = \dfrac{x^3+1}{x^2-4}$, the degree of the numerator is $3$ and the degree of the denominator is $2$ so again, we are guaranteed the existence of a slant asymptote.  The long division $\left(x^3+1 \right) \div \left(x^2-4\right)$ gives a quotient of just $x$, so our slant asymptote is the line $y=x$.  The graph confirms this, and we find that as $x \rightarrow -\infty$, the graph of $y=h(x)$ approaches the asymptote from below, and as $x \rightarrow \infty$, the graph of $y=h(x)$ approaches the asymptote from above: see Figure \ref{fig:ratgr11}. 
+
+\mfigure[width=0.95\marginparwidth]{.8}{The graph $y=h(x)$ in Example \ref{saexample}}{fig:ratgr11}{figures/RationalsGraphics/SAEX03}
+\end{enumerate}
+\enlargethispage{\baselineskip}}
+\pagebreak
+
+
+
+
+We end this section by giving a few examples of rational equations and inequalities. Particular care must be taken with rational inequalities, since the sign of both numerator and denominator can affect the solution. (Many are the students who have gone wrong by attempting to clear denominators in an inequality!)
+
+\medskip
+
+\example{ex_ratineq}{Rational equation and inequality}{
+\begin{enumerate}
+
+\item  Solve $\dfrac{x^3-2x+1}{x-1} = \dfrac{1}{2}x-1$.
+
+\item  Solve $\dfrac{x^3-2x+1}{x-1} \geq \dfrac{1}{2}x-1$.
+
+\item  Use your computer or calculator to graphically check your answers to 1 and 2.
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item  To solve the equation, we clear denominators
+
+\[ \begin{array}{rclr}
+
+\dfrac{x^3-2x+1}{x-1} & = & \dfrac{1}{2}x-1 & \\ [10pt]
+
+\left(\dfrac{x^3-2x+1}{x-1}\right) \cdot 2(x-1) & = & \left( \dfrac{1}{2}x-1 \right) \cdot 2(x-1) & \\ [10pt]
+
+2x^3 - 4x + 2 & = & x^2-3x+2 & \mbox{expand} \\
+
+2x^3 -x^2 - x & = & 0 & \\
+
+x(2x+1)(x-1) & = & 0 & \mbox{factor}\\
+
+x & = & -\frac{1}{2}, \, 0, \, 1 & \\
+
+
+\end{array}\]
+
+Since we cleared denominators, we need to check for extraneous solutions.  Sure enough, we see that $x=1$ does not satisfy the original equation and must be discarded.  Our solutions are $x=-\frac{1}{2}$ and $x=0$.
+
+\item  To solve the inequality, it may be tempting to begin as we did with the equation $-$ namely by multiplying both sides by the quantity $(x-1)$.  The problem is that, depending on $x$, $(x-1)$ may be positive (which doesn't affect the inequality) or $(x-1)$ could be negative (which would reverse the inequality).  Instead of working by cases, we collect all of the terms on one side of the inequality with $0$ on the other and make a sign diagram.
+
+\noindent\hskip-25pt\begin{minipage}{\textwidth}
+\begin{align*}
+\dfrac{x^3-2x+1}{x-1} & \geq \dfrac{1}{2}x-1  \\ 
+\dfrac{x^3-2x+1}{x-1}  - \dfrac{1}{2} x + 1& \geq  0 \\
+\dfrac{2\left(x^3-2x+1\right)-x(x-1)+1(2(x-1))}{2(x-1)} & \geq  0  \tag*{get a common denominator} \\ 
+\dfrac{2x^3-x^2-x}{2x-2} & \geq  0  \tag*{expand}
+\end{align*}
+\end{minipage}
+
+\medskip
+
+Viewing the left hand side as a rational function $r(x)$ we make a sign diagram.  The only value excluded from the domain of $r$ is $x=1$ which is the solution to $2x-2=0$.  The zeros of $r$ are the solutions to $2x^3-x^2-x=0$, which we have already found to be $x=0$, $x=-\frac{1}{2}$ and $x=1$, the latter was discounted as a zero because it is not in the domain.  Choosing test values in each test interval, we obtain the sign diagram in Figure \ref{fig:ratineq1}. 
+
+\mfigure{.85}{The sign diagram for the inequality in Example \ref{ex_ratineq}}{fig:ratineq1}{figures/RationalsGraphics/RationalIneq-1}
+
+We are interested in where $r(x) \geq 0$.  We find $r(x) > 0$, or $(+)$, on the intervals $\left(-\infty, -\frac{1}{2}\right)$, $(0,1)$ and $(1, \infty)$.  We add to these intervals the zeros of $r$, $-\frac{1}{2}$ and $0$, to get our final solution:  $\left( - \infty, -\frac{1}{2} \right] \cup [0,1) \cup (1, \infty)$.
+
+\item  Geometrically, if we set $f(x) = \dfrac{x^3-2x+1}{x-1}$ and $g(x) = \frac{1}{2} x -1$, the solutions to $f(x)=g(x)$ are the $x$-coordinates of the points where the graphs of $y=f(x)$ and $y=g(x)$ intersect.  The solution to $f(x) \geq g(x)$ represents not only where the graphs meet, but the intervals over which the graph of $y=f(x)$ is above ($>$) the graph of $g(x)$. Entering these two functions into GeoGebra gives us Figure \ref{fig:ratineq2}. 
+
+\mfigure[width=0.95\marginparwidth]{.7}{The initial plot of $f(x)$ and $g(x)$}{fig:ratineq2}{figures/RationalsGraphics/Rationals10}
+
+\mfigure[width=0.95\marginparwidth]{.5}{Zooming in to find the intersection points}{fig:ratineq3}{figures/RationalsGraphics/Rationals11}
+
+Zooming in and using the Intersect tool, we see in Figure \ref{fig:ratineq3} that the graphs cross when $x=-\frac{1}{2}$ and $x=0$.  It is clear from the calculator that the graph of $y=f(x)$ is above the graph of $y=g(x)$ on $\left(-\infty, -\frac{1}{2}\right)$ as well as on $(0,\infty)$.  According to the calculator, our solution is then $\left(-\infty, -\frac{1}{2}\right] \cup [0, \infty)$ which \textit{almost} matches the answer we found analytically.  We have to remember that $f$ is not defined at $x=1$, and, even though it isn't shown on the calculator, there is a hole in the graph of $y=f(x)$ when $x=1$ which is why $x=1$ is not part of our final answer. (There is no asymptote at $x=1$ since the graph is well behaved near $x=1$.  According to Theorem \ref{vavshole}, there  must be a hole there.)
+
+\end{enumerate}
+}  
+
+\printexercises{exercises_pre/04_01_exercises}

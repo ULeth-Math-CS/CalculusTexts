@@ -2,33 +2,34 @@
 \enlargethispage \baselineskip 
 \contentsline {chapter}{Table of Contents}{iii}{Doc-Start}
 \contentsline {chapter}{Preface}{v}{section*.2}
-\contentsline {chapter}{\numberline {6}Techniques of Antidifferentiation}{235}{chapter.6}
-\contentsline {section}{\numberline {6.1}Substitution}{235}{section.6.1}
-\contentsline {section}{\numberline {6.2}Integration by Parts}{252}{section.6.2}
-\contentsline {section}{\numberline {6.3}Trigonometric Integrals}{261}{section.6.3}
-\contentsline {section}{\numberline {6.4}Trigonometric Substitution}{269}{section.6.4}
-\contentsline {section}{\numberline {6.5}Partial Fraction Decomposition}{277}{section.6.5}
-\contentsline {section}{\numberline {6.6}Hyperbolic Functions}{284}{section.6.6}
-\contentsline {section}{\numberline {6.7}L'H\^opital's Rule}{294}{section.6.7}
-\contentsline {section}{\numberline {6.8}Improper Integration}{301}{section.6.8}
-\contentsline {chapter}{\numberline {7}Applications of Integration}{313}{chapter.7}
-\contentsline {section}{\numberline {7.1}Area Between Curves}{314}{section.7.1}
-\contentsline {section}{\numberline {7.2}Volume by Cross-Sectional Area; Disk and Washer Methods}{319}{section.7.2}
-\contentsline {section}{\numberline {7.3}The Shell Method}{327}{section.7.3}
-\contentsline {section}{\numberline {7.4}Arc Length and Surface Area}{334}{section.7.4}
-\contentsline {section}{\numberline {7.5}Work}{342}{section.7.5}
-\contentsline {section}{\numberline {7.6}Fluid Forces}{351}{section.7.6}
-\contentsline {chapter}{\numberline {8}Differential Equations}{359}{chapter.8}
-\contentsline {section}{\numberline {8.1}Introduction to differential equations}{359}{section.8.1}
-\contentsline {section}{\numberline {8.2}Integrals as solutions}{364}{section.8.2}
-\contentsline {section}{\numberline {8.3}Slope fields}{369}{section.8.3}
-\contentsline {section}{\numberline {8.4}Separable equations}{373}{section.8.4}
-\contentsline {section}{\numberline {8.5}Linear equations and the integrating factor}{378}{section.8.5}
-\contentsline {section}{\numberline {8.6}Numerical methods: Euler's method}{383}{section.8.6}
-\contentsline {chapter}{\numberline {9}Curves in the Plane}{387}{chapter.9}
-\contentsline {section}{\numberline {9.1}Conic Sections}{387}{section.9.1}
-\contentsline {section}{\numberline {9.2}Parametric Equations}{400}{section.9.2}
-\contentsline {section}{\numberline {9.3}Calculus and Parametric Equations}{409}{section.9.3}
-\contentsline {section}{\numberline {9.4}Introduction to Polar Coordinates}{419}{section.9.4}
-\contentsline {section}{\numberline {9.5}Calculus and Polar Functions}{430}{section.9.5}
-\contentsline {chapter}{Index}{441}{section*.153}
+\contentsline {chapter}{\numberline {6}Techniques of Antidifferentiation}{243}{chapter.6}
+\contentsline {section}{\numberline {6.1}Substitution}{243}{section.6.1}
+\contentsline {section}{\numberline {6.2}Integration by Parts}{260}{section.6.2}
+\contentsline {section}{\numberline {6.3}Trigonometric Integrals}{269}{section.6.3}
+\contentsline {section}{\numberline {6.4}Trigonometric Substitution}{277}{section.6.4}
+\contentsline {section}{\numberline {6.5}Partial Fraction Decomposition}{285}{section.6.5}
+\contentsline {section}{\numberline {6.6}Hyperbolic Functions}{292}{section.6.6}
+\contentsline {section}{\numberline {6.7}L'Hospital's Rule}{302}{section.6.7}
+\contentsline {section}{\numberline {6.8}Improper Integration}{309}{section.6.8}
+\contentsline {chapter}{\numberline {7}Applications of Integration}{321}{chapter.7}
+\contentsline {section}{\numberline {7.1}Area Between Curves}{322}{section.7.1}
+\contentsline {section}{\numberline {7.2}Volume by Cross-Sectional Area; Disk and Washer Methods}{328}{section.7.2}
+\contentsline {section}{\numberline {7.3}The Shell Method}{336}{section.7.3}
+\contentsline {section}{\numberline {7.4}Arc Length and Surface Area}{343}{section.7.4}
+\contentsline {section}{\numberline {7.5}Work}{351}{section.7.5}
+\contentsline {section}{\numberline {7.6}Fluid Forces}{360}{section.7.6}
+\contentsline {chapter}{\numberline {8}Differential Equations}{367}{chapter.8}
+\contentsline {section}{\numberline {8.1}Introduction to differential equations}{367}{section.8.1}
+\contentsline {section}{\numberline {8.2}Integrals as solutions}{372}{section.8.2}
+\contentsline {section}{\numberline {8.3}Slope fields}{377}{section.8.3}
+\contentsline {section}{\numberline {8.4}Separable equations}{381}{section.8.4}
+\contentsline {section}{\numberline {8.5}Linear equations and the integrating factor}{386}{section.8.5}
+\contentsline {section}{\numberline {8.6}Numerical methods: Euler's method}{391}{section.8.6}
+\contentsline {chapter}{\numberline {9}Curves in the Plane}{395}{chapter.9}
+\contentsline {section}{\numberline {9.1}Conic Sections}{395}{section.9.1}
+\contentsline {section}{\numberline {9.2}Parametric Equations}{408}{section.9.2}
+\contentsline {section}{\numberline {9.3}Calculus and Parametric Equations}{417}{section.9.3}
+\contentsline {section}{\numberline {9.4}Introduction to Polar Coordinates}{427}{section.9.4}
+\contentsline {section}{\numberline {9.5}Calculus and Polar Functions}{438}{section.9.5}
+\contentsline {chapter}{\numberline {A}Solutions To Selected Problems}{A.1}{appendix.A}
+\contentsline {chapter}{Index}{A.11}{section*.152}

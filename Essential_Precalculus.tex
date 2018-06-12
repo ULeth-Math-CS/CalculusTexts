@@ -1,0 +1,182 @@
+\RequirePackage{ifthen}
+\newboolean{longpage}
+\setboolean{longpage}{false}
+\newboolean{synthetic}
+\setboolean{synthetic}{false}
+\newboolean{colour}
+\setboolean{colour}{true}
+\ifthenelse{\boolean{longpage}}%
+{\documentclass[10pt]{article}}%
+{\documentclass[10pt]{book}}
+
+\newboolean{printlabelname}
+\setboolean{printlabelname}{false}
+\ifthenelse{\boolean{printlabelname}}{\usepackage[notref,notcite]{showkeys}}{}
+\usepackage{pdfpages}
+%\usepackage[metapost,truebbox]{mfpic}
+\usepackage{import, multicol,boxedminipage}
+\usepackage{supertabular,longtable,hhline}
+\usepackage{colortbl}
+%% end detour
+%\usepackage{amsmath}
+%\usepackage{xr}
+%\externaldocument{Math2560_ebook}
+\usepackage{cancel}
+
+\input{headers/Page_Size_Calculus}
+\usepackage{APEX_format}
+\input{headers/Header_Calculus}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+\usepackage{pdfpages}
+
+\renewcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+
+\ifthenelse{\boolean{xetex}}%
+	{\sffamily
+	%%\usepackage{fontspec}
+	\usepackage{mathspec}
+	\setallmainfonts[Mapping=tex-text]{Calibri}
+	\setmainfont[Mapping=tex-text]{Calibri}
+	\setsansfont[Mapping=tex-text]{Calibri}
+	\setmathsfont(Greek){[cmmi10]}}
+	{\usepackage[sfdefault,lf]{carlito}
+	%% The 'lf' option for lining figures
+	%% The 'sfdefault' option to make the base font sans serif
+	\usepackage[T1]{fontenc}
+	\renewcommand*\oldstylenums[1]{\carlitoOsF #1}}
+	
+	\ifthenelse{\boolean{luatex}}%
+	{\sffamily
+	\usepackage{fontspec}
+	\usepackage{unicode-math}
+	\usepackage{mathspec}
+	\setallmainfonts[Mapping=tex-text]{Calibri}
+	\setmainfont{Calibri}
+	\setsansfont[Mapping=tex-text]{Calibri}
+	\setmathfont[range=\mathup]{Calibri}
+	\setmathfont[range=\mathit]{Calibri Italic}
+	}
+	{}
+\makeindex
+\newcounter{HW}
+\newcounter{HWindent}
+%%%\tracingonline=1
+\begin{document}
+%\printexercisenames
+\ifthenelse{\boolean{colour}}{\printincolor}{\printinblackandwhite}
+%\printincolor
+%\printinblackandwhite
+%\printallanswers
+
+
+\input{text_pre/front_matter_and_cover}
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{The Real Numbers}\label{chapter:reals}
+\thispagestyle{empty}
+\input{text_pre/00_SetTheory}
+%\input{text_pre/00_RealNumberArithmetic}
+\input{text_pre/01_CartesianPlane}
+%\input{text_pre/00_CmpNums}
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{Functions}\label{RelationsandFunctions}
+\thispagestyle{empty}
+
+%\input{text_pre/01_Relations}
+%\input{text_pre/01_IntrotoFunctions}
+\input{text_pre/01_FunctionNotation}
+\input{text_pre/01_FunctionArithmetic}
+%\input{text_pre/01_GraphsofFunctions}
+%\input{text_pre/01_Transformations}
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{Essential Functions}\label{LinearQuadratic}
+\thispagestyle{empty}
+
+\input{text_pre/02_LinearFunctions}
+\input{text_pre/03_GraphsofPolynomials}
+\input{text_pre/04_IntroRational}
+\input{text_pre/06_IntroExpLogs}
+
+%\clearpage{\pagestyle{empty}\cleardoublepage}
+%\chapter{Polynomial Functions}\label{Polynomials}
+%\thispagestyle{empty}
+
+%\clearpage{\pagestyle{empty}\cleardoublepage}
+%\chapter{Inequalities}\label{Inequalities}
+%\thispagestyle{empty}
+
+%
+%\input{text_pre/03_Polydivision}
+%\input{text_pre/03_RealZeros}
+%\input{text_pre/03_ComplexZeros}
+
+
+
+%\input{text_pre/06_ExpEquations}
+%\input{text_pre/06_LogEquations}
+%\input{text_pre/06_ExpLogApplications}
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{Foundations of Trigonometry}\label{IntroTrig}
+\thispagestyle{empty}
+
+%\input{text_pre/07_Angles}
+\input{text_pre/07_TheUnitCircle}
+\input{text_pre/07_CircularFunctions}
+\input{text_pre/07_Identities}
+\input{text_pre/07_TrigGraphs}
+\input{text_pre/07_ArcTrig}
+
+%\clearpage{\pagestyle{empty}\cleardoublepage}
+%\chapter{Further Topics in Trigonometry}\label{AppExt}
+%\thispagestyle{empty}
+
+%
+%\input{text_pre/07_TrigEquIneq}
+%\input{text_pre/08_LawofSines}
+%\input{text_pre/08_LawofCosines}
+%\input{text_pre/08_IntroPolar}
+%\input{text_pre/08_PolarComplex}
+
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\appendix
+\thispagestyle{empty}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+\pagenumbering{arabic}\renewcommand{\thepage}{A.\arabic{page}}
+\makeexercisesection{Answers To Selected Problems}
+%
+%%
+%%
+%%%%%
+%%%%%%%%%%
+%%%%%%%%		 The following makes the index and includes
+%%%%%%%%		it in the file
+%%%%%%%%%%
+%%%%
+%%%%\clearpage{\pagestyle{empty}\cleardoublepage}
+%%%%\phantomsection
+%%%%\addcontentsline{toc}{chapter}{\indexname}
+%%%%\printindex
+%%%
+%%
+\qendheader
+\eendgeometry
+%\cleardoublepage
+
+\phantomsection
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\indexname}
+\printindex
+%\includepdf[pages={863-868}]{Calculus.pdf}
+
+\input{text/Inside_Cover_Of_The_Text_Material_Complete}
+
+
+\end{document}
+

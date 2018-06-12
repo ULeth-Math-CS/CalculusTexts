@@ -61,7 +61,7 @@ Replacing $f(c+\dx)$ with its tangent line approximation, we have
 								&=\fp(c)\dx		\label{eq:differential}
 \end{align}
 
-This final equation is important; we'll come back to it in Key Idea \ref{idea:differential}.
+This final equation is important; it becomes the basis of the upcoming Definition and Key Idea. In short, it says that when the $x$-value changes from $c$ to $c+\Delta x$, the $y$ value of a function $f$ changes by about $\fp(c)\Delta x$.
 
 We introduce two new variables, $dx$ and $dy$ in the context of a formal definition. %We defined $dx = \dx$; that is, it is a small change in $x$. We define
 
@@ -79,13 +79,13 @@ It is helpful to organize our new concepts and notations in one place.
 \keyidea{idea:differential}{Differential Notation}
 {Let $y = f(x)$ be a differentiable function. \index{differential!notation}
 \begin{enumerate}
-	\item $\dx$ represents a small, nonzero change in $x$ value.
-	\item	$dx$ represents a small, nonzero change in $x$ value (i.e., $\dx = dx$).
-	\item	$\dy$ is the change in $y$ value as $x$ changes by $\dx$; hence 
-	\[
-	\dy = f(x+\dx)-f(x).
-	\]
-	\item		$dy = \fp(x)dx$ which, by Equation (\ref{eq:differential}), is an \textit{approximation} of the change in $y$ value as $x$ changes by $\dx$; $dy \approx \dy$.
+	\item Let $\dx$ represent a small, nonzero change in $x$ value.
+	\item	Let $dx$ represent a small, nonzero change in $x$ value (i.e., $\dx = dx$).
+	\item	Let $\dy$ be the change in $y$ value as $x$ changes by $\dx$; hence 
+\[
+\dy = f(x+\dx)-f(x).
+\]
+	\item		Let $dy = \fp(x)dx$ which, by Equation (\ref{eq:differential}), is an \textit{approximation} of the change in $y$ value as $x$ changes by $\dx$; $dy \approx \dy$.
 \end{enumerate}
 }
 
@@ -168,9 +168,9 @@ We have $\ds \fp(x) = \frac{1}{2}(x^2+3x-1)^{-\frac12}(2x+3) = \frac{2x+3}{2\sqr
 
 Finding the differential $dy$ of $y=f(x)$ is really no harder than finding the derivative of $f$; we just \textit{multiply} $\fp(x)$ by $dx$. It is important to remember that we are not simply adding the symbol ``$dx$'' at the end.\\
 
-We have seen a practical use of differentials as they offer a good method of making certain approximations. Another use is \textit{error propagation.} Suppose a length is measured to be $x$, although the actual value is $x+\dx$ (where we hope \dx\ is small). This measurement of $x$ may be used to compute some other value; we can think of this as $f(x)$ for some function $f$. As the true length is $x+\dx$, one really should have computed $f(x+\dx)$. The difference between $f(x)$ and $f(x+\dx)$ is the propagated error. 
+We have seen a practical use of differentials as they offer a good method of making certain approximations. Another use is \textit{error propagation.} Suppose a length is measured to be $x$, although the actual value is $x+\dx$ (where \dx\ is the error, which we hope  is small). This measurement of $x$ may be used to compute some other value; we can think of this latter value as $f(x)$ for some function $f$. As the true length is $x+\dx$, one really should have computed $f(x+\dx)$. The difference between $f(x)$ and $f(x+\dx)$ is the propagated error. 
 
-How close are $f(x)$ and $f(x+\dx)$? This is a difference in ``y'' values; 
+How close are $f(x)$ and $f(x+\dx)$? This is a difference in ``y'' values:
 \[
 f(x+\dx)-f(x) = \dy \approx dy.
 \]

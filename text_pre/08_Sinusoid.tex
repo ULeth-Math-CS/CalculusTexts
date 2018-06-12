@@ -1,0 +1,319 @@
+\section{Applications of Sinusoids}
+\label{Sinusoid}
+
+In the same way exponential functions can be used to model a wide variety of phenomena in nature, (see Section \ref{ExpLogApplications}) the cosine and sine functions can be used to model their fair share of natural behaviours. In section \ref{TrigGraphs}, we introduced the concept of a sinusoid as a function which can be written either in the form $C(x) = A \cos(\omega x + \phi) + B$ for $\omega > 0$ or equivalently, in the form $S(x) = A \sin(\omega x + \phi) + B$ for $\omega > 0$.  At the time, we remained undecided as to which form we preferred, but the time for such indecision is over.  For clarity of exposition we focus on the sine function in this section and switch to the independent variable $t$, since the applications in this section are time-dependent. (Sine haters can use the co-function identity $\cos\left(\frac{\pi}{2} - \theta\right) = \sin(\theta)$ to turn all of the sines into cosines.) We reintroduce and summarize all of the important facts and definitions about this form of the sinusoid below.
+
+\smallskip
+
+\keyidea{sinesinusoidprops}{Properties of the Sinusoid $S(t) = A \sin(\omega t + \phi) + B$}{ \index{sinusoid ! properties of}
+
+\begin{itemize}
+
+\item  The \sword{amplitude}\index{sinusoid ! amplitude}\index{amplitude} is $|A|$
+
+\item  The \sword{angular frequency}\index{sinusoid ! frequency ! angular}\index{frequency ! angular} is $\omega$ and the \sword{ordinary frequency}\index{sinusoid ! frequency ! ordinary}\index{frequency ! ordinary} is $f  = \dfrac{\omega}{2\pi}$
+
+\item  The \sword{period}\index{sinusoid ! period}\index{period ! of a sinusoid} is  $T = \dfrac{1}{f} = \dfrac{2\pi}{\omega}$
+
+\item  The \sword{phase}\index{sinusoid ! phase}\index{phase} is $\phi$ and the \sword{phase shift}\index{sinusoid ! phase shift}\index{phase shift} is $-\dfrac{\phi}{\omega}$
+
+\item  The \sword{vertical shift}\index{sinusoid ! vertical shift}\index{sinusoid ! baseline} or \sword{baseline} is $B$
+
+\end{itemize}
+}
+
+\medskip
+
+Along with knowing these formulas, it is helpful to remember what these quantities mean in context.  The amplitude measures the maximum displacement of the sine wave from its baseline (determined by the vertical shift), the period is the length of time it takes to complete one cycle of the sinusoid, the angular frequency tells how many cycles are completed over an interval of length $2\pi$, and the ordinary frequency measures how many cycles occur per unit of time. The phase indicates what angle $\phi$ corresponds to $t=0$, and the phase shift represents how much of a `head start' the sinusoid has over the un-shifted sine function.  The figure below is repeated from Section \ref{TrigGraphs}.
+
+\mfigure[width=0.95\marginparwidth]{.5}{Properties of a generic sinusoid \index{sinusoid ! graph of}}{genericsinsuoidfigure}{figures/AppExtGraphics/Sinusoid-1}
+
+
+In Section \ref{circularmotion}, we introduced the concept of circular motion and in Section \ref{cosinesinebeyond}, we developed formulas for circular motion.  Our first foray into sinusoidal motion puts these notions to good use. 
+
+\medskip
+
+\example{ycoordonwheel}{Height on the Giant Wheel}{ Recall from Exercise \ref{giantwheelmotion} in Section \ref{Angles} that The Giant Wheel at Cedar Point is a circle with diameter 128 feet which sits on an 8 foot tall platform making its overall height 136 feet.   It completes two revolutions in 2 minutes and 7 seconds.  Assuming that the riders are at the edge of the circle, find a sinusoid which describes the height of the passengers above the ground  $t$ seconds after they pass the point on the wheel closest to the ground.}
+{We sketch the problem situation in Figure \ref{fig:bigwheel} and assume a counter-clockwise rotation. (Otherwise, we could just observe the motion of the wheel from the other side.)
+
+\mfigure[width=0.95\marginparwidth]{.2}{The Giant Wheel}{fig:bigwheel}{figures/AppExtGraphics/Sinusoid-2}
+
+We know from the equations given on page \pageref{equationsforcircularmotion} in Section \ref{cosinesinebeyond} that the $y$-coordinate for counter-clockwise motion on a circle of radius $r$ centred at the origin with constant angular velocity (frequency) $\omega$ is given by $y = r\sin(\omega t)$.  Here,  $t=0$ corresponds to the point $(r,0)$ so that $\theta$, the angle measuring the amount of rotation, is in standard position. In our case, the diameter of the wheel is 128 feet, so the radius is $r = 64$ feet. Since the wheel completes two revolutions in 2 minutes and 7 seconds (which is $127$ seconds) the period $T = \frac{1}{2} (127) = \frac{127}{2}$ seconds.  Hence, the angular frequency is $\omega = \frac{2\pi}{T} = \frac{4 \pi}{127}$ radians per second.  Putting these two pieces of information together, we have that  $y = 64 \sin\left(\frac{4 \pi}{127} t\right)$ describes the $y$-coordinate on the Giant Wheel after $t$ seconds, assuming it is centred at $(0,0)$ with $t=0$ corresponding to the point $Q$.  In order to find an expression for $h$, we take the point $O$ in the figure as the origin.    Since the base of the Giant Wheel ride is $8$ feet above the ground and the Giant Wheel itself has a radius of  $64$ feet, its center is $72$ feet above the ground. To account for this vertical shift upward, (we are readjusting our `baseline' from $y=0$ to $y=72$) we add $72$ to our formula for $y$ to obtain the new formula $h = y  + 72 = 64 \sin\left(\frac{4 \pi}{127} t\right) + 72$.  Next, we need to adjust things so that $t=0$ corresponds to the point $P$ instead of the point $Q$. This is where the phase comes into play.  Geometrically, we need to shift the angle $\theta$ in the figure back $\frac{\pi}{2}$ radians.  From Section \ref{cosinesinebeyond}, we know $\theta = \omega t = \frac{4 \pi}{127} t$, so we (temporarily) write the height in terms of $\theta$ as  $h =64 \sin\left(\theta\right) + 72$.    Subtracting $\frac{\pi}{2}$ from $\theta$ gives the final answer $h(t) = 64 \sin\left(\theta - \frac{\pi}{2}\right) + 72 = 64\sin\left(\frac{4 \pi}{127} t -\frac{\pi}{2} \right) + 72$. We can check the reasonableness of our answer by graphing $y = h(t)$ over the interval $\left[0, \frac{127}{2}\right]$ in Figure \ref{fig:sinusoid1}.
+
+\mfigure[width=0.95\marginparwidth]{.5}{The graph $y=h(t)=64\sin\left(\frac{4\pi}{127}t-\frac{\pi}{2}\right)+72$}{fig:sinusoid1}{figures/AppExtGraphics/Sinusoid-3}
+}
+
+\medskip
+
+A few remarks about Example \ref{ycoordonwheel} are in order.  First, note that the amplitude of $64$ in our answer corresponds to the radius of the Giant Wheel.  This means that passengers on the Giant Wheel never stray more than $64$ feet vertically from the center of the Wheel, which makes sense.  Second, the phase shift of our answer works out to be $\frac{\pi/2}{4\pi/127} = \frac{127}{8} = 15.875$.  This represents the `time delay' (in seconds) we introduce by starting the motion at the point $P$ as opposed to the point $Q$.  Said differently, passengers which `start' at $P$ take  $15.875$ seconds to `catch up' to the point $Q$.  
+
+\medskip
+
+%Our next example revisits the daylight data first introduced in Section \ref{Regression}, Exercise \ref{regsunlight}.
+
+%\begin{ex} \label{sinusoidsunlight} According to the \href{http://aa.usno.navy.mil/data/docs/RS_OneYear.php}{\underline{U.S. Naval Observatory}} website, the number of hours $H$ of daylight that Fairbanks, Alaska received on the 21st day of the $n$th month of 2009 is given below.  Here  $t = 1$ represents January 21, 2009, $t = 2$ represents February 21, 2009, and so on.  
+
+%\medskip
+
+%\small
+
+%\noindent \begin{tabular}{|l|r|r|r|r|r|r|r|r|r|r|r|r|} \hline
+%Month  & & & & & & & & & & & & \\
+%Number & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12\\ 
+%\hline 
+%Hours of  & & & & & & & & & & & & \\
+%Daylight & 5.8 & 9.3 & 12.4 & 15.9 & 19.4 & 21.8 & 19.4 & 15.6 & 12.4 & %9.1 & 5.6 & 3.3 \\ \hline
+%\end{tabular}
+
+%\normalsize
+
+%\medskip
+
+%\begin{enumerate}
+
+%\item  \label{roughsinusoidfit} Find a sinusoid which models these data and use a graphing utility to graph your answer along with the data. 
+
+%\item   Compare your answer to part \ref{roughsinusoidfit} to one obtained using the regression feature of a calculator.
+
+%\end{enumerate}
+
+%{\bf Solution.}
+
+%\begin{enumerate}
+
+%\item  To get a feel for the data, we plot it below.
+
+%\begin{center}
+
+%\begin{mfpic}[15][7.5]{-1}{13}{-1}{23}
+
+%\axes
+%\xmarks{1,2,3,4,5,6,7,8,9,10,11,12}
+%\ymarks{2,4,6,8,10,12,14,16,18,20,22}
+%\tlabel[cc](13,-0.5){\scriptsize $t$}
+%\tlabel[cc](0.5,23){\scriptsize $H$}
+%\tlabelsep{5pt}
+%\scriptsize
+%\axislabels{x}{{$1$} 1, {$2$} 2, {$3$} 3, {$4$} 4, {$5$} 5, {$6$} 6, %{$7$} 7, {$8$} 8, {$9$} 9, {$10$} 10, {$11$} 11, {$12$} 12}
+%\axislabels{y}{{$2$} 2, {$4$} 4, {$6$} 6, {$8$} 8, {$10$} 10, {$12$} 12, {$14$} 14, {$16$} 16, {$18$} 18, {$20$} 20, {$22$} 22}
+%\normalsize
+%\plotsymbol[3pt]{Square}{(1,5.8), (2,9.3), (3,12.4), (4, 15.9), (5, 19.4), (6,21.8), (7,19.4), (8,15.6), (9,12.4), (10,9.1), (11,5.6), (12, 3.3)}
+%\end{mfpic}
+
+%\end{center}
+%%%%Replace above by figure Sinusoid-4
+%\vspace*{-.15in}
+
+
+%The data certainly appear sinusoidal,\footnote{Okay, it appears to be the `$\wedge$' shape we saw in some of the graphs in Section \ref{AbsoluteValueFunctions}.  Just humor us.} but when it comes down to it, fitting a sinusoid to data manually is not an exact science.  We do our best to find the constants $A$, $\omega$, $\phi$ and $B$ so that the function $H(t) = A\sin(\omega t + \phi) + B$ closely matches the data.  We first go after the vertical shift $B$ whose value determines the baseline.  In a typical sinusoid, the value of $B$ is the average of the maximum and minimum values.  So here we take $B = \frac{3.3+21.8}{2} = 12.55$.  Next is the amplitude $A$ which is the displacement from the baseline to the maximum (and minimum) values.  We find $A = 21.8 - 12.55 = 12.55 - 3.3 = 9.25$.  At this point, we have $H(t) = 9.25\sin(\omega t + \phi) + 12.55$.  Next, we go after the angular frequency $\omega$.  Since the data collected is over the span of a year (12 months), we take the period $T = 12$ months.\footnote{Even though the data collected lies in the interval $[1,12]$, which has a length of $11$, we need to think of the data point at $t=1$ as a representative sample of the amount of daylight for every day in January. That is, it represents $H(t)$ over the interval $[0,1]$.  Similarly, $t=2$ is a sample of $H(t)$ over $[1,2]$, and so forth.}   This means $\omega = \frac{2\pi}{T} = \frac{2\pi}{12} = \frac{\pi}{6}$.  The last quantity to find is the phase $\phi$. Unlike the previous example,  it is easier in this case to find the phase shift $-\frac{\phi}{\omega}$.  Since we picked $A > 0$, the phase shift corresponds to the first value of $t$ with $H(t) = 12.55$ (the baseline value).\footnote{See the figure on page \pageref{genericsinsuoidfigure}.}  Here, we choose $t = 3$, since its corresponding $H$ value of $12.4$ is closer to  $12.55$ than the next value, $15.9$, which corresponds to $t=4$.  Hence, $-\frac{\phi}{\omega} = 3$, so $\phi = -3 \omega = -3 \left(\frac{\pi}{6}\right) = -\frac{\pi}{2}$.  We have $H(t) = 9.25 \sin\left(\frac{\pi}{6} t - \frac{\pi}{2}\right) + 12.55$. Below is a graph of our data with the curve $y = H(t)$.
+
+%\vspace{-.1in}
+
+%\begin{center}
+
+%\includegraphics[width=1.8in]{./AppExtGraphics/Sinusoid01.jpg}
+
+%\end{center}
+
+%\item  Using the `SinReg' command, we graph the calculator's regression below.
+
+%\vspace{-.25in}
+
+%\begin{center}
+
+%\begin{tabular}{ccc}
+
+%\includegraphics[width=1.8in]{./AppExtGraphics/Sinusoid02.jpg} &
+%\includegraphics[width=1.8in]{./AppExtGraphics/Sinusoid03.jpg} & 
+%\includegraphics[width=1.8in]{./AppExtGraphics/Sinusoid04.jpg} \\
+
+
+%\end{tabular}
+%\end{center}
+
+%While both models seem to be reasonable fits to the data, the calculator model is possibly the better fit.  The calculator does not give us an $r^{2}$ value like it did for linear regressions in Section \ref{Regression}, nor does it give us an $R^{2}$ value like it did for quadratic, cubic and quartic regressions as in Section \ref{GraphsofPolynomials}.  The reason for this, much like the reason for the absence of $R^{2}$ for the logistic model in Section \ref{ExpLogApplications}, is beyond the scope of this course.  We'll just have to use our own good judgment when choosing the best sinusoid model.  \qed
+
+%\end{enumerate}
+
+%\end{ex}
+
+\subsection{Harmonic Motion}
+\label{harmomicmotion}
+
+\mnote{.18}{The formula $w=mg$ is a consequence of Newton's Second Law of Motion $F = ma$ where $F$ is force, $m$ is mass and $a$ is acceleration.  In our present setting, the force involved is weight which is caused by the acceleration due to gravity.}
+
+One of the major applications of sinusoids in Science and Engineering is the study of \index{harmonic motion} \sword{harmonic motion}.   The equations for harmonic motion can be used to describe a wide range of phenomena, from the motion of an object on a spring, to the response of an electronic circuit.  In this subsection, we restrict our attention to modelling a simple spring system.  Before we jump into the Mathematics, there are some Physics terms and concepts we need to discuss.  In Physics, `mass' is defined as a measure of an object's resistance to straight-line motion whereas `weight' is the amount of force (pull) gravity exerts on an object.  An object's mass cannot change, (assuming the object isn't subjected to relativistic speeds \dots) while its weight could change.  An object which weighs 6 pounds on the surface of the Earth would weigh 1 pound on the surface of the Moon, but its mass is the same in both places. In the English system of units, `pounds' (lbs.) is a measure of force (weight), and the corresponding unit of mass is the `slug'. In the SI system, the unit of force is `Newtons' (N) and the associated unit of mass is the `kilogram' (kg). We convert between mass and weight using the formula $w = mg$.   Here, $w$ is the weight of the object, $m$ is the mass and $g$ is the acceleration due to gravity.  In the English system, $g = 32 \frac{\text{feet}}{\text{second}^2}$, and in the SI system, $g = 9.8\frac{\text{meters}}{\text{second}^2}$. Hence, on Earth a \textit{mass} of 1 slug \textit{weighs} 32 lbs. and a \textit{mass} of 1 kg \textit{weighs} 9.8 N.   Suppose we attach an object with mass $m$ to a spring as depicted below. The weight of the object will stretch the spring.   The system is said to be in `equilibrium' when the weight of the object is perfectly balanced with the restorative force of the spring.  How far the spring stretches to reach equilibrium depends on the spring's `spring constant'. Usually denoted by the letter $k$, the spring constant relates the force $F$ applied to the spring to the amount $d$ the spring stretches in accordance with \href{http://en.wikipedia.org/wiki/Hooke's_law}{\underline{Hooke's Law}} $F = kd$. (Look familiar?  We saw Hooke's Law in Section \ref{Variation}.) If the object is released above or below the equilibrium position, or if the object is released with an upward or downward velocity, the object will bounce up and down on the end of the spring until some external force stops it.  If we let $x(t)$ denote the object's displacement from the equilibrium position at time $t$, then $x(t) = 0$ means the object is at the equilibrium position, $x(t) < 0$ means the object is \textit{above} the equilibrium position, and $x(t) > 0$ means the object is \textit{below} the equilibrium position.  The function $x(t)$ is called the `equation of motion' of the object.
+
+
+
+\mnote{.85}{Note that $1$ pound $ = 1 \, \frac{\text{slug foot}}{\text{second}^2}$ and $1$ Newton $ = 1 \, \frac{\text{kg meter}}{\text{second}^2}$.} 
+
+\mnote{.7}{To keep units compatible, if we are using the English system, we use feet (ft.) to measure displacement.  If we are in the SI system, we measure displacement in metres (m). Time is always measured in seconds (s). (This text is based on an original source from the USA. One of these days we'll get around to updating all the archaic units to metric.)}
+
+\medskip
+
+\noindent\begin{minipage}{\textwidth}
+\begin{center}
+\begin{tabular}{ccc}
+\myincludegraphics[width=0.3\textwidth]{figures/AppExtGraphics/Sinusoid-5} & 
+\myincludegraphics[width=0.3\textwidth]{figures/AppExtGraphics/Sinusoid-6} &
+\myincludegraphics[width=0.3\textwidth]{figures/AppExtGraphics/Sinusoid-7} \\
+$x(t) = 0$ at the &
+$x(t) < 0$ above the &
+$x(t) > 0$ below the \\
+equilibrium position & 
+equilibrium position & 
+equilibrium position 
+\end{tabular}
+\end{center}
+\captionsetup{type=figure}
+\caption{A mass on a spring undergoing (approximate) simple harmonic motion}
+\end{minipage}
+
+\medskip
+
+If we ignore all other influences on the system except gravity and the spring force, then Physics tells us that gravity and the spring force will battle each other forever and the object will oscillate indefinitely.  In this case, we describe the motion as `free' (meaning there is no external force causing the motion) and `undamped' (meaning we ignore friction caused by surrounding medium, which in our case is air).  The following theorem, which comes from Differential Equations, gives $x(t)$ as a function of the mass $m$ of the object, the spring constant $k$, the initial displacement $x_{0}$ of the object and initial velocity $v_{0}$ of the object.  As with $x(t)$, $x_{0} = 0$ means the object is released from the equilibrium position, $x_{0} < 0$ means the object is released \textit{above} the equilibrium position and $x_{0}>0$ means the object is released \textit{below} the equilibrium position.  As far as the initial velocity $v_{0}$ is concerned, $v_{0} =0 $ means the object is released `from rest,' $v_{0}<0$ means the object is heading \textit{upwards} and $v_{0}>0$ means the object is heading \textit{downwards}.
+
+\mnote{.5}{The sign conventions here are carried over from Physics.  If not for the spring, the object would fall towards the ground, which is the `natural' or `positive' direction.  Since the spring force acts in direct opposition to gravity,  any movement upwards is considered `negative'.}
+
+\medskip
+
+\theorem{freeundampedmotion}{Equation for Free Undamped Harmonic Motion}{  Suppose an object of  mass $m$ is suspended from a spring with spring constant $k$.  If the initial displacement from the equilibrium position is $x_{0}$ and the initial velocity of the object is $v_{0}$, then the displacement $x$ from the equilibrium position at time $t$ is given by  $x(t) = A \sin(\omega t + \phi)$ where
+
+\begin{itemize}
+
+\item  $\omega = \sqrt{\dfrac{k}{m}}$ and $A = \sqrt{x_{0}^2 + \left( \dfrac{v_{0}}{\omega}\right)^2}$
+
+\item $A\sin(\phi) = x_{0}$ and $A\omega\cos(\phi) = v_{0}$.
+
+\end{itemize} 
+}
+
+\medskip
+
+It is a great exercise in `dimensional analysis' to verify that the formulas given in Theorem \ref{freeundampedmotion} work out so that $\omega$ has units $\frac{1}{s}$ and  $A$ has units ft. or m, depending on which system we choose.
+
+\medskip
+
+\example{freeudampedex}{Harmonic motion of a mass on a spring}{  Suppose an object weighing  64 pounds stretches a spring 8 feet.  
+
+\begin{enumerate}
+
+\item  If the object is attached to the spring and released 3 feet below the equilibrium position from rest, find the equation of motion of the object, $x(t)$.  When does the object first pass through the equilibrium position?  Is the object heading upwards or downwards at this instant? 
+
+\item  If the object is attached to the spring and released 3 feet below the equilibrium position with an upward velocity of $8$ feet  per second, find the equation of motion of the object, $x(t)$.  What is the longest distance the object travels \textit{above} the equilibrium position?  When does this first happen? Confirm your result using a graphing utility.
+
+\end{enumerate}}
+{In order to use the formulas in Theorem \ref{freeundampedmotion}, we first need to determine the spring constant $k$ and the mass of the object $m$.  To find $k$, we use Hooke's Law $F = kd$.  We know the object weighs $64$ lbs. and stretches the spring $8$ ft.. Using $F = 64$ and $d = 8$,  we get  $64  = k \cdot 8 $, or  $k = 8 \frac{\text{lbs.}}{\text{ft.}}$.  To find $m$, we use $w = mg$ with $w = 64$ lbs. and $g =32 \frac{\text{ft.}}{s^2}$.  We get $m = 2$ slugs.  We can now proceed to apply Theorem \ref{freeundampedmotion}.
+
+\begin{enumerate}
+
+\item  With $k = 8$ and $m = 2$, we get $\omega = \sqrt{\frac{k}{m}} = \sqrt{\frac{8}{2}} = 2$. We are told that the object is released 3 feet \textit{below} the equilibrium position `from rest.'  This means  $x_{0} = 3$ and  $v_{0} = 0$.  Therefore, $A = \sqrt{x_{0}^2 + \left( \frac{v_{0}}{\omega}\right)^2} = \sqrt{3^2 + 0^2} = 3$.  To determine the phase $\phi$, we have $A\sin(\phi) = x_{0}$, which in this case gives $3 \sin(\phi) = 3$ so $\sin(\phi) = 1$.  Only $\phi = \frac{\pi}{2}$ and angles coterminal to it satisfy this condition, so we pick the phase to be $\phi = \frac{\pi}{2}$. (For confirmation, we note that $A\omega\cos(\phi) = v_{0}$, which in this case reduces to $6\cos(\phi) = 0$.) Hence, the equation of motion is $x(t) = 3\sin\left(2t + \frac{\pi}{2}\right)$.  To find when the object passes through the equilibrium position we solve $x(t)= 3\sin\left(2t + \frac{\pi}{2}\right) = 0$. Going through the usual analysis we find $t = -\frac{\pi}{4} + \frac{\pi}{2} k$ for integers $k$. Since we are interested in the first time the object passes through the equilibrium position, we look for the smallest positive $t$ value which in this case is $t = \frac{\pi}{4} \approx 0.78$ seconds after the  start of the motion.  Common sense suggests that if we release the object below the equilibrium position, the object should be travelling upwards when it first passes through it.  To check this answer, we graph one cycle of  $x(t)$.  Since our applied domain in this situation is $t \geq 0$, and the period of $x(t)$ is $T = \frac{2\pi}{\omega} = \frac{2\pi}{2} = \pi$, we graph $x(t)$ over the interval $[0,\pi]$.  Remembering that $x(t) > 0$ means the object is below the equilibrium position and $x(t) < 0$ means the object is above the equilibrium position, the fact our graph in Figure \ref{fig:sinusoid2} is crossing through the $t$-axis from positive $x$ to negative $x$ at $t = \frac{\pi}{4}$ confirms our answer.
+
+\mfigure[width=0.95\marginparwidth]{.8}{$y=x(t)=3\sin(2t+\frac{\pi}{2})$ in Example \ref{freeudampedex}.1}{fig:sinusoid2}{figures/AppExtGraphics/Sinusoid-8}
+
+\item  The only difference between this problem and the previous problem is that we now release the object with an upward velocity of $8 \, \frac{\text{ft}}{s}$.  We still have $\omega = 2$ and $x_{0} = 3$, but now we have $v_{0} = -8$, the negative indicating the velocity is directed upwards. Here, we get 
+\[
+ A = \sqrt{x_{0}^2 + \left( \frac{v_{0}}{\omega}\right)^2} = \sqrt{3^2 + (-4)^2} = 5.
+\]
+From $A\sin(\phi) = x_{0}$, we get $5\sin(\phi) = 3$ which gives $\sin(\phi) = \frac{3}{5}$.  From  $A\omega\cos(\phi) = v_{0}$, we get $10\cos(\phi) = -8$, or $\cos(\phi) = -\frac{4}{5}$.  This means that $\phi$ is a Quadrant II angle which we can describe in terms of either arcsine or arccosine.  Since $x(t)$ is expressed in terms of sine, we choose to express $\phi = \pi - \arcsin\left(\frac{3}{5}\right)$.  Hence, $x(t)= 5 \sin\left(2t + \left[\pi - \arcsin\left(\frac{3}{5}\right)\right]\right)$.  Since the amplitude of $x(t)$ is $5$, the object will travel at most $5$ feet above the equilibrium position.  To find when this happens, we solve the equation $x(t)= 5 \sin\left(2t + \left[\pi - \arcsin\left(\frac{3}{5}\right)\right]\right)= -5$, the negative once again signifying that the object is \textit{above} the equilibrium position.  Going through the usual machinations, we get 
+\[
+ t = \frac{1}{2} \arcsin\left(\frac{3}{5}\right) +\frac{\pi}{4}  + \pi k
+\]
+for all integers $k$. The smallest of these values occurs when $k=0$, that is, $t = \frac{1}{2} \arcsin\left(\frac{3}{5}\right) +\frac{\pi}{4} \approx 1.107$ seconds after the start of the motion. To check our answer using the computer, we graph 
+\[
+ y = 5 \sin\left(2x + \left[\pi - \arcsin\left(\frac{3}{5}\right)\right]\right)
+\]
+using GeoGebra and confirm the coordinates of the first relative minimum to be approximately $(1.107,-5)$: see Figure \ref{fig:sinusoid3}.
+%\enlargethispage{\baselineskip}
+
+\mfigure[width=0.95\marginparwidth]{.58}{The graph $y=5\sin(2x+[\pi-\arcsin(\frac{3}{5})])$ in Example \ref{freeudampedex}.2}{fig:sinusoid3}{figures/AppExtGraphics/Sinusoid01}
+
+\end{enumerate}
+}
+
+\medskip
+
+It is possible, though beyond the scope of this course, to model the effects of friction and other external forces acting on the system. (Take a good Differential Equations class to see this!)  While we may not have the Physics and Calculus background to \textit{derive} equations of motion for these scenarios, we can certainly analyze them.  We examine three cases in the following example.
+
+\medskip
+
+\example{underdampedresonance}{Damping, forcing, and resonance}{
+\begin{enumerate}
+
+\item  Write $x(t) = 5e^{-t/5} \cos(t) + 5e^{-t/5} \sqrt{3} \sin(t)$ in the form $x(t) = A(t) \sin(\omega t + \phi)$.  Graph $x(t)$ using a graphing utility.
+
+\item  Write $x(t) = (t+3)\sqrt{2} \cos(2t) + (t+3) \sqrt{2} \sin(2t)$ in the form $x(t) = A(t) \sin(\omega t + \phi)$.  Graph $x(t)$  using a graphing utility.
+
+\item  Find the period of $x(t) = 5\sin(6t) - 5\sin\left(8t\right)$.  Graph $x(t)$ using a graphing utility.
+
+\ifthenelse{\boolean{colour}}{
+\mtable{.28}{Graphing $x(t)$ in Example \ref{underdampedresonance}.1}{fig:sinusoid4}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.95\marginparwidth]{figures/AppExtGraphics/Sinusoid02}\\
+(a) $y=10e^{-x/5}\sin(x+\frac{\pi}{3})$\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/AppExtGraphics/Sinusoid03}\\
+(b) {\color{blue} $y=10e^{-x/5}\sin(x+\frac{\pi}{3})$}, {\color{red} $y=\pm 10e^{-x/5}$}
+\end{tabular}}}
+{\mtable{.28}{Graphing $x(t)$ in Example \ref{underdampedresonance}.1}{fig:sinusoid4}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.95\marginparwidth]{figures/AppExtGraphics/Sinusoid02}\\
+(a) $y=10e^{-x/5}\sin(x+\frac{\pi}{3})$\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/AppExtGraphics/Sinusoid03}\\
+(b) {\color{gray} $y=10e^{-x/5}\sin(x+\frac{\pi}{3})$}, {\color{black} $y=\pm 10e^{-x/5}$}
+\end{tabular}}}
+
+\end{enumerate}}
+{
+\begin{enumerate}
+
+\item  We start rewriting  $x(t) = 5e^{-t/5} \cos(t) + 5e^{-t/5} \sqrt{3} \sin(t)$ by factoring out   $5e^{-t/5}$ from both terms to get  $x(t) = 5e^{-t/5} \left( \cos(t) + \sqrt{3} \sin(t)\right)$. We convert what's left in parentheses to the required form using the formulas introduced in Exercise  \ref{sinusoidexercise2} from Section \ref{TrigGraphs}.  We find $\left( \cos(t) + \sqrt{3} \sin(t)\right) = 2\sin\left(t+\frac{\pi}{3}\right)$ so that $x(t) = 10e^{-t/5} \sin\left(t + \frac{\pi}{3}\right)$.  Graphing this on the calculator as $y = 10e^{-x/5} \sin\left(x + \frac{\pi}{3}\right)$ reveals some interesting behaviour: see Figure \ref{fig:sinusoid4}(a).  The sinusoidal nature continues indefinitely, but it is being attenuated.  In the sinusoid $A \sin(\omega x + \phi)$, the coefficient $A$ of the sine function is the amplitude.  In the case of $y = 10e^{-x/5} \sin\left(x + \frac{\pi}{3}\right)$, we can think of the \textit{function} $A(x) = 10e^{-x/5}$ as the amplitude.  As $x \rightarrow \infty$, $10e^{-x/5} \rightarrow 0$ which means the amplitude continues to shrink towards zero.  Indeed, if we graph $y = \pm 10e^{-x/5}$ along with $y = 10e^{-x/5} \sin\left(x + \frac{\pi}{3}\right)$ in Figure \ref{fig:sinusoid4}(b), we see this attenuation taking place.  This equation corresponds to the motion of an object on a spring where there is a slight force which acts to `damp', or slow the motion.  An example of this kind of force would be the friction of the object against the air. In this model, the object oscillates forever, but with smaller and smaller amplitude. 
+
+
+
+\item  Proceeding as in the first example, we factor out $(t+3)\sqrt{2}$ from each term in the function $x(t) = (t+3)\sqrt{2} \cos(2t) + (t+3) \sqrt{2} \sin(2t)$ to get $x(t) = (t+3)\sqrt{2}(\cos(2t) + \sin(2t))$.   We find $(\cos(2t) + \sin(2t)) = \sqrt{2} \sin\left(2t + \frac{\pi}{4}\right)$, so $x(t) = 2(t+3) \sin\left(2t + \frac{\pi}{4}\right)$.  Graphing this on the calculator as $y = 2(x+3) \sin\left(2x + \frac{\pi}{4}\right)$, we find the sinusoid's amplitude growing.  Since our amplitude function here is $A(x) = 2(x+3) = 2x+6$, which continues to grow without bound as $x \rightarrow \infty$, this is hardly surprising.  The phenomenon illustrated here is `forced' motion.  That is, we imagine that the entire apparatus on which the spring is attached is oscillating as well.  In this case, we are witnessing a `resonance' effect -- the frequency of the external oscillation matches the frequency of the motion of the object on the spring. (The reader is invited to investigate the destructive implications of \href{http://en.wikipedia.org/wiki/Resonance}{\underline{resonance}}.)
+
+\ifthenelse{\boolean{colour}}{
+\mtable{.7}{Graphing $x(t)$ in Example \ref{underdampedresonance}.2}{fig:sinusoid5}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.95\marginparwidth]{figures/AppExtGraphics/Sinusoid04}\\
+(a) $y=2(x+3)\sin(2x+\frac{\pi}{4}$\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/AppExtGraphics/Sinusoid05}\\
+(b) {\color{blue} $y=2(x+3)\sin(2x+\frac{\pi}{4}$}, {\color{red} $y=\pm 2(x+3)$}
+\end{tabular}}}
+{\mtable{.7}{Graphing $x(t)$ in Example \ref{underdampedresonance}.2}{fig:sinusoid5}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.95\marginparwidth]{figures/AppExtGraphics/Sinusoid04}\\
+(a) $y=2(x+3)\sin(2x+\frac{\pi}{4}$\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/AppExtGraphics/Sinusoid05}\\
+(b) {\color{gray} $y=2(x+3)\sin(2x+\frac{\pi}{4}$}, {\color{black} $y=\pm 2(x+3)$}
+\end{tabular}}}
+
+
+\item Last, but not least, we come to  $x(t) = 5\sin(6t) - 5\sin(8t)$.  To find the period of this function, we need to determine the length of the smallest interval on which both $f(t) = 5\sin(6t)$ and $g(t) = 5\sin(8t)$ complete a whole number of cycles.  To do this, we take the ratio of their frequencies and reduce to lowest terms:  $\frac{6}{8} = \frac{3}{4}$.  This tells us that for every $3$ cycles $f$ makes, $g$ makes $4$. In other words, the period of $x(t)$ is three times the period of $f(t)$ (which is four times the period of $g(t)$), or $\pi$.  We graph $y = 5\sin(6x) - 5\sin(8x)$ over $[0,\pi]$ on the calculator to check this.  This equation of motion also results from `forced' motion, but here the frequency of the external oscillation is different than that of the object on the spring.  Since the sinusoids here have different frequencies, they are `out of sync' and  do not amplify each other as in the previous example.  Taking things a step further, we can use a sum to product identity to rewrite $x(t) = 5\sin(6t) - 5\sin(8t)$ as $x(t) = -10 \sin(t) \cos(7t)$.  The lower frequency factor in this expression,  $-10\sin(t)$, plays an interesting role in the graph of $x(t)$.  Below we graph $y = 5\sin(6x) - 5\sin(8x)$ and $y = \pm 10 \sin(x)$ over $[0,2\pi]$.  This is an example of the `beat' phenomena, and the curious reader is invited to explore this concept as well. (A good place to start is this article on \href{http://en.wikipedia.org/wiki/Beat_(acoustics)}{\underline{beats}}.)
+
+\ifthenelse{\boolean{colour}}{
+\mtable{.3}{Graphing $x(t)$ in Example \ref{underdampedresonance}.2}{fig:sinusoid6}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.95\marginparwidth]{figures/AppExtGraphics/Sinusoid06}\\
+(a) $y = 5\sin(6x) - 5\sin(8x)$ over $[0,\pi]$\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/AppExtGraphics/Sinusoid07}\\
+(b) {\color{blue} $y = 5\sin(6x) - 5\sin(8x)$} and\\  {\color{red} $y = \pm 10 \sin(x)$ over $[0,2\pi]$}
+\end{tabular}}}
+{\mtable{.3}{Graphing $x(t)$ in Example \ref{underdampedresonance}.2}{fig:sinusoid6}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.95\marginparwidth]{figures/AppExtGraphics/Sinusoid06}\\
+(a) $y = 5\sin(6x) - 5\sin(8x)$ over $[0,\pi]$\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/AppExtGraphics/Sinusoid07}\\
+(b) {\color{gray} $y = 5\sin(6x) - 5\sin(8x)$} and\\  {\color{black} $y = \pm 10 \sin(x)$ over $[0,2\pi]$}
+\end{tabular}}}
+\end{enumerate}
+}
+
+\printexercises{exercises/08_01_exercises}

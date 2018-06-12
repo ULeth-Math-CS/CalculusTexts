@@ -1,0 +1,802 @@
+\section{Exponential and Logarithmic Functions}
+\subsection{Introduction to Exponential and Logarithmic Functions}
+
+\label{IntroExpLogs}
+
+Of all of the functions we study in this text, exponential and logarithmic functions are possibly the ones which impact everyday life the most.  This section introduces us to these functions while the rest of the chapter will more thoroughly explore their properties.  Up to this point, we have dealt with functions which involve terms like $x^2$ or $x^{2/3}$, in other words, terms of the form  $x^{p}$ where the base of the term, $x$, varies but the exponent of each term, $p$, remains constant.  In this chapter, we study functions of the form $f(x) = b^{x}$ where the base $b$ is a constant and the exponent $x$ is the variable.  We start our exploration of these functions with $f(x) = 2^{x}$. (Apparently this is a tradition.  Every textbook we have ever read starts with $f(x) = 2^{x}$.) We make a table of values, plot the points and connect the dots in a pleasing fashion: see Figure \ref{fig:introexp1}
+
+\mnote{.8}{Exponential and logarithmic functions frequently occur in solutions to differential equations, which are used to produce mathematical models of phenomena throughout the physical, life, and social sciences. You'll see some examples if you continue on to Calculus I and II, and even more if you take Math 3600, our first course in differential equations.}
+
+\mtable{.5}{Plotting $f(x)=2^x$}{fig:introexp1}{
+\begin{tabular}{c}
+\setlength{\extrarowheight}{4pt}
+\begin{tabular}{|r||r|r|}  
+\hline
+ $x$ & $f(x)$ & $(x,f(x))$ \\ \hline
+$-3$ & $2^{-3} = \frac{1}{8}$ & $\left(-3, \frac{1}{8} \right)$ \\ [2pt] \hline
+$-2$ & $2^{-2} = \frac{1}{4}$ &  $\left(-2, \frac{1}{4} \right)
+$ \\ [2pt] \hline
+$-1$ & $2^{-1} = \frac{1}{2}$ &  $\left(-1, \frac{1}{2} \right)$ \\ [2pt]  \hline
+$0$  & $2^{0} = 1$ & $( 0 ,1)$ \\  \hline
+$1$  & $2^{1} = 2$ & $( 1, 2)$ \\  \hline
+$2$ & $2^{2} = 4$ & $(2,4)$ \\  \hline
+$3$  & $2^{3} = 8$ & $(3, 8)$ \\  \hline
+\end{tabular}
+\setlength{\extrarowheight}{0pt}
+\\
+\\
+\myincludegraphics{figures/ExpLogsGraphics/IntroExpLogs-1}
+\end{tabular}}
+
+A few remarks about the graph of $f(x) = 2^{x}$ which we have constructed are in order.  As $x \rightarrow -\infty$ and attains values like $x = -100$ or $x=-1000$, the function $f(x) = 2^{x}$ takes on values like $f(-100) = 2^{-100} = \frac{1}{2^{100}}$ or $f(-1000) = 2^{-1000} = \frac{1}{2^{1000}}$.  In other words, as $x \rightarrow -\infty$, \[2^{x} \approx \frac{1}{\mbox{very big $(+)$}}  \approx \mbox{very small $(+)$}\]  So as $x \rightarrow -\infty$, $2^{x} \rightarrow 0^{+}$.  This is represented graphically using the $x$-axis (the line $y = 0$) as a horizontal asymptote.  On the flip side, as $x \rightarrow \infty$, we find $f(100) = 2^{100}$, $f(1000) = 2^{1000}$, and so on, thus $2^{x} \rightarrow \infty$. As a result, our graph suggests the range of $f$ is $(0,\infty)$.  The graph of $f$ passes the Horizontal Line Test which means $f$ is one-to-one and hence invertible.  We also note that when we `connected the dots in a pleasing fashion', we have made the implicit assumption that $f(x) = 2^{x}$ is continuous (recall that this means there are no holes or other kinds of breaks in the graph) and has a domain of all real numbers.  In particular, we have suggested that things like $2^{\sqrt{3}}$ exist as real numbers.  We should take a moment to discuss what something like $2^{\sqrt{3}}$ might mean, and refer the interested reader to a solid course in Calculus for a more rigorous explanation.  The number $\sqrt{3} = 1.73205 \ldots$ is an irrational number and as such, its decimal representation neither repeats nor terminates.  We can, however, approximate $\sqrt{3}$ by terminating decimals, and it stands to reason (this is where Calculus and continuity come into play) that we can use these to approximate $2^{\sqrt{3}}$.  For example, if we approximate $\sqrt{3}$ by $1.73$, we can approximate $2^{\sqrt{3}} \approx 2^{1.73} = 2^{\frac{173}{100}} = \sqrt[100]{2^{173}}$. It is not, by any means, a pleasant number, but it is at least a number that we understand in terms of powers and roots.  It also stands to reason that better and better approximations of $\sqrt{3}$ yield better and better approximations of $2^{\sqrt{3}}$, so the value of $2^{\sqrt{3}}$ should be the result of this sequence of approximations. 
+
+\mnote{.15}{To fully understand the argument we used to define $2^x$ when $x$ is irrational, you'll have to proceed far enough through the Calculus sequence (Calculus III should do it) to encounter the topic of convergence of infinite sequences.}
+
+\pagebreak
+
+Suppose we wish to study the family of functions $f(x) = b^{x}$.  Which bases $b$ make sense to study?  We find that we run into difficulty if $b < 0$.  For example, if $b = -2$, then the function $f(x) = (-2)^{x}$ has trouble, for instance, at $x = \frac{1}{2}$ since $(-2)^{1/2} = \sqrt{-2}$ is not a real number. In general, if $x$ is any rational number with an even denominator, then $(-2)^{x}$ is not defined, so we must restrict our attention to bases $b \geq 0$.  What about $b = 0$?  The function $f(x) = 0^{x}$ is undefined for $x \leq 0$ because we cannot divide by $0$ and $0^{0}$ is an indeterminant form.  For $x > 0$, $0^{x} = 0$ so the function  $f(x) = 0^{x}$ is the same as the function $f(x) = 0$, $x > 0$. \phantomsection \label{indeterminantformtwo} We know everything we can possibly know about this function, so we exclude it from our investigations.  The only other base we exclude is $b=1$, since the function $f(x) = 1^{x} = 1$ is, once again, a function we have already studied.  We are now ready for our definition of exponential functions.
+
+\smallskip
+
+
+\definition{expfcndefn}{Exponential function}{  A function of the form $f(x) = b^{x}$ where $b$ is a fixed real number, $b > 0$, $b \neq 1$ is called a \index{function ! exponential}\index{exponential function ! definition of}\sword{base \emph{b} exponential function}.
+}
+
+\smallskip
+
+We leave it to the reader to verify (by graphing some more examples on your own) that if $b > 1$, then the exponential function $f(x) = b^{x}$ will share the same basic shape and characteristics as $f(x) = 2^{x}$.  What if $0 < b < 1$?  Consider $g(x) = \left(\frac{1}{2}\right)^{x}$.  We could certainly build a table of values and connect the points, or we could take a step back and note that $g(x) = \left(\frac{1}{2}\right)^{x} = \left(2^{-1}\right)^{x} = 2^{-x} = f(-x)$, where $f(x) = 2^{x}$.  The graph of $f(-x)$ is obtained from the graph of $f(x)$ by reflecting it across the $y$-axis. We get the graph in Figure \ref{fig:introexp2} (b).
+
+\mtable{.3}{Reflecting $y=2^x$ across the $y$-axis to obtain the graph $y=2^{-x}$}{fig:introexp2}{
+\begin{tabular}{c}
+\myincludegraphics{figures/ExpLogsGraphics/IntroExpLogs-2}\\
+(a) $y=f(x)=2^x$\\
+\\
+\myincludegraphics{figures/ExpLogsGraphics/IntroExpLogs-3}\\
+(b) $y=g(x)=f(-x)=2^{-x}$
+\end{tabular}}
+
+We see that the domain and range of $g$ match that of $f$, namely $(-\infty, \infty)$ and $(0,\infty)$, respectively. Like $f$, $g$ is also one-to-one.  Whereas $f$ is always increasing, $g$ is always decreasing.  As a result, as $x \rightarrow -\infty$, $g(x) \rightarrow \infty$, and on the flip side, as $x \rightarrow \infty$, $g(x) \rightarrow 0^{+}$.  It shouldn't be too surprising that for all choices of the base $0 < b < 1$, the graph of $y=b^{x}$ behaves similarly to the graph of $g$.  We summarize the basic properties of exponential functions in the following theorem. (The proof of which, like many things discussed in the text, requires Calculus.)
+
+\smallskip
+
+\theorem{expfcnprops}{Properties of Exponential Functions}{ Suppose $f(x) = b^{x}$. \index{exponential function ! graphical properties of}
+
+\begin{itemize}
+
+\item  The domain of $f$ is $(-\infty, \infty)$ and the range of $f$ is $(0, \infty)$.
+
+\item  $(0,1)$ is on the graph of $f$ and $y=0$ is a horizontal asymptote to the graph of $f$.
+
+\item  $f$ is one-to-one, continuous and smooth (the graph of $f$ has no sharp turns or corners).
+
+\end{itemize}
+
+\begin{multicols}{2}
+
+\begin{itemize}
+
+\item  If $b > 1$:
+
+\begin{itemize}
+
+\item  $f$ is always increasing
+
+\item  As $x \rightarrow -\infty$, $f(x) \rightarrow 0^{+}$
+
+\item  As $x \rightarrow \infty$, $f(x) \rightarrow \infty$
+
+\item  The graph of $f$ resembles:
+
+\begin{center}
+\myincludegraphics{figures/ExpLogsGraphics/IntroExpLogs-4}
+
+$y = b^{x}$, $b > 1$
+\end{center}
+
+\end{itemize}
+
+\end{itemize}
+
+
+\begin{itemize}
+
+\item  If $0<b<1$:
+
+\begin{itemize}
+
+\item  $f$ is always decreasing
+
+\item  As $x \rightarrow -\infty$, $f(x) \rightarrow \infty$
+
+\item  As $x \rightarrow \infty$, $f(x) \rightarrow 0^{+}$
+
+\item  The graph of $f$ resembles:
+
+\begin{center}
+\myincludegraphics{figures/ExpLogsGraphics/IntroExpLogs-5}
+
+$y = b^{x}$, $0 < b < 1$
+\end{center}
+
+\end{itemize}
+
+\end{itemize} 
+
+\end{multicols}
+}
+
+\smallskip
+
+Of all of the bases for exponential functions, two occur the most often in scientific circles.  The first, base $10$, is often called the \index{exponential function ! common base}\index{common base}\sword{common base}.  The second base is an irrational number, $e \approx 2.718$, called the \index{natural base}\index{exponential function ! natural base}\sword{natural base}.  You may encounter a more formal discussion of the number $e$ in later Calculus courses. For now, it is enough to know that since $e > 1$, $f(x) = e^{x}$ is an increasing exponential function.  The following examples give us an idea how these functions are used in the wild.
+
+\medskip
+
+\example{cardepreciationex}{Modelling vehicle depreciation}{ The value of a car can be modelled by $V(x) = 25\left(\frac{4}{5}\right)^{x}$, where $x \geq 0$ is age of the car in years and $V(x)$ is the value in thousands of dollars. \index{depreciation}
+
+\begin{enumerate}
+
+\item  Find and interpret $V(0)$.
+
+\item  Sketch the graph of $y=V(x)$ using transformations.
+
+\item  Find and interpret the horizontal asymptote of the graph you found in 2.
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item  To find $V(0)$, we replace $x$ with $0$ to obtain $V(0) = 25\left(\frac{4}{5}\right)^{0} = 25$.  Since $x$ represents the age of the car in years, $x=0$ corresponds to the car being brand new.  Since $V(x)$ is measured in thousands of dollars, $V(0)=25$ corresponds to a value of $\$ 25,\!000$.  Putting it all together, we interpret $V(0)=25$ to mean the purchase price of the car was $\$25,\!000$.
+
+\item  To graph $y=25\left(\frac{4}{5}\right)^{x}$,  we start with the basic exponential function $f(x)=\left(\frac{4}{5}\right)^{x}$.  Since the base $b = \frac{4}{5}$ is between $0$ and $1$, the graph of $y=f(x)$ is decreasing.  We plot the $y$-intercept $(0,1)$ and two other points, $\left(-1, \frac{5}{4}\right)$ and $\left(1, \frac{4}{5}\right)$, and label the horizontal asymptote $y=0$.  To obtain $V(x) = 25\left(\frac{4}{5}\right)^{x}$, $x \geq 0$, we multiply the output from $f$ by $25$, in other words, $V(x) = 25 f(x)$. This results in a vertical stretch by a factor of $25$.  We multiply all of the $y$ values in the graph by $25$ (including the $y$ value of the horizontal asymptote) and obtain the points $\left(-1,\frac{125}{4}\right)$, $(0,25)$ and $(1,20)$. The horizontal asymptote remains $y=0$. Finally, we restrict the domain to $[0,\infty)$ to fit with the applied domain given to us.  We have the result in Figure \ref{fig:introexp3}.
+
+\mtable{.7}{The graph $y=V(x)$ in Example \ref{cardepreciationex}}{fig:introexp3}{
+\begin{tabular}{c}
+\myincludegraphics{figures/ExpLogsGraphics/IntroExpLogs-6}\\
+$y=f(x)=\left(\frac{4}{5}\right)^x$\\
+\\
+$\boldsymbol{\downarrow}$\\
+\\
+\myincludegraphics{figures/ExpLogsGraphics/IntroExpLogs-7}\\
+$y=V(x)=25f(x)$, $x\geq 0$
+\end{tabular}}
+
+\item  We see from the graph of $V$ that its horizontal asymptote is $y=0$.  (We leave it to reader to verify this analytically by thinking about what happens as we take larger and larger powers of $\frac{4}{5}$.)  This means as the car gets older, its value diminishes to $0$. 
+ 
+\end{enumerate}
+}
+
+\medskip
+
+The function in the previous example is often called a `decay curve'.  Increasing exponential functions are used to model `growth curves' many examples of which are encountered in applications of exponential functions.  For now, we present another common decay curve which will serve as the basis for further study of exponential functions.  Although it may look more complicated than the previous example, it is actually just a basic exponential function which has been modified by a few transformations.
+
+\medskip
+
+\example{exptempex}{Newton's Law of Cooling}{ According to \href{http://en.wikipedia.org/wiki/Heat_transfer\#Newton.27s_law_of_cooling}{\underline{Newton's Law of Cooling}} the temperature of coffee $T$ (in degrees Fahrenheit) $t$ minutes after it is served can be modelled by $T(t) = 70 + 90 e^{-0.1 t}$. \index{Newton's Law of Cooling}
+
+%\mnote{.2}{We will discuss Newton's Law of Cooling in greater detail in Section \ref{ExpLogApplications}.}
+
+\begin{enumerate}
+
+\item  Find and interpret $T(0)$.
+
+\item  Sketch the graph of $y = T(t)$ using transformations.
+
+\item  Find and interpret the horizontal asymptote of the graph.
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item  To find $T(0)$, we replace every occurrence of the independent variable $t$ with $0$ to obtain  $T(0) =70 + 90 e^{-0.1 (0)} = 160$.  This means that the coffee was served at $160^{\circ}\mbox{F}$.
+
+\item  To graph $y = T(t)$ using transformations, we start with the basic function, $f(t)=e^{t}$.  As we have already remarked, $e \approx 2.718 > 1$ so the graph of $f$ is an increasing exponential with $y$-intercept $(0,1)$ and horizontal asymptote $y = 0$.  The points $\left(-1, e^{-1}\right) \approx (-1,0.37)$ and $(1,e) \approx (1,2.72)$ are also on the graph.    We have 
+\[
+T(t) = 70 + 90e^{-0.1t} = 90e^{-0.1t}+70 = 90 f(-0.1t)+70
+\] 
+ Multiplication of the input to $f$, $t$, by $-0.1$ results in a horizontal expansion by a factor of $10$ as well as a reflection about the $y$-axis.  We divide each of the $x$ values of our points by $-0.1$ (which amounts to multiplying them by $-10$) to obtain $\left(10,e^{-1}\right)$, $(0,1)$, and $\left(-10, e\right)$.  Since none of these changes affected the $y$ values, the horizontal asymptote remains $y = 0$.  Next, we see that the output from $f$ is being multiplied by $90$.  This results in a vertical stretch by a factor of $90$.  We multiply the $y$-coordinates by $90$ to obtain $\left(10,90e^{-1}\right)$, $(0,90)$, and $\left(-10, 90e\right)$. We also multiply the $y$ value of the horizontal asymptote $y=0$ by $90$, and it remains $y=0$.  Finally, we add $70$ to all of the $y$-coordinates, which shifts the graph upwards to obtain $\left(10,90e^{-1} + 70\right) \approx (10, 103.11)$, $(0,160)$, and $\left(-10, 90e+ 70\right) \approx (-10,314.64)$.  Adding $70$ to the horizontal asymptote shifts it upwards as well to $y=70$.  We connect these three points using the same shape in the same direction as in the graph of $f$ and, last but not least, we restrict the domain to match the applied domain $[0, \infty)$.  The result is given in Figure \ref{fig:introexp4}.  
+
+\mtable{.7}{Graphing $T(t)$ in Example \ref{exptempex}}{fig:introexp4}{
+\begin{tabular}{c}
+\myincludegraphics{figures/ExpLogsGraphics/IntroExpLogs-8}\\
+$y=f(t)=e^t$\\
+\\
+$\boldsymbol{\downarrow}$\\
+\\
+\myincludegraphics{figures/ExpLogsGraphics/IntroExpLogs-9}\\
+$y=T(t)$
+\end{tabular}}
+
+\item  From the graph, we see that the horizontal asymptote is $y = 70$. It is worth a moment or two of our time to see how this happens analytically.  As $t \rightarrow \infty$, We get $T(t) = 70+90e^{-0.1t} \approx 70 +90e^{\text{very big $(-)$}}$.  Since $e > 1$, \[e^{\text{very big $(-)$}} = \frac{1}{e^{\text{very big $(+)$}}} \approx \frac{1}{\text{very big $(+)$}} \approx \text{very small $(+)$}\]  The larger $t$ becomes, the smaller $e^{-0.1t}$ becomes, so the term $90 e^{-0.1t} \approx \text{very small $(+)$}$.  Hence, $T(t) \approx 70 + \text{very small $(+)$}$ which means the graph is approaching the horizontal line $y=70$ from above.  This means that as time goes by, the temperature of the coffee is cooling to $70^{\circ}\mbox{F}$, presumably room temperature. 
+
+\end{enumerate}
+}
+
+\medskip
+
+As we have already remarked, the graphs of $f(x) = b^{x}$ all pass the Horizontal Line Test.  Thus the exponential functions are invertible.   We now turn our attention to these inverses, the logarithmic functions, which are called `logs' for short.
+
+\smallskip
+
+\definition{logfcndefn}{Logarithm function}{ The inverse of the exponential function $f(x) = b^{x}$ is called the \index{function ! logarithmic} \sword{base \boldmath $b$ logarithm function}, and is denoted  $f^{-1}(x) = \log_{b}(x)$  We read `$\log_{b}(x)$' as `log base $b$ of $x$.' \index{logarithm ! general, ``base $b$''}
+}
+
+\smallskip
+
+We have special notations for the common base, $b=10$, and the natural base, $b=e$.
+
+
+\smallskip
+
+\definition{def:natlog}{Common and Natural Logarithms}{ The \index{logarithm ! common} \sword{common logarithm} of a real number $x$ is $\log_{10}(x)$ and is usually written $\log(x)$.   The \index{logarithm ! natural} \sword{natural logarithm} of a real number $x$ is $\log_{e}(x)$ and is usually written $\ln(x)$. \index{common logarithm} \index{natural logarithm}
+}
+
+\mnote{.25}{The reader is cautioned that in more advanced mathematics textbooks, the notation $\log(x)$ is often used to denote the natural logarithm (or its generalization to the complex numbers). In mathematics, the natural logarithm is preferred since it is better behaved with respect to the operations of Calculus. The base 10 logarithm tends to appear in other science fields.}
+
+\smallskip
+
+Since logs are defined as the inverses of exponential functions, we can use Theorems \ref{inversefunctionprops} and \ref{inverseuniquegraph} to tell us about logarithmic functions.  For example, we know that the domain of a log function is the range of an exponential function, namely $(0, \infty)$, and that the range of a log function is the domain of an exponential function, namely $(-\infty, \infty)$.   Since we know the basic shapes of $y = f(x) = b^{x}$ for the different cases of $b$, we can obtain the graph of $y = f^{-1}(x) = \log_{b}(x)$ by reflecting the graph of $f$ across the line $y=x$ as shown below.  The $y$-intercept $(0,1)$ on the graph of $f$  corresponds to an $x$-intercept of $(1,0)$ on the graph of $f^{-1}$.  The horizontal asymptotes $y=0$ on the graphs of the exponential functions become vertical asymptotes $x=0$ on the log graphs: see Figure \ref{fig:introexp5}.  
+
+\mtable{.65}{The logarithm is the inverse of the exponential function}{fig:introexp5}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.8\marginparwidth]{figures/ExpLogsGraphics/IntroExpLogs-10}\\
+\\
+\myincludegraphics[width=0.8\marginparwidth]{figures/ExpLogsGraphics/IntroExpLogs-11}\\
+\end{tabular}}
+
+
+On a procedural level, logs undo the exponentials.  Consider the function $f(x) = 2^{x}$.  When we evaluate $f(3) = 2^{3} = 8$, the input $3$ becomes the exponent on the base $2$ to produce the real number $8$.  The function $f^{-1}(x) = \log_{2}(x)$ then takes the number $8$ as its input and returns the exponent $3$ as its output.  In symbols, $\log_{2}(8) = 3$. More generally, $\log_{2}(x)$ is the exponent you put on $2$ to get $x$.  Thus, $\log_{2}(16) = 4$, because $2^{4} = 16$.  The following theorem summarizes the basic properties of logarithmic functions, all of which come from the fact that they are inverses of exponential functions. 
+
+\smallskip
+
+\setboxwidth{12pt}
+\noindent\hskip-5pt\begin{minipage}{\specialboxlength}
+\theorem{logfcnprops}{Properties of Logarithmic Functions}{ Suppose $f(x) = \log_{b}(x)$. \index{logarithm ! graphical properties of}
+
+\begin{itemize}
+
+\item  The domain of $f$ is $(0, \infty)$ and the range of $f$ is $(-\infty, \infty)$.
+
+\item  $(1,0)$ is on the graph of $f$ and $x=0$ is a vertical asymptote of the graph of $f$.
+
+\item  $f$ is one-to-one, continuous and smooth
+
+\item  $b^{a} = c$ if and only if $\log_{b}(c) = a$.  That is, $\log_{b}(c)$ is the exponent you put on $b$ to obtain $c$.
+
+\item  $\log_{b} \left(b^{x}\right) = x$ for all $x$ and $b^{\log_{b}(x)} = x$ for all $x > 0$
+
+\end{itemize}
+
+\begin{multicols}{2}
+
+\begin{itemize}
+
+\item  If $b > 1$:
+
+\begin{itemize}
+
+\item  $f$ is always increasing
+
+\item  As $x \rightarrow 0^{+}$, $f(x) \rightarrow -\infty$
+
+\item  As $x \rightarrow \infty$, $f(x) \rightarrow \infty$
+
+\item  The graph of $f$ resembles:
+
+\end{itemize}
+\begin{center}
+\myincludegraphics[width=0.75\columnwidth]{figures/ExpLogsGraphics/IntroExpLogs-12}
+\end{center}
+\end{itemize}
+
+
+\begin{itemize}
+
+\item  If $0<b<1$:
+
+\begin{itemize}
+
+\item  $f$ is always decreasing
+
+\item  As $x \rightarrow 0^{+}$, $f(x) \rightarrow \infty$
+
+\item  As $x \rightarrow \infty$, $f(x) \rightarrow -\infty$
+
+\item  The graph of $f$ resembles:
+
+\end{itemize}
+\begin{center}
+\myincludegraphics[width=0.75\columnwidth]{figures/ExpLogsGraphics/IntroExpLogs-13}
+\end{center}
+\end{itemize} 
+
+\end{multicols}
+}
+\end{minipage}
+\restoreboxwidth
+
+\smallskip
+
+As we have mentioned, Theorem \ref{logfcnprops} is a consequence of Theorems \ref{inversefunctionprops} and \ref{inverseuniquegraph}.  However, it is worth the reader's time to understand Theorem \ref{logfcnprops} from an exponential perspective.  For instance, we know that the domain of $g(x) = \log_{2}(x)$ is $(0,\infty)$.  Why?  Because the range of $f(x) = 2^{x}$ is $(0,\infty)$.  In a way, this says everything, but at the same time, it doesn't. For example, if we try to find $\log_{2}(-1)$, we are trying to find the exponent we put on $2$ to give us $-1$.  In other words, we are looking for $x$ that satisfies $2^{x} = -1$.  There is no such real number, since all powers of $2$ are positive.  While what we have said is exactly the same thing as saying `the domain of $g(x) = \log_{2}(x)$ is $(0,\infty)$ because the range of $f(x) = 2^{x}$ is $(0,\infty)$', we feel it is in a student's best interest to understand the statements in Theorem \ref{logfcnprops} at this level instead of just merely memorizing the facts.
+
+\medskip
+
+\example{ex_logprops}{Using properties of logarithms}{  Simplify the following.
+
+\begin{multicols}{2}
+\begin{enumerate}
+
+\item  $\log_{3}(81)$ \vphantom{$\log_{2}\left(\dfrac{1}{8}\right)$}
+
+\item  $\log_{2}\left(\dfrac{1}{8}\right)$
+
+\item  $\log_{\sqrt{5}}(25)$ \vphantom{$\log_{2}\left(\dfrac{1}{8}\right)$}
+
+\item  $\ln\left(\sqrt[3]{e^2}\right)$ \vphantom{$\log_{2}\left(\dfrac{1}{8}\right)$}
+
+\item  $\log(0.001)$ \vphantom{$2^{\log_{2}(8)}$}
+
+\item  $2^{\log_{2}(8)}$
+
+\item  $117^{-\log_{117}(6)}$
+
+\end{enumerate}
+\end{multicols}
+}
+{
+\begin{enumerate}
+
+\item The number $\log_{3}(81)$ is the exponent we put on $3$ to get $81$.  As such, we want to write $81$ as a power of $3$.  We find $81 = 3^{4}$, so that $\log_{3}(81)=4$.
+
+\item To find $\log_{2}\left(\frac{1}{8}\right)$, we need rewrite $\frac{1}{8}$ as a power of $2$.  We find $\frac{1}{8} = \frac{1}{2^{3}} = 2^{-3}$, so $\log_{2}\left(\frac{1}{8}\right) = -3$.
+
+\item To determine $\log_{\sqrt{5}}(25)$, we need to express $25$ as a power of $\sqrt{5}$.  We know $25 = 5^2$, and $5 = \left(\sqrt{5}\right)^2$, so we have $25 = \left(\left(\sqrt{5}\right)^2\right)^2 = \left(\sqrt{5}\right)^4$.  We get $\log_{\sqrt{5}}(25) = 4$.
+
+\item  First, recall that the notation  $\ln\left(\sqrt[3]{e^2}\right)$ means $\log_{e}\left(\sqrt[3]{e^2}\right)$, so we are looking for the exponent to put on $e$ to obtain $\sqrt[3]{e^2}$.  Rewriting $\sqrt[3]{e^2} = e^{2/3}$, we find  $\ln\left(\sqrt[3]{e^2}\right) =  \ln\left(e^{2/3}\right) = \frac{2}{3}$.
+
+\item  Rewriting $\log(0.001)$ as $\log_{10} (0.001)$, we see that we need to write $0.001$ as a power of $10$.  We have $0.001 = \frac{1}{1000} = \frac{1}{10^3} = 10^{-3}$.  Hence, $\log(0.001) = \log\left(10^{-3}\right) = -3$.
+
+\item  We can use Theorem \ref{logfcnprops} directly to simplify  $2^{\log_{2}(8)} = 8$. We can also understand this problem by first finding $\log_{2}(8)$.  By definition, $\log_{2}(8)$ is the exponent we put on $2$ to get $8$.  Since $8 = 2^3$, we have $\log_{2}(8) = 3$.  We now substitute to find $2^{\log_{2}(8)} = 2^3 = 8$.
+
+\item  From Theorem \ref{logfcnprops}, we know $117^{\log_{117}(6)}=6$,  but we cannot directly apply this formula to the expression $117^{-\log_{117}(6)}$.  (Can you see why?) At this point, we use a property of exponents followed by Theorem \ref{logfcnprops} to get
+\enlargethispage{\baselineskip}   \[117^{-\log_{117}(6)} = \frac{1}{117^{\log_{117}(6)}} = \frac{1}{6}\]   
+ 
+\mnote{.25}{It is worth a moment of your time to think your way through why $117^{\log_{117}(6)}=6$.  By definition, $\log_{117}(6)$ is the exponent we put on $117$ to get $6$.  What are we doing with this exponent?  We are putting it on $117$.  By definition we get $6$.  In other words, the exponential function $f(x) = 117^{x}$ undoes the logarithmic function $g(x) = \log_{117}(x)$.}
+\end{enumerate}
+}
+
+\pagebreak
+
+Up until this point, restrictions on the domains of functions came from avoiding division by zero and keeping negative numbers from beneath even radicals.  With the introduction of logs, we now have another restriction.  Since the domain of $f(x) = \log_{b}(x)$ is $(0, \infty)$, the argument of the log must be strictly positive.  \index{argument ! of a logarithm}
+
+\medskip
+
+\example{ex_logdomain}{Domain for logarithmic functions}{  Find the domain of the following functions.  Check your answers graphically using the computer or calculator.
+
+\begin{enumerate}
+
+\item  $f(x) = 2\log(3-x)-1$
+
+\item  $g(x) = \ln \left(\dfrac{x}{x-1}\right)$
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item  We set $3-x > 0$ to obtain $x<3$, or $(-\infty, 3)$.  The graph in Figure \ref{fig:introexp6} verifies this.  Note that we could have graphed $f$ using transformations.  We rewrite $f(x) = 2 \log_{10}(-x+3) -1$ and find the main function involved is $y = h(x) = \log_{10}(x)$.  We select three points to track,  $\left(\frac{1}{10}, -1\right)$, $(1,0)$ and $(10,1)$, along with the vertical asymptote $x=0$.   Since $f(x) = 2h(-x+3)-1$,  to obtain the destinations of these points, we first subtract $3$ from the $x$-coordinates (shifting the graph left $3$ units), then divide (multiply) by the $x$-coordinates by $-1$ (causing a reflection across the $y$-axis).  These transformations apply to the vertical asymptote $x = 0$ as well.  Subtracting $3$ gives us $x=-3$ as our asymptote, then multiplying by $-1$ gives us the vertical asymptote $x=3$.  Next, we multiply the $y$-coordinates by $2$ which results in a vertical stretch by a factor of $2$, then we finish by subtracting $1$ from the $y$-coordinates which shifts the graph down $1$ unit.  We leave it to the reader to perform the indicated arithmetic on the points themselves and to verify the graph produced by the calculator below.
+
+\mfigure{.65}{$y=f(x)=2\log(3-x)-1$}{fig:introexp6}{figures/ExpLogsGraphics/ExpLogs01}
+
+\item  To find the domain of $g$, we need to solve the inequality $\frac{x}{x-1} > 0$. As usual, we proceed using a sign diagram.  If we define $r(x) = \dfrac{x}{x-1}$, we find $r$ is undefined at $x=1$ and $r(x) = 0$ when $x=0$.  Choosing some test values, we generate the sign diagram in Figure \ref{fig:introexpsd1}.  
+
+\mfigure{.45}{Sign diagram for $r(x) = \frac{x}{x-1}$}{fig:introexpsd1}{figures/ExpLogsGraphics/IntroExpLogs-14}
+
+
+We find $ \frac{x}{x-1} > 0$ on $(-\infty, 0) \cup (1, \infty)$ to get the domain of $g$.  The graph of $y=g(x)$ in Figure \ref{fig:introexp7} confirms this.  We can tell from the graph of $g$ that it is not the result of  transformations being applied to the graph $y = \ln(x)$, so barring a more detailed analysis using Calculus, the calculator graph is the best we can do.  One thing worthy of note, however, is the end behaviour of $g$.  The graph suggests that as $x \rightarrow \pm \infty$, $g(x) \rightarrow 0$.  We can verify this analytically.  We know that as $x \rightarrow \pm \infty$, $\frac{x}{x-1} \approx 1$.  Hence, it makes sense that $g(x) = \ln \left(\frac{x}{x-1}\right) \approx \ln(1) = 0$.
+
+\mfigure{.3}{$y=g(x)=\ln\left(\frac{x}{x-1}\right)$}{fig:introexp7}{figures/ExpLogsGraphics/ExpLogs02}
+\end{enumerate}
+}
+
+\medskip
+
+While logarithms have some interesting applications of their own which you'll explore in the exercises, their primary use to us will be to undo exponential functions. (This is, after all, how they were defined.)  Our last example solidifies this and reviews all of the material in the section.
+
+\pagebreak
+
+\example{proceduralinverse}{Inverting an exponential function}{  Let $f(x) = 2^{x-1} - 3$. 
+
+\begin{enumerate}
+
+\item  Graph $f$ using transformations and state the domain and range of $f$.
+
+\item  Explain why $f$ is invertible and find a formula for $f^{-1}(x)$.
+
+\item  Graph $f^{-1}$ using transformations and state the domain and range of $f^{-1}$.
+
+\item  Verify $\left(f^{-1} \circ f\right)(x) = x$ for all $x$ in the domain of $f$ and  $\left(f \circ f^{-1} \right)(x) = x$ for all $x$ in the domain of $f^{-1}$.
+
+\item  Graph $f$ and $f^{-1}$ on the same set of axes and check the symmetry about the line $y = x$.
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item  If we identify $g(x) = 2^{x}$, we see $f(x) = g(x-1)-3$.  We pick the points $\left(-1, \frac{1}{2}\right)$, $(0,1)$ and $(1, 2)$ on the graph of $g$ along with the horizontal asymptote $y=0$ to track through the transformations. We first add $1$ to the $x$-coordinates of the points on the graph of $g$ (shifting $g$ to the right $1$ unit) to get $\left(0, \frac{1}{2}\right)$, $(1,1)$ and $(2, 2)$.  The horizontal asymptote remains $y=0$.  Next, we subtract $3$ from the $y$-coordinates, shifting the graph down $3$ units.  We get the points $\left(0, -\frac{5}{2}\right)$, $(1,-2)$ and $(2, -1)$ with the horizontal asymptote now at $y=-3$.  Connecting the dots in the order and manner as they were on the graph of $g$, we get the bottom graph in Figure \ref{fig:introexp8}.  We see that the domain of $f$ is the same as $g$, namely $(-\infty, \infty)$, but that the range of $f$ is $(-3, \infty)$.
+
+\mtable{.7}{Graphing $f(x)=2^{x-1}-3$ in Example \ref{proceduralinverse}}{fig:introexp8}{
+\begin{tabular}{c}
+\myincludegraphics{figures/ExpLogsGraphics/IntroExpLogs-15}\\
+$y=h(x)=2^x$\\
+\\
+$\boldsymbol{\downarrow}$\\
+\\
+\myincludegraphics{figures/ExpLogsGraphics/IntroExpLogs-16}\\
+$y=f(x)=2^{x-1}-3$
+\end{tabular}}
+
+
+\item  The graph of $f$ passes the Horizontal Line Test so $f$ is one-to-one, hence invertible.  To find a formula for $f^{-1}(x)$, we normally set $y=f(x)$, interchange the $x$ and $y$, then proceed to solve for $y$.  Doing so in this situation leads us to the equation $x = 2^{y-1}-3$.  We have yet to discuss how to solve this kind of equation, so we will attempt to find the formula for $f^{-1}$ from a procedural perspective.  If we break $f(x) = 2^{x-1}-3$ into a series of steps, we find $f$ takes an input $x$ and applies the steps
+
+\begin{enumerate}
+
+\item subtract $1$
+
+\item put as an exponent on $2$
+
+\item subtract $3$
+
+\end{enumerate}
+
+Clearly, to undo subtracting $1$, we will add $1$, and similarly we undo subtracting $3$ by adding $3$.  How do we undo the second step?  The answer is we use the logarithm.  By definition, $\log_{2}(x)$ undoes exponentiation by $2$.  Hence, $f^{-1}$ should
+
+\begin{enumerate}
+
+\item add $3$
+
+\item take the logarithm base $2$
+
+\item add $1$
+
+\end{enumerate}
+
+In symbols, $f^{-1}(x) = \log_{2}(x+3)+1$.  
+
+
+\item  To graph $f^{-1}(x) = \log_{2}(x+3)+1$ using transformations, we start with $j(x) = \log_{2}(x)$.  We track the points $\left(\frac{1}{2},-1\right)$, $(1,0)$ and $(2, 1)$ on the graph of $j$ along with the vertical asymptote $x=0$ through the transformations.  Since $f^{-1}(x) = j(x+3)+1$, we first subtract $3$ from each of the $x$ values (including the vertical asymptote) to obtain  $\left(-\frac{5}{2},-1\right)$, $(-2,0)$ and $(-1, 1)$ with a vertical asymptote $x = -3$.  Next, we add $1$ to the $y$ values on the graph and get $\left(-\frac{5}{2},0\right)$, $(-2,1)$ and $(-1, 2)$.  If you are experiencing \textit{d\'{e}j\`{a} vu}, there is a good reason for it but we leave it to the reader to determine the source of this uncanny familiarity.  We obtain the graph below.  The domain of $f^{-1}$ is $(-3, \infty)$, which matches the range of $f$, and the range of $f^{-1}$ is $(-\infty, \infty)$, which matches the domain of $f$.
+
+\mtable{.3}{Graphing $f^{-1}(x)=\log_2(x+3)+1$ in Example \ref{proceduralinverse}}{fig:introexp9}{
+\begin{tabular}{c}
+\myincludegraphics{figures/ExpLogsGraphics/IntroExpLogs-17}\\
+$y=j(x)=\log_2(x)$\\
+\\
+$\boldsymbol{\downarrow}$\\
+\\
+\myincludegraphics{figures/ExpLogsGraphics/IntroExpLogs-18}\\
+$y=f^{-1}(x)=\log_2(x+3)+1$
+\end{tabular}}
+
+
+\item  We now verify that $f(x) = 2^{x-1}-3$ and $f^{-1}(x) = \log_{2}(x+3)+1$ satisfy the composition requirement for inverses.  For all real numbers $x$, 
+
+\begin{align*}
+\left(f^{-1}\circ f\right)(x) & =  f^{-1}(f(x))  \\
+& =  f^{-1}\left(2^{x-1}-3 \right)  \\
+& =  \log_{2}\left( \left[2^{x-1}-3\right]+3 \right)+1  \\
+& =  \log_{2}\left( 2^{x-1} \right)+1  \\
+& =& (x-1) +1  \tag*{ Since $\log_{2}\left(2^{u}\right) = u$ for all real numbers $u$} \\
+& =  x \, \, \checkmark 
+\end{align*}
+
+
+For all real numbers $x > -3$, we have (pay attention - can you spot in which step below we need $x > -3$?)
+
+\begin{align*}
+\left(f\circ f^{-1}\right)(x) & =  f\left(f^{-1}(x)\right)  \\
+& =  f\left( \log_{2}(x+3)+1 \right)  \\
+& =  2^{\left( \log_{2}(x+3)+1 \right)-1} - 3  \\
+& =  2^{\log_{2}(x+3)} - 3  \\
+& =  (x+3) -3 \tag*{ Since $2^{\log_{2}(u)} = u$ for all real numbers $u > 0$} \\
+& =  x \, \, \checkmark 
+\end{align*}
+
+
+\item  Last, but certainly not least, we graph $y=f(x)$ and $y=f^{-1}(x)$ on the same set of axes and see the symmetry about the line $y=x$ in Figure \ref{fig:introexp10}
+
+\mfigure{.7}{The graphs of $f$ and $f^{-1}$ in Example \ref{proceduralinverse}}{fig:introexp10}{figures/ExpLogsGraphics/IntroExpLogs-19}
+
+\end{enumerate}
+}
+
+\subsection{Properties of Logarithms}
+
+\label{LogProperties}
+
+In Section \ref{IntroExpLogs}, we introduced the logarithmic functions as inverses of exponential functions and discussed a few of their functional properties from that perspective.  In this section, we explore the algebraic properties of logarithms.  Historically, these have played a huge role in the scientific development of our society since, among other things, they were used to develop analog computing devices called \href{http://en.wikipedia.org/wiki/Slide_rule}{\underline{slide rules}} which enabled scientists and engineers to perform accurate calculations leading to such things as space travel and the \href{http://www.redorbit.com/news/space/73297/nasa_marks_35th_anniversary_of_first_moon_landing/}{\underline{moon landing}}.  As we shall see shortly, logs inherit analogs of all of the properties of exponents you learned in Elementary and Intermediate Algebra.  We first extract two properties from Theorem \ref{logfcnprops} to remind us of the definition of a logarithm as the inverse of an exponential function.
+\smallskip
+
+\theorem{invpropslogs}{Inverse Properties of Exponential and Logarithmic Functions}{
+
+Let $b > 0$, $b \neq 1$. \index{exponential function ! inverse properties of}\index{logarithm ! inverse properties of}
+
+
+\begin{itemize}
+
+\item   $b^{a} = c$ if and only if $\log_{b}(c) = a$
+
+\item  $\log_{b} \left(b^{x}\right) = x$ for all $x$ and $b^{\log_{b}(x)} = x$ for all $x > 0$
+
+\end{itemize}
+}
+
+\smallskip
+
+Next, we spell out what it means for exponential and logarithmic functions to be one-to-one.
+
+\smallskip
+
+\theorem{explogsonetoone}{One-to-one Properties of Exponential and Logarithmic Functions}{ Let $f(x) = b^{x}$ and $g(x) = \log_{b}(x)$ where $b>0$, $b\neq 1$.  Then $f$ and $g$ are one-to-one and  \index{exponential function ! one-to-one properties of}\index{logarithm ! one-to-one properties of}
+
+\begin{itemize}
+
+\item  $b^{u} = b^{w}$ if and only if $u=w$ for all real numbers $u$ and $w$.
+
+\item  $\log_{b}(u) = \log_{b}(w)$ if and only if $u=w$ for all real numbers $u > 0$, $w > 0$.
+
+\end{itemize}
+}
+
+\smallskip
+
+We now state the algebraic properties of exponential functions which will serve as a basis for the properties of logarithms.  While these properties may look identical to the ones you learned in Elementary and Intermediate Algebra, they apply to real number exponents, not just rational exponents.  Note that in the theorem that follows, we are interested in the properties of exponential functions, so the base $b$ is restricted to $b > 0$, $b \neq 1$.  %An added benefit of this restriction is that it eliminates the pathologies discussed in Section \ref{AlgebraicFunctions} when, for example, we simplified $\left(x^{2/3}\right)^{3/2}$ and obtained $|x|$ instead of what we had expected from the arithmetic in the exponents, $x^{1} = x$. 
+
+\smallskip
+
+\theorem{algpropexpfcns}{Algebraic Properties of Exponential Functions}{  Let $f(x) = b^{x}$ be an exponential function ($b > 0$, $b\neq 1$) and let $u$ and $w$ be real numbers. \index{exponential function ! algebraic properties of}
+
+\begin{itemize}
+
+\item  \sword{Product Rule:} \index{product rule ! for exponential functions} $f(u+w) = f(u) f(w)$.  In other words, $b^{u+w} = b^{u} b^{w}$
+
+\item  \sword{Quotient Rule:} \index{quotient rule ! for exponential functions} $f(u-w) = \dfrac{f(u)}{f(w)}$.  In other words, $b^{u-w} = \dfrac{b^{u}}{b^{w}}$
+
+\item  \sword{Power Rule:} \index{power rule ! for exponential functions} $\left(f(u)\right)^w = f(uw)$.  In other words, $\left(b^{u}\right)^{w} = b^{uw}$
+
+\end{itemize}
+}
+
+\smallskip
+
+While the properties listed in Theorem \ref{algpropexpfcns} are certainly believable based on similar properties of integer and rational exponents, the full proofs require Calculus.  To each of these properties of exponential functions corresponds an analogous property of logarithmic functions.  We list these below in our next theorem.
+
+\smallskip
+
+\theorem{algproplogfcns}{Algebraic Properties of Logarithmic Functions}{  Let $g(x) =\log_{b}(x)$ be a logarithmic function ($b > 0$, $b\neq 1$) and let $u>0$ and $w>0$ be real numbers. \index{logarithm ! algebraic properties of}
+
+\begin{itemize}
+
+\item  \sword{Product Rule:} \index{product rule ! for logarithms} $g(uw) = g(u)+ g(w)$.  In other words, $\log_{b}(uw) = \log_{b}(u) + \log_{b}(w)$
+
+\item  \sword{Quotient Rule:} \index{quotient rule ! for logarithms} $g\left(\dfrac{u}{w} \right) = g(u) - g(w)$.  In other words, $\log_{b} \left( \dfrac{u}{w} \right) = \log_{b}(u) - \log_{b}(w)$
+
+\item  \sword{Power Rule:} \index{power rule ! for logarithms} $g\left(u^{w}\right) =w g(u)$.  In other words, $\log_{b}\left(u^{w}\right) = w \log_{b}(u)$
+
+\end{itemize}
+}
+
+\smallskip
+
+There are a couple of different ways to understand why Theorem \ref{algproplogfcns} is true.  Consider the product rule: $\log_{b}(uw) = \log_{b}(u) + \log_{b}(w)$.  Let $a = \log_{b}(uw)$, $c = \log_{b}(u)$, and $d = \log_{b}(w)$.  Then, by definition, $b^{a} = uw$, $b^{c} = u$ and $b^{d} = w$.  Hence, $b^{a} = uw = b^{c} b^{d} = b^{c+d}$, so that $b^{a} = b^{c+d}$.  By the one-to-one property of $b^{x}$, we have $a = c+d$. In other words, $\log_{b}(uw) = \log_{b}(u) + \log_{b}(w)$.  The remaining properties are proved similarly.  
+
+
+\medskip
+
+
+\example{expandlogex}{Expanding logarithmic expressions}{ Expand the following using the properties of logarithms and simplify.  Assume when necessary that all quantities represent positive real numbers.
+
+\mnote{.6}{Interestingly enough, expanding logarithms is the exact \textit{opposite} process (which we will practice later) that is most useful in Algebra. The utility of expanding logarithms becomes apparent in Calculus.}
+
+
+\begin{multicols}{2}
+\begin{enumerate}
+
+\item $\log_{2}\left(\dfrac{8}{x}\right)$ \vphantom{$\ln \left(\dfrac{3}{ex}\right)^2$}
+
+\item  $\ln \left(\dfrac{3}{ex}\right)^2$
+
+
+\item  $\log \sqrt[3]{\dfrac{100 x^2}{yz^5}}$
+
+\item  $\vphantom{\log \sqrt[3]{\dfrac{100 x^2}{yz^5}}} \log_{117}\left(x^2 - 4\right)$
+
+\end{enumerate}
+\end{multicols}
+}
+{
+\begin{enumerate}
+
+
+\item  To expand $\log_{2}\left(\frac{8}{x}\right)$, we use the Quotient Rule identifying $u = 8$ and $w=x$ and simplify.
+
+\begin{align*}
+\log_{2}\left(\dfrac{8}{x}\right) & =   \log_{2}(8) - \log_{2}(x) \tag*{Quotient Rule} \\
+& =   3 - \log_{2}(x)  \tag*{Since $2^{3} = 8$} \\
+& =  - \log_{2}(x) + 3  \\
+\end{align*}
+
+
+\item  We have a power, quotient and product occurring in $\ln \left(\frac{3}{ex}\right)^2$.  Since the exponent $2$ applies to the entire quantity inside the logarithm, we begin with the Power Rule with $u=\frac{3}{ex}$ and $w = 2$.  Next, we see the Quotient Rule is applicable, with $u=3$ and $w=ex$, so we replace $\ln\left(\frac{3}{ex}\right)$  with the quantity $\ln(3) - \ln(ex)$. Since $\ln \left(\frac{3}{ex}\right)$ is being multiplied by $2$, the entire quantity $\ln(3) - \ln(ex)$ is multiplied by $2$.  Finally, we apply the Product Rule with $u=e$ and $w=x$, and replace $\ln(ex)$ with the quantity $\ln(e) + \ln(x)$, and simplify, keeping in mind that the natural log is log base $e$.
+
+\begin{align*}
+\ln \left(\dfrac{3}{ex}\right)^2 & =  2 \ln \left(\dfrac{3}{ex}\right)  \tag*{Power Rule} \\
+      & =  2 \left[ \ln(3) - \ln(ex) \right]  \tag*{Quotient Rule} \\
+      & =  2 \ln(3) - 2\ln(ex)  \\
+      & =  2 \ln(3) - 2\left[\ln(e) + \ln(x)\right]  \tag*{Product Rule} \\
+      & =  2 \ln(3) - 2\ln(e) - 2 \ln(x)  \\
+      & =  2\ln(3) - 2 - 2 \ln(x)  \tag*{Since $e^{1} = e$} \\
+      & =  - 2 \ln(x) + 2\ln(3) - 2  \\
+\end{align*}
+                        
+
+\item Recalling that a cube root is the same thing as the power $1/3$, we begin by using the Power Rule, and we keep in mind that the common log is log base $10$. 
+
+\mnote{.5}{At this point in the text, the reader is encouraged to carefully read through each step and think of which quantity is playing the role of $u$ and which is playing the role of $w$ as we apply each property.}
+
+\begin{align*}
+\log \sqrt[3]{\dfrac{100 x^2}{yz^5}} & =  \log \left(\dfrac{100 x^2}{yz^5}\right)^{1/3}  \\ 
+& =  \frac{1}{3} \log\left(\dfrac{100 x^2}{yz^5}\right)  \tag*{Power Rule} \\ 
+& =  \frac{1}{3} \left[ \log\left(100x^2\right) - \log\left(yz^5\right) \right]  \tag*{Quotient Rule} \\ 
+& = \frac{1}{3}\log\left(100x^2\right) - \frac{1}{3}\log\left(yz^5\right) \\
+& =  \frac{1}{3}\left[ \log(100) + \log\left(x^2\right)\right] - \frac{1}{3} \left[ \log(y) + \log\left(z^5\right) \right]  \tag*{Product Rule} \\
+& = \frac{1}{3} \log(100) + \frac{1}{3} \log\left(x^2\right) - \frac{1}{3} \log(y) - \frac{1}{3} \log\left(z^5\right) \\
+& =  \frac{1}{3} \log(100) + \frac{2}{3} \log(x) - \frac{1}{3} \log(y) - \frac{5}{3} \log(z)  \tag*{Power Rule} \\
+& =  \frac{2}{3} + \frac{2}{3} \log(x) - \frac{1}{3} \log(y) - \frac{5}{3} \log(z)  \tag*{Since $10^2=100$} \\
+& =   \frac{2}{3} \log(x) - \frac{1}{3} \log(y) - \frac{5}{3} \log(z) + \frac{2}{3} 
+\end{align*}
+
+\item  At first it seems as if we have no means of simplifying $\log_{117}\left(x^2-4\right)$, since none of the properties of logs addresses the issue of expanding a difference \textit{inside} the logarithm.  However, we may factor $x^2 - 4 = (x+2)(x-2)$ thereby introducing a product which gives us license to use the Product Rule.
+
+\begin{align*}
+\log_{117}\left(x^2-4\right) & =  \log_{117} \left[(x+2)(x-2)\right]  \tag*{Factor} \\
+ & =  \log_{117}(x+2) + \log_{117}(x-2)  \tag*{Product Rule} 
+\end{align*}
+
+\end{enumerate}
+}
+
+\medskip
+
+%A couple of remarks about Example \ref{expandlogex} are in order.  First, while not explicitly stated in the above example, a general rule of thumb to determine which log property to apply first to a complicated problem is `reverse order of operations.'  For example, if we were to substitute a number for $x$ into the expression $\log_{0.1} \left(10 x^2 \right)$, we would first square the $x$, then multiply by $10$.  The last step is the multiplication, which tells us the first log property to apply is the Product Rule.  In a multi-step problem, this rule can give the required guidance on which log property to apply at each step.  The reader is encouraged to look through the solutions to Example \ref{expandlogex} to see this rule in action.  Second, while we were instructed to assume when necessary that all quantities represented positive real numbers, the authors would be committing a sin of omission if we failed to point out that, for instance, the functions $f(x) = \log_{117}\left(x^2-4\right)$ and $g(x) = \log_{117}(x+2) + \log_{117}(x-2)$ have different domains, and, hence, are different functions. We leave it to the reader to verify the domain of $f$ is $(-\infty, -2) \cup (2,\infty)$ whereas the domain of $g$ is $(2,\infty)$.  In general, when using log properties to expand a logarithm, we may very well be restricting the domain as we do so.  One last comment before we move to reassembling logs from their various bits and pieces. The authors are well aware of the propensity for some students to become overexcited and invent their own properties of logs like $\log_{117}\left(x^2-4\right) = \log_{117}\left(x^2\right) - \log_{117}(4)$, which simply isn't true, in general.  The unwritten (the authors relish the irony involved in writing what follows) property of logarithms is that if it isn't written in a textbook, it probably isn't true.    
+
+\pagebreak
+
+\example{contractlogex}{Combining logarithmic expressions}{ Use the properties of logarithms to write the following as a single logarithm.
+
+\begin{multicols}{2}
+\begin{enumerate}
+
+\item  $\log_{3}(x-1) - \log_{3}(x+1)$
+
+\item  $\log(x) + 2\log(y) - \log(z)$
+
+\setcounter{HW}{\value{enumi}}
+\end{enumerate}
+\end{multicols}
+
+\begin{multicols}{2}
+\begin{enumerate}
+\setcounter{enumi}{\value{HW}}
+
+\item  $4\log_{2}(x) + 3$
+
+\item  $-\ln(x) - \frac{1}{2}$
+
+
+\end{enumerate}
+\end{multicols}
+}
+{
+Whereas in Example \ref{expandlogex} we read the properties in Theorem \ref{algproplogfcns} from left to right to expand logarithms, in this example we read them from right to left.
+
+\begin{enumerate}
+
+\item The difference of logarithms requires the Quotient Rule: $\log_{3}(x-1) - \log_{3}(x+1) = \log_{3}\left(\frac{x-1}{x+1}\right)$.
+
+\item  In the expression, $\log(x) + 2\log(y) - \log(z)$, we have both a sum and difference of logarithms.  However, before we use the product rule to combine $\log(x) + 2\log(y)$, we note that we need to somehow deal with the coefficient $2$ on $\log(y)$.  This can be handled using the Power Rule. We can then apply the Product and Quotient Rules as we move from left to right. Putting it all together, we have
+
+\begin{align*}
+\log(x) + 2\log(y) - \log(z) & =  \log(x) + \log\left(y^2\right) - \log(z)  \tag*{Power Rule} \\
+                             & =  \log\left(xy^2\right) - \log(z)  \tag*{Product Rule} \\
+                             & =  \log\left( \dfrac{xy^2}{z}\right)  \tag*{Quotient Rule}
+\end{align*}
+                             
+\item  We can certainly get started rewriting $4\log_{2}(x) + 3$ by applying the Power Rule to  $4\log_{2}(x)$ to obtain $\log_{2}\left(x^4\right)$, but in order to use the Product Rule to handle the addition, we need to rewrite $3$ as a logarithm base $2$.  From Theorem \ref{invpropslogs}, we know $3 = \log_{2}\left(2^3\right)$, so we get
+
+\begin{align*}
+4\log_{2}(x) + 3 & =  \log_{2}\left(x^4\right) + 3   \tag*{Power Rule} \\ 
+  & =  \log_{2}\left(x^4\right) + \log_{2}\left(2^3\right) \tag*{Since $3 = \log_{2}\left(2^3\right)$} \\
+  & =  \log_{2}\left(x^4\right) + \log_{2}(8) \\
+  & =  \log_{2}\left( 8x^4\right)  \tag*{Product Rule}
+\end{align*}
+
+\item To get started with $-\ln(x) - \frac{1}{2}$, we rewrite  $-\ln(x)$ as $(-1) \ln(x)$.  We can then use the Power Rule to obtain $(-1)\ln(x) = \ln\left(x^{-1}\right)$. In order to use the Quotient Rule, we need to write $\frac{1}{2}$ as a natural logarithm. Theorem \ref{invpropslogs} gives us $\frac{1}{2} = \ln\left(e^{1/2}\right) = \ln\left(\sqrt{e}\right)$.  We have 
+
+\begin{align*}
+-\ln(x) - \frac{1}{2} & =  (-1)\ln(x) - \frac{1}{2}    \\ 
+   & =  \ln\left(x^{-1}\right) - \frac{1}{2}  \tag*{Power Rule} \\
+   & =  \ln\left(x^{-1}\right) - \ln\left(e^{1/2}\right) \tag*{Since $\frac{1}{2} = \ln\left(e^{1/2}\right)$} \\
+   & =  \ln\left(x^{-1}\right) - \ln\left(\sqrt{e} \right) \\ 
+   & =  \ln\left(\dfrac{x^{-1}}{\sqrt{e}}\right)  \tag*{Quotient Rule} \\ 
+   & =  \ln\left(\dfrac{1}{x\sqrt{e}}\right) 
+\end{align*}
+\end{enumerate}
+}
+
+\medskip
+
+As we would expect, the rule of thumb for re-assembling logarithms is the opposite of what it was for dismantling them.  That is, if we are interested in rewriting an expression as a single logarithm, we apply log properties following the usual order of operations:  deal with multiples of logs first with the Power Rule, then deal with addition and subtraction using the Product and Quotient Rules, respectively. Additionally, we find that using log properties in this fashion can increase the domain of the expression.  For example, we leave it to the reader to verify the domain of $f(x) = \log_{3}(x-1) - \log_{3}(x+1)$ is $(1,\infty)$ but the domain of $g(x) = \log_{3}\left(\frac{x-1}{x+1}\right)$ is $(-\infty, -1) \cup (1, \infty)$.  %We will need to keep this in mind when we solve equations involving logarithms in Section \ref{LogEquations} - it is precisely for this reason we will have to check for extraneous solutions.
+
+\smallskip
+
+The two logarithm buttons commonly found on calculators are the `LOG' and `LN' buttons which correspond to the common and natural logs, respectively.  Suppose we wanted an approximation to $\log_{2}(7)$.  The answer should be a little less than $3$, (Can you explain why?) but how do we coerce the calculator into telling us a more accurate answer?  We need the following theorem.
+
+\smallskip
+
+\theorem{changeofbase}{Change of Base Formulas}{ Let $a,b >0$, $a,b \neq 1$. \index{change of base formulas} \index{exponential function ! change of base formula} \index{logarithm ! change of base formula}
+
+\begin{itemize}
+
+\item  $a^{x} = b^{x \log_{b}(a)}$ for all real numbers $x$.
+
+\item  $\log_{a}(x) = \dfrac{\log_{b}(x)}{\log_{b}(a)}$ for all real numbers $x > 0$.
+
+\end{itemize}
+}
+
+\smallskip
+
+%The proofs of the Change of Base formulas are a result of the other properties studied in this section.  If we start with $b^{x \log_{b}(a)}$ and use the Power Rule in the exponent to rewrite $x \log_{b}(a)$ as $\log_{b}\left(a^{x}\right)$ and then apply one of the Inverse Properties in Theorem \ref{invpropslogs}, we get \[ b^{x \log_{b}(a)} = b^{\log_{b}\left(a^{x}\right)} = a^{x},\] as required.  To verify the logarithmic form of the property, we also use the Power Rule and an Inverse Property. We note that \[\log_{a}(x) \cdot \log_{b}(a) =  \log_{b} \left(a^{\log_{a}(x)}\right) = \log_{b}(x),\] and we get the result by dividing through by $\log_{b}(a)$.  Of course, the authors can't help but point out the inverse relationship between these two change of base formulas.  To change the base of an exponential expression, we \textit{multiply} the \textit{input} by the factor $\log_{b}(a)$.  To change the base of a logarithmic expression, we \textit{divide} the \textit{output} by the factor $\log_{b}(a)$.   What Theorem \ref{changeofbase} really tells us is that all exponential and logarithmic functions are just scalings of one another.  Not only does this explain why their graphs have similar shapes, but it also tells us that we could do all of mathematics with a single base - be it $10$, $e$, $42$, or $117$. 
+
+%\mnote{.75}{While, in the grand scheme of things, both change of base formulas are really saying the same thing, the logarithmic form is the one usually encountered in Algebra while the exponential form isn't usually introduced until Calculus. The authors feel so strongly about showing students that every property of logarithms comes from and corresponds to a property of exponents that we have broken tradition with the vast majority of other authors in this field.  This isn't the first time this happened, and it certainly won't be the last.}
+
+\medskip
+
+\example{ex_basechange}{Using change of base formulas}{ Use an appropriate change of base formula to convert the following expressions to ones with the indicated base.  Verify your answers using a computer or calculator, as appropriate.
+
+\begin{enumerate}
+
+\item  $3^{2}$ to base $10$
+
+\item  $2^{x}$ to base $e$
+
+
+\item $\log_{4}(5)$ to base $e$
+
+\item $\ln(x)$ to base $10$
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item  We apply the Change of Base formula with $a=3$ and $b=10$ to obtain $3^2 = 10^{2 \log(3)}$. Typing the latter in the calculator produces an answer of $9$ as required.
+
+\item  Here, $a=2$ and $b = e$ so we have $2^{x} = e^{x \ln(2)}$.  To verify this on our calculator, we can graph $f(x) = 2^x$ \ifthenelse{\boolean{colour}}{(in red)}{(in black)} and $g(x) = e^{x \ln(2)}$ \ifthenelse{\boolean{colour}}{(in blue)}{(in grey)}.  Their graphs are indistinguishable which provides evidence that they are the same function: see Figure \ref{fig:logprop1}.
+
+\mfigure{.8}{$y=f(x)=2^x$ and $y=g(x)=e^{x\ln(2)}$}{fig:logprop1}{figures/ExpLogsGraphics/ExpLogs03}
+
+\item  Applying the change of base with $a=4$ and $b=e$ leads us to write $\log_{4}(5) = \frac{\ln(5)}{\ln(4)}$.  Evaluating this in the calculator gives $\frac{\ln(5)}{\ln(4)} \approx 1.16$.  How do we check this really is the value of $\log_{4}(5)$?  By definition, $\log_{4}(5)$ is the exponent we put on $4$ to get $5$.  The plot from GeoGebra in Figure \ref{fig:logprop2} confirms this. (Which means if it is lying to us about the first answer it gave us, at least it is being consistent.) 
+
+\item  We write $\ln(x) = \log_{e}(x) = \frac{\log(x)}{\log(e)}$.  We graph both $f(x) = \ln(x)$ and $g(x) = \frac{\log(x)}{\log(e)}$ and find both graphs appear to be identical.
+
+\mfigure{.6}{$y=f(x)=2^x$ and $y=g(x)=e^{x\ln(2)}$}{fig:logprop2}{figures/ExpLogsGraphics/ExpLogs04}
+
+\end{enumerate}
+
+}
+
+\printexercises{exercises_pre/06_01_exercises}
+\label{IntroExpLogsExercises}

@@ -6,7 +6,7 @@ The previous two sections introduced and studied a new way of plotting points in
 
 \noindent\textbf{\large Polar Coordinates}\\
 
-Start with a point $O$ in the plane called the \textbf{pole} (we will always identify this point with the origin). From the pole, draw a ray, called the \textbf{initial ray} (we will always draw this ray horizontally, identifying it with the positive $x$-axis). A point $P$ in the plane is determined by the distance $r$ that $P$ is from $O$, and the angle $\theta$ formed between the initial ray and the segment $\overline{OP}$ (measured counter-clockwise). We record the distance and angle as an ordered pair $(r,\theta)$. To avoid confusion with rectangular coordinates, we will denote polar coordinates with the letter $P$, as in $P(r,\theta)$. This is illustrated in Figure \ref{fig:polar_intro1}\index{polar coordinates}\index{polar!coordinates}
+Start with a point $O$ in the plane called the \textbf{pole} (we will always identify this point with the origin). From the pole, draw a ray, called the \textbf{initial ray} (we will always draw this ray horizontally, identifying it with the positive $x$-axis). A point $P$ in the plane is determined by the distance $r$ that $P$ is from $O$, and the angle $\theta$ formed between the initial ray and the segment $\overline{OP}$ (measured counter-clockwise). We record the distance and angle as an ordered pair $(r,\theta)$. To avoid confusion with rectangular coordinates, we will denote polar coordinates with the letter $P$, as in $P(r,\theta)$. This is illustrated in Figure \ref{fig:polar_intro1}\index{polar coordinates}\index{polar!coordinates}\index{coordinates!polar}
 
 \mtable{.7}{Illustrating polar coordinates.}{fig:polar_intro1}{%
 \begin{tikzpicture}[>=latex]
@@ -23,7 +23,9 @@ Practice will make this process more clear.\\
 
 \example{ex_polar1}{Plotting Polar Coordinates}{
 Plot the following polar coordinates:\index{polar coordinates!plotting points}
-$$A = P(1,\pi/4)\quad B=P(1.5,\pi)\quad C = P(2,-\pi/3)\quad D = P(-1,\pi/4)$$
+\[
+A = P(1,\pi/4)\quad B=P(1.5,\pi)\quad C = P(2,-\pi/3)\quad D = P(-1,\pi/4)
+\]
 }
 {%
 \mtable{.45}{A polar grid for Example \ref{ex_polar1}}{fig:polar_grid}
@@ -65,10 +67,15 @@ It is useful to recognize both the rectangular (or, Cartesian) coordinates of a 
 
 \mfigure{.75}{Converting between rectangular and polar coordinates.}{fig:polar_intro2}{figures/figpolarintro2}
 \keyidea{idea:polarconvert}{\parbox[t]{185pt}{Converting Between Rectangular and Polar Coordinates}}
-{Given the polar point $P(r,\theta)$, the rectangular coordinates are determined by $$x=r\cos \theta\qquad y=r\sin \theta.$$
+{Given the polar point $P(r,\theta)$, the rectangular coordinates are determined by 
+\[
+x=r\cos \theta\qquad y=r\sin \theta.
+\]
 
 Given the rectangular coordinates $(x,y)$, the polar coordinates are determined by
-$$ r^2=x^2+y^2\qquad \tan \theta = \frac yx.$$
+\[
+ r^2=x^2+y^2\qquad \tan \theta = \frac yx.
+ \]
 }
 
 \example{ex_polar2}{Converting Between Polar and Rectangular Coordinates}{
@@ -81,11 +88,15 @@ $$ r^2=x^2+y^2\qquad \tan \theta = \frac yx.$$
 	\item \begin{enumerate}
 		\item 
 	We start with $P(2,2\pi/3)$. Using Key Idea \ref{idea:polarconvert}, we have 
-	$$x= 2\cos (2\pi/3) = -1\qquad y = 2\sin (2\pi/3) = \sqrt{3}.$$
+	\[
+	x= 2\cos (2\pi/3) = -1\qquad y = 2\sin (2\pi/3) = \sqrt{3}.
+	\]
 	So the rectangular coordinates are $(-1,\sqrt{3}) \approx (-1,1.732)$.
 	
 	\item The polar point $P(-1,5\pi/4)$ is converted to rectangular with:
-	$$x=-1\cos (5\pi/4) = \sqrt{2}/2\qquad y= -1\sin (5\pi/4) = \sqrt{2}/2.$$
+	\[
+	x=-1\cos (5\pi/4) = \sqrt{2}/2\qquad y= -1\sin (5\pi/4) = \sqrt{2}/2.
+	\]
 	So the rectangular coordinates are $(\sqrt{2}/2,\sqrt{2}/2) \approx (0.707,0.707)$.
 	\end{enumerate}
 	These points are plotted in Figure \ref{fig:polar2} (a). The rectangular coordinate system is drawn lightly under the polar coordinate system so that the relationship between the two can be seen.
@@ -94,13 +105,22 @@ $$ r^2=x^2+y^2\qquad \tan \theta = \frac yx.$$
 	
 	\item \begin{enumerate}
 		\item To convert the rectangular point $(1,2)$ to polar coordinates, we use the Key Idea to form the following two equations:
-		$$1^2+2^2 = r^2 \qquad \tan \theta = \frac{2}{1}.$$
+		\[
+		1^2+2^2 = r^2 \qquad \tan \theta = \frac{2}{1}.
+		\]
 		The first equation tells us that $r=\sqrt{5}$. Using the inverse tangent function, we find
-		$$\tan \theta = 2 \quad \Rightarrow \quad \theta = \tan^{-1} 2 \approx 1.11\approx 63.43^\circ.$$
+		\[
+		\tan \theta = 2 \quad \Rightarrow \quad \theta = \tan^{-1} 2 \approx 1.11\approx 63.43^\circ.
+		\]
 		Thus polar coordinates of $(1,2)$ are $P(\sqrt{5},1.11)$.
 		\item		To convert $(-1,1)$ to polar coordinates, we form the equations 
-		$$(-1)^2+1^2=r^2 \qquad \tan \theta = \frac{1}{-1}.$$
-		Thus $r=\sqrt{2}$. We need to be careful in computing $\theta$: using the inverse tangent function, we have $$\tan\theta = -1 \quad \Rightarrow \quad \theta = \tan^{-1}(-1) = -\pi/4 = -45^\circ.$$
+		\[
+		(-1)^2+1^2=r^2 \qquad \tan \theta = \frac{1}{-1}.
+		\]
+		Thus $r=\sqrt{2}$. We need to be careful in computing $\theta$: using the inverse tangent function, we have 
+		\[
+		\tan\theta = -1 \quad \Rightarrow \quad \theta = \tan^{-1}(-1) = -\pi/4 = -45^\circ.
+		\]
 		This is not the angle we desire. The range of $\tan^{-1}x $ is $(-\pi/2,\pi/2)$; that is, it returns angles that lie in the $1^\text{st}$ and $4^\text{th}$ quadrants. To find locations in the $2^\text{nd}$  and $3^\text{rd}$ quadrants, add $\pi$ to the result of $\tan^{-1}x$. So  $\pi+(-\pi/4)$ puts the angle at $3\pi/4$. Thus the polar point is $P(\sqrt{2},3\pi/4)$.
 		
 		An alternate method is to use the angle $\theta$ given by arctangent, but change the sign of $r$. Thus we could also refer to $(-1,1)$ as\\ $P(-\sqrt{2},-\pi/4)$.
@@ -136,12 +156,14 @@ Describe the graphs of the following polar functions.
 
 \mfigure{.25}{Plotting standard polar plots.}{fig:polar3}{figures/figpolar3}
 
-We can consider the rectangular equivalent of this equation; using $r^2=x^2+y^2$, we see that $1.5^2=x^2+y^2$, which we recognize as the equation of a circle centered at $(0,0)$ with radius 1.5. This is sketched in Figure \ref{fig:polar3}.
+We can consider the rectangular equivalent of this equation; using $r^2=x^2+y^2$, we see that $1.5^2=x^2+y^2$, which we recognize as the equation of a circle centred at $(0,0)$ with radius 1.5. This is sketched in Figure \ref{fig:polar3}.
 
-\item The equation $\theta = \pi/4$ describes all points such that the line through them and the pole make an angle of $\pi/4$ with the initial ray. As the radius $r$ is not specified, it can be any value (even negative). Thus $\theta = \pi/4$ describes the line through the pole that makes an angle of $\pi/4 = 45^\circ$ with the initial ray: see Figure \ref{fig:polar3}.
+\item The equation $\theta = \pi/4$ describes all points such that the line through them and the pole make an angle of $\pi/4$ with the initial ray. As the radius $r$ is not specified, it can be any value (even negative). Thus $\theta = \pi/4$ describes the line through the pole that makes an angle of $\pi/4 = 45^\circ$ with the initial ray.
 
 We can again consider the rectangular equivalent of this equation. Combine $\tan \theta =y/x$ and $\theta =\pi/4$:
-$$\tan \pi/4 = y/x \quad \Rightarrow x\tan \pi/4 = y \quad \Rightarrow y = x.$$ 
+\[
+\tan \pi/4 = y/x \quad \Rightarrow x\tan \pi/4 = y \quad \Rightarrow y = x.
+\] 
 \end{enumerate}
 \vskip-1.5\baselineskip
 }\clearpage
@@ -153,9 +175,9 @@ We sketch these functions much like we sketch rectangular and parametric functio
 
 \example{ex_polar4}{Sketching Polar Functions}{ 
 Sketch the polar function $r=1+\cos \theta$ on $[0,2\pi]$ by plotting points.}
-{A common question when sketching curves by plotting points is ``Which points should I plot?'' With rectangular equations, we often choose ``easy'' values -- integers, then added more if needed. When plotting polar equations, start with the ``common'' angles -- multiples of $\pi/6$ and $\pi/4$. Figure \ref{fig:polar4} gives a table of just a few values of $\theta$ in $[0,\pi]$. 
+{A common question when sketching curves by plotting points is ``Which points should I plot?'' With rectangular equations, we often choose ``easy'' values -- integers, then add more if needed. When plotting polar equations, start with the ``common'' angles -- multiples of $\pi/6$ and $\pi/4$. Figure \ref{fig:polar4} gives a table of just a few values of $\theta$ in $[0,\pi]$. 
 
-\mtable{.6}{Graphing a polar function in\\ Example \ref{ex_polar4} by plotting points.}{fig:polar4}{%
+\mtable{.6}{Graphing a polar function in Example\\ \ref{ex_polar4} by plotting points.}{fig:polar4}{%
 \begin{tabular}{c}
 		$\begin{array}{cc}
 		\theta & r=1+\cos\theta \\ \hline
@@ -164,9 +186,10 @@ Sketch the polar function $r=1+\cos \theta$ on $[0,2\pi]$ by plotting points.}
   \pi/2 & 1 \\
  4\pi/3 & 0.5 \\
  7 \pi /4 & 1.70711 \\
- \end{array}$\\
- \myincludegraphics[scale=0.9]{figures/figpolar4}
-\end{tabular}}
+ \end{array}$\\ \\
+ \myincludegraphics{figures/figpolar4}
+\end{tabular}
+}
 
 Consider the point $P(0,2)$ determined by the first line of the table. The angle is 0 radians -- we do not rotate from the initial ray -- then we go out 2 units from the pole. When $\theta=\pi/6$, $r = 1.866$ (actually, it is $1+\sqrt{3}/2$); so rotate by $\pi/6$ radians and go out 1.866 units. 
 
@@ -275,8 +298,6 @@ Convert from polar to rectangular.
 	\end{align*}
 	The original polar equation, $r=2/(\sin\theta-\cos\theta)$ does not easily reveal that its graph is simply a line. However, our conversion shows that it is. The upcoming gallery of polar curves gives the general equations of lines in polar form.
 
-\drawexampleline
-	
 	\item		By multiplying both sides by $r$, we obtain both an $r^2$ term and an $r\cos\theta$ term, which we replace with $x^2+y^2$ and $x$, respectively. 
 	\begin{align*}
 	r &=2\cos\theta \\
@@ -291,7 +312,7 @@ Convert from polar to rectangular.
 	\vskip-\baselineskip
 }\\
 
-Some curves have very simple polar equations but rather complicated rectangular ones. For instance, the equation $r=1+\cos\theta$ describes a \textit{cardiod} (a shape important the sensitivity of microphones, among other things; one is graphed in the gallery in the Lima\c con section). It's rectangular form is not nearly as simple; it is the implicit equation
+Some curves have very simple polar equations but rather complicated rectangular ones. For instance, the equation $r=1+\cos\theta$ describes a \textit{cardioid} (a shape important to the sensitivity of microphones, among other things; one is graphed in the gallery in the Lima\c con section). It's rectangular form is not nearly as simple; it is the implicit equation
 $x^4+y^4+2x^2y^2-2xy^2-2x^3-y^2=0.$ The conversion is not ``hard,'' but takes several steps, and is left as a problem in the Exercise section.\\
 \pagebreak
 
@@ -336,7 +357,7 @@ $r=a\cos \theta$ & $r=a\sin\theta$ & $r=a$ & $r=\theta$\\
 \begin{tabular}{p{\gallerywidth}p{\gallerywidth}p{\gallerywidth}p{\gallerywidth}}
 \multicolumn{4}{l}{Symmetric about $x$-axis: $r=a\pm b\cos\theta$; \quad Symmetric about $y$-axis:  $r=a\pm b\sin \theta$; \quad $a,b>0$}\\
 \\
-\textbf{With inner loop:} & \textbf{Cardiod:} & \textbf{Dimpled:} & \textbf{Convex:} \\[5pt]
+\textbf{With inner loop:} & \textbf{Cardioid:} & \textbf{Dimpled:} & \textbf{Convex:} \\[5pt]
 $\ds \frac ab < 1$ & $\ds \frac ab=1$ & $\ds 1<\frac ab <2$ & $\ds \frac ab>2$ \\[10pt]
 \myincludegraphics[scale=.9]{figures/figpolarlimacon1} & \myincludegraphics[scale=.9]{figures/figpolarlimacon2} & \myincludegraphics[scale=.9]{figures/figpolarlimacon3} & \myincludegraphics[scale=.9]{figures/figpolarlimacon4}
 \end{tabular}\\
@@ -349,7 +370,7 @@ $\ds \frac ab < 1$ & $\ds \frac ab=1$ & $\ds 1<\frac ab <2$ & $\ds \frac ab>2$ \
 \multicolumn{4}{l}{Symmetric about $x$-axis: $r=a \cos(n\theta)$; \quad Symmetric about $y$-axis:  $r=a\sin(n\theta)$}\\
 \multicolumn{4}{l}{Curve contains $2n$ petals when $n$ is even and $n$ petals when $n$ is odd.}\\
 \\
-%\textbf{With inner loop:} & \textbf{Cardiod:} & \textbf{Dimpled:} & \textbf{Convex:} \\[5pt]
+%\textbf{With inner loop:} & \textbf{Cardioid:} & \textbf{Dimpled:} & \textbf{Convex:} \\[5pt]
 $r=a\cos (2\theta)$ & $r=a\sin(2\theta)$ & $r=a\cos (3\theta)$ & $r=a\sin (3\theta)$ \\[10pt]
 \myincludegraphics[scale=.9]{figures/figpolarrose1} & \myincludegraphics[scale=.9]{figures/figpolarrose2} & \myincludegraphics[scale=.9]{figures/figpolarrose4} & \myincludegraphics[scale=.9]{figures/figpolarrose3}
 \end{tabular}\\

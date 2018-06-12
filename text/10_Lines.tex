@@ -11,14 +11,14 @@ This holds true for lines in space.\\
 
 Let $P$ be a point in space, let $\vec p$ be the vector with initial point at the origin and terminal point at $P$ (i.e., $\vec p$ ``points'' to $P$), and let $\vec d$ be a vector. Consider the points on the line through $P$ in the direction of $\vec d$. 
 
-Clearly one point on the line is $P$; we can say that the \emph{vector} $\vec p$ lies at this point on the line. To find another point on the line, we can start at $\vec p$ and move in a  direction parallel to $\vec d$. For instance, starting at $\vec p$ and traveling one length of $\vec d$ places one at another point on the line. Consider Figure \ref{fig:lines_intro} where certain points along the line are indicated. 
+Clearly one point on the line is $P$; we can say that the \emph{vector} $\vec p$ lies at this point on the line. To find another point on the line, we can start at $\vec p$ and move in a  direction parallel to $\vec d$. For instance, starting at $\vec p$ and travelling one length of $\vec d$ places one at another point on the line. Consider Figure \ref{fig:lines_intro} where certain points along the line are indicated. 
 \mfigurethree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=0,
 3Dortho=0.0045,
 3Dc2c=.84 .46 .26,
 3Dcoo=0 70 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=5mm 5mm 5mm 5mm,clip=true}{.7}{Defining a line in space.}{fig:lines_intro}{figures/figlines_intro}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{.7}{Defining a line in space.}{fig:lines_intro}{figures/figlines_intro}
 %\mfigure[scale=1.25,trim=5mm 5mm 5mm 5mm,clip=true]{.7}{Defining a line in space.}{fig:lines_intro}{figures/figlines_intro}
 
 The figure illustrates how every point on the line can be obtained by starting with $\vec p$ and moving a certain distance in the direction of $\vec d$. That is, we can define the line as a function of $t$:
@@ -81,7 +81,7 @@ There are other ways to represent a line. Let $\vec p = \la x_0,y_0,z_0\ra$ and 
 						&= \la x_0 + at, y_0+bt, z_0+ct\ra.
 \end{align*}
 
-The last line states the the $x$ values of the line are given by $x=x_0+at$, the $y$ values are given by $y = y_0+bt$, and the $z$ values are given by $z = z_0 + ct$. These three equations, taken together, are the \textbf{parametric equations of the line} through $\vec p$ in the direction of $\vec d$.
+The last line states that the $x$ values of the line are given by $x=x_0+at$, the $y$ values are given by $y = y_0+bt$, and the $z$ values are given by $z = z_0 + ct$. These three equations, taken together, are the \textbf{parametric equations of the line} through $\vec p$ in the direction of $\vec d$.
 
 Finally, each of the equations for $x$, $y$ and $z$ above contain the variable $t$. We can solve for $t$ in each equation:
 \begin{align*}
@@ -91,18 +91,27 @@ z = z_0+ct \quad&\Rightarrow\quad t = \frac{z-z_0}{c},\\
 \end{align*}
 assuming $a,b,c\neq 0$.
 Since $t$ is equal to each expression on the right, we can set these equal to each other, forming the \textbf{symmetric equations of the line} through $\vec p$ in the direction of $\vec d$:
-$$\frac{x-x_0}{a} = \frac{y-y_0}{b}=\frac{z-z_0}{c}.$$
+\[
+\frac{x-x_0}{a} = \frac{y-y_0}{b}=\frac{z-z_0}{c}.
+\]
 Each representation has its own advantages, depending on the context. We summarize these three forms in the following definition, then give examples of their use.
 %\clearpage
 
 \definition{def:lines}{Equations of Lines in Space}
 {Consider the line in space that passes through $\vec p = \la x_0,y_0,z_0\ra$ in the direction of $\vec d = \la a,b,c\ra.$\index{lines!equations for}
 \begin{enumerate}
-	\item The \textbf{vector equation} of the line is $$\vec \ell(t) = \vec p+t\vec d.$$
+	\item The \textbf{vector equation} of the line is 
+	\[
+	\vec \ell(t) = \vec p+t\vec d.
+	\]
 	\item	The \textbf{parametric equations} of the line are
-	$$x = x_0+at, \quad y=y_0+bt, \quad z = z_0+ct .$$
+	\[
+	x = x_0+at, \quad y=y_0+bt, \quad z = z_0+ct .
+	\]
 	\item	The \textbf{symmetric equations} of the line are
-	$$\frac{x-x_0}{a} = \frac{y-y_0}{b}=\frac{z-z_0}{c}.$$
+	\[
+	\frac{x-x_0}{a} = \frac{y-y_0}{b}=\frac{z-z_0}{c}.
+	\]
 \end{enumerate}
 }
 
@@ -112,23 +121,29 @@ Give all three equations, as given in Definition \ref{def:lines}, of the line th
 \begin{itemize}
 	\item the vector equation of the line is $\vec\ell(t) = \la 2,3,1\ra + t\la -1,1,2\ra$;
 	\item	the parametric equations of the line are
-	$$x = 2-t,\quad y = 3+t,\quad z = 1+2t; \text{ and}$$
+	\[
+	x = 2-t,\quad y = 3+t,\quad z = 1+2t; \text{ and}
+	\]
 	\item	the symmetric equations of the line are
-	$$\frac{x-2}{-1}=\frac{y-3}{1} = \frac{z-1}{2}.$$
+	\[
+	\frac{x-2}{-1}=\frac{y-3}{1} = \frac{z-1}{2}.
+	\]
 \end{itemize}
-\mfigurethree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
+\mfigurethree{width=150pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=0,
 3Dortho=0.0045,
 3Dc2c=.78 .53 .32,
 3Dcoo=0 70 50,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=2mm 2mm 2mm 2mm,clip=true}{.5}{Graphing a line in Example \ref{ex_lines1}.}{fig:lines1}{figures/figlines1}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=150pt}{.2}{Graphing a line in Example \ref{ex_lines1}.}{fig:lines1}{figures/figlines1}
 %\mfigure[scale=1.25,trim=2mm 2mm 2mm 2mm,clip=true]{.5}{Graphing a line in Example \ref{ex_lines1}.}{fig:lines1}{figures/figlines1}
 
-The first two equations of the line are useful when a $t$ value is given: one can immediately find the corresponding point on the line. These forms are good when calculating with a computer; most software programs easily handle equations in these formats. (For instance, to make Figure \ref{fig:lines1}, a certain graphics program was given the input \texttt{(2-x,3+x,1+2*x)}. This particular program requires the variable always be ``$x$'' instead of ``$t$'').
+The first two equations of the line are useful when a $t$ value is given: one can immediately find the corresponding point on the line. These forms are good when calculating with a computer; most software programs easily handle equations in these formats. (For instance, the graphics program that made Figure \ref{fig:lines1} can be given the input ``\texttt{(2-t,3+t,1+2*t)}'' for $-1\leq t\leq 3$.).
 
 Does the point $Q = (-1,6,6)$ lie on the line? The graph in Figure \ref{fig:lines1} makes it clear that it does not. We can answer this question without the graph using any of the three equation forms. Of the three, the symmetric equations are probably best suited for this task. Simply plug in the values of $x$, $y$ and $z$ and see if equality is maintained:
-$$ \frac{-1-2}{-1} \stackrel{?}{=} \frac{6-3}{1} \stackrel{?}{=} \frac{6-1}{2} \quad \Rightarrow \quad 3=3\neq2.5.$$
+\[
+ \frac{-1-2}{-1} \stackrel{?}{=} \frac{6-3}{1} \stackrel{?}{=} \frac{6-1}{2} \quad \Rightarrow \quad 3=3\neq2.5.
+\]
 We see that $Q$ does not lie on the line as it did not satisfy the symmetric equations.
 }\\
 
@@ -137,14 +152,16 @@ Find the parametric equations of the line through the points $P=(2,-1,2)$ and $Q
 {Recall the statement made at the beginning of this section: to find the equation of a line, we need a point and a direction. We have \emph{two} points; either one will suffice. The direction of the line can be found by the vector with initial point $P$ and terminal point $Q$: $\vv{PQ} = \la -1,4,-3\ra$.
 
 The parametric equations of the line $\ell$ through $P$ in the direction of $\vv{PQ}$ are:
-$$\ell: \quad x= 2-t\quad y=-1+4t \quad z=2-3t.$$
-\mfigurethree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
+\[
+\ell: \quad x= 2-t\quad y=-1+4t \quad z=2-3t.
+\]
+\mfigurethree{width=150pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=0,
 3Dortho=0.0045,
 3Dc2c=.4 .87 .32,
 3Dcoo=58 8.7 4.6,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25}{.6}{A graph of the line in Example \ref{ex_lines6}.}{fig:lines6}{figures/figlines6}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=150pt}{.5}{A graph of the line in Example \ref{ex_lines6}.}{fig:lines6}{figures/figlines6}
 %\mfigure[scale=1.25]{.6}{A graph of the line in Example \ref{ex_lines6}.}{fig:lines6}{figures/figlines6}
 
 A graph of the points and line are given in Figure \ref{fig:lines6}. Note how in the given parametrization of the line, $t=0$ corresponds to the point $P$, and $t=1$ corresponds to the point $Q$. This relates to the understanding of the vector equation of a line described in Figure \ref{fig:lines_eq}. The parametric equations ``start'' at the point $P$, and $t$ determines how far in the direction of $\vv{PQ}$ to travel. When $t=0$, we travel 0 lengths of $\vv{PQ}$; when $t=1$, we travel one length of $\vv{PQ}$, resulting in the point $Q$.
@@ -168,33 +185,82 @@ The next two examples investigate these possibilities.\\
 
 \example{ex_lines2}{Comparing lines}{
 Consider lines $\ell_1$ and $\ell_2$, given in parametric equation form:
-$$\ell_1: \begin{array}{ccc} x&=&1+3t \\ y&=&2-t\\z&=&t\end{array}\qquad\qquad \ell_2:\begin{array}{ccc} x&=&-2+4s\\y&=&3+s\\z&=&5+2s.\end{array}$$
+\[
+\ell_1: \begin{array}{ccc} x&=&1+3t \\ y&=&2-t\\z&=&t\end{array}\qquad\qquad \ell_2:\begin{array}{ccc} x&=&-2+4s\\y&=&3+s\\z&=&5+2s.\end{array}
+\]
 Determine whether $\ell_1$ and $\ell_2$ are the same line, intersect, are parallel, or skew.}
 {We start by looking at the directions of each line. Line $\ell_1$ has the direction given by $\vec d_1=\la 3,-1,1\ra$ and line $\ell_2$ has the direction given by $\vec d_2 = \la 4,1,2\ra$. It should be clear that $\vec d_1$ and $\vec d_2$ are not parallel, hence $\ell_1$ and $\ell_2$ are not the same line, nor are they parallel. Figure \ref{fig:lines2} verifies this fact (where the points and directions indicated by the equations of each line are identified).
-\mfigurethree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
+\mfigurethree{width=150pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=0,
 3Dortho=0.0045,
 3Dc2c=.42 .80 .43,
 3Dcoo=0 30 50,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=5mm 5mm 5mm 5mm,clip=true}{.6}{Sketching the lines from Example \ref{ex_lines2}.}{fig:lines2}{figures/figlines2}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=150pt}{.6}{Sketching the lines from Example \ref{ex_lines2}.}{fig:lines2}{figures/figlines2}
 %\mfigure[scale=1.25,trim=5mm 5mm 5mm 5mm,clip=true]{.6}{Sketching the lines from Example \ref{ex_lines2}.}{fig:lines2}{figures/figlines2}
 
 We next check to see if they intersect (if they do not, they are skew lines). To find if they intersect, we look for $t$ and $s$ values such that the respective $x$, $y$ and $z$ values are the same. That is, we want $s$ and $t$ such that:
-$$\begin{array}{ccc}
-1+3t &=&-2+4s\\
-2-t&=&3+s\\
-t&=&5+2s.\end{array}$$
+\[
+\begin{array}{ccccc}
+1+3t &=&x&=&-2+4s\\
+2-t&=&y&=&3+s\\
+t&=&z&=&5+2s.
+\end{array}
+\]
 This is a relatively simple system of linear equations. Since the last equation is already solved for $t$, substitute that value of $t$ into the equation above it:
-$$2-(5+2s) = 3+s \quad \Rightarrow \quad s=-2,\ t=1.$$
+\[
+2-(5+2s) = 3+s \quad \Rightarrow \quad s=-2,\ t=1.
+\]
 A key to remember is that we have \emph{three} equations; we need to check if $s=-2,\ t=1$ satisfies the first equation as well:
-$$1+3(1) \neq -2+4(-2).$$
+\[
+1+3(1) \neq -2+4(-2).
+\]
 It does not. Therefore, we conclude that the lines $\ell_1$ and $\ell_2$ are skew.
 }\\
 
+\mnote{.4}{Recall from linear algebra that a system of equations with no solution, such as the one in Example \ref{ex_lines2}, is \textit{inconsistent}. Although it is possible to find values that work for any two of the three equations, there is no set of values for $s$ and $t$ that work for all three equations simultaneously.}
+
+\example{ex_lines8}{Comparing lines}{
+Consider the lines $\ell_1$ and $\ell_2$ given by the vector equations
+\begin{align*}
+\vec\ell_1(s) & = \langle 2, -1, 4\rangle + s\langle 0, 4, -8\rangle\\
+\vec\ell_2(t) & = \langle -3, 4, -6\rangle + t\langle 2, -1, 2\rangle.
+\end{align*}
+Determine if the lines are parallel, skew, or intersecting.}
+{We can immediately see that the lines cannot be parallel, since the $x$-component of the direction vector for $\ell_1$ is zero, but this is not the case for the direction vector of $\ell_2$. (There is no scalar $c$ such that $0\cdot c=2$.) To determine if the lines intersect, we proceed as in the previous example. We must have
+\[
+\begin{array}{ccccc}
+2 & = & x & = &-3+2t\\
+-1+4s & = &  y & = & 4-t\\
+4-8s & = & z & = & -6+2t.
+\end{array}
+\]
+The first equation immediately gives us $2t=5$, so $t=\frac{5}{2}$. Plugging this into the second equation gives us
+\[
+4s = 4-\frac{5}{2}+1 = \frac{5}{2} \quad \Rightarrow \quad s=\frac{5}{8}.
+\]
+We now need to check to see if these values satisfy the third equation as well: we have
+\[
+4-8s = 4-5=-1,
+\]
+and
+\[
+-6+2t = -6+5=-1,
+\]
+so the values $s=\frac{5}{8}$, $t=\frac{5}{2}$ work for all three equations, and since
+\begin{align*}
+\vec\ell_1\left(\frac{5}{8}\right) &= \langle 2, -1, 4\rangle +\frac{5}{8}\langle 0, 4, -8\rangle = \langle 2, \frac{3}{2}, -1\rangle \tag*{and}\\
+\vec\ell_2\left(\frac{5}{2}\right) & = \langle -3, 4, -6\rangle+\frac{5}{2}\langle 2, -1, 2\rangle = \langle 2, \frac{3}{2}, -1\rangle,
+\end{align*}
+our point of intersection is $(2, \frac{3}{2}, -1)$.
+}\\
+
+
 \example{ex_lines3}{Comparing lines}{
 Consider lines $\ell_1$ and $\ell_2$, given in parametric equation form:
-$$\ell_1: \begin{array}{ccc} x&=&-0.7+1.6t \\ y&=&4.2+2.72t\\z&=&2.3-3.36t\end{array}\qquad\qquad \ell_2:\begin{array}{ccc} x&=&2.8-2.9s\\y&=&10.15-4.93s\\z&=&-5.05+6.09s.\end{array}$$
+\[
+\ell_1: \begin{array}{ccc} x&=&-0.7+1.6t \\ y&=&4.2+2.72t\\z&=&2.3-3.36t\end{array}\qquad\qquad \ell_2:\begin{array}{ccc} x&=&2.8-2.9s\\y&=&10.15-4.93s\\z&=&-5.05+6.09s.\end{array}
+\]
 Determine whether $\ell_1$ and $\ell_2$ are the same line, intersect, are parallel, or skew.}
 {It is obviously very difficult to simply look at these equations and discern anything. This is done intentionally. In the ``real world,'' most equations that are used do not have nice, integer coefficients. Rather, there are lots of digits after the decimal and the equations can look ``messy.''
 
@@ -206,23 +272,29 @@ We again start by deciding whether or not each line has the same direction. The 
 
 \enlargethispage{\baselineskip}
 The two vectors seem to be parallel (at least, their components are equal to 4 decimal places). In most situations, it would suffice to conclude that the lines are at least parallel, if not the same. One way to be sure is to rewrite $\vec d_1$ and $\vec d_2$ in terms of fractions, not decimals. We have 
-$$\vec d_1 =\la \frac{16}{10},\frac{272}{100},-\frac{336}{100}\ra \qquad \vec d_2 = \la -\frac{29}{10},-\frac{493}{100},\frac{609}{100}\ra.$$
+\[
+\vec d_1 =\la \frac{16}{10},\frac{272}{100},-\frac{336}{100}\ra \qquad \vec d_2 = \la -\frac{29}{10},-\frac{493}{100},\frac{609}{100}\ra.
+\]
 One can then find the magnitudes of each vector in terms of fractions, then compute the unit vectors likewise. After a lot of manual arithmetic (or after briefly using a computer algebra system), one finds that 
-$$\vec u_1 = \la \sqrt{\frac{10}{83}},\frac{17}{\sqrt{830}},-\frac{21}{\sqrt{830}}\ra \qquad \vec u_2 = \la -\sqrt{\frac{10}{83}},-\frac{17}{\sqrt{830}},\frac{21}{\sqrt{830}}\ra.$$
+\[
+\vec u_1 = \la \sqrt{\frac{10}{83}},\frac{17}{\sqrt{830}},-\frac{21}{\sqrt{830}}\ra \qquad \vec u_2 = \la -\sqrt{\frac{10}{83}},-\frac{17}{\sqrt{830}},\frac{21}{\sqrt{830}}\ra.
+\]
 We can now say without equivocation that these lines are parallel.
 
 Are they the same line? The parametric equations for a line describe one point that lies on the line, so we know that the point $P_1 = (-0.7,4.2,2.3)$ lies on $\ell_1$. To determine if this point also lies on $\ell_2$, plug in the $x$, $y$ and $z$ values of $P_1$ into the symmetric equations for $\ell_2$:
 
 \small
-$$\frac{(-0.7)-2.8}{-2.9} \stackrel{?}{=} \frac{(4.2)-10.15}{-4.93} \stackrel{?}{=} \frac{(2.3)-(-5.05)}{6.09} \quad \Rightarrow \quad 1.2069=1.2069=1.2069.$$
+\[
+\frac{(-0.7)-2.8}{-2.9} \stackrel{?}{=} \frac{(4.2)-10.15}{-4.93} \stackrel{?}{=} \frac{(2.3)-(-5.05)}{6.09} \quad \Rightarrow \quad 1.2069=1.2069=1.2069.
+\]
 \normalsize
-\mfigurethree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
+\mfigurethree{width=150pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=0,
 3Dortho=0.0045,
 3Dc2c=.56 .8 .22,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=2mm 0mm 0mm 0mm,clip=true}{.6}{Graphing the lines in Example \ref{ex_lines3}.}{fig:lines3}{figures/figlines3}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=150pt}{.75}{Graphing the lines in Example \ref{ex_lines3}.}{fig:lines3}{figures/figlines3}
 %\mfigure[scale=1.25,trim=2mm 0mm 0mm 0mm,clip=true]{.35}{Graphing the lines in Example \ref{ex_lines3}.}{fig:lines3}{figures/figlines3}
 The point $P_1$ lies on both lines, so we conclude they are the same line, just parametrized differently. Figure \ref{fig:lines3} graphs this line along with the points and vectors described by the parametric equations. Note how $\vec d_1$ and $\vec d_2$ are parallel, though point in opposite directions (as indicated by their unit vectors above). 
 }\\
@@ -231,7 +303,7 @@ The point $P_1$ lies on both lines, so we conclude they are the same line, just 
 
 Given a point $Q$ and a line $\vec\ell(t) = \vec p+t\vec d$ in space, it is often useful to know the distance from the point to the line. (Here we use the standard definition of ``distance,'' i.e., the length of the shortest line segment from the point to the line.) Identifying $\vec p$ with the point $P$, Figure \ref{fig:lines_dist1} will help establish a general method of computing this distance $h$.
 
-\mfigure{.25}{Establishing the distance from a point to a line.}{fig:lines_dist1}{figures/figlines_dist1}
+\mfigure{.5}{Establishing the distance from a point to a line.}{fig:lines_dist1}{figures/figlines_dist1}
 
 From trigonometry, we know $h = \norm{\vv{PQ}}\sin\theta$. We have a similar identity involving the cross product: $\norm{\vv{PQ}\times \vec d} = \norm{\vv{PQ}}\, \vnorm{d}\sin\theta.$ Divide both sides of this latter equation by $\vnorm{d}$ to obtain $h$:
 \begin{equation}
@@ -239,22 +311,34 @@ h = \frac{\norm{\vv{PQ}\times \vec d}}{\vnorm{d}}.
 \label{eq:lines2}
 \end{equation}
 
+We put Equation \eqref{eq:lines2} to use in the following example.\\
+
+\example{ex_lines4}{Finding the distance from a point to a line}{
+Find the distance from the point $Q=(1,1,3)$ to the line $\vec\ell(t) = \la 1,-1,1\ra+t\la 2,3,1\ra.$}
+{The equation of the line line gives us the point $P=(1,-1,1)$ that lies on the line, hence $\overrightarrow{PQ} = \la 0,2,2\ra$. The equation also gives $\vec d= \la 2,3,1\ra$. Using Equation \eqref{eq:lines2}, we have the distance as 
+\begin{align*}
+h &= \frac{\norm{\overrightarrow{PQ}\times \vec d}}{\vnorm{d}}\\
+	&= \frac{\norm{\la -4,4,-4\ra}}{\sqrt{14}}\\
+	&=\frac{4\sqrt{3}}{\sqrt{14}}.
+\end{align*}
+}\\
+
 It is also useful to determine the distance between lines, which we define as the length of the shortest line segment that connects the two lines (an argument from geometry shows that this line segments is perpendicular to both lines). Let lines $\vec\ell_1(t) = \vec p_1 + t\vec d_1$ and $\vec\ell_2(t) = \vec p_2 + t\vec d_2$ be given, as shown in Figure \ref{fig:lines_dist2}. To find the direction orthogonal to both $\vec d_1$ and $\vec d_2$, we take the cross product: $\vec c = \vec d_1\times \vec d_2$. The magnitude of the orthogonal projection of $\vv{P_1P_2}$ onto $\vec c$ is the distance $h$ we seek:
 \begin{align*}
 h&=		\snorm{\text{proj}\,_{\vec c}\,\vv{P_1P_2}}\\
 	&= \snorm{\frac{\vv{P_1P_2}\cdot\vec c}{\dotp cc}\vec c}\\
-	&=\frac{|\vv{P_1P_2}\cdot \vec c|}{\vnorm c^2}\vnorm c\\
-	&=\frac{|\vv{P_1P_2}\cdot \vec c|}{\vnorm c}.
+	&=\frac{\lvert\vv{P_1P_2}\cdot \vec c\rvert}{\vnorm c^2}\vnorm c\\
+	&=\frac{\lvert\vv{P_1P_2}\cdot \vec c\rvert}{\vnorm c}.
 \end{align*}
 A problem in the Exercise section is to show that this distance is 0 when the lines intersect. Note the use of the Triple Scalar Product: $\vv{P_1P_2}\cdot c = \vv{P_1P_2}\cdot (\vec d_1\times \vec d_2).$
 
-\mfigurethree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
+\mfigurethree{width=150pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=6.34,
 3Dortho=0.0076,
 3Dc2c=.009 -.76 .65,
 3Dcoo=2.92 11.35 23.78,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{}{.45}{Establishing the distance between lines.}{fig:lines_dist2}{figures/figlines_dist2}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=150pt}{.75}{Establishing the distance between lines.}{fig:lines_dist2}{figures/figlines_dist2}
 %\mfigure{.45}{Establishing the distance between lines.}{fig:lines_dist2}{figures/figlines_dist2}
 
 The following Key Idea restates these two distance formulas.
@@ -263,36 +347,143 @@ The following Key Idea restates these two distance formulas.
 {\begin{enumerate}
 	\item Let $P$ be a point on a line $\ell$ that is parallel to $\vec d$. The distance $h$ from a point $Q$ to the line $\ell$ is:
 	\index{distance!between point and line}\index{distance!between lines}\index{lines!distances between}
-	$$h =\frac{\norm{\vv{PQ}\times \vec d}}{\vnorm{d}}.$$
+	\[
+	h =\frac{\norm{\vv{PQ}\times \vec d}}{\vnorm{d}}.
+	\]
 	\item	Let $P_1$ be a point on line $\ell_1$ that is parallel to $\vec d_1$, and let $P_2$ be a point on line $\ell_2$ parallel to $\vec d_2$, and let $\vec c = \vec d_1\times \vec d_2$, where lines $\ell_1$ and $\ell_2$ are not parallel. The distance $h$ between the two lines is:
-	$$h=\frac{|\vv{P_1P_2}\cdot \vec c|}{\vnorm c}.$$
+	\[
+	h=\frac{\lvert\vv{P_1P_2}\cdot \vec c\rvert}{\vnorm c}.
+	\]
+\end{enumerate}
+}\\
+
+
+
+\example{ex_lines5}{Finding the distance between lines}{
+Find the distance between the lines 
+\[
+\ell_1: \begin{array}{ccc} x&=&1+3t \\ y&=&2-t\\z&=&t\end{array}\qquad\qquad \ell_2:\begin{array}{ccc} x&=&-2+4s\\y&=&3+s\\z&=&5+2s.\end{array}
+\]
+}
+{These are the sames lines as given in Example \ref{ex_lines2}, where we showed them to be skew. The equations allow us to identify the following points and vectors:
+\begin{align*}
+P_1 = (1,2,0)\quad P_2 &= (-2,3,5) \quad \Rightarrow \quad \vv{P_1P_2} = \la -3,1,5\ra.\\
+\vec d_1 = \la 3,-1,1\ra \quad \vec d_2 &= \la 4,1,2\ra \quad \Rightarrow \quad \vec c = \vec d_1\times \vec d_2 = \la -3,-2,7\ra.
+\end{align*}
+Using Key Idea \ref{idea:line_distance} we have that the distance $h$ between the two lines is
+\[
+h = \frac{|\overrightarrow{P_1P_2}\cdot \vec c|}{\vnorm c}=\frac{42}{\sqrt{62}}\approx 5.334.
+\]
+}\\
+
+
+While Key Idea \ref{idea:line_distance} gives us a convenient formula for computing the distance, you are probably better off making sure you understand the argument used to obtain the formula, even though the formula is more efficient. For one thing, a formula is easily forgotten. For another, understanding the method will allow you to adapt it to similar situations still to come, such as computing the distance between skew lines, or from a point to a plane. The general method for these types of problems can be outlined as follows.
+
+\keyidea{idea:distance_method}{Steps for solving shortest distance problems}{
+Suppose you are asked to find the distance between two objects, or to determine an object (such as a point) that is closest to a given object (a line or plane). Your solution to the problem should always include the following steps:
+\begin{enumerate}
+\item Make a list of all the information provided in the problem.
+\item Make a note of what quantities you're asked to determine.
+\item \textbf{Draw a diagram}. Label all relevant points and vectors, including those you know, and those you want to find.
+\item Using your diagram as a reference, compute any unknown points or vectors.
 \end{enumerate}
 }
 
-\example{ex_lines4}{Finding the distance from a point to a line}{
-Find the distance from the point $Q=(1,1,3)$ to the line $\vec\ell(t) = \la 1,-1,1\ra+t\la 2,3,1\ra.$}
-{The equation of the line line gives us the point $P=(1,-1,1)$ that lies on the line, hence $\vv{PQ} = \la 0,2,2\ra$. The equation also gives $\vec d= \la 2,3,1\ra$. Following Key Idea \ref{idea:line_distance}, we have the distance as 
-\begin{align*}
-h &= \frac{\norm{\vv{PQ}\times \vec d}}{\vnorm{d}}\\
-	&= \frac{\norm{\la -4,4,-4\ra}}{\sqrt{14}}\\
-	&=\frac{4\sqrt{3}}{\sqrt{14}} \approx 1.852.
-\end{align*}
-The point $Q$ is approximately $1.852$ units from the line $\vec\ell(t)$.
+\mnote{.6}{\textbf{Note:} We can't overemphasize the fact that the diagram referred to in Key Idea \ref{idea:distance_method} \textbf{does not have to be accurate} with respect to the coordinates and directions involved. It simply has to be capable of representing the information in the problem. Note that in Figure \ref{fig:linedistsetup} in Example \ref{ex_lines4a} we've drawn a line, some points, and some vectors that represent the problem, without reference to a coordinate system. The goal is to provide enough detail to allow us to set up the problem.}
+
+We put the method in Key Idea \ref{idea:distance_method} to use in the following example. Note that in this example we're asked not just for the distance from a point to a line, but also for the point on the line that is \textit{closest} to the given point, so simply using Equation \eqref{eq:lines2} is not enough.\\
+
+\mfigure{.4}{Setting up the solution in Example \ref{ex_lines4a}}{fig:linedistsetup}{figures/pointlinedist}
+
+\example{ex_lines4a}{Finding the closest point on a line}{
+Find the distance from the point $Q=(1,3,-2)$ to the line $\vec\ell$ that passes through the point $P=(2,0,-1)$ in the direction of $\vec d = \la 1,-1,0\ra$, and find the point $R$ on $\vec\ell$ that is closest to $Q$.}
+{We're given a point $P$ on the line, along with a direction vector $\vec d$, and a point $Q$ not on the line. We seek the point $R$ on the line that is closest to $Q$, as well as the distance from $Q$ to $R$. We begin by diagramming the information in Figure \ref{fig:linedistsetup}. From the given points $P$ and $Q$ we can immediately construct the vector
+\[
+\overrightarrow{PQ}=\la 1-2, 3-0, -2-(-1)\ra = \la -1, 3, -1\ra.
+\]
+Rather than use Formula \eqref{eq:lines2} to find the distance, we begin instead by finding the point $R$ on the line that is closest to $Q$. From our diagram, we can see that the vector $\overrightarrow{PR}$ from $P$ to $R$ is equal to the projection of $\overrightarrow{PQ}$ onto the distance vector $\vec{d}$:
+\[
+\overrightarrow{PR}=\operatorname{proj}_{\vec{d}}\overrightarrow{PQ}= \left(\frac{\la -1,3,-1\ra\boldsymbol{\cdot}\la 1,-1,0\ra}{\la 1,-1,0\ra\boldsymbol{\cdot}\la 1,-1,0\ra}\right)\la 1,-1,0\ra = \la -2,2,0\ra.
+\]
+Now, we need to pause and take care that we don't make a very common mistake: the vector $\overrightarrow{PR}$ does \textbf{not} give the coordinates of the point $R$. Instead, $\overrightarrow{PR}$ tells us how to get \textit{from} the point $P$ \textit{to} the point $R$. Letting $O$ denote the origin, we can write $\overrightarrow{OP}$ and $\overrightarrow{OR}$ for the position vectors of $P$ and $R$, respectively. Since $\overrightarrow{PR} = \overrightarrow{OR}-\overrightarrow{OP}$ using the ``tip minus tail'' rule for computing the vector between two points, we have
+\[
+\overrightarrow{OR} = \overrightarrow{OP}+\overrightarrow{PR} = \la 2, 0, -1\ra + \la -2, 2, 0\ra = \la 0, 2, -1\ra.
+\]
+Thus, we have $R=(0,2,-1)$ as the point on the line closest to the point $Q$. We can now find the distance from $Q$ to the line using the distance formula:
+\[
+D= \sqrt{(1-0)^2+(3-2)^2+(-2-(-1))^2} = \sqrt{3}.
+\]
+(You should verify that this agrees with the distance given by Formula \eqref{eq:lines2}.)
+An alternative way of computing the distance is to make use of the orthogonal decomposition in Key Idea \ref{idea:orthog_proj}. By definition of the distance from a point to a line, we know that the vector $\overrightarrow{RQ}$ must be orthogonal to the line, and thus to the direction vector $\vec{d}$. Using Key Idea \ref{idea:orthog_proj}, we have that
+\[
+\overrightarrow{RQ}= \overrightarrow{PQ}-\overrightarrow{PR} = \la -1, 3, -1\ra - \la -2, 2, 0\ra = \la -1, 1, 1\ra,
+\]
+and the shortest distance is given by $\norm{\overrightarrow{RQ}}=\sqrt{3}$, as before.
 }\\
 
-\example{ex_lines5}{Finding the distance between lines}{
-Find the distance between the lines $$\ell_1: \begin{array}{ccc} x&=&1+3t \\ y&=&2-t\\z&=&t\end{array}\qquad\qquad \ell_2:\begin{array}{ccc} x&=&-2+4s\\y&=&3+s\\z&=&5+2s.\end{array}$$
-}
-{These are the sames lines as given in Example \ref{ex_lines2}, where we showed them to be skew. The equations allow us to identify the following points and vectors:
-$$P_1 = (1,2,0)\quad P_2 = (-2,3,5) \quad \Rightarrow \quad \vv{P_1P_2} = \la -3,1,5\ra.$$
-$$\vec d_1 = \la 3,-1,1\ra \quad \vec d_2 = \la 4,1,2\ra \quad \Rightarrow \quad \vec c = \vec d_1\times \vec d_2 = \la -3,-2,7\ra.$$
-From Key Idea \ref{idea:line_distance} we have the distance $h$ between the two lines is
+In the case of skew lines, the key observation is that if we take the vector between \textbf{any} pair of points, one on each line, and project it onto the vector $\vec c = \vec{d}_1\times\vec{d}_2$, the length of the resulting vector is the distance we seek.
+
+Somewhat more challenging is the problem of finding the points on each line that actually \textit{realize} this shortest distance.\\
+
+\example{ex_lines7}{Finding the closest points on skew lines}{
+Find the points $R_1$ on $\vec\ell_1$ and $R_2$ on $\vec\ell_2$, where $\vec\ell_1$ and $\vec\ell_2$ are the lines from Example \ref{ex_lines5}, such that the distance from $R_1$ to $R_2$ is a minimum.}
+{Since $R_1$ is a point on $\vec\ell_1$, we know that 
+\begin{equation}\label{eq:skewpoint1}
+R_1 = (1+3t, 2-t, t), \quad \text{ for some real number } t,
+\end{equation}
+and similarly, 
+\begin{equation}\label{eq:skewpoint2}
+R_2 = (-2+4s, 3+s, 5+2s), \quad \text{ for some real number } s.
+\end{equation}
+The vector $\overrightarrow{R_1R_2}$ is therefore given by
+\[
+\overrightarrow{R_1R_2}=\la -3+4s-3t, 1+s+t, 5+2s-t\ra,
+\]
+for some pair of real numbers $s$ and $t$. We know that the line segment $\overline{R_1R_2}$ must be perpendicular to both $\vec\ell_1$ and $\vec\ell_2$ in order to minimize the distance, so the vector $\overrightarrow{R_1R_2}$ must be orthogonal to both $\vec{d}_1$ and $\vec{d}_2$. Thus,
 \begin{align*}
-h &= \frac{|\vv{P_1P_2}\cdot \vec c|}{\vnorm c}\\
-&=\frac{42}{\sqrt{62}} \approx 5.334.
+0 = \vec{d}_1\boldsymbol{\cdot}\overrightarrow{R_1R_2} & = 3(-3+4s-3t)-1(1+s+t)+1(5+2s-t)\\
+ &=13s-11t-5, \text{ and}\\
+0 = \vec{d}_2\boldsymbol{\cdot}\overrightarrow{R_1R_2} & = 4(-3+4s-3t)+1(1+s+t)+2(5+2s-t)\\
+& = 21s-13t-1.
 \end{align*}
-The lines are approximately 5.334 units apart.
+We end up having to solve a \textit{system} of two linear equations in the two variables, $s$ and $t$, given by
+\[
+\begin{array}{ccccc}
+13s&-&11t&=&5,\\
+21s&-&13t&=&1.
+\end{array}
+\]
+You probably had to solve such systems in high school. One option is to solve graphically, by plotting the lines given by each equation, and seeing where they intersect. However, this method has little hope of providing an accurate answer. Instead, we try a little algebra. Multiplying the first equation by 21 and the second by 13 gives us the equations $273s-231t=105$ and $273s-169t=13$, respectively. Subtracting the second equation from the first, we have $-62t = 92$, so $t=-\frac{92}{62}=-\frac{46}{31}$. Plugging this value back into any of the previous equations gives us $s=-\frac{351}{403}=-\frac{27}{31}$. (We didn't promise that the numbers would work out nicely!) Plugging these values back into equations \eqref{eq:skewpoint1} and \eqref{eq:skewpoint2}, we find
+\[
+R_1 = \left(-\frac{107}{31}, \frac{108}{31}, -\frac{46}{31}\right) \quad \text{ and } \quad R_2 = \left(-\frac{170}{31}, \frac{66}{31}, \frac{101}{31}\right).
+\]
+Our vector $\overrightarrow{R_1R_2}$ is then given by
+\[
+\overrightarrow{R_1R_2} = \left\langle -\frac{63}{31}, -\frac{42}{31}, \frac{147}{31}\right\rangle = \frac{1}{31}\la -63, -42, 147\ra,
+\]
+and the distance between the two lines is given by
+\[
+\norm{\overrightarrow{R_1R_2}} = \frac{1}{31}\sqrt{63^2+42^2+147^2} = \frac{42}{\sqrt{62}},
+\]
+as before.
 }\\
+
+\mnote{.75}{You might be thinking, ``Are those two values really the same?'' A calculator can verify this of course, by computing the decimal approximations for the results in Examples \ref{ex_lines5} and \ref{ex_lines7}. Alternatively, you can verify that
+\[
+63^2+42^2+147^2 = 27,342 = 2(21)^2(31),
+\]
+so
+\begin{align*}
+\frac{\sqrt{63^2+42^2+147^2}}{31} &= \sqrt{2(21^2)(31)}{31}\\
+& = \frac{21\sqrt{2}\sqrt{31}}{31}\\
+& = \frac{21\sqrt{2}}{\sqrt{31}}\\
+& = \frac{21(2)}{\sqrt{31}\sqrt{2}}\\
+& = \frac{42}{\sqrt{62}}.
+\end{align*}}
+
+
+Example \ref{ex_lines7} required us to solve a system of two linear equations in two unknowns $s$ and $t$. Although this involved some messy fractions, the algebra involved was fairly straightforward. In many real life problems it is necessary to be able to solve systems involving hundreds or even thousands of equations and variables. We will begin our study of how to systematically solve such systems in the next chapter.
+
 
 One of the key points to understand from this section is this: to describe a line, we need a point and a direction. Whenever a problem is posed concerning a line, one  needs to take whatever information is offered and glean point and direction information. Many questions can be asked (and \emph{are} asked in the Exercise section) whose answer immediately follows from this understanding. 
 

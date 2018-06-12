@@ -21,7 +21,7 @@ As long as the coordinate axes are positioned so that they follow this rule, it 
 3Dc2c=11 5 2.8,
 3Dcoo=0 0 0,
 3Droo=200,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{}{.78}{Plotting the point $P=(2,1,3)$ in space.}%
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=150pt}{.3}{Plotting the point $P=(2,1,3)$ in space.}%
 {fig:cartcoord1}{figures/figcartcoord1}%
 %{\mfigure{.4}{Plotting the point $P=(2,1,3)$ in space.}{fig:cartcoord1}{figures/figcartcoord1}
 
@@ -29,13 +29,16 @@ As long as the coordinate axes are positioned so that they follow this rule, it 
 In Figure \ref{fig:cartcoord1} we see the point $P=(2,1,3)$ plotted on a set of axes. The basic convention here is that the $x$-$y$ plane is drawn in its standard way, with the $z$-axis down to the left. The perspective  is that the paper represents the $x$-$y$ plane and the positive $z$ axis is coming up, off the page. This method is preferred by many engineers. Because it can be hard to tell where a single point lies in relation to all the axes, dashed lines have been added to let one see how far along each axis the point lies.
 
 One can also consider the $x$-$y$ plane as being a horizontal plane in, say, a room, where the positive $z$-axis is pointing up. When one steps back and looks at this room, one might draw the axes as shown in Figure \ref{fig:cartcoord2}. The same point $P$ is drawn, again with dashed lines. This point of view is preferred by most mathematicians, and is the convention adopted by this text.
+
+Just as the $x$- and $y$-axes divide the plane into four \emph{quadrants}, the $x$-, $y$-, and $z$-coordinate planes divide space into eight \emph{octants}.  The octant in which $x$, $y$, and $z$ are positive is called the \sword{first octant}.  We do not name the other seven octants in this text.\index{octant!first}\index{first octant}
+\enlargethispage{2\baselineskip}
 \mfigurethree{width=150pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=0,
 3Dortho=0.004,
 3Dc2c=0.6666666865348816 0.6666666865348816 0.3333333730697632,
 3Dcoo=16.7497615814209 8.84995174407959 40.36832046508789,
 3Droo=129.79413580025474,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.5,trim=5mm 5mm 3mm 5mm,clip=true}{.5}{Plotting the point $P=(2,1,3)$ in space with a perspective used in this text.}%
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=150pt}{.55}{Plotting the point $P=(2,1,3)$ in space with a perspective used in this text.}%
 {fig:cartcoord2}{figures/figcartcoord2}%
 %{\mtable{.8}{Plotting the point $P=(2,1,3)$ in space with a perspective used in this text.}{fig:cartcoord2}{\myincludegraphics[scale=1.5,trim=5mm 5mm 3mm 5mm,clip=true]{figures/figcartcoord2}}
 \\
@@ -46,10 +49,12 @@ It is of critical importance to know how to measure distances between points in 
 
 \definition{def:space_distance}{Distance In Space}
 {Let $P=(x_1,y_1,z_1)$ and $Q = (x_2,y_2,z_2)$ be points in space. The distance $D$ between $P$ and $Q$ is \index{distance!between points in space}
-$$D = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}.$$
+\[
+D = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}.
+\]
 }
 
-We refer to the line segment that connects points $P$ and $Q$ in space as $\overline{PQ}$, and refer to the length of this segment as $||\overline{PQ}||$. The above distance formula allows us to compute the length of this segment.\\
+We refer to the line segment that connects points $P$ and $Q$ in space as $\overline{PQ}$, and refer to the length of this segment as $\lVert\overline{PQ}\rVert$. The above distance formula allows us to compute the length of this segment.\\
 
 \example{ex_space1}{Length of a line segment}{
 Let $P = (1,4,-1)$ and let $Q = (2,1,1)$. Draw the line segment $\overline{PQ}$ and find its length.}
@@ -64,14 +69,16 @@ Let $P = (1,4,-1)$ and let $Q = (2,1,1)$. Draw the line segment $\overline{PQ}$ 
 %3Dlights=Headlamp,add3Djscript=asylabels.js]{.4}{Plotting points $P$ and $Q$ in Example \ref{ex_space1}.}%
 %{fig:space1}{figures/figspace1_3D}}%
 %{\mfigure[scale=1.25,trim=1mm 5mm 2mm 2mm,clip=true]{.4}{Plotting points $P$ and $Q$ in Example \ref{ex_space1}.}{fig:space1}{figures/figspace1}}
-$$||\overline{PQ}|| = \sqrt{(2-1)^2+(1-4)^2+(1-(-1))^2} = \sqrt{14}\approx 3.74.$$
+\[
+\lVert\overline{PQ}\rVert = \sqrt{(2-1)^2+(1-4)^2+(1-(-1))^2} = \sqrt{14}\approx 3.74.
+\]
 \mfigurethree{width=150pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=0,
 3Dortho=0.0044,
 3Dc2c=0.6474442481994629 0.6759132146835327 0.35207563638687134,
 3Dcoo=32.306640625 39.99113082885742 5.668694019317627,
 3Droo=113.20770262248418,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=1mm 5mm 2mm 2mm,clip=true}{.77}{Plotting points $P$ and $Q$ in Example \ref{ex_space1}.}%
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=150pt}{.3}{Plotting points $P$ and $Q$ in Example \ref{ex_space1}.}%
 {fig:space1}{figures/figspace1}
 \vskip-1.5\baselineskip
 }\\
@@ -79,14 +86,19 @@ $$||\overline{PQ}|| = \sqrt{(2-1)^2+(1-4)^2+(1-(-1))^2} = \sqrt{14}\approx 3.74.
 \noindent\textbf{\large Spheres}\\
 
 \index{sphere}Just as a circle is the set of all points in the \textit{plane} equidistant from a given point (its center), a sphere is the set of all points in \textit{space} that are equidistant from a given point. Definition \ref{def:space_distance} allows us to write an equation of the sphere.
+%\enlargethispage{2\baselineskip}
 
 We start with a point $C = (a,b,c)$ which is to be the center of a sphere with radius $r$. If a point $P=(x,y,z)$ lies on the sphere, then $P$ is $r$ units from $C$; that is, 
-$$||\overline{PC}|| = \sqrt{(x-a)^2+(y-b)^2+(z-c)^2} = r.$$
+\[
+\lVert\overline{PC}\rVert = \sqrt{(x-a)^2+(y-b)^2+(z-c)^2} = r.
+\]
 Squaring both sides, we get the standard equation of a sphere in space with center at $C=(a,b,c)$ with radius $r$, as given in the following Key Idea.
 
 \keyidea{idea:sphere}{Standard Equation of a Sphere in Space}
-{The standard equation of the sphere with radius $r$, centered at $C=(a,b,c)$, is
-$$(x-a)^2+(y-b)^2+(z-c)^2=r^2.$$
+{The standard equation of the sphere with radius $r$, centred at $C=(a,b,c)$, is
+\[
+(x-a)^2+(y-b)^2+(z-c)^2=r^2.
+\]
 }
 
 \example{ex_space2}{Equation of a sphere}{
@@ -146,21 +158,21 @@ This, in fact, gives us an equation that describes this plane: $z=0$. Likewise, 
 3Dc2c=4 4 2,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=4mm 5mm 4mm 5mm,clip=true}{figures/figspacexy}&
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=95pt}{figures/figspacexy}&
 \myincludegraphicsthree{width=95pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=0,
 3Dortho=0.004,
 3Dc2c=4 4 2,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=4mm 5mm 4mm 5mm,clip=true}{figures/figspaceyz}&
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=95pt}{figures/figspaceyz}&
 \myincludegraphicsthree{width=95pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=0,
 3Dortho=0.004,
 3Dc2c=4 4 2,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=4mm 5mm 4mm 5mm,clip=true}{figures/figspacexz}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=95pt}{figures/figspacexz}\\
 %\myincludegraphics[scale=1.25,trim=4mm 5mm 4mm 5mm,clip=true]{figures/figspacexy}\\[-10pt]
 the $x$-$y$ plane &
 the $y$-$z$ plane &
@@ -173,13 +185,13 @@ the $x$-$z$ plane
 
 The equation $x=2$ describes all points in space where the $x$-value is 2. This is a plane, parallel to the $y$-$z$ coordinate plane, shown in Figure \ref{fig:space2}.\\
 
-\mfigurethree{width=100pt,3Dmenu,activate=onclick,deactivate=onclick,
+\mfigurethree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=0,
 3Dortho=0.0044,
 3Dc2c=4 4 2,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=5mm 2mm 5mm 5mm,clip=true}{.6}{The plane $x=2$.}{fig:space2}{figures/figspace2}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{.45}{The plane $x=2$.}{fig:space2}{figures/figspace2}
 % figure is printed below in next example.
 
 \example{ex_space3}{Regions defined by planes}{
@@ -191,17 +203,17 @@ Sketch the region defined by the inequalities $-1\leq y\leq 2$.}
 3Dc2c=4 2.5 2,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=5mm 2mm 5mm 2mm,clip=true}{.35}{Sketching the boundaries of a region in Example \ref{ex_space3}.}{fig:space3}{figures/figspace3}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{.2}{Sketching the boundaries of a region in Example \ref{ex_space3}.}{fig:space3}{figures/figspace3}
 }\\
 
 
 
 \noindent\textbf{\large Cylinders}\\
 
-The equation $x=1$ obviously lacks the $y$ and $z$ variables, meaning it defines points where the $y$ and $z$ coordinates can take on any value. Now consider the equation $x^2+y^2=1$ \emph{in space.} In \emph{the plane}, this equation describes a circle of radius 1, centered at the origin. In space, the $z$ coordinate is not specified, meaning it can take on any value. In Figure \ref{fig:spacecylinder1} (a), we show part of the graph of the equation $x^2+y^2=1$ by sketching 3 circles: the bottom one has a constant $z$-value of $-1.5$, the middle one has a $z$-value of 0 and the top circle has a $z$-value of 1. By plotting \emph{all} possible $z$-values, we get the  surface shown in Figure \ref{fig:spacecylinder1} (b). 
+The equation $x=1$ obviously lacks the $y$ and $z$ variables, meaning it defines points where the $y$ and $z$ coordinates can take on any value. Now consider the equation $x^2+y^2=1$ \emph{in space.} In \emph{the plane}, this equation describes a circle of radius 1, centred at the origin. In space, the $z$ coordinate is not specified, meaning it can take on any value. In Figure \ref{fig:spacecylinder1} (a), we show part of the graph of the equation $x^2+y^2=1$ by sketching 3 circles: the bottom one has a constant $z$-value of $-1.5$, the middle one has a $z$-value of 0 and the top circle has a $z$-value of 1. By plotting \emph{all} possible $z$-values, we get the  surface shown in Figure \ref{fig:spacecylinder1}(b). 
 This surface looks like a ``tube,'' or a ``cylinder''; mathematicians call this surface a \textbf{cylinder} for an entirely different reason.\\
 
-\mtable{.7}{Sketching $x^2+y^2=1$.}{fig:spacecylinder1}{%
+\mtable{.5}{Sketching $x^2+y^2=1$.}{fig:spacecylinder1}{%
 \begin{tabular}{c}
 \myincludegraphicsthree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=0,
@@ -209,7 +221,7 @@ This surface looks like a ``tube,'' or a ``cylinder''; mathematicians call this 
 3Dc2c=4 4 2,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=4mm 5mm 4mm 5mm,clip=true}{figures/figspacecylinder1}\\[5pt]
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figspacecylinder1}\\[5pt]
 (a)\\[5pt]
 \myincludegraphicsthree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=0,
@@ -217,7 +229,7 @@ This surface looks like a ``tube,'' or a ``cylinder''; mathematicians call this 
 3Dc2c=4 4 2,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=5mm 5mm 5mm 5mm,clip=true}{figures/figspacecylinder1b}\\[5pt]
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figspacecylinder1b}\\[5pt]
 (b)
 \end{tabular}
 }
@@ -231,7 +243,7 @@ In this text, we consider curves $C$ that lie in planes parallel to one of the c
 In the example preceding the definition, the curve $x^2+y^2=1$ in the $x$-$y$ plane is the directrix and the rulings are lines parallel to the $z$-axis. (Any circle shown in Figure \ref{fig:spacecylinder1} can be considered a directrix; we simply choose the one where $z=0$.) Sample rulings can also be viewed in part (b) of the figure. More examples will help us understand this definition.\\
 
 \example{ex_space4}{Graphing cylinders}{
-Graph the cylinder following cylinders. 
+Graph the following cylinders. 
 
 1.\quad $z=y^2$ \qquad 2.\quad $x=\sin z$ \hfill \par
 	%\begin{enumerate}
@@ -240,9 +252,9 @@ Graph the cylinder following cylinders.
 	%\end{enumerate}
 }
 {\begin{enumerate}
-	\item We can view the equation $z=y^2$ as a parabola in the $y$-$z$ plane, as illustrated in Figure \ref{fig:space4a} (a). As $x$ does not appear in the equation, the rulings are lines through this parabola parallel to the $x$-axis, shown in (b). These rulings give a general idea as to what the surface looks like, drawn in (c).
-	\enlargethispage{2\baselineskip}
-	\
+	\item We can view the equation $z=y^2$ as a parabola in the $y$-$z$ plane, as illustrated in Figure \ref{fig:space4a}(a). As $x$ does not appear in the equation, the rulings are lines through this parabola parallel to the $x$-axis, shown in (b). These rulings give an idea as to what the surface looks like, drawn in (c).
+	\enlargethispage{3\baselineskip}
+	%\
 	%\mtable{.7}{Sketching the cylinder defined by $z=y^2$ in Example \ref{ex_space4}.}{fig:space4a}{%
 	%\begin{tabular}{c}
 	%\myincludegraphics{figures/figspace4a}\\[-10pt]
@@ -262,26 +274,27 @@ Graph the cylinder following cylinders.
 3Dc2c=4 4 2,
 3Dcoo=0 0 75,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=5mm 5mm 5mm 5mm,clip=true}{figures/figspace4a} &%
+3Dlights=Headlamp,add3Djscript=asylabels.js}{height=90pt}{figures/figspace4a} &%
 \myincludegraphicsthree{height=90pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=0,
 3Dortho=0.004,
 3Dc2c=4 4 2,
 3Dcoo=0 0 75,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=5mm 5mm 5mm 5mm,clip=true}{figures/figspace4b} &%
+3Dlights=Headlamp,add3Djscript=asylabels.js}{height=90pt}{figures/figspace4b} &%
 \myincludegraphicsthree{height=90pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=0,
 3Dortho=0.004,
 3Dc2c=4 4 2,
 3Dcoo=0 0 75,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=3mm 5mm 3mm 2mm,clip=true}{figures/figspace4c}\\[-0pt]
+3Dlights=Headlamp,add3Djscript=asylabels.js}{height=90pt}{figures/figspace4c}\\[-0pt]
 (a) & (b) & (c)
 \end{tabular}
 \captionsetup{type=figure}
 \caption{Sketching the cylinder defined by $z=y^2$.}\label{fig:space4a}
 \end{center}
+\clearpage
 	
 	\item		We can view the equation $x=\sin z$ as a sine curve that exists in the $x$-$z$ plane, as shown in Figure \ref{fig:space4b} (a). The rules are parallel to the $y$ axis as the variable $y$ does not appear in the equation $x=\sin z$; some of these are shown in part (b). The surface is shown in part (c) of the figure. 
 	
@@ -293,21 +306,21 @@ Graph the cylinder following cylinders.
 3Dc2c=4 4 3,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=5mm 5mm 5mm 5mm,clip=true}{figures/figspace4d} &
+3Dlights=Headlamp,add3Djscript=asylabels.js}{height=90pt}{figures/figspace4d} &
 \myincludegraphicsthree{height=90pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=0,
 3Dortho=0.0045,
 3Dc2c=4 4 3,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=5mm 5mm 5mm 5mm,clip=true}{figures/figspace4e} 
+3Dlights=Headlamp,add3Djscript=asylabels.js}{height=90pt}{figures/figspace4e} 
 &\myincludegraphicsthree{height=90pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=0,
 3Dortho=0.0045,
 3Dc2c=4 4 3,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=5mm 5mm 5mm 5mm,clip=true}{figures/figspace4f}\\[-10pt]
+3Dlights=Headlamp,add3Djscript=asylabels.js}{height=90pt}{figures/figspace4f}\\[-10pt]
 (a) & (b) & (c)
 \end{tabular}
 \captionsetup{type=figure}
@@ -335,7 +348,7 @@ Consider the surface formed by revolving $y=\sqrt{x}$ about the $x$-axis. Cross-
 3Dc2c=.395 .79 .356,
 3Dcoo=75 0 0,
 3Droo=130,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{}{figures/figsurf_rev_intro}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figsurf_rev_intro}
 %\myincludegraphics{figures/figsurf_rev_intro}
 \\
 (a)\\[10pt]
@@ -345,7 +358,7 @@ Consider the surface formed by revolving $y=\sqrt{x}$ about the $x$-axis. Cross-
 3Dc2c=.395 .79 .356,
 3Dcoo=75 0 0,
 3Droo=130,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{}{figures/figsurf_rev_introb}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figsurf_rev_introb}\\
 (b)
 \end{tabular}
 }
@@ -376,7 +389,7 @@ Note how the surface (and hence the resulting equation) is the same if we began 
 3Dc2c=.66 .67 .32,
 3Dcoo=0 0 75,
 3Droo=130,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{}{figures/figsurfrev1a}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=100pt}{figures/figsurfrev1a}\\
 %\myincludegraphics{figures/figsurfrev1a}\\
 (a)\\[5pt]
 \myincludegraphicsthree{width=100pt,3Dmenu,activate=onclick,deactivate=onclick,
@@ -385,12 +398,12 @@ Note how the surface (and hence the resulting equation) is the same if we began 
 3Dc2c=.66 .67 .32,
 3Dcoo=0 0 75,
 3Droo=130,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{}{figures/figsurfrev1b}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=100pt}{figures/figsurfrev1b}\\
 (b)
 \end{tabular}
 }
 
-This particular method of creating surfaces of revolution is limited. For instance, in Example \ref{ex_shell4} of Section \ref{sec:shell_method} we found the volume  of the solid formed by revolving $y=\sin x$ about the $y$-axis. Our current method of forming surfaces can only rotate $y=\sin x$ about the $x$-axis. Trying to rewrite $y=\sin x$ as a function of $y$ is not trivial, as simply writing $x=\sin^{-1}y$ only gives part of the region we desire.
+This particular method of creating surfaces of revolution is limited. For instance, in Example \ref{II-ex_shell4} of Section \ref{II-sec:shell_method} we found the volume  of the solid formed by revolving $y=\sin x$ about the $y$-axis. Our current method of forming surfaces can only rotate $y=\sin x$ about the $x$-axis. Trying to rewrite $y=\sin x$ as a function of $y$ is not trivial, as simply writing $x=\sin^{-1}y$ only gives part of the region we desire.
 
 What we desire is a way of writing the surface of revolution formed by rotating $y=f(x)$ about the $y$-axis. We start by first recognizing this surface is the same as revolving $z=f(x)$ about the $z$-axis. This will give us a more natural way of viewing the surface. 
 
@@ -411,7 +424,7 @@ Find the equation of the surface found by revolving $z=\sin x$ about the $z$-axi
 3Dc2c=.66 .67 .32,
 3Dcoo=0 0 10,
 3Droo=130,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{}{figures/figsurfrev2a}\\%\myincludegraphics[scale=1.25]{figures/figsurfrev2a}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=100pt}{figures/figsurfrev2a}\\%\myincludegraphics[scale=1.25]{figures/figsurfrev2a}\\
 (a)\\[5pt]
 \myincludegraphicsthree{width=100pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=0,
@@ -419,7 +432,7 @@ Find the equation of the surface found by revolving $z=\sin x$ about the $z$-axi
 3Dc2c=.66 .67 .32,
 3Dcoo=0 0 25,
 3Droo=130,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{}{figures/figsurfrev2b}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=100pt}{figures/figsurfrev2b}\\
 (b)
 \end{tabular}
 }}\\
@@ -433,10 +446,12 @@ Spheres, planes and cylinders are important surfaces to understand. We now consi
 \definition{def:quadric}{Quadric Surface}
 {A \textbf{quadric surface} is the graph of the general second--degree equation in three variables:
 \index{quadric surface!definition}
-$$Ax^2+By^2+Cz^2+Dxy+Exz+Fyz+Gx+Hy+Iz+J=0.$$
+\[
+Ax^2+By^2+Cz^2+Dxy+Exz+Fyz+Gx+Hy+Iz+J=0.
+\]
 }
 
-When the coefficients $D$, $E$ or $F$ are not zero, the basic shapes of the quadric surfaces are rotated in space. We will focus on quadric surfaces where these coeffiecients are 0; we will not consider rotations. There are six basic quadric surfaces: the elliptic paraboloid, elliptic cone, ellipsoid, hyperboloid of one sheet, hyperboloid of two sheets, and the hyperbolic paraboloid.
+When the coefficients $D$, $E$ or $F$ are not zero, the basic shapes of the quadric surfaces are rotated in space. We will focus on quadric surfaces where these coefficients are 0; we will not consider rotations. There are six basic quadric surfaces: the elliptic paraboloid, elliptic cone, ellipsoid, hyperboloid of one sheet, hyperboloid of two sheets, and the hyperbolic paraboloid.
 
 \mfigurethree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=0,
@@ -444,7 +459,7 @@ When the coefficients $D$, $E$ or $F$ are not zero, the basic shapes of the quad
 3Dc2c=.85 .85 .31,
 3Dcoo=0 0 75,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.4,trim=2mm 1mm 2mm 0mm,clip}{.5}{The elliptic paraboloid $z=x^2/4+y^2$.}{fig:quadric1}{figures/figquadric_parb}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{.5}{The elliptic paraboloid $z=x^2/4+y^2$.}{fig:quadric1}{figures/figquadric_parb}
 %\mfigure[scale=1.4,trim=2mm 1mm 2mm 0mm,clip]{.7}{The elliptic paraboloid $z=x^2/4+y^2$.}{fig:quadric1}{figures/figquadric_parb}
 
 We study each shape by considering \sword{traces}, \index{trace}\index{quadric surface!trace}%
@@ -481,7 +496,7 @@ Such an analysis can be made with each of the quadric surfaces. We give a sample
 3Dc2c=.85 .85 .31,
 3Dcoo=0 0 75,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.4,trim=2mm 1mm 2mm 0mm,clip}{figures/figquadric_par}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figquadric_par}
 %\myincludegraphics[scale=1.4,trim=2mm 1mm 2mm 0mm,clip]{figures/figquadric_par} %& %
 %%%%\hskip 20pt%
 %%%%\myincludegraphics[scale=1.25,trim=5mm 1mm 5mm 4mm,clip]{figures/figquadric_parb} %& %
@@ -505,7 +520,7 @@ $z=d$ & & Ellipse
 3Dc2c=.85 .85 .31,
 3Dcoo=0 0 75,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.4,trim=2mm 1mm 2mm 0mm,clip}{figures/figquadric_parb}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figquadric_parb}
 %\myincludegraphics[scale=1.4,trim=2mm 1mm 2mm 0mm,clip]{figures/figquadric_parb} %& %
 \end{minipage}
 \vskip\baselineskip
@@ -536,7 +551,7 @@ Multiplying the right hand side by $(-1)$ defines an elliptic paraboloid that ``
 3Dc2c=.85 .85 .31,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.5,trim=10mm 1mm 9mm 4mm,clip}{figures/figquadric_cone}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figquadric_cone}
 %\myincludegraphics[scale=1.5,trim=10mm 1mm 9mm 4mm,clip]{figures/figquadric_cone} %& %
 \end{minipage}
 \begin{minipage}[t]{.25\linewidth}
@@ -559,7 +574,7 @@ $z=d$ & & Ellipse
 3Dc2c=.85 .85 .31,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.15,trim=2mm 1mm 5mm 4mm,clip}{figures/figquadric_coneb}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=100pt}{figures/figquadric_coneb}
 %\myincludegraphics[scale=1.15,trim=2mm 1mm 5mm 4mm,clip]{figures/figquadric_coneb}
 \hskip 10pt
 \myincludegraphicsthree{width=100pt,3Dmenu,activate=onclick,deactivate=onclick,
@@ -568,7 +583,7 @@ $z=d$ & & Ellipse
 3Dc2c=.85 .85 .31,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.15,trim=2mm 1mm 5mm 4mm,clip}{figures/figquadric_conec}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=100pt}{figures/figquadric_conec}
 %\myincludegraphics[scale=1.15,trim=2mm 1mm 5mm 4mm,clip]{figures/figquadric_conec}
 \end{minipage}
 
@@ -591,13 +606,13 @@ One can rewrite the equation as $z^2-x^2/a^2-y^2/{b^2} = 0$. The one variable wi
 \noindent%
 \begin{minipage}[t]{.3\linewidth}
 \vskip0pt
-\myincludegraphicsthree{width=150pt,3Dmenu,activate=onclick,deactivate=onclick,
+\myincludegraphicsthree{width=175pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=0,
 3Dortho=0.005,
 3Dc2c=.85 .85 .31,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.6,trim=10mm 5mm 9mm 4mm,clip}{figures/figquadric_ellipsoid}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=175pt}{figures/figquadric_ellipsoid}
 %%%\myincludegraphics[scale=1.6,trim=10mm 5mm 9mm 4mm,clip]{figures/figquadric_ellipsoid} %& %
 \end{minipage}
 \begin{minipage}[t]{.2\linewidth}
@@ -611,13 +626,13 @@ $z=d$ & & Ellipse
 \end{minipage}%
 \begin{minipage}[t]{.50\linewidth}
 \vskip0pt
-\myincludegraphicsthree{width=150pt,3Dmenu,activate=onclick,deactivate=onclick,
+\myincludegraphicsthree{width=175pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=0,
 3Dortho=0.005,
 3Dc2c=.85 .85 .31,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.6,trim=2mm 2mm 5mm 4mm,clip}{figures/figquadric_ellipsoidb}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=175pt}{figures/figquadric_ellipsoidb}
 %%%\myincludegraphics[scale=1.6,trim=2mm 2mm 5mm 4mm,clip]{figures/figquadric_ellipsoidb}
 \end{minipage}
 \vskip2\baselineskip
@@ -646,7 +661,7 @@ If $a=b=c\neq0$, the ellipsoid is a sphere with radius $a$; compare to Key Idea 
 3Dc2c=.85 .85 .31,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.3,trim=2mm 2mm 2mm 2mm,clip}{figures/figquadric_hyp_one_sheet}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=150pt}{figures/figquadric_hyp_one_sheet}
 %%%\myincludegraphics[scale=1.3,trim=2mm 2mm 2mm 2mm,clip]{figures/figquadric_hyp_one_sheet} %& %
 \end{minipage}
 \begin{minipage}[t]{.23\linewidth}
@@ -666,7 +681,7 @@ $z=d$ & & Ellipse
 3Dc2c=.85 .85 .31,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.3,trim=0mm 2mm 0mm 2mm,clip}{figures/figquadric_hyp_one_sheetb}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=150pt}{figures/figquadric_hyp_one_sheetb}
 %%%\myincludegraphics[scale=1.3,trim=0mm 2mm 0mm 2mm,clip]{figures/figquadric_hyp_one_sheetb}
 %\hskip 15pt
 %\myincludegraphics[scale=1.25,trim=5mm 1mm 5mm 4mm,clip]{figures/figquadric_conec}
@@ -694,7 +709,7 @@ The one variable with a negative coefficient corresponds to the axis that the hy
 3Dc2c=.85 .85 .31,
 3Dcoo=0 0 -15,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.5,trim=8mm 1mm 8mm 0mm,clip}{figures/figquadric_hyp_two_sheet}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=150pt}{figures/figquadric_hyp_two_sheet}
 %%%\myincludegraphics[scale=1.5,trim=8mm 1mm 8mm 0mm,clip]{figures/figquadric_hyp_two_sheet} %& %
 \end{minipage}
 \begin{minipage}[t]{.22\linewidth}
@@ -714,14 +729,14 @@ $z=d$ & & Ellipse
 3Dc2c=.85 .85 .31,
 3Dcoo=0 0 -15,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.5,trim=0mm 1mm 0mm 0mm,clip}{figures/figquadric_hyp_two_sheetb}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=150pt}{figures/figquadric_hyp_two_sheetb}
 %%%\myincludegraphics[scale=1.5,trim=0mm 1mm 0mm 0mm,clip]{figures/figquadric_hyp_two_sheetb}
 %\hskip 15pt
 %\myincludegraphics[scale=1.25,trim=5mm 1mm 5mm 4mm,clip]{figures/figquadric_conec}
 \end{minipage}
 \vskip\baselineskip
 \begin{minipage}[t]{.75\linewidth}
-The one variable with a positive coefficient corresponds to the axis that the hyperboloid ``opens'' along. In the case illustrated, when $|d|<|c|$, there is no trace.\index{quadric surface!hyperboloid of two sheets}
+The one variable with a positive coefficient corresponds to the axis that the hyperboloid ``opens'' along. In the case illustrated, when $\lvert d\rvert <\lvert c\rvert$, there is no trace.\index{quadric surface!hyperboloid of two sheets}
 \end{minipage}
 \end{minipage}
 
@@ -745,7 +760,7 @@ The one variable with a positive coefficient corresponds to the axis that the hy
 3Dc2c=.4 .87 .3,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=4mm 5mm 3mm 4mm,clip}{figures/figquadric_hyp_par}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=150pt}{figures/figquadric_hyp_par}
 %\myincludegraphics[scale=1.25,trim=4mm 5mm 3mm 4mm,clip]{figures/figquadric_hyp_par} %& %
 \end{minipage}
 \begin{minipage}[t]{.4\linewidth}
@@ -767,7 +782,7 @@ $z=d$ & & Hyperbola
 3Dc2c=.4 .87 .3,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=1mm 5mm 3mm 2mm,clip}{figures/figquadric_hyp_parb}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=150pt}{figures/figquadric_hyp_parb}
 %\myincludegraphics[scale=1.25,trim=1mm 5mm 3mm 2mm,clip]{figures/figquadric_hyp_parb}
 \end{minipage}
 \begin{minipage}[t]{.4\linewidth}
@@ -778,7 +793,7 @@ $z=d$ & & Hyperbola
 3Dc2c=.4 .87 .3,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=1mm 5mm 3mm 2mm,clip}{figures/figquadric_hyp_parc}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=150pt}{figures/figquadric_hyp_parc}
 %\myincludegraphics[scale=1.25,trim=1mm 5mm 3mm 2mm,clip]{figures/figquadric_hyp_parc}
 \end{minipage}
 
@@ -818,7 +833,7 @@ Sketch the quadric surface defined by the given equation.\\[5pt]
 3Dc2c=.7 .66 .18,
 3Dcoo=0 30 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25}{figures/figspace5ab}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figspace5ab}\\
 	%\myincludegraphics[scale=1.25]{figures/figspace5ab}\\[-10pt]
 	(a)\\[0pt]
 	\myincludegraphicsthree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
@@ -827,7 +842,7 @@ Sketch the quadric surface defined by the given equation.\\[5pt]
 3Dc2c=.7 .66 .18,
 3Dcoo=0 30 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25}{figures/figspace5a}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figspace5a}\\
 	%\myincludegraphics[scale=1.25]{figures/figspace5a}\\[-10pt]
 	(b)
 	\end{tabular}
@@ -851,7 +866,7 @@ Sketch the quadric surface defined by the given equation.\\[5pt]
 3Dc2c=.7 .66 .18,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25}{figures/figspace5b}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figspace5b}\\
 	%\myincludegraphics[scale=1.25]{figures/figspace5b}\\[-10pt]
 	(a)\\[0pt]
 	\myincludegraphicsthree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
@@ -860,7 +875,7 @@ Sketch the quadric surface defined by the given equation.\\[5pt]
 3Dc2c=.7 .66 .18,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25}{figures/figspace5bb}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figspace5bb}\\
 	%\myincludegraphics[scale=1.25]{figures/figspace5bb}\\[-10pt]
 	(b)
 	\end{tabular}
@@ -873,9 +888,16 @@ Sketch the quadric surface defined by the given equation.\\[5pt]
 	
 	$y=0$: 	The trace is $z=-x^2$, a parabola opening down in the $x-z$ plane. 
 	
-	Sketching these two parabolas gives a sketch like that in Figure \ref{fig:space5c} (a), and filling in the surface gives a sketch like (b).
+	Sketching these two parabolas gives a sketch like that in Figure \ref{fig:space5c}(a), and filling in the surface gives a sketch like (b).
 	
-	\mtable{.7}{Sketching a hyperbolic paraboloid.}{fig:space5c}{%
+
+\end{enumerate}
+\vskip-1.5\baselineskip
+}\pagebreak
+
+\example{ex_space6}{Identifying quadric surfaces}{
+Consider the quadric surface shown in Figure \ref{fig:space6}. Which of the following equations best fits this surface?\\
+\mtable{.7}{Sketching a hyperbolic paraboloid.}{fig:space5c}{%
 	\begin{tabular}{c}
 	\myincludegraphicsthree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=0,
@@ -883,7 +905,7 @@ Sketch the quadric surface defined by the given equation.\\[5pt]
 3Dc2c=.7 .55 .43,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25}{figures/figspace5c}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figspace5c}\\
 	%\myincludegraphics[scale=1.25]{figures/figspace5c}\\[-10pt]
 	(a)\\[0pt]
 	\myincludegraphicsthree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
@@ -892,25 +914,19 @@ Sketch the quadric surface defined by the given equation.\\[5pt]
 3Dc2c=.7 .55 .43,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25}{figures/figspace5cb}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figspace5cb}\\
 %\myincludegraphics[scale=1.25]{figures/figspace5cb}\\[-10pt]
 	(b)
 	\end{tabular}
 	}
-\end{enumerate}
-\vskip-1.5\baselineskip
-}\\
-
-\example{ex_space6}{Identifying quadric surfaces}{
-Consider the quadric surface shown in Figure \ref{fig:space6}. Which of the following equations best fits this surface?\\
-\mtable{.37}{A possible equation of this quadric surface is found in Example \ref{ex_space6}.}{fig:space6}{
+\mtable{.35}{A possible equation of this quadric surface is found in Example \ref{ex_space6}.}{fig:space6}{
 \myincludegraphicsthree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=0,
 3Dortho=0.0045,
 3Dc2c=.67 .67 .33,
 3Dcoo=0 0 0,
 3Droo=150,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.5,trim=5mm 2mm 5mm 4mm,clip}{figures/figspace6}}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figspace6}}
 %\myincludegraphics[scale=1.5,trim=5mm 2mm 5mm 4mm,clip]{figures/figspace6}}
 
 \noindent\begin{tabular}{lllll}

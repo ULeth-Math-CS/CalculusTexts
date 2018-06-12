@@ -1,0 +1,304 @@
+Of the things The Factor Theorem tells us, the most pragmatic is that we had better find a more efficient way to divide polynomials by quantities of the form $x-c$.  Fortunately, people like \href{http://en.wikipedia.org/wiki/Synthetic_division}{\underline{Ruffini}} and \href{http://en.wikipedia.org/wiki/Horner_scheme}{\underline{Horner}} have already blazed this trail.  Let's take a closer look at the long division we performed at the beginning of the section and try to streamline it.  First off, let's change all of the subtractions into additions by distributing through the $-1$s.
+
+
+\setlength\arraycolsep{0.1pt}
+\setlength\extrarowheight{2pt}
+
+\[ \begin{array}{cccccccccc}
+
+& & & & & x^2 & + & 6x & + & 7 \\ \hhline{~~~|-------}
+
+x & - & 2 \, \vline& x^3 & + & 4x^2 & - & 5x & - & 14 \\
+
+ &  &  &  -x^3  & + &   2x^2 &  &  &  &  \\ \hhline{~~~---~~~~} 
+ &  &  &   &  & 6 x^2 & - & 5x &  &  \\ 
+ &  &  &   & &-6 x^2  & + &  12x &  &  \\ \hhline{~~~~~---~~} 
+ &  &  &   &   &  & & 7x  & - & 14 \\
+ &  &  &   &   &  & & - 7x  & + &  14  \\ \hhline{~~~~~~~---} 
+ &   &  &  &  &  &  &  &  & 0
+ 
+\end{array}\]
+
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+
+
+Next, observe that the terms $-x^3$, $-6x^2$ and $-7x$ are the exact opposite of the terms above them.  The algorithm we use ensures this is always the case, so we can omit them without losing any information. Also note that the terms we `bring down' (namely the $-5x$ and $-14$) aren't really necessary to recopy, so we omit them, too.
+
+
+\setlength\arraycolsep{0.1pt}
+\setlength\extrarowheight{2pt}
+
+\[ \begin{array}{cccccccccc}
+
+& & & & & x^2 & + & 6x & + & 7 \\ \hhline{~~~|-------}
+
+x & - & 2 \, \vline& \, \, x^3 & + & 4x^2 & - & 5x & - & 14 \\
+
+ &  &  &   &  &   2x^2 &  &  &  &  \\ \hhline{~~~---~~~~} 
+ &  &  &   &  & 6 x^2 &  &  &  &  \\ 
+ &  &  &   & &  &  &  12x &  &  \\ \hhline{~~~~~---~~} 
+ &  &  &   &   &  & & 7x  &  &  \\
+ &  &  &   &   &  & &   &  &  14  \\ \hhline{~~~~~~~---} 
+ &   &  &  &  &  &  &  &  & 0
+ 
+\end{array}\]
+
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+
+Now, let's move things up a bit and, for reasons which will become clear in a moment, copy the $x^3$ into the last row.
+
+
+\setlength\arraycolsep{0.1pt}
+\setlength\extrarowheight{2pt}
+
+\[ \begin{array}{cccccccccc}
+
+& & & & & x^2 & + & 6x & + & 7 \\ \hhline{~~~|-------}
+
+x & - & 2 \, \vline& \, \, x^3 & + & 4x^2 & - & 5x & - & 14 \\
+
+ &  &  &   & &   2x^2 &  & 12x &  & 14 \\ \hhline{~~~-------} 
+ &  &  & x^3  &  & 6 x^2 &  & 7x &  &0  \\  
+\end{array}\]
+
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+
+Note that by arranging things in this manner, each term in the last row is obtained by adding the two terms above it.  Notice also that the quotient polynomial can be obtained by dividing each of the first three terms in the last row by $x$ and adding the results.   If you take the time to work back through the original division problem, you will find that this is exactly the way we determined the quotient polynomial.  This means that we no longer need to write the quotient polynomial down, nor the $x$ in the divisor, to determine our answer.
+
+\setlength\arraycolsep{0.1pt}
+\setlength\extrarowheight{2pt}
+
+\[ \begin{array}{cccccccccc}
+
+
+ & & - 2 \, \, \vline& \, \, x^3 & + & 4x^2 & - & 5x & - & 14 \\
+
+ &  &  &   & &   2x^2 &  & 12x &  & 14 \\ \hhline{~~~-------} 
+ &  &  & x^3  &  & 6 x^2 &  & 7x &  &0  \\  
+\end{array}\]
+
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+
+We've streamlined things quite a bit so far, but we can still do more.  Let's take a moment to remind ourselves where the $2x^2$, $12x$ and $14$ came from in the second row.  Each of these terms was obtained by multiplying the terms in the quotient, $x^2$, $6x$ and $7$, respectively, by the $-2$ in $x-2$,  then by $-1$ when we changed the subtraction to addition.  Multiplying by $-2$ then by $-1$ is the same as multiplying by $2$, so we replace the $-2$ in the divisor by $2$.   Furthermore, the coefficients of the quotient polynomial match the coefficients of the first three terms in the last row, so we now take the plunge and write only the coefficients of the terms to get
+
+
+
+\[ \begin{array}{rrrrr}
+
+
+  2 \, \, \vline& 1 & 4 & -5  & -14 \\
+
+   &&   2 &   12 &   14 \\ \hhline{~----} 
+  & 1  &   6  &  7 &  0  \\  
+\end{array}\]
+
+
+
+We have constructed a \index{polynomial division ! synthetic division}\index{synthetic division tableau}\textbf{synthetic division tableau} for this polynomial division problem.  Let's re-work our division problem using this tableau to see how it greatly streamlines the division process.  To divide $x^3+4x^2-5x-14$ by $x-2$, we write $2$ in the place of the divisor and the coefficients of $x^3+4x^2-5x-14$ in for the dividend.  Then `bring down' the first coefficient of the dividend.
+
+\bigskip
+
+\begin{center}
+
+\begin{tabular}{cc}
+
+$ \begin{array}{rrrrr}
+
+
+  2 \, \, \vline& 1 & 4 & -5  & -14 \\
+
+   &  &    &    &  \\ \hhline{~----} 
+  &   &     &   &    \\  
+\end{array}$  \hspace{1in}
+&
+
+
+$ \begin{array}{rrrrr}
+
+
+  2 \, \, \vline& 1 & 4 & -5  & -14 \\
+
+   & \downarrow &    &    &  \\ \hhline{~----} 
+  & 1  &     &   &    \\  
+\end{array}$ \\
+
+\end{tabular}
+
+\end{center}
+
+\bigskip
+
+Next, take the $2$ from the divisor and multiply by the $1$ that was `brought down' to get $2$.  Write this underneath the $4$, then add to get $6$.
+
+\bigskip
+
+\begin{center}
+
+\begin{tabular}{cc}
+
+$ \begin{array}{rrrrr}
+
+
+  2 \, \, \vline& 1 & 4 & -5  & -14 \\
+
+   & \downarrow  &  2  &    &  \\ \hhline{~----} 
+  & 1  &     &   &    \\  
+\end{array}$ \hspace{1in}
+&
+
+
+$ \begin{array}{rrrrr}
+
+
+  2 \, \, \vline& 1 & 4 & -5  & -14 \\
+
+   & \downarrow &  2  &    &  \\ \hhline{~----} 
+  & 1  &   6  &   &    \\  
+\end{array}$ \\
+
+
+\end{tabular}
+
+\end{center}
+
+\bigskip
+
+Now take the $2$ from the divisor times the $6$ to get $12$, and add it to the $-5$ to get $7$.
+
+\bigskip
+
+\begin{center}
+
+\begin{tabular}{cc}
+
+
+$ \begin{array}{rrrrr}
+
+
+  2 \, \, \vline& 1 & 4 & -5  & -14 \\
+
+   & \downarrow &  2  &  12  &  \\ \hhline{~----} 
+  & 1  &   6  &   &    \\  
+\end{array}$ \hspace{1in}
+
+&
+
+$ \begin{array}{rrrrr}
+
+
+  2 \, \, \vline& 1 & 4 & -5  & -14 \\
+
+   & \downarrow &  2  &  12  &  \\ \hhline{~----} 
+  & 1  &   6  & 7  &    \\  
+\end{array}$ \\
+
+
+\end{tabular}
+
+\end{center}
+
+
+Finally, take the $2$ in the divisor times the $7$ to get $14$, and add it to the $-14$ to get $0$.
+
+\bigskip
+
+\begin{center}
+
+\begin{tabular}{cc}
+
+$ \begin{array}{rrrrr}
+
+
+  2 \, \, \vline& 1 & 4 & -5  & -14 \\
+
+   & \downarrow &  2  &  12  & 14 \\ \hhline{~----} 
+  & 1  &   6  & 7  &    \\  
+\end{array}$ \hspace{1in} 
+
+&
+
+$ \begin{array}{rrrrr}
+
+
+  2 \, \, \vline& 1 & 4 & -5  & -14 \\
+
+   & \downarrow &  2  &  12  & 14 \\ \hhline{~----} 
+  & 1  &   6  & 7  &  \fbox{$0$}  \\  
+\end{array}$ \\
+
+
+
+\end{tabular}
+
+\end{center}
+
+The first three numbers in the last row of our tableau are the coefficients of the quotient polynomial.  Remember, we started with a third degree polynomial and divided by a first degree polynomial, so the quotient is a second degree polynomial.  Hence the quotient is $x^2+6x+7$.  The number in the box is the remainder.  Synthetic division is our tool of choice for dividing polynomials by divisors of the form $x-c$.   Also take note that when a polynomial (of degree at least $1$) is divided by $x-c$, the result will be a polynomial of exactly one less degree. Finally, it is  worth the time to trace each step in synthetic division back to its corresponding step in long division.  While the authors have done their best to indicate where the algorithm comes from, there is no substitute for working through it yourself.
+
+\mnote{.4}{\textbf{Caution:} It is important to note that it works \emph{only} for divisors of the form $x-a$, where $a$ is a constant. For divisors of the form $ax+b$, you need to either first factor out the $a$, or use long division. For divisors of higher degree (such as $x^2+1$), you have no other option but to use long division.}
+
+\medskip
+
+\example{ex_synthetic}{Using synthetic division}{
+Use synthetic division to perform the following polynomial divisions.  Find the quotient and the remainder polynomials, then write the dividend, quotient and remainder in the form given in Theorem \ref{polydiv}.
+
+\begin{enumerate}
+
+\item  $\left(5x^3 - 2x^2 + 1\right) \div (x-3)$ 
+\item  $\left(x^3+8\right) \div (x+2)$ 
+\item  $\dfrac{4-8x-12x^2}{2x-3}$
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+
+\item When setting up the synthetic division tableau, we need to enter $0$ for the coefficient of $x$ in the dividend.  Doing so gives
+
+
+\[ \begin{array}{rrrrr}
+
+
+  3 \, \, \vline& 5 & -2 & 0  & 1 \\
+
+   & \downarrow &  15  &  39  & 117 \\ \hhline{~----} 
+  & 5  &   13  & 39  &  \fbox{$118$}  \\  
+\end{array}\]
+
+Since the dividend was a third degree polynomial, the quotient is a quadratic polynomial with coefficients $5$, $13$ and $39$.  Our quotient is $q(x) = 5x^2+13x+39$ and the remainder is $r(x) = 118$.  According to Theorem \ref{polydiv}, we have $5x^3 - 2x^2 + 1 = (x-3)\left(5x^2+13x+39 \right) + 118$.
+
+\item  For this division, we rewrite $x+2$ as $x-(-2)$ and proceed as before
+
+\[ \begin{array}{rrrrr}
+
+
+  -2 \, \, \vline& 1 & 0 & 0  & 8 \\
+
+   & \downarrow &  -2  &  4  & -8 \\ \hhline{~----} 
+  & 1  &   -2  & 4  &  \fbox{$0$}  \\  
+\end{array}\]
+
+We get the quotient $q(x) = x^2-2x+4$ and the remainder $r(x) =0$. Relating the dividend, quotient and remainder gives $x^3+8 = (x+2)\left( x^2-2x+4 \right)$.  
+
+\item To divide $4-8x-12x^2$ by $2x-3$, two things must be done.  First, we write the dividend in descending powers of $x$ as $-12x^2-8x+4$.  Second, since synthetic division works only for factors of the form $x-c$, we factor $2x-3$ as $2\left(x-\frac{3}{2}\right)$.  Our strategy is to first divide $-12x^2-8x+4$ by $2$, to get $-6x^2-4x+2$.  Next, we divide by $\left(x-\frac{3}{2}\right)$.  The tableau becomes
+
+\[ \begin{array}{rrrr}
+
+
+  \frac{3}{2} \, \, \vline& -6 & -4 & 2   \\ [4pt]
+
+   & \downarrow &  -9  & -\frac{39}{2}  \\ [4pt] \hhline{~---} 
+  &  -6  &   -13  & \fbox{$-\frac{35}{2}$}  \\  
+\end{array}\]
+
+
+\end{enumerate}
+
+From this, we get $-6x^2-4x+2 = \left(x-\frac{3}{2}\right)(-6 x - 13) - \frac{35}{2}$.  Multiplying both sides by $2$ and distributing gives $-12x^2-8x+4 = \left(2x-3\right) (-6 x - 13) - 35$.  At this stage, we have written $-12x^2-8x+4$ in the \textbf{form} $(2x-3) q(x) + r(x)$, but how can we be sure the quotient polynomial is $-6x-13$ and the remainder is $-35$?  The answer is the word `unique' in Theorem \ref{polydiv}.  The theorem states that there is only one way to decompose $-12x^2-8x+4$ into a multiple of $(2x-3)$  plus a constant term.  Since we have found such a way, we can be sure it is the only way.
+}
+
+\medskip

@@ -8,7 +8,9 @@ We begin this section by considering the following definite integrals:
 \end{itemize}
 
 Notice how the integrand is $1/(1+x^2)$ in each integral (which is sketched in Figure \ref{fig:improper1}). As the upper bound gets larger, one would expect the ``area under the curve'' would also grow. While the definite integrals do increase in value as the upper bound grows, they are not  increasing by much. In fact, consider:
-$$\int_0^b \frac{1}{1+x^2}\ dx = \tan^{-1}x\Big|_0^b = \tan^{-1}b-\tan^{-1}0 = \tan^{-1}b.$$
+\[
+\int_0^b \frac{1}{1+x^2}\ dx = \tan^{-1}x\Big|_0^b = \tan^{-1}b-\tan^{-1}0 = \tan^{-1}b.
+\]
 As $b\rightarrow \infty$, $\tan^{-1}b \rightarrow \pi/2.$ Therefore it seems that as the upper bound $b$ grows, the value of the definite integral $\ds \int_0^b\frac{1}{1+x^2}\ dx$ approaches $\pi/2\approx 1.5708$. This should strike the reader as being a bit amazing: even though the curve extends ``to infinity,'' it has a finite amount of area underneath it.
 
 \mfigure{.75}{Graphing $\ds f(x)=\frac{1}{1+x^2}$.}{fig:improper1}{figures/figimproper1}
@@ -20,7 +22,7 @@ When we defined the definite integral $\ds\int_a^b f(x)\ dx$, we made two stipul
 	\end{enumerate}
 	
 In this section we consider integrals where one or both of the above conditions do not hold. Such integrals are called \textbf{improper integrals.}
-\clearpage
+\pagebreak
 
 \noindent\textbf{\large Improper Integrals with Infinite Bounds}
 %\vskip.5\baselineskip
@@ -32,13 +34,19 @@ In this section we consider integrals where one or both of the above conditions 
 \definition{def:imp_int1}{\parbox[t]{210pt}{Improper Integrals with Infinite Bounds; Converge, Diverge}}
 {\begin{enumerate}
 \item		Let $f$ be a continuous function on $[a,\infty)$. Define \index{integration!improper}\index{improper integration}\index{convergence!of improper int.}\index{divergence!of improper int.}
-$$\small\int_a^\infty f(x)\ dx \quad \text{to be}\quad \lim_{b\to\infty}\int_a^b f(x)\ dx.$$
+\[
+\small\int_a^\infty f(x)\ dx \quad \text{to be}\quad \lim_{b\to\infty}\int_a^b f(x)\ dx.
+\]
 
 \item		Let $f$ be a continuous function on $(-\infty,b]$. Define
-$$\small\int_{-\infty}^b f(x)\ dx \quad \text{to be}\quad \lim_{a\to-\infty}\int_a^b f(x)\ dx.$$
+\[
+\small\int_{-\infty}^b f(x)\ dx \quad \text{to be}\quad \lim_{a\to-\infty}\int_a^b f(x)\ dx.
+\]
 
 \item		Let $f$ be a continuous function on $(-\infty,\infty)$. Let $c$ be any real number; define
-$$\small\int_{-\infty}^\infty f(x)\ dx \quad \text{to be}\quad \lim_{a\to-\infty}\int_a^c f(x)\ dx\ +\ \lim_{b\to\infty}\int_c^b f(x)\ dx.$$
+\[
+\small\int_{-\infty}^\infty f(x)\ dx \quad \text{to be}\quad \lim_{a\to-\infty}\int_a^c f(x)\ dx\ +\ \lim_{b\to\infty}\int_c^b f(x)\ dx.
+\]
 \end{enumerate}
 An improper integral is said to \textbf{converge} if its corresponding limit exists; otherwise, it \textbf{diverges}. The improper integral in part 3 converges if and only if both of its limits exist.
 }
@@ -114,7 +122,7 @@ A graph of the area defined by this integral is given in Figure \ref{fig:impint1
 \vskip-\baselineskip
 }\\
 
-Recall that many limits that result in indeterminate forms can be handled using \sword{l'H\^opital's Rule}\index{l'H\^opital's Rule}. We briefly recall the statement of the theorem: suppose that functions $f$ and $g$ are differentiable on an open interval containing $a$, and that either 
+Recall that many limits that result in indeterminate forms can be handled using \sword{l'Hospital's Rule}\index{l'Hospital's Rule}. We briefly recall the statement of the theorem: suppose that functions $f$ and $g$ are differentiable on an open interval containing $a$, and that either 
 \[
 \lim_{x\to a}f(x) = 0 \text{ and } \lim_{x\to a}g(x)=0
 \]
@@ -127,11 +135,11 @@ Then
 \lim_{x\to a}\frac{f(x)}{g(x)} = \lim_{x\to a}\frac{f'(x)}{g'(x)},
 \] provided that the latter limit exists.  It is not uncommon for the limits resulting from improper integrals to need this rule as demonstrated next.\\
 
-\mnote{.2}{Note that l'Ho\^optial's rule can also be applied in the case of limits where $x\to \pm\infty$.}
+\mnote{.2}{Note that l'Hosptial's rule can also be applied in the case of limits where $x\to \pm\infty$.}
 
 \pagebreak
 
-\example{ex_impint2}{Improper integration and l'H\^opital's Rule}{
+\example{ex_impint2}{Improper integration and l'Hospital's Rule}{
 Evaluate the improper integral $\ds \int_1^\infty \frac{\ln x}{x^2}\ dx.$}
 {This integral will require the use of Integration by Parts. Let $u = \ln x$ and $dv = 1/x^2\ dx$. Then
 \mfigure{.8}{A graph of $f(x) = \frac{\ln x}{x^2}$ in Example \ref{ex_impint2}.}{fig:impint2}{figures/figeximpint2}
@@ -140,7 +148,7 @@ Evaluate the improper integral $\ds \int_1^\infty \frac{\ln x}{x^2}\ dx.$}
 			&=  \lim_{b\to\infty}\left(-\frac{\ln x}{x}\Big|_1^b +\int_1^b \frac{1}{x^2} \ dx \right)\\
 			&=  \lim_{b\to\infty} \left.\left(-\frac{\ln x}{x} -\frac1x\right)\right|_1^b\\
 			&=	\lim_{b\to\infty} \left(-\frac{\ln b}{b}-\frac1b - \left(-\ln 1-1\right)\right).\\
-			\intertext{The $1/b$ and $\ln 1$ terms go to 0, leaving $\ds \lim_{b\to\infty} -\frac{\ln b}b + 1.$ We need to evaluate $\ds \lim_{b\to\infty} \frac{\ln b}{b}$ with l'H\^opital's Rule. We have:}
+			\intertext{The $1/b$ and $\ln 1$ terms go to 0, leaving $\ds \lim_{b\to\infty} -\frac{\ln b}b + 1.$ We need to evaluate $\ds \lim_{b\to\infty} \frac{\ln b}{b}$ with l'Hospital's Rule. We have:}
 		\lim_{b\to\infty}\frac{\ln b}b &\stackrel{\ \text{ by LHR \rule[-5pt]{0pt}{3pt}} \ }{=} \lim_{b\to\infty} \frac{1/b}{1} \\
 		&= 0.
 \intertext{Thus the improper integral evaluates as: }
@@ -157,10 +165,13 @@ We have just considered definite integrals where the interval of integration was
 
 \definition{def:imp_int2}{Improper Integration with Infinite Range}
 {Let $f(x)$ be a continuous function on $[a,b]$ except at $c$, $a\leq c\leq b$, where $x=c$ is a vertical asymptote of $f$. Define\index{integration!improper}\index{improper integration}
-$$\int_a^b f(x)\ dx = \lim_{t\to c^-}\int_a^t f(x)\ dx + \lim_{t\to c^+}\int_t^b f(x)\ dx.$$
+\[
+\int_a^b f(x)\ dx = \lim_{t\to c^-}\int_a^t f(x)\ dx + \lim_{t\to c^+}\int_t^b f(x)\ dx.
+\]
 %The integral converges if both limits exist and diverges otherwise.
 } 
 \mnote{.35}{\textbf{Note:} In Definition \ref{def:imp_int2}, $c$ can be one of the endpoints ($a$ or $b$). In that case, there is only one limit to consider as part of the definition.}
+\pagebreak
 
 \example{ex_impint3}{Improper integration of functions with infinite range}{
 Evaluate the following improper integrals:
@@ -183,7 +194,7 @@ It turns out that the region does have a finite area even though it has no upper
 \begin{align*}
 \int_{-1}^1\frac1{x^2}\ dx &= -\frac1x\Big|_{-1}^1\\
 			&= -1 - (1)\\
-			&=-2 !
+			&=-2. \ (!)
 \end{align*}
 \mfigure{.5}{A graph of $f(x)=\frac{1}{x^2}$ in Example \ref{ex_impint3}.}{fig:impint3b}{figures/figimpint3b}
 Clearly the area in question is above the $x$-axis, yet the area is supposedly negative! Why does our answer not match our intuition? To answer this, evaluate the integral using Definition \ref{def:imp_int2}.
@@ -199,14 +210,14 @@ Neither limit converges hence the original improper integral diverges. The nonse
 %Each parenthetical statement stands alone and is the result of an individual limit. We are \textit{not} dealing with the indeterminate form ``$\infty-\infty$'' as the ``infinities'' do not originate from one limit.}
 \end{enumerate}
 \vskip-1.5\baselineskip
-}\\
+}\pagebreak
 
 \noindent\textbf{\large Understanding Convergence and Divergence}
 \vskip\baselineskip
 
 Oftentimes we are interested in knowing simply whether or not an improper integral converges, and not necessarily the value of a convergent integral. We provide here several tools that help determine the convergence or divergence of improper integrals without integrating.
 
-Our first tool is to understand the behavior of functions of the form $\ds \frac1{x\hskip1pt ^p}$.\\
+Our first tool is to understand the behaviour of functions of the form $\ds \frac1{x\hskip1pt ^p}$.\\
 
 \example{ex_impint4}{Improper integration of $1/x^p$}{
 Determine the values of $p$ for which $\ds \int_1^\infty \frac1{x\hskip1pt ^p}\ dx$ converges.}
@@ -243,7 +254,7 @@ The result of Example \ref{ex_impint4} provides an important tool in determining
 
 A basic technique in determining convergence of improper integrals is to compare an integrand whose convergence is unknown to an integrand whose convergence is known. We often use integrands of the form $1/x\hskip1pt ^p$ to compare to as their convergence on certain intervals is known. This is described in the following theorem.
 
-\mnote{.14}{\textbf{Note:} We used the upper and lower bound of ``1'' in Key Idea \ref{idea:impint1} for convenience. It can be replaced by any $a$ where $a>0$. 
+\mnote{.1}{\textbf{Note:} We used the upper and lower bound of ``1'' in Key Idea \ref{idea:impint1} for convenience. It can be replaced by any $a$ where $a>0$. 
 }
 
 %\setboxwidth{30pt}%
@@ -290,7 +301,10 @@ Determine the convergence of the following improper integrals.
 
 \item		Note that for large values of $x$, $\ds \frac{1}{\sqrt{x^2-x}} \approx \frac{1}{\sqrt{x^2}} =\frac{1}{x}$. We know from Key Idea \ref{idea:impint1} and the subsequent note that  $\ds \int_3^\infty \frac1x\ dx$ diverges, so we seek to compare the original integrand to $1/x$.
 
-It is easy to see that when $x>0$, we have $x = \sqrt{x^2} > \sqrt{x^2-x}$. Taking reciprocals reverses the inequality, giving $$\frac1x < \frac1{\sqrt{x^2-x}}.$$
+It is easy to see that when $x>0$, we have $x = \sqrt{x^2} > \sqrt{x^2-x}$. Taking reciprocals reverses the inequality, giving 
+\[
+\frac1x < \frac1{\sqrt{x^2-x}}.
+\]
 
 Using Theorem \ref{thm:impint_comparison}, we conclude that since $\ds\int_3^\infty\frac1x\ dx$ diverges, $\ds\int_3^\infty\frac1{\sqrt{x^2-x}}\ dx$ diverges as well. Figure \ref{fig:impint5b} illustrates this.
 
@@ -312,8 +326,15 @@ In cases like this (and many more) it is useful to employ the following theorem.
 \theorem{thm:impint_limit}{Limit Comparison Test for Improper Integrals}
 {
 %\begin{itemize}
-		Let $f$ and $g$ be continuous functions on $[a,\infty)$ where $f(x)>0$ and $g(x)>0$ for all $x$. If $$\lim_{x\to\infty} \frac{f(x)}{g(x)} = L,\qquad 0<L<\infty,$$
-	then $$\int_a^\infty f(x)\ dx \quad \text{and} \quad \int_a^\infty g(x)\ dx$$ either both converge or both diverge.%
+		Let $f$ and $g$ be continuous functions on $[a,\infty)$ where $f(x)>0$ and $g(x)>0$ for all $x$. If 
+		\[
+		\lim_{x\to\infty} \frac{f(x)}{g(x)} = L,\qquad 0<L<\infty,
+		\]
+	then 
+	\[
+	\int_a^\infty f(x)\ dx \quad \text{and} \quad \int_a^\infty g(x)\ dx
+	\]
+	 either both converge or both diverge.%
 	\index{integration!improper}\index{convergence!Limit Comparison Test!for integration}\index{divergence!Limit Comparison Test!for integration}\index{Limit Comparison Test!for integration}\index{convergence!of improper int.}\index{divergence!of improper int.}
 %	\item		Let $f$ and $g$ be continuous functions on $[a,b]$ except at $x=c$, where each has a vertical asymptote, and $f(x)>0$ and $g(x)>0$ for all $x$ in $[a,b]$, $x\neq c$. If
 %	$$\lim_{x\to c^-} \frac{f(x)}{g(x)} = L_1 \quad \text{and} \quad \lim_{x\to c^+}\frac{f(x)}{g(x)} = L_2,\qquad 0<L_1,L_2<\infty,$$
@@ -326,15 +347,19 @@ In cases like this (and many more) it is useful to employ the following theorem.
 \example{ex_impint6}{Determining convergence of improper integrals}{
 Determine the convergence of $\ds \int_3^{\infty} \frac{1}{\sqrt{x^2+2x+5}}\ dx$.
 }
-{As $x$ gets large, the quadratic inside the square root function will begin to behave much like $y=x$. So we compare \small$\ds\frac{1}{\sqrt{x^2+2x+5}}$\normalsize\ to \small$\ds\frac1x$\normalsize\ with the Limit Comparison Test:
+{As $x$ gets large, the denominator of the integrand will begin to behave much like $y=x$. So we compare \small$\ds\frac{1}{\sqrt{x^2+2x+5}}$\normalsize\ to \small$\ds\frac1x$\normalsize\ with the Limit Comparison Test:
 
-$$
-\lim_{x\to\infty} \frac{1/\sqrt{x^2+2x+5}}{1/x} = \lim_{x\to\infty}\frac{x}{\sqrt{x^2+2x+5}}.$$
+\[
+\lim_{x\to\infty} \frac{1/\sqrt{x^2+2x+5}}{1/x} = \lim_{x\to\infty}\frac{x}{\sqrt{x^2+2x+5}}.
+\]
 
-The immediate evaluation of this limit returns $\infty/\infty$, an indeterminate form. Using l'H\^opital's Rule seems appropriate, but in this situation, it does not lead to useful results. (We encourage the reader to employ l'H\^opital's Rule at least once to verify this.)
+The immediate evaluation of this limit returns $\infty/\infty$, an indeterminate form. Using l'Hospital's Rule seems appropriate, but in this situation, it does not lead to useful results. (We encourage the reader to employ l'Hospital's Rule at least once to verify this.)
 
 The trouble is the square root function. To get rid of it, we employ the following fact: If $\ds \lim_{x\to c} f(x) = L$, then $\ds\lim_{x\to c} f(x)^2 = L^2.$ (This is true when either $c$ or $L$ is $\infty$.) So we consider now the limit
-$$\lim_{x\to\infty} \frac{x^2}{x^2+2x+5}.$$ This converges to 1, meaning the original limit also converged to 1. As $x$ gets very large, the function 
+\[
+\lim_{x\to\infty} \frac{x^2}{x^2+2x+5}.
+\]
+This converges to 1, meaning the original limit also converged to 1. As $x$ gets very large, the function 
 \small$\ds\frac{1}{\sqrt{x^2+2x+5}}$\normalsize\ looks very much like \small$\ds\frac1x.$\normalsize\ 
 Since we know that \small$\ds\int_3^{\infty} \frac1x\ dx$\normalsize\ diverges, by the Limit Comparison Test we know that \small$\ds\int_3^\infty\frac{1}{\sqrt{x^2+2x+5}}\ dx$\normalsize\ also diverges. Figure \ref{fig:impint6} graphs $f(x)=1/\sqrt{x^2+2x+5}$ and $f(x)=1/x$, illustrating that as $x$ gets large, the functions become indistinguishable.
 \mfigure{.4}{Graphing $f(x)=\frac{1}{\sqrt{x^2+2x+5}}$ and $f(x)=\frac1x$ in Example \ref{ex_impint6}.}{fig:impint6}{figures/figimpint6}

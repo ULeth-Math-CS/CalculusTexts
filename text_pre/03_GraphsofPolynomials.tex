@@ -1,0 +1,772 @@
+\section{Polynomial Functions}
+\subsection{Graphs of Polynomial Functions}
+\label{GraphsofPolynomials}
+
+Three of the families of functions studied thus far -- constant, linear and  quadratic -- belong to a much larger group of functions called \sword{polynomials}.  We begin our formal study of general polynomials with a definition and some examples.
+
+\smallskip
+
+\definition{polynomialfunction}{Polynomial function}{
+A \index{function ! polynomial}\index{polynomial function ! definition of}\sword{polynomial function} is a function of the form \[ f(x) = a_{n} x^{n} + a_{n-1} x^{n-1} + \ldots + a_{2} x^{2} + a_{1} x + a_{0},\] where $a_{0}$, $a_{1}$, \ldots, $a_{n}$ are real numbers and $n \geq 1$ is a natural number.  The domain of a polynomial function is $(-\infty, \infty)$.
+}
+
+\smallskip
+
+There are several things about Definition \ref{polynomialfunction} that may be off-putting or downright frightening.  The best thing to do is look at an example.  Consider $f(x) = 4x^5 - 3x^2 + 2x - 5$.  Is this a polynomial function?  We can re-write the formula for $f$ as $f(x)= 4x^5 + 0 x^{4} + 0 x^{3} + (-3)x^2 + 2 x + (-5).$  Comparing this with Definition \ref{polynomialfunction}, we identify $n=5$, $a_{5} = 4$, $a_{4} = 0$, $a_{3} = 0$, $a_{2} = -3$, $a_{1} = 2$ and $a_{0} = -5$.  In other words, $a_{5}$ is the coefficient of $x^{5}$, $a_{4}$ is the coefficient of $x^{4}$, and so forth;  the subscript on the $a$'s merely indicates to which power of $x$ the coefficient belongs.  The business of restricting $n$ to be a natural number lets us focus on well-behaved algebraic animals. (Yes, there are examples of worse behaviour still to come!)
+
+
+\medskip
+
+\example{intropolyexample}{Identifying polynomial functions}{
+Determine if the following functions are polynomials.  Explain your reasoning.
+
+\begin{multicols}{2}
+\begin{enumerate}
+
+\item  $g(x) = \dfrac{4+x^3}{x}$
+\item  $p(x) = \dfrac{4x+x^3}{x}$
+\item  $q(x) = \dfrac{4x+x^3}{x^2+4}$
+\item  $f(x) =\sqrt[3]{x}$
+\item  $h(x) = |x|$
+\item  $z(x) = 0$
+
+\end{enumerate}
+\end{multicols}
+}
+{
+\begin{enumerate}
+
+\item  We note directly that the domain of $g(x) = \dfrac{x^3+4}{x}$ is $x \neq 0$.  By definition, a polynomial has all real numbers as its domain.  Hence, $g$ can't be a polynomial.
+
+\item  Even though $p(x) = \dfrac{x^3+4x}{x}$ simplifies to $p(x) = x^2+4$, which certainly looks like the form given in Definition \ref{polynomialfunction}, the domain of $p$, which, as you may recall, we determine \emph{before} we simplify, excludes $0$.  Alas, $p$ is not a polynomial function for the same reason $g$ isn't.
+
+\item  After what happened with $p$ in the previous part, you may be a little shy about simplifying $q(x) = \dfrac{x^3+4x}{x^2+4}$ to $q(x) = x$, which certainly fits Definition \ref{polynomialfunction}.  If we look at the domain of $q$ before we simplified, we see that it is, indeed, all real numbers.  A function which can be written in the form of Definition \ref{polynomialfunction} whose domain is all real numbers is, in fact, a polynomial.  
+
+\item  We can rewrite $f(x) =\sqrt[3]{x}$ as $f(x) = x^{\frac{1}{3}}$.  Since $\frac{1}{3}$ is not a natural number, $f$ is not a polynomial.
+
+\item  The function $h(x) = |x|$ isn't a polynomial, since it can't be written as a combination of powers of $x$ even though it can be written as a piecewise function involving polynomials.  As we shall see in this section, graphs of polynomials possess a quality that the graph of $h$ does not.  
+
+\mnote{.7}{Once we get to calculus, we'll see that the absolute value function is the classic example of a function which is continuous everywhere, but fails to have a derivative everywhere: the graph of $h(x)=\lvert x\rvert$ fails to be ``smooth'' at the origin.}
+
+\item  There's nothing in Definition \ref{polynomialfunction} which prevents all the coefficients $a_{n}$, etc., from being $0$.  Hence, $z(x) = 0$, is an honest-to-goodness polynomial.
+
+\end{enumerate}
+}
+
+
+\medskip
+
+\definition{degreeandallthat}{Polynomial terminology}{
+Suppose $f$ is a polynomial function.
+
+\begin{itemize}
+
+\item Given $f(x) = a_{n} x^{n} + a_{n-1} x^{n-1} + \ldots + a_{2} x^{2} + a_{1} x + a_{0}$ with $a_{n} \neq 0$, we say 
+
+\begin{itemize}
+
+\item  The natural number $n$ is called the \index{polynomial function ! degree}\index{degree of a polynomial}\sword{degree} of the polynomial $f$.
+
+\item  The term $a_{n} x^{n}$ is called the \index{polynomial function ! leading term}\index{leading term of a polynomial}\sword{leading term} of the polynomial $f$.
+
+\item  The real number $a_{n}$ is called the \index{polynomial function ! leading coefficient}\index{leading coefficient of a polynomial}\sword{leading coefficient} of the polynomial $f$.
+
+\item  The real number $a_{0}$ is called the \index{polynomial function ! constant term}\index{constant term of a polynomial}\sword{constant term} of the polynomial $f$.
+
+\end{itemize}
+
+\item  If $f(x) = a_{0}$, and $a_{0} \neq 0$, we say $f$ has degree $0$.
+
+\item  If $f(x) = 0$, we say $f$ has no degree.
+
+\end{itemize}
+}
+
+\smallskip
+
+The reader may well wonder why we have chosen to separate off constant functions from the other polynomials in Definition \ref{degreeandallthat}.  Why not just lump them all together and, instead of forcing $n$ to be a natural number, $n = 1, 2, \ldots$, allow $n$ to be a whole number, $n = 0, 1, 2, \ldots$.  We could unify all of the cases, since, after all, isn't $a_{0}x^{0} = a_{0}$?  The answer is `yes, as long as $x\neq 0$.'  The function $f(x) = 3$ and $g(x) = 3x^{0}$ are different, because their domains are different.  The number $f(0) = 3$ is defined, whereas $g(0) = 3(0)^{0}$ is not.  \phantomsection \label{indeterminantformone} Indeed, much of the theory we will develop in this chapter doesn't include the constant functions, so we might as well treat them as outsiders from the start.  One good thing that comes from Definition \ref{degreeandallthat} is that we can now think of linear functions as degree $1$ (or `first degree') polynomial functions and quadratic functions as degree $2$ (or `second degree') polynomial functions.
+
+\mnote{.15}{In the context of limits, results such as $0^{0}$ are known as \textit{indeterminant forms}. These are cases where the function fails to be defined, but the methods of calculus might still be able to extract information.
+}
+
+\pagebreak
+
+\example{ex_degreeetc}{Using polynomial terminiology}{
+Find the degree, leading term, leading coefficient and constant term of the following polynomial functions.
+
+\begin{enumerate}
+
+\item  $f(x) = 4x^5 - 3x^2 + 2x - 5$
+\item $g(x) = 12x +x^3$
+
+\setcounter{HW}{\value{enumi}}
+\end{enumerate}
+
+
+\begin{enumerate}
+\setcounter{enumi}{\value{HW}}
+
+\item  $h(x) = \dfrac{4-x}{5}$
+\item  $p(x) = (2x-1)^{3}(x-2)(3x+2)$ \vphantom{$\dfrac{4-x}{5}$}
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item  There are no surprises with $f(x) = 4x^5 - 3x^2 + 2x - 5$.  It is written in the form of Definition \ref{degreeandallthat}, and we see that the degree is $5$, the leading term is $4x^5$, the leading coefficient is $4$ and the constant term is $-5$.
+
+\item The form given in Definition \ref{degreeandallthat} has the highest power of $x$ first.  To that end, we re-write $g(x) = 12x +x^3 = x^3+12x$, and see that the degree of $g$ is $3$, the leading term is $x^3$, the leading coefficient is $1$ and the constant term is $0$.
+
+\item  We need to rewrite the formula for $h$ so that it resembles the form given in Definition \ref{degreeandallthat}:  $h(x) = \frac{4-x}{5} = \frac{4}{5} - \frac{x}{5} = -\frac{1}{5} x + \frac{4}{5}$.  The degree of $h$ is $1$, the leading term is $-\frac{1}{5} x$, the leading coefficient is $-\frac{1}{5}$ and the constant term is $\frac{4}{5}$.
+
+\item  It may seem that we have some work ahead of us to get $p$ in the form of Definition \ref{degreeandallthat}.  However, it is possible to glean the information requested about $p$ without multiplying out the entire expression $(2x-1)^{3}(x-2)(3x+2)$.  The leading term of $p$ will be the term which has the highest power of $x$.  The way to get this term  is to multiply the terms with the highest power of $x$ from each factor together - in other words, the leading term of $p(x)$ is the product of the leading terms of the factors of $p(x)$.  Hence, the leading term of $p$ is $(2x)^3(x)(3x) =  24x^5$.  This means that the degree of $p$ is $5$ and the leading coefficient is $24$.  As for the constant term, we can perform a similar trick.  The constant term is obtained by multiplying the constant terms from each of the factors $(-1)^3(-2)(2) = 4$.  
+
+\end{enumerate}
+}
+
+\medskip
+
+We now consider the graphs of polynomial functions.  In Figure \ref{fig:graphevenpowers} the graphs of $y=x^2$, $y=x^4$ and $y=x^6$, are shown.  We have omitted the axes to allow you to see that as the exponent increases, the `bottom' becomes `flatter' and the `sides' become `steeper.'  If you take the the time to graph these functions by hand, (make sure you choose some $x$-values between $-1$ and $1$.) you will see why. 
+
+All of these functions are even, (Do you remember how to show this?) and it is exactly because the exponent is even. (Herein lies one of the possible origins of the term `even' when applied to functions.) This symmetry is important, but we want to explore a different yet equally important feature of these functions which we can be seen graphically -- their \index{polynomial function ! end behaviour}\index{end behaviour ! of a function graph}\sword{end behaviour}.  
+
+\pagebreak
+
+The end behaviour of a function is a way to describe what is happening to the function values (the $y$-values) as the $x$-values approach the `ends' of the $x$-axis. (Of course, there are no ends to the $x$-axis.) That is, what happens to $y$ as $x$ becomes small without bound (written $x \rightarrow -\infty$) and, on the flip side, as $x$ becomes large without bound (written $x \rightarrow \infty$).  
+
+\mnote{.85}{When $x\to\infty$ we think of $x$ as moving far to the right of zero and becoming a very large \textit{positive} number. When $x\to -\infty$ we think of $x$ as becoming a very large (in the sense of its absolute value) \textit{negative} number far to the left of zero.}
+
+
+
+\smallskip
+
+For example, given $f(x) = x^2$, as $x \rightarrow -\infty$, we imagine substituting $x=-100$, $x=-1000$, etc., into $f$ to get $f(-100)=10000$, $f(-1000)=1000000$, and so on. Thus  the function values are becoming larger and larger positive numbers (without bound).  To describe this behaviour, we write: as $x \rightarrow -\infty$, $f(x) \rightarrow \infty$.  If we study the behaviour of $f$ as $x \rightarrow \infty$, we see that in this case, too, $f(x) \rightarrow \infty$. (We told you that the symmetry was important!) The same can be said for any function of the form $f(x) = x^n$ where $n$ is an even natural number.   If we generalize just a bit to include vertical scalings and reflections across the $x$-axis,  we have
+
+
+
+
+
+\smallskip
+
+\keyidea{idea:endbehaveven}{End behaviour of functions $f(x) = ax^{n}$, $n$ even.}{
+
+\smallskip
+
+Suppose $f(x) = a x^{n}$ where $a \neq 0$ is a real number and $n$ is an even natural number.  The end behaviour of the graph of $y=f(x)$ matches one of the following: \index{end behaviour ! of $f(x) = ax^{n}, n$ even}
+
+\begin{itemize}
+
+\item  for $a > 0$, as $x \rightarrow -\infty$, $f(x) \rightarrow \infty$ and as $x \rightarrow \infty$, $f(x) \rightarrow \infty$
+
+\item  for $a < 0$, as $x \rightarrow -\infty$, $f(x) \rightarrow -\infty$ and as $x \rightarrow \infty$, $f(x) \rightarrow -\infty$
+
+\end{itemize}
+
+This is illustrated graphically below:
+\begin{center}
+\begin{tabular}{ccc}
+\myincludegraphics{figures/PolynomialsGraphics/GraphsofPolynomials-6}& \hspace{2cm} &
+\myincludegraphics{figures/PolynomialsGraphics/GraphsofPolynomials-7}\\
+$a>0$ & & $a<0$
+\end{tabular}
+\end{center}
+}
+
+
+
+\smallskip
+
+We now turn our attention to functions of the form $f(x) = x^{n}$ where $n \geq 3$ is an odd natural number. (We ignore the case when $n=1$, since the graph of $f(x)=x$ is a line and doesn't fit the general pattern of higher-degree odd polynomials.) In Figure \ref{fig:graphoddpowers} we have graphed $y=x^3$, $y=x^5$, and $y=x^7$.    The `flattening' and `steepening' that we saw with the even powers presents itself here as well, and, it should come as no surprise that all of these functions are odd. (And are, perhaps, the inspiration for the moniker `odd function'.)  The end behaviour of these functions is all the same, with $f(x) \rightarrow -\infty$ as $x \rightarrow -\infty$ and $f(x) \rightarrow \infty$ as $x \rightarrow \infty$.
+
+
+%\begin{tabular}{m{1in}m{1.5in}m{1.5in}m{1.5in}}
+
+\mtable{.6}{Graphing even powers of $x$}{fig:graphevenpowers}{
+\begin{tabular}{c}
+\myincludegraphics{figures/PolynomialsGraphics/GraphsofPolynomials-3}\\
+$y=x^2$\\
+\\
+\myincludegraphics{figures/PolynomialsGraphics/GraphsofPolynomials-4}\\
+$y=x^4$\\
+\\
+\myincludegraphics{figures/PolynomialsGraphics/GraphsofPolynomials-5}\\
+$y=x^6$
+\end{tabular}
+}
+%&
+\mtable{.25}{Graphing odd powers of $x$}{fig:graphoddpowers}{
+\begin{tabular}{c}
+\myincludegraphics{figures/PolynomialsGraphics/GraphsofPolynomials-8}\\
+$y=x^3$\\
+\\
+\myincludegraphics{figures/PolynomialsGraphics/GraphsofPolynomials-9}\\
+$y=x^5$\\
+\\
+\myincludegraphics{figures/PolynomialsGraphics/GraphsofPolynomials-10}\\
+$y=x^7$
+\end{tabular}
+}
+
+As with the even degreed functions we studied earlier, we can generalize their end behaviour.
+
+\smallskip
+
+\keyidea{idea:endbehavodd}{End behaviour of functions $f(x) = ax^{n}$, $n$ odd.}{
+Suppose $f(x) = a x^{n}$ where $a \neq 0$ is a real number and $n \geq 3$ is an odd natural number.  The end behaviour of the graph of $y=f(x)$ matches one of the following: \index{end behaviour ! of $f(x) = ax^{n}, n$ odd}
+
+\begin{itemize}
+
+\item  for $a > 0$, as $x \rightarrow -\infty$, $f(x) \rightarrow -\infty$ and as $x \rightarrow \infty$, $f(x) \rightarrow \infty$
+
+\item  for $a < 0$, as $x \rightarrow -\infty$, $f(x) \rightarrow \infty$ and as $x \rightarrow \infty$, $f(x) \rightarrow -\infty$
+
+\end{itemize}
+
+This is illustrated graphically as follows:
+\begin{center}
+\begin{tabular}{ccc}
+\myincludegraphics{figures/PolynomialsGraphics/GraphsofPolynomials-11} & \hspace{2cm} &
+\myincludegraphics{figures/PolynomialsGraphics/GraphsofPolynomials-12}\\
+$a>0$& & $a<0$\\
+\end{tabular}
+\end{center}
+}
+
+
+
+\smallskip
+
+Despite having different end behaviour, all functions of the form $f(x) = ax^{n}$ for natural numbers $n$ share two properties which help distinguish them from other animals in the algebra zoo:  they  are \index{continuous}\index{function ! continuous}\sword{continuous} and \index{smooth}\index{function ! smooth}\sword{smooth}.  While these concepts are formally defined using Calculus, informally, graphs of continuous functions have no `breaks' or `holes' in them, and the graphs of smooth functions have no `sharp turns'.  It turns out that these traits are preserved when functions are added together, so general polynomial functions inherit these qualities.  In Figure \ref{cusppicture}, we find the graph of a function which is neither smooth nor continuous, and to its right we have a graph of a polynomial, for comparison.  The function whose graph appears on the left fails to be continuous where it has a `break' or `hole' in the graph;  everywhere else, the function is continuous.  The function is continuous at the `corner' and the `cusp', but we consider these `sharp turns', so these are places where the function fails to be smooth.  Apart from these four places, the function is smooth and continuous.  Polynomial functions are smooth and continuous everywhere, as exhibited in Figure \ref{fig:polygraphgen}.
+
+\mnote{.65}{In fact, when we get to Calculus, you'll find that smooth functions are automatically continuous, so that saying `polynomials are continuous and smooth' is redundant.}
+
+\mfigure{.5}{Pathologies not found on graphs of polynomials}{cusppicture}{figures/PolynomialsGraphics/GraphsofPolynomials-13}
+
+
+
+
+The notion of smoothness is what tells us graphically that, for example, $f(x) = |x|$, whose graph is the characteristic `$\vee$' shape, cannot be a polynomial.  The notion of continuity is key to constructing sign diagrams: the zeros of a polynomial function are the only possible places where it can change sign. This last result is formalized in the following theorem.
+  
+\smallskip
+
+\theorem{IVT}{The Intermediate Value Theorem (Zero Version)}{
+Suppose $f$ is a continuous function on an interval containing $x=a$ and $x=b$ with $a<b$. If $f(a)$ and $f(b)$ have different signs, then $f$ has at least one zero between $x = a$ and $x = b$;  that is, for at least one real number $c$ such that $a < c < b$, we have $f(c) = 0$. \index{Intermediate Value Theorem ! polynomial zero version}
+}
+
+\mfigure{.3}{The graph of a polynomial}{fig:polygraphgen}{figures/PolynomialsGraphics/GraphsofPolynomials-14}
+
+\smallskip
+
+The Intermediate Value Theorem is extremely profound;  it gets to the heart of what it means to be a real number, and is one of the most often used and under appreciated theorems in Mathematics.  With that being said, most students see the result as common sense since it says, geometrically, that the graph of a polynomial function cannot be above the $x$-axis at one point and below the $x$-axis at another point without crossing the $x$-axis somewhere in between. We'll return to the Intermediate Value Theorem later in the Calculus portion of the course, when we study continuity in general.  The following example uses the Intermediate Value Theorem to establish a fact that that most students take for granted.  Many students, and sadly some instructors, will find it silly.
+
+\medskip
+
+
+\example{ex_squareroot2}{Existence of $\sqrt{2}$}{Use the Intermediate Value Theorem to establish that $\sqrt{2}$ is a real number.
+}
+{Consider the polynomial function $f(x) = x^2 - 2$.  Then $f(1) = -1$ and $f(3) = 7$.  Since $f(1)$ and $f(3)$ have different signs, the Intermediate Value Theorem guarantees us a real number $c$ between $1$ and $3$ with $f(c) = 0$.  If $c^2 - 2 = 0$ then $c = \pm \sqrt{2}$.  Since $c$ is between $1$ and $3$, $c$ is positive, so $c = \sqrt{2}$.}
+
+\medskip
+
+\mnote{.75}{The validity of the result in Example \ref{ex_squareroot2} of course relies on having a rigorous proof of Theorem \ref{IVT}. Although intuitive, its proof is one of the most difficult in single variable calculus. At most universities, you don't see a proof until a first course in Analysis, like Math 3500.}
+
+Our primary use of the Intermediate Value Theorem is in the construction of sign diagrams,  since it guarantees us that polynomial functions are always positive $(+)$ or always negative $(-)$ on intervals which do not contain any of its zeros.  The general algorithm for polynomials is given below.
+
+\smallskip
+
+\keyidea{idea:polysigndiag}{Steps for Constructing a Sign Diagram for a Polynomial Function}{
+Suppose $f$ is a polynomial function. \index{sign diagram ! polynomial function}
+
+\begin{enumerate}
+
+\item  Find the zeros of $f$ and place them on the number line with the number $0$ above them.
+
+\item  Choose a real number, called a \sword{test value}, in each of the intervals determined in step 1. 
+
+\item  Determine the sign of $f(x)$ for each test value in step 2, and write that sign above the corresponding interval.
+
+\end{enumerate}
+}
+
+\medskip 
+
+\example{polygraphex}{Using a sign diagram to sketch a polynomial}{
+Construct a sign diagram for $f(x) = x^3 (x-3)^2 (x+2) \left(x^2+1\right)$.   Use it to give a rough sketch of the graph of  $y=f(x)$.
+}
+{
+First, we find the zeros of $f$ by solving $x^3 (x-3)^2 (x+2)\left(x^2+1\right)=0$.   We get $x=0$, $x=3$ and $x=-2$. (The equation $x^2+1=0$ produces no real solutions.)  These three points divide the real number line into four intervals:  $(-\infty, -2)$, $(-2,0)$, $(0,3)$ and $(3,\infty)$.  We select the test values $x=-3$, $x=-1$, $x=1$ and $x=4$. We find $f(-3)$ is $(+)$, $f(-1)$ is $(-)$ and $f(1)$ is $(+)$ as is $f(4)$.  Wherever $f$ is $(+)$, its graph is above the $x$-axis;  wherever $f$ is $(-)$, its graph is below the $x$-axis.  The $x$-intercepts of the graph of $f$ are $(-2,0)$, $(0,0)$ and $(3,0)$.  Knowing $f$ is smooth and continuous allows us to sketch its graph in Figure \ref{fig:polygraph1}.
+
+\mfigure{.4}{The sign diagram of $f$ in Example \ref{polygraphex}}{fig:polysign1}{figures/PolynomialsGraphics/GraphsofPolynomials-15}
+
+\mfigure{.2}{The graph $y=f(x)$ for Example \ref{polygraphex}}{fig:polygraph1}{figures/PolynomialsGraphics/GraphsofPolynomials-16}
+}
+
+\medskip
+
+A couple of notes about the Example \ref{polygraphex} are in order.  First, note that we purposefully did not label the $y$-axis in the sketch of the graph of $y=f(x)$.  This is because the sign diagram gives us the zeros and the relative position of the graph - it doesn't give us any information as to how high or low the graph strays from the $x$-axis.  Furthermore, as we have mentioned earlier in the text, without Calculus, the values of the relative maximum and minimum can only be found approximately using a calculator.  If we took the time to find the leading term of $f$, we would find it to be $x^8$.  Looking at the end behaviour of $f$, we notice that it matches the end behaviour of $y=x^8$.  This is no accident, as we find out in the next theorem.
+
+\smallskip
+
+\theorem{EBPolynomials}{End behaviour for Polynomial Functions}{
+\index{end behaviour ! polynomial} The end behaviour of a polynomial $f(x) = a_{n} x^{n} + a_{n-1} x^{n-1} + \ldots + a_{2} x^{2} + a_{1} x + a_{0}$ with $a_{n} \neq 0$ matches the end behaviour of $y = a_{n} x^{n}$.  
+}
+
+\smallskip
+
+To see why Theorem \ref{EBPolynomials} is true, let's first look at a specific example.  Consider $f(x) = 4x^3 - x + 5$.  If we wish to examine end behaviour, we look to see the behaviour of $f$ as $x \rightarrow \pm \infty$.  Since we're concerned with $x$'s far down the $x$-axis, we are far away from $x=0$ so can rewrite $f(x)$ for these values of $x$ as \[ f(x) = 4x^3 \left( 1 - \dfrac{1}{4x^2} + \dfrac{5}{4x^3}\right)\]
+
+As $x$ becomes unbounded (in either direction), the terms $\dfrac{1}{4x^2}$ and $\dfrac{5}{4x^3}$ become closer and closer to $0$, as the table below indicates.
+
+
+\[ \begin{array}{|r||r|r|}  
+
+\hline 
+
+ x & \frac{1}{4x^2} & \frac{5}{4x^3} \vphantom{\dfrac{a}{a}} \\ [2pt] \hline
+-1000  & 0.00000025 & -0.00000000125 \\  \hline
+-100  & 0.000025 & -0.00000125 \\  \hline
+-10 & 0.0025 & -0.00125 \\  \hline
+10  & 0.0025 & 0.00125 \\  \hline
+100 & 0.000025 & 0.00000125 \\  \hline
+1000 & 0.00000025 & 0.00000000125 \\  \hline
+\end{array} \]
+
+\smallskip
+
+In other words, as $x \rightarrow \pm \infty$, $f(x) \approx 4x^3\left( 1 - 0 +0\right) = 4x^3$, which is the leading term of $f$.  The formal proof of Theorem \ref{EBPolynomials} works in much the same way.  Factoring out the leading term leaves
+
+\[
+ f(x) = a_{n} x^{n} \left( 1 + \dfrac{a_{n-1}}{a_{n} x}+ \ldots + \dfrac{a_{2}}{a_{n} x^{n-2}} + \dfrac{a_{1}}{a_{n} x^{n-1}}+\dfrac{a_{0}}{a_{n} x^{n}}\right)
+\]
+
+As $x \rightarrow \pm \infty$, any term with an $x$ in the denominator becomes closer and closer to $0$, and we have $f(x) \approx a_{n} x^{n}$.  Geometrically, Theorem \ref{EBPolynomials} says that if we graph $y=f(x)$ using a graphing calculator, and continue to `zoom out', the graph of it and its leading term become indistinguishable.  In Figure \ref{fig:leadingterm} the graphs of $y=4x^3-x+5$  and $y=4x^3$ ) in two different windows.
+
+\mtable{.4}{Two views of the polynomials $f(x)$ and $g(x)$}{fig:leadingterm}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.95\marginparwidth]{figures/PolynomialsGraphics/EndBehaviour_near}\\
+A view close to the origin\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/PolynomialsGraphics/EndBehaviour_far} \\
+A `zoomed out' view
+\end{tabular}
+}
+
+Let's return to the function in Example \ref{polygraphex}, $f(x) = x^3 (x-3)^2 (x+2)\left(x^2+1\right)$, whose sign diagram and graph are given in Figures \ref{fig:polysign1} and \ref{fig:polygraph1}.  Theorem \ref{EBPolynomials} tells us that the end behaviour is the same as that of its leading term $x^{8}$.  This tells us that the graph of $y=f(x)$ starts and ends above the $x$-axis.  In other words, $f(x)$ is $(+)$ as $x \rightarrow \pm \infty$, and as a result, we no longer need to evaluate $f$ at the test values $x=-3$ and $x=4$.  Is there a way to eliminate the need to evaluate $f$ at the other test values?  What we would really need to know is how the function behaves near its zeros - does it cross through the $x$-axis at these points, as it does at $x=-2$ and $x=0$, or does it simply touch and rebound like it does at $x=3$.  From the sign diagram, the graph of $f$ will cross the $x$-axis whenever the signs on either side of the zero switch (like they do at $x=-2$ and $x=0$);  it will touch when the signs are the same on either side of the zero (as is the case with $x=3$). What we need to determine is the reason behind whether or not the sign change occurs.
+
+
+Fortunately, $f$ was given to us in factored form:  $f(x) = x^3 (x-3)^2 (x+2)$.  When we attempt to determine the sign of $f(-4)$, we are attempting to find the sign of the number $(-4)^3 (-7)^2 (-2)$, which works out to be $(-)(+)(-)$ which is $(+)$.  If we move to the other side of $x=-2$, and find the sign of $f(-1)$, we are determining the sign of  $(-1)^3 (-4)^2 (+1)$, which is $(-)(+)(+)$ which gives us the $(-)$.  Notice that signs of the first two factors in both expressions are the same in $f(-4)$ and $f(-1)$.  The only factor which switches sign is the third factor, $(x+2)$, precisely the factor which gave us the zero $x=-2$.  If we move to the other side of $0$ and look closely at $f(1)$, we get the sign pattern $(+1)^3(-2)^2(+3)$ or $(+)(+)(+)$ and we note that, once again, going from $f(-1)$ to $f(1)$, the only factor which changed sign was the first factor, $x^3$, which corresponds to the zero $x=0$.  Finally, to find $f(4)$, we substitute to get $(+4)^3(+2)^2(+5)$ which is $(+)(+)(+)$ or $(+)$.  The sign didn't change for the middle factor $(x-3)^2$.  Even though this is the factor which corresponds to the zero $x=3$, the fact that the quantity is \textit{squared} kept the sign of the middle factor the same on either side of $3$.  If we look back at the exponents on the factors $(x+2)$ and $x^3$, we see that they are both odd, so as we substitute values to the left and right of the corresponding zeros, the signs of the corresponding factors change which results in the sign of the function value changing.  This is the key to the behaviour of the function near the zeros.  We need a definition and then a theorem.
+
+\smallskip
+
+\definition{multiplicity}{Multiplicity of a zero}{
+Suppose $f$ is a polynomial function and $m$ is a natural number. If $(x-c)^{m}$ is a factor of $f(x)$ but $(x-c)^{m+1}$ is not, then we say $x=c$ is a zero of \index{polynomial function ! zero ! multiplicity}\index{multiplicity ! of a zero}\index{zero ! multiplicity of}\sword{multiplicity} $m$.
+}
+
+\smallskip
+
+Hence,  rewriting  $f(x) = x^3 (x-3)^2 (x+2)$ as $f(x) = (x-0)^3 (x-3)^2 (x-(-2))^{1}$, we see that $x=0$ is a zero of multiplicity $3$, $x=3$ is a zero of multiplicity $2$ and $x=-2$ is a zero of multiplicity $1$.
+
+\smallskip
+
+\theorem{roleofmultiplicity}{The Role of Multiplicity}{
+Suppose $f$ is a polynomial function  and $x=c$ is a zero of multiplicity $m$.  \index{multiplicity ! effect on the graph of a polynomial}
+
+\begin{itemize}
+
+\item  If $m$ is even, the graph of $y=f(x)$ touches and rebounds from the $x$-axis at $(c,0)$.
+
+\item  If $m$ is odd, the graph of $y=f(x)$ crosses through the $x$-axis at $(c,0)$.
+
+\end{itemize}
+}
+
+\smallskip
+
+Our last example shows how end behaviour and multiplicity allow us to sketch a decent graph without appealing to a sign diagram.
+
+%\pagebreak
+
+\medskip
+
+\example{ex_multiplicity}{Using end behaviour and multiplicity}{
+Sketch the graph of $f(x) = -3(2x-1)(x+1)^2$ using end behaviour and the multiplicity of its zeros.
+}
+{
+The end behaviour of the graph of $f$ will match that of its leading term.  To find the leading term, we multiply by the leading terms of each factor to get $(-3)(2x)(x)^2 = -6x^3$.  This tells us that the graph will start above the $x$-axis, in Quadrant II, and finish below the $x$-axis, in Quadrant IV.  Next, we find the zeros of $f$.  Fortunately for us, $f$ is factored. (Obtaining the factored form of a polynomial is the main focus of the next few sections.)  Setting each factor equal to zero gives is $x = \frac{1}{2}$ and $x=-1$ as zeros. To find the multiplicity of $x=\frac{1}{2}$ we note that it corresponds to the factor $(2x-1)$.  This isn't strictly in the form required in Definition \ref{multiplicity}.  If we factor out the $2$, however, we get $(2x-1) = 2\left(x-\frac{1}{2}\right)$, and we see that the multiplicity of $x = \frac{1}{2}$ is $1$.  Since $1$ is an odd number, we know from Theorem \ref{roleofmultiplicity} that the graph of $f$ will cross through the $x$-axis at $\left(\frac{1}{2},0\right)$.   Since the zero $x=-1$ corresponds to the factor $(x+1)^2 = (x-(-1))^2$, we find its multiplicity to be $2$ which is an even number.  As such, the graph of $f$ will touch and rebound from the $x$-axis at $(-1,0)$.  Though we're not asked to, we can find the $y$-intercept by finding $f(0) = -3(2(0)-1)(0+1)^2 = 3$.  Thus  $(0,3)$ is an additional point on the graph.  Putting this together gives us the graph in Figure \ref{fig:polygraph2}.
+
+\mfigure{.8}{The graph $y=f(x)$ for Example \ref{ex_multiplicity}}{fig:polygraph2}{figures/PolynomialsGraphics/GraphsofPolynomials-19}
+}
+
+\subsection{Polynomial Arithmetic}
+\label{PolyArith}
+
+
+The previous section introduced all the important polynomial terminology and taught us the basic techniques for graphing polynomial functions. We saw that a necessary ingredient for obtaining the graph of a polynomial function is knowledge of the zeros of the polynomial. In the next few sections, we will cover the algebraic techniques needed to obtain this information.
+
+In this section our focus is entirely on algebraic manipulation, so we will pause briefly in our discussion of functions, and simply consider polynomial \textit{expressions}. (That is, we simply dispense with writing ``$p(x)=$'' in front of every polynomial.)
+
+We begin with (you guessed it) a bit more terminology that can come in handy when comparing polynomials.
+
+\definition{polynomialterminology}{Polynomial Vocabulary, Part 2}{
+
+\begin{itemize}
+
+\item  \textbf{Like Terms:} Terms in a polynomial are called \sword{like} terms if they have the same variables each with the same corresponding exponents.
+
+\item  \textbf{Simplified:} A polynomial is said to be \sword{simplified} if all arithmetic operations have been completed and there are no longer any like terms.
+
+\item  \textbf{Classification by Number of Terms:}  A simplified polynomial  is  called a 
+
+\begin{itemize}
+
+\item   \textbf{monomial} if it has exactly one nonzero term
+
+\item   \textbf{binomial} if it has exactly two nonzero terms
+
+\item   \textbf{trinomial} if it has exactly three nonzero terms
+
+\end{itemize}
+
+\end{itemize}
+}
+
+\medskip
+
+For example, $x^2 + x\sqrt{3} +4$ is a trinomial of degree $2$.  The coefficient of $x^2$ is $1$ and the constant term is $4$.  The polynomial $27x^2y + \frac{7x}{2}$ is a binomial of degree $3$ ($x^2y = x^2 y^1$) with constant term $0$.  
+
+\medskip
+
+The concept of `like' terms really amounts to finding terms which can be combined using the Distributive Property.  For example, in the polynomial $17x^2y - 3xy^2 + 7xy^2$, $-3xy^2$ and $7xy^2$ are like terms, since they have the same variables with the same corresponding exponents. This allows us to combine these two terms as follows:  \[17x^2y -  3xy^2 + 7xy^2 = 17x^2y + (-3)xy^2 + 7xy^2 + 17x^2y +(-3 + 7)xy^2 = 17x^2y + 4xy^2\]  Note that even though $17x^2y$ and $4xy^2$ have the same variables, they are not like terms since in the first term we have $x^2$ and $y = y^1$ but in the second we have $x = x^1$ and $y = y^2$ so the corresponding exponents aren't the same.  Hence,  $17x^2y + 4xy^2$ is the simplified form of the polynomial.  
+
+\smallskip
+
+There are four basic operations we can perform with polynomials:  addition, subtraction, multiplication and division. The first three of these operations follow directly from properties of real number arithmetic and will be discussed together first.  Division, on the other hand, is a bit more complicated and will be discussed separately.
+
+\subsection{Polynomial Addition, Subtraction and Multiplication.}
+\label{polyaddsubtmult}
+
+Adding and subtracting polynomials comes down to identifying like terms and then adding or subtracting the coefficients of those like terms.  Multiplying polynomials comes to us courtesy of the Generalized Distributive Property.
+
+\medskip
+
+\theorem{generaldistprop}{Generalized Distributive Property}{  To multiply a quantity of $n$ terms by a quantity of $m$ terms, multiply each of the $n$ terms of the first quantity by each of the $m$ terms in the second quantity and add the resulting $n \cdot m$ terms together. 
+}
+
+\medskip
+
+In particular, Theorem \ref{generaldistprop} says that, before combining like terms, a product of an $n$-term polynomial and an $m$-term polynomial will generate $(n \cdot m)$-terms.  For example, a binomial times a trinomial will produce six terms some of which may be like terms.  Thus the simplified end result may have fewer than six terms but you will start with six terms. 
+
+\medskip
+
+A special case of Theorem \ref{generaldistprop}  is the famous \textbf{F.O.I.L.}, listed here:
+
+\mnote{.2}{We caved to peer pressure on this one.  Apparently all of the cool Precalculus books have FOIL in them even though it's redundant once you know how to distribute multiplication across addition.  In general, we don't like mechanical short-cuts that interfere with a student's understanding of the material and FOIL is one of the worst.}
+
+\medskip
+
+\keyidea{FOIL}{F.O.I.L:}{ The terms generated from the product of two binomials: $(a + b)(c+d)$ can be verbalized as follows ``Take the sum of:
+
+\begin{itemize}
+
+\item the product of the \textbf{F}irst terms $a$ and $c$, $ac$
+
+\item the product of the \textbf{O}uter terms $a$ and $d$, $ad$
+
+\item  the product of the \textbf{I}nner terms $b$ and $c$, $bc$
+
+\item  the product of the \textbf{L}ast terms $b$ and $d$, $bd$.''
+
+\end{itemize}
+
+That is, $(a+b)(c+d) = ac + ad + bc + bd$.
+}
+
+\medskip
+
+Theorem \ref{generaldistprop} is best proved using the technique known as Mathematical Induction which is covered in Math 2000.  The result is really nothing more than repeated applications of the Distributive Property so it seems reasonable and we'll use it without proof for now.  The other major piece of polynomial multiplication is the law of exponents  $a^n a^m = a^{n+m}$.  The Commutative and Associative Properties of addition and multiplication are also used extensively.  We put all of these properties to good use in the next example.
+
+%pagebreak
+
+\medskip
+
+\example{polyaddsubtmultex}{Addition and subtraction of polynomials}{
+Perform the indicated operations and simplify.
+
+\begin{enumerate}
+
+\item  $\left(3x^2 - 2x + 1\right) - (7x-3)$
+
+\item  $4xz^2 - 3z(xz - x + 4)$
+
+\item $(2t+1)(3t - 7)$ \vphantom{$\left(3y - \sqrt[3]{2}\right)\left(9y^2 + 3\sqrt[3]{2} y + \sqrt[3]{4}\right)$}
+
+\item  $\left(3y - \sqrt[3]{2}\right)\left(9y^2 + 3\sqrt[3]{2} y + \sqrt[3]{4}\right)$
+
+\setcounter{HW}{\value{enumi}}
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item  We begin `distributing the negative', then we rearrange and combine like terms:
+\begin{align*}
+\left(3x^2 - 2x + 1\right) - (7x-3) &  =  3x^2-2x+1 - 7x + 3  \tag*{Distribute} \\
+                       & =  3x^2  -2x - 7x + 1 + 3  \tag*{Rearrange terms} \\							   & =  3x^2 - 9x + 4  \tag*{Combine like terms}
+\end{align*}
+Our answer is $3x^2 - 9x + 4$.
+
+\item  Following in our footsteps from the previous example, we first distribute the $-3z$ through, then rearrange and combine like terms.
+\begin{align*}
+4xz^2 - 3z(xz - x + 4) & =  4xz^2 - 3z(xz) + 3z (x) - 3z(4)  \tag*{Distribute} \\
+                       & =  4xz^2 - 3xz^2 + 3xz - 12 z  \tag*{Multiply} \\
+					   & =  xz^2+ 3xz - 12 z  \tag*{Combine like terms}
+\end{align*}
+We get our final answer: $xz^2+ 3xz - 12z$
+
+
+\item  At last, we have a chance to use our F.O.I.L. technique:
+\begin{align*}
+(2t+1)(3t - 7) & =  (2t)(3t) + (2t)(-7) + (1)(3t) + (1)(-7)  \tag*{F.O.I.L.} \\
+               & =  6t^2 - 14t + 3t - 7  \tag*{Multiply} \\
+			   & =  6t^2 - 11t - 7  \tag*{Combine like terms}
+\end{align*} 
+We get $6t^2 - 11t - 7$ as our final answer.
+
+\item  We use the Generalized Distributive Property here, multiplying each term in the second quantity first by $3y$, then by $-\sqrt[3]{2}$:
+
+\noindent
+\begin{minipage}{1.1\textwidth}
+\begin{align*}
+\left(3y - \sqrt[3]{2}\right)\left(9y^2 + 3\sqrt[3]{2} y + \sqrt[3]{4}\right)  &=3y\left(9y^2\right) +3y\left(3\sqrt[3]{2} y\right) + 3y\left(\sqrt[3]{4}\right) \\
+       &\quad \quad \quad -\sqrt[3]{2} \left(9y^2\right) - \sqrt[3]{2} \left(3\sqrt[3]{2} y\right) -\sqrt[3]{2} \left(\sqrt[3]{4}\right)  \\
+			  	& =  27y^3 + 9y^2 \sqrt[3]{2} - 9y^2 \sqrt[3]{2} + 3y \sqrt[3]{4} - 3y \sqrt[3]{4} - 2  \\
+				& =  27y^3 - 2 \\ 
+\end{align*}
+\end{minipage}
+
+To our surprise and delight, this product reduces to $27y^3 - 2$.
+
+
+\end{enumerate}
+\vskip-\baselineskip}\\
+
+
+
+We conclude our discussion of polynomial multiplication by showcasing two special products which happen often enough they should be committed to memory.
+
+\medskip
+
+\keyidea{SpecialProducts}{Special Products}{ Let $a$ and $b$ be real numbers:
+
+\begin{itemize}
+
+\item \textbf{Perfect Square:}  $(a+b)^2 = a^2 + 2ab + b^2$ and \\$(a-b)^2 = a^2 - 2ab + b^2$
+
+\item \textbf{Difference of Two Squares:}  $(a-b)(a+b) = a^2 - b^2$ 
+
+\end{itemize}
+}
+
+\medskip
+
+The formulas in Theorem \ref{SpecialProducts} can be verified by working through the multiplication. (These are both special cases of F.O.I.L.)
+
+\subsection{Polynomial Long Division.}
+\label{polylongdiv}
+
+We now turn our attention to polynomial long division.  Dividing two polynomials follows the same algorithm, in principle, as dividing two natural numbers so we review that process first.  Suppose we wished to divide $2585$ by $79$.  The standard division tableau is given below. 
+
+\setlength\arraycolsep{0.1pt}
+\setlength\extrarowheight{2pt}
+
+\[ \begin{array}{cccccc}
+
+    &             &      &    & 3   & 2  \\ \hhline{~~|----}
+
+  7 & 9 \, \vline & \, 2 & 5 & 8 & 5  \\
+
+    &            -&    2 & 3 & 7 & \downarrow \\ \hhline{~~---} 
+    &             &      & 2 & 1 &  5   \\ 
+    &             &     - & 1 & 5 & 8    \\ \hhline{~~~---} 
+    &             &      &   & 5 & 7    \\
+
+ 
+\end{array}\]
+
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+
+In this case, $79$ is called the \sword{divisor}, $2585$ is called the \sword{dividend}, $32$ is called the \sword{quotient} and $57$ is called the \sword{remainder}.  We can check our answer by showing:  \[ \text{dividend} = (\text{divisor})( \text{quotient}) + \text{remainder}\] or in this case, $2585 = 
+ (79)(32) + 57 \checkmark$.  We hope that the long division tableau evokes warm, fuzzy memories of your formative years as opposed to feelings of hopelessness and frustration.  If you experience the latter, keep in mind that the Division Algorithm essentially is a two-step process, iterated over and over again.  First, we guess the number of times the divisor goes into the dividend and  then we subtract off our guess.  We repeat those steps with what's left over until what's left over (the remainder) is less than what we started with (the divisor).  That's all there is to it!
+
+\smallskip
+
+The division algorithm for polynomials has the same basic two steps but when we subtract polynomials, we must take care to subtract \emph{like terms} only.  As a transition to polynomial division, let's write out our previous division tableau in expanded form.
+
+
+\setlength\arraycolsep{0.1pt}
+\setlength\extrarowheight{2pt}
+
+\[ \begin{array}{cccccccccc}
+
+& & & & & & & 3 \cdot 10 & + & 2 \\ \hhline{~~~|-------}
+
+7 \cdot 10 & + & 9 \, \vline& 2\cdot 10^3 & + & 5 \cdot 10^2 & + & 8 \cdot 10 & + & 5 \\
+
+ &  &  -& \left(2 \cdot 10^3 \right. & + &  3 \cdot 10^2  & + & \left. 7 \cdot 10 \right) &  &  \downarrow \\ \hhline{~~~-----~~} 
+ &  &  &   &  & 2 \cdot 10^2 & +  & 1 \cdot 10 & + & 5 \\ 
+ &  &  &   & - & \left(1 \cdot 10^2 \right. & +  &  5 \cdot 10 &  + &\left.  8 \right) \\ \hhline{~~~~~---~~} 
+ &  &  &   &   &  & & 5 \cdot 10  & + & 7 \\
+
+ 
+\end{array}\]
+
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+
+Written this way, we see that when we line up the digits we are really lining up the coefficients of the corresponding powers of $10$ - much like how we'll have to keep the powers of $x$ lined up in the same columns.  The big difference between polynomial division and the division of natural numbers is that the value of $x$ is an unknown quantity.  So unlike using the known value of $10$, when we subtract there can be no regrouping of coefficients as in our previous example. (The subtraction $215 - 158$ requires us to `regroup' or `borrow' from the tens digit, then the hundreds digit.) This actually makes polynomial division easier. (In our opinion - you can judge for yourself.)  Before we dive into examples, we first note that for any polynomial functions $d(x)$ and $p(x)$ such that the degree of $p$ is greater than or equal to the degree of $d$, there exist unique polynomial functions $q(x)$ and $r(x)$ such that
+\[
+p(x) = d(x)q(x)+r(x),
+\]
+and either $r(x)=0$, or the degree of $r$ is less than the degree of $d$. This result tells us that we can divide polynomials whenever the degree of the divisor is less than or equal to the degree of the dividend.  We know we're done with the division when the polynomial left over (the remainder) has a degree strictly less than the divisor.  It's time to walk through a few examples to refresh your memory.
+
+\example{polynomiallongdivex}{Polynomial long division}{  Perform the indicated division.  Check your answer by showing \[\text{dividend} = (\text{divisor})( \text{quotient}) + \text{remainder}\]
+
+\begin{enumerate}
+
+\item  $\left(x^3 + 4x^2 - 5x - 14\right) \div (x-2)$
+
+\item  $\left(2t +  7\right) \div \left(3t - 4\right)$
+
+\item  $\left(6y^2 - 1 \right) \div \left(2y + 5\right)$
+
+\item  $\left(w^3 \right) \div \left(w^2 - \sqrt{2}\right)$.
+
+\setcounter{HW}{\value{enumi}}
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item  To begin $\left(x^3 + 4x^2 - 5x - 14\right) \div (x-2)$, we divide the first term in the dividend, namely $x^3$, by the first term in the divisor, namely $x$, and get $\frac{x^3}{x} = x^2$. This then becomes the first term in the quotient.  We proceed as in regular long division at this point: we multiply the entire divisor, $x-2$, by this first term in the quotient to get $x^{2}(x - 2) = x^3 - 2x^2$.  We then subtract this result from the dividend.\setlength\arraycolsep{0.1pt}\setlength\extrarowheight{2pt}\[ \begin{array}{cccccccccc}
+
+& & & & & x^2 & & &  &  \\ \hhline{~~~|-------}
+
+x & - & 2 \, \vline& x^3 & + & 4x^2 & - & 5x & - & 14 \\
+
+ &  &  -& \left(x^3 \right. & - & \left.  2x^2\right) &  & \downarrow &  &  \\ \hhline{~~~---~~~~} 
+ &  &  &   &  & 6 x^2 & - & 5x &  &  \\ 
+% &  &  &   & - & \left(6 x^2 \right. & - & \left. 12x \right) &  &  \\ \hhline{~~~~~---~~} 
+% &  &  &   &   &  & & 7x  & - & 14 \\
+% &  &  &   &   &  & - & \left( 7x \right. & - & \left. 14 \right) \\ \hhline{~~~~~~~---} 
+% &   &  &  &  &  &  &  &  & 0
+ 
+\end{array}\]
+
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt} 
+
+Now we `bring down' the next term of the quotient, namely $-5x$, and repeat the process. We divide $\frac{6x^2}{x} = 6x$, and add this to the quotient polynomial, multiply it by the divisor (which yields $6x(x - 2) = 6x^{2} - 12x$) and subtract. \setlength\arraycolsep{0.1pt}\setlength\extrarowheight{2pt}\[ \begin{array}{cccccccccc}
+
+& & & & & x^2 & + & 6x &  &  \\ \hhline{~~~|-------}
+
+x & - & 2 \, \vline& x^3 & + & 4x^2 & - & 5x & - & 14 \\
+
+ &  &  -& \left(x^3 \right. & - & \left.  2x^2\right) &  & &  & \downarrow  \\ \hhline{~~~---~~~~} 
+ &  &  &   &  & 6 x^2 & - & 5x &  &  \downarrow \\ 
+ &  &  &   & - & \left(6 x^2 \right. & - & \left. 12x \right) &  & \downarrow \\ \hhline{~~~~~---~~} 
+ &  &  &   &   &  & & 7x  & - & 14 \\
+% &  &  &   &   &  & - & \left( 7x \right. & - & \left. 14 \right) \\ \hhline{~~~~~~~---} 
+% &   &  &  &  &  &  &  &  & 0
+ 
+\end{array}\]
+
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+
+Finally, we `bring down' the last term of the dividend, namely $-14$, and repeat the process.  We divide $\frac{7x}{x} = 7$, add this to the quotient, multiply it by the divisor (which yields $7(x - 2) = 7x - 14$) and subtract.\setlength\arraycolsep{0.1pt}\setlength\extrarowheight{2pt}\[ \begin{array}{cccccccccc}
+
+& & & & & x^2 & + & 6x & + & 7 \\ \hhline{~~~|-------}
+
+x & - & 2 \, \vline& x^3 & + & 4x^2 & - & 5x & - & 14 \\
+
+ &  &  -& \left(x^3 \right. & - & \left.  2x^2\right) &  &  &  &  \\ \hhline{~~~---~~~~} 
+ &  &  &   &  & 6 x^2 & - & 5x &  &  \\ 
+ &  &  &   & - & \left(6 x^2 \right. & - & \left. 12x \right) &  &  \\ \hhline{~~~~~---~~} 
+ &  &  &   &   &  & & 7x  & - & 14 \\
+ &  &  &   &   &  & - & \left( 7x \right. & - & \left. 14 \right) \\ \hhline{~~~~~~~---} 
+ &   &  &  &  &  &  &  &  & 0
+ 
+\end{array}\]
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+
+In this case, we get a quotient of $x^2 + 6x + 7$ with a remainder of $0$.  To check our answer, we compute  \[(x-2)\left(x^2 + 6x + 7\right) + 0 = x^3 + 6x^2 + 7x - 2x^2 - 12x -14 =  x^3 + 4x^2 - 5x - 14 \, \checkmark \]
+
+\drawexampleline
+
+\item    To compute  $\left(2t +  7\right) \div \left(3t - 4\right)$, we start as before.  We find $\frac{2t}{3t} = \frac{2}{3}$, so that becomes the first (and only) term in the quotient.  We multiply the divisor $(3t-4)$ by $\frac{2}{3}$ and get $2t - \frac{8}{3}$.  We subtract this from the divided and get $\frac{29}{3}$.\setlength\arraycolsep{0.1pt}\setlength\extrarowheight{5pt}\[ \begin{array}{cccccc}
+
+& & & & & \dfrac{2}{3} \\ \hhline{~~~|---}
+
+3t & - & 4 \, \vline& 2t & + & 7  \\
+
+ &  &  -& \left(2t\vphantom{\dfrac{8}{3}} \right. & - & \left.  \dfrac{8}{3}\right)  \\ \hhline{~~~---}
+ &  &  &   &  & \dfrac{29}{3} \vphantom{\sqrt{\dfrac{7}{7}}} \\ 
+
+ 
+\end{array}\]
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+
+Our answer is $\frac{2}{3}$ with a remainder of $\frac{29}{3}$.  To check our answer, we compute \[(3t-4) \left(\frac{2}{3}\right) + \frac{29}{3} = 2t - \frac{8}{3} + \frac{29}{3} = 2t + \frac{21}{3} = 2t + 7 \, \checkmark\]
+
+\item When we set-up the tableau for   $\left(6y^2 - 1 \right) \div \left(2y + 5\right)$, we must first issue a `placeholder' for the `missing' $y$-term in the dividend, $6y^2 -1 = 6y^2 + 0y - 1$.  We then proceed as before.  Since $\frac{6y^2}{2y} = 3y$, $3y$ is the first term in our quotient. We multiply $(2y+5)$ times $3y$ and subtract it from the dividend.  We bring down the $-1$, and repeat.  \setlength\arraycolsep{0.1pt}\setlength\extrarowheight{5pt}\[ \begin{array}{cccccccc}
+
+& & & & & 3y & - & \dfrac{15}{2}  \\ \hhline{~~~|-----}
+
+2y& + & 5 \, \vline& 6y^2 & + & 0y & - & 1  \\
+
+ &  &  -& \left(6y^2 \right. & + & \left.  15y\right) &  & \downarrow  \\ \hhline{~~~---~~} 
+ &  &  &   &  & -15y & - & 1  \\ 
+ &  &  &   & - & \left(-15y\vphantom{\dfrac{75}{2}} \right. & - & \left. \dfrac{75}{2} \right) \\ \hhline{~~~~~---} 
+ &  &  &   &   &  & & \dfrac{73}{2} \vphantom{\sqrt{\dfrac{73}{2}}}\\
+ 
+\end{array}\]
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+ 
+Our answer is $3y - \frac{15}{2}$ with a remainder of $\frac{73}{2}$.  To check our answer, we compute:
+
+\[ (2y + 5)\left(3y - \dfrac{15}{2}\right) + \dfrac{73}{2} = 6y^2 - 15y + 15y - \dfrac{75}{2} + \dfrac{73}{2} = 6y^2 - 1 \, \checkmark\]
+
+
+\item For our last example, we need `placeholders' for both the divisor  $w^2 - \sqrt{2} = w^2 + 0w -\sqrt{2}$ and the dividend $w^3 = w^3 + 0w^2 + 0w + 0$.  The first term in the quotient is $\frac{w^3}{w^2} = w$, and when we multiply and subtract this from the dividend, we're left with just $0w^2 + w\sqrt{2} + 0 = w\sqrt{2}$.
+
+\setlength\arraycolsep{0.1pt}
+\setlength\extrarowheight{2pt}
+
+\[ \begin{array}{cccccccccccc}
+
+    &   &    &   &                    &     &   &      &   &  w &   & \\ \hhline{~~~~~|-------}
+
+w^2 & + & 0w & - & \sqrt{2} \, \vline & w^3 & + & 0w^2 & + & 0w & + & 0  \\
+    
+		&   &    &    &                  -&\left(w^3\vphantom{w\sqrt{2}} \right. & + & 0w^2 & - & \left.  w\sqrt{2} \right) & & \downarrow \\ \hhline{~~~~~-----~~}
+    &   &    &    &                   &                                       &  &  0w^2     &  + &   w\sqrt{2}  & + & 0\\ 
+ 
+\end{array}\]
+\setlength\arraycolsep{5pt}
+\setlength\extrarowheight{0pt}
+
+Since the degree of $w\sqrt{2}$ (which is $1$) is less than the degree of the divisor (which is $2$), we are done.\footnote{Since $\frac{0w^2}{w^2} = 0$, we could proceed, write our quotient as $w+0$, and move on\ldots but even pedants have limits.}  Our answer is $w$ with a remainder of $w \sqrt{2}$.  To check, we compute:
+
+\[ \left(w^2 - \sqrt{2}\right)w + w\sqrt{2} = w^3 - w\sqrt{2} + w\sqrt{2} = w^3 \, \checkmark\]
+
+\end{enumerate}
+}
+
+\printexercises{exercises_pre/03_01_exercises}

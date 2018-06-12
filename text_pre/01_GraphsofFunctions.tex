@@ -1,0 +1,453 @@
+\section{Graphs of Functions}
+\label{GraphsofFunctions}
+
+In Section \ref{IntrotoFunctions} we defined a function as a special type of relation; one in which each $x$-coordinate was matched with only one $y$-coordinate.  We spent most of our time in that section looking at functions graphically because they were, after all, just sets of points in the plane. Then in Section \ref{FunctionNotation} we described a function as a process and defined the notation necessary to work with functions algebraically.  So now it's time to look at functions graphically again, only this time we'll do so with the notation defined in Section \ref{FunctionNotation}.  We start with what should not be a surprising connection.
+
+\smallskip
+
+\keyidea{fgpff}{The Fundamental Graphing Principle for Functions}{
+ \index{function ! Fundamental Graphing Principle} \index{graph ! of a function} \index{Fundamental Graphing Principle ! for functions}
+
+The graph of a function $f$ is the set of points which satisfy the equation $y=f(x)$.  That is, the point $(x,y)$ is on the graph of $f$ if and only if $y=f(x)$.
+}
+
+\medskip
+
+\example{ex_fungraph1}{Graphing a function}{
+Graph $f(x) = x^2 - x - 6$.
+}
+{
+To graph $f$, we graph the equation $y = f(x)$.  To this end, we use the techniques outlined in Section \ref{GraphsofEquations}.  Specifically, we check for intercepts, test for symmetry, and plot additional points as needed.  To find the $x$-intercepts, we set $y=0$. Since $y = f(x)$, this means $f(x) = 0$. 
+\[
+\begin{array}{rclr}   
+f(x) & = & x^2 - x - 6 & \\ 
+0 & = & x^2 - x - 6 & \\ 
+0 & = & (x-3)(x+2) & \mbox{factor} \\ 
+x-3 = 0 & \mbox{or} & x+2 = 0 & \\
+x & = & -2, 3 & \\
+\end{array} 
+\]
+
+So we get $(-2,0)$ and $(3,0)$ as $x$-intercepts.  To find the $y$-intercept, we set $x=0$.  Using function notation, this is the same as finding $f(0)$ and  $f(0) = 0^2 - 0 - 6 = -6.$  Thus the $y$-intercept is $(0,-6)$.  As far as symmetry is concerned, we can tell from the intercepts that the graph possesses none of the three symmetries discussed thus far. (You should verify this.)  We can make a table analogous to the ones we made in Section \ref{GraphsofEquations}, plot the points and connect the dots in a somewhat pleasing fashion to get the graph shown in Figure \ref{fig:fgraph1}.
+}
+
+\mtable{.4}{Graphing the function $f(x) = x^2-x-6$}{fig:fgraph1}{
+\begin{tabular}{|r||r|r|}
+\hline
+ $x$ & $f(x)$ & $(x,f(x))$ \\ \hline
+-3  & 6 & $(-3, 6)$ \\  \hline
+-2  & 0 & $(-2,0)$ \\  \hline
+-1 & -4 & $( -1, -4)$ \\  \hline
+0  & -6 & $( 0 ,-6)$ \\  \hline
+1 & -6 & $( 1, -6)$ \\  \hline
+2  & -4 & $(2,-4)$ \\  \hline
+3  & 0 & $(3, 0)$ \\  \hline
+4  & 6 & $(4, 6)$ \\  \hline
+\end{tabular}\\
+
+\bigskip
+
+\myincludegraphics{figures/RelationsandFunctionsGraphics/GraphsofFunctions-1}
+}
+
+\medskip
+
+Graphing piecewise-defined functions is a bit more of a challenge.
+
+\medskip
+
+\example{ex_pwgraph}{Graphing a piecewise-defined function}{
+Graph:  $f(x) = \begin{cases} 4-x^2 & \text{if }   x < 1 \\ x - 3, & \text{if }  x \geq 1 \end{cases}$
+}
+{
+We proceed as before -- finding intercepts, testing for symmetry and then plotting additional points as needed.  To find the $x$-intercepts, as before, we set $f(x)=0$.  The twist is that we have two formulas for $f(x)$.  For $x<1$, we use the formula $f(x) = 4-x^2$.  Setting $f(x) = 0$ gives $0 = 4 - x^2$, so that $x = \pm 2$.  However, of these two answers, only $x = -2$ fits in the domain $x < 1$ for this piece.  This means the only $x$-intercept for the $x < 1$ region of the $x$-axis is $(-2,0)$.  For $x \geq 1$, $f(x) = x-3$.  Setting $f(x) = 0$ gives  $0 = x-3$,  or $x=3$.  Since $x=3$ satisfies the inequality $x \geq 1$, we get $(3,0)$ as another $x$-intercept.  Next, we seek the $y$-intercept.  Notice that $x=0$ falls in the domain $x < 1$. Thus $f(0) = 4 - 0^2 = 4$ yields the $y$-intercept $(0,4)$.  As far as symmetry is concerned, you can check that the equation $y = 4 - x^2$ is symmetric about the $y$-axis;  unfortunately, this equation (and its symmetry) is valid only for $x < 1$.  You can also verify $y = x - 3$ possesses none of the symmetries discussed in the Section \ref{GraphsofEquations}. When plotting additional points, it is important to keep in mind the restrictions on $x$ for each piece of the function.  The sticking point for this function is $x=1$, since this is where the equations change.  When $x=1$, we use the formula $f(x) = x-3$, so the point on the graph $(1, f(1))$ is $(1,-2)$.  However, for all values less than $1$, we use the formula $f(x) = 4 - x^2$.  As we have discussed earlier in Section \ref{Relations}, there is no real number which immediately precedes $x=1$ on the number line.  Thus for the values $x = 0.9$, $x = 0.99$, $x=0.999$, and so on, we find the corresponding $y$ values using the formula $f(x) = 4 - x^2$.  Making a table as before, we see that as the $x$ values sneak up to $x=1$ in this fashion, the $f(x)$ values inch closer and closer to $4 - 1^2 = 3$.  To indicate this graphically, we use an open circle at the point $(1,3)$.  Putting all of this information together and plotting additional points, we get the result in Figure \ref{fig:pwgraph}.
+}
+
+\medskip
+
+\mtable{.7}{The graph of $f(x)$ from Example \ref{ex_pwgraph}}{fig:pwgraph}{
+\begin{tabular}{|r||c|c|}
+\hline
+$x$ & $f(x)$ & $(x,f(x))$ \\ \hline
+0.9  & 3.19 & $(0.9, 3.19)$ \\  \hline
+0.99 & $\approx 3.02$ & $(0.99,3.02)$ \\  \hline
+0.999 & $\approx 3.002$ & $( 0.999, 3.002)$ \\  \hline
+\end{tabular}\\
+
+\bigskip
+
+\myincludegraphics{figures/RelationsandFunctionsGraphics/GraphsofFunctions-2}
+
+}
+
+\medskip
+
+
+In the previous two examples, the $x$-coordinates of the $x$-intercepts of the graph of $y=f(x)$ were found by solving $f(x) = 0$.  For this reason, they are called the \index{function ! zero} \sword{zeros} of $f$.
+
+\smallskip
+
+\definition{zerosofafunction}{Zeros of a function}{
+ \index{zero ! of a function}
+
+The \sword{zeros} of a function $f$ are the solutions to the equation $f(x) = 0$.  In other words, $x$ is a zero of $f$ if and only if $(x,0)$ is an $x$-intercept of the graph of $y=f(x)$.
+}
+
+\smallskip
+
+Of the three symmetries discussed in Section \ref{GraphsofEquations}, only two are of significance to functions:  symmetry about the $y$-axis and symmetry about the origin.  Recall that we can test whether the graph of an equation is symmetric about the $y$-axis by replacing $x$ with $-x$ and checking to see if an equivalent equation results.  If we are graphing the equation $y=f(x)$, substituting $-x$ for $x$ results in the equation $y=f(-x)$.  In order for this equation to be equivalent to the original equation $y=f(x)$ we need $f(-x) = f(x)$.  In a similar fashion, we recall that to test an equation's graph for symmetry about the origin, we replace $x$ and $y$ with $-x$ and $-y$, respectively.  Doing this substitution in the equation $y = f(x)$ results in $-y = f(-x)$.  Solving the latter equation for $y$ gives $y = -f(-x)$.  In order for this equation to be equivalent to the original equation $y=f(x)$ we need $-f(-x) = f(x)$, or, equivalently, $f(-x) = -f(x)$.  These results are summarized below.
+
+\mnote{.15}{Note that for graphs of functions, we don't bother to discuss symmetry about the $x$-axis. Why do you suppose this is?}
+
+\smallskip
+
+\keyidea{idea:symmtest}{Testing the Graph of a Function for Symmetry}{
+The graph of a function $f$ is symmetric \index{symmetry ! testing a function graph for}
+
+\begin{itemize}
+
+\item  about the $y$-axis if and only if $f(-x) = f(x)$ for all $x$ in the domain of $f$.
+
+\item  about the origin if and only if $f(-x) = -f(x)$ for all $x$ in the domain of $f$.
+
+\end{itemize}
+}
+
+\smallskip
+
+For reasons which won't become clear until we study polynomials, we call a function \index{function ! even}\index{even function}\sword{even} if its graph is symmetric about the $y$-axis or \index{function ! odd}\index{odd function}\sword{odd} if its graph is symmetric about the origin.  Apart from a very specialized family of functions which are both even and odd, (any ideas?) functions fall into one of three distinct categories: even, odd, or neither even nor odd.  
+
+\medskip
+
+\example{ex_evenodd}{Even and odd functions}{
+Determine analytically if the following functions are even, odd, or neither even nor odd.  Verify your result with a graphing calculator or computer software.
+
+\mnote{.75}{A good resource when you need to quickly check something like the graph of a function is \href{http://www.wolframalpha.com/}{Wolfram Alpha}.
+
+If you want a good (and free!) program you can run locally on a computer or tablet, we recommend trying \href{http://www.geogebra.org/}{Geogebra}. It's free to download, works on all major operating systems, and it's pretty easy to figure out the basics.}
+
+\begin{multicols}{2}
+\begin{enumerate}
+
+\item  $f(x) = \dfrac{5}{2 - x^2}$ 
+\item  $g(x) = \dfrac{5x}{2 - x^2}$  
+\item  $h(x) = \dfrac{5x}{2 - x^3}$
+\item  $i(x) = \dfrac{5x}{2x - x^3}$ 
+\item  $j(x) = x^2 - \dfrac{x}{100}-1$ 
+\item  $p(x) = \begin{cases} x+3 & \text{if }   x < 0 \\ -x+3, & \text{if }  x \geq 0 \end{cases}.$
+
+\setcounter{HW}{\value{enumi}}
+\end{enumerate}
+\end{multicols}
+}
+{
+The first step in all of these problems is to replace $x$ with $-x$ and simplify.
+
+\begin{enumerate}
+
+\item  \begin{align*}
+f(x) & =  \dfrac{5}{2 - x^2}  \\[3pt] 
+f(-x) & =  \dfrac{5}{2 - (-x)^2}  \\[3pt]  
+f(-x) & =  \dfrac{5}{2 - x^2} \\[3pt]  
+f(-x) & =  f(x)
+\end{align*}
+
+Hence, $f$ is \sword{even}.  A plot of $f(x)$ using GeoGebra is given in Figure \ref{fig:evenodd1}.
+
+\mfigure{.5}{The graph of $f(x)$ in Example \ref{ex_evenodd}}{fig:evenodd1}{figures/RelationsandFunctionsGraphics/GoF-1}
+
+
+This suggests that the graph of $f$ is symmetric about the $y$-axis, as expected.
+
+\mnote{.35}{While the plot provided by the software can provide us with visual evidence that a function is even or odd, this evidence is never conclusive. The only way to know for sure is to check analytically using the definitions of even and odd functions.}
+
+\item \begin{align*}
+g(x) & =  \dfrac{5x}{2 - x^2}  \\[3pt] 
+g(-x) & =  \dfrac{5(-x)}{2 - (-x)^2}  \\[3pt]  
+g(-x) & =  \dfrac{-5x}{2 - x^2} 
+\end{align*}
+
+It doesn't appear that $g(-x)$ is equivalent to $g(x)$.  To prove this, we check with an $x$ value.  After some trial and error, we see that $g(1) = 5$ whereas $g(-1) = -5$.  This proves that $g$ is not even, but it doesn't rule out the possibility that $g$ is odd. (Why not?)  To check if $g$ is odd, we compare $g(-x)$ with $-g(x)$
+
+
+\begin{align*}
+- g(x) & =  - \dfrac{5x}{2 - x^2}  \\[3pt] 
+& =   \dfrac{-5x}{2 - x^2} \\[3pt]  
+-g(x) & =  g(-x)
+\end{align*}
+Hence, $g$ is odd: see Figure \ref{fig:evenodd2}.
+
+\mfigure{.8}{The graph of $g(x)$ in Example \ref{ex_evenodd}}{fig:evenodd2}{figures/RelationsandFunctionsGraphics/GraphsofFunctions_02}
+
+\item  \begin{align*}
+h(x) & =  \dfrac{5x}{2 - x^3}  \\[3pt] 
+h(-x) & =  \dfrac{5(-x)}{2 - (-x)^3}  \\[3pt]  
+h(-x) & =  \dfrac{-5x}{2 + x^3} 
+\end{align*}
+
+Once again, $h(-x)$ doesn't appear to be equivalent to $h(x)$.  We check with an $x$ value, for example, $h(1) = 5$ but $h(-1) = -\frac{5}{3}$.  This proves that $h$ is not even and it also shows $h$ is not odd. (Why?)  
+
+\mfigure{.55}{The graph of $h(x)$ in Example \ref{ex_evenodd}}{fig:evenodd3}{figures/RelationsandFunctionsGraphics/GraphsofFunctions_03}
+
+In Figure \ref{fig:evenodd3}, the graph of $h$ appears to be neither symmetric about the $y$-axis nor the origin.
+
+\drawexampleline
+
+\item \begin{align*}
+i(x) & =  \dfrac{5x}{2x - x^3}  \\[3pt]
+i(-x) & =  \dfrac{5(-x)}{2(-x) - (-x)^3}  \\[3pt]
+i(-x) & =  \dfrac{-5x}{-2x + x^3}
+\end{align*}
+
+The expression  $i(-x)$ doesn't appear to be equivalent to $i(x)$.  However, after checking some $x$ values, for example $x=1$ yields $i(1) = 5$ and $i(-1 )= 5$, it appears that $i(-x)$ does, in fact, equal $i(x)$.  However, while this suggests  $i$ is even, it doesn't prove it.  (It does, however, prove $i$ is not odd.)  To prove $i(-x) = i(x)$, we need to manipulate our expressions for $i(x)$ and $i(-x)$ and show that they are equivalent.  A clue as to how to proceed is in the numerators: in the formula for $i(x)$, the numerator is $5x$ and in $i(-x)$ the numerator is $-5x$.  To re-write $i(x)$ with a numerator of $-5x$, we need to multiply its numerator by $-1$.  To keep the value of the fraction the same, we need to multiply the denominator by $-1$ as well.  Thus
+\enlargethispage{\baselineskip}
+\begin{align*}
+i(x) & =  \dfrac{5x}{2x - x^3} \\[3pt]
+& =  \dfrac{(-1) 5x}{(-1)\left(2x - x^3\right)} \\[3pt]
+& =  \dfrac{-5x}{-2x + x^3} \\[3pt]
+\end{align*}
+Hence, $i(x) = i(-x)$, so $i$ is even. See Figure \ref{fig:evenodd4} for the graph.
+
+\mfigure{.25}{The graph of $i(x)$ in Example \ref{ex_evenodd}}{fig:evenodd4}{figures/RelationsandFunctionsGraphics/GraphsofFunctions_04}
+
+\item  \begin{align*}
+j(x) & =  x^2 - \dfrac{x}{100} - 1 \\[3pt]
+j(-x) & =  (-x)^2 - \dfrac{-x}{100} - 1 \\[3pt]
+j(-x) & =  x^2 + \dfrac{x}{100} - 1 
+\end{align*}
+
+The expression for $j(-x)$ doesn't seem to be equivalent to $j(x)$, so we check using $x = 1$ to get $j(1) = -\frac{1}{100}$ and $j(-1) = \frac{1}{100}$.  This rules out $j$ being even.  However, it doesn't rule out $j$ being odd.  Examining $-j(x)$ gives
+
+\begin{align*}
+j(x) & =  x^2 - \dfrac{x}{100} - 1 \\[3pt]
+-j(x) & =  -\left(x^2 - \dfrac{x}{100} - 1\right) \\[3pt]
+-j(x) & =  -x^2 + \dfrac{x}{100} + 1
+\end{align*}
+
+The expression $-j(x)$ doesn't seem to match $j(-x)$ either.  Testing $x = 2$ gives $j(2) = \frac{149}{50}$ and $j(-2) = \frac{151}{50}$, so $j$ is not odd, either. 
+
+\mfigure{.6}{The graph of $j(x)$ in Example \ref{ex_evenodd}}{fig:evenodd5}{figures/RelationsandFunctionsGraphics/GraphsofFunctions_05}
+
+Notice in Figure \ref{fig:evenodd5} that the computer plot seems to suggests that the graph of $j$ is symmetric about the $y$-axis which would imply that $j$ is even. However, we have proven that is not the case.  The problem is that the effect of the $x/100$ term is so small, our eyes don't detect it in the graph.
+
+
+\item Testing the graph of $y=p(x)$ for symmetry is complicated by the fact $p(x)$ is a piecewise-defined function.  As always, we handle this by checking the condition for symmetry by checking it on each piece of the domain.  We first consider the case when $x < 0$ and set about finding the correct expression for $p(-x)$.  Even though $p(x) = x+3$ for $x < 0$, $p(-x) \neq -x + 3$ here. The reason for this is that since $x < 0$, $-x > 0$ which means to find $p(-x)$, we need to use the \textit{other} formula for $p(x)$, namely $p(x) = -x+3$. Hence, for $x < 0$, $p(-x) = -(-x)+3 = x+3 = p(x)$.   For $x \geq 0$, $p(x) = -x+3$ and we have two cases.  If $x > 0$, then $-x < 0$ so $p(-x) = (-x)+3 = -x+3 = p(x)$.  If $x = 0$, then $p(0) = 3 = p(-0)$.  Hence, in all cases, $p(-x) = p(x)$, so $p$ is even. Since $p(0) = 3$ but $p(-0) = p(0) = 3 \neq -3$, we also have $p$ is not odd.  
+
+\mfigure{.3}{The graph of $p(x)$ in Example \ref{ex_evenodd}}{fig:evenodd6}{figures/RelationsandFunctionsGraphics/GraphsofFunctions_06}
+ 
+In Figure \ref{fig:evenodd6}, we see that the graph appears to be symmetric about the $y$-axis. 
+
+\end{enumerate}
+}
+
+\medskip
+
+There are two lessons to be learned from the last example.  The first is that sampling function values at particular $x$ values is not enough to prove that a function is even or odd $-$ despite the fact that $j(-1) = - j(1)$, $j$ turned out not to be odd.  Secondly, while the calculator may \emph{suggest} mathematical truths, it is the Algebra which \emph{proves} mathematical truths. (Or, in other words, don't rely too heavily on the machine!)
+
+\medskip
+
+\subsection{General Function Behaviour}
+\label{genfuncbehavior}
+
+The last topic we wish to address in this section is general function behaviour.  As you shall see in the next several chapters, each family of functions has its own unique attributes and we will study them all in great detail.  The purpose of this section's discussion, then, is to lay the foundation for that further study by investigating aspects of function behaviour which apply to all functions.  To start, we will examine the concepts of \index{increasing function ! intuitive definition of} {\bf increasing}, \index{decreasing function ! intuitive definition of} {\bf decreasing} and \index{constant function ! intuitive definition of} {\bf constant}.  Before defining the concepts algebraically, it is instructive to first look at them graphically.  Consider the graph of the function $f$ in Figure \ref{fig:genbehav}.
+
+Reading from left to right, the graph `starts' at the point $(-4,-3)$ and `ends' at the point $(6,5.5)$.  If we imagine walking from left to right on the graph, between $(-4,-3)$ and $(-2,4.5)$, we are walking `uphill'; then between $(-2,4.5)$ and $(3,-8)$, we are walking `downhill'; and between $(3,-8)$ and $(4,-6)$, we are walking `uphill' once more.  From $(4,-6)$ to $(5, -6)$, we `level off', and then resume walking `uphill' from $(5,-6)$ to $(6,5.5)$.  In other words, for the $x$ values between $-4$ and $-2$ (inclusive), the $y$-coordinates on the graph are getting larger, or \index{function ! increasing} \sword{increasing}, as we move from left to right.  Since $y = f(x)$, the $y$ values on the graph are the function values, and we say that the function $f$ is \sword{increasing} on the interval $[-4,-2]$.  Analogously, we say that $f$ is \index{function ! decreasing} \sword{decreasing} on the interval $[-2,3]$ increasing once more on the interval $[3,4]$, \index{function ! constant} \sword{constant} on $[4,5]$, and finally increasing once again on $[5,6]$.  It is extremely important to notice that the behaviour (increasing, decreasing or constant) occurs on an interval on the $x$-axis.  When we say that the function $f$ is increasing on $[-4, -2]$ we do not mention the actual $y$ values that $f$ attains along the way.  Thus, we report \emph{where} the behaviour occurs, not to what extent the behaviour occurs. Also notice that we do not say that a function is increasing, decreasing or constant at a single $x$ value.  In fact, we would run into serious trouble in our previous example if we tried to do so because $x = -2$ is contained in an interval on which $f$ was increasing and one on which it is decreasing.  (There's more on this issue -- and many others -- in the Exercises.) 
+
+\mnote{.5}{The notions of how quickly or how slowly a function increases or decreases are explored in Calculus.} 
+
+\mtable{.75}{The graph $y=f(x)$}{fig:genbehav}{
+\begin{tabular}{c}
+\myincludegraphics[scale=0.8]{figures/RelationsandFunctionsGraphics/GraphsofFunctions-3}
+\end{tabular}
+}
+
+
+We're now ready for the more formal algebraic definitions of what it means for a function to be increasing, decreasing or constant.
+
+\smallskip
+
+\definition{incdeccnstdefn}{Increasing, decreasing, and constant functions}{
+
+Suppose $f$ is a function defined on an interval $I$.  We say $f$ is:
+
+\begin{itemize}
+
+\item \index{increasing function ! formal definition of} \sword{increasing} on $I$ if and only if $f(a) < f(b)$ for all real numbers $a$, $b$ in $I$ with $a < b$.
+
+\item \index{decreasing function ! formal definition of} \sword{decreasing} on $I$ if and only if $f(a) > f(b)$ for all real numbers $a$, $b$ in $I$ with $a < b$.
+
+\item \index{constant function ! formal definition of} \sword{constant} on $I$ if and only if $f(a) = f(b)$ for all real numbers $a$, $b$ in $I$.
+
+\end{itemize}
+}
+
+\smallskip
+
+It is worth taking some time to see that the algebraic descriptions of increasing, decreasing and constant as stated in Definition \ref{incdeccnstdefn} agree with our graphical descriptions given earlier.  You should look back through the examples and exercise sets in previous sections where graphs were given to see if you can determine the intervals on which the functions are increasing, decreasing or constant.  Can you find an example of a function for which none of the concepts in Definition \ref{incdeccnstdefn} apply?
+
+\bigskip
+
+\mnote{.15}{Typically, in (pre)calculus, whenever you're told that something occurs `near' a given point, you should read this as `on some open interval $I$ containing that point'.}
+
+Now let's turn our attention to a few of the points on the graph.  Clearly the point $(-2, 4.5)$ does not have the largest $y$ value of all of the points on the graph of $f\; -$ indeed that honour goes to $(6, 5.5)\; -$ but $(-2, 4.5)$ should get some sort of consolation prize for being `the top of the hill' between $x = -4$ and $x = 3$.  We say that the function $f$ has a \index{function ! local (relative) maximum}\index{local maximum ! intuitive definition of}\sword{local maximum} (or \sword{relative maximum}) at the point $(-2,4.5)$, because the $y$-coordinate $4.5$ is the largest $y$-value (hence, function value) on the curve `near' $x=-2$.  Similarly, we say that the function $f$ has a \index{function ! local (relative) minimum}\index{local minimum ! intuitive definition of}\sword{local minimum} (or \sword{relative minimum}) at the point $(3,-8)$, since the $y$-coordinate $-8$ is the smallest function value near $x=3$.  Although it is tempting to say that local extrema occur when the function changes from increasing to decreasing or vice versa, it is not a precise enough way to define the concepts for the needs of Calculus.  At the risk of being pedantic, we will present the traditional definitions and thoroughly vet the pathologies they induce in the Exercises. We have one last observation to make before we proceed to the algebraic definitions and look at a fairly tame, yet helpful, example.
+
+
+
+\smallskip
+
+If we look at the entire graph, we see that the largest $y$ value (the largest function value) is $5.5$ at $x=6$.  In this case, we say the \index{function ! (absolute) maximum}\index{maximum ! intuitive definition of}\sword{maximum} (often called the `absolute' or `global' maximum) of $f$ is $5.5$;  similarly, the \index{function ! (absolute, global) minimum}\index{minimum ! intuitive definition of}\sword{minimum} (again, `absolute' or `global' minimum can be used.) of $f$ is~$-8$.  
+
+\mnote{.8}{`Maxima' is the plural of `maximum' and `mimima' is the plural of `minimum'.  `Extrema' is the plural of `extremum' which combines maximum and minimum.}
+
+We formalize these concepts in the following definitions.
+
+\medskip
+
+
+\definition{maxmindefn}{Local maximum and minimum}{
+
+Suppose $f$ is a function with $f(a) = b$.
+
+\begin{itemize}
+
+\item  We say $f$ has a \sword{local maximum} at the point $(a,b)$ if and only if there is an open interval $I$ containing $a$ for which $f(a) \geq f(x)$ for all $x$ in $I$.  The value $f(a) = b$ is called `a  local maximum value of $f$' in this case. \index{local maximum ! formal definition of}
+ 
+\item  We say $f$ has a \sword{local minimum} at the point $(a,b)$ if and only if there is an open interval $I$ containing $a$ for which $f(a) \leq f(x)$ for all $x$ in $I$.  The value $f(a) = b$ is called `a  local minimum value of $f$' in this case. \index{local minimum ! formal definition of}
+
+\item  The value $b$ is called the \sword{maximum} of $f$ if $b \geq f(x)$ for all $x$ in the domain of $f$. \index{maximum ! formal definition of}
+
+\item  The value $b$ is called the \sword{minimum} of $f$ if $b \leq f(x)$ for all $x$ in the domain of $f$. \index{minimum ! formal definition of}
+
+\end{itemize}
+}
+
+\medskip
+
+It's important to note that not every function will have all of these features.  Indeed, it is possible to have a function with no local or absolute extrema at all!  (Any ideas of what such a function's graph would have to look like?)  We shall see examples of functions in the Exercises which have one or two, but not all, of these features, some that have instances of each type of extremum and some functions that seem to defy common sense.  In all cases, though, we shall adhere to the algebraic definitions above as we explore the wonderful diversity of graphs that functions provide us.
+
+\medskip
+
+Here is the `tame' example which was promised earlier.  It summarizes all of the concepts presented in this section as well as some from previous sections so you should spend some time thinking deeply about it before proceeding to the Exercises.
+
+\medskip
+
+\example{tame}{A `tame' example}{Given the graph of $y = f(x)$ in Figure \ref{fig:tamegraph}, answer all of the following questions.
+
+\mtable{.7}{The graph for Example \ref{tame}}{fig:tamegraph}{
+\begin{tabular}{c}
+\myincludegraphics[scale=0.8]{figures/RelationsandFunctionsGraphics/GraphsofFunctions-4}
+\end{tabular}
+}
+
+\begin{multicols}{2}
+\begin{enumerate}
+
+\item  Find the domain of $f$.
+\item  Find the range of $f$.
+\item  List the $x$-intercepts, if any exist.
+\item  List the $y$-intercepts, if any exist.
+\item  Find the zeros of $f$.
+\item  Solve $f(x) < 0$.
+\item  Determine $f(2)$.
+\item  Solve $f(x) = -3$.  
+\item  Find the number of solutions to $f(x) = 1$.
+\item  Does $f$ appear to be even, odd, or neither?
+\item  List the intervals on which $f$ is increasing.
+\item  List the intervals on which $f$ is decreasing.
+\item  List the local maximums, if any exist.
+\item  List the local minimums, if any exist.
+\item  Find the maximum, if it exists.
+\item  Find the minimum, if it exists.
+
+\end{enumerate}
+\end{multicols}
+}
+{
+\begin{enumerate}
+
+\item  To find the domain of $f$, we proceed as in Section \ref{IntrotoFunctions}.  By projecting the graph to the $x$-axis, we see that the portion of the $x$-axis which corresponds to a point on the graph is everything from $-4$ to $4$, inclusive.  Hence, the domain is $[-4,4]$.
+
+\item  To find the range, we project the graph to the $y$-axis.  We see that the $y$ values from $-3$ to $3$, inclusive, constitute the range of $f$.  Hence, our answer is $[-3,3]$.
+
+\item  The $x$-intercepts are the points on the graph with $y$-coordinate $0$, namely $(-2,0)$ and $(2,0)$.
+
+\item  The $y$-intercept is the point on the graph with $x$-coordinate $0$, namely $(0,3)$.
+
+\item  The zeros of $f$ are the $x$-coordinates of the $x$-intercepts of the graph of $y=f(x)$ which are $x=-2, 2$.
+
+\item  To solve $f(x) < 0$, we look for the $x$ values of the points on the graph where the $y$-coordinate is less than $0$.  Graphically, we are looking for where the graph is below the $x$-axis.  This happens for the $x$ values from $-4$ to $-2$ and again from $2$ to $4$.  So our answer is $[-4,-2) \cup (2,4]$.
+
+\item  Since the graph of $f$ is the graph of the equation $y=f(x)$, $f(2)$ is the $y$-coordinate of the point which corresponds to $x = 2$.  Since the point $(2,0)$ is on the graph, we have $f(2) = 0$.
+
+\item  To solve $f(x) = -3$, we look where $y = f(x) = -3$.  We find two points with a $y$-coordinate of $-3$, namely $(-4,-3)$ and $(4,-3)$.  Hence, the solutions to $f(x) = -3$ are $x = \pm 4$.
+
+\item As in the previous problem, to solve $f(x)=1$, we look for points on the graph where the $y$-coordinate is $1$.  Even though these points aren't specified, we see that the curve has two points with a $y$ value of $1$, as seen in the graph below.  That means there are two solutions to $f(x) = 1$: see Figure \ref{fig:tamey1}.
+
+\mfigure[width=0.95\marginparwidth]{.8}{Solving $f(x)=1$ in Example \ref{tame}.9}{fig:tamey1}{figures/RelationsandFunctionsGraphics/GraphsofFunctions-5}
+
+
+\item  The graph appears to be symmetric about the $y$-axis.  This suggests (but does not prove) that $f$ is even.
+
+\item  As we move from left to right, the graph rises from $(-4,-3)$ to $(0,3)$.  This means $f$ is increasing on the interval $[-4,0]$.  (Remember, the answer here is an interval on the $x$-axis.)
+
+\item  As we move from left to right, the graph falls from $(0,3)$ to $(4,-3)$.  This means $f$ is decreasing on the interval $[0,4]$.  (Remember, the answer here is an interval on the $x$-axis.)
+
+\item  The function has its only local maximum at $(0,3)$ so $f(0) = 3$ is the local minimum value.
+
+\item  There are no local minima.  Why don't $(-4, -3)$ and $(4, -3)$ count?  Let's consider the point $(-4, -3)$ for a moment.  Recall that, in the definition of local minimum, there needs to be an open interval $I$ which contains $x = -4$ such that $f(-4) < f(x)$ for all $x$ in $I$ different from $-4$.  But if we put an open interval around $x= -4$ a portion of that interval will lie outside of the domain of $f$.  Because we are unable to satisfy the requirements of the definition for a local minimum, we cannot claim that $f$ has one at $(-4, -3)$.  The point $(4, -3)$ fails for the same reason $-$ no open interval around $x = 4$ stays within the domain of $f$.
+
+\item  The maximum value of $f$ is the largest $y$-coordinate which is $3$.
+
+\item  The minimum value of $f$ is the smallest $y$-coordinate which is $-3$.
+\end{enumerate}}
+
+\medskip
+
+In general, the problem of finding maximum and minimum values, requires the techniques of Calculus. We will explore this in Chapter \ref{chapter:graphbehavior}. In the meantime, we'll have to rely on technology to assist us.  Most graphing calculators and many mathematics software programs have `Minimum' and `Maximum' features which can be used to approximate these values, as we now demonstrate.
+
+\mfigure{.2}{The local maximum and minimum of $f(x) = \dfrac{15x}{x^2+3}$ in Example \ref{ex_maxmincomp}}{fig:maxmincomp1}{figures/RelationsandFunctionsGraphics/GraphsofFunctions_07}
+
+\medskip
+
+\example{ex_maxmincomp}{Using the computer to find maxima and minima}{
+ Let $f(x) = \dfrac{15x}{x^2+3}$.  Use the computer or a graphing calculator to approximate the intervals on which $f$ is increasing and those on which it is decreasing.  Approximate all extrema.
+}
+{
+Using GeoGebra, we enter \texttt{f(x) = 15x/(x\string^2+3)} to plot the graph of $f$. The command \texttt{Max[f,-3,3]} then calculates the maximum value of $f$ on the interval $[-3,3]$. Similarly, \texttt{Min[f,-3,3]} gives the minimum value of $f$ on the interval $[-3,3]$. The graph of $f$, together with the local maximum and local minimum, are plotted in Figure \ref{fig:maxmincomp1}.
+
+To two decimal places, $f$ appears to have its only local minimum at the point $(-1.73, -4.33)$ and its only local maximum at  $(1.73, 4.33)$.  Given the symmetry about the origin suggested by the graph, the relation between these points shouldn't be too surprising.  The function appears to be increasing on the interval $[-1.73, 1.73]$ and decreasing on $(-\infty, -1.73] \cup [1.73,\infty)$.  This makes $-4.33$ the (absolute) minimum and $4.33$ the (absolute) maximum. 
+}
+
+\pagebreak
+
+\example{distancefunctionex}{Minimizing distance from a graph to the origin}{
+Find the points on the graph of $y = (x-3)^2$ which are closest to the origin.  Round your answers to two decimal places.
+}
+{
+Suppose a point $(x,y)$ is on the graph of $y = (x-3)^2$.  Its distance to the origin $(0,0)$ is given by
+ 
+\setlength{\extrarowheight}{8pt}
+
+\[ \begin{array}{rclr} 
+
+d & = &  \sqrt{(x-0)^2+(y-0)^2} & \\
+& = &  \sqrt{x^2+y^2} &  \\
+&= & \sqrt{x^2 + \left[(x-3)^2\right]^2} & \mbox{Since $y = (x-3)^2$} \\
+& = & \sqrt{x^2 + (x-3)^4} & 
+
+\end{array} \]
+
+\setlength{\extrarowheight}{2pt}
+
+Given a value for $x$, the formula $d =  \sqrt{x^2 + (x-3)^4} $ is the distance from $(0,0)$ to the point $(x,y)$ on the curve $y = (x-3)^2$.  What we have defined, then, is a function $d(x)$ which we wish to minimize over all values of $x$.  To accomplish this task analytically would require Calculus so as we've mentioned before, we can use a graphing calculator to find an approximate solution.   Using Geogebra, we enter the function $d(x)$ as shown below and graph.
+
+\mfigure{.8}{Minimizing $d(x)$ in Example \ref{distancefunctionex}}{fig:distfunctex}{figures/RelationsandFunctionsGraphics/GraphsofFunctions_08}
+
+Using the Minimum feature, we see above on the right that the (absolute) minimum occurs near $x=2$.  Rounding to two decimal places, we get that the minimum distance occurs when $x = 2.00$.  To find the $y$ value on the parabola associated with $x = 2.00$, we substitute $2.00$ into the equation to get $y = (x-3)^2 = (2.00-3)^2 = 1.00$.  So, our final answer is $(2.00,1.00).$
+}
+
+\mnote{.6}{It seems silly to list a final answer as $(2.00, 1.00)$.  Indeed, Calculus confirms that the \emph{exact} answer to this problem is, in fact, $(2,1)$.  As you are well aware by now, the authors are overly pedantic, and as such, use the decimal places to remind the reader that \emph{any} result garnered from a calculator in this fashion is an approximation, and should be treated as such. (What does the $y$ value calculated by GeoGebra in Figure \ref{fig:distfunctex} mean in this problem?)}    
+
+
+\printexercises{exercises_pre/01_06_exercises}
+

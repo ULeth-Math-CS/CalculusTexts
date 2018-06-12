@@ -35,17 +35,17 @@
 \noindent {\Large \bf Chapter 8} \vskip \baselineskip 
 \noindent {\bf Section 8.1} \vskip \baselineskip 
 
-\printanswers {exercises/14_01_exercises}
+\printanswers {exercises/15_01_exercises}
 \noindent {\bf Section 8.2} \vskip \baselineskip 
-\printanswers {exercises/14_02_exercises}
+\printanswers {exercises/15_02_exercises}
 \noindent {\bf Section 8.3} \vskip \baselineskip 
-\printanswers {exercises/14_03_exercises}
+\printanswers {exercises/15_03_exercises}
 \noindent {\bf Section 8.4} \vskip \baselineskip 
-\printanswers {exercises/14_04_exercises}
+\printanswers {exercises/15_04_exercises}
 \noindent {\bf Section 8.5} \vskip \baselineskip 
-\printanswers {exercises/14_05_exercises}
+\printanswers {exercises/15_05_exercises}
 \noindent {\bf Section 8.6} \vskip \baselineskip 
-\printanswers {exercises/14_06_exercises}
+\printanswers {exercises/15_06_exercises}
 \noindent {\Large \bf Chapter 9} \vskip \baselineskip 
 \noindent {\bf Section 9.1} \vskip \baselineskip 
 
@@ -58,3 +58,4 @@
 \printanswers {exercises/09_04_exercises}
 \noindent {\bf Section 9.5} \vskip \baselineskip 
 \printanswers {exercises/09_05_exercises}
+\end {multicols}\normalsize 

@@ -1,0 +1,195 @@
+\section{Function Notation}
+\label{FunctionNotation}
+
+\definition{functiondefn}{Function}{
+A \textbf{function} \index{function ! definition} $f$ from a set $A$ to a set $B$ is a rule that assigns each element $x\in A$ to a \textit{unique} element $y\in B$. We express the fact that the function $f$ relates the element $x$ to the element $y$ by writing $y=f(x)$.
+
+The set $A$ is called the \sword{domain} \index{domain} of  the function, and the set $B$ is called the \sword{codomain} \index{codomain} of the function.
+}
+
+\mnote{.4}{It is common in many areas of mathematics to use the notation $f:A\to B$ to denote a function $f$ with domain $A$ and codomain $B$. However, this notation is less common in Calculus, where the domain and codomain are almost always subsets of $\R$. It is more common in calculus to specify a function using the formula by which each element of the domain is assigned to an element in the codomain. For example, $f(x) = x^2$ describes the function $f:\R\to \R$ that assigns each real number $x\in\R$ to its square.} 
+
+Informally, we view a function as a \textbf{process} \index{function ! as a process} by which each $x$ in its domain is matched with some $y$ in the codomain.  If we think of the domain of a function as a set of \textbf{inputs} and the range as a set of \textbf{outputs}, we can think of a function $f$ as a process by which each input $x$ is matched with only one output $y$.  Since the output is completely determined by the input $x$ and the process $f$, we symbolize the output with \index{function ! notation} \textbf{function notation}: `$f(x)$', read `$f$ \textbf{of} $x$.' In other words, $f(x)$ is the output which results by applying the process $f$ to the input $x$.  In this case, the parentheses here do not indicate multiplication, as they do elsewhere in Algebra.  This can cause confusion if the context is not clear, so you must read carefully.   This relationship is typically visualized using a diagram similar to the one in Figure \ref{fig:functpic}.
+
+\mtable{.6}{Graphical depiction of a function}{fig:functpic}{
+\myincludegraphics[scale=0.75]{figures/RelationsandFunctionsGraphics/FunctionNotation-1}}
+
+
+The value of $y$ is completely dependent on the choice of $x$.  For this reason,  $x$ is often called the \sword{independent variable},\index{variable ! independent}\index{independent variable}\index{function ! independent variable of} or \sword{argument}\index{function ! argument}\index{argument ! of a function} of $f$, whereas $y$ is often called the \sword{dependent variable}.\index{variable ! dependent}\index{dependent variable}\index{function ! dependent variable of} \label{functionargument}
+
+\medskip
+
+As we shall see, the process of a function $f$ is usually described using an algebraic formula. For example, suppose a function $f$ takes a real number and performs the following two steps, in sequence
+
+\begin{enumerate}
+
+\item  Multiply by 3
+
+\item  Add 4
+
+\end{enumerate}
+
+If we choose $5$ as our input,  in Step 1 we multiply by $3$ to get $(5)(3) = 15$.  In Step 2, we add 4 to our result from Step 1 which yields $15 + 4 = 19$.  Using function notation, we would write  $f(5) = 19$ to indicate that the result of applying the process $f$ to the input $5$ gives the output $19$.  In general, if we use $x$ for the input, applying Step 1 produces $3x$.  Following with Step 2 produces $3x+4$ as our final output.  Hence for an input $x$, we get the output $f(x) = 3x + 4$.  Notice that to check our formula for the case $x=5$, we replace the occurrence of $x$ in the formula for $f(x)$ with $5$ to get $f(5) = 3(5) + 4 = 15 + 4 = 19$, as required.
+
+
+\medskip
+
+Generally, we prefer to define functions of a real variable using a formula, rather than giving a verbal description, as in the following example.\\
+
+\example{funcnotatex1}{Using function notation}{
+Let $f(x) = -x^2 + 3x + 4$
+
+
+\begin{enumerate}
+
+\item  Find and simplify the following.
+
+\begin{enumerate}
+
+\item $f(-1)$, $f(0)$, $f(2)$
+
+\item  $f(2x)$, $2 f(x)$
+
+\item $f(x+2)$, $f(x)+2$, $f(x) + f(2)$
+
+\end{enumerate}
+
+\item  Solve $f(x) = 4$.
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item \begin{enumerate} \item  To find $f(-1)$, we replace every occurrence of $x$ in the expression $f(x)$ with $-1$
+
+\[ \begin{array}{rclr}  
+f(-1) & = & -(-1)^2 + 3(-1) + 4 & \\
+      & = & -(1) + (-3) + 4 & \\ 
+      & = & 0 & \\ 
+      \end{array} \]
+
+
+Similarly, $f(0) = -(0)^2 + 3(0) + 4 = 4$, and $f(2) = -(2)^2 + 3(2) + 4 = -4+6+4 = 6$.
+
+\item To find $f(2x)$, we replace every occurrence of $x$ with the quantity $2x$
+
+\[ \begin{array}{rclr}  
+f(2x) & = & -(2x)^2 + 3(2x) + 4 & \\
+      & = & -(4x^2) + (6x) + 4 & \\
+      & = & -4x^2+6x+4 & \\ 
+      \end{array} \]
+
+The expression $2f(x)$ means we multiply the expression $f(x)$ by $2$
+
+\[ \begin{array}{rclr}  
+2f(x) & = & 2\left(-x^2 + 3x + 4\right) & \\
+      & = & -2x^2 + 6x + 8 \\ 
+      \end{array} \]
+
+
+\item  To find $f(x+2)$, we replace every occurrence of $x$ with the quantity $x+2$
+
+\[ \begin{array}{rclr}  
+f(x+2) & = & -(x+2)^2 + 3(x+2) + 4 & \\
+       & = & -\left(x^2 + 4x + 4\right) + (3x+6) + 4 & \\
+       & = & -x^2-4x-4+3x+6+4 &  \\
+       & = & -x^2-x+6 & 
+       \end{array} \]
+
+ To find $f(x)+2$, we add $2$ to the expression for $f(x)$
+ 
+\[ \begin{array}{rclr}  
+f(x) + 2 & = & \left(-x^2 + 3x + 4\right) + 2  & \\
+         & = & -x^2 + 3x + 6 \\ 
+         \end{array} \]
+
+From our work above, we see $f(2) = 6$ so that
+
+\[ \begin{array}{rclr}  
+f(x) + f(2) & = & \left(-x^2 + 3x + 4\right) + 6  & \\
+            & = & -x^2 + 3x + 10 \\ 
+            \end{array} \]
+
+\end{enumerate}
+
+\item   Since $f(x) = -x^2 + 3x + 4$, the equation $f(x) = 4$ is equivalent to $-x^2+3x+4 = 4$. Solving we get $-x^2+3x = 0$, or $x(-x+3) = 0$.  We get $x=0$ or $x=3$, and we can verify these answers by checking that $f(0) = 4$ and $f(3) = 4$.   
+
+\end{enumerate}
+}
+
+\pagebreak
+
+A few notes about Example \ref{funcnotatex1} are in order.  First note the difference between the answers for $f(2x)$ and $2f(x)$.  For $f(2x)$, we are multiplying the \textit{input} by $2$;  for $2 f(x)$, we are multiplying the \textit{output} by $2$.  As we see, we get entirely different results.  Along these lines, note that $f(x+2)$, $f(x) + 2$ and $f(x) + f(2)$ are three \textit{different} expressions as well.  Even though function notation uses parentheses, as does multiplication, there is \textit{no} general `distributive property' of function notation. Finally, note the practice of using parentheses when substituting one algebraic expression into another;  we highly recommend this practice as it will reduce careless errors. 
+
+\smallskip
+
+
+Suppose now we wish to find $r(3)$ for $r(x) = \dfrac{2x}{x^2 - 9}$.  Substitution gives
+
+\[
+r(3) = \dfrac{2(3)}{(3)^2-9} = \dfrac{6}{0},
+\]
+
+which is undefined. (Why is this, again?) The number $3$ is not an allowable input to the function $r$;  in other words, $3$ is not in the domain of $r$.  Which other real numbers are forbidden in this formula?  We think back to arithmetic.  The reason $r(3)$ is undefined is because substitution results in a division by $0$.  To determine which other numbers result in such a transgression, we set the denominator equal to $0$ and solve
+
+\begin{align*}
+x^2 - 9 & =  0   \\
+x^2 & =  9  \\
+\sqrt{x^2} & =  \sqrt{9}  \tag*{extract square roots}  \\
+x & =  \pm 3 
+\end{align*}
+
+As long as we substitute numbers other than $3$ and $-3$, the expression $r(x)$ is a real number.  Hence, we write our domain in interval notation (see the Exercises for Section \ref{CartesianPlane}) as  $(-\infty, -3) \cup (-3,3) \cup (3, \infty)$.  When a formula for a function is given, we assume that the function is valid for all real numbers which make arithmetic sense when substituted into the formula.  This set of numbers is often called the \index{domain ! implied}\index{implied domain of a function}\sword{implied domain} (or `implicit domain') of the function.  At this stage, there are only two mathematical sins we need to avoid:  division by $0$ and extracting even roots of negative numbers.  The following example illustrates these concepts.
+
+\medskip
+
+\example{ex_implieddom}{Determining an implied domain}{
+Find the domain of the following functions.
+
+\begin{enumerate}
+
+\item  $g(x) = \sqrt{4 - 3x}$
+\item  $h(x) =  \sqrt[5]{4 - 3x}$
+\item  $f(x) = \dfrac{2}{1 - \dfrac{4x}{x-3}}$
+
+\end{enumerate}
+
+}
+{
+\begin{enumerate}
+
+\mnote{.12}{The `radicand' is the expression `inside' the radical.}
+
+\item  The potential disaster for $g$ is if the radicand is negative.  To avoid this, we set $4 - 3x \geq 0$. From this, we get $3x \leq 4$ or $x \leq \frac{4}{3}$.  What this shows is that as long as $x \leq \frac{4}{3}$, the expression $4 - 3x \geq 0$, and the formula $g(x)$ returns a real number.  Our domain is $\left(-\infty, \frac{4}{3}\right]$.
+
+\item  The formula for $h(x)$ is hauntingly close to that of $g(x)$ with one key difference $-$ whereas the expression for $g(x)$ includes an even indexed root (namely a square root), the formula for $h(x)$ involves an odd indexed root (the fifth root).  Since odd roots of real numbers (even negative real numbers) are real numbers, there is no restriction on the inputs to $h$.  Hence, the domain is $(-\infty, \infty)$.
+
+
+\item  In the expression for $f$, there are two denominators.  We need to make sure neither of them is $0$.  To that end, we set each denominator equal to $0$ and solve.  For the `small' denominator, we get $x - 3 = 0$ or $x=3$.  For the `large' denominator
+
+\begin{align*}
+1 - \dfrac{4x}{x-3} & =  0  & \\
+                  1 & =  \dfrac{4x}{x-3}  \\[5pt] 
+           (1)(x-3) & =  \left(\dfrac{4x}{\cancel{x-3}}\right)\cancel{(x-3)}  \tag*{clear denominators}  \\[5pt]
+              x - 3 & =   4x \\
+                 -3 & =  3x \\
+                 -1 & =  x 
+\end{align*}
+
+So we get two real numbers which make denominators $0$, namely $x = -1$ and $x=3$.  Our domain is all real numbers except $-1$ and $3$:  
+\[
+(-\infty, -1) \cup (-1,3) \cup (3, \infty).
+\]
+
+\end{enumerate}
+}
+
+\medskip
+
+It is worth reiterating the importance of finding the domain of a function \emph{before} simplifying, as evidenced by the function $I$ in the previous example.  Even though the formula $I(x)$ simplifies to $3x$, it would be inaccurate to write $I(x) = 3x$ without adding the stipulation that $x \neq 0$. It would be analogous to not reporting taxable income or some other sin of omission.
+
+
+
+\printexercises{exercises_pre/01_04_exercises}
+

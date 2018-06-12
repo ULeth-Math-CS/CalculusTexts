@@ -1,0 +1,473 @@
+\section{The Six Circular Functions and Fundamental Identities}
+
+\label{CircularFunctions}
+
+In section \ref{TheUnitCircle},  we defined $\cos(\theta)$ and $\sin(\theta)$  for angles $\theta$ using the coordinate values of points on the Unit Circle.  As such, these functions earn the moniker \index{circular function}\index{function ! circular}\textbf{circular functions}. It turns out that cosine and sine are just two of the six commonly used circular functions which we define below. 
+
+\mnote{.7}{The functions in Definition \ref{circularfunctions} are also (and perhaps, more commonly) known as \textit{trigonometric} functions, owing to the fact that the can also be defined in terms of ratios of the three sides of a right-angle triangle}
+
+%\enlargethispage{.2in}
+
+\smallskip
+
+\definition{circularfunctions}{The Circular Functions}{ Suppose $\theta$ is an angle plotted in standard position and $P(x,y)$ is the point on the terminal side of $\theta$ which lies on the Unit Circle.  
+
+\begin{itemize}
+
+\item The \index{cosine ! of an angle} \sword{cosine} of $\theta$, denoted $\cos(\theta)$, is defined by $\cos(\theta) = x$.
+
+\item The \index{sine ! of an angle} \sword{sine} of $\theta$, denoted $\sin(\theta)$, is defined by $\sin(\theta) = y$.
+
+\item The \index{secant ! of an angle} \sword{secant} of $\theta$, denoted $\sec(\theta)$, is defined by $\sec(\theta) = \dfrac{1}{x}$, provided $x \neq 0$.
+
+\item The \index{cosecant ! of an angle} \sword{cosecant} of $\theta$, denoted $\csc(\theta)$, is defined by $\csc(\theta) = \dfrac{1}{y}$, provided $y \neq 0$.
+
+\item The \index{tangent ! of an angle} \sword{tangent} of $\theta$, denoted $\tan(\theta)$, is defined by $\tan(\theta) = \dfrac{y}{x}$, provided $x \neq 0$.
+
+\item The \index{cotangent ! of an angle} \sword{cotangent} of $\theta$, denoted $\cot(\theta)$, is defined by $\cot(\theta) = \dfrac{x}{y}$, provided $y \neq 0$.
+
+\end{itemize}
+}
+
+\smallskip
+
+While we left the history of the name `sine' as an interesting research project in Section \ref{TheUnitCircle}, the names `tangent' and `secant' can be explained using the diagram below.  Consider the acute angle $\theta$ below in standard position. Let $P(x,y)$ denote, as usual,  the point on the terminal side of $\theta$ which lies on the Unit Circle and let $Q(1,y')$ denote the point on the terminal side of $\theta$ which lies on the vertical line $x=1$, as in Figure \ref{fig:cirfun1}. 
+
+\mfigure[width=0.95\marginparwidth]{.4}{Explaining the tangent and secant functions}{fig:cirfun1}{figures/IntroTrigGraphics/CircularFunctions-1}
+
+%\medskip
+
+The word `tangent' comes from the Latin meaning `to touch,' and for this reason, the line $x=1$ is called a \textit{tangent} line to the Unit Circle since it intersects, or `touches', the circle at only one point, namely $(1,0)$.  Dropping perpendiculars from $P$ and $Q$ creates a pair of similar triangles $\Delta OPA$ and $\Delta OQB$.  Thus $\frac{y'}{y} = \frac{1}{x}$ which gives  $y' = \frac{y}{x} = \tan(\theta)$, where this last equality comes from applying Definition  \ref{circularfunctions}. We have just shown that for acute angles $\theta$, $\tan(\theta)$ is the $y$-coordinate of the point on the terminal side of $\theta$ which lies on the line $x = 1$ which is \textit{tangent} to the Unit Circle. Now the word `secant' means `to cut', so a secant line is any line that `cuts through' a circle at two points. (Compare this with the definition given in Section \ref{LinearFunctions}.)  The line containing the terminal side of $\theta$ is a secant line since it intersects the Unit Circle in Quadrants I and III.   With the point $P$ lying on the Unit Circle, the length of the hypotenuse of $\Delta OPA$ is $1$. If we let $h$ denote the length of the hypotenuse of $\Delta OQB$, we have from similar triangles that $\frac{h}{1} = \frac{1}{x}$, or $h = \frac{1}{x} = \sec(\theta)$.  Hence for an acute angle $\theta$, $\sec(\theta)$ is the length of the line segment which lies on the secant line determined by the terminal side of $\theta$ and `cuts off' the tangent line $x=1$.  Not only do these observations help explain the names of these functions, they serve as the basis for a fundamental inequality needed for Calculus which we'll explore in the Exercises.
+
+\smallskip 
+
+Of the six circular functions, only cosine and sine are defined for all angles.  Since $\cos(\theta) = x$ and $\sin(\theta) = y$ in Definition \ref{circularfunctions}, it is customary to rephrase the remaining four circular functions in terms of cosine and sine.  The following theorem is a result of simply replacing $x$ with $\cos(\theta)$ and $y$ with $\sin(\theta)$ in Definition \ref{circularfunctions}.
+
+\smallskip
+
+\theorem{recipquotid}{Reciprocal and Quotient Identities}{ \index{Reciprocal Identities} \index{Quotient Identities} 
+
+\begin{itemize}
+
+\item $\sec(\theta) = \dfrac{1}{\cos(\theta)}$, provided $\cos(\theta) \neq 0$;  if $\cos(\theta) = 0$, $\sec(\theta)$ is undefined.
+
+\item $\csc(\theta) = \dfrac{1}{\sin(\theta)}$, provided $\sin(\theta) \neq 0$;  if $\sin(\theta) = 0$, $\csc(\theta)$ is undefined.
+
+\item $\tan(\theta) = \dfrac{\sin(\theta)}{\cos(\theta)}$, provided $\cos(\theta) \neq 0$;  if $\cos(\theta) = 0$, $\tan(\theta)$ is undefined.
+
+\item $\cot(\theta) = \dfrac{\cos(\theta)}{\sin(\theta)}$, provided $\sin(\theta) \neq 0$;  if $\sin(\theta) = 0$, $\cot(\theta)$ is undefined.
+
+\end{itemize}
+}
+
+\medskip
+
+\example{circularfunctionsex}{Evaluating circular functions}{  Find the indicated value, if it exists.
+
+\begin{enumerate}
+
+\item  $\csc\left(\frac{7 \pi}{4} \right)$
+
+\item  $\cot(3)$
+
+\item $\tan\left(\theta\right)$, where $\theta$ is any angle coterminal with $\frac{3\pi}{2}$.
+
+\item $\cos\left(\theta\right)$, where $\csc(\theta) = -\sqrt{5}$ and $\theta$ is a Quadrant IV angle.
+
+\item $\sin\left(\theta\right)$, where $\tan(\theta) = 3$ and $\pi < \theta < \frac{3\pi}{2}$.
+
+\end{enumerate}}
+{
+\begin{enumerate}
+
+\item  Since $\sin\left( \frac{7\pi}{4}\right) = - \frac{\sqrt{2}}{2}$,  $\csc\left( \frac{7\pi}{4}\right) = \frac{1}{\sin\left( \frac{7\pi}{4}\right)} = \frac{1}{- \sqrt{2}/2} = - \frac{2}{\sqrt{2}} = - \sqrt{2}$.
+
+\item  Since $\theta = 3$ radians is not one of the `common angles' from Section \ref{TheUnitCircle}, we resort to the calculator for a decimal approximation.  Ensuring that the calculator is in radian mode, we find $\cot(3) = \frac{\cos(3)}{\sin(3)} \approx -7.015$.
+
+\item  If $\theta$ is coterminal with $\frac{3 \pi}{2}$, then $\cos(\theta) = \cos\left(\frac{3 \pi}{2}\right) = 0$ and $\sin(\theta) = \sin\left(\frac{3 \pi}{2}\right) = -1$.  Attempting to compute $\tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)}$ results in $\frac{-1}{0}$, so $\tan(\theta)$ is undefined.
+
+\item  We are given that $\csc(\theta) = \frac{1}{\sin(\theta)} = -\sqrt{5}$ so $\sin(\theta) = -\frac{1}{\sqrt{5}} = -\frac{\sqrt{5}}{5}$.  As we saw in Section \ref{TheUnitCircle}, we can use the Pythagorean Identity, $\cos^{2}(\theta) + \sin^2(\theta) = 1$, to find $\cos(\theta)$ by knowing $\sin(\theta)$.  Substituting, we get $\cos^{2}(\theta) + \left(-\frac{\sqrt{5}}{5}\right)^2 = 1$, which gives $\cos^{2}(\theta) = \frac{4}{5}$, or $\cos(\theta) = \pm \frac{2 \sqrt{5}}{5}$.  Since $\theta$ is a Quadrant IV angle, $\cos(\theta) > 0$, so $\cos(\theta) = \frac{2 \sqrt{5}}{5}$.
+
+\item \label{commontanmistake} If $\tan(\theta) = 3$, then $\frac{\sin(\theta)}{\cos(\theta)} = 3$.  Be careful - this does \textbf{NOT} mean we can take $\sin(\theta) = 3$ and $\cos(\theta) = 1$. Instead, from $\frac{\sin(\theta)}{\cos(\theta)} = 3$  we get: $\sin(\theta) = 3 \cos(\theta)$.  To relate $\cos(\theta)$ and $\sin(\theta)$, we once again employ the Pythagorean Identity, $\cos^{2}(\theta) + \sin^{2}(\theta) = 1$.  Solving $\sin(\theta) = 3 \cos(\theta)$ for $\cos(\theta)$, we find $\cos(\theta) = \frac{1}{3} \sin(\theta)$.  Substituting this into the Pythagorean Identity, we find  $\sin^{2}(\theta) + \left(\frac{1}{3} \sin(\theta)\right)^2 = 1$. Solving, we get $\sin^{2}(\theta) = \frac{9}{10}$ so $\sin(\theta) = \pm \frac{3 \sqrt{10}}{10}$.  Since $\pi < \theta < \frac{3\pi}{2}$, $\theta$ is  a Quadrant III angle.  This means $\sin(\theta) < 0$, so our final answer is  $\sin(\theta) = - \frac{3 \sqrt{10}}{10}$.
+
+\end{enumerate}
+}
+
+\medskip
+
+%While the Reciprocal and Quotient Identities presented in Theorem \ref{recipquotid} allow us to always reduce problems involving secant, cosecant, tangent and cotangent to problems involving cosine and sine, it is not always convenient to do so.  It is worth taking the time to memorize the tangent and cotangent values of the common angles summarized below.
+
+%\mnote{.5}{As we shall see shortly, when solving equations involving secant and cosecant, we usually convert back to cosines and sines.  However, when solving for tangent or cotangent, we usually stick with what we're dealt.}
+
+%\begin{center}
+
+%\textbf{Tangent and Cotangent Values of Common Angles}
+
+%\vspace{-.25in}
+
+%\setlength{\extrarowheight}{4pt}
+
+%\[ \begin{array}{|c|c||c|c|} \hline
+% \theta (\mbox{degrees}) &  \theta (\mbox{radians}) & \tan(\theta) & \cot(\theta) \\ \hline
+%0^{\circ} & 0 & 0 & \text{undefined} \\ \hline
+%30^{\circ} & \frac{\pi}{6} & \frac{\sqrt{3}}{3} & \sqrt{3} \\ [2pt] \hline
+%45^{\circ} & \frac{\pi}{4} & 1 & 1 \\ [2pt] \hline
+%60^{\circ} & \frac{\pi}{3} & \sqrt{3} & \frac{\sqrt{3}}{3} \\ [2pt] \hline
+%90^{\circ} & \frac{\pi}{2} & \text{undefined} & 0 \\ [2pt] \hline
+%\end{array} \]
+
+%\setlength{\extrarowheight}{0pt}
+
+%\end{center}
+
+%Coupling Theorem \ref{recipquotid} with the Reference Angle Theorem, Theorem \ref{refanglethm}, we get the following.
+
+%\smallskip
+
+%\theorem{genrefanglethm}{Generalized Reference Angle Theorem}{  The values of the circular functions of an angle, if they exist, are the same, up to a sign, of the corresponding circular functions of its reference angle.  More specifically, if $\alpha$ is the reference angle for $\theta$,  then: $\cos(\theta)  = \pm \cos(\alpha)$, $\sin(\theta)  = \pm \sin(\alpha)$, $\sec(\theta)  = \pm \sec(\alpha)$, $\csc(\theta)  = \pm \csc(\alpha)$, $\tan(\theta)  = \pm \tan(\alpha)$ and $\cot(\theta)  = \pm \cot(\alpha)$.  The choice of the ($\pm$) depends on the quadrant in which the terminal side of $\theta$ lies. \index{Reference Angle Theorem ! for the circular functions}
+%}
+
+%\smallskip
+
+%We put Theorem \ref{genrefanglethm} to good use in the following example.
+
+%\pagebreak
+
+%\example{solveforangle2}{Solving basic trigonometric equations}{  Find all angles which satisfy the given equation.   
+
+%\begin{multicols}{3}
+
+%\begin{enumerate}
+
+%\item  $\sec(\theta) =2$
+
+%\item  $\tan(\theta) = \sqrt{3}$
+
+%\item  \label{cotangentisnegativeone} $\cot(\theta) = -1$.
+
+%\end{enumerate}
+
+%\end{multicols}}
+%{
+%\begin{enumerate}
+
+%\item  To solve $\sec(\theta) = 2$, we convert to cosines and get $\frac{1}{\cos(\theta)} = 2$ or $\cos(\theta) = \frac{1}{2}$.  This is the exact same equation we solved in Example \ref{solveforangle}, number \ref{cosineishalf}, so we know the answer is:  $\theta = \frac{\pi}{3} + 2\pi k$ or $\theta = \frac{5\pi}{3} + 2\pi k$ for integers $k$.
+
+%\item From the table of common values, we see  $\tan\left(\frac{\pi}{3}\right) = \sqrt{3}$.  According to Theorem \ref{genrefanglethm}, we  know  the solutions to $\tan(\theta) = \sqrt{3}$ must, therefore, have a reference angle of $\frac{\pi}{3}$. Our next task is to determine in which quadrants the solutions to this equation lie. Since tangent is defined as the ratio $\frac{y}{x}$ of points $(x,y)$ on the Unit Circle with $x \neq 0$, tangent is positive when $x$ and $y$ have the same sign (i.e., when they are both positive or both negative.)  This happens in Quadrants I and III.  In Quadrant I, we get the solutions: $\theta = \frac{\pi}{3} + 2\pi k$ for integers $k$, and for Quadrant III, we get $\theta = \frac{4\pi}{3} + 2\pi k$ for integers $k$.  While these descriptions of the solutions are correct, they can be combined into one list as $\theta = \frac{\pi}{3} + \pi k$ for integers $k$. The latter form of the solution is best understood looking at the geometry of the situation in Figure \ref{fig:cirfun2}. (See Example \ref{solveforangle} number \ref{cosineiszero} in Section \ref{TheUnitCircle} for another example of this kind of simplification of the solution.)
+ 
+%\mtable{.7}{Solving $\tan(\theta)=\sqrt{3}$}{fig:cirfun2}{
+%\begin{tabular}{c}
+% \myincludegraphics[width=0.95\marginparwidth]{figures/IntroTrigGraphics/CircularFunctions-2}\\
+% \\
+% \myincludegraphics[width=0.95\marginparwidth]{figures/IntroTrigGraphics/CircularFunctions-3} 
+%\end{tabular}}
+  
+
+%\item  From the table of common values, we see that $\frac{\pi}{4}$ has a cotangent of $1$, which means the solutions to $\cot(\theta) = -1$ have a reference angle of $\frac{\pi}{4}$. To find the quadrants in which our solutions lie, we note that $\cot(\theta) = \frac{x}{y}$ for a point $(x,y)$ on the Unit Circle where $y \neq 0$. If $\cot(\theta)$ is negative, then $x$ and $y$ must have different signs (i.e., one positive and one negative.)  Hence, our solutions lie in Quadrants II and IV: see Figure \ref{fig:cirfun3}.  Our Quadrant II solution is $\theta = \frac{3\pi}{4} + 2\pi k$, and for Quadrant IV, we get $\theta = \frac{7\pi}{4} + 2\pi k$ for integers $k$.  Can these lists be combined?  Indeed they can - one such way to capture all the solutions is:  $\theta = \frac{3\pi}{4} + \pi k$ for integers $k$.
+
+%\mtable{.28}{Solving $\cot(\theta)=-1$}{fig:cirfun3}{
+%\begin{tabular}{c}
+% \myincludegraphics[width=0.95\marginparwidth]{figures/IntroTrigGraphics/CircularFunctions-4}\\
+% \\
+% \myincludegraphics[width=0.95\marginparwidth]{figures/IntroTrigGraphics/CircularFunctions-5} 
+%\end{tabular}}
+
+%\end{enumerate}
+%}
+
+%\medskip
+
+Our next step is to provide versions of the identity $\cos^2(\theta)+\sin^2(\theta)=1$ for the remaining circular functions.   Assuming $\cos(\theta) \neq 0$, we may start with $\cos^{2}(\theta) + \sin^{2}(\theta) = 1$ and divide both sides by $\cos^{2}(\theta)$ to obtain $1 + \frac{\sin^{2}(\theta)}{\cos^{2}(\theta)} = \frac{1}{\cos^{2}(\theta)}$.  Using properties of exponents along with the Reciprocal and Quotient Identities, this reduces to $1 + \tan^{2}(\theta) = \sec^{2}(\theta)$.  If $\sin(\theta) \neq 0$, we can divide both sides of the identity $\cos^{2}(\theta) + \sin^{2}(\theta) = 1$ by $\sin^{2}(\theta)$, apply Theorem \ref{recipquotid} once again,  and obtain $\cot^{2}(\theta) + 1 = \csc^{2}(\theta)$.  These three Pythagorean Identities are worth memorizing and they, along with some of their other common forms, are summarized in the following theorem.
+
+\smallskip
+
+\theorem{pythids}{The Pythagorean Identities}{ \index{Pythagorean Identities}
+
+\begin{enumerate}
+
+\item $\cos^{2}(\theta) + \sin^{2}(\theta) = 1$.
+
+\textbf{Common Alternate Forms:}
+
+\begin{itemize}
+
+\item  $1 - \sin^{2}(\theta) = \cos^{2}(\theta)$
+
+\item  $1 - \cos^{2}(\theta) = \sin^{2}(\theta)$
+
+\end{itemize}
+
+\item $1 + \tan^{2}(\theta) = \sec^{2}(\theta)$, provided $\cos(\theta) \neq 0$.
+
+\textbf{Common Alternate Forms:}
+
+\begin{itemize}
+
+\item  $\sec^{2}(\theta) - \tan^{2}(\theta) = 1$
+
+\item  $\sec^{2}(\theta) - 1 = \tan^{2}(\theta)$
+
+\end{itemize}
+
+\item $1 + \cot^{2}(\theta) = \csc^{2}(\theta)$, provided $\sin(\theta) \neq 0$.
+
+\textbf{Common Alternate Forms:}
+
+\begin{itemize}
+
+\item  $\csc^{2}(\theta) - \cot^{2}(\theta) = 1$
+
+\item  $\csc^{2}(\theta) - 1 = \cot^{2}(\theta)$
+
+\end{itemize}
+
+\end{enumerate}
+}
+
+%\smallskip
+
+%Trigonometric identities play an important role in not just Trigonometry, but in Calculus as well.  We'll use them in this book to find the values of the circular functions of an angle and solve equations and inequalities.  In Calculus, they are needed to simplify otherwise complicated expressions.  In the next example, we make good use of the Theorems \ref{recipquotid} and \ref{pythids}.
+
+\medskip
+
+\example{idornotex1}{Verifying trigonometric identities}{ Verify the following identities. Assume that all quantities are defined.
+
+\begin{multicols}{2}
+
+\begin{enumerate}
+
+\item  $\dfrac{1}{\csc(\theta)} = \sin(\theta)$
+
+\item  $\tan(\theta) = \sin(\theta) \sec(\theta)$ 
+
+\setcounter{HW}{\value{enumi}}
+
+\end{enumerate}
+
+\end{multicols}
+
+\begin{multicols}{2}
+
+\begin{enumerate}
+
+\setcounter{enumi}{\value{HW}}
+
+\item  $(\sec(\theta) - \tan(\theta)) (\sec(\theta) + \tan(\theta)) = 1$ 
+
+\item  $\dfrac{\sec(\theta)}{1 - \tan(\theta)} = \dfrac{1}{\cos(\theta) - \sin(\theta)}$
+
+\setcounter{HW}{\value{enumi}}
+
+\end{enumerate}
+
+\end{multicols}
+
+%\begin{multicols}{2}
+
+%\begin{enumerate}
+
+%\setcounter{enumi}{\value{HW}}
+
+%\item  $6\sec(\theta) \tan(\theta) = \dfrac{3}{1-\sin(\theta)} - \dfrac{3}{1 + \sin(\theta)}$
+
+%\item  \label{pythconjex} $\dfrac{\sin(\theta)}{1 - \cos(\theta)} = \dfrac{1 + \cos(\theta)}{\sin(\theta)}$
+
+%\end{enumerate}
+
+%\end{multicols}
+}
+{In verifying identities, we typically start with the more complicated side of the equation and use known identities to \textit{transform} it into the other side of the equation. 
+
+\begin{enumerate} 
+
+\item  To verify $\frac{1}{\csc(\theta)} = \sin(\theta)$, we start with the left side.  Using $\csc(\theta) = \frac{1}{\sin(\theta)}$, we get:  \[ \dfrac{1}{\csc(\theta)} = \dfrac{1}{\frac{1}{\sin(\theta)}} = \sin(\theta),\]
+
+%\enlargethispage{.1in} 
+which is what we were trying to prove.
+
+\item Starting with the right hand side of $\tan(\theta) = \sin(\theta) \sec(\theta)$, we use $\sec(\theta) = \frac{1}{\cos(\theta)}$ and find:  \[ \sin(\theta) \sec(\theta) = \sin(\theta) \dfrac{1}{\cos(\theta)} = \dfrac{\sin(\theta)}{\cos(\theta)} = \tan(\theta),\]
+
+where the last equality is courtesy of Theorem \ref{recipquotid}.
+
+\item Expanding the left hand side of the equation gives:  $(\sec(\theta) - \tan(\theta)) (\sec(\theta) + \tan(\theta)) = \sec^{2}(\theta) - \tan^{2}(\theta)$.  According to Theorem \ref{pythids}, $\sec^{2}(\theta) - \tan^{2}(\theta) = 1$.  Putting it all together, \[(\sec(\theta) - \tan(\theta)) (\sec(\theta) + \tan(\theta)) = \sec^{2}(\theta) - \tan^{2}(\theta)  = 1.\]
+
+
+\item  While both sides of our last identity contain fractions, the left side affords us more opportunities to use our identities.  Substituting $\sec(\theta) = \frac{1}{\cos(\theta)}$ and $\tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)}$, we get:
+
+
+\[ \begin{array}{rcl} \dfrac{\sec(\theta)}{1 - \tan(\theta)} & = & \dfrac{ \dfrac{1}{\cos(\theta)}}{1 - \dfrac{\sin(\theta)}{\cos(\theta)}} = \dfrac{ \dfrac{1}{\cos(\theta)}}{1 - \dfrac{\sin(\theta)}{\cos(\theta)}} \cdot \dfrac{\cos(\theta)}{\cos(\theta)} \\ [.4in]
+ & = & \dfrac{\left( \dfrac{1}{\cos(\theta)} \right) ( \cos(\theta) )}{\left(1 - \dfrac{\sin(\theta)}{\cos(\theta)}\right)(\cos(\theta))}\\
+ & = &\dfrac{1}{(1)(\cos(\theta)) - \left(\dfrac{\sin(\theta)}{\cos(\theta)}\right)(\cos(\theta))} \\ [.4in]
+                                                           & = & \dfrac{1}{\cos(\theta) - \sin(\theta)}, \end{array} \]
+which is exactly what we had set out to show.  
+
+\drawexampleline
+
+%\item  The right hand side of the equation seems to hold more promise.  We get common denominators and add:
+
+%\[ \begin{array}{rcl}
+
+%\dfrac{3}{1-\sin(\theta)} - \dfrac{3}{1 + \sin(\theta)} & = & \dfrac{3(1 + \sin(\theta))}{(1-\sin(\theta))(1 + \sin(\theta))} - \dfrac{3(1-\sin(\theta))}{(1 + \sin(\theta))(1-\sin(\theta))} \\ [.25in]
+%                                                        & = & \dfrac{3 + 3\sin(\theta)}{1 - \sin^{2}(\theta)} - \dfrac{3 - 3\sin(\theta)}{1 - \sin^{2}(\theta)} \\ [.25in]
+%                                                        & = & \dfrac{(3 + 3\sin(\theta)) - (3 - 3\sin(\theta))}{1 - \sin^{2}(\theta)} \\ [.25in]                                                        																																	& = & \dfrac{6 \sin(\theta)}{1 - \sin^{2}(\theta)} \end{array} \]
+
+%At this point, it is worth pausing to remind ourselves of our goal.  We wish to transform this expression into $6\sec(\theta) \tan(\theta)$.  Using a reciprocal and quotient identity, we find $6\sec(\theta) \tan(\theta) = 6 \left(\frac{1}{\cos(\theta)}\right) \left(\frac{\sin(\theta)}{\cos(\theta)}\right)$.  In other words, we need to get cosines in our denominator. Theorem \ref{pythids} tells us $1 -  \sin^{2}(\theta) = \cos^{2}(\theta)$ so we get:
+
+%\[ \begin{array}{rcl}
+
+%\dfrac{3}{1-\sin(\theta)} - \dfrac{3}{1 + \sin(\theta)} & = & \dfrac{6 \sin(\theta)}{1 - \sin^{2}(\theta)}= \dfrac{6 \sin(\theta)}{\cos^{2}(\theta)} \\ [.25in]
+%& = &  6 \left(\dfrac{1}{\cos(\theta)}\right)\left( \dfrac{\sin(\theta)}{\cos(\theta)}\right) = 6 \sec(\theta) \tan(\theta) \\ \end{array} \]
+
+%\item  It is debatable which side of the identity is more complicated.  One thing which stands out is that the denominator on the left hand side is $1-\cos(\theta)$, while the numerator of the right hand side is $1+\cos(\theta)$.  This suggests the strategy of starting with the left hand side and multiplying the numerator and denominator by the quantity $1+\cos(\theta)$:
+
+%\[ \begin{array}{rcl}
+
+
+%\dfrac{\sin(\theta)}{1 - \cos(\theta)} & = & \dfrac{\sin(\theta)}{(1 - \cos(\theta))} \cdot \dfrac{(1 + \cos(\theta))}{(1 + \cos(\theta))} = \dfrac{\sin(\theta)(1 + \cos(\theta))}{(1 - \cos(\theta))(1 + \cos(\theta))} \\ [.25in]
+%& = & \dfrac{\sin(\theta)(1 + \cos(\theta))}{1 - \cos^{2}(\theta)} = \dfrac{\sin(\theta)(1 + \cos(\theta))}{\sin^{2}(\theta)} \\ [.25in]
+%& = & \dfrac{\cancel{\sin(\theta)}(1 + \cos(\theta))}{\cancel{\sin(\theta)}\sin(\theta)} = \dfrac{1 + \cos(\theta)}{\sin(\theta)} \end{array} \]
+
+
+
+\end{enumerate}
+}
+
+%\medskip
+
+%In Example \ref{idornotex1}.\ref{pythconjex} above,  we see that multiplying  $1-\cos(\theta)$ by $1+\cos(\theta)$ produces a difference of squares that can be simplified to one term using Theorem \ref{pythids}.  This is exactly the same kind of phenomenon that occurs when we multiply expressions such as $1 - \sqrt{2}$ by $1+\sqrt{2}$ or $3 - 4i$ by $3+4i$. (Can you recall instances from earlier chapters where we did such things?) For this reason, the quantities $(1-\cos(\theta))$ and $(1+\cos(\theta))$ are called `Pythagorean Conjugates.'  Below is a list of other common Pythagorean Conjugates.  
+
+%\smallskip
+
+%\keyidea{PythagoreanConjugates}{Pythagorean Conjugates}{  \index{Pythagorean Conjugates}
+
+%\begin{itemize}
+
+%\item $1 - \cos(\theta)$ and  $1+\cos(\theta)$:  $(1-\cos(\theta))(1+\cos(\theta)) = 1 - \cos^{2}(\theta) = \sin^{2}(\theta)$
+
+%\item  $1-\sin(\theta)$ and $1 + \sin(\theta)$:  $(1-\sin(\theta))(1+\sin(\theta)) = 1 - \sin^{2}(\theta) = \cos^{2}(\theta)$
+
+%\item  $\sec(\theta)-1$ and $\sec(\theta)+1$:  $(\sec(\theta)-1)(\sec(\theta)+1) = \sec^{2}(\theta) - 1 =  \tan^{2}(\theta)$
+
+%\item  $\sec(\theta)-\tan(\theta)$ and $\sec(\theta)+\tan(\theta)$:  $(\sec(\theta)-\tan(\theta))(\sec(\theta)+\tan(\theta)) = \sec^{2}(\theta) - \tan^{2}(\theta) = 1$
+
+%\item  $\csc(\theta)-1$ and $\csc(\theta)+1$:  $(\csc(\theta)-1)(\csc(\theta)+1) = \csc^{2}(\theta) - 1 =  \cot^{2}(\theta)$
+
+%\item  $\csc(\theta)-\cot(\theta)$ and $\csc(\theta)+\cot(\theta)$:  $(\csc(\theta)-\cot(\theta))(\csc(\theta)+\cot(\theta)) = \csc^{2}(\theta) - \cot^{2}(\theta) = 1$
+
+%\end{itemize}
+%}
+
+%\smallskip
+
+Verifying trigonometric identities requires a healthy mix of tenacity and inspiration.  You will need to spend many hours struggling with them just to become proficient in the basics.  Like many things in life, there is no short-cut here -- there is no complete algorithm for verifying identities.  Nevertheless, a summary of some strategies which  may be helpful (depending on the situation) is provided below and ample practice is provided for you in the Exercises.
+
+\smallskip
+
+\keyidea{IdentityHelp}{Strategies for Verifying Identities}{
+
+\begin{itemize}
+
+\item  Try working on the more complicated side of the identity.
+
+\item Use the Reciprocal and Quotient Identities in Theorem \ref{recipquotid} to write functions on one side of the identity in terms of the functions on the other side of the identity.  Simplify the resulting complex fractions.
+
+\item Add rational expressions with unlike denominators by obtaining common denominators.
+
+\item  Use the Pythagorean Identities in Theorem \ref{pythids} to `exchange' sines and cosines, secants and tangents, cosecants and cotangents, and simplify sums or differences of squares to one term. 
+
+\item Multiply numerator \textbf{and} denominator by Pythagorean
+Conjugates in order to take advantage of the Pythagorean Identities in  Theorem \ref{pythids}.
+
+\item If you find yourself stuck working with one side of the identity, try starting with the other side of the identity and see if you can find a way to bridge the two parts of your work.
+
+
+\end{itemize}
+}
+
+%\newpage
+
+
+
+%As we did in Section \ref{cosinesinebeyond}, we may consider all six circular functions as functions of real numbers. At this stage, there are three equivalent ways to define the functions $\sec(t)$, $\csc(t)$, $\tan(t)$ and $\cot(t)$ for real numbers $t$.  First, we could go through the formality of the wrapping function on page \pageref{wrappingfunction} and define these functions as the appropriate ratios of  $x$ and $y$ coordinates of points on the Unit Circle;  second, we could define them by associating the real number $t$ with the angle $\theta = t$ radians so that the value of the trigonometric function of $t$ coincides with that of  $\theta$;  lastly, we could simply define them using the Reciprocal and Quotient Identities as combinations of the functions $f(t) = \cos(t)$ and $g(t) = \sin(t)$.  Presently, we adopt the last approach.  We now set about determining the domains and ranges of the remaining four circular functions.  Consider the function $F(t) = \sec(t)$ defined as $F(t) = \sec(t) = \frac{1}{\cos(t)}$.  We know $F$ is undefined whenever $\cos(t) = 0$.  From Example \ref{solveforangle} number \ref{cosineiszero}, we know $\cos(t) = 0$ whenever $t = \frac{\pi}{2} + \pi k$ for integers $k$.  Hence, our domain for $F(t) = \sec(t)$, in set builder notation is  $\{ t : t \neq  \frac{\pi}{2} + \pi k, \text{for integers $k$} \}$.  To get a better understanding what set of real numbers we're dealing with, it pays to write out and graph this set.  Running through a few values of $k$, we find the domain to be  $\{ t : t \neq  \pm \frac{\pi}{2}, \, \pm \frac{3\pi}{2}, \, \pm \frac{5\pi}{2}, \, \ldots \}$.  Graphing this set on the number line we get
+
+
+%\begin{center}
+%\myincludegraphics{figures/IntroTrigGraphics/CircularFunctions-10}
+%\end{center}
+
+%Using interval notation to describe this set, we get  \[ \ldots \cup \left( -\frac{5\pi}{2}, -\frac{3\pi}{2}\right) \cup \left( -\frac{3\pi}{2}, -\frac{\pi}{2}\right) \cup  \left(-\frac{\pi}{2}, \frac{\pi}{2}\right) \cup \left(\frac{\pi}{2}, \frac{3\pi}{2}\right) \cup  \left(\frac{3\pi}{2}, \frac{5\pi}{2}\right) \cup \ldots \]
+
+%This is cumbersome, to say the least!  In order to write this in a more compact way, we note that from the set-builder description of the domain, the $k$th point excluded from the domain, which we'll call $x_{k}$, can be found by the formula $x_k =  \frac{\pi}{2} + \pi k$.    Getting a common denominator and factoring out the $\pi$ in the numerator, we get  $x_{k} = \frac{(2k+1)\pi}{2}$.  The domain consists of the intervals determined by successive points $x_{k}$:   $\left(x_{k}, x_{k+1}\right) = \left( \frac{(2k+1)\pi}{2},  \frac{(2k+3)\pi}{2}\right)$.  In order to capture all of the intervals in the domain, $k$ must run through all of the integers, that is, $k = 0$, $\pm 1$, $\pm 2$, \ldots.  
+%\pagebreak
+
+%The way we denote taking the union of infinitely many intervals like this is to use what we call in this text \index{extended interval notation}\index{interval ! notation, extended}\sword{extended interval notation}.  The domain of $F(t) = \sec(t)$ can now be written as
+
+%\[ \bigcup_{k = -\infty}^{\infty} \left( \frac{(2k+1)\pi}{2}, \frac{(2k+3) \pi}{2} \right) \]
+
+%\phantomsection
+%\label{extendedinterval}
+
+%The reader who has previously encountered \sword{summation notation} should find it useful to compare the it with our extended interval notation.  In the same way the index $k$ in the geometric series 
+%\[\displaystyle{\sum_{k = 1}^{\infty} a r^{k-1}}\] 
+%can never equal the upper limit $\infty$, but rather, ranges through all of the natural numbers, the index $k$ in the union \[\displaystyle{\bigcup_{k = -\infty}^{\infty} \left( \frac{(2k+1)\pi}{2}, \frac{(2k+3) \pi}{2} \right)}\] can never actually be $\infty$ or $-\infty$, but rather, this conveys the idea that $k$ ranges through all of the integers. If you have never seen summation notation before, don't worry. You won't need to work with it (or, for that matter the extended interval notation) in this class.  
+
+%Now that we have painstakingly determined the domain of $F(t) = \sec(t)$, it is time to discuss the range.  Once again, we appeal to the definition $F(t) = \sec(t) = \frac{1}{\cos(t)}$.  The range of $f(t) = \cos(t)$ is $[-1,1]$, and since $F(t) = \sec(t)$ is  undefined when $\cos(t) = 0$, we split our discussion into two cases: when $0 < \cos(t) \leq 1$ and when $-1 \leq \cos(t) < 0$.  If $0 < \cos(t) \leq 1$, then we can divide the inequality $\cos(t) \leq 1$ by  $\cos(t)$ to obtain  $\sec(t) = \frac{1}{\cos(t)} \geq 1$.  Moreover, using the notation introduced in Section \ref{RationalGraphs}, we have that as  $\cos(t) \rightarrow 0^{+}$, $\sec(t)  = \frac{1}{\cos(t)} \approx \frac{1}{\text{very small $(+)$}} \approx \text{very big $(+)$}$.  In other words, as $\cos(t) \rightarrow 0^{+}, \sec(t) \rightarrow \infty$. If, on the other hand, if $-1 \leq \cos(t) < 0$, then dividing by $\cos(t)$ causes a reversal of the inequality so that $\sec(t) = \frac{1}{\sec(t)} \leq -1$.  In this case, as $\cos(t) \rightarrow 0^{-}$, $\sec(t)  = \frac{1}{\cos(t)} \approx \frac{1}{\text{very small $(-)$}} \approx \text{very big $(-)$}$, so that as $\cos(t) \rightarrow 0^{-}$, we get $\sec(t) \rightarrow -\infty$. Since $f(t) = \cos(t)$ admits all of the values in $[-1,1]$, the function $F(t) = \sec(t)$ admits all of the values in $(-\infty, -1] \cup [1,\infty)$.  Using set-builder notation, the range of $F(t) = \sec(t)$ can be written as $\{ u : \text{$u \leq -1$ or $u \geq 1$} \}$, or, more succinctly, (using Theorem \ref{absolutevalueineq} from Section \ref{Inequalities}) as  $\{ u :|u| \geq 1 \}$.   Similar arguments can be used to determine the domains and ranges of the remaining three circular functions: $\csc(t)$, $\tan(t)$ and $\cot(t)$.  The reader is encouraged to do so.  (See the Exercises.)  For now, we gather these facts into the theorem below.
+
+%\mnote{.15}{Notice we have used the variable `$u$' as the `dummy variable' to describe the range elements.  While there is no mathematical reason to do this (we are describing a set of real numbers, and, as such, could use $t$ again) we choose $u$ to help solidify the idea that these real numbers are the outputs from the inputs, which we have been calling $t$.}
+
+%\smallskip
+
+%\setboxwidth{70pt}
+%\noindent\ifthenelse{\isodd{\thepage}}{\hskip-70pt}{}%
+%\noindent\begin{minipage}{\specialboxlength}
+%\theorem{circularfunctionsdomainrange}{Domains and Ranges of the Circular Functions}{
+
+%\begin{tabular}{ll}
+
+%\hspace{.3in} $\bullet \, $ The function $f(t) = \cos(t)$ & \hspace{.8in} $\bullet \, $ The function $g(t) = \sin(t)$ \\
+%  & \\
+%\hspace{.5in} -- has domain $(-\infty, \infty)$ & \hspace{1in} -- has domain $(-\infty, \infty)$ \\ [4pt]
+%\hspace{.5in} -- has range $[-1,1]$ & \hspace{1in} -- has range $[-1,1]$ \\ [4pt]
+
+%\end{tabular}
+
+%\hspace{.3in} $\bullet \, $ The function $F(t) = \sec(t) = \dfrac{1}{\cos(t)}$ 
+
+%\hspace{.5in} -- has domain $\{ t : t \neq  \frac{\pi}{2} + \pi k, \text{for integers $k$} \}  = \displaystyle{\bigcup_{k = -\infty}^{\infty} \left( \frac{(2k+1)\pi}{2}, \frac{(2k+3) \pi}{2} \right)}$ 
+
+%\hspace{.5in} -- has range $\{ u : |u| \geq 1 \} =  (-\infty, -1] \cup [1, \infty) $ 
+
+%\medskip
+
+%\hspace{.3in} $\bullet \, $ The function $G(t) = \csc(t) = \dfrac{1}{\sin(t)}$
+
+%\hspace{.5in} -- has domain $\{ t : t \neq \pi k, \text{for integers $k$} \}  = \displaystyle{\bigcup_{k = -\infty}^{\infty} \left(k \pi ,(k+1) \pi \right)}$ 
+
+%\hspace{.5in} -- has range $\{ u : |u| \geq 1 \} =  (-\infty, -1] \cup [1, \infty) $ 
+
+%\medskip
+
+%\hspace{.3in} $\bullet \, $ The function $J(t) = \tan(t) = \dfrac{\sin(t)}{\cos(t)}$
+
+%\hspace{.5in} -- has domain $\{ t : t \neq  \frac{\pi}{2} + \pi k, \text{for integers $k$} \}  = \displaystyle{\bigcup_{k = -\infty}^{\infty} \left( \frac{(2k+1)\pi}{2}, \frac{(2k+3) \pi}{2} \right)}$ 
+
+%\hspace{.5in} -- has range $(-\infty, \infty)$ 
+
+%\medskip
+
+%\hspace{.3in} $\bullet \, $ The function $K(t) = \cot(t) = \dfrac{\cos(t)}{\sin(t)}$
+
+%\hspace{.5in} -- has domain $\{ t : t \neq \pi k, \text{for integers $k$} \}  = \displaystyle{\bigcup_{k = -\infty}^{\infty} \left(k \pi ,(k+1) \pi \right)}$ 
+
+%\hspace{.5in} -- has range $(-\infty, \infty)$ 
+%}
+%\end{minipage}
+%\restoreboxwidth
+
+%\medskip
+
+%We close this section with a few notes about solving equations which involve the circular functions.  First, the discussion on page \pageref{cosinesineequationsrealnumbers} in Section \ref{cosinesinebeyond} concerning solving equations applies to all six circular functions, not just $f(t) = \cos(t)$ and $g(t) = \sin(t)$. In particular, to solve the equation $\cot(t) = -1$ for real numbers $t$, we can use the same thought process we used in Example \ref{solveforangle2}, number \ref{cotangentisnegativeone} to solve $\cot(\theta) = -1$ for angles $\theta$ in radian measure --  we just need to remember to write our answers using the variable $t$ as opposed to $\theta$. Next, it is critical that you know the domains and ranges of the six circular functions so that you know which equations have no solutions.  For example, $\sec(t) = \frac{1}{2}$ has no solution because $\frac{1}{2}$ is not in the range of secant. Finally, you will need to review the notions of reference angles and coterminal angles so that you can see why $\csc(t) = -42$ has an infinite set of solutions in Quadrant III and another infinite set of solutions in Quadrant IV.
+
+\printexercises{exercises_pre/07_03_exercises}
+
+

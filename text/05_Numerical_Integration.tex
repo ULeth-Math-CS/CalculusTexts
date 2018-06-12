@@ -1,6 +1,6 @@
 \section{Numerical Integration}\label{sec:numerical_integration}
 
-The Fundamental Theorem of Calculus gives a concrete technique for finding the exact value of a definite integral. That technique is based on computing antiderivatives. Despite the power of this theorem, there are still situations where we must \textit{approximate} the value of the definite integral instead of finding its exact value. The first situation we explore is where we \textit{cannot} compute the antiderivative of the integrand. The second case is when we actually do not know the integrand, but only its value when evaluated at certain points.\index{integration!numerical}\index{numerical integration}\\ %While we handle both situations in the same way, we address them separately here.\\
+The Fundamental Theorem of Calculus gives a concrete technique for finding the exact value of a definite integral. That technique is based on computing antiderivatives. Despite the power of this theorem, there are still situations where we must \textit{approximate} the value of the definite integral instead of finding its exact value. The first situation we explore is where we \textit{cannot} compute the antiderivative of the integrand. The second case is when we actually do not know the function in the integrand, but only its value when evaluated at certain points.\index{integration!numerical}\index{numerical integration}\\ %While we handle both situations in the same way, we address them separately here.\\
 
 %\noindent\textbf{\large An Antiderivative Cannot Be Computed}
 %\vskip\baselineskip
@@ -8,7 +8,7 @@ The Fundamental Theorem of Calculus gives a concrete technique for finding the e
 %Section \ref{sec:antider} introduced antiderivatives and the indefinite integral; given a function, its indefinite integral is a set of \textit{functions}. In Section \ref{sec:def_int}, we learned about definite integrals: given a function and two bounds, the definite integral computes the ``area under the curve,'' i.e., a \textit{number}. The Fundamental Theorem of Calculus states that these two concepts are related: we use antiderivatives to evaluate definite integrals. Definite integrals have immense importance in mathematics, science and engineering. We will explore some of these applications in Chapter \ref{SEVEN}. 
 %
 %This method of evaluating definite integrals has one significant shortcoming: not all functions have an antiderivative expressible in terms of elementary functions.  (Elementary functions are combinations of polynomials, $n^{\text{th}}$ root, rational, exponential, logarithmic and trigonometric functions.). To be clear, we are not claiming that the antiderivatives are just \textit{hard} to find; rather, we are saying that we \textit{cannot} write them out using functions that we normally use. 
-An \sword{elementary function}\index{elementary function} is any function that is a combination of polynomials, $n^{\text{th}}$ roots, rational, exponential, logarithmic and trigonometric functions. We can compute the derivative of any elementary function, but there are many elementary functions of which we cannot compute an antiderivative. For example, the following functions do not have antiderivatives that we can express with elementary functions:
+An \sword{elementary function}\index{elementary function} is any function that is a combination of polynomial, $n^{\text{th}}$ root, rational, exponential, logarithmic and trigonometric functions. We can compute the derivative of any elementary function, but there are many elementary functions of which we cannot compute an antiderivative. For example, the following functions do not have antiderivatives that we can express with elementary functions:
 
 \[
 e^{-x^2}, \quad \sin(x^3)\quad \text{and} \quad \frac{\sin x}{x}.
@@ -26,7 +26,16 @@ We will apply the methods we learn in this section to the following definite int
 \]
 as pictured in Figure \ref{fig:numerical1}.
 
-\mtable{.6}{Graphically representing three definite integrals that cannot be evaluated using antiderivatives.}{fig:numerical1}{\myincludegraphics{figures/fignumerical1a}\vskip 25pt \myincludegraphics{figures/fignumerical1b}\vskip 25pt\myincludegraphics{figures/fignumerical1c}}
+\mtable{.55}{Graphically representing three definite integrals that cannot be evaluated using antiderivatives.}{fig:numerical1}{%
+\begin{tabular}{c}
+\myincludegraphics{figures/fignumerical1a}\\[10pt]
+(a)\\[10pt]
+\myincludegraphics{figures/fignumerical1b}\\[10pt]
+(b)\\[10pt]
+\myincludegraphics{figures/fignumerical1c}\\[10pt]
+(c)
+\end{tabular}
+}
 
 \vskip\baselineskip
 \noindent\textbf{\large The Left and Right Hand Rule Methods}\\
@@ -65,7 +74,14 @@ Using the Right Hand Rule, we have:
 												&\approx 0.681.
 \end{align*}
 
-\mtable{.7}{Approximating $\int_0^1e^{-x^2}\ dx$ in Example \ref{ex_num1}.}{fig:num1}{\myincludegraphics{figures/fignum1b}\vskip 25pt \myincludegraphics{figures/fignum1a}}
+\mtable{.7}{Approximating $\int_0^1e^{-x^2}\ dx$ in Example \ref{ex_num1}.}{fig:num1}{%
+\begin{tabular}{c}
+\myincludegraphics{figures/fignum1b}\\[10pt]
+(a)\\[10pt]
+\myincludegraphics{figures/fignum1a}\\[10pt]
+(b)
+\end{tabular}
+}
 
 Figure \ref{fig:num1} shows the rectangles used in each method to approximate the definite integral. These graphs show that in this particular case, the Left Hand Rule is an over approximation and the Right Hand Rule is an under approximation. To get a better approximation, we could use more rectangles, as we did in Section \ref{sec:riemann}. We could also average the Left and Right Hand Rule results together, giving 
 \[
@@ -109,7 +125,14 @@ Right Hand Rule: $\ds \int_{-\frac{\pi}4}^{\frac{\pi}2}\sin(x^3)\ dx \approx (1.
 Average of the Left and Right Hand Rules: 0.4275.
 
 
-\mtable{.74}{Approximating $\int_{-\frac{\pi}4}^{\frac{\pi}2}\sin(x^3)\ dx$ in Example \ref{ex_num2}.}{fig:num2b}{\myincludegraphics{figures/fignum2b}\vskip 25pt \myincludegraphics{figures/fignum2a}}
+\mtable{.7}{Approximating\\ $\int_{-\frac{\pi}4}^{\frac{\pi}2}\sin(x^3)\ dx$ in Example \ref{ex_num2}.}{fig:num2b}{%
+\begin{tabular}{c}
+\myincludegraphics{figures/fignum2b}\\[10pt]
+(a)\\[10pt]
+\myincludegraphics{figures/fignum2a}\\[10pt]
+(b)
+\end{tabular}
+}
 
 The actual answer, accurate to 3 places after the decimal, is 0.460. Our approximations were once again fairly good. The rectangles used in each approximation are shown in Figure \ref{fig:num2b}. It is clear from the graphs that using more rectangles (and hence, narrower rectangles) should result in a more accurate approximation.
 }\\
@@ -121,7 +144,7 @@ In Example \ref{ex_num1} we approximated the value of $\ds \int_0^1 e^{-x^2}\ dx
 
 Instead of using rectangles to approximate the area, we can instead use \textit{trapezoids.} In Figure \ref{fig:num3a}, we show the region under $f(x) = e^{-x^2}$ on $[0,1]$ approximated with 5 trapezoids of equal width; the top ``corners'' of each trapezoid lies on the graph of $f(x)$. It is clear from this figure that these trapezoids more accurately approximate the area under $f$ and hence should give a better approximation of $\int_0^1 e^{-x^2}\ dx$. (In fact, these trapezoids seem to give a \textit{great} approximation of the area!)
 
-\mfigure{.45}{Approximating $\int_0^1 e^{-x^2}\ dx$ using 5 trapezoids of equal widths.}{fig:num3a}{figures/fignum3a}
+\mfigure{.35}{Approximating $\int_0^1 e^{-x^2}\ dx$ using 5 trapezoids of equal widths.}{fig:num3a}{figures/fignum3a}
 
 The formula for the area of a trapezoid is given in Figure \ref{fig:trapezoid}. We approximate $\int_0^1 e^{-x^2}\ dx$ with these trapezoids in the following example.\\
 
@@ -129,18 +152,8 @@ The formula for the area of a trapezoid is given in Figure \ref{fig:trapezoid}. 
 Use 5 trapezoids of equal width to approximate $\ds \int_0^1e^{-x^2}\ dx$.}
 {To compute the areas of the 5 trapezoids in Figure \ref{fig:num3a}, it will again be useful to create a table of values as shown in Figure \ref{fig:num3b}.
 
-\mfigure{.28}{The area of a trapezoid.}{fig:trapezoid}{figures/figtrapezoid}
-\mtable{.14}{A table of values of $e^{-x^2}$.}{fig:num3b}{%
-\begin{tabular}{cc}
-$x_i$ & $e^{-x_i^2}$ \\ \hline
-0 & 1\\
-0.2 & 0.961 \\
-0.4 & 0.852 \\
-0.6 & 0.698 \\
-0.8 & 0.527 \\
-1 & 0.368
-\end{tabular}
-}
+\mfigure{.16}{The area of a trapezoid.}{fig:trapezoid}{figures/figtrapezoid}
+
 
 The leftmost trapezoid has legs of length 1 and 0.961 and a height of 0.2. Thus, by our formula, the area of the leftmost trapezoid is: 
 \[
@@ -170,7 +183,17 @@ Now notice that all numbers except for the first and the last are added twice. T
 \[
 \frac{0.2}{2}\Big[1 + 2(0.961+0.852+0.698+0.527) + 0.368\Big].
 \]
-
+\mtable{.85}{A table of values of $e^{-x^2}$.}{fig:num3b}{%
+\begin{tabular}{cc}
+$x_i$ & $e^{-x_i^2}$ \\ \hline
+0 & 1\\
+0.2 & 0.961 \\
+0.4 & 0.852 \\
+0.6 & 0.698 \\
+0.8 & 0.527 \\
+1 & 0.368
+\end{tabular}
+}
 This is the heart of the \textbf{Trapezoidal Rule}, wherein a definite integral $\ds \int_a^b f(x) \ dx$ is approximated by using trapezoids of equal widths to approximate the corresponding area under $f$. Using $n$ equally spaced subintervals with endpoints $x_1$, $x_2$, $\ldots$, $x_{n+1}$, we again have $\ds \dx = \frac{b-a}n$. Thus:
 \begin{align*}
 \int_a^b f(x)\ dx & \approx \sum_{i=1}^n \frac{f(x_i)+f(x_{i+1})}2\dx \\
@@ -289,7 +312,7 @@ Simpson's Rule states that
 
 Recall that the actual value, accurate to 3 decimal places, is 0.460. Our approximation is within one 1/100$^\text{th}$ of the correct value. The graph in Figure \ref{fig:num6b} shows how closely the parabolas match the shape of the graph.
 \enlargethispage{2\baselineskip}
-}\\
+}\pagebreak
 
 \noindent\textbf{\large Summary and Error Analysis}
 \vskip\baselineskip
@@ -297,7 +320,7 @@ Recall that the actual value, accurate to 3 decimal places, is 0.460. Our approx
 We summarize the key concepts of this section thus far in the following Key Idea.
 
 \setboxwidth{120pt}%
-\noindent\ifthenelse{\isodd{\thepage}}{\hskip -120pt}{}%
+\noindent\ifthenelse{\isodd{\thepage}}{}{\hskip -120pt}%
 \noindent\begin{minipage}{\specialboxlength}
 \keyidea{idea:numerical}{Numerical Integration}
 {Let $f$ be a continuous function on $[a,b]$, let $n$ be a positive integer, and let $\ds\dx = \frac{b-a}{n}$. \index{integration!numerical!Left/Right Hand Rule}\index{integration!numerical!Trapezoidal Rule}\index{integration!numerical!Simpson's Rule}
@@ -339,18 +362,18 @@ A second method is to use Error Analysis. While the details are beyond the scope
 %\setboxwidth{50pt}%
 %\ifthenelse{\isodd{\thepage}}{}{\hskip -65pt}%
 %\noindent\begin{minipage}{\specialboxlength}
-\theorem{thm:numerical_error}{Error Bounds in the Trapezoidal and Simpson's Rules}%
+\theorem{thm:numerical_error}{\parbox[t]{185pt}{Error Bounds in the Trapezoidal Rule and Simpson's Rule}}%
 {\begin{enumerate}\index{integration!numerical!Trapezoidal Rule}\index{integration!numerical!Simpson's Rule}
 \index{Trapezoidal Rule!error bounds}\index{Simpson's Rule!error bounds}
 \index{numerical integration!Trapezoidal Rule!error bounds}\index{numerical integration!Simpson's Rule!error bounds}
-\item	Let $E_T$ be the error in approximating $\ds \int_a^b f(x)\ dx$ using the Trapezoidal Rule. 
+\item	Let $E_T$ be the error in approximating $\ds \int_a^b f(x)\ dx$ using the Trapezoidal Rule with $n$ subintervals. 
 
 If $f$ has a continuous 2$^\text{nd}$ derivative on $[a,b]$ and $M$ is any upper bound of $\big|\fpp(x)\big|$ on $[a,b]$, then
 \[
 \ds E_T \leq \frac{(b-a)^3}{12n^2}M.
 \]
 
-\item	Let $E_S$ be the error in approximating $\ds \int_a^b f(x)\ dx$ using Simpson's Rule. 
+\item	Let $E_S$ be the error in approximating $\ds \int_a^b f(x)\ dx$ using Simpson's Rule  with $n$ subintervals. 
 
 If $f$ has a continuous 4$^\text{th}$ derivative on $[a,b]$ and $M$ is any upper bound of $\big|f\,^{(4)}\big|$ on $[a,b]$, then
 \[
@@ -418,7 +441,7 @@ Our error estimation formula states that our approximation of $0.7468\overline{3
  Once again we affirm the validity of Theorem \ref{thm:numerical_error}.
 }\\
 
-At the beginning of this section we mentioned two main situations where numerical integration was desirable. We have considered the case where an antiderivative of the integrand cannot be computed. We now investigate the situation where the integrand is not known. This is, in fact, the most widely used application of Numerical Integration methods. ``Most of the time'' we observe behaviour but do not know ``the'' function that describes it. We instead collect data about the behaviour and make approximations based off of this data. We demonstrate this in an example.\\
+At the beginning of this section we mentioned two main situations where numerical integration was desirable. We have considered the case where an antiderivative of the integrand cannot be computed. We now investigate the situation where the integrand is not known. This is, in fact, the most widely used application of Numerical Integration methods. ``Most of the time'' we observe behaviour but do not know ``the'' function that describes it. We instead collect data about the behaviour and make approximations based on this data. We demonstrate this in an example.\\
 
 \example{ex_num8}{Approximating distance travelled}{
 One of the authors drove his daughter home from school while she recorded their speed every 30 seconds. The data is given in Figure \ref{fig:num8}. Approximate the distance they travelled.}
@@ -449,7 +472,7 @@ We need to compute $\dx = (b-a)/n$. Clearly, $n=24$. What are $a$ and $b$? Since
 \dx = \frac{b-a}{n} = \frac{1/5-0}{24} = \frac1{120}; \quad \frac{\dx}{3} = \frac{1}{360}.
 \]
 
-Thus the distance traveled is approximately:
+Thus the distance travelled is approximately:
 \begin{align*}
 \int_0^{0.2}v(t)\ dt &\approx \frac{1}{360}\Big[f(x_1)+4f(x_2) + 2f(x_3) + \cdots + 4f(x_n)+f(x_{n+1})\Big]\\
 					&= \frac{1}{360}\Big[0+4\cdot25+2\cdot 22 + \cdots + 2\cdot40+4\cdot 23 + 0\Big]\\
@@ -462,5 +485,5 @@ We started this chapter learning about antiderivatives and indefinite integrals.
 
 We ended the chapter by noting that antiderivatives are sometimes more than difficult to find: they are impossible. Therefore we developed numerical techniques that gave us good approximations of definite integrals.
 
-We used the definite integral to compute areas, and also to compute displacements and distances traveled. There is far more we can do than that. In Chapter \ref{chapter:app_of_int} we'll see more applications of the definite integral. Before that, in Chapter \ref{chapter:anti_tech} we'll learn advanced techniques of integration, analogous to learning rules like the Product, Quotient and Chain Rules of differentiation. 
+We used the definite integral to compute areas, and also to compute displacements and distances travelled. There is far more we can do than that. In Chapter \ref{II-chapter:app_of_int} we'll see more applications of the definite integral. Before that, in Chapter \ref{II-chapter:anti_tech} we'll learn advanced techniques of integration, analogous to learning rules like the Product, Quotient and Chain Rules of differentiation. 
 \printexercises{exercises/05_05_exercises}

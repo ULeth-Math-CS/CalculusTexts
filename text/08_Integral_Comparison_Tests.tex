@@ -50,11 +50,11 @@ Determine the convergence of $\ds\sum_{n=1}^\infty \frac{\ln n}{n^2}$.  (The ter
 Applying the Integral Test, we test the convergence of $\ds \int_1^\infty \frac{\ln x}{x^2}\ dx$. Integrating this improper integral requires the use of Integration by Parts, with $u = \ln x$ and $dv = 1/x^2\ dx$. 
 \begin{align*}
 \int_1^\infty \frac{\ln x}{x^2}\ dx &= \lim_{b\to\infty} \int_1^b \frac{\ln x}{x^2}\ dx\\
-				&= \lim_{b\to\infty} -\frac1x\ln x\Big|_1^b + \int_1^b\frac1{x^2}\ dx %\\
+				&= \lim_{b\to\infty} -\frac1x\ln x\Big\vert_1^b + \int_1^b\frac1{x^2}\ dx %\\
 \end{align*}
 \begin{align*}
-				&= \lim_{b\to\infty} -\frac1x\ln x -\frac 1x\Big|_1^b\\
-				&= \lim_{b\to\infty}1-\frac1b-\frac{\ln b}{b}.\quad \text{Apply L'H\^opital's Rule:}\\
+				&= \lim_{b\to\infty} -\frac1x\ln x -\frac 1x\Big\vert_1^b\\
+				&= \lim_{b\to\infty}1-\frac1b-\frac{\ln b}{b}. \tag*{Apply L'Hospital's Rule:}\\
 				&= 1.
 \end{align*}
 Since $\ds \int_1^\infty \frac{\ln x}{x^2}\ dx$ converges, so does $\ds \sum_{n=1}^\infty \frac{\ln n}{n^2}$.
@@ -73,16 +73,16 @@ Use the Integral Test to prove that $\ds \sum_{n=1}^\infty \frac1{(an+b)^p}$ con
 {Consider the integral $\ds\int_1^\infty \frac1{(ax+b)^p}\ dx$; assuming $p\neq 1$,
 \begin{align*}
 \int_1^\infty \frac1{(ax+b)^p}\ dx &= \lim_{c\to\infty} \int_1^c \frac1{(ax+b)^p}\ dx \\
-		&= \lim_{c\to\infty} \frac{1}{a(1-p)}(ax+b)^{1-p}\Big|_1^c\\
+		&= \lim_{c\to\infty} \frac{1}{a(1-p)}(ax+b)^{1-p}\Big\vert_1^c\\
 		&= \lim_{c\to\infty} \frac{1}{a(1-p)}\big((ac+b)^{1-p}-(a+b)^{1-p}\big).
 \end{align*}
-This limit converges if, and only if, $p>1$. It is easy to show that the integral also diverges in the case of $p=1$. (This result is similar to the work preceding Key Idea \ref{idea:impint1}.)
+This limit converges if, and only if, $p>1$. It is easy to show that the integral also diverges in the case of $p=1$. (This result is similar to the work preceding Key Idea \ifthenelse{\boolean{CalcIII}}{\ref{II-idea:impint1}}{\ref{idea:impint1}}.)
 
 Therefore $\ds \sum_{n=1}^\infty \frac 1{(an+b)^p}$ converges if, and only if, $p>1$.
 \vskip.25\baselineskip
 }\\
 
-We consider two more convergence tests in this section, both \textit{comparison} tests. That is, we determine the convergence of one series by  comparing it to another series with known convergence. 
+We consider two more convergence tests in this section, both \textit{comparison} tests. That is, we determine the convergence of one series by  comparing it to another series with known convergence. \\
 %\clearpage
 
 \noindent\textbf{\large Direct Comparison Test}\\
@@ -161,18 +161,18 @@ Determine the convergence of $\ds\sum_{n=1}^\infty \frac1{3^n-n^2}$}
 Instead, we use the Limit Comparison Test and compare with the series $\ds\sum_{n=1}^\infty \frac1{3^n}$:
 \begin{align*}
 \lim_{n\to\infty}\frac{1/(3^n-n^2)}{1/3^n} &= \lim_{n\to\infty}\frac{3^n}{3^n-n^2} \\
-		&= 1 \quad \text{(after applying L'H\^opital's Rule twice)}.
+		&= 1 \quad \text{(after applying L'Hospital's Rule twice)}.
 \end{align*}
 We know $\ds\sum_{n=1}^\infty \frac1{3^n}$ is a convergent geometric series, hence $\ds\sum_{n=1}^\infty \frac1{3^n-n^2}$ converges as well.
 }\\
 
-As mentioned before, practice helps one develop the intuition to quickly choose a series with which to compare. A general rule of thumb is to pick a series based on the dominant term in the expression of $\{a_n\}$. It is also helpful to note that factorials dominate exponentials, which dominate algebraic functions (e.g., polynomials), which dominate logarithms. In the previous example, the dominant term of $\ds\frac{1}{3^n-n^2}$ was $3^n$, so we compared the series to $\ds \sum_{n=1}^\infty \frac1{3^n}$. It is hard to apply the Limit Comparison Test to series containing factorials, though, as we have not learned how to apply L'H\^opital's Rule to $n!$.\\
+As mentioned before, practice helps one develop the intuition to quickly choose a series with which to compare. A general rule of thumb is to pick a series based on the dominant term in the expression of $\{a_n\}$. It is also helpful to note that factorials dominate exponentials, which dominate algebraic functions (e.g., polynomials), which dominate logarithms. In the previous example, the dominant term of $\ds\frac{1}{3^n-n^2}$ was $3^n$, so we compared the series to $\ds \sum_{n=1}^\infty \frac1{3^n}$. It is hard to apply the Limit Comparison Test to series containing factorials, though, as we have not learned how to apply L'Hospital's Rule to $n!$.\\
 
 \example{ex_lct3}{Applying the Limit Comparison Test}{
-Determine the convergence of $\ds\sum_{n=1}^\infty \frac{\sqrt{x}+3}{x^2-x+1}$.}
-{We na\"ively attempt to apply the rule of thumb given above and note that the dominant term in the expression of the series is $1/x^2$. Knowing that $\ds \sum_{n=1}^\infty \frac1{n^2}$ converges, we attempt to apply the Limit Comparison Test:
+Determine the convergence of $\ds\sum_{n=1}^\infty \frac{\sqrt{n}+3}{n^2-n+1}$.}
+{We na\"ively attempt to apply the rule of thumb given above and note that the dominant term in the expression of the series is $1/n^2$. Knowing that $\ds \sum_{n=1}^\infty \frac1{n^2}$ converges, we attempt to apply the Limit Comparison Test:
 \begin{align*}
-\lim_{n\to\infty}\frac{(\sqrt{x}+3)/(x^2-x+1)}{1/x^2} &= \lim_{n\to\infty}\frac{x^2(\sqrt x+3)}{x^2-x+1}\\
+\lim_{n\to\infty}\frac{(\sqrt{n}+3)/(n^2-n+1)}{1/n^2} &= \lim_{n\to\infty}\frac{n^2(\sqrt n+3)}{n^2-n+1}\\
 		&= \infty \quad \text{(Apply L'H\^opital's Rule)}.
 \end{align*}
 
@@ -180,12 +180,12 @@ Theorem \ref{thm:series_limit_compare} part (3) only applies when $\ds\sum_{n=1}
 
 The problem is that we chose a poor series with which to compare. Since the numerator and denominator of the terms of the series are both algebraic functions, we should have compared our series  to the dominant term of the numerator divided by the dominant term of the denominator.
 
-The dominant term of the numerator is $x^{1/2}$ and the dominant term of the denominator is $x^2$. Thus we should compare the terms of the given series to $x^{1/2}/x^2 = 1/x^{3/2}$:
+The dominant term of the numerator is $n^{1/2}$ and the dominant term of the denominator is $n^2$. Thus we should compare the terms of the given series to $n^{1/2}/n^2 = 1/n^{3/2}$:
 \begin{align*}
-\lim_{n\to\infty}\frac{(\sqrt{x}+3)/(x^2-x+1)}{1/x^{3/2}} &= \lim_{n\to \infty} \frac{x^{3/2}(\sqrt x+3)}{x^2-x+1} \\
+\lim_{n\to\infty}\frac{(\sqrt{n}+3)/(n^2-n+1)}{1/n^{3/2}} &= \lim_{n\to \infty} \frac{n^{3/2}(\sqrt n+3)}{n^2-n+1} \\
 		&= 1\quad \text{(Apply L'H\^opital's Rule)}.
 \end{align*}
-Since the  $p$-series $\ds\sum_{n=1}^\infty \frac1{x^{3/2}}$ converges, we conclude that $\ds\sum_{n=1}^\infty \frac{\sqrt{x}+3}{x^2-x+1}$ converges as well.
+Since the  $p$-series $\ds\sum_{n=1}^\infty \frac1{n^{3/2}}$ converges, we conclude that $\ds\sum_{n=1}^\infty \frac{\sqrt{n}+3}{n^2-n+1}$ converges as well.
 }\\
 
 \enlargethispage{\baselineskip}

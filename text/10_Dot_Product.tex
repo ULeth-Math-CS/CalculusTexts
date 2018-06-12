@@ -6,9 +6,13 @@ The previous section introduced vectors and described how to add them together a
 {\begin{enumerate}
 	\item Let $\vec u = \la u_1,u_2\ra$ and $\vec v = \la v_1,v_2\ra$  in $\mathbb{R}^2$. The \textbf{dot product} of $\vec u$ and $\vec v$, denoted \dotp uv, is 
 	\index{dot product!definition}\index{vectors!dot product}
-	$$\dotp uv = u_1v_1+u_2v_2.$$
+	\[
+	\dotp uv = u_1v_1+u_2v_2.
+	\]
 	\item Let $\vec u = \la u_1,u_2,u_3\ra$ and $\vec v = \la v_1,v_2,v_3\ra$  in $\mathbb{R}^3$. The \textbf{dot product} of $\vec u$ and $\vec v$, denoted \dotp uv, is 
-	$$\dotp uv = u_1v_1+u_2v_2+u_3v_3.$$
+	\[
+	\dotp uv = u_1v_1+u_2v_2+u_3v_3.
+	\]
 \end{enumerate}
 }
 
@@ -21,9 +25,14 @@ Note how this product of vectors returns a \emph{scalar}, not another vector. We
 \end{enumerate} 
 }
 {\begin{enumerate}
-	\item Using Definition \ref{def:dot_product}, we have $$\dotp uv = 1(3)+2(-1) = 1.$$
+	\item Using Definition \ref{def:dot_product}, we have 
+	\[
+	\dotp uv = 1(3)+2(-1) = 1.
+	\]
 	\item	Using the definition, we have
-	$$\dotp xy = 2(-1)  -2(0) + 5(3) = 13.$$
+	\[
+	\dotp xy = 2(-1)  -2(0) + 5(3) = 13.
+	\]
 \end{enumerate}
 \vskip-\baselineskip
 }\\
@@ -41,11 +50,19 @@ The dot product, as shown by the preceding example, is very simple to evaluate. 
 \end{enumerate}
 }
 
+\mnote{.77}{\textbf{Note:} proving Theorem \ref{thm:dot_product_properties} is straightforward and left to the reader. The reader is reminded, however, that proofs must be \textit{general}: choosing particular numbers for the vectors $\vec u$, $\vec v$, etc. only shows that the properties hold for those particular numbers. Instead, one should write $\vec u = \la u_1, u_2, u_3\ra$, $\vec v = \la v_1,v_2,v_3\ra$, etc. and then proceed using the rules of algebra for real numbers. For example, $\dotp uv = \dotp vu$ since
+\begin{align*}
+\dotp uv & = u_1v_1+u_2v_2+u_3v_3\\
+& = v_1u_1+v_2u_2+v_3u_3\\
+& = \dotp vu,
+\end{align*} 
+and this argument is valid no matter what values are substituted for the components of the two vectors.}
+
 The last statement of the theorem makes a handy connection between the magnitude of a vector and the dot product with itself. 
 Our definition and theorem give properties of the dot product, but we are still likely wondering ``What does the dot product \emph{mean}?'' It is helpful to understand that the dot product of a vector with itself is connected to its magnitude.
 
 The next theorem extends this understanding by connecting the dot product to magnitudes and angles. Given vectors $\vec u$ and $\vec v$ in the plane, an angle $\theta$ is clearly formed when $\vec u$ and $\vec v$ are drawn with the same initial point as illustrated in Figure \ref{fig:dotpangle}(a). (We always take $\theta$ to be the angle in $[0,\pi]$ as two angles are actually created.) 
-\mtable{.5}{Illustrating the angle formed by two vectors with the same initial point.}{fig:dotpangle}{%
+\mtable{.42}{Illustrating the angle formed by two vectors with the same initial point.}{fig:dotpangle}{%
 \begin{tabular}{c}
 \includegraphics{figures/figdotpangle}\\
 (a)\\[15pt]
@@ -55,22 +72,46 @@ The next theorem extends this understanding by connecting the dot product to mag
 3Dc2c=.54 .61 .58,
 3Dcoo=0 0 40,
 3Droo=170,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{}{figures/figdotpangle3D}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=125pt}{figures/figdotpangle3D}\\
 %\includegraphics{figures/figdotpangle3D}\\
 (b)
 \end{tabular}
 }
 
-The same is also true of 2 vectors in space: given $\vec u$ and $\vec v$ in $\mathbb{R}^3$ with the same initial point, there is a plane that contains both $\vec u$ and $\vec v$. (When $\vec u$ and $\vec v$ are co-linear, there are infinite planes that contain both vectors.) In that plane, we can again find an angle $\theta$ between them (and again, $0\leq \theta\leq \pi$). This is illustrated in Figure \ref{fig:dotpangle}(b).
+The same is also true of 2 vectors in space: given $\vec u$ and $\vec v$ in $\mathbb{R}^3$ with the same initial point, there is a plane that contains both $\vec u$ and $\vec v$. (When $\vec u$ and $\vec v$ are co-linear, there are infinitely many planes that contain both vectors.) In that plane, we can again find an angle $\theta$ between them (and again, $0\leq \theta\leq \pi$). This is illustrated in Figure \ref{fig:dotpangle}(b).
 
 The following theorem connects this angle $\theta$ to the dot product of $\vec u$ and $\vec v$.
 
 \theorem{thm:dot_product}{The Dot Product and Angles}
-{Let $\vec u$ and $\vec v$ be vectors in $\mathbb{R}^2$ or $\mathbb{R}^3$. Then 
-$$\dotp uv = \norm{\vec u}\,\norm{\vec v} \cos\theta,$$
+{Let $\vec u$ and $\vec v$ be nonzero vectors in $\mathbb{R}^2$ or $\mathbb{R}^3$. Then 
+\[
+\dotp uv = \norm{\vec u}\,\norm{\vec v} \cos\theta,
+\]
 where $\theta$, $0\leq\theta\leq \pi$, is the angle between $\vec u$ and $\vec v$.
 \index{dot product!properties}\index{vectors!dot product}
 }
+
+\mfigure{.16}{Proving Theorem \ref{thm:dot_product}}{fig:dotprodproof}{figures/dotproductproof}
+
+The proof of Theorem \ref{thm:dot_product} is an application of the \href{https://en.wikipedia.org/wiki/Law_of_cosines}{\underline{Law of Cosines}}, using the properties in Theorem \ref{thm:dot_product_properties}. Referring to Figure \ref{fig:dotprodproof}, if we let $a=\norm{\vec u}$, $b=\norm{\vec v}$, and $c = \norm{\vec u-\vec v}$, then the Law of Cosines tells us that
+\[
+c^2 = a^2+b^2 - 2ab\cos(\theta).
+\]
+Thus, we have
+\begin{align*}
+\norm{\vec{u}-\vec{v}}^2 & = \norm{\vec{u}}^2+\norm{\vec{v}}^2-2\norm{\vec{u}}\norm{\vec{v}}\cos\theta\\
+(\vec u-\vec v)\cdot(\vec u-\vec v) & = \dotp uu +\dotp vv -2\norm{\vec{u}}\norm{\vec{v}}\cos\theta\\
+\dotp uu -\dotp uv - \dotp vu + \dotp vv & = \dotp uu +\dotp vv -2\norm{\vec{u}}\norm{\vec{v}}\cos\theta\\
+-2\dotp uv &= -2\norm{\vec{u}}\norm{\vec{v}}\cos\theta\\
+\dotp uv &= \norm{\vec{u}}\norm{\vec{v}}\cos\theta,
+\end{align*}
+as required.
+
+Using Theorem \ref{thm:dot_product_properties}, we can rewrite this theorem as
+\[
+\frac{\vec u}{\norm{\vec u}}\cdot \frac{\vec v}{\norm{\vec v}} = \cos \theta.
+\]
+Note how on the left hand side of the equation, we are computing the dot product of two unit vectors. Recalling that unit vectors essentially only provide direction information, we can informally restate Theorem \ref{thm:dot_product} as saying ``The dot product of two directions gives the cosine of the angle between them.''
 
 When $\theta$ is an acute angle (i.e., $0\leq \theta <\pi/2$), $\cos \theta$ is positive; when $\theta = \pi/2$, $\cos \theta = 0$; when $\theta$ is an obtuse angle ($\pi/2<\theta \leq \pi$), $\cos \theta$ is negative. Thus the sign of the dot product gives a general indication of the angle between the vectors, illustrated in Figure \ref{fig:dotpsign}.
 
@@ -83,16 +124,20 @@ When $\theta$ is an acute angle (i.e., $0\leq \theta <\pi/2$), $\cos \theta$ is 
 \vskip\baselineskip
 
 We \emph{can} use Theorem \ref{thm:dot_product} to compute the dot product, but generally this theorem is used to find the angle between known vectors (since the dot product is generally easy to compute). To this end, we rewrite the theorem's equation as
-$$\cos \theta = \frac{\dotp uv}{\norm{\vec u}\norm{\vec v}} \quad \Leftrightarrow \quad \theta = \cos^{-1}\left(\frac{\dotp uv}{\norm{\vec u}\norm{\vec v}}\right).$$
+\[
+\cos \theta = \frac{\dotp uv}{\norm{\vec u}\norm{\vec v}} \quad \Leftrightarrow \quad \theta = \cos^{-1}\left(\frac{\dotp uv}{\norm{\vec u}\norm{\vec v}}\right).
+\]
 
 We practice using this theorem in the following example.\\
 
-\mfigure{.6}{Vectors used in Example \ref{ex_dotp2}.}{fig:dotp2}{figures/figdotp2}
+\mfigure{.2}{Vectors used in Example \ref{ex_dotp2}.}{fig:dotp2}{figures/figdotp2}
 \example{ex_dotp2}{Using the dot product to find angles}{
 Let $\vec u = \la 3,1\ra$, $\vec v = \la -2,6\ra$ and $\vec w = \la -4,3\ra$, as shown in Figure \ref{fig:dotp2}. Find the angles $\alpha$, $\beta$ and $\theta$.
 }
 {We start by computing the magnitude of each vector.
-$$\norm{\vec u} = \sqrt{10};\quad \norm{\vec v} = 2\sqrt{10};\quad \norm{\vec w} = 5.$$
+\[
+\norm{\vec u} = \sqrt{10};\quad \norm{\vec v} = 2\sqrt{10};\quad \norm{\vec w} = 5.
+\]
 We now apply Theorem \ref{thm:dot_product} to find the angles.
 \begin{align*}
 \alpha &= \cos^{-1}\left(\frac{\dotp uv}{(\sqrt{10})(2\sqrt{10})}\right) \\
@@ -110,8 +155,8 @@ We now apply Theorem \ref{thm:dot_product} to find the angles.
 }\\
 
 We see from our computation that $\alpha + \beta = \theta$, as indicated by Figure \ref{fig:dotp2}. While we knew this should be the case, it is nice to see that this non-intuitive formula indeed returns the results we expected.
-
 We do a similar example next in the context of vectors in space.\\
+
 %\mfigure{.4}{Vectors used in Example \ref{ex_dotp3}.}{fig:dotp3}{figures/figdotp3}
 \example{ex_dotp3}{Using the dot product to find angles}{
 Let $\vec u = \la 1,1,1\ra$, $\vec v = \la -1,3,-2\ra$ and $\vec w = \la -5,1,4\ra$, as illustrated in Figure \ref{fig:dotp3}. Find the angle between each pair of vectors.}
@@ -145,7 +190,7 @@ While our work shows that each angle is $\pi/2$, i.e.,  $90^\circ$, none of thes
 3Dc2c=.89 .4 .23,
 3Dcoo=10 50 46,
 3Droo=200,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{}{.7}{Vectors used in Example \ref{ex_dotp3}.}{fig:dotp3}{figures/figdotp3}%
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=150pt}{.3}{Vectors used in Example \ref{ex_dotp3}.}{fig:dotp3}{figures/figdotp3}%
 
 All three angles between these vectors was $\pi/2$, or $90^\circ$. We know from geometry and everyday life that $90^\circ$ angles are ``nice'' for a variety of reasons, so it should seem significant that these angles are all $\pi/2$. Notice the common feature in each calculation (and also the calculation of $\alpha$ in Example \ref{ex_dotp2}): the dot products of each pair of angles was 0. We use this as a basis for a definition of the term \textbf{orthogonal}, which is essentially synonymous to \textit{perpendicular}.
 
@@ -154,8 +199,12 @@ All three angles between these vectors was $\pi/2$, or $90^\circ$. We know from 
 \index{orthogonal}\index{perpendicular|see{orthogonal}}\index{vectors!orthogonal}
 }
 
-\mnote{.4}{\textbf{Note:} The term \textit{perpendicular} originally referred to lines. As mathematics progressed, the concept of ``being at right angles to'' was applied to other objects, such as vectors and planes, and the term \emph{orthogonal} was introduced. It is especially used when discussing objects that are hard, or impossible, to visualize: two vectors in 5-dimensional space are orthogonal if their dot product is 0. It is not wrong to say they are \textit{perpendicular}, but common convention gives preference to the word \textit{orthogonal}.
+\mnote{.5}{\textbf{Note:} The term \textit{perpendicular} originally referred to lines. As mathematics progressed, the concept of ``being at right angles to'' was applied to other objects, such as vectors and planes, and the term \emph{orthogonal} was introduced. It is especially used when discussing objects that are hard, or impossible, to visualize: two vectors in 5-dimensional space are orthogonal if their dot product is 0. It is not wrong to say they are \textit{perpendicular}, but common convention gives preference to the word \textit{orthogonal}.
+
+Note also that Definition \ref{def:orthogonal} makes sense if either $\vec u$ or $\vec v$ is the zero vector, but this is not the case for the conventional understanding of the word perpendicular.
 }
+
+%\pagebreak
 
 \example{ex_dotp8}{Finding orthogonal vectors}{
 Let $\vec u = \la 3,5\ra$ and $\vec v = \la 1,2,3\ra$. 
@@ -166,15 +215,21 @@ Let $\vec u = \la 3,5\ra$ and $\vec v = \la 1,2,3\ra$.
 }
 {\begin{enumerate}
 	\item Recall that a line perpendicular to a line with slope $m$ has slope $-1/m$, the ``opposite reciprocal slope.'' We can think of the slope of $\vec u$ as $5/3$, its ``rise over run.'' A vector orthogonal to $\vec u$ will have slope $-3/5$. There are many such choices, though all parallel:
-	$$\la -5,3\ra \quad \text{or} \quad\la 5,-3\ra \quad \text{or} \quad \la -10,6\ra\quad \text{or} \quad \la 15,-9\ra,\text{etc.}$$
+	\[
+	\la -5,3\ra \quad \text{or} \quad\la 5,-3\ra \quad \text{or} \quad \la -10,6\ra\quad \text{or} \quad \la 15,-9\ra,\text{etc.}
+	\]
 	\item		There are infinite directions in space orthogonal to any given direction, so there are an infinite number of non--parallel vectors orthogonal to $\vec v$. Since there are so many, we have great leeway in finding some.
 	
 	One way is to arbitrarily pick values for the first two components, leaving the third unknown. For instance, let $\vec v_1 = \la 2,7,z\ra$. If $\vec v_1$ is to be orthogonal to $\vec v$, then $\vec v_1\cdot\vec v = 0$, so 
-	$$2+14+3z=0 \quad \Rightarrow z = \frac{-16}{3}.$$
+	\[
+	2+14+3z=0 \quad \Rightarrow z = \frac{-16}{3}.
+	\]
 	So $\vec v_1 = \la 2, 7, -16/3\ra$ is orthogonal to $\vec v$. We can apply a similar technique by leaving the first or second component unknown.
 	
 	Another method of finding a vector orthogonal to $\vec v$ mirrors what we did in part 1. Let $\vec v_2 = \la-2,1,0\ra$. Here we switched the first two components of $\vec v$, changing the sign of one of them (similar to the ``opposite reciprocal'' concept before). Letting the third component be 0 effectively ignores the third component of $\vec v$, and it is easy to see that 
-	$$\vec v_2\cdot\vec v = \la -2,1,0\ra\cdot\la 1,2,3\ra = 0.$$
+	\[
+	\vec v_2\cdot\vec v = \la -2,1,0\ra\cdot\la 1,2,3\ra = 0.
+	\]
 	Clearly $\vec v_1$ and $\vec v_2$ are not parallel.
 \end{enumerate}
 \vskip-1.5\baselineskip
@@ -182,13 +237,13 @@ Let $\vec u = \la 3,5\ra$ and $\vec v = \la 1,2,3\ra$.
 
 An important construction is illustrated in Figure \ref{fig:dotpproj}, where vectors $\vec u$ and $\vec v$ are sketched. In part (a), a dotted line is drawn from the tip of $\vec u$ to the line containing $\vec v$, where the dotted line is orthogonal to $\vec v$. In part (b), the dotted line is replaced with the vector $\vec z$ and  $\vec w$ is formed, parallel to $\vec v$. It is clear by the diagram that $\vec u = \vec w+\vec z$. What is important about this construction is this: $\vec u$ is \emph{decomposed} as the sum of two vectors, one of which is parallel to $\vec v$ and one that is perpendicular to $\vec v$. It is hard to overstate the importance of this construction (as we'll see in upcoming examples). 
 
-The vectors $\vec w$, $\vec z$ and $\vec u$ as shown in Figure \ref{fig:dotpproj} (b) form a right triangle, where the angle between $\vec v$ and $\vec u$ is labeled $\theta$. We can find $\vec w$ in terms of $\vec v$ and $\vec u$.
+The vectors $\vec w$, $\vec z$ and $\vec u$ as shown in Figure \ref{fig:dotpproj} (b) form a right triangle, where the angle between $\vec v$ and $\vec u$ is labelled $\theta$. We can find $\vec w$ in terms of $\vec v$ and $\vec u$.
 
 Using trigonometry, we can state that 
 \begin{equation}
 \norm{\vec w} = \norm{\vec u}\cos \theta. \label{eq:proj1}
 \end{equation}
-\mtable{.450}{Developing the construction of the \emph{orthogonal projection}.}{fig:dotpproj}{%
+\mtable{.3}{Developing the construction of the \emph{orthogonal projection}.}{fig:dotpproj}{%
 \begin{tabular}{c}
 \includegraphics{figures/figdotpproja}\\
 (a)\\[15pt]
@@ -210,16 +265,18 @@ We also know that $\vec w$ is parallel to to $\vec v$\,; that is, the direction 
 Since this construction is so important, it is given a special name.
 
 \definition{def:orthogonal_projection}{Orthogonal Projection}
-{Let $\vec u$ and $\vec v$ be given. The \textbf{orthogonal projection of $\vec u$ onto $\vec v$}, denoted $\proj uv$, is 
+{Let nonzero vectors $\vec u$ and $\vec v$ be given. The \textbf{orthogonal projection of $\vec u$ onto $\vec v$}, denoted $\proj uv$, is 
 \index{orthogonal projection}\index{vectors!orthogonal projection}
-$$\proj uv = \frac{\dotp uv}{\dotp vv}\vec v.$$
+\[
+\proj uv = \frac{\dotp uv}{\dotp vv}\vec v.
+\]
 }
 
 \example{ex_dotp4}{Computing the orthogonal projection}{
 \begin{enumerate}
 	\item Let $\vec u= \la -2,1\ra$ and $\vec v=\la 3,1\ra$. Find $\proj uv$, and sketch all three vectors with initial points at the origin.
 	\item	Let $\vec w = \la 2,1,3\ra$ and $\vec x = \la 1,1,1\ra$. Find $\proj wx$, and sketch all three vectors with initial points at the origin.
-\end{enumerate}
+\end{enumerate}\pagebreak
 }
 {\begin{enumerate}
 	\item Applying Definition \ref{def:orthogonal_projection}, we have
@@ -229,7 +286,7 @@ $$\proj uv = \frac{\dotp uv}{\dotp vv}\vec v.$$
 					&= \la -\frac32,-\frac12\ra.
 	\end{align*}
 	Vectors $\vec u$, $\vec v$ and $\proj uv$ are sketched in Figure \ref{fig:dotp4}(a). Note how the projection is parallel to $\vec v$; that is, it lies on the same line through the origin as $\vec v$, although it points in the opposite direction. That is because the angle between $\vec u$ and $\vec v$ is obtuse (i.e., greater than $90^\circ$).
-\mtable{.63}{Graphing the vectors used in Example \ref{ex_dotp4}.}{fig:dotp4}{%
+\mtable{.65}{Graphing the vectors used in Example \ref{ex_dotp4}.}{fig:dotp4}{%
 \begin{tabular}{c}
 \includegraphics{figures/figdotp4a}\\
 (a)\\[15pt]
@@ -239,7 +296,7 @@ $$\proj uv = \frac{\dotp uv}{\dotp vv}\vec v.$$
 3Dc2c=.9 .12 .42,
 3Dcoo=0 50 30,
 3Droo=250,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{}{figures/figdotp4b}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=100pt}{figures/figdotp4b}\\
 %\includegraphics{figures/figdotp4b}\\
 (b)\\[15pt]
 \myincludegraphicsthree{width=100pt,3Dmenu,activate=onclick,deactivate=onclick,
@@ -248,7 +305,7 @@ $$\proj uv = \frac{\dotp uv}{\dotp vv}\vec v.$$
 3Dc2c=.29 .77 .56,
 3Dcoo=50 0 40,
 3Droo=250,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{}{figures/figdotp4c}\\
+3Dlights=Headlamp,add3Djscript=asylabels.js}{width=100pt}{figures/figdotp4c}\\
 %\includegraphics{figures/figdotp4c}\\
 (c)\\[15pt]
 \end{tabular}
@@ -265,20 +322,48 @@ $$\proj uv = \frac{\dotp uv}{\dotp vv}\vec v.$$
 \vskip-\baselineskip
 }\\
 
-\mfigure{.23}{Illustrating the orthogonal projection.}{fig:dotpprojc}{figures/figdotpprojc}
-Consider Figure \ref{fig:dotpprojc} where the concept of the orthogonal projection is again illustrated. It is clear that 
+We can use the properties of the dot product found in Theorem \ref{thm:dot_product_properties} to rearrange the formula found in Definition \ref{def:orthogonal_projection}:
+\begin{align*}
+\proj uv &= \frac{\dotp uv}{\dotp vv}\vec v\\
+		&= \frac{\dotp uv}{\norm{\vec v}^2}\vec v\\
+		&= \left(\vec u \cdot \frac{\vec v}{\norm{\vec v}}\right) \frac{\vec v}{\norm{\vec v}}.
+\end{align*}
+
+The above formula shows that the orthogonal projection of $\vec u$ onto $\vec v$ is only concerned with the \emph{direction} of $\vec v$, as both instances of $\vec v$ in the formula come in the form $\vec v/\norm{\vec v}$, the unit vector in the direction of $\vec v$.
+
+A special case of orthogonal projection occurs when $\vec v$ is a unit vector. In this situation, the formula for the orthogonal projection of a vector $\vec u$ onto $\vec v$ reduces to just $\proj uv = (\vec u\cdot\vec v)\vec v$, as $\vec v\cdot\vec v = 1$.
+
+This gives us a new understanding of the dot product. When $\vec v$ is a unit vector, essentially providing only direction information, the dot product of $\vec u$ and $\vec v$ gives ``how much of $\vec u$ is in the direction of $\vec v$.'' This use of the dot product will be very useful in future sections.\\
+
+\mfigure{.2}{Illustrating the orthogonal projection.}{fig:dotpprojc}{figures/figdotpprojc}
+Now consider Figure \ref{fig:dotpprojc} where the concept of the orthogonal projection is again illustrated. It is clear that 
 \begin{equation}
 \vec u = \proj uv + \vec z.
 \label{eq:orthogproj}
 \end{equation} As we know what $\vec u$ and $\proj uv$ are, we can solve for $\vec z$ and state that
-$$\vec z = \vec u - \proj uv.$$
-This leads us to rewrite Equation \eqref{eq:orthogproj} in a seemingly silly way: $$\vec u = \proj uv + (\vec u - \proj uv).$$
+\[
+\vec z = \vec u - \proj uv.
+\]
+This leads us to rewrite Equation \eqref{eq:orthogproj} in a seemingly silly way: 
+\[
+\vec u = \proj uv + (\vec u - \proj uv).
+\]
 This is not nonsense, as pointed out in the following Key Idea. (Notation note: the expression ``$\parallel \vec y$\,'' means ``is parallel to $\vec y$.'' We can use this notation to state ``$\vec x\parallel\vec y$\,'' which means ``$\vec x$ is parallel to $\vec y$.'' The expression ``$\perp \vec y$\,'' means ``is orthogonal to $\vec y$,'' and is used similarly.)
 
+\mnote{.6}{\textbf{Note:} The argument leading to Definition \ref{def:orthogonal_projection} is not quite a proof, since it depended on choices made in forming the diagram in Figure \ref{fig:dotpproj}. However, we can easily verify that the result in Key Idea \ref{idea:orthog_proj} is always valid: since
+\begin{align*}
+\vec v\cdot(\vec u - \proj uv) & = \dotp vu - \vec v\cdot\left(\frac{\dotp uv}{\norm{\vec{v}}^2}\vec{v}\right)\\
+& = \dotp vu -\frac{\dotp uv}{\dotp vv}(\dotp vv)\\
+& = \dotp vu - \dotp uv = 0
+\end{align*}
+for \textbf{any} vectors $\vec u$ and $\vec v\neq \vec 0$, we are guaranteed that the vector $u-\proj uv$ will always be orthogonal to $\vec v$.}
+
 \keyidea{idea:orthog_proj}{Orthogonal Decomposition of Vectors}
-{Let $\vec u$ and $\vec v$ be given. Then $\vec u$ can be written as the sum of two vectors, one of which is parallel to $\vec v$, and one of which is orthogonal to $\vec v$:
+{Let nonzero vectors $\vec u$ and $\vec v$ be given. Then $\vec u$ can be written as the sum of two vectors, one of which is parallel to $\vec v$, and one of which is orthogonal to $\vec v$:
 \index{orthogonal decomposition of vectors}\index{orthogonal!decomposition}\index{vectors!orthogonal decomposition}
-$$\vec u = \underbrace{\proj uv}_{\parallel\ \vec v}\ +\  (\underbrace{\vec u-\proj uv}_{\perp\ \vec v}).$$
+\[
+\vec u = \underbrace{\proj uv}_{\parallel\ \vec v}\ +\  (\underbrace{\vec u-\proj uv}_{\perp\ \vec v}).
+\]
 }
 
 We illustrate the use of this equality in the following example.\\
@@ -290,9 +375,14 @@ We illustrate the use of this equality in the following example.\\
 \end{enumerate}
 }
 {\begin{enumerate}
-	\item In Example \ref{ex_dotp4}, we found that $\proj uv = \la -1.5,-0.5\ra$. Let $$\vec z = \vec u - \proj uv = \la -2,1\ra - \la -1.5,-0.5\ra = \la-0.5, 1.5\ra.$$
+	\item In Example \ref{ex_dotp4}, we found that $\proj uv = \la -1.5,-0.5\ra$. Let 
+	\[
+	\vec z = \vec u - \proj uv = \la -2,1\ra - \la -1.5,-0.5\ra = \la-0.5, 1.5\ra.
+	\]
 	Is $\vec z$ orthogonal to $\vec v$\,? (I.e, is $\vec z \perp\vec v$\ ?) We check for orthogonality with the dot product:
-	$$\dotp zv = \la -0.5,1.5\ra \cdot \la 3,1\ra =0.$$
+	\[
+	\dotp zv = \la -0.5,1.5\ra \cdot \la 3,1\ra =0.
+	\]
 	Since the dot product is 0, we know $\vec z \perp \vec v$. Thus:
 	\begin{align*}
 	\vec u &= \proj uv\ +\ (\vec u - \proj uv) \\
@@ -300,8 +390,13 @@ We illustrate the use of this equality in the following example.\\
 	\end{align*}
 	
 	\item	We found in Example \ref{ex_dotp4} that $\proj wx = \la 2,2,2\ra$. Applying the Key Idea, we have:
-	$$\vec z = \vec w - \proj wx = \la 2,1,3\ra  - \la 2,2,2\ra = \la 0,-1,1\ra.$$ We check to see if $\vec z \perp \vec x$:
-	$$\dotp zx = \la 0,-1,1\ra \cdot \la 1,1,1\ra = 0.$$
+	\[
+	\vec z = \vec w - \proj wx = \la 2,1,3\ra  - \la 2,2,2\ra = \la 0,-1,1\ra.
+	\]
+	We check to see if $\vec z \perp \vec x$:
+	\[
+	\dotp zx = \la 0,-1,1\ra \cdot \la 1,1,1\ra = 0.
+	\]
 	Since the dot product is 0, we know the two vectors are orthogonal.
 	We now write $\vec w$ as the sum of two vectors, one parallel and one orthogonal to $\vec x$:
 	\begin{align*}
@@ -315,7 +410,7 @@ We illustrate the use of this equality in the following example.\\
 We give an example of where this decomposition is useful.\\
 
 \example{ex_dotp6}{Orthogonally decomposing a force vector}{
-Consider Figure \ref{fig:dotp6}(a), showing a box weighing 50lb on a ramp that rises 5ft over a span of 20ft. Find the components of force, and their magnitudes, acting on the box (as sketched in part (b) of the figure):
+Consider Figure \ref{fig:dotp6}(a), showing a box weighing 50 lb on a ramp that rises 5 ft over a span of 20 ft. Find the components of force, and their magnitudes, acting on the box (as sketched in part (b) of the figure):
 \mtable{.4}{Sketching the ramp and box in Example \ref{ex_dotp6}. Note: \textit{The vectors are not drawn to scale.}}{fig:dotp6}{%
 \begin{tabular}{c}
 \includegraphics{figures/figdotp6}\\
@@ -329,7 +424,7 @@ Consider Figure \ref{fig:dotp6}(a), showing a box weighing 50lb on a ramp that r
 	\item	orthogonal to the ramp.
 \end{enumerate}
 }
-{As the ramp rises 5ft over a horizontal distance of 20ft, we can represent the direction of the ramp with the vector $\vec r= \la 20,5\ra$. Gravity pulls down with a force of 50lb, which we represent with $\vec g = \la 0,-50\ra$. 
+{As the ramp rises 5 ft over a horizontal distance of 20 ft, we can represent the direction of the ramp with the vector $\vec r= \la 20,5\ra$. Gravity pulls down with a force of 50 lb, which we represent with $\vec g = \la 0,-50\ra$. 
 \begin{enumerate}
 	\item To find the force of gravity in the direction of the ramp, we compute $\proj gr$:
 	\begin{align*}
@@ -337,31 +432,30 @@ Consider Figure \ref{fig:dotp6}(a), showing a box weighing 50lb on a ramp that r
 					&=  \frac{-250}{425}\la 20,5\ra\\
 					&= \la -\frac{200}{17},-\frac{50}{17}\ra \approx \la -11.76,-2.94\ra.
 	\end{align*}
-	The magnitude of $\proj gr$ is $\norm{\proj gr} = 50/\sqrt{17} \approx 12.13\text{lb}$. Though the box weighs 50lb, a force of about 12lb is enough to keep the box from sliding down the ramp.
+	The magnitude of $\proj gr$ is $\norm{\proj gr} = 50/\sqrt{17} \approx 12.13\text{ lb}$. Though the box weighs 50 lb, a force of about 12 lb is enough to keep the box from sliding down the ramp.
 	
 	\item		To find the component $\vec z$ of gravity orthogonal to the ramp, we use Key Idea \ref{idea:orthog_proj}.
 	\begin{align*}
 	\vec z &= \vec g - \proj gr \\
 					&= \la \frac{200}{17},-\frac{800}{17}\ra \approx \la 11.76,-47.06\ra.
 	\end{align*}
-	The magnitude of this force is $\norm{\vec z} \approx 48.51$lb. In physics and engineering, knowing this force is important when computing things like static frictional force. (For instance, we could easily compute if the static frictional force alone was enough to keep the box from sliding down the ramp.)
+	The magnitude of this force is $\norm{\vec z} \approx 48.51$ lb. In physics and engineering, knowing this force is important when computing things like static frictional force. (For instance, we could easily compute if the static frictional force alone was enough to keep the box from sliding down the ramp.)
 \end{enumerate}
 \vskip-\baselineskip
-}\\
+}\pagebreak
 
 \noindent\textbf{\large Application to Work}\\
 
 In physics, the application of a force $F$ to move an object in a straight line a distance $d$ produces \emph{work}; the amount of work $W$ is $W=Fd$, (where $F$ is in the direction of travel). The orthogonal projection allows us to compute work when the force is not in the direction of travel.
-\pagebreak
 
 Consider Figure \ref{fig:dotpwork}, where a force $\vec F$ is being applied to an object moving in the direction of $\vec d$. (The distance the object travels is the magnitude of $\vec d$.) The work done is the amount of force in the direction of $\vec d$, $\norm{\proj Fd}$, times $\vnorm d$:
 \mfigure{.75}{Finding work when the force and direction of travel are given as vectors.}{fig:dotpwork}{figures/figdotpwork}
 
 \begin{align*}
 \norm{\proj Fd}\cdot\vnorm d &= \snorm{\frac{\dotp Fd}{\dotp dd}\vec d}\cdot \vnorm d \\
-		&= \left|\frac{\dotp Fd}{\vnorm d^2}\right|\cdot \vnorm d\cdot\vnorm d\\
-		&= \frac{\left|\dotp Fd\right|}{\vnorm d^2}\vnorm d^2\\
-		&= \left|\dotp Fd\right|.
+		&= \left\lvert\frac{\dotp Fd}{\vnorm d^2}\right\rvert\cdot \vnorm d\cdot\vnorm d\\
+		&= \frac{\left\lvert\dotp Fd\right\rvert}{\vnorm d^2}\vnorm d^2\\
+		&= \left\lvert\dotp Fd\right\rvert.
 \end{align*}
 
 The expression $\dotp Fd$ will be positive if the angle between $\vec F$ and $\vec d$ is acute; when the angle is obtuse (hence $\dotp Fd$ is negative), the force is causing motion in the opposite direction of $\vec d$, resulting in ``negative work.'' We want to capture this sign, so we drop the absolute value and find that $W = \dotp Fd$.
@@ -372,12 +466,14 @@ The expression $\dotp Fd$ will be positive if the angle between $\vec F$ and $\v
 }
 
 \example{ex_dotp7}{Computing work}{
-A man slides a box along a ramp that rises 3ft over a distance of 15ft by applying 50lb of force as shown in Figure \ref{fig:dotp7}. Compute the work done.}
+A man slides a box along a ramp that rises 3 ft over a distance of 15 ft by applying 50 lb of force as shown in Figure \ref{fig:dotp7}. Compute the work done.}
 {The figure indicates that the force applied makes a $30^\circ$ angle with the horizontal, so $\vec F = 50\la \cos 30^\circ,\sin 30^\circ\ra \approx \la 43.3,25\ra.$ The ramp is represented by $\vec d  = \la 15,3\ra$. The work done is simply
-$$\dotp Fd = 50\la \cos 30^\circ,\sin 30^\circ\ra \cdot \la 15,3\ra \approx 724.5 \text{ft--lb}.$$
+\[
+\dotp Fd = 50\la \cos 30^\circ,\sin 30^\circ\ra \cdot \la 15,3\ra \approx 724.5 \text{ ft--lb}.
+\]
 
-\mfigure{.4}{Computing work when sliding a box up a ramp in Example \ref{ex_dotp7}.}{fig:dotp7}{figures/figdotp7}
-Note how we did not actually compute the distance the object traveled, nor the magnitude of the force in the direction of travel; this is all inherently computed by the dot product!
+\mfigure{.35}{Computing work when sliding a box up a ramp in Example \ref{ex_dotp7}.}{fig:dotp7}{figures/figdotp7}
+Note how we did not actually compute the distance the object travelled, nor the magnitude of the force in the direction of travel; this is all inherently computed by the dot product!
 }\\
 
 The dot product is a powerful way of evaluating computations that depend on angles without actually using angles. The next section explores another ``product'' on vectors, the \emph{cross product.} Once again, angles play an important role, though in a much different way.

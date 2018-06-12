@@ -1,43 +1,33 @@
 \thispagestyle {empty}
 \contentsline {chapter}{Table of Contents}{iii}{Doc-Start}
 \contentsline {chapter}{Preface}{v}{section*.2}
-\contentsline {chapter}{\numberline {9}Curves in the Plane}{387}{chapter.9}
-\contentsline {section}{\numberline {9.1}Conic Sections}{387}{section.9.1}
-\contentsline {section}{\numberline {9.2}Parametric Equations}{400}{section.9.2}
-\contentsline {section}{\numberline {9.3}Calculus and Parametric Equations}{409}{section.9.3}
-\contentsline {section}{\numberline {9.4}Introduction to Polar Coordinates}{419}{section.9.4}
-\contentsline {section}{\numberline {9.5}Calculus and Polar Functions}{430}{section.9.5}
-\contentsline {chapter}{\numberline {10}Sequences and Series}{441}{chapter.10}
-\contentsline {section}{\numberline {10.1}Sequences}{441}{section.10.1}
-\contentsline {section}{\numberline {10.2}Infinite Series}{453}{section.10.2}
-\contentsline {section}{\numberline {10.3}Integral and Comparison Tests}{466}{section.10.3}
-\contentsline {section}{\numberline {10.4}Ratio and Root Tests}{474}{section.10.4}
-\contentsline {section}{\numberline {10.5}Alternating Series and Absolute Convergence}{479}{section.10.5}
-\contentsline {section}{\numberline {10.6}Power Series}{488}{section.10.6}
-\contentsline {section}{\numberline {10.7}Taylor Polynomials}{498}{section.10.7}
-\contentsline {section}{\numberline {10.8}Taylor Series}{508}{section.10.8}
+\contentsline {chapter}{\numberline {10}Sequences and Series}{449}{chapter.10}
+\contentsline {section}{\numberline {10.1}Sequences}{449}{section.10.1}
+\contentsline {section}{\numberline {10.2}Infinite Series}{461}{section.10.2}
+\contentsline {section}{\numberline {10.3}Integral and Comparison Tests}{473}{section.10.3}
+\contentsline {section}{\numberline {10.4}Ratio and Root Tests}{481}{section.10.4}
+\contentsline {section}{\numberline {10.5}Alternating Series and Absolute Convergence}{486}{section.10.5}
+\contentsline {section}{\numberline {10.6}Power Series}{495}{section.10.6}
+\contentsline {section}{\numberline {10.7}Taylor Polynomials}{505}{section.10.7}
+\contentsline {section}{\numberline {10.8}Taylor Series}{516}{section.10.8}
 \thispagestyle {empty}
-\contentsline {chapter}{\numberline {11}Vectors}{519}{chapter.11}
-\contentsline {section}{\numberline {11.1}Introduction to Cartesian Coordinates in Space}{519}{section.11.1}
-\contentsline {section}{\numberline {11.2}An Introduction to Vectors}{533}{section.11.2}
-\contentsline {section}{\numberline {11.3}The Dot Product}{544}{section.11.3}
-\contentsline {section}{\numberline {11.4}The Cross Product}{554}{section.11.4}
-\contentsline {section}{\numberline {11.5}Lines}{563}{section.11.5}
-\contentsline {section}{\numberline {11.6}Planes}{572}{section.11.6}
-\contentsline {chapter}{\numberline {12}Vector Valued Functions}{579}{chapter.12}
-\contentsline {section}{\numberline {12.1}Vector--Valued Functions}{579}{section.12.1}
-\contentsline {section}{\numberline {12.2}Calculus and Vector--Valued Functions}{585}{section.12.2}
-\contentsline {section}{\numberline {12.3}The Calculus of Motion}{596}{section.12.3}
-\contentsline {section}{\numberline {12.4}Unit Tangent and Normal Vectors}{607}{section.12.4}
-\contentsline {section}{\numberline {12.5}The Arc Length Parameter and Curvature}{614}{section.12.5}
-\contentsline {chapter}{\numberline {13}Functions of Several Variables}{623}{chapter.13}
-\contentsline {section}{\numberline {13.1}Introduction to Multivariable Functions}{623}{section.13.1}
-\contentsline {section}{\numberline {13.2}Limits and Continuity of Multivariable Functions}{629}{section.13.2}
-\contentsline {section}{\numberline {13.3}Partial Derivatives}{638}{section.13.3}
-\contentsline {section}{\numberline {13.4}Differentiability and the Total Differential}{648}{section.13.4}
-\contentsline {section}{\numberline {13.5}The Multivariable Chain Rule}{656}{section.13.5}
-\contentsline {section}{\numberline {13.6}Directional Derivatives}{662}{section.13.6}
-\contentsline {section}{\numberline {13.7}Tangent Lines, Normal Lines, and Tangent Planes}{670}{section.13.7}
-\contentsline {section}{\numberline {13.8}Extreme Values}{678}{section.13.8}
+\contentsline {chapter}{\numberline {11}Vectors}{527}{chapter.11}
+\contentsline {section}{\numberline {11.1}Introduction to Cartesian Coordinates in Space}{527}{section.11.1}
+\contentsline {section}{\numberline {11.2}An Introduction to Vectors}{541}{section.11.2}
+\contentsline {section}{\numberline {11.3}The Dot Product}{552}{section.11.3}
+\contentsline {section}{\numberline {11.4}The Cross Product}{563}{section.11.4}
+\contentsline {section}{\numberline {11.5}Lines}{575}{section.11.5}
+\contentsline {section}{\numberline {11.6}Planes}{587}{section.11.6}
+\contentsline {chapter}{\numberline {12}Vector Valued Functions}{595}{chapter.12}
+\contentsline {section}{\numberline {12.1}Vector--Valued Functions}{595}{section.12.1}
+\contentsline {section}{\numberline {12.2}Calculus and Vector--Valued Functions}{601}{section.12.2}
+\contentsline {section}{\numberline {12.3}The Calculus of Motion}{613}{section.12.3}
+\contentsline {section}{\numberline {12.4}Unit Tangent and Normal Vectors}{624}{section.12.4}
+\contentsline {section}{\numberline {12.5}The Arc Length Parameter and Curvature}{631}{section.12.5}
+\contentsline {chapter}{\numberline {13}Functions of Several Variables}{639}{chapter.13}
+\contentsline {section}{\numberline {13.1}Introduction to Multivariable Functions}{639}{section.13.1}
+\contentsline {section}{\numberline {13.2}Limits and Continuity of Multivariable Functions}{645}{section.13.2}
+\contentsline {section}{\numberline {13.3}Partial Derivatives}{654}{section.13.3}
+\contentsline {section}{\numberline {13.4}Tangent Lines, Normal Lines, and Tangent Planes}{664}{section.13.4}
 \contentsline {chapter}{\numberline {A}Solutions To Selected Problems}{A.1}{appendix.A}
-\contentsline {chapter}{Index}{A.17}{section*.216}
+\contentsline {chapter}{Index}{A.13}{section*.159}

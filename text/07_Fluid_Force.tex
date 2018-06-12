@@ -5,7 +5,9 @@ In the unfortunate situation of a car driving into a body of water, the conventi
 How can this be true? How much force does it take to open the door of a submerged car? In this section we will find the answer to this question by examining the forces exerted by fluids.
 
 We start with \textbf{pressure}, which is related to \textbf{force} by the following equations:
-$$\text{Pressure} = \frac{\text{Force}}{\text{Area}}\quad  \Leftrightarrow \quad\text{Force} = \text{Pressure}\times\text{Area}.$$
+\[
+\text{Pressure} = \frac{\text{Force}}{\text{Area}}\quad  \Leftrightarrow \quad\text{Force} = \text{Pressure}\times\text{Area}.
+\]
 In the context of fluids, we have the following definition.
 
 \definition{def:fluid_pressure}{Fluid Pressure}
@@ -16,23 +18,34 @@ We use this definition to find the \textbf{force} exerted on a horizontal sheet 
 
 \example{ex_fluid1}{Computing fluid force}{%
 	\begin{enumerate}
-	\item		A cylindrical storage tank has a radius of 2 ft and holds 10 ft of a fluid with a weight--density of 50 lb/ft$^3$. (See Figure \ref{fig:fluid1a}.) What is the force exerted on the base of the cylinder by the fluid?
-	\mfigure{.6}{A cylindrical tank in Example \ref{ex_fluid1}.}{fig:fluid1a}{figures/figfluid1a}
-	\item		A rectangular tank whose base is a 5 ft square has a circular hatch at the bottom with a radius of 2 ft. The tank holds 10 ft of a fluid with a weight--density of 50 lb/ft$^3$. (See Figure \ref{fig:fluid1b}.) What is the force exerted on the hatch by the fluid?
-	\mfigure{.35}{A rectangular tank in Example \ref{ex_fluid1}.}{fig:fluid1b}{figures/figfluid1b}
+	\item		A cylindrical storage tank has a radius of 2 ft and holds 10 ft of a fluid with a weight--density of 50 lb/ft$^3$. (See Figure \ref{fig:fluid1}(a).) What is the force exerted on the base of the cylinder by the fluid?
+	%\mfigure{.6}{A cylindrical tank in Example \ref{ex_fluid1}.}{fig:fluid1a}{figures/figfluid1a}
+	\item		A rectangular tank whose base is a 5 ft square has a circular hatch at the bottom with a radius of 2 ft. The tank holds 10 ft of a fluid with a weight--density of 50 lb/ft$^3$. (See Figure \ref{fig:fluid1}(b).) What is the force exerted on the hatch by the fluid?
+	%\mfigure{.35}{A rectangular tank in Example \ref{ex_fluid1}.}{fig:fluid1b}{figures/figfluid1b}
+	\mtable{.45}{The  cylindrical and rectangular tank in Example \ref{ex_fluid1}.}{fig:fluid1}{%
+	\begin{tabular}{c}
+	\myincludegraphics{figures/figfluid1a}\\
+	(a)\\[10pt]
+	\myincludegraphics{figures/figfluid1b}\\
+	(b)
+	\end{tabular}
+	}
 	\end{enumerate}
 }
 {\begin{enumerate}
 	\item	Using Definition \ref{def:fluid_pressure}, we calculate that the pressure exerted on the cylinder's base is $w\cdot d = 50 \text{ lb/ft}^3\times 10\text{ ft} = 500$ lb/ft$^2$. The area of the base is $\pi\cdot 2^2 = 4\pi$ ft$^2$. So the force exerted by the fluid is 
-	$$F = 500\times 4\pi = 6283\text{ lb}.$$
+\[
+F = 500\times 4\pi = 6283\text{ lb}.
+\]
 Note that we effectively just computed the \textit{weight} of the fluid in the tank.
+\enlargethispage{\baselineskip}
 
 	\item		The dimensions of the tank in this problem are irrelevant. All we are concerned with are the dimensions of the hatch and the depth of the fluid. Since the dimensions of the hatch are the same as the base of the tank in the previous part of this example, as is the depth, we see that the fluid force is the same. That is, $F = 6283$ lb. 
 	
 	A key concept to understand here is that we are effectively measuring the weight of a 10 ft column of water above the hatch. The size of the tank holding the fluid does not matter.
 \end{enumerate}
 \vskip-1.5\baselineskip
-}\\
+}\pagebreak
 
 The previous example demonstrates that computing the force exerted on a horizontally oriented plate is relatively easy to compute. What about a vertically oriented plate? For instance, suppose we have a circular porthole located on the side of a submarine. How do we compute the fluid force exerted on it?
 
@@ -42,7 +55,10 @@ So consider a vertically oriented plate as shown in Figure \ref{fig:fluid_intro1
 \mfigure{.4}{A thin, vertically oriented plate submerged in a fluid with weight--density $w$.}{fig:fluid_intro1}{figures/figfluid_intro1}
 
 Let the top of the plate be at depth $b$ and let the bottom be at depth $a$. (For now we assume that surface of the fluid is at depth 0, so if the bottom of the plate is 3 ft under the surface, we have $a=-3$. We will come back to this later.) We partition the interval $[a,b]$ into $n$ subintervals 
-$$ a = y_1 < y_2 < \cdots <y_{n+1} = b, $$ with the $i\,^\text{th}$ subinterval having length $\Delta y_i$. The force $F_i$ exerted on the plate in the $i\,^\text{th}$ subinterval is $F_i = \text{Pressure}\times \text{Area}.$
+\[
+ a = y_1 < y_2 < \cdots <y_{n+1} = b, 
+\]
+with the $i\,^\text{th}$ subinterval having length $\Delta y_i$. The force $F_i$ exerted on the plate in the $i\,^\text{th}$ subinterval is $F_i = \text{Pressure}\times \text{Area}.$
 
 The pressure is depth $\times w$. We approximate the depth of this thin strip by choosing any value $d_i$ in $[y_i,y_{i+1}]$; the depth is approximately $-d_i$. (Our convention has $d_i$ being a negative number, so $-d_i$ is positive.) For convenience, we let $d_i$ be an endpoint of the subinterval; we let $d_i = y_i$. 
 
@@ -52,15 +68,23 @@ F_i	&= \text{Pressure} \times \text{Area} \\
 		&=	-y_i\cdot w \times \ell(c_i)\cdot\Delta y_i.
 \end{align*}
 To approximate the total force, we add up the approximate forces on each of the $n$ thin strips:
-$$F = \sum_{i=1}^n F_i \approx \sum_{i=1}^n -w\cdot y_i\cdot\ell(c_i)\cdot\Delta y_i.$$ This is, of course, another Riemann Sum. We can find the exact force by taking a limit as the subinterval lengths go to 0; we evaluate this limit with a definite integral.
+\[
+F = \sum_{i=1}^n F_i \approx \sum_{i=1}^n -w\cdot y_i\cdot\ell(c_i)\cdot\Delta y_i.
+\]
+This is, of course, another Riemann Sum. We can find the exact force by taking a limit as the subinterval lengths go to 0; we evaluate this limit with a definite integral.
 
 \keyidea{idea:fluid_force}{Fluid Force on a Vertically Oriented Plate}
 {Let a vertically oriented plate be submerged in a fluid with weight--density $w$ where the top of the plate is at $y=b$ and the bottom is at $y=a$. Let $\ell(y)$ be the length of the plate at $y$.
 \index{fluid pressure/force}\index{integration!fluid force}
 	\begin{enumerate}
-	\item		If $y=0$ corresponds to the surface of the fluid, then the force exerted on the plate by the fluid is $$F=\int_a^b w\cdot(-y)\cdot\ell(y)\ dy.$$
+	\item		If $y=0$ corresponds to the surface of the fluid, then the force exerted on the plate by the fluid is 
+\[
+F=\int_a^b w\cdot(-y)\cdot\ell(y)\ dy.
+\]
 	\item		In general, let $d(y)$ represent the distance between the surface of the fluid and the plate at $y$. Then the force exerted on the plate by the fluid is 
-	$$F=\int_a^b w\cdot d(y)\cdot\ell(y)\ dy.$$
+\[
+F=\int_a^b w\cdot d(y)\cdot\ell(y)\ dy.
+\]
 	\end{enumerate}
 }
 
@@ -92,6 +116,7 @@ F	&=\int_0^4 62.4(10-y)(y)\ dy \\
 \end{enumerate}
 The correct answer is, of course, independent of the placement of the plate in the coordinate plane as long as we are consistent.
 }\\
+\enlargethispage{\baselineskip}
 
 \example{ex_fluid3}{Finding fluid force}{
 Find the total fluid force on a car door submerged up to the bottom of its window in water, where the car door is a rectangle 40'' long and 27'' high (based on the dimensions of a 2005 Fiat Grande Punto.)}
@@ -104,7 +129,7 @@ F &=	\int_{-2.25}^0 62.4(-y)10/3\ dy \\
 \end{align*}
 Most adults would find it very difficult to apply over 500 lb of force to a car door while seated inside, making the door effectively impossible to open. This  is  counter--intuitive as most assume that the door would be relatively easy to open. The truth is that it is not, hence the survival tips mentioned at the beginning of this section.
 \mfigure{.8}{Sketching a submerged car door in Example \ref{ex_fluid3}.}{fig:fluid3}{figures/figfluid3}
-}\\
+}\pagebreak
 
 \example{ex_fluid4}{Finding fluid force}{
 An underwater observation tower is being built with circular viewing portholes enabling visitors to see underwater life. Each vertically oriented porthole is to have a 3 ft diameter whose center is to be located 50 ft underwater. Find the total fluid force exerted on each porthole. Also, compute the fluid force on a horizontally oriented porthole that is under 50 ft of water.
@@ -118,12 +143,14 @@ F 		&= 62.4\int_{-1.5}^{1.5} 2(50-y)\sqrt{2.25-y^2}\ dy \\
 			&= 62.4\int_{-1.5}^{1.5} \big(100\sqrt{2.25-y^2} - 2y\sqrt{2.25-y^2}\big)\ dy \\
 			&= 6240\int_{-1.5}^{1.5} \big(\sqrt{2.25-y^2}\big)\ dy - 62.4\int_{-1.5}^{1.5} \big(2y\sqrt{2.25-y^2}\big)\ dy. \\
 \end{align*}			
-The second integral above can be evaluated using Substitution. Let $u=2.25-y^2$ with $du = -2y\,dy$. The new bounds are: $u(-1.5)=0$ and $u(1.5)=0$; the new integral will integrate from $u=0$ to $u=0$, hence the integral is 0.
+The second integral above can be evaluated using substitution. Let $u=2.25-y^2$ with $du = -2y\,dy$. The new bounds are: $u(-1.5)=0$ and $u(1.5)=0$; the new integral will integrate from $u=0$ to $u=0$, hence the integral is 0.
 
 The first integral above finds the area of half a circle of radius 1.5, thus the first integral evaluates to $6240\cdot\pi\cdot1.5^2/2 = 22,054$. Thus the total fluid force on a vertically oriented porthole is $22,054$ lb.
 
 Finding the force on a horizontally oriented porthole is more straightforward:
-$$F = \text{Pressure}\times\text{Area} = 62.4\cdot50\times \pi\cdot1.5^2 = 22,054\text{ lb}.$$
+\[
+F = \text{Pressure}\times\text{Area} = 62.4\cdot50\times \pi\cdot1.5^2 = 22,054\text{ lb}.
+\]
 That these two forces are equal is not coincidental; it turns out that the fluid force applied to a vertically oriented circle whose center is at depth $d$ is the same as force applied to a horizontally oriented circle at depth $d$.
 }\\
 
@@ -131,5 +158,6 @@ We end this chapter with a reminder of the true skills meant to be developed her
 
 What we are actually concerned with is the ability to solve certain problems by first approximating the solution, then refining the approximation, then recognizing if/when this refining process results in a definite integral through a limit. Knowing the formulas found inside the special boxes within this chapter is beneficial as it helps solve problems found in the exercises, and other mathematical skills are strengthened by properly applying these formulas. However, more importantly, understand how each of these formulas was constructed. Each is the result of a summation of approximations; each summation was a Riemann sum, allowing us to take a limit and find the exact answer through a definite integral. \\
 
+The next chapter addresses an entirely different topic: sequences and series. In short, a sequence is a list of numbers, where a series is the summation of a list of numbers. These seemingly--simple ideas lead to very powerful mathematics.
 
 \printexercises{exercises/07_06_exercises}

@@ -1,0 +1,631 @@
+
+\section{Transformations}
+\label{Transformations}
+
+In this section, we study how the graphs of functions change, or \textbf{transform}, when certain specialized modifications are made to their formulas. The transformations we will study fall into three broad categories:  shifts, reflections and scalings, and we will present them in that order.  Suppose that Figure \ref{fig:tran1} the complete graph of a function $f$.\index{transformations of function graphs}\index{function ! transformation of graphs}
+
+\mfigure{.7}{The graph of a function $f$}{fig:tran1}{figures/RelationsandFunctionsGraphics/Transformations-1}
+
+
+The Fundamental Graphing Principle for Functions says that for a point $(a,b)$ to be on the graph, $f(a) = b$.  In particular, we know $f(0) = 1$, $f(2)=3$, $f(4)=3$ and $f(5)=5$.  Suppose we wanted to graph the function defined by the formula $g(x) = f(x) + 2$.  Let's take a minute to remind ourselves of what $g$ is doing.  We start with an input $x$ to the function $f$ and we obtain the output $f(x)$.  The function $g$ takes the output $f(x)$ and adds $2$ to it.  In order to graph $g$, we need to graph the points $(x,g(x))$.  How are we to find the values for $g(x)$ without a formula for $f(x)$?  The answer is that we don't need a \textit{formula} for $f(x)$, we just need the \textit{values} of $f(x)$.  The values of $f(x)$ are the $y$ values on the graph of $y=f(x)$.  For example, using the points indicated on the graph of $f$, we can make the following table.
+
+\[ \begin{array}{|c||c|c|c|c|}  
+
+\hline
+
+ x & (x,f(x)) & f(x) & g(x)=f(x)+2 & (x, g(x)) \\ \hline
+0  & (0,1)& 1 & 3 &(0, 3) \\  \hline
+2 & (2,3) & 3 &  5 &(2,5) \\  \hline
+4 & (4,3) & 3 &  5 &(4, 5) \\  \hline
+5 & (5,5) & 5 &  7 &( 5 ,7) \\  \hline
+
+\end{array} \] 
+
+\smallskip
+
+In general, if $(a,b)$ is on the graph of $y=f(x)$, then $f(a) = b$, so $g(a) = f(a) +2 = b+2$.  Hence, $(a,b+2)$ is on the graph of $g$. In other words, to obtain the graph of $g$, we add $2$ to the $y$-coordinate of each point on the graph of $f$.  Geometrically, adding $2$ to the $y$-coordinate of a point moves the point $2$ units above its previous location.  Adding $2$ to every $y$-coordinate on a graph \textit{en masse} is usually described as `shifting the graph up $2$ units'.  Notice that the graph retains the same basic shape as before, it is just $2$ units above its original location.  In other words, we connect the four points we moved in the same manner in which they were connected before: see Figure \ref{fig:shiftupf}.
+
+\vskip10pt
+\noindent\hskip-45pt
+\begin{minipage}{\textwidth}
+\centering
+\begin{tabular}{ccccc}
+\myincludegraphics{figures/RelationsandFunctionsGraphics/Transformations-2}  &
+\hskip 15pt & 
+$\stackrel{\stackrel{\mbox{\scriptsize shift up $2$ units}}{\xrightarrow{\hspace{1in}}}}{\mbox{ \scriptsize add $2$ to each $y$-coordinate}} $ &
+\hskip 15pt & 
+\myincludegraphics{figures/RelationsandFunctionsGraphics/Transformations-3} \\ 
+$y=f(x)$ & &  & & $y=g(x) = f(x)+2$
+\end{tabular}
+\captionsetup{type=figure}
+\caption{Shifting the graph of $f$ up by 2 units}\label{fig:shiftupf}
+\end{minipage}
+
+\medskip
+ 
+You'll note that the domain of $f$ and the domain of $g$ are the same, namely $[0,5]$, but that the range of $f$ is $[1,5]$ while the range of $g$ is $[3,7]$.  In general, shifting a function vertically like this will leave the domain unchanged, but could very well affect the range.  You can easily imagine what would happen if we wanted to graph the function $j(x) = f(x) - 2$.  Instead of adding $2$ to each of the $y$-coordinates on the graph of $f$, we'd be subtracting $2$.  Geometrically, we would be moving the graph down $2$ units.  We leave it to the reader to verify that the domain of $j$ is the same as $f$, but the range of $j$ is $[-1,3]$.  What we have discussed is generalized in the following theorem.
+
+\smallskip
+
+\theorem{vshifts}{Vertical Shifts}{
+\index{graph ! vertical shift} Suppose $f$ is a function and $k$ is a positive number. 
+
+\begin{itemize}
+
+\item To graph $y=f(x)+k$, shift the graph of $y=f(x)$ up $k$ units by adding $k$ to the $y$-coordinates of the points on the graph of $f$.
+
+\item To graph $y=f(x)-k$, shift the graph of $y=f(x)$ down $k$ units by subtracting $k$ from the $y$-coordinates of the points on the graph of $f$.
+
+\end{itemize}
+}
+
+\smallskip
+
+The key to understanding Theorem \ref{vshifts} and, indeed, all of the theorems in this section comes from an  understanding of the Fundamental Graphing Principle for Functions.  If $(a,b)$ is on the graph of $f$, then $f(a) = b$.  Substituting $x=a$ into the equation  $y=f(x)+k$ gives $y=f(a)+k = b+k$.  Hence, $(a,b+k)$ is on the graph of $y=f(x)+k$, and we have the result.  In the language of `inputs' and `outputs', Theorem \ref{vshifts} can be paraphrased as ``Adding to, or subtracting from, the \textit{output} of a function causes the graph to shift up or down, respectively.''   So what happens if we add to or subtract from the \textit{input} of the function?  
+
+\smallskip
+
+Keeping with the graph of $y=f(x)$ above, suppose we wanted to graph $g(x) = f(x+2)$.  In other words, we are looking to see what happens when we add $2$ to the input of the function  Let's try to generate a table of values of $g$ based on those we know for $f$.  We quickly find that we run into some difficulties.
+
+\mnote{.3}{We have spent a lot of time in this text showing you that $f(x+2)$ and $f(x)+2$ are, in general, wildly different algebraic animals.   We will see momentarily that their geometry is also dramatically different.}
+
+\[ \begin{array}{|c||c|c|c|c|}  
+
+\hline
+
+x & (x,f(x)) & f(x)& g(x)=f(x+2) & (x, g(x)) \\ \hline
+0  & (0,1)& 1 & f(0+2) = f(2) = 3   &(0, 3) \\  \hline
+2 & (2,3) & 3 & f(2+2) = f(4) = 3  &(2,3) \\  \hline
+4 & (4,3) & 3 &  f(4+2) = f(6) = ? &  \\  \hline
+5 & (5,5) & 5 & f(5+2) = f(7) = ?  &  \\  \hline
+
+\end{array} \] 
+
+When we substitute $x=4$ into the formula $g(x)=f(x+2)$, we are asked to find $f(4+2)=f(6)$ which doesn't exist because the domain of $f$ is only $[0,5]$.  The same thing happens when we attempt to find $g(5)$.  What we need here is a new strategy.  We know, for instance, $f(0) = 1$.  To determine the corresponding point on the graph of $g$, we need to figure out what value of $x$ we must substitute into $g(x) = f(x+2)$ so that the quantity $x+2$, works out to be $0$.  Solving $x+2=0$ gives $x=-2$, and $g(-2) = f((-2)+2) = f(0) = 1$ so  $(-2,1)$ is on the graph of $g$.  To use the fact $f(2) = 3$, we set $x+2 = 2$ to get $x=0$. Substituting gives $g(0) = f(0+2) = f(2) = 3$.  Continuing in this fashion, we get  \[ \begin{array}{|r||c|c|c|}  
+
+\hline
+
+x & x+2 & g(x)=f(x+2) & (x, g(x)) \\ \hline
+-2 & 0 & g(-2)=f(0) = 1   &(-2, 1) \\  \hline
+0 &  2 &  g(0)=f(2) = 3  &(0,3) \\  \hline
+2 & 4  & g(2)=f(4) = 3 &  (2,3)\\  \hline
+3 & 5 & g(3)=f(5) = 5  & (3,5) \\  \hline
+
+\end{array} \] 
+
+In summary, the points $(0,1)$, $(2,3)$, $(4,3)$ and $(5,5)$ on the graph of $y=f(x)$ give rise to the points  $(-2,1)$, $(0,3)$, $(2,3)$ and $(3,5)$ on the graph of $y=g(x)$, respectively.  In general, if $(a,b)$ is on the graph of $y=f(x)$, then $f(a) = b$.  Solving $x+2 = a$ gives $x = a-2$ so that $g(a-2) = f((a-2)+2) = f(a) = b$.  As such, $(a-2,b)$ is on the graph of $y=g(x)$. The point $(a-2,b)$ is exactly $2$ units to the \emph{left} of the point $(a,b)$ so the graph of $y=g(x)$ is obtained by shifting the graph $y=f(x)$ to the left $2$ units, as pictured below.
+
+\vskip10pt
+\noindent\hskip-110pt
+\begin{minipage}{1.3\textwidth}
+\centering
+\begin{tabular}{ccccc}
+\myincludegraphics{figures/RelationsandFunctionsGraphics/Transformations-4}  &
+\hskip 15pt & 
+$\stackrel{\stackrel{\mbox{\scriptsize shift left $2$ units}}{\xrightarrow{\hspace{1in}}}}{\mbox{ \scriptsize subtract $2$ from each $x$-coordinate}} $ &
+\hskip 15pt & 
+\myincludegraphics{figures/RelationsandFunctionsGraphics/Transformations-5} \\ 
+$y=f(x)$ & &  & & $y=g(x)=f(x+2)$
+\end{tabular}
+\captionsetup{type=figure}
+\caption{Shifting the graph of $f$ left by 2 units}\label{fig:shiftleftf}
+\end{minipage}
+
+\medskip
+
+Note that while the ranges of $f$ and $g$ are the same, the domain of $g$ is $[-2,3]$ whereas the domain of $f$ is $[0,5]$.  In general, when we shift the graph horizontally, the range will remain the same, but the domain could change.  If we set out to graph $j(x) = f(x-2)$, we would find ourselves \textit{adding} $2$ to all of the $x$ values of the points on the graph of $y=f(x)$ to effect a shift to the \emph{right} $2$ units. Generalizing these notions produces the following result.
+
+\smallskip
+
+\theorem{hshifts}{Horizontal Shifts}{
+\index{graph ! horizontal shift}  Suppose $f$ is a function and $h$ is a positive number. 
+
+\begin{itemize}
+
+\item To graph $y=f(x+h)$, shift the graph of $y=f(x)$ left $h$ units by subtracting $h$ from the $x$-coordinates of the points on the graph of $f$.
+
+\item To graph $y=f(x-h)$, shift the graph of $y=f(x)$ right $h$ units by adding $h$ to the $x$-coordinates of the points on the graph of $f$.
+
+\end{itemize}
+}
+
+\smallskip
+
+In other words,  Theorem \ref{hshifts} says that adding to or subtracting from the  \textit{input} to a function amounts to shifting the graph left or right, respectively.  Theorems \ref{vshifts} and \ref{hshifts} present a theme which will run common throughout the section:  changes to the outputs from a function affect the $y$-coordinates of the graph, resulting in some kind of vertical change;  changes to the inputs to a function affect the $x$-coordinates of the graph, resulting in some kind of horizontal change.
+
+\medskip
+
+\example{transformationex1}{Transforming with vertical and horizontal shifts}{
+
+\begin{enumerate}
+
+\item  Graph $f(x) = \sqrt{x}$.  Plot at least three points. 
+
+\item  Use your graph in 1 to graph $g(x) = \sqrt{x}-1$. 
+
+\item  Use your graph in 1 to graph  $j(x) = \sqrt{x-1}$.
+
+\item  Use your graph in 1 to graph $m(x) = \sqrt{x+3} - 2$. 
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item  Owing to the square root, the domain of $f$ is $x \geq 0$, or $[0,\infty)$.  We choose perfect squares to build our table and graph below.  From the graph we verify the domain of $f$ is $[0,\infty)$ and the range of $f$ is also $[0, \infty)$. The original function is plotted in Figure \ref{fig:origf}
+
+\mtable{.8}{The graph $y=f(x)=\sqrt{x}$}{fig:origf}{
+\begin{tabular}{|c||c|c|}
+\hline
+$x$ & $f(x)$ & $(x,f(x))$ \\ \hline
+0  & 0& $(0,0)$  \\  \hline
+1 & 1 & $(1,1)$  \\  \hline
+4 & 2 & $(4,2)$  \\  \hline
+\end{tabular}\\
+
+\bigskip
+
+\myincludegraphics{figures/RelationsandFunctionsGraphics/Transformations-6}
+}
+
+\item The domain of $g$ is the same as the domain of $f$, since the only condition on both functions is that $x \geq 0$.  If we compare the formula for $g(x)$ with $f(x)$, we see that $g(x) = f(x) - 1$.  In other words, we have subtracted $1$ from the output of the function $f$. By Theorem \ref{vshifts}, we know that in order to graph $g$, we shift the graph of $f$ down one unit by subtracting $1$ from each of the $y$-coordinates of the points on the graph of $f$.  Applying this to the three points we have specified on the graph, we move $(0,0)$ to $(0,-1)$, $(1,1)$ to $(1,0)$, and $(4,2)$ to $(4,1)$.  The rest of the points follow suit, and we connect them with the same basic shape as before. We confirm the domain of $g$ is $[0, \infty)$ and find the range of $g$ to be $[-1, \infty)$. The graph of $g$ is given in Figure \ref{fig:transeg1-1}.
+
+\mtable{.62}{Graphing $g(x)=\sqrt{x}-1$}{fig:transeg1-1}{
+\myincludegraphics{figures/RelationsandFunctionsGraphics/Transformations-8}}
+
+
+\item  Solving $x-1 \geq 0$ gives $x \geq 1$, so the domain of $j$ is $[1,\infty)$.  To graph $j$, we note that $j(x) = f(x-1)$.  In other words, we are subtracting $1$ from the \textit{input} of $f$.  According to Theorem \ref{hshifts}, this induces a shift to the right of the graph of $f$.  We add $1$ to the $x$-coordinates of the points on the graph of $f$ and get the result below.  The graph reaffirms that the domain of $j$ is  $[1,\infty)$ and tells us that the range of $j$ is $[0,\infty)$.
+
+\mtable{.47}{Graphing $j(x)=\sqrt{x}-1$}{fig:transeg1-2}{
+\myincludegraphics{figures/RelationsandFunctionsGraphics/Transformations-10}}
+
+
+\item  To find the domain of $m$, we solve $x+3 \geq 0$ and get $[-3, \infty)$.  Comparing the formulas of $f(x)$ and $m(x)$, we have $m(x) = f(x+3) - 2$.  We have $3$ being added to an input, indicating a horizontal shift,  and $2$ being subtracted from an output, indicating a vertical shift. We leave it to the reader to verify that, in this particular case, the order in which we perform these transformations is immaterial;  we will arrive at the same graph regardless as to which transformation we apply first. (We shall see in the next example that order is  generally important when applying more than one transformation to a graph.) We follow the convention `inputs first', and to that end we first tackle the horizontal shift.  Letting $m_{1}(x) = f(x+3)$ denote this intermediate step,  Theorem \ref{hshifts} tells us that the graph of $y=m_{1}(x)$ is the graph of $f$ shifted to the left $3$ units. Hence, we subtract $3$ from each of the $x$-coordinates of the points on the graph of $f$.  
+
+\mtable{.32}{Graphing $m_1(x)=\sqrt{x+3}$}{fig:transeg1-3}{
+\myincludegraphics{figures/RelationsandFunctionsGraphics/Transformations-12}}
+
+Since $m(x) = f(x+3)-2$ and $f(x+3) = m_{1}(x)$, we have $m(x) = m_{1}(x) - 2$.  We can apply  Theorem \ref{vshifts} and obtain the graph of $m$ by subtracting $2$ from the $y$-coordinates of each of the points on the graph of $m_{1}(x)$.  The graph verifies that the domain of $m$ is $[-3, \infty)$ and we find the range of $m$ to be $[-2, \infty)$.    
+
+\mtable{.17}{Graphing $m(x)=\sqrt{x+3}-2$}{fig:transeg1-4}{
+\myincludegraphics{figures/RelationsandFunctionsGraphics/Transformations-14}}
+
+\end{enumerate}
+
+Keep in mind that we can check our answer to any of these kinds of problems by showing that any of the points we've moved lie on the graph of our final answer.  For example, we can check that $(-3,-2)$ is on the graph of $m$ by computing  $m(-3) = \sqrt{(-3)+3} - 2 = \sqrt{0}-2 = -2\, \checkmark$
+}
+
+\pagebreak
+
+We now turn our attention to reflections. We know from Section \ref{CartesianPlane} that to reflect a point $(x,y)$ across the $x$-axis, we replace $y$ with $-y$.  If $(x,y)$ is on the graph of $f$, then $y=f(x)$, so replacing $y$ with $-y$ is the same as replacing $f(x)$ with $-f(x)$.  Hence, the graph of $y=-f(x)$ is the graph of $f$ reflected across the $x$-axis.  Similarly, the graph of $y=f(-x)$ is the graph of $f$ reflected across the $y$-axis.   Returning to the language of inputs and outputs, multiplying the output from a function by $-1$ reflects its graph across the $x$-axis, while multiplying the input to a function by $-1$ reflects the graph across the $y$-axis. 
+
+\smallskip
+
+\theorem{reflections}{Reflections}{
+\index{graph ! reflection about an axis}\index{reflection ! of a function graph}  Suppose $f$ is a function. 
+
+\begin{itemize}
+
+\item To graph $y=-f(x)$, reflect the graph of $y=f(x)$ across the $x$-axis by multiplying the $y$-coordinates of the points on the graph of $f$ by $-1$.
+
+\item To graph $y=f(-x)$, reflect the graph of $y=f(x)$ across the $y$-axis by multiplying the $x$-coordinates of the points on the graph of $f$ by $-1$.
+
+\end{itemize}
+}
+
+\smallskip
+
+\mnote{.65}{The expressions $-f(x)$ and $f(-x)$ should look familiar - they are the quantities we used in Section \ref{GraphsofFunctions} to test if a function was even, odd or neither.  The interested reader is invited to explore the role of reflections and symmetry of functions.  What happens if you reflect an even function across the $y$-axis?  What happens if you reflect an odd function across the $y$-axis?   What about the $x$-axis?}  
+
+Applying Theorem \ref{reflections} to the graph of $y=f(x)$ given at the beginning of the section, we can graph $y=-f(x)$ by reflecting the graph of $f$ about the $x$-axis:
+
+\vskip10pt
+\noindent\ifthenelse{\isodd{\thepage}}{}{\hskip-60pt}
+\begin{minipage}{\textwidth}
+\centering
+\begin{tabular}{ccccc}
+\myincludegraphics{figures/RelationsandFunctionsGraphics/Transformations-15}  &
+\hskip 15pt & 
+$\stackrel{\stackrel{\mbox{\scriptsize reflect across $x$-axis}}{\xrightarrow{\hspace{1in}}}}{\mbox{ \scriptsize multiply each $y$-coordinate by $-1$}} $ &
+\hskip 15pt & 
+\myincludegraphics{figures/RelationsandFunctionsGraphics/Transformations-16} \\ 
+$y=f(x)$ & &  & & $y=-f(x)$
+\end{tabular}
+\captionsetup{type=figure}
+\caption{Reflecting the graph of $f$ across the $x$-axis}\label{fig:reflectx}
+\end{minipage}
+
+\medskip
+
+By reflecting the graph of $f$ across the $y$-axis, we obtain the graph of $y=f(-x)$:
+
+\vskip10pt
+\noindent\ifthenelse{\isodd{\thepage}}{\hskip-160pt}{}
+\begin{minipage}{\textwidth}
+\centering
+\begin{tabular}{ccccc}
+\myincludegraphics{figures/RelationsandFunctionsGraphics/Transformations-17}  &
+\hskip 15pt & 
+$\stackrel{\stackrel{\mbox{\scriptsize reflect across $y$-axis}}{\xrightarrow{\hspace{1in}}}}{\mbox{ \scriptsize multiply each $x$-coordinate by $-1$}} $ &
+\hskip 15pt & 
+\myincludegraphics{figures/RelationsandFunctionsGraphics/Transformations-18} \\ 
+$y=f(x)$ & &  & & $y=f(-x)$
+\end{tabular}
+\captionsetup{type=figure}
+\caption{Reflecting the graph of $f$ across the $y$-axis}\label{fig:reflecty}
+\end{minipage}
+
+\medskip
+
+With the addition of reflections, it is now more important than ever to consider the order of transformations, as the next example illustrates.
+
+\medskip
+
+\example{ex_reflecteg}{Graphing reflections}{Let $f(x) = \sqrt{x}$.  Use the graph of $f$ from Example \ref{transformationex1} to graph the following functions.  Also, state their domains and ranges.
+
+\mfigure{.65}{The graph $y=f(x)$ from Example \ref{transformationex1}}{fig:sqrtagain}{figures/RelationsandFunctionsGraphics/Transformations-19}
+
+\begin{multicols}{3}
+\begin{enumerate}
+
+\item  $g(x) = \sqrt{-x}$
+\item  $j(x) = \sqrt{3-x}$
+\item  $m(x) = 3 - \sqrt{x}$
+
+\end{enumerate}
+\end{multicols}
+}
+{
+\begin{enumerate}
+
+\item  The mere sight of $\sqrt{-x}$ usually causes alarm, if not panic.  When we discussed domains in Section \ref{FunctionNotation}, we clearly banished negatives from the radicands of even roots.  However, we must remember that $x$ is a variable, and as such, the quantity $-x$ isn't always negative. For example, if $x=-4$, $-x = 4$, thus $\sqrt{-x} = \sqrt{-(-4)} = 2$ is perfectly well-defined.  To find the domain analytically, we set $-x \geq 0$ which gives  $x \leq 0$, so that the domain of $g$ is $(-\infty, 0]$.  Since $g(x) = f(-x)$, Theorem \ref{reflections} tells us that the graph of $g$ is the reflection of the graph of $f$ across the $y$-axis.  We accomplish this by multiplying each $x$-coordinate on the graph of $f$ by $-1$, so that the points $(0,0)$, $(1,1)$, and $(4,2)$ move to $(0,0)$, $(-1,1)$, and $(-4,2)$, respectively.  Graphically, we see that the domain of $g$ is $(-\infty, 0]$ and the range of $g$ is the same as the range of $f$, namely $[0,\infty)$.
+
+\mfigure{.5}{Reflecting $y=f(x)$ across the $y$-axis to obtain the graph of $g(x)=\sqrt{-x}$}{fig:reflecteg1}{figures/RelationsandFunctionsGraphics/Transformations-20}
+
+\mfigure{.35}{The intermediate function $j_1(x)=f(x+3)$}{fig:reflecteg2}{figures/RelationsandFunctionsGraphics/Transformations-22}
+
+\mfigure{.2}{Reflecting $y=j_1(x)$ across the $y$-axis to obtain the graph of $j(x)=\sqrt{3-x}$}{fig:reflecteg3}{figures/RelationsandFunctionsGraphics/Transformations-24}
+
+If we had done the reflection first, then $j_{1}(x) = f(-x)$.  Following this by a shift left would give us $j(x) = j_{1}(x+3) = f(-(x+3)) = f(-x-3) = \sqrt{-x-3}$ which isn't what we want.  However, if we did the reflection first and followed it by a shift to the right $3$ units, we would have arrived at the function $j(x)$.  We leave it to the reader to verify the details.
+
+\item  To determine the domain of  $j(x) = \sqrt{3-x}$, we solve $3-x \geq 0$ and get $x \leq 3$, or $(-\infty, 3]$.  To determine which transformations we need to apply to the graph of $f$ to obtain the graph of $j$, we rewrite $j(x) = \sqrt{-x+3} = f(-x+3)$. Comparing this formula with $f(x) = \sqrt{x}$, we see that not only are we multiplying the input $x$ by $-1$, which results in a reflection across the $y$-axis, but also we are adding $3$, which indicates a horizontal shift to the left.  Does it matter in which order we do the transformations?  If so, which order is the correct order?  Let's consider the point $(4,2)$ on the graph of $f$.  We refer to the discussion leading up to Theorem \ref{hshifts}.  We know $f(4) = 2$ and wish to find the point on $y=j(x) = f(-x+3)$ which corresponds to $(4,2)$.  We set $-x+3 = 4$ and solve.  Our first step is to subtract $3$ from both sides to get $-x=1$.  Subtracting $3$ from the $x$-coordinate $4$ is shifting the point $(4,2)$ to the left.   From $-x=1$, we then multiply both sides by $-1$ to get $x=-1$.  Multiplying the $x$-coordinate by $-1$ corresponds to reflecting the point about the $y$-axis.  Hence, we perform the horizontal shift first, then follow it with the reflection about the $y$-axis.  Starting with $f(x) = \sqrt{x}$, we let $j_{1}(x)$ be the intermediate function which shifts the graph of $f$ $3$ units to the left, $j_{1}(x) = f(x+3)$. 
+
+To obtain the function $j$, we reflect the graph of $j_{1}$ about $y$-axis.   Theorem \ref{reflections} tells us we have $j(x) = j_{1}(-x)$. Putting it all together, we have $j(x) = j_{1}(-x) = f(-x+3) = \sqrt{-x+3}$, which is what we want. From the graph, we confirm the domain of $j$ is $(-\infty, 3]$ and we get that the range is $[0, \infty)$.
+
+
+
+\item  The domain of $m$ works out to be the domain of $f$, $[0, \infty)$.  Rewriting $m(x) = -\sqrt{x} + 3$, we see $m(x) = -f(x) + 3$.  Since we are multiplying the output of $f$ by $-1$ and then adding $3$, we once again have two transformations to deal with:  a reflection across the $x$-axis and a vertical shift.  To determine the correct order in which to apply the transformations, we imagine trying to determine the point on the graph of $m$ which corresponds to $(4,2)$ on the graph of $f$.  Since in the formula for $m(x)$, the input to $f$ is just $x$, we substitute to find  $m(4) = -f(4)+3 = -2+3=1$.  Hence, $(4,1)$ is the corresponding point on the graph of $m$. If we closely examine the arithmetic, we see that we first multiply $f(4)$ by $-1$, which corresponds to the reflection across the $x$-axis, and then we add $3$, which corresponds to the vertical shift.  If we define an intermediate function $m_{1}(x) = -f(x)$ to take care of the reflection, we get the graph in Figure \ref{fig:reflecteg4}.
+
+\mfigure{.82}{Reflecting $y=f(x)$ across the $x$-axis to obtain the graph of $m_1(x)=-\sqrt{x}$}{fig:reflecteg4}{figures/RelationsandFunctionsGraphics/Transformations-26}
+
+To shift the graph of $m_{1}$ up $3$ units, we set $m(x) = m_{1}(x)+3$.  Since $m_{1}(x) = -f(x)$, when we put it all together, we get $m(x) = m_{1}(x)+3 = -f(x) + 3 = -\sqrt{x}+3$.   We see from the graph that the range of $m$ is $(-\infty, 3]$.
+
+\mfigure{.62}{Shifting $y=m_1(x)$ up by three units to obtain the graph of $m(x)=3-\sqrt{x}$}{fig:reflecteg5}{figures/RelationsandFunctionsGraphics/Transformations-28}
+
+\end{enumerate}
+}
+
+\medskip
+
+We now turn our attention to our last class of transformations known as \textbf{scalings}.  A thorough discussion of scalings can get complicated because they are not as straight-forward as the previous transformations.  A quick review of what we've covered so far, namely vertical shifts, horizontal shifts and reflections, will show you why those transformations are known as \index{transformation ! rigid}\textbf{rigid transformations}.  Simply put, they do not change the \emph{shape} of the graph, only its position and orientation in the plane.  If, however, we wanted to make a new graph twice as tall as a given graph, or one-third as wide, we would be changing the shape of the graph. This type of transformation is called \textbf{non-rigid}\index{transformation ! non-rigid} for obvious reasons.  Not only will it be important for us to differentiate between modifying inputs versus outputs, we must also pay close attention to the magnitude of the changes we make.  As you will see shortly, the Mathematics turns out to be easier than the associated grammar.
+
+\smallskip
+
+Suppose we wish to graph the function $g(x) =2 f(x)$ where $f(x)$ is the function whose graph is given in Figure \ref{fig:tran1} the beginning of the section. From its graph, we can build a table of values for $g$ as before: 
+
+\begin{center}
+\begin{tabular}{|c||c|c|c|c|}  
+
+\hline
+
+ $x$ & $(x,f(x))$ & $f(x)$ & $g(x)=2f(x)$ & $(x, g(x))$ \\ \hline
+0 & $(0,1)$ & 1 &  2 &$(0, 2)$ \\  \hline
+2 & $(2,3)$ & 3 &  6 &$(2,6)$ \\  \hline
+4 & $(4,3)$ & 3 &  6 &$(4, 6)$ \\  \hline
+5 & $(5,5)$ & 5 &  10&$( 5 ,10)$ \\  \hline
+\end{tabular}
+\end{center}
+
+\mtable{.3}{Graphing $g(x) = 2f(x)$}{fig:scalef}{
+\begin{tabular}{c}
+\myincludegraphics{figures/RelationsandFunctionsGraphics/Transformations-29}\\
+$y=f(x)$\\
+\\
+ \myincludegraphics{figures/RelationsandFunctionsGraphics/Transformations-31}\\
+ $y=2f(x)=g(x)$
+\end{tabular}
+}
+
+In general, if $(a,b)$ is on the graph of $f$, then $f(a) = b$ so that $g(a) = 2 f(a) = 2b$ puts $(a,2b)$ on the graph of $g$.  In other words, to obtain the graph of $g$, we multiply all of the $y$-coordinates of the points on the graph of $f$ by $2$.  Multiplying all of the $y$-coordinates of all of the points on the graph of $f$ by $2$ causes what is known as a `vertical scaling (or `vertical stretching', or `vertical expansion' or `vertical dilation') by a factor of $2$', and the results are given in Figure \ref{fig:scalef} 
+
+If we wish to graph $y = \frac{1}{2} f(x)$, we multiply the all of the $y$-coordinates of the points on the graph of $f$ by $\frac{1}{2}$.  This creates a `vertical scaling  by a factor of $\frac{1}{2}$' (also called `vertical shrinking', `vertical compression' or `vertical contraction' by a factor of $2$) as seen in Figure \ref{fig:scalefhalf}
+
+
+
+These results are generalized in the following theorem.
+
+\smallskip
+
+\theorem{vscalings}{Vertical Scalings}{
+\index{graph ! vertical scaling}  Suppose $f$ is a function and $a>0$.  To graph $y=a f(x)$, multiply all of the $y$-coordinates of the points on the graph of $f$ by $a$.  We say the graph of $f$ has been vertically scaled by a factor of $a$. 
+
+\begin{itemize}
+
+\item If $a > 1$, we say the graph of $f$ has undergone a vertical stretching (expansion, dilation) by a factor of $a$. 
+
+\item If $0 < a < 1$, we say the graph of $f$ has undergone a vertical shrinking (compression, contraction) by a factor of $\frac{1}{a}$.
+
+\end{itemize}
+}
+
+\mfigure{.8}{Vertical scaling by  $\frac{1}{2}$}{fig:scalefhalf}{figures/RelationsandFunctionsGraphics/Transformations-33}
+
+\smallskip
+
+\mtable{.35}{The effect of horizontal scaling on a graph}{fig:graphscale}{
+\begin{tabular}{c}
+\myincludegraphics{figures/RelationsandFunctionsGraphics/Transformations-34}\\
+The graph $y=f(x)$ from Figure \ref{fig:tran1}\\
+\\
+\myincludegraphics{figures/RelationsandFunctionsGraphics/Transformations-35}\\
+The graph $y=g(x)=f(2x)$\\
+\\
+\myincludegraphics{figures/RelationsandFunctionsGraphics/Transformations-37}\\
+The graph $y=h(x)=f(\frac{1}{2}x)$
+\end{tabular}
+}
+
+A few remarks about Theorem \ref{vscalings} are in order.  First, a note about the verbiage.  To the authors, the words `stretching', `expansion', and `dilation' all indicate something getting bigger.  Hence, `stretched by a factor of $2$' makes sense if we are scaling something by multiplying it by $2$.  Similarly, we believe words like `shrinking', `compression' and `contraction' all indicate something getting smaller, so if we scale something by a factor of $\frac{1}{2}$, we would say it `shrinks by a factor of $2$' - not `shrinks by a factor of $\frac{1}{2}$'.  This is why we have written the descriptions `stretching by a factor of $a$' and `shrinking by a factor of $\frac{1}{a}$' in the statement of the theorem.  Second, in terms of inputs and outputs, Theorem \ref{vscalings} says multiplying the \textit{outputs} from a function by positive number $a$ causes the graph to be vertically scaled by a factor of $a$.  It is natural to ask what would happen if we multiply the \textit{inputs} of a function by a positive number.  This leads us to our last transformation of the section.
+
+\smallskip
+
+Referring to the graph of $f$ given at the beginning of this section, suppose we want to graph $g(x) = f(2x)$.  In other words, we are looking to see what effect multiplying the inputs to $f$ by $2$ has on its graph.  If we attempt to build a table directly, we quickly run into the same problem we had in our discussion leading up to Theorem \ref{hshifts}, as seen in the table below.  
+\[
+\begin{array}{|c||c|c|c|c|}  
+
+\hline
+
+x & (x,f(x)) & f(x)& g(x)=f(2x) & (x, g(x)) \\ \hline
+0  & (0,1)& 1 & f(2 \cdot 0) = f(0) = 1   &(0, 1) \\  \hline
+2 & (2,3) & 3 & f(2\cdot2) = f(4) = 3  &(2,3) \\  \hline
+4 & (4,3) & 3 &  f(2 \cdot 4) = f(8) = ? &  \\  \hline
+5 & (5,5) & 5 & f(2 \cdot 5) = f(10) = ?  &  \\  \hline
+
+\end{array}
+\]
+
+We solve this problem in the same way we solved this problem before.  For example, if we want to determine the point on $g$ which corresponds to the point $(2,3)$ on the graph of $f$,  we set $2x =2 $ so that $x=1$.  Substituting $x=1$ into $g(x)$, we obtain $g(1) = f(2 \cdot 1) = f(2) = 3$, so that $(1,3)$ is on the graph of $g$. Continuing in this fashion, we can complete our table as follows:   
+
+\smallskip
+\[
+\begin{array}{|r||c|c|c|}  
+
+\hline
+
+x & 2x & g(x)=f(2x) & (x, g(x)) \\ \hline
+0 & 0 & g(0)=f(0) = 1   &(0, 0) \\  \hline
+1 &  2 &  g(1)=f(2) = 3  &(1,3) \\  \hline
+2 & 4  & g(2)=f(4) = 3 &  (2,3)\\  \hline
+\frac{5}{2}  & 5 & g\left(\frac{5}{2}\right)=f(5) = 5  & \left(\frac{5}{2},5\right) \\ [1pt] \hline
+
+\end{array}
+\]
+
+\smallskip
+
+In general, if $(a,b)$ is on the graph of $f$, then $f(a) = b$.  Hence $g\left(\frac{a}{2}\right) = f\left(2 \cdot \frac{a}{2}\right) = f(a) = b$ so that $\left(\frac{a}{2}, b\right)$ is on the graph of $g$.  In other words, to graph $g$ we divide the $x$-coordinates of the points on the graph of $f$ by $2$.  This results in a horizontal scaling by a factor of $\frac{1}{2}$ (also called `horizontal shrinking', `horizontal compression' or `horizontal contraction' by a factor of $2$).
+
+
+If, on the other hand, we wish to graph $y = f\left( \frac{1}{2} x\right)$, we end up multiplying the $x$-coordinates of the points on the graph of $f$ by $2$ which results in a horizontal scaling by a factor of $2$. (Also called `horizontal stretching', `horizontal expansion' or `horizontal dilation' by a factor of $2$.) The effect of both horizontal scalings is shown in Figure \ref{fig:graphscale}.
+
+
+We have the following theorem.
+
+\smallskip
+
+\theorem{hscalings}{Horizontal Scalings.}{
+\index{graph ! horizontal scaling}  Suppose $f$ is a function and $b>0$.  To graph $y= f(bx)$, divide all of the $x$-coordinates of the points on the graph of $f$ by $b$. We say the graph of $f$ has been horizontally scaled by a factor of $\frac{1}{b}$. 
+
+\begin{itemize}
+
+\item If $0 < b < 1$, we say the graph of $f$ has undergone a horizontal stretching (expansion, dilation) by a factor of $\frac{1}{b}$. 
+
+\item If $b>1$, we say the graph of $f$ has undergone a horizontal shrinking (compression, contraction) by a factor of $b$.
+
+\end{itemize}
+}
+
+\smallskip
+
+Theorem \ref{hscalings} tells us that if we multiply the input to a function by $b$, the resulting graph is scaled horizontally by a factor of $\frac{1}{b}$ since the $x$-values are divided by $b$ to produce corresponding points on the graph of $y = f(bx)$.    The next example explores how vertical and horizontal scalings sometimes interact with each other and with the other transformations introduced in this section. 
+
+\medskip
+
+\example{transformationex3}{Applying vertical and horizontal scalings}{
+Let $f(x)= \sqrt{x}$.   Use the graph of $f$ from Example \ref{transformationex1} (see Figure \ref{fig:sqrtoncemore}) to graph the following functions.  Also, state their domains and ranges.
+
+\mfigure{.5}{The graph $y=\sqrt{x}$}{fig:sqrtoncemore}{figures/RelationsandFunctionsGraphics/Transformations-40}
+
+\mfigure{.33}{The graph $y=g(x) = 3\sqrt{x}$}{fig:scaleeg1}{figures/RelationsandFunctionsGraphics/Transformations-39}
+
+\mfigure{.17}{The graph $y=j(x) = \sqrt{9x}$}{fig:scaleeg2}{figures/RelationsandFunctionsGraphics/Transformations-41}
+
+%\begin{multicols}{3}
+\begin{enumerate}
+
+\item  $g(x) =  3 \sqrt{x}$
+
+\item  $j(x) = \sqrt{9x}$
+
+\item  $m(x) =1 - \sqrt{\dfrac{x+3}{2}}$
+
+\end{enumerate}
+%\end{multicols}
+
+\pagebreak
+
+}
+{
+\begin{enumerate}
+
+\item  First we note that the domain of $g$ is $[0, \infty)$ for the usual reason.  Next, we have $g(x) = 3 f(x)$ so by Theorem \ref{vscalings}, we obtain the graph of $g$ by multiplying all of the $y$-coordinates of the points on the graph of $f$ by $3$.  The result is a vertical scaling of the graph of $f$ by a factor of $3$.  We find the range of $g$ is also $[0, \infty)$. The graph of $g$ is given in Figure \ref{fig:scaleeg1}.
+
+\item  To determine the domain of $j$, we solve $9x \geq 0$ to find $x \geq 0$. Our domain is once again $[0,\infty)$.   We recognize $j(x) = f(9x)$ and by Theorem \ref{hscalings}, we obtain the graph of $j$ by dividing the $x$-coordinates of the points on the graph of $f$ by $9$.  From the graph in Figure \ref{fig:scaleeg2}, we see the range of $j$ is also $[0,\infty)$.
+
+
+
+\item  Solving $\frac{x+3}{2} \geq 0$ gives $x \geq -3$, so the domain of $m$ is $[-3, \infty)$.  To take advantage of what we know of transformations, we rewrite $m(x) = - \sqrt{\frac{1}{2} x + \frac{3}{2}} + 1$, or $m(x) =- f\left(\frac{1}{2} x + \frac{3}{2}\right) + 1$.   Focusing on the inputs first, we note that the input to $f$ in the formula for $m(x)$ is $\frac{1}{2} x + \frac{3}{2}$.  Multiplying the $x$ by $\frac{1}{2}$ corresponds to a horizontal stretching by a factor of $2$, and adding the $\frac{3}{2}$ corresponds to a shift to the left by $\frac{3}{2}$.  As before, we resolve which to perform first by thinking about how we would find the point on $m$ corresponding to a point on $f$, in this case, $(4,2)$.  To use $f(4) = 2$, we solve $\frac{1}{2} x + \frac{3}{2} = 4$.  Our first step is to subtract the $\frac{3}{2}$ (the horizontal shift) to obtain $\frac{1}{2} x = \frac{5}{2}$.  Next, we multiply by $2$ (the horizontal stretching) and obtain $x = 5$.  We define two intermediate functions to handle first the shift, then the stretching.  In accordance with Theorem \ref{hshifts},  $m_{1}(x) = f\left(x+ \frac{3}{2}\right) = \sqrt{x+\frac{3}{2}}$ will shift the graph of $f$ to the left $\frac{3}{2}$ units: see Figure \ref{fig:scaleeg3}
+
+\mfigure{.8}{The graph $y=m_1(x) = f(x+\frac{3}{2})=\sqrt{x+\frac{3}{2}}$}{fig:scaleeg3}{figures/RelationsandFunctionsGraphics/Transformations-43}
+
+Next, $m_{2}(x) = m_{1}\left(\frac{1}{2} x\right) = \sqrt{\frac{1}{2} x + \frac{3}{2}}$ will, according to Theorem \ref{hscalings}, horizontally stretch the graph of $m_{1}$ by a factor of $2$: see Figure \ref{fig:scaleeg4}
+
+\mfigure{.6}{The graph $y=m_2(x) = m_1(\frac{1}{2}x) = \sqrt{\frac{1}{2}x+\frac{3}{2}}$}{fig:scaleeg4}{figures/RelationsandFunctionsGraphics/Transformations-45} 
+
+We now examine what's happening to the outputs.  From $m(x) = - f\left(\frac{1}{2} x + \frac{3}{2}\right) + 1$, we see that the output from $f$ is being multiplied by $-1$ (a reflection about the $x$-axis) and then a $1$ is added (a vertical shift up $1$).  As before, we can determine the correct order by looking at how the point $(4,2)$ is moved. We already know that to make use of the equation $f(4)=2$,  we need to substitute $x=5$.  We get  $m(5) = - f\left(\frac{1}{2} (5) + \frac{3}{2}\right) + 1= - f(4)+1 = -2+1 = -1$.  We see that $f(4)$ (the output from $f$) is first multiplied by $-1$ then the $1$ is added meaning we first reflect the graph about the $x$-axis then shift up $1$.  Theorem \ref{reflections} tells us $m_{3}(x) = - m_{2}(x)$ will handle the reflection.
+
+\mfigure{.4}{The graph $y=m_3(x) = -m_2(x)=-\sqrt{\frac{1}{2}x+\frac{3}{2}}$}{fig:scaleeg5}{figures/RelationsandFunctionsGraphics/Transformations-47}
+
+Finally, to handle the vertical shift, Theorem \ref{vshifts} gives $m(x) = m_{3}(x) +1$, and we see that the range of $m$ is $(-\infty,1]$. The graph of $m$ is given in Figure \ref{fig:scaleeg6}.
+
+\mfigure{.2}{The graph $y=m(x) = m_3(x)+1=-\sqrt{\frac{1}{2}x+\frac{3}{2}}$}{fig:scaleeg6}{figures/RelationsandFunctionsGraphics/Transformations-49}
+
+\end{enumerate}
+}
+
+\bigskip
+
+Some comments about Example \ref{transformationex3} are in order.  First, recalling the properties of radicals from Intermediate Algebra, we know that the functions $g$ and $j$ are the same, since $j$ and $g$ have the same domains and $j(x) = \sqrt{9x} = \sqrt{9} \sqrt{x} = 3 \sqrt{x} = g(x)$. (We invite the reader to verify that all of the points we plotted on the graph of $g$ lie on the graph of $j$ and vice-versa.)  Hence, for  $f(x) = \sqrt{x}$, a vertical stretch by a factor of $3$ and a horizontal shrinking by a factor of $9$ result in the same transformation.  While this kind of phenomenon is not universal, it happens commonly enough with some of the families of functions studied in College Algebra that it is worthy of note.  Secondly, to graph the function $m$, we applied a series of four transformations.  While it would have been easier on the authors to simply inform the reader of which steps to take, we have strived to explain why the order in which the transformations were applied made sense.  We generalize the procedure in the theorem below.
+
+\smallskip
+
+\theorem{transformationsthm}{Transformations}{
+\index{transformations of function graphs}\index{function ! transformation of graphs}\index{graph ! transformations}  Suppose $f$ is a function.  If $A \neq 0$ and $B \neq 0$, then to graph \[g(x) = A f(Bx+H)+K\] 
+
+\begin{enumerate}
+
+\item  Subtract $H$ from each of the $x$-coordinates of the points on the graph of $f$.  This results in a horizontal shift to the left if $H > 0$ or right if $H< 0$.
+
+\item  Divide the $x$-coordinates of the points on the graph obtained in Step 1 by $B$.  This results in a horizontal scaling, but may also include a reflection about the $y$-axis if $B < 0$.
+
+\item  Multiply the $y$-coordinates of the points on the graph obtained in Step 2 by $A$.   This results in a vertical scaling, but may also include a reflection about the $x$-axis if $A < 0$.
+
+\item  Add $K$ to each of the $y$-coordinates of the points on the graph obtained in Step 3.  This results in a vertical shift up if $K > 0$ or down if $K< 0$.
+
+\end{enumerate}
+}
+
+\smallskip
+
+Theorem \ref{transformationsthm} can be established by generalizing the techniques developed in this section.  Suppose $(a,b)$ is on the graph of $f$. Then $f(a) = b$, and to make good use of this fact, we set $Bx+H = a$ and solve.  We first subtract the $H$ (causing the horizontal shift) and then divide by $B$.  If $B$ is a positive number, this induces only a horizontal scaling by a factor of $\frac{1}{B}$.  If  $B<0$, then we have a factor of $-1$ in play, and dividing by it induces a reflection about the $y$-axis.  So we have $x = \frac{a-H}{B}$ as the input to $g$ which corresponds to the input $x=a$ to $f$.  We now evaluate $g\left( \frac{a-H}{B}\right) = A f\left(B \cdot \frac{a-H}{B} + H\right) + K = A f(a)+K = A b + K$.  We notice that the output from $f$ is first multiplied by $A$.  As with the constant $B$, if $A > 0$, this induces only a vertical scaling.  If $A < 0$, then the $-1$ induces a reflection across the $x$-axis.  Finally, we add $K$ to the result, which is our vertical shift.  A less precise, but more intuitive way to paraphrase Theorem \ref{transformationsthm} is to think of the quantity $Bx+H$ is the `inside' of the function $f$.  What's happening inside $f$ affects the inputs or $x$-coordinates of the points on the graph of $f$.  To find the $x$-coordinates of the corresponding points on $g$, we undo what has been done to $x$ in the same way we would solve an equation.  What's happening to the output can be thought of as things happening `outside' the function, $f$.  Things happening outside affect the outputs or $y$-coordinates of the points on the graph of $f$.  Here, we follow the usual order of operations agreement: we first multiply by $A$ then add $K$ to find the corresponding $y$-coordinates on the graph of $g$.
+
+\pagebreak
+
+\example{transformationeg4}{Graphing a general transformation}{
+The complete graph of $y = f(x)$ is shown in Figure \ref{fig:gentransorig}.  Use it to graph\\ $g(x) = \dfrac{4-3 f(1-2x)}{2}$.
+
+\mtable{.8}{The graph $y=f(x)$ for Example \ref{transformationeg4}}{fig:gentransorig}{\myincludegraphics[scale=0.8]{figures/RelationsandFunctionsGraphics/Transformations-50}}
+}
+{
+We use Theorem \ref{transformationsthm} to track the five `key points' $(-4,-3)$, $(-2,0)$, $(0,3)$, $(2,0)$ and $(4,-3)$ indicated on the graph of $f$ to their new locations.  We first rewrite $g(x)$ in the form presented in Theorem \ref{transformationsthm}, $g(x) = -\frac{3}{2}f(-2x+1) +2$.  We set $-2x+1$ equal to the $x$-coordinates of the key points and solve.  For example, solving $-2x+1 = -4$, we first subtract $1$ to get $-2x = -5$ then divide by $-2$ to get $x = \frac{5}{2}$. Subtracting the $1$ is a horizontal shift to the left $1$ unit.  Dividing by $-2$ can be thought of as a two step process:  dividing by $2$ which compresses the graph horizontally by a factor of $2$ followed by dividing (multiplying) by $-1$ which causes a reflection across the $y$-axis.  We summarize the results in the table in Figure \ref{fig:transplotx}
+
+\mtable{.55}{Tracking the $x$ coordinates of transformed points}{fig:transplotx}{
+\begin{tabular}{|r||r|r|}  
+\hline
+$(a,f(a))$&  $-2x+1=a$ & $x$ \\ \hline
+$(-4,-3)$ & $-2x+1 = -4$ & $x = \frac{5}{2}$ \\ \hline
+$(-2,0)$ & $-2x+1 = -2$ & $x = \frac{3}{2}$ \\  \hline
+$(0,3)$ &  $-2x+1 = 0$ &  $x = \frac{1}{2}$ \\ \hline
+$(2,0)$  & $-2x+1 = 2$  &  $x = -\frac{1}{2}$ \\ \hline
+$(4,-3)$ & $-2x+1 = 4$  & $x = -\frac{3}{2}$  \\ \hline
+\end{tabular}
+}
+
+
+Next, we take each of the $x$ values and substitute them into $g(x) = -\frac{3}{2}f(-2x+1) +2$ to get the corresponding $y$-values.  Substituting  $x=\frac{5}{2}$, and using the fact that $f(-4)=-3$, we get \[g\left(\frac{5}{2}\right) = -\frac{3}{2}f\left(-2\left(\frac{5}{2}\right) +1\right) +2 = -\frac{3}{2} f(-4) + 2 = -\frac{3}{2}(-3) + 2 = \frac{9}{2} + 2 = \frac{13}{2}\]  We see that the output from $f$ is first multiplied by $-\frac{3}{2}$.  Thinking of this as a two step process, multiplying by $\frac{3}{2}$ then by $-1$, we have  a vertical stretching by a factor of $\frac{3}{2}$ followed by a reflection across the $x$-axis.  Adding $2$ results in a vertical shift up $2$ units.  Continuing in this manner, we get the table in Figure \ref{fig:transploty}.
+
+\mtable{.3}{Getting the corresponding $y$ coordinates}{fig:transploty}{
+\begin{tabular}{|r||r|r|}  
+\hline
+$x$ & $g(x)$ &  $(x, g(x))$ \\ \hline
+$\frac{5}{2}$  & $\frac{13}{2}$ &  $\left(\frac{5}{2}, \frac{13}{2} \right)$ \\ \hline
+$\frac{3}{2}$ & $2$ & $\left(\frac{3}{2}, 2 \right)$\\ \hline
+$\frac{1}{2}$  & $- \frac{5}{2}$ & $\left(\frac{1}{2}, -\frac{5}{2} \right)$  \\  \hline
+$-\frac{1}{2}$ & $2$ &  $\left(-\frac{1}{2}, 2 \right)$ \\ \hline
+$-\frac{3}{2}$ & $\frac{13}{2}$ &  $\left(-\frac{3}{2}, \frac{13}{2} \right)$ \\ \hline
+\end{tabular}
+}
+
+To graph $g$, we plot each of the points in the table above and connect them in the same order and fashion as the points to which they correspond.  Plotting $f$ and $g$ side-by-side gives
+
+\vskip 10pt
+\noindent%\hskip-160pt
+\begin{minipage}{\textwidth}
+\centering
+\begin{tabular}{cc}
+\myincludegraphics[width=0.45\textwidth]{figures/RelationsandFunctionsGraphics/Transformations-51}  &
+\myincludegraphics[width=0.45\textwidth]{figures/RelationsandFunctionsGraphics/Transformations-52} \\ 
+$y=f(x)$ & $y=g(x) = -\frac{3}{2}f(-2x+1) +2$
+\end{tabular}
+\captionsetup{type=figure}
+\caption{Determining the graph of $g(x) = -\frac{3}{2}f(-2x+1) +2$}\label{fig:gentransresult}
+\end{minipage}
+
+\medskip
+
+The reader is strongly encouraged to graph the series of functions which shows the gradual transformation of the graph of $f$ into the graph of $g$. (You really should do this once in your life.) We have outlined the sequence of transformations in the above exposition; all that remains is to plot the five intermediate stages.  
+}
+
+\pagebreak
+
+Our last example turns the tables and asks for the formula of a function given a desired sequence of transformations.  If nothing else, it is a good review of function notation.
+
+\medskip
+
+\example{graphingcalctrans}{Determining the formula for a transformed function}{
+Let $f(x) = x^2$.  Find and simplify the formula of the function $g(x)$ whose graph is the result of $f$ undergoing the following sequence of transformations.  Check your answer using a graphing utility.
+
+\begin{enumerate}
+
+\item  Vertical shift up $2$ units
+
+\item  Reflection across the $x$-axis
+
+\item  Horizontal shift right $1$ unit
+
+\item  Horizontal stretching by a factor of $2$
+
+\end{enumerate}
+}
+{
+We build up to a formula for $g(x)$ using intermediate functions as we've seen in previous examples.  We let $g_{1}$ take care of our first step.  Theorem \ref{vshifts} tells us $g_{1}(x) = f(x) + 2 = x^2+2$.  Next, we reflect the graph of $g_{1}$ about the $x$-axis using Theorem \ref{reflections}:  $g_{2}(x) = -g_{1}(x) = -\left(x^2+2\right) = -x^2-2$.  We shift the graph to the right $1$ unit, according to Theorem \ref{hshifts}, by setting $g_{3}(x) = g_{2}(x-1) = -(x-1)^2-2 = -x^2+2x-3$.  Finally, we induce a horizontal stretch by a factor of $2$ using Theorem \ref{hscalings} to get $g(x) = g_{3}\left(\frac{1}{2} x\right) = -\left(\frac{1}{2} x\right)^2+2\left(\frac{1}{2} x\right)-3$ which yields $g(x) = -\frac{1}{4} x^2 + x -3$.  We use GeoGebra to graph the stages in Figure \ref{fig:gcalctr} to confirm our result.
+
+\mtable{.5}{The sequence of transformations in Example \ref{graphingcalctrans}}{fig:gcalctr}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.9\marginparwidth]{figures/RelationsandFunctionsGraphics/Transformations01}\\
+$y=f(x)=x^2$\\
+\\
+\myincludegraphics[width=0.9\marginparwidth]{figures/RelationsandFunctionsGraphics/Transformations02} \\
+$y = g_1(x)=f(x)+2 = x^2+2$\\
+(Shift up by 2)\\
+\\
+\myincludegraphics[width=0.9\marginparwidth]{figures/RelationsandFunctionsGraphics/Transformations03}\\
+$y=g_2(x)=-g_1(x) = -x^2-2$\\
+(Reflect across $x$-axis)\\
+\\
+\myincludegraphics[width=0.9\marginparwidth]{figures/RelationsandFunctionsGraphics/Transformations04} \\
+$y=g_3(x) = g_2(x-1) = -x^2+2x-3$\\
+(Shift right one unit)\\
+\\
+\myincludegraphics[width=0.9\marginparwidth]{figures/RelationsandFunctionsGraphics/Transformations05} \\
+$y=g(x) = g_3(\left(\frac{1}{2}x\right) = -\frac{1}{4}x^2+x-3$\\
+(Horizontal stretch by a factor of 2)
+\end{tabular}
+}
+}
+
+
+
+This example brings our first chapter to a close.  In the chapters which lie ahead, be on the lookout for the concepts developed here to resurface as we study different families of functions.  
+
+\printexercises{exercises_pre/01_07_exercises}

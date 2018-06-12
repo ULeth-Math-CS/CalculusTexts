@@ -2,7 +2,7 @@ The previous chapter introduced the most fundamental of calculus topics: the lim
 
 \section{Instantaneous Rates of Change: The Derivative}\label{sec:derivative}
 
-A common amusement park ride lifts riders to a height then allows them to free-fall a certain distance before safely stopping them. Suppose such a ride drops riders from a height of 150 feet. Student of physics may recall that the height (in feet) of the riders, $t$ seconds after free-fall (and ignoring air resistance, etc.) can be accurately modelled by $f(t) = -16t^2+150$. 
+A common amusement park ride lifts riders to a height then allows them to free-fall a certain distance before safely stopping them. Suppose such a ride drops riders from a height of 150 feet. Students of physics may recall that the height (in feet) of the riders, $t$ seconds after free-fall (and ignoring air resistance, etc.) can be accurately modelled by $f(t) = -16t^2+150$. 
 
 Using this formula, it is easy to verify that, without intervention, the riders will hit the ground at $t=2.5\sqrt{1.5} \approx 3.06$ seconds. Suppose the designers of the ride decide to begin slowing the riders' fall after 2 seconds (corresponding to a height of 86 ft.). How fast will the riders be travelling at that time?\\
 
@@ -40,14 +40,14 @@ What we are really computing is the average velocity on the interval $[2,2+h]$ f
 \]
 where $h$ is small.
 
-What we really want is for $h=0$, but this, of course, returns the familiar ``$0/0$'' %\zerooverzero\ 
+We really want to use $h=0$, but this, of course, returns the familiar ``$0/0$'' %\zerooverzero\ 
 indeterminate form. So we employ a limit, as we did in Section \ref{sec:limit_intro}.
 
 We can approximate the value of this limit numerically with small values of $h$ as seen in Figure \ref{table:falling}. It looks as though the velocity is approaching $-64$ ft/s. Computing the limit directly gives
 		\begin{align*}\lim_{h\to 0} \frac{f(2+h)-f(2)}{h} &= \lim_{h\to 0}\frac{-16(2+h)^2+150 - (-16(2)^2+150)}{h} \\
-																											&=	\lim_{h\to 0}\frac{-64h-16h^2}{h} \\
-																											&= \lim_{h\to 0}-64 -16h \\
-																											&=-64.
+								&=	\lim_{h\to 0}\frac{-64h-16h^2}{h} \\
+								&= \lim_{h\to 0}(-64 -16h) \\
+								&=-64.
 		\end{align*}
 		
 \mtable{.5}{Approximating the instantaneous velocity with average velocities over a small time period $h$.}{table:falling}%
@@ -117,7 +117,7 @@ Let $f(x) = 3x^2+5x-7$. Find:
 					%\end{align*}
 					%\begin{align*}
 										&=	\lim_{h\to 0} \frac{3h^2+11h}{h}\\
-										&= 	\lim_{h\to 0}	3h+11=11.%\\
+										&= 	\lim_{h\to 0}	(3h+11)=11.%\\
 										%&= 11.
 					\end{align*}
 	\item		The tangent line at $x=1$ has slope $\fp(1)$ and goes through the point $(1,f(1)) = (1,1)$. Thus the tangent line has equation, in point-slope form, $y = 11(x-1) + 1$. In slope-intercept form we have $y = 11x-10$.
@@ -127,14 +127,14 @@ Let $f(x) = 3x^2+5x-7$. Find:
 					\fp(3) &=	\lim_{h\to 0} \frac{f(3+h)-f(3)}{h} \\
 									&=	\lim_{h\to 0} \frac{3(3+h)^2+5(3+h)-7 - (3(3)^2+5(3)-7)}{h} \\
 									&=	\lim_{h\to 0} \frac{3h^2+23h}{h}\\
-									&= \lim_{h\to 0} 3h+23 \\
+									&= \lim_{h\to 0} (3h+23) \\
 									&= 23.
 					\end{align*}
 	
 	\item		The tangent line at $x=3$ has slope $23$ and goes through the point $(3,f(3)) = (3,35)$. Thus the tangent line has equation $y=23(x-3)+35 = 23x-34$.
 		\end{enumerate}
 
-\mfigure{.7}{A graph of $f(x) = 3x^2+5x-7$ and its tangent lines at $x=1$ and $x=3$.}{fig:tangent1}{figures/figtangent1}
+\mfigure{.3}{A graph of $f(x) = 3x^2+5x-7$ and its tangent lines at $x=1$ and $x=3$.}{fig:tangent1}{figures/figtangent1}
 
 A graph of $f$ is given in Figure \ref{fig:tangent1} along with the tangent lines at $x=1$ and $x=3$.
 }\\
@@ -170,7 +170,7 @@ Linear functions are easy to work with; many functions that arise in the course 
 
 One type of function that does not benefit from a tangent--line approximation is a line; it is rather simple to recognize that the tangent line to a line is the line itself. We look at this in the following example.\\
 
-\example{ex_der_line}{Finding the Derivative of a Linear Function}{Consider $f(x) = 3x+5$. Find the equation of the tangent line to $f$ at $x=1$ and $x=7$.}
+\example{ex_der_line}{Finding the derivative of a linear function}{Consider $f(x) = 3x+5$. Find the equation of the tangent line to $f$ at $x=1$ and $x=7$.}
 {We find the slope of the tangent line by using Definition \ref{def:derivative_at_a_point}.
 
 	\begin{align*}
@@ -193,7 +193,7 @@ We often desire to find the tangent line to the graph of a function without know
 %\enlargethispage{\baselineskip}
 \mfigure{.4}{$f(x) = \sin x$ graphed with an approximation to its tangent line at $x=0$.}{fig:tangentsinx}{figures/figtangentsinx}
 
-\example{ex_der_num_approx}{Numerical Approximation of the Tangent Line}{Approximate the equation of the tangent line to the graph of $f(x)=\sin x$ at $x=0$.}
+\example{ex_der_num_approx}{Numerical approximation of the tangent line}{Approximate the equation of the tangent line to the graph of $f(x)=\sin x$ at $x=0$.}
 {In order to find the equation of the tangent line, we need a slope and a point. The point is given to us: $(0,\sin 0) = (0,0)$. To compute the slope, we need the derivative. This is where we will make an approximation. Recall that 
 \[
 \fp(0) \approx \frac{\sin(0+h)- \sin 0}{h}
@@ -243,7 +243,7 @@ The output is the ``derivative function,'' $\fp(x)$. The $\fp(x)$ function will 
 
 \sword{Notation:} 
 
-Let $y = f(x)$. The following notations all represent the derivative:
+Let $y = f(x)$. The following notations all represent the derivative of $f$:
 \[
 \fp(x)\ =\ y'\ =\ \frac{dy}{dx}\ =\ \frac{df}{dx}\ =\ \frac{d}{dx}(f)\ =\ \frac{d}{dx}(y). 
 \]}
@@ -258,9 +258,9 @@ Let $f(x) = 3x^2+5x-7$ as in Example \ref{ex_derv_point1}. Find $\fp(x)$.}
 {We apply Definition \ref{def:the_derivative}.
 	\begin{align*}
 	\fp(x) &= \lim_{h\to 0} \frac{f(x+h)-f(x)}{h} \\
-					&=	\lim_{x\to 0} \frac{3(x+h)^2+5(x+h)-7-(3x^2+5x-7)}{h}\\
-					&=	\lim_{x\to 0} \frac{3h^2 +6xh+5h}{h}\\
-					&= \lim_{x\to 0} 3h+6x+5\\
+					&=	\lim_{h\to 0} \frac{3(x+h)^2+5(x+h)-7-(3x^2+5x-7)}{h}\\
+					&=	\lim_{h\to 0} \frac{3h^2 +6xh+5h}{h}\\
+					&= \lim_{h\to 0} (3h+6x+5)\\
 					&= 6x+5
 	\end{align*}
 	So $\fp(x) = 6x+5$. Recall earlier we found that $\fp(1) = 11$ and $\fp(3) = 23$. Note our new computation of $\fp(x)$ affirm these facts.
@@ -279,7 +279,7 @@ Let $\ds f(x) = \frac{1}{x+1}$. Find $\fp(x)$.}
 						&=	\lim_{h\to 0} \frac1h\cdot\left(\frac{-h}{(x+1)(x+h+1)}\right)\\
 						&=	\lim_{h\to 0} \frac{-1}{(x+1)(x+h+1)} \\
 						&= \frac{-1}{(x+1)(x+1)}\\
-						&= \frac{-1}{(x+1)^2}
+						&= \frac{-1}{(x+1)^2}.
 	\end{align*}
 	
 So $\ds\fp(x) = \frac{-1}{(x+1)^2}$. To practice using our notation, we could also state 
@@ -364,9 +364,9 @@ Find the derivative of $f(x)$, where $\ds f(x) = \left\{\begin{array}{cc} \sin x
 }
 {Using Example \ref{ex_deriv_sinx}, we know that when $x<\pi/2$, $\fp(x) = \cos x$. It is easy to verify that when $x>\pi/2$, $\fp(x) = 0$; consider:
 			\[
-			\lim_{x\to0}\frac{f(x+h) - f(x)}{h} = \lim_{x\to0}\frac{1-1}{h} = \lim_{h\to0}0 =0.
+				\lim_{h\to0}\frac{f(x+h) - f(x)}{h} = \lim_{h\to0}\frac{1-1}{h} = \lim_{h\to0}0 =0.
 			\]
-\mfigure{.8}{A graph of $f(x)$ as defined in Example \ref{ex_diff_piecewise}.}{fig:piecewisesinx1}{figures/figpiecewisesinx1}
+\mfigure{.75}{A graph of $f(x)$ as defined in Example \ref{ex_diff_piecewise}.}{fig:piecewisesinx1}{figures/figpiecewisesinx1}
 			
 So far we have 
 \[
@@ -383,7 +383,7 @@ Being more rigorous, we can again evaluate the difference quotient limit at $x=\
 \lim_{h\to0^-}\frac{\sin(\pi/2+h)-\sin(\pi/2)}{h}&=\\
 \lim_{h\to0^-}{ \frac{\sin(\frac{\pi}{2})\cos(h)+\sin(h)\cos(\frac{\pi}{2})-\sin(\frac{\pi}{2})}{h}}&=\\
 \lim_{h\to0^-}\frac{1\cdot\cos(h)+\sin(h)\cdot 0-1}{h} &=\\
-0
+0.
 \end{align*}
 \end{minipage}
 \begin{minipage}{1pt}
@@ -394,7 +394,7 @@ Being more rigorous, we can again evaluate the difference quotient limit at $x=\
 \lim_{h\to0^+}\frac{f(\pi/2+h)-f(\pi/2)}{h} &=\\
 \lim_{h\to0^+}\frac{1-1}{h}&=\\
 \lim_{h\to0^+}\frac{0}{h}&=\\
-0&\\
+0.&\\
 \phantom{0}\\
 \phantom{0}
 \end{align*}
@@ -409,7 +409,7 @@ Being more rigorous, we can again evaluate the difference quotient limit at $x=\
 %		 \lim_{h\to0^-}\frac{1\cdot\cos(h)+\sin(h)\cdot 0-1}{h} &=\lim_{h\to0^+}0\\
 %		 0 &=0\\
 %\end{align*}
-\mfigure{.55}{A graph of $\fp(x)$ in Example \ref{ex_diff_piecewise}.}{fig:piecewisecosx1}{figures/figpiecewisecosx1}
+\mfigure{.5}{A graph of $\fp(x)$ in Example \ref{ex_diff_piecewise}.}{fig:piecewisecosx1}{figures/figpiecewisecosx1}
 Since both the left and right hand limits are 0 at $x=\pi/2$, the limit exists and $\fp(\pi/2)$ exists (and is 0). Therefore we can fully write $\fp$ as 
 \[
 \fp(x) = \left\{\begin{array}{cc} \cos x & x\leq\pi/2\\ 0 & x>\pi/2\end{array}.\right.
@@ -418,29 +418,73 @@ Since both the left and right hand limits are 0 at $x=\pi/2$, the limit exists a
 }\\
 
 Recall we pseudo--defined a continuous function as one in which we could sketch its graph without lifting our pencil. We can give a pseudo--definition for differentiability as well: it is a continuous function that does not have any ``sharp corners.'' One such sharp corner is shown in Figure \ref{fig:absolutevalue}. Even though the function $f$ in Example \ref{ex_diff_piecewise} is piecewise--defined, the transition is ``smooth'' hence it is differentiable. Note how in the graph of $f$ in Figure \ref{fig:piecewisesinx1} it is difficult to tell when $f$ switches from one piece to the other; there is no ``corner.''
+\ifthenelse{\boolean{1010}}{}{\clearpage
+
+%\vskip \baselineskip
+\noindent\textbf{\large Differentiablity on Closed Intervals}\\
+
+When we defined the derivative at a point in Definition \ref{def:derivative_at_a_point}, we specified that the interval $I$ over which a function $f$ was defined needed to be an open interval. Open intervals are required so that we can take a limit at any point $c$ in $I$, meaning we want to approach $c$ from both the left and right.
+
+Recall we also required open intervals in Definition \ref{def:continuous} when we defined what it meant for a function to be continuous. Later, we used one-sided limits to extend continuity to closed intervals. We now extend differentiability to closed intervals by again considering one-sided limits.
+
+Our motivation is three-fold. First, we consider ``common sense.'' In Example \ref{ex_deriv1} we found that when $f(x) =  3x^2+5x-7$, $\fp(x) = 6x+5$, and this derivative is defined for all real numbers, hence $f$ is differentiable everywhere. It seems appropriate to also conclude that $f$ is differentiable on closed intervals, like $[0,1]$, as well. After all, $\fp(x)$ is defined at both $x=0$ and $x=1$.
+
+Secondly, consider $f(x) = \sqrt{x}$. The domain of $f$ is $[0,\infty)$. Is $f$ differentiable on its domain -- specifically, is $f$ differentiable at $0$? (We'll consider this in the next example.)
+
+Finally, in later sections, having the derivative defined on closed intervals will prove  useful. One such place is Section \ref{II-sec:arc_length} where the derivative plays a role in measuring the length of a curve.
+
+After a formal definition of differentiability on a closed interval, we explore the concept in an example.
+
+\definition{def:diff_closed}{Differentiability on a Closed Interval}
+{Let $f$ be continuous on $[a,b]$ and differentiable on $(a,b)$, and let the one-sided limits 
+\[
+\lim_{h\to0^+}\frac{f(a+h)-f(a)}{h}\quad\text{and}\quad\lim_{h\to0^-}\frac{f(b+h)-f(b)}{h}
+\]
+exist. Then we say \sword{$f$ is differentiable on $[a,b]$.}
+}
+
+For all the functions $f$ \emph{in this text}, we can determine differentiability on $[a,b]$ by considering the limits $\lim_{x\to a^+}\fp(x)$ and $\lim_{x\to b^-}\fp(x)$. This is often easier to evaluate than the limit of the difference quotient.\\
+
+%Given a function $f$ that is differentiable on $(a,b)$, w
+\enlargethispage{2\baselineskip}
+\example{ex_diff_closed1}{Differentiability at an endpoint}
+{Consider $f(x) = \sqrt{x}=x^{1/2}$ and $g(x) = \sqrt{x^3}=x^{3/2}$. The domain of each function is $[0,\infty)$. It can be shown that each is differentiable on $(0,\infty)$; determine the differentiability of each at $x=0$.
+}
+{We start by considering $f$ and take the right-hand limit of the difference quotient:
+\begin{align*}
+\lim_{h\to0^+}\frac{f(a+h)-f(a)}{h} &= \lim_{h\to0^+}\frac{\sqrt{0+h}-\sqrt{0}}h \\
+ &= \lim_{h\to0^+}\frac{\sqrt{h}}h\\
+ &= \lim_{h\to0^+}\frac{1}{h^{1/2}}\ =\ \infty.
+ %&= \infty.
+\end{align*}
+The one-sided limit of the difference quotient does not exist at $x=0$ for $f$; therefore $f$ is differentiable on $(0,\infty)$ and not differentiable on $[0,\infty)$.
+
+We state (without proof) that $\fp(x) = 1/\big(2\sqrt{x}\big)$. Note that $\lim_{x\to0^+}\fp(x) = \infty$; this limit was easier to evaluate than the limit of the difference quotient, though it required us to already know the derivative of $f$.
+
+Now consider $g$:
+\begin{align*}
+\lim_{h\to0^+}\frac{g(a+h)-g(a)}{h} &= \lim_{h\to0^+}\frac{\sqrt{(0+h)^3}-\sqrt{0}}h \\
+ &= \lim_{h\to0^+}\frac{h^{3/2}}h\\
+ &= \lim_{h\to0^+}h^{1/2}\ =\ 0.
+ %&= 0.
+\end{align*}
+As the one-sided limit exists at $x=0$, we conclude $g$ is differentiable on its domain of $[0,\infty)$.
+\mfigure{.6}{A graph of $y=x^{1/2}$ and $y=x^{3/2}$ in Example \ref{ex_diff_closed1}.}{fig:diff_closed1}{figures/figdiff_closed1}
+
+We state (without proof) that $\gp(x) = 3\sqrt{x}/2$. Note that $\lim_{x\to0^+}\gp(x) = 0$; again, this limit is easier to evaluate than the limit of the difference quotient.
+
+
+The two functions are graphed in Figure \ref{fig:diff_closed1}. Note how $f(x) = \sqrt{x}$ seems to ``go vertical'' as $x$ approaches 0, implying the slopes of its tangent lines are growing toward infinity. Also note how the slopes of the tangent lines to $g(x)= \sqrt{x^3}$ approach 0 as $x$ approaches 0.
+}\\
+
+%Sometimes the limits defining the derivative are difficult to evaluate. In later sections, we will learn tools that make finding derivatives easier. Once these rules are learned, we can determine differentiability on an interval more easily.
+%
+%Suppose we want to determine the differentiability
+
+Most calculus textbooks omit this topic and simply avoid specific cases where it could be applied. We choose in this text to not make use of the topic unless it is ``needed.'' Many theorems in later sections require a function $f$ to be differentiable on an \emph{open} interval $I$; we could remove the word ``open'' and just use ``$\ldots$ on an interval $I$,'' but choose to not do so in keeping with the current mathematical tradition. Our first use of  differentiability on closed intervals comes in Chapter \ref{II-chapter:app_of_int}, where we measure the lengths of curves. \\}
 
 This section defined the derivative; in some sense, it answers the question of ``What \textit{is} the derivative?'' The next section addresses the question ``What does the derivative \textit{mean}?''
 
 
 \printexercises{exercises/02_01_exercises}
 
-%\vskip \baselineskip
-%\noindent\textbf{\large The Meaning of the Derivative}\\
-%
-%This section started with an example of using the position of an object (in this case, a falling amusement--park rider) to find the object's velocity. This type of example is often used when introducing the derivative because we tend to readily recognize that velocity is the \textit{instantaneous rate of change of position.} In general, if $f$ is a function of $x$, then $\fp(x)$ measures the instantaneous rate of change of $f$ with respect to $x$. Put another way, the derivative answers ``When $x$ changes, at what rate does $f$ change?'' Thinking back to the amusement--park ride, we asked ``When time changed, at what rate did the height change?'' and found the answer to be ``By $-96$ feet per second.'' Knowing that at $t=3$ the velocity was $-96$ ft/s, we could reasonably assume that 1 second later the riders' height would have dropped by about 96 feet. 
-%
-%It is useful to recognize the \textit{units} of the derivative function. If $y$ is a function of $x$, i.e., $y=f(x)$ for some function $f$, and $y$ is measured in feet and $x$ in seconds, then the units of $y' = \fp$ are ``feet per second,'' commonly written as ``ft/s.'' In general, if $y$ is measured in units $P$ and $x$ is measured in units $Q$, then $y'$ will be measured in units ``$P$ per $Q$'', or ``$P/Q$.''
-%
-%LOOK AT GRAPH OF SIN X AND COS X TOGETHER. COMMENT.
-%
-%There are many, many uses of the derivative; here are just a few examples. Let $P(t)$ represent the world population $t$ minutes after 12:00 a.m., January 1, 2012. It is fairly accurate to say that $P(0) = 7,028,734,178$ (\texttt{www.prb.org}). It is also fairly accurate to state that $P'(0) = 156$; that is, at midnight on January 1, 2012, the population of the world was growing by about 156 people per minute. 20 days later (or, 28,800 minutes later) we could reasonably assume the population grew by about $28,800\cdot156 = 4,492,800.$ If one were to plot the population of the world, with population on the $y$-axis and time, in minutes, on the $x$-axis, then when $x=0$, the tangent line to the graph would have a slope of 156.
-%
-%ADD MORE EXAMPLES \\
-%
-%
-%% If $C(t)$ measures the number of customers in a store at time $t$, where $t$ is measured in hours since opening, then $C'(t)$ measures the rate at which the number of customers is increasing per hour. Suppose 2 hours after opening there are 50 customers in a store; this means $C(2) = 50$. Suppose further that $C'(2) = 20$. That means that 2 hours after opening, customers are coming into the store at a rate of 20 per hour. One could then reasonably assume that 3 hours after opening the store would have about 70 customers in it. (And 2.5 hours after opening the store would have about 60 customers in it.) If one were to plot the number of people in the 
-%
-%
-%The importance of understanding the derivative cannot be understated. When $f$ is a function of $x$, $\fp(x)$ measures the instantaneous rate of change of $f$ with respect to $x$ and gives the slope of the tangent line to $f$ at $x$.
-
-					

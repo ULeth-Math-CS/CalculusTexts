@@ -1,0 +1,346 @@
+\section{Relations}
+\label{Relations}
+
+From one point of view, all of Precalculus can be thought of as studying sets of points in the plane.  With the Cartesian Plane now fresh in our memory we can discuss those sets in more detail and as usual, we begin with a definition.
+
+\smallskip
+
+
+\definition{relatonsdefn}{Relations in the Cartesian Plane}{
+A \index{relation ! definition} \sword{relation} is a set of points in the plane.
+}
+
+
+\smallskip
+
+Since relations are sets, we can describe them using the techniques presented in Section \ref{SetTheory}.  That is, we can describe a relation verbally, using the roster method, or using set-builder notation. Since the elements in a relation are points in the plane, we often try to describe the relation graphically or algebraically as well.  Depending on the situation, one method may be easier or more convenient to use than another.  As an example, consider the relation $R = \{ (-2,1),(4,3), (0,-3) \}$.  As written, $R$ is described using the roster method.  Since $R$ consists of points in the plane, we follow our instinct and plot the points.  Doing so produces the  \index{graph ! of a relation} \sword{graph} of $R$: see Figure \ref{fig:relgraph}.
+
+\mtable{.75}{The graph of the relation $R=\{(-2,1), (4,3), (0,-3)\}$}{fig:relgraph}{
+\myincludegraphics[scale=0.8]{figures/RelationsandFunctionsGraphics/Relations-1}}
+
+In the following example, we graph a variety of relations.
+
+\mtable{.5}{The graph of $A$}{fig:relgraphA}{
+\myincludegraphics[scale=0.8]{figures/RelationsandFunctionsGraphics/Relations-2} }
+
+\medskip
+
+\example{relationgraphingexample}{Graphing relations}{
+Graph the following relations. 
+\begin{multicols}{2}
+\begin{enumerate}
+
+\item  $A = \{ (0,0), (-3,1), (4,2), (-3,2)\}$
+\item  $HLS_{1} = \{ (x,3) \, | \, -2 \leq x \leq 4\}$
+\item  $HLS_{2} = \{ (x,3) \, | \, -2 \leq x < 4\}$ \label{opencircleintroduction}
+\item  $V = \{ (3,y) \, | \, \mbox{$y$ is a real number} \}$
+\item  $H = \{ (x,y) \, | \, y = -2 \}$
+\item  $R = \{ (x,y) \, | \, 1 < y \leq 3 \}$
+\end{enumerate}
+\end{multicols}
+}
+{
+\begin{enumerate}
+
+\item  To graph $A$, we simply plot all of the points which belong to $A$, as shown below on the left.
+
+\item  Don't let the notation in this part fool you.  The name of this relation is $HLS_{1}$, just like the name of the relation in number 1 was $A$.  The letters and numbers are just part of its name, just like the numbers and letters of the phrase `King George III' were part of George's name.  In words,  $\{ (x,3)\, | \, -2 \leq x \leq 4 \}$  reads `the set of points $(x,3)$ such that $-2 \leq x \leq 4$.'   All of these points have the same $y$-coordinate, $3$, but the $x$-coordinate is allowed to vary between $-2$ and $4$, inclusive.  Some of the points which belong to $HLS_{1}$ include some friendly points like:  $(-2,3)$, $(-1,3)$, $(0,3)$, $(1,3)$, $(2,3)$, $(3,3)$, and $(4,3)$.  However, $HLS_{1}$ also contains the points $(0.829, 3)$, $\left(-\frac{5}{6}, 3\right)$, $( \sqrt{\pi}, 3)$, and so on.  It is impossible to list all of these points, which is why the variable $x$ is used.  Plotting several friendly representative points should convince you that $HLS_{1}$ describes the horizontal line segment from the point $(-2,3)$ up to and including the point $(4,3)$.
+
+\mnote{.35}{Listing the points in a line segment is \textit{really} impossible.  The interested reader is encouraged to research \href{http://en.wikipedia.org/wiki/Countable_set}{\underline{\textbf{countable}}} versus \href{http://en.wikipedia.org/wiki/Uncountable_set}{\underline{\textbf{uncountable}}} sets.}
+
+
+\mtable{.17}{The graph of $HLS_1$}{fig:relgraphHLS}{
+\myincludegraphics[scale=0.8]{figures/RelationsandFunctionsGraphics/Relations-3} }
+
+\item  $HLS_{2}$ is hauntingly similar to $HLS_{1}$.  In fact, the only difference between the two is that instead of `$-2 \leq x \leq 4$' we have `$-2 \leq x < 4$'. This means that we still get a horizontal line segment which includes $(-2,3)$ and extends to $(4,3)$, but we do \emph{not} include $(4,3)$ because of the strict inequality $x < 4$.   How do we denote this on our graph?  It is a common mistake to make the graph start at $(-2,3)$ end at $(3,3)$ as pictured below on the left.  The problem with this graph is that we are forgetting about the points like $(3.1, 3)$, $(3.5, 3)$, $(3.9, 3)$, $(3.99, 3)$, and so forth.  There is no real number that comes `immediately before' $4$, so to describe the set of points we want, we draw the horizontal line segment starting at $(-2,3)$ and draw an open circle at $(4,3)$ as depicted below on the right.
+
+\mtable{.73}{Getting the right graph for $HLS_2$}{HLS2opencircle}{%
+\begin{tabular}{c}
+\myincludegraphics[scale=0.8]{figures/RelationsandFunctionsGraphics/Relations-4}\\
+This is NOT the correct graph of $HLS_{2}$\\
+\\
+\myincludegraphics[scale=0.8]{figures/RelationsandFunctionsGraphics/Relations-5} \\
+The graph of $HLS_{2}$\\
+\end{tabular}
+}
+
+\item  Next, we come to the relation $V$,  described as the set of points $(3,y)$ such that $y$ is a real number.  All of these points have an $x$-coordinate of $3$, but the $y$-coordinate is free to be whatever it wants to be, without restriction.  Plotting a few `friendly' points of $V$ should convince you that all the points of $V$ lie on the vertical line $x = 3$.  Since there is no restriction on the $y$-coordinate, we put arrows on the end of the portion of the line we draw to indicate it extends indefinitely in both directions.  The graph of $V$ is below on the left.
+
+\item  Though written slightly differently, the relation $H = \{ (x,y) \, | \, y = -2 \}$ is similar to the relation $V$ above in that only one of the coordinates, in this case the $y$-coordinate, is specified, leaving $x$ to be `free'.  Plotting some representative points gives us the horizontal line $y=-2$.
+
+
+\mtable{.34}{The graph of $V$}{fig:relgraphV}{
+\myincludegraphics[scale=0.8]{figures/RelationsandFunctionsGraphics/Relations-6}}
+
+\mtable{.14}{The graph of $H$}{fig:relgraphH}{
+\myincludegraphics[scale=0.8]{figures/RelationsandFunctionsGraphics/Relations-7}}
+
+\item  For our last example, we turn to $R = \{ (x,y) \, | \, 1 < y \leq 3 \}$.  As in the previous example, $x$ is free to be whatever it likes. The value of $y$, on the other hand, while not completely free, is permitted to roam between $1$ and $3$ excluding $1$, but including $3$. After plotting some friendly elements of $R$, it should become clear that $R$ consists of the region between the horizontal lines $y = 1$ and $y = 3$.  Since $R$ requires that the $y$-coordinates be greater than $1$, but not equal to $1$, we dash the line $y = 1$ to indicate that those points do not belong to $R$. 
+
+\mnote{.5}{When we say you should plot some points in the relation $H$, the word `some' is a relative term.  It may take $5$, $10$, or $50$ points until you see the pattern, depending on the relation.}
+
+\noindent\begin{minipage}{\textwidth}
+\begin{center}
+\myincludegraphics{figures/RelationsandFunctionsGraphics/Relations-8}
+\end{center}
+\captionsetup{type=figure}
+\caption{The graph of $R$}
+\end{minipage}
+
+\end{enumerate}
+}
+
+\medskip
+
+The relations $V$ and $H$ in the previous example lead us to our final way to describe relations:  \index{relation ! algebraic description} \sword{algebraically}.  We can more succinctly describe the points in $V$ as those points which satisfy the equation `$x = 3$'.  Most likely, you have seen equations like this before.  Depending on the context, `$x = 3$' could mean we have solved an equation for $x$ and arrived at the solution $x=3$. In this case, however, `$x = 3$' describes a set of points in the plane whose $x$-coordinate is $3$.  Similarly, the relation $H$ above can be described by the equation `$y = -2$'.  At some point in your mathematical upbringing, you probably learned the following.
+
+\smallskip
+
+\keyidea{idea:horvertline}{Equations of Vertical and Horizontal Lines}{
+
+\begin{itemize}
+
+\item The graph of the equation $x=a$ is a \sword{vertical line} through $(a,0)$.\index{line ! vertical} \index{vertical line}
+
+\item The graph of the equation $y=b$ is a \sword{horizontal line} through $(0,b)$.\index{line ! horizontal} \index{horizontal line}
+
+\end{itemize}
+}
+
+\smallskip
+
+Given that the very simple equations $x = a$ and $y = b$ produced lines, it's natural to wonder what shapes other equations might yield.  Thus our next objective is to study the graphs of equations in a more general setting as we continue to unite Algebra and Geometry.
+
+\subsection{Graphs of Equations}
+
+\label{GraphsofEquations}
+
+In this section, we delve more deeply into the connection between Algebra and Geometry by focusing on graphing relations described by equations.  The main idea of this section is the following.
+
+\smallskip
+
+\keyidea{fgp}{The Fundamental Graphing Principle}{
+\index{equation ! graph of} \index{graph ! of an equation} \index{Fundamental Graphing Principle ! for equations} \index{relation ! Fundamental Graphing Principle}
+
+The graph of an equation is the set of points which satisfy the equation.  That is, a point $(x,y)$ is on the graph of an equation if and only if $x$ and $y$ satisfy the equation.
+}
+
+\smallskip
+
+Here, `$x$ and $y$ satisfy the equation' means `$x$ and $y$ make the equation true'.  It is at this point that we gain some insight into the word `relation'.  If the equation to be graphed contains both $x$ and $y$, then the equation itself is what is relating the two variables.  More specifically, in the next two examples, we consider the  graph of the equation $x^2+y^3=1$. Even though it is not specifically spelled out, what we are doing is graphing the relation $R = \{ (x,y) \, | \, x^2+y^3 = 1\}$.  The points $(x,y)$ we graph belong to the \textit{relation} $R$ and are necessarily \textit{related} by the equation  $x^2+y^3 = 1$, since it is those pairs of $x$ and $y$ which make the equation true.
+
+\medskip
+
+\example{ex_checkgraph}{Checking to see if a point lies on a graph}{
+Determine whether or not $(2,-1)$ is on the graph of $x^2 + y^3 = 1$.
+}
+{
+We substitute $x=2$ and $y=-1$ into the equation to see if the equation is satisfied.
+
+\begin{align*}
+ (2)^2+(-1)^3 & \stackrel{?}{=}  1  \\ 
+            3 & \neq  1 
+\end{align*}
+
+Hence, $(2,-1)$ is \textbf{not} on the graph of $x^2 + y^3 = 1$.  
+}
+
+\medskip
+
+We could spend hours randomly guessing and checking to see if points are on the graph of the equation.  A more systematic approach is outlined in the following example.
+
+\pagebreak
+
+\example{firstequgraph}{Determining points on a graph systematically}{
+Graph $x^2 + y^3 = 1$.
+}
+{
+To  efficiently generate points on the graph of this equation, we first solve for $y$
+
+\begin{align*}
+    x^2 + y^3 & =  1  \\ 
+          y^3 & =  1 - x^2  \\
+\sqrt[3]{y^3} & =  \sqrt[3]{1 - x^2}  \\
+            y & =  \sqrt[3]{1 - x^2} 
+\end{align*}
+
+We now substitute a value in for $x$, determine the corresponding value $y$, and plot the resulting point $(x,y)$.  For example, substituting $x=-3$ into the equation yields
+
+\[
+y = \sqrt[3]{1 - x^2} = \sqrt[3]{1 - (-3)^2} = \sqrt[3]{-8} = - 2,
+\]
+
+so the point $(-3, -2)$ is on the graph.  Continuing in this manner, we generate a table of points which are on the graph of the equation.  These points are then plotted in the plane as shown in Figure \ref{fig:plotpoints}.
+
+\mtable{.7}{Points on the curve $x^2+y^3=1$}{fig:plotpoints}{%
+\begin{tabular}{|r||c|c|}  \hline
+
+  $x$ & $y$ & $(x,y)$ \\ \hline
+ -3 & -2 & $(-3, -2)$ \\  \hline
+ -2 & $-\sqrt[3]{3}$ & $(-2,-\sqrt[3]{3})$ \\  \hline
+ -1 & 0 & $( -1, 0)$ \\  \hline
+  0 & 1& $( 0 , 1)$ \\  \hline
+  1 & 0 & $( 1, 0)$ \\  \hline
+  2 & $-\sqrt[3]{3}$ & $(2,-\sqrt[3]{3})$ \\  \hline
+  3 & -2 & $(3, -2)$ \\  \hline
+
+\end{tabular}\\
+
+\bigskip
+
+\noindent\myincludegraphics[scale=0.7]{figures/RelationsandFunctionsGraphics/Relations-9}
+}
+
+Remember, these points constitute only a small sampling of the points on the graph of this equation.  To get a better idea of the shape of the graph, we could plot more points until we feel comfortable `connecting the dots'.  Doing so would result in a curve similar to the one pictured in Figure \ref{fig:completecurve}.
+
+\medskip
+
+\mtable{.4}{The completed graph of $x^2+y^3=1$}{fig:completecurve}{
+\myincludegraphics{figures/RelationsandFunctionsGraphics/Relations-10}
+}
+
+
+Don't worry if you don't get all of the little bends and curves just right $-$ Calculus is where the art of precise graphing takes center stage.  For now, we will settle with our naive `plug and plot' approach to graphing.  If you feel like all of this tedious computation and plotting is beneath you, then you can try inputting the equation into a graphing calculator or an online tool such as \href{http://www.wolframalpha.com/}{Wolfram Alpha}.
+}
+
+\medskip
+
+Of all of the points on the graph of an equation, the places where the graph crosses or touches the axes hold special significance.  These are called the \sword{intercepts} \index{intercept ! definition of} of the graph.  Intercepts come in two distinct varieties: $x$-intercepts and $y$-intercepts.  They are defined below.
+
+\smallskip
+
+\definition{interceptsdefn}{$x$- and $y$-intercepts}{
+Suppose the graph of an equation is given.
+
+
+\begin{itemize}
+
+\item  A point on a graph which is also on the $x$-axis is called an \index{$x$-intercept} \sword{$x$-intercept} of the graph.
+
+\item  A point on a graph which is also on the $y$-axis is called an \index{$y$-intercept} \sword{$y$-intercept} of the graph.
+
+\end{itemize}
+}
+
+
+\smallskip
+
+In our previous example the graph had two $x$-intercepts, $(-1,0)$ and $(1,0)$, and one $y$-intercept, $(0,1)$.  The graph of an equation can have any number of intercepts, including none at all!  Since $x$-intercepts lie on the $x$-axis, we can find them by setting $y = 0$ in the equation.  Similarly, since $y$-intercepts lie on the $y$-axis, we can find them by setting $x = 0$ in the equation.  Keep in mind, intercepts are \emph{points} and therefore must be written as ordered pairs.  To summarize,
+
+\smallskip
+
+\keyidea{idea:findintercepts}{Finding the Intercepts of the Graph of an Equation}{
+Given an equation involving $x$ and $y$, we find the intercepts of the graph as follows: \index{intercept ! location of}
+
+\begin{itemize}
+
+\item $x$-intercepts have the form $(x,0)$; set $y = 0$ in the equation and solve for $x$.  
+
+\item $y$-intercepts have the form $(0,y)$; set $x = 0$ in the equation and solve for $y$. 
+
+\end{itemize}
+}
+
+\smallskip
+
+Another fact which you may have noticed about the graph in the previous example is that it seems to be symmetric about the $y$-axis.  To actually prove this analytically, we assume $(x,y)$ is a generic point on the graph of the equation. That is, we assume  $x^2 + y^3 = 1$ is true.  As we learned in Section \ref{CartesianPlane},  the point symmetric to $(x,y)$ about the $y$-axis is $(-x,y)$.  To show that the graph is symmetric about the $y$-axis, we need to show that $(-x,y)$ satisfies the equation $x^2 + y^3 = 1$, too.  Substituting $(-x,y)$ into the equation gives
+
+\begin{align*}
+(-x)^2+(y)^3 & \stackrel{?}{=}  1  \\
+   x^2 + y^3 & \stackrel{\checkmark}{=}  1 
+\end{align*}
+
+Since we are assuming the original equation $x^2 + y^3 = 1$ is true, we have shown that $(-x, y)$ satisfies the equation (since it leads to a true result) and hence is on the graph.  In this way, we can check whether the graph of a given equation possesses any of the symmetries discussed in Section \ref{CartesianPlane}.  We summarize the procedure in the following result.  
+
+\smallskip
+
+\keyidea{symmetrytestequations}{Testing the Graph of an Equation for Symmetry}{
+To test the graph of an equation for symmetry \index{symmetry ! testing an equation for} 
+
+\begin{itemize}
+
+\item about the $y$-axis $\, - \,$ substitute $(-x,y)$ into the equation and simplify. If the result is equivalent to the original equation, the graph is symmetric about the $y$-axis.
+
+\item about the $x$-axis -- substitute $(x,-y)$ into the equation and simplify. If the result is equivalent to the original equation, the graph is symmetric about the $x$-axis.
+
+\item about the origin - substitute $(-x,-y)$ into the equation and simplify. If the result is equivalent to the original equation, the graph is symmetric about the origin.
+
+\end{itemize}
+}
+
+\smallskip
+
+Intercepts and symmetry are two tools which can help us sketch the graph of an equation analytically, as demonstrated in the next example.
+
+\medskip
+
+\example{secondequgraph}{Finding intercepts and testing for symmetry}{
+Find the $x$- and $y$-intercepts (if any) of the graph of $(x-2)^2 + y^2 = 1$. Test for symmetry.  Plot additional points as needed to complete the graph.
+}
+{
+To look for $x$-intercepts, we set $y=0$ and solve
+
+\begin{align*}
+(x-2)^2 + y^2 & =  1  \\ 
+(x-2)^2 + 0^2 & =  1  \\ 
+(x-2)^2 & =  1  \\
+\sqrt{(x-2)^2} & =  \sqrt{1}  \tag*{extract square roots}\\
+x - 2 & =  \pm 1  \\
+x  & =  2 \pm 1  \\
+x  & =  3, 1  \\
+\end{align*}
+
+We get two answers for $x$ which correspond to two $x$-intercepts:  $(1,0)$ and $(3,0)$.    Turning our attention to $y$-intercepts, we set $x=0$ and solve
+
+\begin{align*}
+(x-2)^2 + y^2 & =  1  \\ 
+(0-2)^2 + y^2 & =  1  \\ 
+4 + y^2 & =  1  \\
+y^2 & =  -3 
+\end{align*}
+
+Since there is no real number which squares to a negative number (Do you remember why?), we are forced to conclude that the graph has no $y$-intercepts. We plot our results so far in Figure \ref{fig:interceptplot}.
+
+\mfigure{.55}{Plotting the data so far}{fig:interceptplot}{figures/RelationsandFunctionsGraphics/Relations-11}
+
+Moving along to symmetry, we can immediately dismiss the possibility that the graph is symmetric about the $y$-axis or the origin.  If the graph possessed either of these symmetries, then the fact that $(1,0)$ is on the graph would mean $(-1,0)$ would have to be on the graph. (Why?)  Since $(-1,0)$ would be another $x$-intercept (and we've found all of these), the graph can't have $y$-axis or origin symmetry.  The only symmetry left to test is symmetry about the $x$-axis.   To that end, we substitute $(x,-y)$ into the equation and simplify
+
+\begin{align*}
+(x-2)^2 + y^2 & =  1  \\ 
+(x-2)^2 + (-y)^2 & \stackrel{?}{=}  1  \\ 
+(x-2)^2 + y^2 & \stackrel{\checkmark}{=}  1 
+\end{align*}
+
+Since we have obtained our original equation, we know the graph is symmetric about the $x$-axis.  This means we can cut our `plug and plot' time in half:  whatever happens below the $x$-axis is reflected above the $x$-axis, and vice-versa.  Proceeding as we did in the previous example, we obtain the plot shown in Figure \ref{fig:finalplot}.
+
+\mfigure{.3}{The final result}{fig:finalplot}{figures/RelationsandFunctionsGraphics/Relations-12}
+}
+
+\medskip
+
+A couple of remarks are in order.  First, it is entirely possible to choose a value for $x$ which does not correspond to a point on the graph.  For example, in the previous example, if we solve for $y$ as is our custom, we get
+\[y = \pm \sqrt{1-(x-2)^2}.\]
+Upon substituting $x=0$ into the equation, we would obtain
+\[y = \pm \sqrt{1 - (0-2)^2} = \pm \sqrt{1 - 4} = \pm \sqrt{-3},\]
+which is not a real number.  This means there are no points on the graph with an $x$-coordinate of $0$.  When this happens, we move on and try another point.  This is another drawback of the `plug-and-plot' approach to graphing equations.  Luckily, we will devote much of the remainder of this book to developing techniques which allow us to graph entire families of equations quickly.  Second, it is instructive to show what would have happened had we tested the equation in the last example for symmetry about the $y$-axis.  Substituting $(-x,y)$ into the equation yields
+
+\mnote{.5}{By the end of this course, you'll be able to accurately graph a wide variety of equations, without the use of a calculator,  if you can believe it!}
+
+\begin{align*}
+(x-2)^2 + y^2 & =  1  \\
+(-x-2)^2 + y^2 & \stackrel{?}{=}  1  \\
+((-1)(x+2))^2 + y^2 & \stackrel{?}{=}  1  \\
+(x+2)^2 + y^2 & \stackrel{?}{=}  1. 
+\end{align*}
+
+This last equation does not \emph{appear} to be equivalent to our original equation.  However, to actually prove that the graph is not symmetric about the $y$-axis, we need to find a point $(x,y)$ on the graph whose reflection $(-x,y)$ is not. Our $x$-intercept $(1,0)$ fits this bill nicely, since if we substitute $(-1,0)$ into the equation we get
+
+\begin{align*}
+(x-2)^2+y^2 & \stackrel{?}{=}  1  \\
+(-1-2)^2 + 0^2 & \neq  1  \\
+9 & \neq  1. 
+\end{align*}
+
+This proves that $(-1,0)$ is not on the graph.
+
+\printexercises{exercises_pre/01_02_exercises}

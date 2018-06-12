@@ -1,0 +1,595 @@
+\section{Trigonometric Identities}
+
+\label{Identities}
+
+In Section \ref{CircularFunctions}, we saw the utility of the Pythagorean Identities in Theorem \ref{pythids} along with the Quotient and Reciprocal Identities in Theorem \ref{recipquotid}.  Not only did these identities help us compute the values of the circular functions for angles, they were also useful in simplifying expressions involving the circular functions.  In this section, we introduce several collections of identities which have uses in this course and beyond.  Our first set of identities is the `Even / Odd' identities.
+
+\mnote{.8}{As mentioned at the end of Section \ref{TheUnitCircle}, properties of the circular functions when thought of as functions of angles in radian measure hold equally well if we view these functions as functions of real numbers.  Not surprisingly, the Even / Odd properties of the circular functions are so named because they identify cosine and secant as even functions, while the remaining four circular functions are odd.  }
+
+\smallskip
+
+\theorem{evenodd}{Even / Odd Identities}{  For all applicable angles $\theta$, \index{Even/Odd Identities} 
+
+\begin{multicols}{2}
+
+\begin{itemize}
+
+\item  $\cos(-\theta) = \cos(\theta)$
+
+\item  $\sin(-\theta) = -\sin(\theta)$
+
+\item  $\tan(-\theta) = -\tan(\theta)$
+
+\item  $\sec(-\theta) = \sec(\theta)$
+
+\item  $\csc(-\theta) = -\csc(\theta)$
+
+\item  $\cot(-\theta) = -\cot(\theta)$
+
+\end{itemize}
+
+\end{multicols}
+}
+
+\smallskip
+
+In light of the Quotient and Reciprocal Identities, Theorem \ref{recipquotid}, it suffices to show $\cos(-\theta) = \cos(\theta)$ and $\sin(-\theta) = -\sin(\theta)$.  The remaining four circular functions can be expressed in terms of $\cos(\theta)$ and $\sin(\theta)$ so the proofs of their Even / Odd Identities are left as exercises.  
+
+\mtable{.5}{Establishing Theorem \ref{evenodd}}{fig:identities1}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.95\marginparwidth]{figures/IntroTrigGraphics/Identities-1}\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/IntroTrigGraphics/Identities-2}
+\end{tabular}}
+
+By adding the appropriate multiple of $2\pi$, we may replace $\theta$ by the coterminal angle $\theta_0$ with $0\leq\theta_0 <2\pi$; the reader can verify that the angles $-\theta$ and $-\theta_0$ are then also coterminal. The Evan / Odd identities then follow by observing that the points $P=(\cos(\theta_0),\sin(\theta_0))$ and $Q=(\cos(-\theta_0), \sin(-\theta_0))$ lie on opposite sides of the $x$-axis, as shown in Figure \ref{fig:identities1}.
+
+ The Even / Odd Identities are readily demonstrated using any of the `common angles' noted in Section \ref{TheUnitCircle}.  Their true utility, however, lies not in computation, but in simplifying expressions involving the circular functions.  In fact, our next batch of identities makes heavy use of the Even / Odd Identities.
+
+\smallskip
+
+\theorem{cosinesumdifference}{Sum and Difference Identities for Cosine}{ For all angles $\alpha$ and $\beta$, \index{Difference Identity ! for cosine} \index{Sum Identity ! for cosine}
+
+\begin{itemize}
+
+\item  $\cos(\alpha + \beta) = \cos(\alpha) \cos(\beta) - \sin(\alpha) \sin(\beta)$
+
+\item $\cos(\alpha - \beta) = \cos(\alpha) \cos(\beta) + \sin(\alpha) \sin(\beta)$
+
+\end{itemize}
+}
+
+\smallskip
+
+We first prove the result for differences.  As in the proof of the Even / Odd Identities, we can reduce the proof for general angles $\alpha$ and $\beta$ to angles $\alpha_{0}$ and $\beta_{0}$, coterminal with $\alpha$ and $\beta$, respectively, each of which measure between $0$ and $2\pi$ radians.  Since $\alpha$ and $\alpha_{0}$ are coterminal, as are $\beta$ and $\beta_{0}$, it follows that $\alpha - \beta$ is coterminal with $\alpha_{0} - \beta_{0}$.  Consider the case in Figure \ref{fig:identities2} where $\alpha_{0} \geq \beta_{0}$.  
+
+Since the angles $POQ$ and $AOB$ are congruent, the distance between $P$ and $Q$ is equal to the distance between $A$ and $B$.   The distance formula, Equation \ref{distanceformula}, yields
+
+\begin{multline*}
+\sqrt{(\cos(\alpha_{0}) - \cos(\beta_{0}))^2 + (\sin(\alpha_{0}) - \sin(\beta_{0}))^2 }\\
+=\sqrt{(\cos(\alpha_{0} - \beta_{0}) - 1)^2 + (\sin(\alpha_{0} - \beta_{0}) - 0)^2}
+\end{multline*}
+
+Squaring both sides, we expand the left hand side of this equation as
+
+\begin{align*}
+(\cos(\alpha_{0}) - \cos(\beta_{0}))^2 + (\sin(\alpha_{0})& - \sin(\beta_{0}))^2 \\
+& = \cos^2(\alpha_{0}) - 2\cos(\alpha_{0})\cos(\beta_{0}) + \cos^2(\beta_{0}) \\  
+& \quad + \sin^2(\alpha_{0}) - 2\sin(\alpha_{0})\sin(\beta_{0})  +  \sin^2(\beta_{0}) \\ 
+& =  \cos^2(\alpha_{0}) + \sin^2(\alpha_{0}) + \cos^2(\beta_{0}) + \sin^2(\beta_{0}) \\
+& \quad -  2\cos(\alpha_{0})\cos(\beta_{0}) - 2\sin(\alpha_{0})\sin(\beta_{0})
+\end{align*}
+
+From the Pythagorean Identities we have  $\cos^2(\alpha_{0}) + \sin^2(\alpha_{0}) = 1$ and $\cos^2(\beta_{0}) + \sin^2(\beta_{0}) = 1$, so
+
+\begin{align*}
+(\cos(\alpha_{0}) - \cos(\beta_{0}))^2 +& (\sin(\alpha_{0}) - \sin(\beta_{0}))^2 \\
+& = 2  - 2\cos(\alpha_{0})\cos(\beta_{0}) - 2\sin(\alpha_{0})\sin(\beta_{0})
+\end{align*}
+\mtable{.75}{Establishing Theorem \ref{cosinesumdifference}}{fig:identities2}{
+\begin{tabular}{c}
+\myincludegraphics[width=0.95\marginparwidth]{figures/IntroTrigGraphics/Identities-3}\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/IntroTrigGraphics/Identities-4}
+\end{tabular}}
+
+\mnote{.55}{In Figure \ref{fig:identities2}, the \underline{tri}angles $POQ$ and $AOB$ are congruent, which is even better.  However, $\alpha_{0} - \beta_{0}$ could be $0$ or it could be $\pi$, neither of which makes a triangle.  It could also be larger than $\pi$, which makes a triangle, just not the one we've drawn.  You should think about those three cases.}
+
+Turning our attention to the right hand side of our equation, we find
+
+\begin{align*}
+(\cos(\alpha_{0} - \beta_{0}) - 1)^2 + & (\sin(\alpha_{0} - \beta_{0}) - 0)^2 \\
+& =  \cos^2(\alpha_{0} - \beta_{0}) - 2\cos(\alpha_{0} - \beta_{0}) + 1 + \sin^2(\alpha_{0} - \beta_{0}) \\ 
+& =  1 +  \cos^2(\alpha_{0} - \beta_{0}) + \sin^2(\alpha_{0} - \beta_{0}) - 2\cos(\alpha_{0} - \beta_{0}) 
+\end{align*}
+
+Once again, we simplify $\cos^2(\alpha_{0} - \beta_{0}) + \sin^2(\alpha_{0} - \beta_{0})= 1$, so that
+
+\[ \begin{array}{rcl}
+(\cos(\alpha_{0} - \beta_{0}) - 1)^2 + (\sin(\alpha_{0} - \beta_{0}) - 0)^2 & = & 2  - 2\cos(\alpha_{0} - \beta_{0}) \\ \end{array} \]
+
+Putting it all together, we get $2  - 2\cos(\alpha_{0})\cos(\beta_{0}) - 2\sin(\alpha_{0})\sin(\beta_{0}) = 2  - 2\cos(\alpha_{0} - \beta_{0})$, which simplifies to: $\cos(\alpha_{0} - \beta_{0}) = \cos(\alpha_{0})\cos(\beta_{0}) + \sin(\alpha_{0})\sin(\beta_{0})$.  Since $\alpha$ and $\alpha_{0}$, $\beta$ and $\beta_{0}$ and $\alpha - \beta$ and $\alpha_{0}- \beta_{0}$ are all coterminal pairs of angles, we have $\cos(\alpha - \beta) = \cos(\alpha) \cos(\beta) + \sin(\alpha) \sin(\beta)$.  For the case where $\alpha_{0} \leq \beta_{0}$, we can apply the above argument to the angle $\beta_{0} - \alpha_{0}$ to obtain the identity  $\cos(\beta_{0} - \alpha_{0}) = \cos(\beta_{0})\cos(\alpha_{0}) + \sin(\beta_{0})\sin(\alpha_{0})$.  Applying the Even Identity of cosine, we get $\cos(\beta_{0} - \alpha_{0}) = \cos( - (\alpha_{0} - \beta_{0})) = \cos(\alpha_{0} - \beta_{0})$, and we get the identity in this case, too.   
+
+\medskip
+
+To get the sum identity for cosine, we use the difference formula along with the Even/Odd Identities
+
+\begin{align*}
+\cos(\alpha + \beta) = \cos(\alpha - (-\beta)) &= \cos(\alpha) \cos(-\beta) + \sin(\alpha) \sin(-\beta)\\
+& = \cos(\alpha) \cos(\beta) - \sin(\alpha) \sin(\beta)
+\end{align*}
+
+We put these newfound identities to good use in the following example.
+
+\medskip
+
+\example{cosinesumdiffex}{Using Theorem \ref{cosinesumdifference}}{
+
+\begin{enumerate}
+
+\item Find the exact value of $\cos\left(15^{\circ}\right)$.
+
+\item  Verify the identity:  $\cos\left(\frac{\pi}{2} - \theta\right) = \sin(\theta)$.
+
+\end{enumerate}}
+{\begin{enumerate}
+
+\item In order to use Theorem \ref{cosinesumdifference} to find $\cos\left(15^{\circ}\right)$, we need to write $15^{\circ}$ as a sum or difference of angles whose cosines and sines we know.  One way to do so is to write $15^{\circ} = 45^{\circ} - 30^{\circ}$.
+
+
+\[ \begin{array}{rcl}
+
+\cos\left(15^{\circ}\right) & = & \cos\left(45^{\circ} - 30^{\circ} \right) \\ [2pt]
+                            & = & \cos\left(45^{\circ}\right)\cos\left(30^{\circ} \right) + \sin\left(45^{\circ}\right)\sin\left(30^{\circ} \right) \\ [2pt]
+                            & = & \left( \dfrac{\sqrt{2}}{2} \right)\left( \dfrac{\sqrt{3}}{2} \right)  +  \left( \dfrac{\sqrt{2}}{2} \right)\left( \dfrac{1}{2} \right)\\ [15pt]
+														& = &  \dfrac{\sqrt{6}+ \sqrt{2}}{4} \\ 
+\end{array} \]
+
+\item  In a straightforward application of  Theorem \ref{cosinesumdifference}, we find
+
+\[ \begin{array}{rcl}
+
+\cos\left(\dfrac{\pi}{2} - \theta\right) & = & \cos\left(\dfrac{\pi}{2}\right)\cos\left(\theta\right) + \sin\left(\dfrac{\pi}{2}\right)\sin\left(\theta \right) \\ [10pt]
+                            & = & \left( 0 \right)\left( \cos(\theta) \right)  +  \left( 1 \right)\left( \sin(\theta) \right) \\ [4pt]
+														& = & \sin(\theta)    \\
+\end{array} \]
+
+
+\end{enumerate}
+}
+
+\medskip
+
+
+The identity verified in Example \ref{cosinesumdiffex}, namely, $\cos\left(\frac{\pi}{2} - \theta\right) = \sin(\theta)$,  is the first of what are called the `cofunction' identities.   From $ \sin(\theta) = \cos\left(\frac{\pi}{2} - \theta\right) $, we get:
+
+\[ \sin\left(\dfrac{\pi}{2} - \theta\right) = \cos\left(\dfrac{\pi}{2} -\left[\dfrac{\pi}{2} - \theta\right]\right) = \cos(\theta),\]
+
+which says, in words, that the `co'sine of an angle is the sine of its `co'mplement.  Now that these identities have been established for cosine and sine, the remaining circular functions follow suit.  The remaining proofs are left as exercises.
+
+\medskip
+
+\theorem{cofunctionidentities}{Cofunction Identities}{ For all applicable angles $\theta$, \index{Cofunction Identities}
+
+\begin{multicols}{2}
+
+\begin{itemize}
+
+\item  $\cos\left(\dfrac{\pi}{2} - \theta \right) = \sin(\theta)$
+
+\item  $\sin\left(\dfrac{\pi}{2} - \theta \right) = \cos(\theta)$
+
+\item  $\sec\left(\dfrac{\pi}{2} - \theta \right) = \csc(\theta)$
+
+\item  $\csc\left(\dfrac{\pi}{2} - \theta \right) = \sec(\theta)$
+
+\item  $\tan\left(\dfrac{\pi}{2} - \theta \right) = \cot(\theta)$
+
+\item  $\cot\left(\dfrac{\pi}{2} - \theta \right) = \tan(\theta)$
+
+\end{itemize}
+
+\end{multicols}
+}
+
+\medskip
+
+With the Cofunction Identities in place, we are now in the position to derive the sum and difference formulas for sine.  To derive the sum formula for sine, we convert to cosines using a cofunction identity, then expand using the difference formula for cosine
+
+\[ \begin{array}{rcl}
+
+\sin(\alpha + \beta) & = & \cos\left( \dfrac{\pi}{2} - (\alpha + \beta) \right) \\ [10pt]
+                     & = & \cos\left( \left[\dfrac{\pi}{2} - \alpha \right] - \beta \right) \\ [10pt]
+                     & = & \cos\left(\dfrac{\pi}{2} - \alpha \right) \cos(\beta) + \sin\left(\dfrac{\pi}{2} - \alpha \right)\sin(\beta) \\ [10pt]
+                     & = & \sin(\alpha) \cos(\beta) + \cos(\alpha) \sin(\beta) \\ \end{array} \]
+
+
+We can derive the difference formula for sine by rewriting  $\sin(\alpha - \beta)$ as $\sin(\alpha + (-\beta))$ and using the sum formula and the Even / Odd Identities. Again, we leave the details to the reader.
+
+\medskip
+
+\theorem{sinesumdifference}{Sum and Difference Identities for Sine}{ For all angles $\alpha$ and $\beta$, \index{Difference Identity ! for sine} \index{Sum Identity ! for sine}
+
+\begin{itemize}
+
+\item  $\sin(\alpha + \beta) = \sin(\alpha) \cos(\beta) + \cos(\alpha) \sin(\beta)$
+
+\item $\sin(\alpha - \beta) = \sin(\alpha) \cos(\beta) - \cos(\alpha) \sin(\beta)$
+
+\end{itemize}
+}
+
+\medskip
+
+
+\example{sinesumanddiffex}{Using Theorem \ref{sinesumdifference}}{
+\begin{enumerate}
+
+\item  Find the exact value of $\sin\left(\frac{19 \pi}{12}\right)$
+
+\item  If $\alpha$ is a Quadrant II angle with $\sin(\alpha) = \frac{5}{13}$, and $\beta$ is a Quadrant III angle with $\tan(\beta) = 2$, find $\sin(\alpha - \beta)$.
+
+\item  Derive a formula for $\tan(\alpha + \beta)$ in terms of $\tan(\alpha)$ and $\tan(\beta)$.
+
+\end{enumerate}}
+{\begin{enumerate}
+
+\item  As in  Example \ref{cosinesumdiffex}, we need to write the angle $\frac{19 \pi}{12}$ as a sum or difference of common angles.  The denominator of $12$ suggests a combination of angles with denominators $3$ and $4$.  One such combination is $\; \frac{19 \pi}{12} = \frac{4 \pi}{3} + \frac{\pi}{4}$.  Applying Theorem \ref{sinesumdifference}, we get
+
+\[ \begin{array}{rcl}
+
+\sin\left(\dfrac{19 \pi}{12}\right) & = & \sin\left(\dfrac{4 \pi}{3} + \dfrac{\pi}{4} \right) \\ [10pt]
+                            & = & \sin\left(\dfrac{4 \pi}{3} \right)\cos\left(\dfrac{\pi}{4} \right) + \cos\left(\dfrac{4 \pi}{3} \right)\sin\left(\dfrac{\pi}{4} \right) \\ [10pt]
+                            & = & \left( -\dfrac{\sqrt{3}}{2} \right)\left( \dfrac{\sqrt{2}}{2} \right)  +  \left( -\dfrac{1}{2} \right)\left( \dfrac{\sqrt{2}}{2} \right) \\ [15pt]
+														& = &  \dfrac{-\sqrt{6}- \sqrt{2}}{4} \\
+\end{array} \]
+
+
+\item  In order to find $\sin(\alpha - \beta)$ using Theorem \ref{sinesumdifference}, we need to find $\cos(\alpha)$ and both $\cos(\beta)$ and $\sin(\beta)$.  To find $\cos(\alpha)$, we use the Pythagorean Identity $\cos^2(\alpha) + \sin^2(\alpha) = 1$.  Since $\sin(\alpha) = \frac{5}{13}$, we have $\cos^{2}(\alpha) + \left(\frac{5}{13}\right)^2 = 1$, or $\cos(\alpha) = \pm \frac{12}{13}$.  Since $\alpha$ is a Quadrant II angle, $\cos(\alpha) = -\frac{12}{13}$. We now set about finding $\cos(\beta)$ and $\sin(\beta)$.  We have several ways to proceed, but the Pythagorean Identity $1 + \tan^{2}(\beta) = \sec^{2}(\beta)$ is a quick way to get $\sec(\beta)$, and hence, $\cos(\beta)$.  With $\tan(\beta) = 2$, we get $1 + 2^2 = \sec^{2}(\beta)$ so that $\sec(\beta) = \pm \sqrt{5}$.  Since $\beta$ is a Quadrant III angle,  we choose $\sec(\beta) =  -\sqrt{5}$ so $\cos(\beta) = \frac{1}{\sec(\beta)} = \frac{1}{-\sqrt{5}} = -\frac{\sqrt{5}}{5}$.  We now need to determine $\sin(\beta)$.  We could use The Pythagorean Identity $\cos^{2}(\beta) + \sin^{2}(\beta) = 1$, but we opt instead to use a quotient identity.  From $\tan(\beta) = \frac{\sin(\beta)}{\cos(\beta)}$, we have $\sin(\beta) = \tan(\beta) \cos(\beta)$ so we get $\sin(\beta) = (2) \left( -\frac{\sqrt{5}}{5}\right) = - \frac{2 \sqrt{5}}{5}$.  We now have all the pieces needed to find $\sin(\alpha - \beta)$:
+
+\[ \begin{array}{rcl} 
+\sin(\alpha - \beta) &  = & \sin(\alpha)\cos(\beta) - \cos(\alpha)\sin(\beta) \\
+ 										 & = & \left( \dfrac{5}{13} \right)\left( -\dfrac{\sqrt{5}}{5} \right) - \left( -\dfrac{12}{13} \right)\left( - \dfrac{2 \sqrt{5}}{5} \right) \\
+ 										 & = & -\dfrac{29\sqrt{5}}{65} \\
+\end{array}\]
+
+\item  We can start expanding $\tan(\alpha + \beta)$ using a quotient identity and our sum formulas
+
+\[ \begin{array}{rcl}
+
+\tan(\alpha + \beta) & = & \dfrac{\sin(\alpha + \beta)}{\cos(\alpha + \beta)} \\ [10pt]
+                     & = & \dfrac{\sin(\alpha) \cos(\beta) + \cos(\alpha) \sin(\beta)}{\cos(\alpha) \cos(\beta) - \sin(\alpha) \sin(\beta)} \\ \end{array} \]
+			
+
+Since  $\tan(\alpha) = \frac{\sin(\alpha)}{\cos(\alpha)}$ and $\tan(\beta) = \frac{\sin(\beta)}{\cos(\beta)}$, it looks as though if we divide both numerator and denominator by $\cos(\alpha) \cos(\beta)$ we will have what we want
+
+\[ \begin{array}{rcl}
+
+\tan(\alpha + \beta) & = & \dfrac{\sin(\alpha) \cos(\beta) + \cos(\alpha) \sin(\beta)}{\cos(\alpha) \cos(\beta) - \sin(\alpha) \sin(\beta)} \cdot\dfrac{\dfrac{1}{\cos(\alpha) \cos(\beta)}}{\dfrac{1}{\cos(\alpha) \cos(\beta)}}\\
+                    &   & \\
+ 										& = & \dfrac{\dfrac{\sin(\alpha) \cos(\beta)}{\cos(\alpha) \cos(\beta)} + \dfrac{\cos(\alpha) \sin(\beta)}{\cos(\alpha) \cos(\beta)}}{\dfrac{\cos(\alpha) \cos(\beta)}{\cos(\alpha) \cos(\beta)} - \dfrac{\sin(\alpha) \sin(\beta)}{\cos(\alpha) \cos(\beta)}}\\
+                    &   & \\
+										& = & \dfrac{\dfrac{\sin(\alpha) \cancel{\cos(\beta)}}{\cos(\alpha) \cancel{\cos(\beta)}} + \dfrac{\cancel{\cos(\alpha)} \sin(\beta)}{\cancel{\cos(\alpha)} \cos(\beta)}}{\dfrac{\cancel{\cos(\alpha)} \cancel{\cos(\beta)}}{\cancel{\cos(\alpha)} \cancel{\cos(\beta)}} - \dfrac{\sin(\alpha) \sin(\beta)}{\cos(\alpha) \cos(\beta)}}\\
+                    &   & \\
+										& = & \dfrac{\tan(\alpha) + \tan(\beta)}{1 -\tan(\alpha) \tan(\beta)}\\
+\end{array} \]
+
+\mnote{.2}{Note: As with any trigonometric identity, this formula is limited to those cases where all of the tangents are defined.}
+\end{enumerate}
+}
+
+\medskip
+
+The formula developed in Exercise \ref{sinesumanddiffex} for $\tan(\alpha + \beta)$ can be used to find a formula for $\tan(\alpha - \beta)$ by rewriting the difference as a sum, $\tan(\alpha + (-\beta))$, and the reader is encouraged to fill in the details.  Below we summarize all of the sum and difference formulas for cosine, sine and tangent.
+
+\smallskip
+
+\theorem{circularsumdifference}{Sum and Difference Identities}{ For all applicable angles $\alpha$ and $\beta$, \index{Difference Identity ! for tangent} \index{Sum Identity ! for tangent} \index{Difference Identity ! for cosine} \index{Sum Identity ! for cosine} \index{Difference Identity ! for sine} \index{Sum Identity ! for sine}
+
+\begin{itemize}
+
+\item  $\cos(\alpha \pm \beta) = \cos(\alpha) \cos(\beta) \mp \sin(\alpha) \sin(\beta)$
+
+\item  $\sin(\alpha \pm \beta) = \sin(\alpha) \cos(\beta) \pm \cos(\alpha) \sin(\beta)$
+
+\item $\tan(\alpha \pm \beta) = \dfrac{\tan(\alpha) \pm \tan(\beta)}{1 \mp \tan(\alpha) \tan(\beta)}$
+
+\end{itemize}
+}
+
+\smallskip
+
+In the statement of Theorem \ref{circularsumdifference}, we have combined the cases for the sum `$+$' and difference `$-$' of angles into one formula.  The convention here is that if you want the formula for the sum `$+$' of two angles, you use the top sign in the formula;  for the difference, `$-$', use the bottom sign.  For example, \[\tan(\alpha - \beta) = \dfrac{\tan(\alpha) - \tan(\beta)}{1 + \tan(\alpha) \tan(\beta)}\]
+
+If we specialize the sum formulas in Theorem \ref{circularsumdifference} to the case when $\alpha = \beta$, we obtain the following `Double Angle' Identities.
+
+\smallskip
+
+\theorem{doubleangle}{Double Angle Identities}{ For all applicable angles $\theta$, \index{Double Angle Identities}
+
+\begin{itemize}
+
+\item  $\cos(2\theta) = \left\{ \begin{array}{l} \cos^{2}(\theta) - \sin^{2}(\theta)\\ [5pt]  2\cos^{2}(\theta) - 1 \\ [5pt] 1-2\sin^{2}(\theta) \end{array} \right.$
+
+\item $\sin(2\theta) = 2\sin(\theta)\cos(\theta)$
+
+\item  $\tan(2\theta) = \dfrac{2\tan(\theta)}{1 - \tan^{2}(\theta)}$
+
+\end{itemize}
+}
+
+\smallskip
+
+The three different forms for $\cos(2\theta)$ can be explained by our ability to `exchange' squares of cosine and sine via the Pythagorean Identity $\cos^{2}(\theta) + \sin^{2}(\theta) = 1$ and we leave the details to the reader.  It is interesting to note that to determine the value of $\cos(2\theta)$, only \textit{one} piece of information is required: either $\cos(\theta)$ or $\sin(\theta)$.  To determine $\sin(2\theta)$, however, it appears that we must know both $\sin(\theta)$ and $\cos(\theta)$.  In the next example, we show how we can find $\sin(2\theta)$ knowing just one piece of information, namely $\tan(\theta)$.
+
+\pagebreak
+
+\example{doubleangleex}{Using Theorem \ref{doubleangle}}{
+\begin{enumerate}
+
+\item Suppose $P(-3,4)$ lies on the terminal side of $\theta$ when $\theta$ is plotted in standard position.  Find $\cos(2\theta)$ and $\sin(2\theta)$ and determine the quadrant in which the terminal side of the angle $2\theta$ lies when it is plotted in standard position.
+
+\item  If $\sin(\theta) = x$ for $-\frac{\pi}{2} \leq \theta \leq \frac{\pi}{2}$, find an expression for $\sin(2\theta)$ in terms of $x$.
+
+\item  \label{doubleanglesinewtan} Verify the identity:  $\sin(2\theta) = \dfrac{2\tan(\theta)}{1 + \tan^{2}(\theta)}$.
+
+\item  Express $\cos(3\theta)$ as a polynomial in terms of $\cos(\theta)$.
+\label{cosinepolynomial}
+
+\end{enumerate}}
+{\begin{enumerate}
+
+\item  The point $(-3,4)$ lies on a circle of radius $r = \sqrt{x^2+y^2} = 5$.  Hence, $\cos(\theta) = -\frac{3}{5}$ and $\sin(\theta) = \frac{4}{5}$.  Applying Theorem \ref{doubleangle}, we get $\cos(2\theta) = \cos^{2}(\theta) - \sin^{2}(\theta) = \left(-\frac{3}{5}\right)^2 - \left(\frac{4}{5}\right)^2 = -\frac{7}{25}$, and $\sin(2\theta) = 2 \sin(\theta) \cos(\theta) = 2 \left(\frac{4}{5}\right)\left(-\frac{3}{5}\right) = -\frac{24}{25}$.  Since both cosine and sine of $2\theta$ are negative, the terminal side of $2\theta$, when plotted in standard position, lies in Quadrant III.
+
+
+\item  If your first reaction to `$\sin(\theta) = x$' is `No it's not, $\cos(\theta) = x$!' then you have indeed learned something, and we take comfort in that. However, context is everything.  Here, `$x$' is just a variable - it does not necessarily represent the $x$-coordinate of the point on The Unit Circle which lies on the terminal side of $\theta$, assuming $\theta$ is drawn in standard position.  Here, $x$ represents the quantity $\sin(\theta)$, and what we wish to know is how to express $\sin(2\theta)$ in terms of $x$.    Since $\sin(2\theta) = 2 \sin(\theta) \cos(\theta)$, we need to write $\cos(\theta)$ in terms of $x$ to finish the problem.  We substitute $x = \sin(\theta)$ into the Pythagorean Identity, $\cos^{2}(\theta) + \sin^{2}(\theta) = 1$, to get $\cos^{2}(\theta) + x^2 = 1$, or $\cos(\theta) = \pm \sqrt{1-x^2}$.  Since  $-\frac{\pi}{2} \leq \theta \leq \frac{\pi}{2}$, $\cos(\theta) \geq 0$, and thus $\cos(\theta) = \sqrt{1-x^2}$.  Our final answer is  $\sin(2\theta) = 2 \sin(\theta) \cos(\theta) = 2x\sqrt{1-x^2}$.
+
+\item  We start with the right hand side of the identity and note that $1 + \tan^{2}(\theta) = \sec^{2}(\theta)$.  From this point, we use the Reciprocal and Quotient Identities to rewrite $\tan(\theta)$ and $\sec(\theta)$ in terms of $\cos(\theta)$ and $\sin(\theta)$:
+
+
+\[ \begin{array}{rcl}
+
+\dfrac{2\tan(\theta)}{1 + \tan^{2}(\theta)} & = & \dfrac{2\tan(\theta)}{\sec^{2}(\theta)}= \dfrac{2 \left( \dfrac{\sin(\theta)}{\cos(\theta)}\right)}{\dfrac{1}{\cos^{2}(\theta)}}= 2\left( \dfrac{\sin(\theta)}{\cos(\theta)}\right) \cos^{2}(\theta) \\ [15pt]
+																						& = & 2\left( \dfrac{\sin(\theta)}{\cancel{\cos(\theta)}}\right) \cancel{\cos(\theta)} \cos(\theta) = 2\sin(\theta) \cos(\theta) = \sin(2\theta) \\ 
+
+\end{array} \]
+
+\item In Theorem \ref{doubleangle}, the formula $\cos(2\theta) = 2\cos^{2}(\theta) - 1$ expresses $\cos(2\theta)$ as a polynomial in terms of $\cos(\theta)$.  We are  now asked to find such an  identity for $\cos(3\theta)$.  Using the sum formula for cosine, we begin with 
+
+
+\[ \begin{array}{rcl}
+
+\cos(3\theta) & = & \cos(2\theta + \theta) \\ [2pt]
+              & = & \cos(2\theta)\cos(\theta) - \sin(2\theta)\sin(\theta) \\
+\end{array}\]
+
+Our ultimate goal is to express the right hand side in terms of $\cos(\theta)$ only.  We substitute $\cos(2\theta) = 2\cos^{2}(\theta) -1$ and $\sin(2\theta) = 2\sin(\theta)\cos(\theta)$ which yields
+
+
+\[ \begin{array}{rcl}
+
+\cos(3\theta) & = &  \cos(2\theta)\cos(\theta) - \sin(2\theta)\sin(\theta) \\ [2pt]
+              & = & \left(2\cos^{2}(\theta) - 1\right) \cos(\theta) - \left(2 \sin(\theta) \cos(\theta) \right)\sin(\theta) \\ [2pt] 
+              & = & 2\cos^{3}(\theta)- \cos(\theta) - 2 \sin^2(\theta) \cos(\theta) \\
+              
+\end{array}\]
+
+Finally, we exchange $\sin^{2}(\theta)$ for $1 - \cos^{2}(\theta)$ courtesy of the Pythagorean Identity, and get
+
+\[ \begin{array}{rcl}
+
+\cos(3\theta) & = & 2\cos^{3}(\theta)- \cos(\theta) - 2 \sin^2(\theta) \cos(\theta) \\ [2pt]
+              & = & 2\cos^{3}(\theta)- \cos(\theta) - 2 \left(1 - \cos^{2}(\theta)\right) \cos(\theta) \\ [2pt]
+              & = & 2\cos^{3}(\theta)- \cos(\theta) - 2\cos(\theta) + 2\cos^{3}(\theta) \\ [2pt]
+              & = & 4\cos^{3}(\theta)- 3\cos(\theta) \\
+\end{array}\]        
+ and we are done.           
+              
+\end{enumerate}
+}
+
+\medskip
+
+In the last problem in Example \ref{doubleangleex}, we saw how we could rewrite $\cos(3\theta)$ as sums of powers of  $\cos(\theta)$.  In Calculus, we have occasion to do the reverse;  that is, reduce the power of cosine and sine. Solving the identity $\cos(2\theta) = 2\cos^{2}(\theta) -1$ for $\cos^{2}(\theta)$  and the identity $\cos(2\theta) = 1 - 2\sin^{2}(\theta)$ for $\sin^{2}(\theta)$ results in the aptly-named `Power Reduction' formulas below.  
+
+\smallskip
+
+\theorem{powerreduction}{Power Reduction Formulas}{ For all angles $\theta$, \index{Power Reduction Formulas}
+
+\begin{itemize}
+
+\item  $\cos^{2}(\theta) = \dfrac{1 + \cos(2\theta)}{2}$
+
+\item  $\sin^{2}(\theta) = \dfrac{1 - \cos(2\theta)}{2}$
+
+\end{itemize}
+}
+
+\medskip
+
+\example{powerreductionex}{Using Theorem \ref{powerreduction}}{ Rewrite $\sin^{2}(\theta) \cos^{2}(\theta)$ as a sum and difference of cosines to the first power.}
+{We begin with a straightforward application of Theorem \ref{powerreduction}
+
+\[ \begin{array}{rcl}
+
+\sin^{2}(\theta) \cos^{2}(\theta) & = & \left( \dfrac{1 - \cos(2\theta)}{2} \right) \left( \dfrac{1 + \cos(2\theta)}{2} \right) \\ [10pt]
+																  & = & \dfrac{1}{4}\left(1 - \cos^{2}(2\theta)\right) \\ [10pt] 
+																  & = & \dfrac{1}{4} - \dfrac{1}{4}\cos^{2}(2\theta) \\ 
+\end{array} \]
+
+Next, we apply the power reduction formula to $\cos^{2}(2\theta)$ to finish the reduction
+
+\[ \begin{array}{rcl}
+
+\sin^{2}(\theta) \cos^{2}(\theta)  & = & \dfrac{1}{4} - \dfrac{1}{4}\cos^{2}(2\theta) \\ [10pt]
+																	 & = & \dfrac{1}{4} - \dfrac{1}{4} \left(\dfrac{1 + \cos(2(2\theta))}{2}\right) \\ [10pt]
+																	 & = & \dfrac{1}{4} - \dfrac{1}{8}  - \dfrac{1}{8}\cos(4\theta) \\ [10pt]
+																	 & = & \dfrac{1}{8} - \dfrac{1}{8}\cos(4\theta) \\ 
+\end{array} \]
+}
+
+\medskip
+
+Another application of the Power Reduction Formulas is the Half Angle Formulas. To start, we apply the Power Reduction Formula to $\cos^{2}\left(\frac{\theta}{2}\right)$
+
+\[ \cos^{2}\left(\dfrac{\theta}{2}\right) = \dfrac{1 + \cos\left(2 \left(\frac{\theta}{2}\right)\right)}{2} = \dfrac{1 + \cos(\theta)}{2}.\]
+
+We can obtain a formula for $\cos\left(\frac{\theta}{2}\right)$ by extracting square roots.  In a similar fashion, we may obtain a half angle formula for sine, and by  using a quotient formula, obtain a half angle formula for tangent.  We summarize these formulas below.
+
+\smallskip
+
+\theorem{halfangle}{Half Angle Formulas}{ For all applicable angles $\theta$, \index{Half-Angle Formulas}
+
+\begin{itemize}
+
+\item  $\cos\left(\dfrac{\theta}{2}\right) = \pm \sqrt{\dfrac{1 + \cos(\theta)}{2}}$
+
+\item  $\sin\left(\dfrac{\theta}{2}\right) = \pm \sqrt{\dfrac{1 - \cos(\theta)}{2}}$
+
+\item  $\tan\left(\dfrac{\theta}{2}\right) = \pm \sqrt{\dfrac{1 - \cos(\theta)}{1+\cos(\theta)}}$
+
+\end{itemize}
+
+where the choice of $\pm$ depends on the quadrant in which the terminal side of $\dfrac{\theta}{2}$ lies.
+}
+
+\medskip
+
+\example{ex_halfangle}{Using Theorem \ref{halfangle}}{
+\begin{enumerate}
+
+\item  Use a half angle formula to find the exact value of $\cos\left(15^{\circ}\right)$.
+
+\item  Suppose $-\pi \leq \theta \leq 0$ with $\cos(\theta) = -\frac{3}{5}$.  Find $\sin\left(\frac{\theta}{2}\right)$.
+
+\item  Use the identity given in number \ref{doubleanglesinewtan} of Example \ref{doubleangleex} to derive the identity \[\tan\left(\dfrac{\theta}{2}\right) = \dfrac{\sin(\theta)}{1+\cos(\theta)}\]
+
+\end{enumerate}\pagebreak}
+{\begin{enumerate}
+
+\item  To use the half angle formula, we note that $15^{\circ} = \frac{30^{\circ}}{2}$ and since $15^{\circ}$ is a Quadrant I angle, its cosine is positive.  Thus we have
+
+\[ \begin{array}{rcl}
+
+\cos\left(15^{\circ}\right) & = &  + \sqrt{\dfrac{1+\cos\left(30^{\circ}\right)}{2}} = \sqrt{\dfrac{1+\frac{\sqrt{3}}{2}}{2}}\\ [10pt] 
+                          	& = & \sqrt{\dfrac{1+\frac{\sqrt{3}}{2}}{2}\cdot \dfrac{2}{2}} = \sqrt{\dfrac{2+\sqrt{3}}{4}} = \dfrac{\sqrt{2+\sqrt{3}}}{2}\\
+\end{array}\]
+
+\mnote{.7}{Note: Back in Example \ref{cosinesumdiffex}, we found $\cos\left(15^{\circ}\right)$ by using the difference formula for cosine.  In that case, we determined $\cos\left(15^{\circ}\right) = \frac{\sqrt{6}+ \sqrt{2}}{4}$.  The reader is encouraged to prove that these two expressions are equal.}
+
+\item  If $-\pi \leq \theta \leq 0$, then $-\frac{\pi}{2} \leq \frac{\theta}{2} \leq 0$, which means $\sin\left(\frac{\theta}{2}\right) < 0$.  Theorem \ref{halfangle} gives
+
+
+\[ \begin{array}{rcl}
+
+\sin\left(\dfrac{\theta}{2} \right) & = &  -\sqrt{\dfrac{1-\cos\left(\theta \right)}{2}} = -\sqrt{\dfrac{1- \left(-\frac{3}{5}\right)}{2}}\\ [10pt]
+                          	& = & -\sqrt{\dfrac{1 + \frac{3}{5}}{2} \cdot \dfrac{5}{5}} = -\sqrt{\dfrac{8}{10}} =  -\dfrac{2\sqrt{5}}{5}\\
+\end{array}\]
+
+\item  Instead of our usual approach to verifying identities, namely starting with one side of the equation and trying to transform it into the other, we will start with the identity we proved in number \ref{doubleanglesinewtan} of Example \ref{doubleangleex} and manipulate it into the identity we are asked to prove.  The identity we are asked to start with is $\; \sin(2\theta) = \frac{2\tan(\theta)}{1 + \tan^{2}(\theta)}$.  If we are to use this to derive an identity for $\tan\left(\frac{\theta}{2}\right)$, it seems reasonable to proceed by replacing each occurrence of $\theta$ with $\frac{\theta}{2}$
+
+\[ \begin{array}{rcl} 
+
+\sin\left(2 \left(\frac{\theta}{2}\right)\right) & = &  \dfrac{2\tan\left(\frac{\theta}{2}\right)}{1 + \tan^{2}\left(\frac{\theta}{2}\right)} \\ [15pt]
+\sin(\theta) & = & \dfrac{2\tan\left(\frac{\theta}{2}\right)}{1 + \tan^{2}\left(\frac{\theta}{2}\right)} \\ \end{array} \]
+
+\enlargethispage{2\baselineskip}
+We now have the $\sin(\theta)$ we need, but we somehow need to get a factor of $1+\cos(\theta)$ involved.  To get cosines involved, recall that $1 + \tan^{2}\left(\frac{\theta}{2}\right) = \sec^{2}\left(\frac{\theta}{2}\right)$.  We continue to manipulate our given identity by converting secants to cosines and using a power reduction formula
+
+\[ \begin{array}{rcl} 
+
+\sin(\theta) & = &  \dfrac{2\tan\left(\frac{\theta}{2}\right)}{1 + \tan^{2}\left(\frac{\theta}{2}\right)} \\ [15pt]
+\sin(\theta) & = & \dfrac{2\tan\left(\frac{\theta}{2}\right)}{\sec^{2}\left(\frac{\theta}{2}\right)} \\ [15pt]
+\sin(\theta) & = & 2 \tan\left(\frac{\theta}{2}\right) \cos^{2}\left(\frac{\theta}{2}\right) \\ [5pt]
+\sin(\theta) & = & 2 \tan\left(\frac{\theta}{2}\right) \left(\dfrac{1 + \cos\left(2 \left(\frac{\theta}{2}\right)\right)}{2}\right) \\ [15pt]
+\sin(\theta) & = &  \tan\left(\frac{\theta}{2}\right) \left(1+\cos(\theta) \right) \\ [5pt]
+\tan\left(\dfrac{\theta}{2}\right) & = & \dfrac{\sin(\theta)}{1+\cos(\theta)} \\ 
+\end{array}  \]
+
+\end{enumerate}
+}
+
+\pagebreak
+
+Our next batch of identities, the Product to Sum Formulas, are easily verified by expanding each of the right hand sides in accordance with Theorem \ref{circularsumdifference} and as you should expect by now we leave the details as exercises.  They are of particular use in Calculus, and we list them here for reference.
+
+\mnote{.5}{The identities in Theorem \ref{producttosum} are also known as the Prosthaphaeresis Formulas and have a rich history.  The authors recommend that you conduct some research on them as your schedule allows.} 
+
+\smallskip
+
+\theorem{producttosum}{Product to Sum Formulas}{ For all angles $\alpha$ and $\beta$, \index{Product to Sum Formulas}
+
+\begin{itemize}
+
+\item  $\cos(\alpha)\cos(\beta) = \frac{1}{2} \left[ \cos(\alpha - \beta) + \cos(\alpha + \beta)\right]$
+
+\item  $\sin(\alpha)\sin(\beta) = \frac{1}{2} \left[ \cos(\alpha - \beta) - \cos(\alpha + \beta)\right]$
+
+\item  $\sin(\alpha)\cos(\beta) = \frac{1}{2} \left[ \sin(\alpha - \beta) + \sin(\alpha + \beta)\right]$
+
+\end{itemize}
+}
+
+\smallskip
+
+Related to the Product to Sum Formulas are the Sum to Product Formulas, which come in handy when attempting to solve equations involving trigonometric functions.  These are easily verified using the Product to Sum Formulas, and as such, their proofs are left as exercises.
+
+\smallskip
+
+\theorem{sumtoproduct}{Sum to Product Formulas}{ For all angles $\alpha$ and $\beta$, \index{Sum to Product Formulas}
+
+\begin{itemize}
+
+\item  $\cos(\alpha) + \cos(\beta) = 2 \cos\left( \dfrac{\alpha + \beta}{2}\right)\cos\left( \dfrac{\alpha - \beta}{2}\right) $
+
+\item  $\cos(\alpha) -  \cos(\beta) = - 2 \sin\left( \dfrac{\alpha + \beta}{2}\right)\sin\left( \dfrac{\alpha - \beta}{2}\right) $
+
+\item  $\sin(\alpha) \pm \sin(\beta) = 2 \sin\left( \dfrac{\alpha \pm \beta}{2}\right)\cos\left( \dfrac{\alpha \mp \beta}{2}\right) $
+
+\end{itemize}
+}
+
+\medskip
+
+\example{prodtosumtoprod}{Using Theorems \ref{producttosum} and \ref{sumtoproduct}}{
+
+\begin{enumerate}
+
+\item  Write $\; \cos(2\theta)\cos(6\theta) \;$ as a sum.
+
+\item  Write $\; \sin(\theta) - \sin(3\theta) \;$ as a product.
+
+\end{enumerate}}
+{\begin{enumerate}
+
+\item  Identifying $\alpha = 2\theta$ and $\beta = 6\theta$, we find
+
+\[\begin{array}{rcl}
+
+\cos(2\theta)\cos(6\theta) & = &  \frac{1}{2} \left[ \cos(2\theta - 6\theta) + \cos(2\theta + 6\theta)\right]\\ [4pt]
+													 & = & \frac{1}{2} \cos(-4\theta) + \frac{1}{2}\cos(8\theta) \\ [4pt]
+													 & = & \frac{1}{2} \cos(4\theta) + \frac{1}{2} \cos(8\theta), \end{array} \]
+where the last equality is courtesy of the even identity for cosine, $\cos(-4\theta) = \cos(4\theta)$.
+
+\item  Identifying $\alpha = \theta$ and $\beta = 3\theta$ yields
+
+\[ \begin{array}{rcl}
+
+\sin(\theta) - \sin(3\theta) & = &  2 \sin\left( \dfrac{\theta - 3\theta}{2}\right)\cos\left( \dfrac{\theta + 3\theta}{2}\right) \\ [2pt]
+														 & = &  2 \sin\left( -\theta \right)\cos\left( 2\theta \right) \\ [2pt]
+															& = &  -2 \sin\left( \theta \right)\cos\left( 2\theta \right), \\ \end{array}\]
+where the last equality is courtesy of the odd identity for sine, $\sin(-\theta) = -\sin(\theta)$.
+
+\end{enumerate}}
+
+\medskip
+
+This section and the one before it present a rather large volume of trigonometric identities, leading to a very common student question: ``Do I have to memorize \sword{all} of these?'' The answer, of course, is no. The indispensable identities are the Pythagorean identities (Theorem \ref{cosinesinepythid}), and the sum/difference identities (Theorems \ref{cosinesumdifference} and \ref{sinesumdifference}). They are the most common, and all other identities can be derived from them. That said, there are a number of topics in Calculus (trig integration comes to mind) where having other identities like the power reduction formulas in Theorem \ref{powerreduction} at your fingertips will come in handy.
+
+The reader is reminded that all of the identities presented in this section which regard the circular functions as functions of angles (in radian measure) apply equally well to the circular (trigonometric) functions regarded as functions of real numbers.  In Exercises \ref{idengraphfirst} - \ref{idengraphlast} in Section \ref{TrigGraphs}, we see how some of these identities manifest themselves geometrically as we study the graphs of the these functions.  In the upcoming Exercises, however, you need to do all of your work analytically without graphs.
+
+\printexercises{exercises_pre/07_04_exercises}
+
+
+
+

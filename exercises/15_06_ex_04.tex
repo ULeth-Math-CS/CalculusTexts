@@ -1,0 +1,13 @@
+{Consider $\dfrac{dx}{dt} = t-x$, $x(0)=1$.  a) Use Euler's method
+with step sizes $h = 1, \dfrac{1}{2}, \dfrac{1}{4}, \dfrac{1}{8}$ to
+approximate
+$x(1)$.  b) Solve the equation exactly.
+c) Describe what happens to the
+errors for each $h$ you used.  That is, find the factor by which the error
+changed each time you halved the interval.}
+{(a) For $h=1$, $x(1) = x_1 = 0$.\\
+For $h=0.5$, $x(1) = x_2 = 0.5$.\\
+For $h=0.25$, $x(1) = x_4 = 0.6328125$.\\
+For $h=0.125$, $x(1) = x_8 = 0.68721783$.\\
+(b) The exact solution is $x(t) = t-1+2e^{-t}$, so $x(1) = 0.73575888$.
+(c) The first error is about $0.74$. The second error is about $0.24$, or about one third of the first error. The third error is about $0.10$, which is not quite a third of the second error, but is less than half. The fourth error is $0.049$, so again the error is reduced by more than half (but not much more).}

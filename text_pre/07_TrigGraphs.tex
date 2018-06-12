@@ -1,0 +1,970 @@
+\section{Graphs of the Trigonometric Functions}
+
+\label{TrigGraphs}
+
+%In this section, we return to our discussion of the circular (trigonometric) functions as functions of real numbers and pick up where we left off in Sections \ref{cosinesinebeyond} and \ref{circularfunctionsbeyond}.  As usual, we begin our study with the functions $f(t) = \cos(t)$ and $g(t) = \sin(t)$.  
+
+\subsection{Graphs of the Cosine and Sine Functions}
+
+Since radian measure allows us to identify angles with real numbers, and the sine and cosine functions are defined for any angle, we know that the domain of $f(t) = \cos(t)$ and of $g(t) = \sin(t)$ is all real numbers, $(-\infty, \infty),$ and the range of both functions is $[-1,1]$.  The Even / Odd Identities in Theorem \ref{evenodd} tell us $\cos(-t) = \cos(t)$ for all real numbers $t$ and $\sin(-t) = -\sin(t)$ for all real numbers $t$.  This means $f(t) = \cos(t)$ is an even function, while $g(t) = \sin(t)$ is an odd function.  Another important property of these  functions is that $\cos(t + 2\pi k) = \cos(t)$ and $\sin(t + 2\pi k) = \sin(t)$ for all real numbers $t$ and any integer $k$.  This last property is given a special name.
+
+\smallskip
+
+\definition{periodic}{Periodic Function}{ A function $f$ is said to be \sword{periodic}\index{function ! periodic}\index{periodic function}  if there is a real number $c$ so that $f(t+c) = f(t)$ for all real numbers $t$ in the domain of $f$.  The smallest positive number $p$ for which $f(t+p) = f(t)$ for all real numbers $t$ in the domain of $f$, if it exists, is called the \sword{period} of $f$. \index{period ! of a function}
+}
+
+\medskip
+
+We have already seen a family of periodic functions in Section \ref{LinearFunctions}:  the constant functions.  However, despite being periodic, a constant function has no period.  (We'll leave that odd gem as an exercise for you.)  Returning to the circular functions, we see that by Definition \ref{periodic}, $f(t) = \cos(t)$ is periodic with period $2\pi$, since $\cos(t + 2\pi k) = \cos(t)$ for any integer $k$, in particular, for $k=1$.
+\mnote{.4}{To see that $p=2\pi$ is the smallest value such that $\cos(t+p)=\cos(t)$, notice that when $t=0$, we would need to have $\cos(p)=\cos(0)=1$, and we know that there are no numbers $p$ between $0$ and $2\pi$ such that $\cos(p)=1$.}
+ Similarly, we can show $g(t) = \sin(t)$ is also periodic with $2\pi$ as its period.   Having period $2\pi$ essentially means that we can completely understand everything about the functions  $f(t) = \cos(t)$ and $g(t) = \sin(t)$ by studying one interval of length $2\pi$, say $[0,2\pi]$.
+
+\mnote{.2}{Technically, we should study the interval $[0,2\pi)$, since whatever happens at $t=2\pi$ is the same as what happens at $t=0$.  As we will see shortly, $t=2\pi$ gives us an extra `check' when we go to graph these functions. In some texts, the interval of choice is $[-\pi, \pi)$.} 
+
+\smallskip
+
+One last property of the functions $f(t) = \cos(t)$ and $g(t) = \sin(t)$ is worth pointing out:   both of these functions are continuous and smooth.  Recall from Section \ref{GraphsofPolynomials} that geometrically this means the graphs of the cosine and sine functions have no jumps, gaps, holes in the graph,  asymptotes, corners or cusps.  As we shall see, the graphs of both $f(t) = \cos(t)$ and $g(t) = \sin(t)$ meander nicely and don't cause any trouble.  We summarize these facts in the following theorem.
+
+
+\smallskip
+
+\theorem{cosinesinefunctionprops}{Properties of the Cosine and Sine Functions}{ \index{cosine ! properties of} \index{sine ! properties of}
+
+\begin{multicols}{2}
+\begin{itemize}
+\item The function $f(x) = \cos(x)$
+\begin{itemize}
+\item has domain $(-\infty, \infty)$
+\item has range $[-1,1]$
+\item is continuous and smooth
+\item is even
+\item has period $2\pi$
+\end{itemize}
+\item The function $f(x) = \sin(x)$
+\begin{itemize}
+\item has domain $(-\infty, \infty)$
+\item has range $[-1,1]$
+\item is continuous and smooth
+\item is odd
+\item has period $2\pi$
+\end{itemize}
+\end{itemize}
+\end{multicols}}
+
+\medskip
+
+
+ 
+In this section, we follow the usual graphing convention  and use $x$ as the independent variable and $y$ as the dependent variable. This allows us to turn our attention to graphing the cosine and sine functions in the Cartesian Plane. (\textbf{Caution}: the use of $x$ and $y$ in this context is not to be confused with the $x$- and $y$-coordinates of points on the Unit Circle which define cosine and sine.  Using the term `trigonometric function' as opposed to `circular function' can help with that, but one could then ask, ``Hey, where's the triangle?'') To graph $y = \cos(x)$, we make a table using some of the `common values' of $x$ in the interval $[0,2\pi]$. This generates a \textit{portion} of the cosine graph, which we call the \index{fundamental cycle ! of $y = \cos(x)$}`\sword{fundamental cycle}' of $y = \cos(x)$. \index{cosine ! graph of}
+
+\mtable{.71}{Graphing $y=\cos(x)$}{fig:triggraph1}{
+\begin{tabular}{c}
+\setlength{\extrarowheight}{2pt}
+\begin{tabular}{|r||r|r|}  
+
+\hline
+
+ $x$ & $\cos(x)$ & $(x,\cos(x))$ \\ \hline
+0  & 1 & $(0, 1)$ \\ [2pt]   \hline
+$\frac{\pi}{4}$  & $\frac{\sqrt{2}}{2}$ & $\left(\frac{\pi}{4}, \frac{\sqrt{2}}{2}\right)$ \\ [2pt] \hline 
+$\frac{\pi}{2}$  & 0 & $\left(\frac{\pi}{2}, 0\right)$ \\ [2pt] \hline 
+$\frac{3\pi}{4}$  & $-\frac{\sqrt{2}}{2}$ & $\left(\frac{3\pi}{4}, - \frac{\sqrt{2}}{2}\right)$ \\ [2pt] \hline 
+$\pi$ & $-1$ & $(\pi, -1)$ \\ [2pt] \hline 
+$\frac{5\pi}{4}$  & $-\frac{\sqrt{2}}{2}$ & $\left(\frac{5\pi}{4}, -\frac{\sqrt{2}}{2}\right)$ \\ [2pt] \hline 
+$\frac{3\pi}{2}$  & 0 & $\left(\frac{3\pi}{2}, 0 \right)$ \\ [2pt] \hline 
+$\frac{7\pi}{4}$  & $\frac{\sqrt{2}}{2}$ & $\left(\frac{7\pi}{4}, \frac{\sqrt{2}}{2}\right)$ \\ [2pt] \hline 
+$2\pi$  & 1 & $(2\pi, 1)$ \\  [2pt] \hline
+\end{tabular}\setlength{\extrarowheight}{0pt} \\
+Values of $f(x)=\cos(x)$ on $[0,2\pi]$\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/IntroTrigGraphics/TrigGraphs-1}\\
+The `fundamental cycle' of $y = \cos(x)$.
+\end{tabular}}
+
+A few things about the graph above are worth mentioning. First, this graph represents only part of the graph of $y = \cos(x)$.  To get the entire graph, we imagine `copying and pasting' this graph end to end infinitely in both directions (left and right) on the $x$-axis.  Secondly, the vertical scale here has been greatly exaggerated for clarity and aesthetics. Below is an accurate-to-scale graph of $y = \cos(x)$ showing several cycles with the `fundamental cycle' plotted thicker than the others.    The graph of $y=\cos(x)$ is usually described as `wavelike' -- indeed, many of the applications involving the cosine and sine functions feature modelling wavelike phenomena.   
+
+\medskip
+
+\noindent\begin{minipage}{\textwidth}
+\begin{center}
+\myincludegraphics[width=0.95\textwidth]{figures/IntroTrigGraphics/TrigGraphs-2}
+\end{center} 
+\captionsetup{type=figure}
+\caption{An accurately scaled graph of $y = \cos(x)$.}
+\end{minipage}
+
+\medskip
+
+We can plot the fundamental cycle of the graph of $y = \sin(x)$ similarly, with similar results.  \index{sine ! graph of}
+
+\mtable{.27}{Graphing $y=\sin(x)$}{fig:triggraph2}{
+\begin{tabular}{c}
+\setlength{\extrarowheight}{2pt}
+\begin{tabular}{|r||r|r|}  
+
+\hline
+
+ $x$ & $\sin(x)$ & $(x,\sin(x))$ \\ \hline
+0  & 0 & $(0, 0)$ \\ [2pt]   \hline
+$\frac{\pi}{4}$  & $\frac{\sqrt{2}}{2}$ & $\left(\frac{\pi}{4}, \frac{\sqrt{2}}{2}\right)$ \\ [2pt] \hline 
+$\frac{\pi}{2}$  & 1 & $\left(\frac{\pi}{2}, 1\right)$ \\ [2pt] \hline 
+$\frac{3\pi}{4}$  & $\frac{\sqrt{2}}{2}$ & $\left(\frac{3\pi}{4}, \frac{\sqrt{2}}{2}\right)$ \\ [2pt] \hline 
+$\pi$ & 0 & $(\pi, 0)$ \\ [2pt] \hline 
+$\frac{5\pi}{4}$  & $-\frac{\sqrt{2}}{2}$ & $\left(\frac{5\pi}{4}, -\frac{\sqrt{2}}{2}\right)$ \\ [2pt] \hline 
+$\frac{3\pi}{2}$  & $-1$ & $\left(\frac{3\pi}{2}, -1 \right)$ \\ [2pt] \hline 
+$\frac{7\pi}{4}$  & $-\frac{\sqrt{2}}{2}$ & $\left(\frac{7\pi}{4}, -\frac{\sqrt{2}}{2}\right)$ \\ [2pt] \hline 
+$2\pi$  & 0 & $(2\pi, 0)$ \\  [2pt] \hline
+\end{tabular}\setlength{\extrarowheight}{0pt} \\
+Values of $f(x)=\sin(x)$ on $[0,2\pi]$\\
+\\
+\myincludegraphics[width=0.95\marginparwidth]{figures/IntroTrigGraphics/TrigGraphs-3}\\
+The `fundamental cycle' of $y = \sin(x)$
+\end{tabular}}
+
+As with the graph of $y=\cos(x)$, we provide an accurately scaled graph of $y = \sin(x)$ below with the fundamental cycle highlighted.
+
+\medskip
+
+\noindent\begin{minipage}{\textwidth}
+\begin{center}
+\myincludegraphics[width=0.95\textwidth]{figures/IntroTrigGraphics/TrigGraphs-4}
+\end{center} 
+\captionsetup{type=figure}
+\caption{An accurately scaled graph of $y = \sin(x)$.}
+\end{minipage}
+
+\medskip
+
+It is no accident that the graphs of $y = \cos(x)$ and $y = \sin(x)$ are so similar.  Using a cofunction identity along with the even property of cosine, we have
+
+\[ \sin(x) = \cos\left(\frac{\pi}{2} - x\right) = \cos\left(-\left(x - \frac{\pi}{2}\right)\right) = \cos\left(x - \frac{\pi}{2}\right),\]
+
+so that the graph of $y=\sin(x)$ is the result of shifting the graph of $y = \cos(x)$ to the right $\frac{\pi}{2}$ units.  A visual inspection confirms this. 
+
+\smallskip
+
+Now that we know the basic shapes of the graphs of $y = \cos(x)$ and $y = \sin(x)$, we can graph transformations to graph more complicated curves.  To do so, we need to keep track of the movement of some key points on the original graphs. We choose to track the values $x = 0$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$ and $2\pi$.  These `quarter marks' correspond to quadrantal angles, and as such, mark the location of the zeros and the local extrema of these functions over exactly one period.  Before we begin our next example, we need to review the concept of the `argument' of a function as first introduced in Section \ref{FunctionNotation}.  For the function $f(x) = 1 - 5\cos(2x-\pi)$, the argument of $f$ is $x$.  We shall have occasion, however, to refer to the argument of the \textit{cosine}, which in this case is $2x-\pi$.  Loosely stated, the argument of a trigonometric function is the expression `inside' the function.\index{argument ! of a trigonometric function}
+
+\medskip
+
+\example{cosinesinegraphex1}{Plotting cosine and sine functions}{ Graph one cycle of the following functions. State the period of each.
+
+\begin{enumerate}
+
+\item  $f(x) = 3 \cos\left(\frac{\pi x - \pi}{2}\right) + 1$
+
+\item  $g(x) = \frac{1}{2} \sin(\pi - 2x) + \frac{3}{2}$
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item  We set the argument of the cosine, $\frac{\pi x - \pi}{2}$, equal to each of the values:  $0$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, $2\pi$ and solve for $x$. We summarize the results in Figure \ref{fig:triggraph3}.
+
+\mtable{.25}{Reference points for $f(x)$ in Example \ref{cosinesinegraphex1}}{fig:triggraph3}{
+\setlength{\extrarowheight}{2pt}
+\[ \begin{array}{|r|r|r|}  
+
+\hline
+
+ a & \frac{\pi x - \pi}{2} = a & x \\ [2pt] \hline
+
+0  & \frac{\pi x - \pi}{2} = 0 & 1 \\ [2pt]   \hline
+
+\frac{\pi}{2}  & \frac{\pi x - \pi}{2} = \frac{\pi}{2} & 2 \\ [2pt] \hline 
+
+\pi & \frac{\pi x - \pi}{2} = \pi & 3 \\ [2pt] \hline 
+
+\frac{3\pi}{2}  & \frac{\pi x - \pi}{2} = \frac{3\pi}{2} & 4 \\ [2pt] \hline 
+
+2\pi  & \frac{\pi x - \pi}{2} = 2\pi & 5\\  [2pt] \hline
+\end{array} \]
+\setlength{\extrarowheight}{0pt}
+}
+
+Next, we substitute each of these $x$ values into $f(x) = 3 \cos\left(\frac{\pi x - \pi}{2}\right) + 1$ to determine the corresponding $y$-values and connect the dots in a pleasing wavelike fashion. 
+
+\medskip
+
+\noindent\hskip-30pt\begin{minipage}{\textwidth}
+\begin{center}
+\begin{tabular}{m{0.5\textwidth} m{0.5\textwidth}}
+\setlength{\extrarowheight}{2pt}
+\[ \begin{array}{|r||r|r|}  
+
+\hline
+
+ x & f(x) & (x,f(x)) \\ [2pt] \hline
+1  & 4 & (1,4) \\ [2pt]   \hline
+
+2  & 1 & (2,1) \\ [2pt] \hline 
+
+3 & -2 & (3,-2) \\ [2pt] \hline 
+
+4  & 1 & (4,1) \\ [2pt] \hline 
+
+5 & 4 & (5,4) \\  [2pt] \hline
+\end{array} \]
+\setlength{\extrarowheight}{0pt} & 
+\myincludegraphics[width=0.45\textwidth]{figures/IntroTrigGraphics/TrigGraphs-5}
+\end{tabular}
+\end{center}
+\captionsetup{type=figure}
+\caption{Plotting one cycle of $y=f(x)$ in Example \ref{cosinesinegraphex1}}
+\end{minipage}
+
+\medskip
+
+One cycle is graphed on $[1,5]$ so the period is the length of that interval which is $4$.
+
+\item  Proceeding as above, we set the argument of the sine, $\pi - 2x$, equal to each of our quarter marks and solve for $x$ in Figure \ref{fig:triggraph4}.
+
+
+We now find the corresponding $y$-values on the graph by substituting each of these $x$-values into  $g(x) = \frac{1}{2} \sin(\pi - 2x) + \frac{3}{2}$.  Once again, we connect the dots in a wavelike fashion.
+
+\medskip
+
+\noindent\hskip-30pt\begin{minipage}{\textwidth}
+\begin{center}
+\begin{tabular}{m{0.5\textwidth} m{0.5\textwidth}}
+\setlength{\extrarowheight}{2pt}
+\[ \begin{array}{|r||r|r|}  
+
+\hline
+
+ x & g(x) & (x,g(x)) \\ [2pt] \hline
+\frac{\pi}{2} & \frac{3}{2} & \left(\frac{\pi}{2}, \frac{3}{2}\right)  \\ [2pt]   \hline
+
+\frac{\pi}{4} & 2 & \left(\frac{\pi}{4}, 2\right) \\ [2pt] \hline 
+
+0 & \frac{3}{2} & \left(0, \frac{3}{2} \right)  \\ [2pt] \hline 
+
+-\frac{\pi}{4}  & 1 &  \left(-\frac{\pi}{4}, 1 \right) \\ [2pt] \hline 
+
+-\frac{\pi}{2} & \frac{3}{2} & \left(-\frac{\pi}{2}, \frac{3}{2} \right) \\  [2pt] \hline
+\end{array} \]
+\setlength{\extrarowheight}{0pt} & 
+\myincludegraphics[width=0.45\textwidth]{figures/IntroTrigGraphics/TrigGraphs-6}
+\end{tabular}
+\end{center}
+\captionsetup{type=figure}
+\caption{Plotting one cycle of $y=g(x)$ in Example \ref{cosinesinegraphex1}}
+\end{minipage}
+
+\mtable{.75}{Reference points for $g(x)$ in Example \ref{cosinesinegraphex1}}{fig:triggraph4}{
+\setlength{\extrarowheight}{2pt}
+\[ \begin{array}{|r|r|r|}  
+
+\hline
+
+ a & \pi - 2x = a & x \\ [2pt] \hline
+0  & \pi - 2x = 0 & \frac{\pi}{2} \\ [2pt]   \hline
+
+\frac{\pi}{2}  &\pi - 2x = \frac{\pi}{2} & \frac{\pi}{4} \\ [2pt] \hline 
+
+\pi & \pi - 2x = \pi & 0 \\ [2pt] \hline 
+
+\frac{3\pi}{2}  & \pi - 2x = \frac{3\pi}{2} & -\frac{\pi}{4} \\ [2pt] \hline 
+
+2\pi  &\pi - 2x = 2\pi & -\frac{\pi}{2}\\  [2pt] \hline
+\end{array} \]
+\setlength{\extrarowheight}{0pt}}
+
+\medskip
+
+One cycle was graphed on the interval $\left[ -\frac{\pi}{2}, \frac{\pi}{2}\right]$ so the period is $\frac{\pi}{2} - \left(-\frac{\pi}{2}\right) = \pi$. 
+
+\end{enumerate}
+}
+
+\medskip
+
+The functions in Example \ref{cosinesinegraphex1} are examples of \sword{sinusoids}.  Sinusoids can be characterized by four properties:  period, amplitude, phase shift and vertical shift. We have already discussed period, that is, how long it takes for the sinusoid to complete one cycle.  The standard period of both $f(x) = \cos(x)$ and $g(x) = \sin(x)$ is $2\pi$, but horizontal scalings will change the period of the resulting sinusoid.  The \index{amplitude}\index{sinusoid ! amplitude}\sword{amplitude} of the sinusoid is a measure of how `tall' the wave is, as indicated in the figure below.  The amplitude of the standard cosine and sine functions is $1$, but vertical scalings can alter this: see Figure \ref{fig:triggraph5}.  
+
+\mnote{.4}{We have already seen how the Even/Odd and Cofunction Identities can be used to rewrite $g(x) = \sin(x)$ as a transformed version of $f(x) = \cos(x)$, so of course, the reverse is true:  $f(x) = \cos(x)$ can be written as a transformed version of $g(x) = \sin(x)$.  The authors have seen some instances where sinusoids are always converted to cosine functions while in other disciplines, the sinusoids are always written in terms of sine functions.  }
+
+\mfigure[width=0.95\marginparwidth]{.2}{Properties of sinusoids}{fig:triggraph5}{figures/IntroTrigGraphics/TrigGraphs-7}
+
+The \index{phase shift}\index{sinusoid ! phase shift}\sword{phase shift} of the sinusoid is the horizontal shift experienced by the fundamental cycle.\index{sinusoid ! graph of} We have seen that a phase (horizontal) shift of $\frac{\pi}{2}$ to the right takes $f(x) = \cos(x)$ to $g(x) = \sin(x)$ since $\cos\left(x - \frac{\pi}{2}\right) = \sin(x)$.  As the reader can verify,  a phase shift of $\frac{\pi}{2}$ to the left takes $g(x) = \sin(x)$ to $f(x)= \cos(x)$.   In most contexts, the vertical shift of a sinusoid is assumed to be $0$, but we state the more general case below.  The following theorem shows how to find these four fundamental quantities from the formula of the given sinusoid.
+
+\smallskip
+
+\theorem{sinusoidform}{Standard form of sinusoids}{ For $\omega > 0$, the functions \[C(x) = A \cos(\omega x + \phi) + B \quad \text{and} \quad S(x) = A \sin(\omega x + \phi) + B \]
+
+\begin{multicols}{2}
+
+\begin{itemize}
+
+\item  have period $\dfrac{2\pi}{\omega}$
+
+\item  have amplitude $|A|$
+
+\item  have phase shift $-\dfrac{\phi}{\omega}$
+
+\item  have vertical shift $B$
+
+\end{itemize}
+
+\end{multicols}
+}
+
+\smallskip
+
+We note that in some scientific and engineering circles, the quantity $\phi$ mentioned in Theorem \ref{sinusoidform} is called the \index{phase} \sword{phase} of the sinusoid. Since our interest in this book is primarily with \textit{graphing} sinusoids, we focus our attention on the horizontal shift $-\frac{\phi}{\omega}$ induced by $\phi$.
+
+\smallskip
+
+The parameter $\omega$, which is stipulated to be positive, is called the (\sword{angular}) \sword{frequency} \index{frequency ! of a sinusoid} of the sinusoid and is the number of cycles the sinusoid completes over a $2\pi$ interval.  We can always ensure $\omega > 0$ using the Even/Odd Identities. (Try using the formulas in Theorem \ref{sinusoidform} applied to $C(x) = \cos(-x+\pi)$ to see why we need $\omega > 0$.) 
+%We now test out Theorem \ref{sinusoidform} using  the functions $f$ and $g$ featured  in Example \ref{cosinesinegraphex1}. First, we write $f(x)$ in the form prescribed in Theorem \ref{sinusoidform},
+
+%\[ f(x) =  3 \cos\left(\frac{\pi x - \pi}{2}\right) + 1 = 3\cos\left(\frac{\pi}{2} x + \left(-\frac{\pi}{2}\right)\right) + 1,\]
+
+%so that $A = 3$, $\omega = \frac{\pi}{2}$, $\phi = -\frac{\pi}{2}$ and $B = 1$.  According to Theorem \ref{sinusoidform}, the period of $f$ is $\frac{2\pi}{\omega} = \frac{2\pi}{\pi/2} = 4$, the amplitude is $|A| = |3| = 3$, the phase shift is $-\frac{\phi}{\omega} = -\frac{-\pi/2}{\pi/2} = 1$ (indicating a shift to the \textit{right} $1$ unit) and the vertical shift is $B = 1$ (indicating a shift \textit{up} $1$ unit.) All of these match with our graph of $y=f(x)$.  Moreover, if we start with the basic shape of the cosine graph, shift it $1$ unit to the right, $1$ unit up, stretch the amplitude to $3$ and shrink the period to $4$, we will have reconstructed one period of the graph of $y=f(x)$.  In other words, instead of tracking the five `quarter marks' through the transformations to plot $y=f(x)$, we can use five other pieces of information:  the phase shift, vertical shift, amplitude, period and basic shape of the cosine curve.   Turning our attention now to the function $g$ in Example \ref{cosinesinegraphex1}, we first need to use the odd property of the sine function to write it in the form required by Theorem \ref{sinusoidform}.
+
+%\begin{align*}
+%g(x) &= \frac{1}{2} \sin(\pi - 2x) + \frac{3}{2} = \frac{1}{2} \sin(-(2x - \pi)) + \frac{3}{2}\\
+%& = -\frac{1}{2} \sin(2x - \pi) + \frac{3}{2}= -\frac{1}{2} \sin(2x + (-\pi)) + \frac{3}{2}
+%\end{align*}
+
+%\smallskip
+
+%We find $A = -\frac{1}{2}$, $\omega = 2$, $\phi = -\pi$ and $B = \frac{3}{2}$.  The period is then $\frac{2\pi}{2} = \pi$, the amplitude is $\left| - \frac{1}{2} \right| = \frac{1}{2}$, the phase shift is $-\frac{-\pi}{2} = \frac{\pi}{2}$ (indicating a shift \textit{right} $\frac{\pi}{2}$ units) and the vertical shift is \textit{up} $\frac{3}{2}$.  Note that, in this case, all of the data match our graph of $y=g(x)$ with the exception of the phase shift. \phantomsection \label{phaseshiftissue} Instead of the graph \textit{starting} at $x = \frac{\pi}{2}$, it ends there.  Remember, however, that the graph presented in Example \ref{cosinesinegraphex1} is only one portion of the graph of $y=g(x)$.  Indeed, another complete cycle begins at $x = \frac{\pi}{2}$, and this is the cycle Theorem \ref{sinusoidform} is detecting.  The reason for the discrepancy is that, in order to apply  Theorem \ref{sinusoidform}, we had to rewrite the formula for $g(x)$ using the odd property of the sine function.  Note that whether we graph $y=g(x)$ using the `quarter marks' approach or using the Theorem \ref{sinusoidform}, we get one complete cycle of the graph, which means we have completely determined the sinusoid.
+
+%\pagebreak
+%\medskip
+
+%\example{fitsinusoidtodata1}{Fitting a sinusoid to given data}{Figure \ref{fig:triggraph6} shows the graph of one complete cycle of a sinusoid $y=f(x)$.
+
+%\mfigure[width=0.95\marginparwidth]{.75}{One cycle of $y=f(x)$ in Example \ref{fitsinusoidtodata1}}{fig:triggraph6}{figures/IntroTrigGraphics/TrigGraphs-8}
+
+%\begin{enumerate}
+
+%\item Find a cosine function whose graph matches the graph of $y = f(x)$.
+
+%\item Find a sine function whose graph matches the graph of $y = f(x)$.   
+
+%\end{enumerate}}
+%{\begin{enumerate}
+
+%\item We fit the data to a function of the form $C(x) = A \cos(\omega x + \phi) + B$.  Since one cycle is graphed over the interval $[-1,5]$, its period is $5-(-1) = 6$.  According to Theorem \ref{sinusoidform}, $6 = \frac{2\pi}{\omega}$, so that $\omega = \frac{\pi}{3}$.  Next, we see that the phase shift is $-1$, so we have $-\frac{\phi}{\omega} = -1$, or $\phi = \omega = \frac{\pi}{3}$.  To find the amplitude, note that the range of the sinusoid is $\left[ -\frac{3}{2}, \frac{5}{2}\right]$.  As a result, the amplitude $A = \frac{1}{2}\left[ \frac{5}{2} - \left(-\frac{3}{2}\right)\right] = \frac{1}{2} (4) = 2.$  Finally, to determine the vertical shift, we average the endpoints of the range to find $B = \frac{1}{2}\left[ \frac{5}{2} + \left(-\frac{3}{2}\right)\right] = \frac{1}{2}(1) = \frac{1}{2}$.  Our final answer is $C(x) = 2 \cos\left(\frac{\pi}{3} x + \frac{\pi}{3} \right) + \frac{1}{2}$. 
+
+%\item  Most of the work to fit the data to a function of the form $S(x) = A \sin(\omega x + \phi) + B$ is done.  The period, amplitude and vertical shift are the same as before with $\omega = \frac{\pi}{3}$, $A = 2$ and $B = \frac{1}{2}$.  The trickier part is finding the phase shift.  To that end, we imagine extending the graph of the given sinusoid as in Figure \ref{fig:triggraph7} below so that we can identify a cycle beginning at $\left(\frac{7}{2}, \frac{1}{2}\right)$.  Taking the phase shift to be $\frac{7}{2}$, we get $-\frac{\phi}{\omega} = \frac{7}{2}$, or $\phi = -\frac{7}{2} \omega = -\frac{7}{2}\left(\frac{\pi}{3}\right) = -\frac{7\pi}{6}$.  Hence, our answer is $S(x) = 2 \sin\left(\frac{\pi}{3} x - \frac{7\pi}{6}\right) + \frac{1}{2}$. 
+
+%\medskip
+
+%\noindent\hskip-10pt\begin{minipage}{\textwidth}
+%\begin{center}
+%\myincludegraphics[width=0.95\textwidth]{figures/IntroTrigGraphics/TrigGraphs-9}
+%\end{center} 
+%\captionsetup{type=figure}
+%\caption{Extending the graph of $y=f(x)$}\label{fig:triggraph7}
+%\end{minipage}
+
+%\end{enumerate}
+%}
+
+%\medskip
+
+%Note that each of the answers given in Example \ref{fitsinusoidtodata1} is one choice out of many possible answers.  For example, when fitting a sine function to the data, we could have chosen to start at $\left(\frac{1}{2}, \frac{1}{2}\right)$ taking $A = -2$.  In this case, the phase shift is $\frac{1}{2}$ so  $\phi = -\frac{\pi}{6}$ for an answer of $S(x) = -2 \sin\left(\frac{\pi}{3} x - \frac{\pi}{6}\right) + \frac{1}{2}$.  Alternatively, we could have extended the graph of $y=f(x)$ to the left and considered a sine function starting at $\left(-\frac{5}{2}, \frac{1}{2}\right)$, and so on.  Each of these formulas determine the same sinusoid curve and their formulas are all equivalent using identities.  \phantomsection \label{expandedsinusoid} Speaking of identities, if we use the sum identity for cosine, we can expand the formula to yield \[C(x) = A \cos(\omega x + \phi) + B = A\cos(\omega x) \cos(\phi) - A \sin(\omega x)\sin(\phi) + B.\]   Similarly, using the sum identity for sine, we get  \[S(x) = A \sin(\omega x + \phi) + B = A\sin(\omega x) \cos(\phi) + A \cos(\omega x)\sin(\phi) + B.\]  Making these observations allows us to recognize (and graph) functions as sinusoids which, at first glance, don't appear to fit the forms of either $C(x)$ or $S(x)$.  
+
+\medskip
+
+\example{expandedsinusoidex1}{Converting a sinusoid to standard form}{  Consider the function $f(x) = \cos(2x) - \sqrt{3} \sin(2x)$. Find a formula for $f(x)$:
+
+\begin{enumerate}
+
+\item  in the form $C(x) = A \cos(\omega x + \phi) + B$ for $\omega > 0$
+
+\item  in the form $S(x) = A \sin(\omega x + \phi) + B$ for $\omega > 0$
+
+\end{enumerate}
+}
+{\begin{enumerate}
+
+\item The key to this problem is to use the expanded forms of the sinusoid formulas and match up corresponding coefficients.  Equating   $f(x) = \cos(2x) - \sqrt{3} \sin(2x)$ with the expanded form of $C(x) = A \cos(\omega x + \phi) + B$, we get
+\[
+ \cos(2x) - \sqrt{3} \sin(2x) = A\cos(\omega x) \cos(\phi) - A \sin(\omega x)\sin(\phi) + B
+\]
+It should be clear that we can take $\omega = 2$ and $B = 0$ to get
+\[
+ \cos(2x) - \sqrt{3} \sin(2x) = A\cos(2x) \cos(\phi) - A \sin(2x)\sin(\phi) 
+\]
+
+To determine $A$ and $\phi$, a bit more work is involved.  We get started by equating the coefficients of the trigonometric functions on either side of the equation.  On the left hand side, the coefficient of $\cos(2x)$ is $1$, while on the right hand side, it is $A \cos(\phi)$.  Since this equation is to hold for all real numbers, we must have that $A \cos(\phi) = 1$.   Similarly, we find by equating the coefficients of $\sin(2x)$ that $A \sin(\phi) = \sqrt{3}$. What we have here is a system of nonlinear equations!  We can temporarily eliminate the dependence on $\phi$ by using the Pythagorean Identity.  We know $\cos^{2}(\phi) + \sin^{2}(\phi) = 1$, so multiplying this by $A^2$ gives $A^2\cos^{2}(\phi) + A^2\sin^{2}(\phi) = A^2$.  Since $A \cos(\phi) = 1$ and $A \sin(\phi) = \sqrt{3}$, we get $A^2 = 1^2 + (\sqrt{3})^2 = 4$ or $A = \pm 2$.  Choosing $A = 2$, we have $2\cos(\phi) = 1$ and $2 \sin(\phi) = \sqrt{3}$ or, after some rearrangement, $\cos(\phi) = \frac{1}{2}$ and $\sin(\phi) = \frac{\sqrt{3}}{2}$.  One such angle $\phi$ which satisfies this criteria is $\phi = \frac{\pi}{3}$.  Hence, one way to write $f(x)$ as a sinusoid is  $f(x) = 2 \cos\left(2x + \frac{\pi}{3}\right)$.   We can easily check our answer using the sum formula for cosine  \[\begin{array}{rcl} f(x) &  = &  2 \cos\left(2x + \frac{\pi}{3}\right) \\ [3pt] & = &  2 \left[ \cos(2x) \cos\left(\frac{\pi}{3}\right) - \sin(2x) \sin\left(\frac{\pi}{3}\right) \right]\\ [3pt] & = & 2 \left[ \cos(2x) \left(\frac{1}{2}\right) - \sin(2x) \left(\frac{\sqrt{3}}{2}\right)\right] \\ [3pt] & = & \cos(2x) - \sqrt{3} \sin(2x) \\ \end{array}\]
+
+\item  Proceeding as before, we equate $f(x) = \cos(2x) - \sqrt{3} \sin(2x)$ with the expanded form of $S(x) = A \sin(\omega x + \phi) + B$ to get 
+\[
+ \cos(2x) - \sqrt{3} \sin(2x) = A\sin(\omega x) \cos(\phi) + A \cos(\omega x)\sin(\phi) + B
+\]
+Once again, we may take $\omega = 2$ and $B = 0$ so that 
+\[
+ \cos(2x) - \sqrt{3} \sin(2x) =  A\sin(2x) \cos(\phi) + A \cos(2x)\sin(\phi)
+\]
+
+We equate (be careful here!) the coefficients of $\cos(2x)$ on either side and get $A\sin(\phi) = 1$ and $A\cos(\phi) = -\sqrt{3}$.  Using $A^2\cos^{2}(\phi) + A^2\sin^{2}(\phi) = A^2$ as before, we get $A = \pm 2$, and again we choose $A = 2$.  This means $2 \sin(\phi) = 1$, or $\sin(\phi) = \frac{1}{2}$,  and $2\cos(\phi) = -\sqrt{3}$, which means $\cos(\phi) = -\frac{\sqrt{3}}{2}$.  One such angle which meets these criteria   is $\phi = \frac{5\pi}{6}$.  Hence, we have $f(x) = 2 \sin\left(2x + \frac{5\pi}{6}\right)$.  Checking our work analytically, we have 
+\[
+\begin{array}{rcl} f(x) &  = &  2 \sin\left(2x + \frac{5\pi}{6}\right) \\ [3pt] & = &  2 \left[ \sin(2x) \cos\left(\frac{5\pi}{6}\right) + \cos(2x) \sin\left(\frac{5\pi}{6}\right) \right]\\ [3pt] & = & 2 \left[ \sin(2x) \left(-\frac{\sqrt{3}}{2}\right) +  \cos(2x) \left(\frac{1}{2}\right)\right] \\ [3pt] & = & \cos(2x) - \sqrt{3} \sin(2x)
+\end{array}
+\]
+\end{enumerate}
+}
+
+\medskip
+
+It is important to note that in order for the technique presented in Example \ref{expandedsinusoidex1} to fit a function into one of the forms in Theorem \ref{sinusoidform},  the arguments of the cosine and sine function much match.  That is, while $f(x) = \cos(2x) - \sqrt{3} \sin(2x)$ is a sinusoid, $g(x) =  \cos(2x) - \sqrt{3} \sin(3x)$ is not.(This graph does, however, exhibit sinusoid-like characteristics!  Check it out!)  It is also worth mentioning that, had we chosen  $A = -2$ instead of $A = 2$ as we worked through Example \ref{expandedsinusoidex1}, our final answers would have \textit{looked} different. The reader is encouraged to rework Example  \ref{expandedsinusoidex1} using $A = -2$ to see what these differences are, and then for a challenging exercise, use identities to show that the formulas are all equivalent.  The general equations to fit a function of the form $f(x) = a \, \cos(\omega x) + b \, \sin(\omega x) + B$ into one of the forms in Theorem \ref{sinusoidform} are explored in Exercise \ref{sinusoidexercise1}.
+
+\subsection{Graphs of the Secant and Cosecant Functions}
+\label{secantcosecantgraphsection}
+
+We now turn our attention to graphing $y = \sec(x)$.  Since $\sec(x) = \frac{1}{\cos(x)}$, we can use our table of values for the graph of $y = \cos(x)$ and take reciprocals. We run into trouble at odd multiples of $\frac{\pi}{2}$ such as $x = \frac{\pi}{2}$ and $x = \frac{3\pi}{2}$ since $\cos(x) = 0$ at these values.  This results in vertical asymptotes at $x = \frac{\pi}{2}$ and $x = \frac{3\pi}{2}$.  Since $\cos(x)$ is periodic with period $2\pi$, it follows that $\sec(x)$ is also.  Below we graph a fundamental cycle of $y = \sec(x)$ \index{secant ! graph of} along with a more complete graph obtained by the usual `copying and pasting.' 
+
+
+\medskip
+
+\noindent\hskip-10pt\begin{minipage}{\textwidth}
+\begin{center}
+\begin{tabular}{ m{0.55\textwidth} m{0.45\textwidth}}
+\setlength{\extrarowheight}{2pt}
+\[ \begin{array}{|r||r|r|r|}  
+
+\hline
+
+ x & \cos(x) & \sec(x) & (x,\sec(x)) \\ \hline
+0  & 1 & 1 & (0,1) \\ [2pt]   \hline
+\frac{\pi}{4}  & \frac{\sqrt{2}}{2} & \sqrt{2} & \left(\frac{\pi}{4}, \sqrt{2} \right) \\ [2pt] \hline 
+\frac{\pi}{2}  & 0 & \text{undefined} &  \\ [2pt] \hline 
+\frac{3\pi}{4}  & -\frac{\sqrt{2}}{2} & -\sqrt{2} & \left(\frac{3\pi}{4}, -\sqrt{2} \right) \\ [2pt] \hline 
+\pi & -1 & -1 &  (\pi, -1) \\ [2pt] \hline 
+\frac{5\pi}{4}  & -\frac{\sqrt{2}}{2} & -\sqrt{2} & \left(\frac{5\pi}{4}, -\sqrt{2} \right) \\ [2pt] \hline 
+\frac{3\pi}{2}  & 0 & \text{undefined} & \\ [2pt] \hline 
+\frac{7\pi}{4}  & \frac{\sqrt{2}}{2} & \sqrt{2} & \left(\frac{7\pi}{4}, \sqrt{2} \right) \\ [2pt] \hline 
+2\pi  & 1 &  1& (2\pi, 1) \\  [2pt] \hline
+\end{array} \] \setlength{\extrarowheight}{0pt} &
+\myincludegraphics[width=0.45\textwidth]{figures/IntroTrigGraphics/TrigGraphs-10}
+\end{tabular}
+\end{center}
+\captionsetup{type=figure}
+\caption{The `fundamental cycle' of $y = \sec(x)$.}\label{fig:secgraph1}
+\end{minipage}
+
+\bigskip
+
+%\mnote{.6}{Note: in Section \ref{circularfunctionsbeyond}, we argued the range of $F(x) = \sec(x)$ is $(-\infty, -1] \cup [1,\infty)$.  We can now see this graphically.}
+\mnote{.2}{Note: provided that $\sec(\alpha)$ and  $\sec(\beta)$ are defined, $\sec(\alpha) = \sec(\beta)$ if and only if $\cos(\alpha) = \cos(\beta)$.  Hence, $\sec(x)$ inherits its period from $\cos(x)$.}
+
+
+\noindent\begin{minipage}{\textwidth}
+\begin{center}
+\myincludegraphics[width=0.95\textwidth]{figures/IntroTrigGraphics/TrigGraphs-11}
+\end{center}
+\captionsetup{type=figure}
+\caption{The graph of $y=\sec{x}$}\label{fig:secgraph2}
+\end{minipage}
+
+\medskip
+
+As one would expect, to graph $y = \csc(x)$ we begin with $y = \sin(x)$ and take reciprocals of the corresponding $y$-values.  Here, we encounter issues at $x = 0$, $x = \pi$ and $x = 2\pi$.  Proceeding with the usual analysis, we graph the fundamental cycle of $y = \csc(x)$ below along with the dotted graph of $y=\sin(x)$ for reference.  Since $y = \sin(x)$ and $y = \cos(x)$ are merely phase shifts of each other, so too are $y = \csc(x)$ and $y = \sec(x)$. \index{cosecant ! graph of}
+
+\medskip
+
+\noindent\hskip-10pt\begin{minipage}{\textwidth}
+\begin{center}
+\begin{tabular}{m{0.55\textwidth} m{0.45\textwidth}}
+\setlength{\extrarowheight}{2pt}
+\[ \begin{array}{|r||r|r|r|}  
+
+\hline
+
+ x & \sin(x) & \csc(x) & (x,\csc(x)) \\ \hline
+0  & 0 & \text{undefined} &  \\ [2pt]   \hline
+\frac{\pi}{4}  & \frac{\sqrt{2}}{2} & \sqrt{2} & \left(\frac{\pi}{4}, \sqrt{2} \right) \\ [2pt] \hline 
+\frac{\pi}{2}  & 1 & 1 & \left(\frac{\pi}{2}, 1 \right) \\ [2pt] \hline 
+\frac{3\pi}{4}  & \frac{\sqrt{2}}{2} & \sqrt{2} & \left(\frac{3\pi}{4}, \sqrt{2} \right) \\ [2pt] \hline 
+\pi & 0 & \text{undefined} &   \\ [2pt] \hline 
+\frac{5\pi}{4}  & -\frac{\sqrt{2}}{2} & -\sqrt{2} & \left(\frac{5\pi}{4}, -\sqrt{2} \right) \\ [2pt] \hline 
+\frac{3\pi}{2}  & -1 & -1 & \left(\frac{3\pi}{2},-1 \right)\\ [2pt] \hline 
+\frac{7\pi}{4}  & -\frac{\sqrt{2}}{2} & -\sqrt{2} & \left(\frac{7\pi}{4}, -\sqrt{2} \right) \\ [2pt] \hline 
+2\pi  & 0 & \text{undefined} &  \\  [2pt] \hline
+\end{array} \] \setlength{\extrarowheight}{0pt} &
+\myincludegraphics[width=0.45\textwidth]{figures/IntroTrigGraphics/TrigGraphs-12}
+\end{tabular}
+\end{center}
+\captionsetup{type=figure}
+\caption{The `fundamental cycle' of $y = \csc(x)$.}\label{fig:cscgraph1}
+\end{minipage}
+
+\medskip
+
+%Once again, our domain and range work in Section \ref{circularfunctionsbeyond} is verified geometrically in the graph of $y = G(x) = \csc(x)$.
+
+\medskip
+
+\noindent\begin{minipage}{\textwidth}
+\begin{center}
+\myincludegraphics[width=0.95\textwidth]{figures/IntroTrigGraphics/TrigGraphs-13}
+\end{center}
+\captionsetup{type=figure}
+\caption{The graph of $y=\csc{x}$}\label{fig:cscgraph2}
+\end{minipage}
+
+\medskip
+
+
+
+Note that, on the intervals between the vertical asymptotes, both $F(x) = \sec(x)$ and $G(x) = \csc(x)$ are continuous and smooth.  In other words, they are continuous and smooth \textit{on their domains}.
+The following theorem summarizes the properties of the secant and cosecant functions.  Note that all of these properties are direct results of them being reciprocals of the cosine and sine functions, respectively.
+
+%\mnote{.25}{Note: Just like the rational functions in Chapter \ref{Rationals} are continuous and smooth on their domains because polynomials are continuous and smooth everywhere, the secant and cosecant functions are continuous and smooth on their domains since the cosine and sine functions are continuous and smooth everywhere.}  
+
+\smallskip
+
+\setboxwidth{90pt}
+\noindent\ifthenelse{\isodd{\thepage}}{\hskip-90pt}{}
+\noindent\begin{minipage}{\specialboxlength}
+\theorem{secantcosecantfunctionprops}{Properties of the Secant and Cosecant Functions}{ \index{secant ! properties of} \index{cosecant ! properties of}
+
+\begin{itemize}
+
+\item  The function $F(x) = \sec(x)$
+
+\begin{itemize}
+
+
+\item has domain $\left\{ x : x \neq \frac{\pi}{2} + \pi k, \, \,  \text{$k$ is an integer} \right\} = \displaystyle{\bigcup_{k=-\infty}^{\infty} \left(\frac{(2k+1) \pi}{2}, \frac{(2k+3) \pi}{2}\right)}$
+
+\item has range $\{ y : |y| \geq 1 \} = (-\infty, -1] \cup [1, \infty)$
+
+\item  is continuous and smooth on its domain
+
+\item is even
+
+\item has period $2\pi$
+
+\end{itemize}
+
+\item  The function $G(x) = \csc(x)$
+
+\begin{itemize}
+
+\item has domain $\left\{ x : x \neq \pi  k, \, \,  \text{$k$ is an integer} \right\} = \displaystyle{\bigcup_{k=-\infty}^{\infty}\left(k\pi, (k+1) \pi \right)}$
+
+\item has range $\{ y : |y| \geq 1 \} = (-\infty, -1] \cup [1, \infty)$
+
+\item  is continuous and smooth on its domain
+
+\item is odd
+
+\item has period $2\pi$
+
+\end{itemize}
+
+\end{itemize}
+}
+\end{minipage}
+\restoreboxwidth
+
+\medskip
+
+In the next example, we discuss graphing more general secant and cosecant curves.
+
+\example{seccscgraphex}{Graphing secant and cosecant curves}{ Graph one cycle of the following functions.  State the period of each.
+
+\begin{enumerate}
+
+\item  $f(x) = 1 - 2 \sec(2x)$
+
+\item  $g(x) = \dfrac{\csc(\pi - \pi x) - 5}{3}$
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item  To graph $y = 1 - 2 \sec(2x)$, we follow the same procedure as in Example \ref{cosinesinegraphex1}.  First, we set the argument of secant, $2x$, equal to the `quarter marks' $0$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$ and $2\pi$ and solve for $x$ in Figure \ref{fig:secgraph3}.
+
+\mtable{.16}{Reference points for $f(x)$ in Example \ref{seccscgraphex}}{fig:secgraph3}{
+\setlength{\extrarowheight}{2pt}
+\[ \begin{array}{|r|r|r|}  
+
+\hline
+
+ a & 2x = a & x \\ [2pt] \hline
+0  & 2x = 0 & 0 \\ [2pt]   \hline
+
+\frac{\pi}{2}  & 2x = \frac{\pi}{2} & \frac{\pi}{4} \\ [2pt] \hline 
+
+\pi &  2x = \pi & \frac{\pi}{2} \\ [2pt] \hline 
+
+\frac{3\pi}{2}  &  2x = \frac{3\pi}{2} & \frac{3\pi}{4} \\ [2pt] \hline 
+
+2\pi  & 2x = 2\pi & \pi \\  [2pt] \hline
+\end{array} \]
+\setlength{\extrarowheight}{0pt}}
+
+Next, we substitute these $x$ values into $f(x)$.  If $f(x)$ exists, we have a point on the graph;  otherwise, we have found a vertical asymptote.  In addition to these points and asymptotes, we have graphed the associated cosine curve -- in this case $y = 1 - 2 \cos(2x)$ -- dotted in the picture below.  Since one cycle is graphed over the interval $[0,\pi]$, the period is $\pi - 0 = \pi$.
+ 
+\medskip
+
+\noindent\hskip-30pt\begin{minipage}{\textwidth}
+\begin{center}
+\begin{tabular}{ m{0.5\textwidth} m{0.5\textwidth}}
+\setlength{\extrarowheight}{2pt}
+\[ \begin{array}{|r||r|r|}  
+
+\hline
+
+ x & f(x) & (x,f(x))  \\ \hline
+0  & - 1 & (0,-1)  \\ [2pt]   \hline
+\frac{\pi}{4}  & \text{undefined} &  \\ [2pt] \hline 
+\frac{\pi}{2}  & 3 & \left(\frac{\pi}{2}, 3 \right)  \\ [2pt] \hline 
+\frac{3\pi}{4}  & \text{undefined} &  \\ [2pt] \hline 
+\pi & -1 &   (\pi, -1) \\ [2pt] \hline 
+\end{array} \] \setlength{\extrarowheight}{0pt} & 
+\myincludegraphics[width=0.45\textwidth]{figures/IntroTrigGraphics/TrigGraphs-14}
+
+\end{tabular}
+\end{center}
+\captionsetup{type=figure}
+\caption{Plotting one cycle of $y=f(x)$ in Example \ref{seccscgraphex}}
+\end{minipage}
+
+\medskip
+
+
+\item  Proceeding as before, we set the argument of cosecant in $g(x) = \frac{\csc(\pi - \pi x) - 5}{3}$ equal to the quarter marks and solve for $x$ in Figure \ref{fig:cscgraph3}.
+
+\mtable{.5}{Reference points for $g(x)$ in Example \ref{seccscgraphex}}{fig:cscgraph3}{
+\setlength{\extrarowheight}{2pt}
+\[ \begin{array}{|r|r|r|}  
+
+\hline
+
+ a & \pi - \pi x = a & x \\ [2pt] \hline
+0  & \pi - \pi x = 0 & 1 \\ [2pt]   \hline
+
+\frac{\pi}{2}  & \pi - \pi x = \frac{\pi}{2} & \frac{1}{2} \\ [2pt] \hline 
+
+\pi &  \pi - \pi x = \pi & 0 \\ [2pt] \hline 
+
+\frac{3\pi}{2}  &  \pi - \pi x = \frac{3\pi}{2} & -\frac{1}{2} \\ [2pt] \hline 
+
+2\pi  & \pi - \pi x = 2\pi & -1 \\  [2pt] \hline
+\end{array} \]
+\setlength{\extrarowheight}{0pt}}
+
+Substituting these $x$-values into $g(x)$, we generate the graph below and find the period to be $1 - (-1) = 2$.   The associated sine curve, $y = \frac{\sin(\pi - \pi x) - 5}{3}$, is dotted in as a reference.  
+
+\medskip
+
+\noindent\hskip-30pt\begin{minipage}{\textwidth}
+\begin{center}
+\begin{tabular}{ m{0.5\textwidth} m{0.5\textwidth}}
+\setlength{\extrarowheight}{2pt}
+\[ \begin{array}{|r||r|r|}  
+
+\hline
+
+ x & g(x) & (x,g(x))  \\ \hline
+1  & \text{undefined} &   \\ [2pt]   \hline
+\frac{1}{2}  & -\frac{4}{3} &  \left(\frac{1}{2}, -\frac{4}{3} \right)  \\ [2pt] \hline 
+0 & \text{undefined} &   \\ [2pt] \hline 
+-\frac{1}{2} & -2 & \left(-\frac{1}{2}, -2\right)  \\ [2pt] \hline 
+-1 & \text{undefined} &    \\ [2pt] \hline 
+\end{array} \] \setlength{\extrarowheight}{0pt} & 
+\myincludegraphics[width=0.45\textwidth]{figures/IntroTrigGraphics/TrigGraphs-15}
+
+\end{tabular}
+\end{center}
+\captionsetup{type=figure}
+\caption{Plotting one cycle of $y=g(x)$ in Example \ref{seccscgraphex}}
+\end{minipage}
+
+\end{enumerate}
+}
+
+\medskip
+
+Before moving on, we note that it is possible to speak of the period, phase shift and vertical shift of secant and cosecant graphs and use even/odd identities to put them in a form similar to the sinusoid forms mentioned in Theorem \ref{sinusoidform}.  Since these quantities match those of the corresponding cosine and sine curves, we do not spell this out explicitly.  Finally, since the ranges of secant and cosecant are unbounded, there is no amplitude associated with these curves.
+
+\subsection{Graphs of the Tangent and Cotangent Functions}
+
+Finally, we turn our attention to the graphs of the tangent and cotangent functions.  When constructing a table of values for the tangent function, we see that $J(x) = \tan(x)$ is undefined at $x  = \frac{\pi}{2}$ and $x = \frac{3\pi}{2}$, and we have vertical asymptotes at these points.  Plotting this information and performing the usual `copy and paste' produces Figures \ref{fig:tangraph1} and \ref{fig:tangraph2} below. \index{tangent ! graph of}
+
+\medskip
+
+\noindent\hskip-10pt\begin{minipage}{\textwidth}
+\begin{center}
+\begin{tabular}{ m{0.5\textwidth} m{0.5\textwidth}}
+\setlength{\extrarowheight}{2pt}
+\[ \begin{array}{|r||r|r|}  
+
+\hline
+
+ x & \tan(x) & (x,\tan(x)) \\ \hline
+0  & 0 & (0, 0) \\ [2pt]   \hline
+\frac{\pi}{4}  & 1 & \left(\frac{\pi}{4},1 \right) \\ [2pt] \hline 
+\frac{\pi}{2}  & \text{undefined} &  \\ [2pt] \hline 
+\frac{3\pi}{4}  & -1 & \left(\frac{3\pi}{4}, -1\right) \\ [2pt] \hline 
+\pi & 0 & (\pi, 0) \\ [2pt] \hline 
+\frac{5\pi}{4}  & 1 & \left(\frac{5\pi}{4}, 1 \right) \\ [2pt] \hline 
+\frac{3\pi}{2}  & \text{undefined} &  \\ [2pt] \hline 
+\frac{7\pi}{4}  & -1 & \left(\frac{7\pi}{4}, -1 \right) \\ [2pt] \hline 
+2\pi  & 0 & (2\pi, 0) \\  [2pt] \hline
+\end{array} \]  \setlength{\extrarowheight}{0pt} & 
+\myincludegraphics[width=0.45\textwidth]{figures/IntroTrigGraphics/TrigGraphs-16}
+
+\end{tabular}
+\end{center}
+\captionsetup{type=figure}
+\caption{The graph of $y = \tan(x)$ over $[0,2\pi]$}\label{fig:tangraph1}
+\end{minipage}
+
+
+\bigskip
+
+\noindent\begin{minipage}{\textwidth}
+\begin{center}
+\myincludegraphics[width=0.95\textwidth]{figures/IntroTrigGraphics/TrigGraphs-17}
+\end{center}
+\captionsetup{type=figure}
+\caption{The graph of $y = \tan(x)$}\label{fig:tangraph2}
+\end{minipage}
+
+\medskip
+
+From the graph, it appears as if the tangent function is periodic with period $\pi$.  To prove that this is the case, we appeal to the sum formula for tangents.  We have: \[ \tan(x+\pi) = \dfrac{\tan(x) + \tan(\pi)}{1 - \tan(x) \tan(\pi)} = \dfrac{\tan(x) + 0}{1 - (\tan(x) )(0)} = \tan(x),\]
+
+which tells us the period of $\tan(x)$ is at most $\pi$.  To show that it is exactly $\pi$, suppose $p$ is a positive real number so that $\tan(x+p) = \tan(x)$ for all real numbers $x$.  For $x=0$, we have $\tan(p) = \tan(0+p) = \tan(0) = 0$, which means $p$ is a multiple of $\pi$.  The smallest positive multiple of $\pi$ is $\pi$ itself, so we have established the result.   We take as our fundamental cycle for $y=\tan(x)$ the interval $\left(-\frac{\pi}{2}, \frac{\pi}{2}\right)$, and use as our `quarter marks' $x = -\frac{\pi}{2}$, $-\frac{\pi}{4}$, $0$, $\frac{\pi}{4}$ and $\frac{\pi}{2}$. 
+
+\smallskip
+
+It should be no surprise that $K(x) = \cot(x)$ behaves similarly to $J(x) = \tan(x)$. Plotting $\cot(x)$ over the interval $[0,2\pi]$ results in the graph in Figure \ref{fig:cotgraph1} below. \index{cotangent ! graph of}
+
+
+\medskip
+
+\hskip-20pt\begin{minipage}{\textwidth}
+\begin{center}
+\begin{tabular}{m{0.5\textwidth} m{0.5\textwidth}}
+\setlength{\extrarowheight}{2pt}
+\[ \begin{array}{|r||r|r|}  
+
+\hline
+
+ x & \cot(x) & (x,\cot(x)) \\ \hline
+0  & \text{undefined} &  \\ [2pt]   \hline
+\frac{\pi}{4}  & 1 & \left(\frac{\pi}{4},1 \right) \\ [2pt] \hline 
+\frac{\pi}{2}  & 0 & \left(\frac{\pi}{2},0 \right)  \\ [2pt] \hline 
+\frac{3\pi}{4}  & -1 & \left(\frac{3\pi}{4}, -1\right) \\ [2pt] \hline 
+\pi & \text{undefined} &  \\ [2pt] \hline 
+\frac{5\pi}{4}  & 1 & \left(\frac{5\pi}{4}, 1 \right) \\ [2pt] \hline 
+\frac{3\pi}{2}  & 0 & \left(\frac{3\pi}{2}, 0 \right) \\ [2pt] \hline 
+\frac{7\pi}{4}  & -1 & \left(\frac{7\pi}{4}, -1 \right) \\ [2pt] \hline 
+2\pi  & \text{undefined} &  \\  [2pt] \hline
+\end{array} \] \setlength{\extrarowheight}{0pt} & 
+\myincludegraphics[width=0.45\textwidth]{figures/IntroTrigGraphics/TrigGraphs-18}
+
+\end{tabular}
+\end{center}
+\captionsetup{type=figure}
+\caption{The graph of $y = \cot(x)$ over $[0,2\pi]$}\label{fig:cotgraph1}
+\end{minipage}
+
+\medskip
+
+
+From these data, it clearly appears as if the period of $\cot(x)$ is $\pi$, and we leave it to the reader to prove this. (Certainly, mimicking the proof that the period of $\tan(x)$ is an option;  for another approach, consider transforming $\tan(x)$ to $\cot(x)$ using identities.)  We take as one fundamental cycle the interval $(0,\pi)$ with quarter marks:  $x= 0$, $\frac{\pi}{4}$, $\frac{\pi}{2}$, $\frac{3\pi}{4}$ and $\pi$.  A more complete graph of $y=\cot(x)$ is below, along with the fundamental cycle highlighted as usual.    
+
+\medskip
+
+\noindent\begin{minipage}{\textwidth}
+\begin{center}
+\myincludegraphics[width=0.95\textwidth]{figures/IntroTrigGraphics/TrigGraphs-19}
+\end{center}
+\captionsetup{type=figure}
+\caption{The graph of $y = \cot(x)$}\label{fig:cotgraph2}
+\end{minipage}
+
+\medskip
+
+
+The properties of the tangent and cotangent functions are summarized below. As with Theorem \ref{secantcosecantfunctionprops}, each of the results below can be traced back to properties of the cosine and sine functions and the definition of the tangent and cotangent functions as quotients thereof. 
+
+\smallskip
+
+\setboxwidth{90pt}
+\noindent\ifthenelse{\isodd{\thepage}}{\hskip-90pt}{}
+\noindent\begin{minipage}{\specialboxlength}
+\theorem{tangentcotangentfunctionprops}{Properties of the Tangent and Cotangent Functions}{ \index{tangent ! properties of} \index{cotangent ! properties of}
+
+\begin{itemize}
+
+\item  The function $J(x) = \tan(x)$
+
+\begin{itemize}
+
+
+\item has domain $\left\{ x : x \neq \frac{\pi}{2} + \pi k, \, \,  \text{$k$ is an integer} \right\} = \displaystyle{\bigcup_{k=-\infty}^{\infty} \left(\frac{(2k+1) \pi}{2}, \frac{(2k+3) \pi}{2}\right)}$
+
+\item has range $(-\infty, \infty)$
+
+\item is continuous and smooth on its domain
+
+\item is odd
+
+\item has period $\pi$
+
+\end{itemize}
+
+\item  The function $K(x) = \cot(x)$
+
+\begin{itemize}
+
+\item has domain $\left\{ x : x \neq \pi  k, \, \,  \text{$k$ is an integer} \right\} = \displaystyle{\bigcup_{k=-\infty}^{\infty}\left(k\pi, (k+1) \pi \right)}$
+
+\item has range $(-\infty, \infty)$
+
+\item is continuous and smooth on its domain
+
+\item is odd
+
+\item has period $\pi$
+
+\end{itemize}
+
+\end{itemize}
+}
+\end{minipage}
+\restoreboxwidth
+
+\medskip
+
+\example{tancotgraphex}{Plotting tangent and cotangent curves}{ Graph one cycle of the following functions.  Find the period.
+
+\begin{enumerate}
+
+\item  $f(x) = 1 - \tan\left(\frac{x}{2}\right)$.
+
+\item  $g(x) = 2\cot\left(\frac{\pi}{2} x + \pi\right) + 1$.
+
+\end{enumerate}
+}
+{
+\begin{enumerate}
+
+\item We proceed as we have in all of the previous graphing examples by setting the argument of tangent in $f(x) = 1 - \tan\left(\frac{x}{2}\right)$, namely $\frac{x}{2}$, equal to each of the `quarter marks' $-\frac{\pi}{2}$, $-\frac{\pi}{4}$, $0$, $\frac{\pi}{4}$ and $\frac{\pi}{2}$, and solving for $x$: see Figure \ref{fig:tangraph3}.
+
+\mtable{.18}{Reference points for $f(x)$ in Example \ref{tancotgraphex}}{fig:tangraph3}{
+\setlength{\extrarowheight}{2pt}
+\[ \begin{array}{|r|r|r|}  
+
+\hline
+
+ a & \frac{x}{2} = a & x \\ [2pt] \hline
+-\frac{\pi}{2}  & \frac{x}{2} = -\frac{\pi}{2} & -\pi \\ [2pt]   \hline
+
+-\frac{\pi}{4}  &\frac{x}{2} = -\frac{\pi}{4} & - \frac{\pi}{2} \\ [2pt] \hline 
+
+0 &  \frac{x}{2} = 0 & 0 \\ [2pt] \hline 
+
+\frac{\pi}{4}  &  \frac{x}{2} = \frac{\pi}{4} & \frac{\pi}{2} \\ [2pt] \hline 
+
+\frac{\pi}{2}  & \frac{x}{2} = \frac{\pi}{2}  & \pi \\  [2pt] \hline
+\end{array} \]
+\setlength{\extrarowheight}{0pt}}
+
+Substituting these $x$-values into $f(x)$, we find points on the graph and the vertical asymptotes.
+
+\medskip
+
+\noindent\hskip-30pt\begin{minipage}{\textwidth}
+\begin{center}
+\begin{tabular}{m{0.5\textwidth} m{0.5\textwidth}}
+\setlength{\extrarowheight}{2pt}
+\[ \begin{array}{|r||r|r|}  
+
+\hline
+
+ x & f(x) & (x,f(x))  \\ \hline
+-\pi  & \text{undefined} &   \\ [2pt]   \hline
+-\frac{\pi}{2}  &  2 &  \left(-\frac{\pi}{2}, 2 \right) \\ [2pt] \hline 
+0 & 1 &  (0,1)  \\ [2pt] \hline 
+\frac{\pi}{2}  & 0 &  \left(\frac{\pi}{2}, 0 \right) \\ [2pt] \hline 
+\pi & \text{undefined} &  \\ [2pt] \hline 
+\end{array} \] \setlength{\extrarowheight}{0pt} & 
+\myincludegraphics[width=0.45\textwidth]{figures/IntroTrigGraphics/TrigGraphs-20}
+
+\end{tabular}
+\end{center}
+\captionsetup{type=figure}
+\caption{Plotting one cycle of $y=f(x)$ in Example \ref{tancotgraphex}}
+\end{minipage}
+
+\medskip
+
+
+We see that the period is $\pi - (-\pi) = 2\pi$.
+
+\item  The `quarter marks' for the fundamental cycle of the cotangent curve are $0$, $\frac{\pi}{4}$, $\frac{\pi}{2}$, $\frac{3\pi}{4}$ and $\pi$.  To graph $g(x) = 2\cot\left(\frac{\pi}{2} x + \pi\right) + 1$, we begin by setting $\frac{\pi}{2} x + \pi$ equal to each quarter mark and solving for $x$ in Figure \ref{fig:cotgraph3}.
+
+\mtable{.55}{Reference points for $g(x)$ in Example \ref{tancotgraphex}}{fig:cotgraph3}{
+\setlength{\extrarowheight}{2pt}
+\[ \begin{array}{|r|r|r|}  
+
+\hline
+
+ a & \frac{\pi}{2} x + \pi = a & x \\ [2pt] \hline
+0  & \frac{\pi}{2} x + \pi = 0 &  -2 \\ [2pt]   \hline
+
+\frac{\pi}{4}  &  \frac{\pi}{2} x + \pi  = \frac{\pi}{4} & -\frac{3}{2} \\ [2pt] \hline 
+
+\frac{\pi}{2}  &  \frac{\pi}{2} x + \pi = \frac{\pi}{2} & -1 \\ [2pt] \hline 
+
+\frac{3\pi}{4}  &  \frac{\pi}{2} x + \pi =\frac{3\pi}{4} & -\frac{1}{2} \\ [2pt] \hline 
+
+\pi  & \frac{\pi}{2} x + \pi = \pi   &  0 \\  [2pt] \hline
+\end{array} \]
+\setlength{\extrarowheight}{0pt}}
+
+We now use these $x$-values to generate our graph.
+
+\medskip
+
+\noindent\hskip-30pt\begin{minipage}{\textwidth}
+\begin{center}
+\begin{tabular}{ m{0.5\textwidth} m{0.5\textwidth}}
+\setlength{\extrarowheight}{2pt}
+\[ \begin{array}{|r||r|r|}  
+
+\hline
+
+ x & g(x) & (x,g(x))  \\ \hline
+-2  & \text{undefined} &   \\ [2pt]   \hline
+-\frac{3}{2}  &  3 &  \left(-\frac{3}{2}, 3 \right) \\ [2pt] \hline 
+-1 & 1 &  (-1,1)  \\ [2pt] \hline 
+-\frac{1}{2}  & -1 &  \left(-\frac{1}{2}, -1 \right) \\ [2pt] \hline 
+0 & \text{undefined} &  \\ [2pt] \hline 
+\end{array} \]  \setlength{\extrarowheight}{0pt} & 
+\myincludegraphics[width=0.45\textwidth]{figures/IntroTrigGraphics/TrigGraphs-21}
+
+\end{tabular}
+\end{center}
+\captionsetup{type=figure}
+\caption{Plotting one cycle of $y=g(x)$ in Example \ref{tancotgraphex}}
+\end{minipage}
+
+\medskip
+
+
+We find the period to be $0 - (-2) = 2$. 
+
+\end{enumerate}
+}
+
+\medskip
+
+As with the secant and cosecant functions, it is possible to extend the notion of period, phase shift and vertical shift to the tangent and cotangent functions as we did for the cosine and sine functions in Theorem \ref{sinusoidform}.  Since the number of classical applications involving sinusoids far outnumber those involving tangent and cotangent functions, we omit this.  The ambitious reader is invited to formulate such a theorem, however.
+
+\printexercises{exercises_pre/07_05_exercises}
+

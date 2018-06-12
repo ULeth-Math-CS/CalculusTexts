@@ -12,10 +12,21 @@
 \usepackage{refcount}
 \usepackage{pdfpages}
 
+\newboolean{CalcI}
+\setboolean{CalcI}{false}
+\newboolean{CalcIII}
+\setboolean{CalcIII}{true}
+\newboolean{CalcIV}
+\setboolean{CalcIV}{false}
+
+\newboolean{colour}
+\setboolean{colour}{false}
+
 %% end detour
 %\usepackage{amsmath}
 \usepackage{xr}
-\externaldocument{Math2570_old_ref}
+\externaldocument[I-]{Math1560_ebook}
+\externaldocument[II-]{Math2560_ebook}
 
 \input{headers/Page_Size_Calculus}
 \usepackage{APEX_format}
@@ -24,14 +35,13 @@
 \pgfplotsset{compat=1.8}
 
 
-
 \ifthenelse{\boolean{xetex}}%
 	{\sffamily
 	%%\usepackage{fontspec}
 	\usepackage{mathspec}
 	\setallmainfonts[Mapping=tex-text]{Calibri}
-	\setmainfont[Mapping=tex-text]{Calibri}
-	\setsansfont[Mapping=tex-text]{Calibri}
+	\setmainfont[Mapping=tex-text,Ligatures=NoCommon]{Calibri}
+	\setsansfont[Mapping=tex-text,Ligatures=NoCommon]{Calibri}
 	\setmathsfont(Greek){[cmmi10]}}
 	{\usepackage[sfdefault,lf]{carlito}
 %% The 'lf' option for lining figures
@@ -58,36 +68,17 @@
 \begin{document}
 
 
-%\printincolor
-\printinblackandwhite
-
+\ifthenelse{\boolean{colour}}{\printincolor}{\printinblackandwhite}
 %\printexercisenames
 %\printallanswers
 
 \input{text/front_matter_and_coverIII}
 
 
-%\setcounterref{definitioncounter}{29}
-\addtocounter{definitioncounter}{28}
-%\setcounterref{theoremcounter}{62}
-\addtocounter{theoremcounter}{61}
-%\setcounterref{keyideacounter}{31}
-\addtocounter{keyideacounter}{30}
-%\setcounterref{examplecounter}{264}
-\addtocounter{examplecounter}{263}
 
+\setcounter{page}{\getpagerefnumber{II-2560lastpage}}
+\addtocounter{chapter}{9}
 
-\addtocounter{page}{386}
-\addtocounter{chapter}{8}
-
-\clearpage{\pagestyle{empty}\cleardoublepage}
-\chapter{Curves in the Plane}
-\thispagestyle{empty}
-\input{text/09_Conic_Sections}
-\input{text/09_Parametric_Equations}
-\input{text/09_Parametric_Calculus}
-\input{text/09_Polar_Intro}
-\input{text/09_Polar_Calculus}
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \chapter{Sequences and Series}\label{chapter:sequences_series}
@@ -103,11 +94,15 @@
 \input{text/08_Taylor_Series}
 \addtocontents{toc}{\protect\thispagestyle{empty}}
 
-%%
-%%%\addtocounter{chapter}{8}
-%
-%
-%%%\addtocounter{chapter}{9}
+%\clearpage{\pagestyle{empty}\cleardoublepage}
+%\chapter{Curves in the Plane}
+%\thispagestyle{empty}
+%\input{text/09_Conic_Sections}
+%\input{text/09_Parametric_Equations}
+%\input{text/09_Parametric_Calculus}
+%\input{text/09_Polar_Intro}
+%\input{text/09_Polar_Calculus}
+
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \chapter{Vectors}
 \thispagestyle{empty}
@@ -128,25 +123,38 @@
 \input{text/11_Vector_Tangent_Normal}
 \input{text/11_Arc_Length_Parameter_Curvature}
 %
+\label{2570lastpage}
 %%%\addtocounter{chapter}{11}
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \chapter{Functions of Several Variables}\label{chap:multi}
 \thispagestyle{empty}
-%\input{text/10_Space_Intro_Mod}
 \input{text/12_Multivariable_Intro}
 \input{text/12_Multivariable_Limit}
 \input{text/12_Partial_Derivatives}
-\input{text/12_Total_Differential}
-\input{text/12_Multivariable_Chain_Rule}
-\input{text/12_Directional_Derivatives}
-\input{text/12_Tangent_Planes_Lines}
-\input{text/12_Extrema}
+%\input{text/12_Total_Differential}
+%\input{text/12_Multivariable_Chain_Rule}
+%\input{text/12_Directional_Derivatives}
+\input{text/12_Tangent_Planes_Lines2570}
+%\input{text/12_Extrema}
+
+
+%
+%%%\addtocounter{chapter}{12}
+%\clearpage{\pagestyle{empty}\cleardoublepage}
+%\chapter{Multiple Integration}
+%\thispagestyle{empty}
+%\input{text/13_Iterated_Integrals}
+%\input{text/13_Double_Integrals_Volume}
+%\input{text/13_Double_Integrals_Polar}
+%\input{text/13_Center_of_Mass}
+%\input{text/13_Surface_Area}
+%\input{text/13_Triple_Integration}
 
 
 %%%\layout
 
-
-
+% counters are reset in the Taylor Polynomial section, not here
+% I do not recall why this didn't seem to work here
 
 \appendix
 \clearpage{\pagestyle{empty}\cleardoublepage}
