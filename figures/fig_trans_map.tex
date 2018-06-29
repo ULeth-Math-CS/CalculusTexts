@@ -1,0 +1,32 @@
+\begin{tikzpicture}
+\begin{axis}[width=\marginparwidth+25pt,%
+tick label style={font=\scriptsize},axis y line=middle,axis x line=middle,name=myplot,axis on top,%
+%			xtick={20,40,60,80,100},% 
+%			extra x ticks={3.14,1.57},
+%			extra x tick labels={$\pi$,$\pi/2$},
+%			ytick={-1,-2,1,2},
+			%minor y tick num=1,%extra y ticks={-5,-3,...,7},%
+%			minor x tick num=4,
+			ymin=-0.5,ymax=5.2,%
+			xmin=-0.5,xmax=5.2%
+]
+
+\addplot [{\colorone},domain=0:1] {x^2+1};
+
+\addplot [{\colortwo},domain=1:2] {x^2+1};
+
+\addplot [{\colorone},domain=0:2] {0.25*x^2+4};
+
+\draw [{\colortwo}] (0,1) -- (0,4);
+
+\end{axis}
+
+\node [right] at (myplot.right of origin) {\scriptsize $x$};
+\node [above] at (myplot.above origin) {\scriptsize $y$};
+
+
+\end{tikzpicture}
+
+
+
+
