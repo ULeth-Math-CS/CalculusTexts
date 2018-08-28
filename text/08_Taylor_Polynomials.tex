@@ -251,6 +251,13 @@ where $\ds R_n(x) = \frac{f\,^{(n+1)}(z_x)}{(n+1)!}(x-c)^{(n+1)}.$
 \end{minipage}
 \restoreboxwidth
 
+\mnote{.3}{\textbf{Note:} one way of quantifying the extent to which one function approximates another is using the \emph{order} to which they agree. We say that two functions $f$ and $g$ \sword{agree to order $n$ at $c$} if $n$ is the \emph{largest} integer for which
+\[
+\lim_{x\to c}\frac{f(x)-g(x)}{(x-c)^n}=0.
+\]
+Taylor's Theorem tells us that a function and its degree $n$ Taylor polynomial agree to order $n$. Roughly speaking, this means that their difference goes to zero faster than the $n^{\text{th}}$ power of $x-c$ as $x$ approaches $c$. 
+}
+
 The first part of Taylor's Theorem states that $f(x) = p_n(x) + R_n(x)$, where $p_n(x)$ is the $n^\text{th}$ order Taylor polynomial and $R_n(x)$ is the remainder, or error, in the Taylor approximation. The second part gives bounds on how big that error can be. If the $(n+1)^\text{th}$ derivative is large on $I$, the error may be large; if $x$ is far from $c$, the error may also be large. However, the $(n+1)!$ term in the denominator tends to ensure that the error gets smaller as $n$ increases.
 
 The following example computes error estimates for the approximations of $\ln 1.5$ and $\ln 2$ made in Example \ref{ex_taypoly2}.\\

@@ -11,7 +11,7 @@ Our goals in this section are as follows:
 \item Develop some basic guiding principles for knowing when a change of variables should be considered, and how to define the corresponding transformation. 
 \end{itemize}
 
-One of the situations that should be covered by our general change of variables formula is that of substitution for a definite integral in one variable, as encountered in Section \ref{sec:substitution1}, way back in Calculus I. Of course, for a definite integral in one variable, there is only one type of region of integration: a closed interval $[a,b]$. For single integrals, our only consideration when making a change of variables is the function being integrated. Recall that substitution -- at least, for indefinite integrals -- is essentially an attempt to reverse the Chain Rule: given
+One of the situations that should be covered by our general change of variables formula is that of substitution for a definite integral in one variable, as encountered in Section \ref{I-sec:substitution1}, way back in Calculus I. Of course, for a definite integral in one variable, there is only one type of region of integration: a closed interval $[a,b]$. For single integrals, our only consideration when making a change of variables is the function being integrated. Recall that substitution -- at least, for indefinite integrals -- is essentially an attempt to reverse the Chain Rule: given
 \[
 \int_a^b f(T(u))T'(u)\,du,
 \]
@@ -22,7 +22,7 @@ we set $x=T(u)$, compute the differential $dx = T'(u)\,du$, and set
 \mnote{.5}{\textbf{Note:} We have reversed the roles of $x$ and $u$ as they typically appear in Calculus I. This may seem strange in this context, but it's in keeping with the way the change of variables formula in several variables is usually presented.}
 The formula we seek will be a generalization of this result, with one notable change in perspective: for multiple integrals, it is often the \emph{region of integration} that creates most of the difficulty, and not the function being integrated. (In one variable, one closed interval is transformed into another, and we apply the Fundamental Theorem of Calculus.) What we will find is that in most cases, we start on the \emph{right} hand side of our analogue of Equation \eqref{eqn_single_sub}, and move to the left. 
 
-\mnote{.25}{For double and triple integrals, it will be important to understand how both the function \emph{and} the region of integration are transformed. For single integrals, the Fundamental Theorem of Calculus (Theorem \ref{thm:FTC2}) lets us gloss over some of the details we'll now need to consider. In particular, we don't really need to pay any attention to the interval over which we're integrate in a single integral, as long as we can come up with an antiderivative.}
+\mnote{.25}{For double and triple integrals, it will be important to understand how both the function \emph{and} the region of integration are transformed. For single integrals, the Fundamental Theorem of Calculus (Theorem \ref{I-thm:FTC2}) lets us gloss over some of the details we'll now need to consider. In particular, we don't really need to pay any attention to the interval over which we're integrate in a single integral, as long as we can come up with an antiderivative.}
 
 
 Changing from polar coordinates can be viewed as the process of writing our rectangular coordinates $(x,y)$ in terms of new variables $r$ and $\theta$:
@@ -43,7 +43,7 @@ T:  D&\subseteq \mathbb{R}^2\to \mathbb{R}^2\\
 \end{align*}
 where $D$ is some subset of $\mathbb{R}^2$ (with coordinates labelled by $r$ and $\theta$), and the codomain is $\mathbb{R}^2$ with usual $(x,y)$ coordinates. As we know from Section \ref{sec:double_int_polar}, the polar coordinate transformation $T$ given above transforms a rectangle such as $D=[0,3]\times [0,2\pi]$ into a disk -- in this case, the set of points $(x,y)$ with $x^2+y^2\leq 9$, as shown in Figure \ref{fig:polar_trans1} below.\\
 
-\mnote{.75}{\textbf{Note:} Polar coordinates are a very common choice of coordinate system, because they are well adapted to situations with circular symmetry, a common assumption in many physical problems. They are also natural from a navigational perspective. However, the polar coordinate transformation is a bit unusual, in that it violates some of the principles we will require below for a general transformation: the transformation is not one-to-one, for example, and since we often allow $r<0$ (recall Section \ref{sec:polar_intro}, the inverse transformation (from polar to rectangular) technically isn't even a function! However, we're willing to overlook these defects due to the ubiquity and usefulness of the polar coordinate system.}
+\mnote{.75}{\textbf{Note:} Polar coordinates are a very common choice of coordinate system, because they are well adapted to situations with circular symmetry, a common assumption in many physical problems. They are also natural from a navigational perspective. However, the polar coordinate transformation is a bit unusual, in that it violates some of the principles we will require below for a general transformation: the transformation is not one-to-one, for example, and since we often allow $r<0$ (recall Section \ref{II-sec:polar}), the inverse transformation (from polar to rectangular) technically isn't even a function! However, we're willing to overlook these defects due to the ubiquity and usefulness of the polar coordinate system.}
 
 \ifthenelse{\isodd{\thepage}}{}{\noindent\hskip-60pt}\noindent\begin{minipage}{\textwidth}
 \begin{center}
@@ -198,7 +198,7 @@ Definition \ref{def:transformation} below specifies the properties we require fo
 
 \mnote{.6}{\textbf{Note:} The notation $f:A\to B$ is commonly used in mathematics when we want to indicate that a function $f$ has a particular domain $A$ and codomain $B$. We usually do not see this notation in calculus, since the domain is always a subset of $\mathbb{R}^n$ for some $n$, and understood to be the largest set of values for which the function is defined.
 
-Note however that the choice of domain is part of the definition of a function, and it can significantly affect important properties of that function, such as being one-to-one: recall the definition of the inverse trigonometric functions in Section \ref{sec:deriv_inverse_function}.}
+Note however that the choice of domain is part of the definition of a function, and it can significantly affect important properties of that function, such as being one-to-one: recall the definition of the inverse trigonometric functions in Section \ref{I-sec:deriv_inverse_function}.}
 
 \definition{def:image}{The image of a point or set}{
 Let $D\subseteq \mathbb{R}^n$ be any subset, and let $F:D\to \mathbb{R}^m$ be a function. For any point $\mathbf{x}\in D$, the \sword{image}\index{image!of a point} of $\mathbf{x}$ under $F$ is the point $\mathbf{y}=F(\mathbf{x})$ in the range of $F$.
@@ -226,7 +226,7 @@ Let $A\subseteq \mathbb{R}^n$, let $B\subseteq \mathbb{R}^m$, and let $T:A\to B$
 
 \enlargethispage{2\baselineskip}
 
-A function used for a change of variables is called a \emph{transformation}. Such functions need to be one-to-one, except possibly on the boundary of their domain, and they need to be continuously differentiable. (See Definition \ref{def:transformation} below.) One of the important properties of a transformation, which we will justify later in this section (see Theorem \ref{thm:boundary_transform}, is that the boundary of a closed, bounded domain is mapped to the boundary of the range. This observation is key to visualizing the effect of a transformation, as the following example illustrates.\\
+A function used for a change of variables is called a \emph{transformation}. Such functions need to be one-to-one, except possibly on the boundary of their domain, and they need to be continuously differentiable. (See Definition \ref{def:transformation} below.) One of the important properties of a transformation, which we will justify later in this section (see Theorem \ref{thm:boundary_transform}, is that the boundary of a closed, bounded domain is mapped to the boundary of the range. This observation is key to visualizing the effect of a transformation.\\
 
 \example{ex_trans_boundary}{Describing the effect of a transformation}{
 Let $D\subseteq \mathbb{R}^2$ be the rectangle defined by $1\leq u\leq 2$ and $0\leq v\leq 1$. Determine the range of the function $T:D\to\mathbb{R}^2$ defined by
@@ -339,7 +339,7 @@ One other observation is worthy of note: we mentioned above that we will be prim
 We already learned how to deal with such regions at the beginning of this Chapter, and in any case, it's unlikely that anyone looking at this region would come up with the transformation we just considered.
 
 We're ready to move on, and describe the effect of a change of variables on an integral.
-We begin with an observation from single variable calculus. Consider the definition of a definite integral as a limit of Riemann sums. When we make a change of variables $x=T(u)$ in a single integral, a partition of $[a,b]$ given by $a=u_0<u_1<\cdots <u_n=b$ is transformed into a partition $x_0=T(u_0),x_1=T(u_1), \ldots, x_n=T(u_n)$. (As long as $T'(u)>0$, we have $x_0<x_1<\cdots x_n$.) The transformation affects the size of the subintervals in the partition: from Section \ref{sec:differentials}, we know that $\Delta x_i \approx T\primeskip' (u_i)\Delta x_i$. Thus, the derivative tells us how the size of each subinterval changes under the transformation.
+We begin with an observation from single variable calculus. Consider the definition of a definite integral as a limit of Riemann sums. When we make a change of variables $x=T(u)$ in a single integral, a partition of $[a,b]$ given by $a=u_0<u_1<\cdots <u_n=b$ is transformed into a partition $x_0=T(u_0),x_1=T(u_1), \ldots, x_n=T(u_n)$. (As long as $T'(u)>0$, we have $x_0<x_1<\cdots x_n$.) The transformation affects the size of the subintervals in the partition: from Section \ref{I-sec:differentials}, we know that $\Delta x_i \approx T\primeskip' (u_i)\Delta x_i$. Thus, the derivative tells us how the size of each subinterval changes under the transformation.
 
 This gives us a way of thinking about the geometric effect of a substitution. In the integral $\displaystyle\int_{T(a)}^{T(b)}f(x)\,dx$, the subintervals in a partition (thought of as the width of the rectangles in a Riemann sum)  are stretched/shrunk horizontally by a factor given by the derivative $T'(u)$ of the transformation function $g(u)$. In the integral $\displaystyle\int_a^b f(T(u))T'(u)\,du$, the derivative $T'(u)$ is part of the integrand, and therefore our horizontal stretch/shrink becomes a vertical stretch/shrink. Of course, the area of a rectangle changes by the same amount regardless of whether the stretch/shrink is horizontal or vertical.
 
@@ -730,7 +730,7 @@ tick label style={font=\scriptsize},axis y line=middle,axis x line=middle,name=m
 \addplot [gray,domain=0:3]{2-x};
 \addplot [gray,domain=0:3]{-x};
 \addplot [fill=gray!20,draw=black,thick] coordinates
-	{(0,0),(1,-1),(2,0),(1,1)}\closedcycle;
+	{(0,0) (1,-1) (2,0) (1,1) (0,0)}\closedcycle;
 \end{axis}
 
 \node [right] at (myplot.right of origin) {\scriptsize $x$};
@@ -969,7 +969,7 @@ This result can come in handy in cases where it's easy to come up with the inver
 
 Our last technical detail is a theorem that can be very useful when trying to determine the transformation to use for a change of variables: the boundary of $E$ must correspond to the boundary of $D$. This is useful because we usually would like $D$ to be as simple as possible, ideally a rectangle (or box, if $n=3$). Since the sides of the rectangle are given by setting $u$ or $v$ equal to a constant, we look at the curves that define the boundary of $E$. If the boundary of $E$ can be expressed in terms of level curves for two functions $f(x,y)$ and $g(x,y)$, we can define $u=f(x,y)$ and $v=g(x,y)$, which allows us to define $T^{-1}(x,y) = (f(x,y),g(x,y))$. From there, we can try to compute $T$ from $T^{-1}$, which is a matter of solving for $x$ and $y$ in terms of $u$ and $v$.\\
 
-\theorem{thm:boundary_tranform}{Transformations preserve the boundary}{
+\theorem{thm:boundary_transform}{Transformations preserve the boundary}{
 Let $D,E\subset \mathbb{R}^n$ be closed, bounded regions. If $T:D\to E$ is a transformation, then the boundary of $E$ is the image under $T$ of the boundary of $D$; that is, if $T(\mathbf{u})=\mathbf{x}$ is on the boundary of $E$, then $\mathbf{u}$ is on the boundary of $D$.
 }\\
 
@@ -991,7 +991,7 @@ Let $T:D\to E$ be the given transformation, which is one-to-one and onto, and su
 
 Now, let $\mathbf{x}\in E$ be a boundary point. We need to show that $\mathbf{x}$ is the image of a boundary point in $D$. Recall that $\mathbf{x}$ is a boundary point if and only if every neighbourhood of $\mathbf{x}$ contains both points in $E$ and points not in $E$. Let $\mathbf{u}=T^{-1}(\mathbf{x})\in D$ be the element of $D$ that is mapped to $\mathbf{x}$ by $T$. For the sake of contradiction, suppose that $\mathbf{u}$ is not a boundary point of $D$. Then since $\mathbf{u}\in D$ it must be an interior point of $D$, and therefore, there exists some $\delta>0$ such that $N_\delta(\mathbf{u})\subset D$. (That is, there is a neighbourhood of $\mathbf{u}$ that is completely contained in $D$.)
 
-However, since $T$ satisfies the conditions of Lemma \ref{lem}, we know that $T$ must map open sets to open sets. In particular, since $N_\delta(\mathbf{u})$ is an open subset of $D$, $T(N_\delta(\mathbf{u}))$ must be an open subset of $E$. But since $\mathbf{u}\in N_\delta(\mathbf{u})$, we must have $\mathbf{x} = T(\mathbf{u})\in T(N_\delta(\mathbf{u}))$, and thus $T(N_\delta(\mathbf{u}))$ is an open subset of $E$ that contains $\mathbf{x}$, which contradicts the fact that $\mathbf{x}$ is a boundary point. Thus, it must be the case that $\mathbf{u}$ is a boundary point of $D$.\\
+However, since $T$ satisfies the conditions of Theorem \ref{thm:open_transform}, we know that $T$ must map open sets to open sets. In particular, since $N_\delta(\mathbf{u})$ is an open subset of $D$, $T(N_\delta(\mathbf{u}))$ must be an open subset of $E$. But since $\mathbf{u}\in N_\delta(\mathbf{u})$, we must have $\mathbf{x} = T(\mathbf{u})\in T(N_\delta(\mathbf{u}))$, and thus $T(N_\delta(\mathbf{u}))$ is an open subset of $E$ that contains $\mathbf{x}$, which contradicts the fact that $\mathbf{x}$ is a boundary point. Thus, it must be the case that $\mathbf{u}$ is a boundary point of $D$.\\
 
 
 Note that since $T^{-1}:E\to D$ is also a transformation with the same properties as $T$, the converse to this result is valid as well: if $\mathbf{u}$ belongs to the boundary of $D$, then $T(\mathbf{u})$ belongs to the boundary of $E$.
@@ -1127,7 +1127,7 @@ The Jacobian of $T$ is thus $J_T(u,v) = \dfrac{1}{J_T^{-1}(x(u,v),y(u,v))} = -\d
 \end{align*}}\\
 
 \vskip\baselineskip
-\noindent{\large Understanding the change of variables formula}
+\noindent{\large Understanding the change of variables formula}\\
 
 We now have some practice working with the change of variables formula, but why is it valid? In any dimension, the formula has the form
 \[
@@ -1271,32 +1271,32 @@ tick label style={font=\scriptsize},axis y line=middle,axis x line=middle,name=m
 &
 \begin{tikzpicture}
 \begin{axis}[width=\marginparwidth+25pt,%
-tick label style={font=\scriptsize},axis y line=middle,axis x line=middle,name=myplot,axis on top,%
+			tick label style={font=\scriptsize},
+			axis y line=middle,
+			axis x line=middle,
+			name=myplot,
+			axis on top,%
 			xtick={1,2},% 
-%			extra x ticks={3.14,1.57},
-%			extra x tick labels={$\pi$,$\pi/2$},
-			ytick={1,2,3,4},
-			%minor y tick num=1,%extra y ticks={-5,-3,...,7},%
-%			minor x tick num=4,
+			ytick={1,2,3,4},%
 			ymin=-0.2,ymax=5,%
 			xmin=-0.2,xmax=2.2%
 ]
 
-	 \addplot [black,domain={-0.1:2},dashed] {1/x};
+	 \addplot [black,domain={0.1:2},dashed] {1/x};
 	 \addplot [black,domain={-0.1:2},dashed] {1*x^2};
-	 \addplot [black,domain={-0.1:2},dashed] {2/x};
+	 \addplot [black,domain={0.1:2},dashed] {2/x};
 	 \addplot [black,domain={-0.1:2},dashed] {2*x^2};
-	 \addplot [black,domain={-0.1:2},dashed] {5/x};
+	 \addplot [black,domain={0.1:2},dashed] {5/x};
 	 \addplot [black,domain={-0.1:2},dashed] {5*x^2};
-	 \addplot [black,domain={-0.1:2},dashed] {6/x};
+	 \addplot [black,domain={0.1:2},dashed] {6/x};
 	 \addplot [black,domain={-0.1:2},dashed] {6*x^2};
-	 \addplot [black,domain={-0.1:2},dashed] {7/x};
+	 \addplot [black,domain={0.1:2},dashed] {7/x};
 	 \addplot [black,domain={-0.1:2},dashed] {7*x^2};
 
 	 
-	\addplot [name path=A,blue,domain={-0.1:2},dashed] {3/x};
+	\addplot [name path=A,blue,domain={0.1:2},dashed] {3/x};
 	\addplot [name path=B,red,domain={-0.1:2},dashed] {3*x^2};
-	\addplot [name path=C,blue,domain={-0.1:2},dashed] {4/x};
+	\addplot [name path=C,blue,domain={0.1:2},dashed] {4/x};
 	\addplot [name path=D,red,domain={-0.1:2},dashed] {4*x^2};
 	\addplot [blue!30] fill between [of=A and D, soft clip={domain=0.9086:1}];
 	\addplot [blue!30] fill between [of=C and B, soft clip={domain=1:1.1006}];
@@ -1413,7 +1413,7 @@ The area of our transformed region is therefore approximated by the area of the 
 \begin{align*}
 \Delta A &\approx \det\begin{bmatrix} x_u(u_i,v_j)\Delta u & x_v(u_i,v_j)\Delta v\\y_u(u_i,v_j)\Delta u & y_v(u_i,v_j)\Delta v\end{bmatrix}\\
 & = \det\begin{bmatrix} x_u(u_i,v_j) & x_v(u_i,v_j)\\y_u(u_i,v_j) y_v(u_i,v_j) \end{bmatrix}\Delta u\,\Delta v\\
-& = J_T(u_i,v_j)\,Delta u\Delta v.
+& = J_T(u_i,v_j)\,\Delta u\Delta v.
 \end{align*}
 This is exactly the result we wanted: the area of our transformed rectangle is approximately the area of the original rectangle, multiplied by the Jacobian. We can begin to see the change of variables formula by putting this result into the Riemann sum definition of the double integral:
 \[

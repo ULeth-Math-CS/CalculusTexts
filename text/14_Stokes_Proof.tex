@@ -1,0 +1,116 @@
+\section{A proof of Stokes' Theorem}\label{sec:stokes_proof}
+We present here a proof of Stokes' Theorem under somewhat more general conditions than those presented in most commercial textbooks. In particular, we do not assume that our surface is the graph of a function $f(x,y)$. However, we will still make assumptions in order to simplify the proof that are not necessary for Stokes' Theorem to hold. The most general proof of this result is quite technical and beyond the scope of our course.  Let us recall the statement of the theorem:
+
+\theorem{thm:stokes_thm_repeat}{Stokes' Theorem}
+{Let \surfaceS\ be a piecewise smooth, orientable surface whose boundary is a piecewise smooth curve $C$, let $\vec n$ be a unit vector normal to \surfaceS, let $C$ be traversed with respect to $\vec n$ according to the right hand rule, and let the components of $\vec F$ have continuous first partial derivatives over \surfaceS. Then\index{Stokes' Theorem}
+\[
+\oint_C \vec F\cdot \ d\vec r = \iint_\surfaceS (\curl\vec F)\cdot \vec n\ dS.
+\]
+}\\
+
+\mnote{.75}{\textbf{Note:} Proving Stokes' Theorem for a graph seems less general than our approach, but this approach is valid, at least locally, due to the Implicit Function Theorem. Our proof assumes our surface can be parametrized, which is yet again a simplifying assumption. We justify this in the grounds that, while not every surface we have encountered in this textbook is a graph, every single example we have considered can be parametrized!}
+
+We will prove this theorem under the following conditions:
+\begin{enumerate}
+ \item $\surfaceS$ can be parametrized by an orientation-preserving $C^2$ function $\Phi:D\subset \mathbb{R}^2\to \mathbb{R}^3$ such that $\Phi$ is one-to-one on {\em all} of $D$ (including the boundary).
+ \item The parameter domain $D$ is a region in $\mathbb{R}^2$ to which Green's Theorem applies.
+\end{enumerate}
+\mnote{.6}{\textbf{Note:} We'll see below why $\Phi$ has to be at least $C^2$. This wasn't part of our definition of ``smooth surface'' but our proof won't work without it. I'm not sure if Stokes' Theorem holds without this assumption, or if there even exist any ``smooth'' surfaces that admit $C^1$ parametrizations but not $C^2$ parametrizations.}
+
+The second condition is fairly mild, since most ``reasonable'' regions (and certainly most regions we're likely to choose as a parameter domain) are a finite union of regions that are both Type I and Type II, as assumed in the proof of Green's Theorem. The first condition is rather more restrictive, and still does not let us deal with closed surfaces such as the sphere, for which the boundary of $D$ does not correspond to the boundary of $\surfaceS$. Note, however, that it may still be the case that surfaces that do not satisfy these assumptions can be realized as the union of surfaces that do. For example, the sphere can be thought of as the union of two hemispheres joined along a common boundary circle. Each hemisphere can be parameterized in a way that satisfies our assumptions, and we note that although they share a common boundary circle, this boundary will receive opposite orientations from the two hemispheres. Thus, if $\surfaceS=H_1\cup H_2$ denotes the decomposition of the sphere into upper and lower hemispheres $H_
+1$ and $H_2$, respectively, with $H_1\cap H_2 = C$, where $C$ is the common boundary circle, we have positively-oriented boundaries $\partial H_1 = C$ and $\partial H_2 = -C$. Thus
+\[
+ \iint_S (\nabla\times \vec{F})\cdot d\vec{S} = \iint_{H_1}(\nabla\times \vec{F})\cdot d\vec{S} + \iint_{H_2}(\nabla\times\vec{F})\cdot d\vec{S} = \int_C \vec{F}\cdot d\vec{r} + \int_{-C}\vec{F}\cdot d\vec{r} = 0,
+\]
+which we would expect, since $\surfaceS$ itself has no boundary.
+
+\noindent\emph{Proof of Stokes' Theorem:}
+ We assume that $\surfaceS=\Phi(D)$, for $\Phi:D\subset \mathbb{R}^2\to \mathbb{R}^3$, $\Phi(u,v) = \langle x(u,v),y(u,v),z(u,v)\rangle$ an orientation-preserving parametrization of $\surfaceS$, such that $\Phi$ is one-to-one and $D\subset \mathbb{R}^2$ is a region for which Green's Theorem is valid. Let $\gamma =\partial D$ be the positively-oriented boundary of $D$, and let $\vec{s}:[a,b]\to \mathbb{R}^2$, $\vec{s}(t)=\langle u(t),v(t)\rangle$ be an orientation preserving parametrization of $\gamma$. It follows from the fact that $\Phi$ is one-to-one that 
+\[ 
+\vec{r}(t) = \Phi(\vec{s}(t)) = \langle x(u(t),v(t)),y(u(t),v(t)),z(u(t),v(t))\rangle 
+\]
+is an orientation-preserving parametrization of $C=\partial \surfaceS$. Recall that the tangent vector fields $\vec{T}_u$ and $\vec{T}_v$ defined by $\Phi$ on the surface $\surfaceS$ can be expressed by
+\[
+ \vec{T}_u(u,v) = D\Phi(u,v)\hat{\imath},\quad \vec{T}_v(u,v) = D\Phi(u,v)\hat{\jmath},
+\]
+where $D\Phi(u,v)$ is the derivative of $\Phi$ at $(u,v)$, given by the $3\times 2$ matrix of partial derivatives
+\[
+ D\Phi = \begin{bmatrix} \dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v}\\ & \\ \dfrac{\partial y}{\partial u} & \dfrac{\partial y}{\partial v}\\ & \\ \dfrac{\partial z}{\partial u} & \dfrac{\partial z}{\partial v}\end{bmatrix}.
+\]
+It follows from the chain rule that 
+\[
+ \vec{r}\,'(t) = D\Phi(\vec{s}(t))\vec{s}\,'(t) = D\Phi(\vec{s}(t))(u'(t)\hat{\imath}+v'(t)\hat{\jmath}) = u'(t)\vec{T}_u(\vec{s}(t))+v'(t)\vec{T}_v(\vec{s}(t)).
+\]
+Now, using the fact that $x,y,z$ are functions of $u$ and $v$, we compute
+\begin{align*}
+ \vec{F}\cdot d\vec{r} &= F_1dx+F_2dy+F_3dz\\
+& = (F_1\circ \Phi)\left(\frac{\partial x}{\partial u}du +\frac{\partial x}{\partial v}dv\right)+(F_2\circ \Phi)\left(\frac{\partial y}{\partial u}du +\frac{\partial y}{\partial v}dv\right)+(F_3\circ \Phi)\left(\frac{\partial z}{\partial u}du +\frac{\partial z}{\partial v}dv\right)\\
+& = \left((F_1\circ\Phi)\frac{\partial x}{\partial u}+(F_2\circ\Phi)\frac{\partial y}{\partial u}+(F_3\circ\Phi)\frac{\partial z}{\partial u}\right)du\\
+&\quad \quad+\left((F_1\circ\Phi)\frac{\partial x}{\partial v}+(F_2\circ\Phi)\frac{\partial y}{\partial v}+(F_3\circ\Phi)\frac{\partial z}{\partial v}\right)dv\\
+& = \left(\vec{F}(\Phi(u,v))\cdot \vec{T}_u(u,v)\right)du + \left(\vec{F}(\Phi(u,v))\cdot \vec{T}_v(u,v)\right)dv.
+\end{align*}
+Let us define $P = (\vec{F}\circ\Phi)\cdot \vec{T}_u$ and $Q = (\vec{F}\circ\Phi)\cdot \vec{T}_v)$, so that $\vec{F}\cdot d\vec{r} = P\,du+Q\,dv$, and
+\begin{align*}
+ \int_C \vec{F}\cdot d\vec{r} &= \int_a^b \vec{F}(\vec{r}(t))\cdot \vec{r}\,'(t)dt\\
+& = \int_a^b \left[(\vec{F}\circ\Phi)(\vec{s}(t))\right]\cdot \left[D\Phi(\vec{s}(t))\vec{s}\,'(t)\right]dt\\
+& = \int_a^b \left[(\vec{F}\circ\Phi)(\vec{s}(t))\right]\cdot \left[u'(t)\vec{T}_u(\vec{s}(t))+v'(t)\vec{T}_v(\vec{s}(t))\right]dt\\
+& = \int_a^b \left(\left[(\vec{F}\circ\Phi)\cdot\vec{T}_u\right](\vec{s}(t))u'(t)+\left[(\vec{F}\circ\Phi)\cdot \vec{T}_v\right](\vec{s}(t))v'(t)\right)dt\\
+& = \int_a^b \left(P(\vec{s}(t))u'(t)+Q(\vec{s}(t)v'(t)\right)dt\\
+& = \int_\gamma Pdu+Qdv.
+\end{align*}
+Now, since $P$ and $Q$ are $C^1$ (this follows from the fact that both $\vec{F}$ and $\Phi$ are $C^1$) and Green's Theorem is valid for the region $D$ bounded by $\gamma$, we have
+\[
+ \int_\gamma Pdu+Qdv = \iint_D\left(\frac{\partial Q}{\partial u}-\frac{\partial P}{\partial v}\right)dudv.
+\]
+The next step, then, is to compute $\dfrac{\partial Q}{\partial u}$ and $\dfrac{\partial P}{\partial v}$. This step gets pretty messy, so hang on: we have $P(u,v) = \vec{F}(\Phi(u,v))\cdot \vec{T}_u(u,v)$. Applying the product rule for dot products with respect to partial derivatives, we get
+\[
+ \frac{\partial P}{\partial v}=\frac{\partial}{\partial v}\left(\vec{F}\cdot \vec{T}_u\right) = \left(\frac{\partial \vec{F}}{\partial v}\right)\cdot \vec{T}_u+\vec{F}\cdot \frac{\partial \vec{T}_u}{\partial v}.
+\]
+The first term in the sum on the right-hand side is
+\begin{align*}
+ \frac{\partial \vec{F}}{\partial v}\cdot \vec{T}_u & = \frac{\partial F_1}{\partial v}\frac{\partial x}{\partial u}+\frac{\partial F_2}{\partial v}\frac{\partial y}{\partial u}+\frac{\partial F_3}{\partial v}\frac{\partial z}{\partial u}\\
+& = \left(\frac{\partial F_1}{\partial x}\frac{\partial x}{\partial v}+\frac{\partial F_1}{\partial y}\frac{\partial y}{\partial v}+\frac{\partial F_1}{\partial z}\frac{\partial z}{\partial v}\right)\frac{\partial x}{\partial u}\\
+& \quad + \left(\frac{\partial F_2}{\partial x}\frac{\partial x}{\partial v}+\frac{\partial F_2}{\partial y}\frac{\partial y}{\partial v}+\frac{\partial F_2}{\partial z}\frac{\partial z}{\partial v}\right)\frac{\partial y}{\partial u}\\
+& \quad\quad + \left(\frac{\partial F_3}{\partial x}\frac{\partial x}{\partial v}+\frac{\partial F_3}{\partial y}\frac{\partial y}{\partial v}+\frac{\partial F_3}{\partial z}\frac{\partial z}{\partial v}\right)\frac{\partial z}{\partial u},
+\end{align*}
+and the second term is
+\[
+ \vec{F}\cdot \frac{\partial \vec{T}_u}{\partial v} = F_1\frac{\partial^2x}{\partial v\partial u}+F_2\frac{\partial^2y}{\partial v\partial u}+F_3\frac{\partial^2z}{\partial v\partial u}.
+\]
+Similarly, we have
+\[
+ \frac{\partial Q}{\partial u} = \frac{\partial}{\partial u}\left(\vec{F}\cdot \vec{T}_v\right) = \left(\frac{\partial \vec{F}}{\partial u}\right)\cdot \vec{T}_v+\vec{F}\cdot \frac{\partial \vec{T}_v}{\partial u}.
+\]
+The second term in this case is
+\[
+ \vec{F}\cdot \frac{\partial \vec{T}_v}{\partial u} = F_1\frac{\partial^2x}{\partial u\partial v}+F_2\frac{\partial^2y}{\partial u\partial v}+F_3\frac{\partial^2z}{\partial u\partial v}.
+\]
+We notice that this term will exactly cancel out with the corresponding second term from $\dfrac{\partial P}{\partial v}$ when we compute $\dfrac{\partial Q}{\partial v}-\dfrac{\partial P}{\partial u}$ by Clairaut's Theorem, since we assumed that $\Phi$ is $C^2$. The first term on the right-hand side for $\dfrac{\partial Q}{\partial u}$ is computed the same as the corresponding term for $\dfrac{\partial P}{\partial v}$, giving
+\begin{align*}
+ \frac{\partial \vec{F}}{\partial u}\cdot \vec{T}_v & = \frac{\partial F_1}{\partial u}\frac{\partial x}{\partial v}+\frac{\partial F_2}{\partial u}\frac{\partial y}{\partial v}+\frac{\partial F_3}{\partial u}\frac{\partial z}{\partial v}\\
+& = \left(\frac{\partial F_1}{\partial x}\frac{\partial x}{\partial u}+\frac{\partial F_1}{\partial y}\frac{\partial y}{\partial u}+\frac{\partial F_1}{\partial z}\frac{\partial z}{\partial u}\right)\frac{\partial x}{\partial v}\\
+& \quad + \left(\frac{\partial F_2}{\partial x}\frac{\partial x}{\partial u}+\frac{\partial F_2}{\partial y}\frac{\partial y}{\partial u}+\frac{\partial F_2}{\partial z}\frac{\partial z}{\partial u}\right)\frac{\partial y}{\partial v}\\
+& \quad\quad +\left(\frac{\partial F_3}{\partial x}\frac{\partial x}{\partial u}+\frac{\partial F_3}{\partial y}\frac{\partial y}{\partial u}+\frac{\partial F_3}{\partial z}\frac{\partial z}{\partial u}\right)\frac{\partial z}{\partial v}.
+\end{align*}
+We can now compute $\dfrac{\partial Q}{\partial v}-\dfrac{\partial P}{\partial u}$, noting that several terms cancel out, giving us
+\begin{align*}
+ \frac{\partial Q}{\partial v}-\frac{\partial P}{\partial u} & = \left(\frac{\partial F_1}{\partial y}-\frac{\partial F_2}{\partial x}\right)\frac{\partial x}{\partial v}\frac{\partial y}{\partial u}+\left(\frac{\partial F_1}{\partial z}-\frac{\partial F_3}{\partial x}\right)\frac{\partial x}{\partial v}\frac{\partial z}{\partial u}\\
+&\quad + \left(\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y}\right)\frac{\partial y}{\partial v}\frac{\partial x}{\partial u}+\left(\frac{\partial F_2}{\partial z}-\frac{\partial F_3}{\partial y}\right)\frac{\partial y}{\partial v}\frac{\partial z}{\partial u}\\
+&  \quad \quad + \left(\frac{\partial F_3}{\partial x}-\frac{\partial F_1}{\partial z}\right)\frac{\partial z}{\partial v}\frac{\partial x}{\partial u}+\left(\frac{\partial F_3}{\partial y}-\frac{\partial F_2}{\partial z}\right)\frac{\partial z}{\partial v}\frac{\partial y}{\partial u}\\
+& = \left(\frac{\partial F_3}{\partial y}-\frac{\partial F_2}{\partial z}\right)\left(\frac{\partial y}{\partial u}\frac{\partial z}{\partial v}-\frac{\partial y}{\partial v}\frac{\partial z}{\partial u}\right)+\left(\frac{\partial F_1}{\partial z}-\frac{\partial F_3}{\partial x}\right)\left(\frac{\partial z}{\partial u}\frac{\partial x}{\partial v}-\frac{\partial z}{\partial v}\frac{\partial x}{\partial u}\right)\\
+&\quad \quad +\left(\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y}\right)\left(\frac{\partial x}{\partial u}\frac{\partial y}{\partial v}-\frac{\partial x}{\partial v}\frac{\partial y}{\partial u}\right)\\
+& = G_1\frac{\partial(y,z)}{\partial(u,v)}+G_2\frac{\partial(z,x)}{\partial (u,v)}+G_3\frac{\partial (x,y)}{\partial (u,v)}\\
+& = G\cdot \vec{N}(u,v),
+\end{align*}
+where $\vec{G} = \langle G_1,G_2,G_3\rangle = \nabla\times \vec{F}$ and $\vec{N}(u,v) = \vec{T}_u(u,v)\times\vec{T}_v(u,v)$. Thus, putting it all together, we have
+\begin{align*}
+ \int_C \vec{F}\cdot d\vec{r} & = \int_\gamma Pdu+Qdv \\
+& = \iint_D \left(\frac{\partial Q}{\partial u}-\frac{\partial P}{\partial v}\right)dudv\\
+& = \iint_D \left[(\nabla\times \vec{F})(\Phi(u,v))\right]\cdot \vec{N}(u,v) dudv\\
+& = \iint_S \left(\nabla\times \vec{F}\right)\cdot d\vec{S},
+\end{align*}
+by the definition of the surface integral, which completes our proof of Stokes' Theorem for the assumptions stated above.
+
+\bigskip
+
+OK, that was epic. While proofs have been omitted from this text, for the most part, it can occasionally be enlightening to dig into the guts of a result like Stokes' Theorem, and try to understand how everything fits together.

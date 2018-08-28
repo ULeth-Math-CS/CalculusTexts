@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=latex]
+
+\draw [<->, thick] (-5,0) -- (5,0);
+\foreach \x / \y  in %
+					{%
+					-2.5/{$-1$},%
+					2.5/{$1$},%
+					}
+		{\draw [fill=white] (\x,0) circle [radius=0.08];
+		 \draw (\x,-0.1) node[below] {\scriptsize \parbox{40pt}{\centering \y}};}
+
+\draw [fill] (0,0) circle [radius=0.08];
+		 \draw (0,-0.1) node[below] {\scriptsize \parbox{40pt}{\centering $0$}};
+\draw (-3.75,-.75) node {\scriptsize \parbox{50pt}{\centering $\fpp<0$ \ c. down }};
+\draw (-3.75,.25) node {$-$};
+\draw (-1.25,-.75) node {\scriptsize \parbox{50pt}{\centering $\fpp>0$ \ c. up }};
+\draw (-1.25,.25) node {$+$};
+\draw (1.25,-.75) node {\scriptsize \parbox{50pt}{\centering $\fpp<0$ \ c. down }};
+\draw (1.25,.25) node {$-$};
+\draw (3.75,-.75) node {\scriptsize \parbox{50pt}{\centering $\fpp>0$ \ c. up}};
+\draw (3.75,.25) node {$+$};
+
+\end{tikzpicture}
+
+
+

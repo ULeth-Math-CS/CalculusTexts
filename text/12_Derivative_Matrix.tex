@@ -34,9 +34,16 @@ The linearization of $f$ at $a$ is the unique linear function that agrees with $
 \]
 For example one could define the degree $n$ Taylor polynomial of a function $f$ at $a$ to be the unique polynomial of degree $n$ that agrees with $f$ to order $k$ at $a$.}
 
-While the definition of the derivative doesn't generalize well to several variables, the notion of linear approximation does. Recall from your first course in linear algebra that, given any $m\times n$ matrix $A$, we can define a function $T$, called a \emph{linear transformation} that takes an $n\times 1$ column vector as input, and produces an $m\times 1$ column vector as output:
+While the definition of the derivative doesn't generalize well to several variables, the notion of linear approximation does. Recall from your first course in linear algebra that, given any $m\times n$ matrix $A$, we can define a function $T$, called a \emph{linear transformation}, that takes an $n\times 1$ column vector as input, and produces an $m\times 1$ column vector as output:
 \[
-T(\vec{x}) = A\vec{x} = A\begin{bmatrix}x_1\\x_2\\ \vdots\\x_n\end{bmatrix} = \begin{bmatrix}y_1\\y_2\\ \vdots \\y_m\end{bmatrix}=\vec{y}.
+T(\vec{x}) = A\vec{x} = 
+	\begin{bmatrix} 
+		a_{11} & \cdots & a_{1n}\\
+		\vdots & \ddots & \vdots \\
+		a_{m1} & \cdots & a_{mn}
+	\end{bmatrix}
+	\begin{bmatrix}x_1\\x_2\\ \vdots\\x_n\end{bmatrix}
+	 = \begin{bmatrix}y_1\\y_2\\ \vdots \\y_m\end{bmatrix}=\vec{y}.
 \]
 In the above definition, the product $A\vec{x}$ is the usual matrix product of the $m\times n$ matrix $A$ with the $n\times 1$ matrix $\vec{x}$. In this text, we generally do not write our vectors as columns, so for a vector $\vec{x}=\langle x_1,\ldots, x_n\rangle$ we will use the notation
 \[
@@ -44,33 +51,35 @@ A\cdot \vec{x} =\langle a_{11}x_1+\cdots + a_{1n}x_n, \ldots, a_{m1}x_1+\cdots +
 \]
 to represent the same product in our notation. (And yes, the dot in this product is intended to remind you of the dot product between vectors: recall that the $(i,j)$-entry of a matrix product $AB$ is the dot product of the $i^{\text{th}}$ row of $A$ with the $j^{\text{th}}$ column of $B$.) We can now make the following definition.\\
 
+\mnote{.5}{\textbf{Note:} to avoid confusion between the meaning of \emph{linear function} in Calculus, and \emph{linear transformation} in Linear Algebra, we will use $\ell$ to denote the former, and $T$ to denote the latter. Notice that if $\vec{b}=\vec{0}$ in Definition \ref{def:gen_linear}, then a linear function \emph{is} a linear transformation.}
+
 \definition{def:gen_linear}{Linear function}{
- A function $T$ from $\mathbb{R}^n$ to $\mathbb{R}^m$ will be called a \sword{linear function} \index{linear function} if $T$ is of the form
+ A function $\ell$ from $\mathbb{R}^n$ to $\mathbb{R}^m$ will be called a \sword{linear function} \index{linear function} if $\ell$ is of the form
  \[
- T(\vec{x}) = M\cdot \vec{x}+\vec{b}
+ \ell(\vec{x}) = M\cdot \vec{x}+\vec{b}
  \]
  for some $m\times n$ matrix $M$ and vector $\vec{b}$ $\mathbb{R}^m$.}\\
 
-If we apply the convention of representing points in terms of their position vectors to the codomain as well as the domain, we can express such a function as $f=\langle f_1,\ldots, f_n\rangle$, where each function $f_i$ is a real-valued function of $n$ variables. We want differentiability of $f$ to mean that $f$ has a linear approximation $T$ that agrees with $f$ to first order at $a$. Since $f(\vec{x})$ and $T(\vec{x})$ are now vectors, saying that $T$ is a good approximation of $f$ requires that the magnitude $\norm{f(\vec{x})-T(\vec{x})}$ is small relative to the size of $\norm{\vec{x}-\vec{a}}$.\\
+If we apply the convention of representing points in terms of their position vectors to the codomain as well as the domain, we can express such a function as $f=\langle f_1,\ldots, f_n\rangle$, where each function $f_i$ is a real-valued function of $n$ variables. We want differentiability of $f$ to mean that $f$ has a linear approximation $\ell$ that agrees with $f$ to first order at $a$. Since $f(\vec{x})$ and $\ell(\vec{x})$ are now vectors, saying that $\ell$ is a good approximation of $f$ requires that the magnitude $\norm{f(\vec{x})-\ell(\vec{x})}$ is small relative to the size of $\norm{\vec{x}-\vec{a}}$.\\
 
-\definition{def:general_differentiability}{General definition of differentiability}{Let $D$ be an open subset of $\mathbb{R}^n$ and let $f$ be a function with domain $D$ and values in $\mathbb{R}^m$. We say that $f$ is \sword{differentiable}\index{differentiable!general} at a point $\vec{a}\in D$ if there exists a linear function $T:\mathbb{R}^n\to\mathbb{R}^m$ that agrees with $f$ to first order at $\vec{a}$; that is, if
+\definition{def:general_differentiability}{General definition of differentiability}{Let $D$ be an open subset of $\mathbb{R}^n$ and let $f$ be a function with domain $D$ and values in $\mathbb{R}^m$. We say that $f$ is \sword{differentiable}\index{differentiable!general} at a point $\vec{a}\in D$ if there exists a linear function $\ell:\mathbb{R}^n\to\mathbb{R}^m$ that agrees with $f$ to first order at $\vec{a}$; that is, if
 \[
-\lim_{\vec{x}\to\vec{a}}\frac{\norm{f(\vec{x})-T(\vec{x})}}{\norm{\vec{x}-\vec{a}}} = 0.
+\lim_{\vec{x}\to\vec{a}}\frac{\norm{f(\vec{x})-\ell(\vec{x})}}{\norm{\vec{x}-\vec{a}}} = 0.
 \]}\\
-\enlargethispate{1.5\baselineskip}
+\enlargethispage{2\baselineskip}
 
-This definition is going to take a lot of unpacking. First of all, what is this mysterious function $T$? How do we compute it? Does this definition include Definition \ref{def:multi_differentiability} from Section \ref{sec:total_differential} as a special case? What about differentiability for vector-valued functions of one variable, or real-valued functions of one variable?
+This definition is going to take a lot of unpacking. First of all, what is this function $\ell$? How do we compute it? Does this definition include Definition \ref{def:multi_differentiability} from Section \ref{sec:total_differential} as a special case? What about differentiability for vector-valued functions of one variable, or real-valued functions of one variable?
 
-We will answer the first two questions in due course. The answer to the rest is, ``Yes.'' The above definition generalizes all the definitions of differentiability we've encountered so far. As a first step, let us note that for $T(\vec{x})=M\cdot \vec{x}+\vec{b}$, we must have $T(\vec{a})=f(\vec{a})$, or the limit above will not exist. Thus $M\cdot \vec{a}+\vec{b} = f(\vec{a})$, so $\vec{b}=f(\vec{a})-M\cdot \vec{a}$. This tells us that $T$ must have the following form:
+We will answer the first two questions in due course. The answer to the rest is, ``Yes.'' The above definition generalizes all the definitions of differentiability we've encountered so far. As a first step, let us note that for $\ell(\vec{x})=M\cdot \vec{x}+\vec{b}$, we must have $\ell(\vec{a})=f(\vec{a})$, or the limit above will not exist. Thus $M\cdot \vec{a}+\vec{b} = f(\vec{a})$, so $\vec{b}=f(\vec{a})-M\cdot \vec{a}$. This tells us that $\ell$ must have the following form:
 \begin{align}
-T(\vec{x}) &= M\cdot \vec{x} + \vec{b}\notag\\
+\ell(\vec{x}) &= M\cdot \vec{x} + \vec{b}\notag\\
 &= M\cdot \vec{x} + (f(\vec{a}) - M\cdot \vec{a})\notag\\
 & = f(\vec{a})+M\cdot (\vec{x}-\vec{a}).\label{eq_gen_linear}
 \end{align}
-This should ring some bells: the form of $T$ is very similar to that of the linearization given for a function of one variable in Equation \eqref{eq_linearization} above, with the matrix $M$ playing the role of $\fp(a)$. Perhaps this matrix is the derivative we seek?\pagebreak
+This should ring some bells: the form of $\ell$ is very similar to that of the linearization given for a function of one variable in Equation \eqref{eq_linearization} above, with the matrix $M$ playing the role of $\fp(a)$. Perhaps this matrix is the derivative we seek?\pagebreak
  
 %\vskip\baselineskip
-\noindent\textbf{\large Real-valued functions of several variables}
+\noindent\textbf{\large Real-valued functions of several variables}\\
 
 Let $f:D\subseteq \mathbb{R}^n\to \mathbb{R}$ be a given function of $n$ variables (you can assume $n=1, 2$ or 3 if you prefer). Let us denote a point $(x_1,x_2,\ldots, x_n)\in\mathbb{R}^n$ using the vector $\vec x = \langle x_1,x_2,\ldots, x_n\rangle$, so that $f(\vec x) = f(x_1,x_2,\ldots,x_n)$. Let $\vec a = \langle a_1,a_2,\ldots, a_n\rangle$ denote a fixed point $(a_1,a_2,\ldots, a_n)\in D$.
 
@@ -158,7 +167,7 @@ Note that we've also generalized Definition \ref{I-def:derivative_at_a_point} fo
 \[
 \lim_{h\to 0}\left\lvert \frac{f(a+h)-f(a)}{h}-f'(a)\right\rvert = 0,
 \]
-which is just another way of re-writing the usual definition of the derivative. In fact, we've also generalized Definition \ref{III-def:vvf_derivative} from Chapter \ref{chap:vvf} for differentiability of vector-valued functions: all we have to do is write our vector-valued function as a column matrix. For
+which is just another way of re-writing the usual definition of the derivative. In fact, we've also generalized Definition \ref{III-def:vvf_derivative} from Chapter \ref{III-chap:vvf} for differentiability of vector-valued functions: all we have to do is write our vector-valued function as a column matrix. For
 \[
 \vec{r}(t) = \begin{bmatrix}x_1(t)\\x_2(t)\\\vdots \\x_m(t)\end{bmatrix} \quad \text{ and } \quad \vrp(t) = \begin{bmatrix}x_1\primeskip'(t)\\x_2\primeskip'(t)\\\vdots \\x_m\primeskip'(t)\end{bmatrix},
 \]
@@ -192,15 +201,15 @@ Thus, taking limits of the above as $\vec{x}\to\vec{a}$, we find $\displaystyle 
 
 
 \vskip\baselineskip
-\noindent\textbf{\large Vector-valued functions}
+\noindent\textbf{\large Vector-valued functions}\\
 
 Let us now consider Definition \ref{def:general_differentiability} for general functions $f:D\subseteq \mathbb{R}^n\to \mathbb{R}^m$.  If $f$ is differentiable at $\vec{a}$, then we must have
 \[
- \lim_{\vec{x}\to\vec{a}}\frac{\norm{f(\vec{x})-T(\vec{x})}}{\norm{\vec{x}-\vec{a}}} = 0
+ \lim_{\vec{x}\to\vec{a}}\frac{\norm{f(\vec{x})-\ell(\vec{x})}}{\norm{\vec{x}-\vec{a}}} = 0
 \]
-for some linear function $T(\vec{x})$. We saw in Equation \eqref{eq_gen_linear} above that $T$ must have the form of a linear approximation:
+for some linear function $\ell(\vec{x})$. We saw in Equation \eqref{eq_gen_linear} above that $T$ must have the form of a linear approximation:
 \[
-T(\vec{x})=L_{\vec{a}}(\vec{x}) = f(\vec{a})+M\cdot (\vec{x}-\vec{a}).
+\ell(\vec{x})=L_{\vec{a}}(\vec{x}) = f(\vec{a})+M\cdot (\vec{x}-\vec{a}).
 \]
 %\mnote{.4}{\textbf{Note:} To keep everything straight, in this exposition we are going to write our vectors as column matrices rather than using angle bracket notation.}
 Moreover, we'll see below that (a) the matrix $M$ is uniquely defined, and (b) $M$ is deserving of the title of ``the'' derivative of $f$.
@@ -210,7 +219,7 @@ Let's compare again to the one variable case: $L_a(x)=f(a)+f'(a)(x-a)$. With thi
 M = \begin{bmatrix}
 c_{11} & c_{12} & \cdots & c_{1n}\\
 c_{21} & c_{22} & \cdots & c_{2n}\\
-\vdots & \vdotds & \ddots & \vdots\\
+\vdots & \vdots & \ddots & \vdots\\
 c_{m1} & c_{m2} & \cdots & c_{mn}\end{bmatrix},
 \]
 and consider what happens when we let $\vec{x}\to\vec{a}$ along different paths. If we consider the path $x_1 = a_1+t, x_2=a_2, \ldots, x_n=a_n$ (that is, varying $x_1$ while holding the other variables constant) then
@@ -232,7 +241,7 @@ Since $\langle c_{11}, c_{21}, \ldots, c_{m1}\rangle$ is a constant vector, from
 But this limit on the left is just the partial derivative of $f$ with respect to $x_1$!
 If we write $f(\vec{x}) = \langle f_1(\vec{x}),f_2(\vec{x}),\ldots, f_m(\vec{x})\langle$, then we have
 \[
- \lim_{t\to 0}\frac{f(a_1+t,a_2,\ldots, a_n)-f(a_1,a_2,\ldots, a_n)}{t} = \\left\langle\frac{\partial f_1}{\partial x_1}(\vec{a}), \frac{\partial f_2}{\partial x_1}(\vec{a}), \ldots, \frac{\partial f_m}{\partial x_1}(\vec{a})\right\rangle,
+ \lim_{t\to 0}\frac{f(a_1+t,a_2,\ldots, a_n)-f(a_1,a_2,\ldots, a_n)}{t} = \left\langle\frac{\partial f_1}{\partial x_1}(\vec{a}), \frac{\partial f_2}{\partial x_1}(\vec{a}), \ldots, \frac{\partial f_m}{\partial x_1}(\vec{a})\right\rangle,
 \]
 and this gives us the first column of $M$! Repeating this for each variable, we see that the matrix $M$ is exactly the matrix of all the partial derivatives of $f$. This matrix is important enough to have a name:
 
@@ -250,6 +259,126 @@ Notice that if $f$ is differentiable, the Jacobian matrix is the only matrix tha
 
 In particular, note that for a function $f:\mathbb{R}^n\to \mathbb{R}$, we recover the gradient vector. (Technically, the derivative in this sense is a \emph{row} vector (some might say \emph{dual vector}), not a column vector.  Note that multiplying a row vector by a column vector is the same as taking the dot product of two column vectors. 
 
-This definition also accounts for parametric curves, viewed as vector-valued functions of one variable. If $\mathbf{r}:\mathbb{R}\to \mathbb{R}^n$ defines a parametric curve, then the derivative $\mathbf{r}'(t) = \begin{bmatrix}x_1'(t)\\x_2'(t)\\\vdots \\x_n'(t)\end{bmatrix}$ as introduced in Calculus III is the same as the one obtained using this definition.
+This definition also accounts for parametric curves, viewed as vector-valued functions of one variable. If $\mathbf{r}:\mathbb{R}\to \mathbb{R}^n$ defines a parametric curve, then the derivative $\mathbf{r}'(t) = \begin{bmatrix}x_1'(t)\\x_2'(t)\\\vdots \\x_n'(t)\end{bmatrix}$ as introduced in Calculus III is the same as the one obtained using this definition.\\
 
+\noindent\textbf{\large The General Chain Rule}\\
 
+One of the big advantages of representing the derivative of a function of several variables in terms of its Jacobian matrix is that the Chain Rule becomes completely transparent. Arguably, the version of the Chain Rule we're about to present is even more intuitive than the single-variable version!
+
+Recall that the Chain Rule is all about derivatives of composite functions. In one variable, given $h=f\circ g$, if $b=g(a)$, we have
+\[
+h'(a) = f'(g(a))g'(a) = f'(b)g'(a).
+\]
+The derivative of the composition is the product of the derivatives of the functions being composed, as long as we take care to evaluate them at the appropriate points.
+
+In Section \ref{sec:multi_chain} we saw that in several variables, the Chain Rule comes in various flavours, depending on the number of variables involved in each function being composed. If we think of derivatives in terms of the Jacobian matrix, then each of these flavours says exactly the same thing as the original Chain Rule above!
+
+\theorem{thm:gen_gen_chain}{The general Chain Rule (matrix form)}{\index{chain rule ! as matrix multiplication}
+Let $f:U\subseteq \mathbb{R}^m\to\mathbb{R}^p$ and $g:V\subseteq \mathbb{R}^n\to \mathbb{R}^m$ be differentiable functions, such that the range of $g$ is contained in the domain $U$ of $f$. Then the composite function $h=f\circ g$ is differentiable on $V$, and for each $\vec{a}\in V$, we have
+\[
+Dh(\vec{a}) = D(f\circ g)(\vec{a}) = Df(\vec{b})Dg(\vec{a}),
+\]
+where $\vec{b}=g(\vec{a})$, and the product on the right is the usual matrix product of the two Jacobian matrices.}
+
+This is a remarkable result. Let's unpack it in a couple of examples.\\
+
+\example{ex_genchain1}{Applying the general chain rule}{
+Let $f:U\subseteq \mathbb{R}^3\to\mathbb{R}$ be a differentiable function of three variables, and let $\vec{r}(t) = \la x(t),y(t),z(t)\ra$ be a vector-valued function of one variable. Use Theorem \ref{thm:gen_gen_chain} to determine a formula for the derivative of $h(t) = f(\vec{r}(t))$.}
+{
+Of course, we know what this derivative should look like from Section \ref{sec:multi_chain}. The point is to confirm that this is a special case of Theorem \ref{thm:gen_gen_chain}. The Jacobian matrix of $f$ is a $1\times 3$ matrix and Jacobian matrix of $\vec{r}$ is a $3\times 1$ matrix. They are given, respectively, by
+\[
+Df(\vec{x}) = \begin{bmatrix}
+f_x(\vec{x}) & f_y(\vec{x}) & f_z(\vec{x})
+\end{bmatrix} \quad \text{ and } \quad D\vec{r}(t) = \begin{bmatrix}x'(t)\\y'(t)\\z'(t)\end{bmatrix}.
+\]
+Theorem \ref{thm:gen_gen_chain} then gives us
+\[
+h'(t) = Df(\vec{r}(t))D\vec{r}(t) = f_x(\vec{r(t)})x'(t)+f_y(\vec{r(t)})y'(t)+f_z(\vec{r(t)})z'(t),
+\]
+as before. Of course, in this context we usually write $Df(\vec{x})$ as $\nabla f(\vec{x})$ and $D\vec{r}(t)$ as $\vrp(t)$, and instead of a matrix product, we write a dot product. But this is simply a shift in notation -- the quantities involved are no different than before.
+}\\
+
+\example{ex_genchain2}{Applying the general chain rule}{
+Let $f:U\subseteq \mathbb{R}^2\to\mathbb{R}$ be a function of 2 variables, and let $g:V\subseteq \mathbb{R}^2\to\mathbb{R}^2$ be given by
+\[
+g(u,v)=(x(u,v),y(u,v)).
+\]
+Given $h = f\circ g$, use Theorem \ref{thm:gen_gen_chain} to determine $h_u$ and $h_v$.}
+{
+First we compute the Jacobian matrices for $f$ and $g$. We have
+\[
+Df(x,y) = \begin{bmatrix}f_x(x,y) & f_y(x,y)\end{bmatrix} \quad \text{ and }
+\quad Dg(u,v) = \begin{bmatrix}x_u(u,v) & x_v(u,v)\\y_u(u,v) & y_v(u,v)\end{bmatrix}.
+\]
+The Chain Rule then gives
+\begin{align*}
+Dh(u,v) &= \begin{bmatrix} h_u(u,v) & h_v(u,v) \end{bmatrix}  = Df(h(u,v))Dh(u,v)\\
+&=\begin{bmatrix}f_x(h(u,v)) & f_y(h(u,v))\end{bmatrix}\begin{bmatrix}x_u(u,v) & x_v(u,v)\\y_u(u,v) & y_v(u,v)\end{bmatrix}\\
+& = \begin{bmatrix} f_x(h(u,v)x_u(u,v)+f_y(h(u,v))y_u(u,v) & f_x(h(u,v))x_v(u,v)+f_y(h(u,v))y_v(u,v)\end{bmatrix}
+\end{align*}
+Equating coefficients of the first and last matrices, we have, in Leibniz notation,
+\begin{align*}
+\frac{\partial h}{\partial u} & = \frac{\partial f}{\partial x}\frac{\partial x}{\partial u}+\frac{\partial f}{\partial y}\frac{\partial y}{\partial u}\\
+\frac{\partial h}{\partial v} & = \frac{\partial f}{\partial x}\frac{\partial x}{\partial v}+\frac{\partial f}{\partial y}\frac{\partial y}{\partial v}.
+\end{align*}
+Again, this reproduces another instance of the Chain Rule from Section \ref{sec:multi_chain}.
+}\\
+
+With additional experimentation, you will find that every instance of the Chain Rule you have previously encountered can be interpreted as a special case of Theorem \ref{thm:gen_gen_chain}. Moreover, a slight shift in interpretation makes this version of the Chain Rule even more obvious! (There's another detour coming, but stick with us.)
+
+Let us digress briefly and discuss the progression of mathematics from Calculus to higher math. If you continue on to upper-level undergraduate mathematics, you will encounter courses in Analysis and Topology. Analysis deals with the theoretical underpinnings of Calculus: this is where you see all the careful proofs of theorems that have been omitted from this text. Topology is a further abstraction of Analysis. In Topology, one studies continuity (and its consequences) at its most fundamental, abstract level.
+
+The corresponding successors to Calculus in several variables are known as \emph{differential geometry} and \emph{differential topology}. You probably won't encounter these unless you continue on to graduate studies in mathematics. One of the core philosophies in these two (closely related) subjects is the following:
+
+\begin{quote}
+\emph{Functions map points. Derivatives map tangent vectors.}
+\end{quote}
+
+This can be understood in our context. At any point $\vec{a}$ in $\mathbb{R}^n$, we can attach a copy of the \emph{vector space} $\mathbb{R}^n$, thought of as all the possible tangent vectors to curves passing through that point.
+
+Let $\vec{r}:(a,b)\to \mathbb{R}^n$ be such a curve, and let $f:\mathbb{R}^n\to \mathbb{R}^m$ be a differentiable function. The composite function $\vec{s}=f\circ \vec{r}$ is then a curve in $\mathbb{R}^m$. The point $\vec{a} = \vec{r}(t_0)$ on our first curve in $\mathbb{R}^n$ becomes a point 
+\[
+\vec{b} = f(\vec{a}) = f(\vec{r}(t_0)) = \vec{s}(t_0)
+\]
+on our new curve in $\mathbb{R}^m$. What about tangent vectors?
+
+At the point $\vec{a}$, we have the tangent vector $\vec{v} = \vrp(t_0)$. What is the tangent vector to $\vec{s}(t)$ at the point $\vec{b}$? On the one hand, by definition, we have the tangent vector
+\[
+\vec{w} = \vec{s}\primeskip ' (t_0).
+\]
+On the other hand, the Chain Rule gives us
+\[
+\vec{s}\primeskip ' (t_0) = (f\circ \vec{r})\primeskip '(t_0) = Df(\vec{r}(t_0))\vrp(t_0).
+\]
+But $\vrp(t_0)=\vec{v}$, so we have
+\[
+\vec{w} = Df(\vec{a})\dotp \vec{v}.
+\]
+Multiplying the original tangent vector by the derivative of $f$ gives us the new tangent vector. Cool!
+
+What's more, we can view this as a \emph{linear transformation}. Let $V$ denote the vector space of all tangent vectors at the point $\vec{a}$ in $\mathbb{R}^n$ (this is just a copy of $\mathbb{R}^n$) and let $W$ denote the space of all tangent vectors in $\mathbb{R}^m$ at the point $\vec{b}$. Then we have the linear transformation $T:V\to W$ given by
+\[
+T(\vec{v}) = Df(\vec{a})\cdot \vec{v}.
+\]
+In more advanced Calculus, or Differential Geometry, we view this linear transformation as \emph{the} derivative of $f$ at $\vec{a}$. Now, recall from Linear Algebra that matrix multiplication corresponds to the composition of the corresponding linear transformations: if $S(\vec{v}) = A\vec{v}$ and $T(\vec{w}) = B\vec{w}$, and the matrices $A$ and $B$ are of the appropriate sizes, then
+\[
+S\circ T(\vec{w}) = S(T(\vec{w}))= A(B\vec{w}) = (AB)\vec{w}.
+\]
+Suppose we have differentiable functions $f:\mathbb{R}^n\to \mathbb{R}^m$ and $g:\mathbb{R}^m\to \mathbb{R}^p$.
+Let $T_f:\mathbb{R}^n\to \mathbb{R}^m$ be the linear function given by the derivative of $f$, and let $T_g:\mathbb{R}^m\to \mathbb{R}^p$ be the linear function given by the derivative of $g$. The chain rule is then essentially telling us that {\em the derivative of a composition is the composition of the derivatives}: we have
+\[
+ T_f\circ T_g(\vec{v}) = T_f(T_g(\vec{v})) = D f(\vec{y})(D g(\vec{x})\vec{v}) = (D f(g(\vec{x}))D g(\vec{x}))\vec{v} = T_{f\circ g}(\vec{v}).
+\]
+In other words, given the composition
+\[
+ \xymatrix@1{\mathbb{R}^n \ar@/^1pc/[r]|g \ar@/_1pc/[rr]|{f\circ g} & \mathbb{R}^m \ar@/^1pc/[r]|f & \mathbb{R}^p},
+\]
+we have the corresponding composition
+\[
+ \xymatrix@1{\mathbb{R}^n \ar@/^1pc/[r]^{D g(\vec{x})} \ar@/_1pc/[rr]_{D(f\circ g)(\vec{x})} & \mathbb{R}^m \ar@/^1pc/[r]^{D f(\vec{y})} & \mathbb{R}^p}.
+\]
+(But beware of the dual usage of $\mathbb{R}^n$ here. In the first composition, we're thinking of it as a set of points in the domain of a function. In the second composition, we're thinking of it as the set of tangent vectors at a point.)
+
+This turns out to be an extremely powerful way of looking at derivatives and the Chain Rule. You may want to keep this in mind in later sections, such as when we consider change of variables in multiple integrals at the end of Chapter \ref{chapter:mult_int}, and when we define integrals over curves and surfaces in Chapter \ref{chapter:vector_calc}. We won't use this language when we get there, but many of the results in those sections (for example, the formula for surface area of a parametric surface) can be understood according to the two principles we have just seen: \emph{functions map points, while derivatives map tangent vectors}, and \emph{the derivative of a composition is the composition of the derivatives}. 
+
+\clearpage{\pagestyle{empty}\cleardoublepage}

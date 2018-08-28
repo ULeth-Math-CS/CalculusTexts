@@ -82,7 +82,7 @@ Instead, we simply plot the locations of Object 1 and 2  on intervals of $1/5^{\
 
 In part (b) of the Figure, we see the points plotted for Object 2. Note the large change in position from $t=-1$ to $t=-0.8$; the object starts moving very quickly. However, it slows considerably at it approaches the origin, and comes to a complete stop at $t=0$. While it looks like there are 3 points near the origin, there are in reality 5 points there.
 
-Since the objects begin and end at the same location, they have the same displacement. Since they begin and end at the same time, with the same displacement, they have the same average rate of change (i.e, they have the same average velocity). Since they follow the same path, they have the same distance traveled. Even though these three measurements are the same, the objects obviously travel the path in very different ways.
+Since the objects begin and end at the same location, they have the same displacement. Since they begin and end at the same time, with the same displacement, they have the same average rate of change (i.e, they have the same average velocity). Since they follow the same path, they have the same distance travelled. Even though these three measurements are the same, the objects obviously travel the path in very different ways.
 }\\
 
 \example{ex_motion3}{Analyzing the motion of a whirling ball on a string}{
@@ -136,7 +136,7 @@ A young boy whirls a ball, attached to a string, above his head in a counter-clo
 }\\
 
 \example{ex_motion4}{Analyzing motion in space}{
-An object moves in a spiral with position function $\vrt = \la \cos t, \sin t, t\ra$, where distances are measured in meters and time is in minutes. Describe the object's speed and acceleration at time $t$.
+An object moves in a spiral with position function $\vrt = \la \cos t, \sin t, t\ra$, where distances are measured in metres and time is in minutes. Describe the object's speed and acceleration at time $t$.
 }
 {With $\vrt = \la \cos t,\sin t, t\ra$, we have:
 \begin{align*}
@@ -159,7 +159,7 @@ There is an intuitive understanding of this. If acceleration is parallel to velo
 
 \noindent\textbf{\large Projectile Motion}\\
 
-An important application of vector--valued position functions is \emph{projectile motion}: the motion of objects under only the influence of gravity. We will measure time in seconds, and distances will either be in meters or feet. We will show that we can completely describe the path of such an object knowing its initial position and initial velocity (i.e., where it \emph{is} and where it \emph{is going.})
+An important application of vector--valued position functions is \emph{projectile motion}: the motion of objects under only the influence of gravity. We will measure time in seconds, and distances will either be in metres or feet. We will show that we can completely describe the path of such an object knowing its initial position and initial velocity (i.e., where it \emph{is} and where it \emph{is going.})
 \index{vector--valued function!projectile motion}\index{projectile motion}
 
 Suppose an object has initial position $\vec r(0) = \la x_0,y_0\ra$ and initial velocity $\vec v(0) = \la v_x,v_y\ra$. It is customary to rewrite $\vec v(0)$ in terms of its speed $v_0$ and direction $\vec u$, where $\vec u$ is a unit vector. Recall all unit vectors in $\mathbb{R}^2$ can be written as $\la \cos \theta,\sin \theta\ra$, where $\theta$ is an angle measure counter--clockwise from the $x$-axis. (We refer to $\theta$ as the \textbf{angle of elevation.}\index{angle of elevation}) Thus $\vec v(0) = v_0\la \cos \theta,\sin \theta\ra.$ 
@@ -264,7 +264,7 @@ The first is easy to answer: she travelled 60 miles. The second is impossible to
 
 This highlights an important fact: to compute distance travelled, we need only to know the speed, given by $\norm{\vvt}$.
 
-\theorem{thm:distance_traveled}{Distance Travelled}
+\theorem{thm:distance_travelled}{Distance Travelled}
 {Let $\vvt$ be a velocity function for a moving object. The distance travelled by the object on $[a,b]$ is:
 \index{distance!travelled}\index{vector--valued function!distance travelled}\index{integration!distance travelled}
 \[
@@ -273,14 +273,14 @@ This highlights an important fact: to compute distance travelled, we need only t
 }
 Note that this is just a restatement of Theorem \ref{thm:vvf_arc_length}: arc length is the same as distance travelled, just viewed in a different context.\\
 
-%Given a position function $\vrt = \la f(t),g(t)\ra$, Theorem \ref{thm:distance_traveled}
- %states that the distance traveled is
+%Given a position function $\vrt = \la f(t),g(t)\ra$, Theorem \ref{thm:distance_travelled}
+ %states that the distance travelled is
 %\[\int_a^b \sqrt{\big(\fp(t)\big)^2+\big(g'(t)\big)^2}\ dt.\]
-%Comparing this to Key Idea \ref{idea:arc_length_parametric} we see that \emph{distance traveled} measures the same thing as \emph{arc length}, just in different contexts.\\
+%Comparing this to Key Idea \ref{idea:arc_length_parametric} we see that \emph{distance travelled} measures the same thing as \emph{arc length}, just in different contexts.\\
 
 \enlargethispage{2\baselineskip}
 \example{ex_motion6}{Distance Travelled, Displacement, and Average Speed}{
-A particle moves in space with position function $\vrt = \la t,t^2,\sin (\pi t)\ra$ on $[-2,2]$, where $t$ is measured in seconds and distances are in meters. Find:
+A particle moves in space with position function $\vrt = \la t,t^2,\sin (\pi t)\ra$ on $[-2,2]$, where $t$ is measured in seconds and distances are in metres. Find:
 \begin{enumerate}
 	\item The distance travelled by the particle on $[-2,2]$.
 	\item	The displacement of the particle on $[-2,2]$.
@@ -288,7 +288,7 @@ A particle moves in space with position function $\vrt = \la t,t^2,\sin (\pi t)\
 \end{enumerate}
 }
 {\begin{enumerate}
-	\item We use Theorem \ref{thm:distance_traveled} to establish the integral:
+	\item We use Theorem \ref{thm:distance_travelled} to establish the integral:
 	\begin{align*}
 	\text{distance travelled} &= \int_{-2}^2 \norm{\vvt}\ dt \\
 							&= \int_{-2}^2 \sqrt{1+(2t)^2+ \pi^2\cos^2(\pi t)}\ dt.

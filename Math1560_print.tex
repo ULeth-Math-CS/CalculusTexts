@@ -12,6 +12,38 @@
 
 \newboolean{colour}
 \setboolean{colour}{false}
+\ifthenelse{\boolean{colour}}{%
+\newcommand{\colorone}{blue}
+\newcommand{\colortwo}{red}
+\newcommand{\coloronefill}{blue!15!white}
+\newcommand{\colortwofill}{red!15!white}
+%\newcommand{\colornamesuffix}{}
+%\newcommand{\mysettikzname}[1]{\tikzsetnextfilename{#1}}
+%\newcommand{\myincludegraphics}[2][]{\includegraphics[#1]{#2}}
+\newcommand{\colormapone}{rgb=(.4,.4,1); rgb=(.8,.8,1)}
+\newcommand{\colormaptwo}{rgb=(1,.4,.4); rgb=(1,.8,.8)}
+\newcommand{\colormapplaneone}{rgb=(.7,.7,1); rgb=(.9,.9,1)}
+\definecolor{colormaponebottom}{rgb}{.4,.4,1}
+\definecolor{colormaponetop}{rgb}{.8,.8,1}
+\definecolor{colormaptwobottom}{rgb}{1,.4,.4}
+\definecolor{colormaptwotop}{rgb}{1,.8,.8}
+}% ends color
+{% not color
+\newcommand{\colorone}{black}
+\newcommand{\colortwo}{black!50!white}
+\newcommand{\coloronefill}{black!15!white}
+\newcommand{\colortwofill}{black!05!white}
+%\newcommand{\colornamesuffix}{BW}
+%\newcommand{\mysettikzname}[1]{\tikzsetnextfilename{#1\colornamesuffix}}
+%\newcommand{\myincludegraphics}[2][]{\includegraphics[#1]{#2\colornamesuffix}}
+\newcommand{\colormapone}{rgb=(.4,.4,.4); rgb=(.7,.7,.7)}
+\newcommand{\colormaptwo}{rgb=(.6,.6,.6); rgb=(.9,.9,.9)}
+\newcommand{\colormapplaneone}{rgb=(.8,.8,.8); rgb=(.95,.95,.95)}
+\definecolor{colormaponebottom}{rgb}{.4,.4,.4}
+\definecolor{colormaponetop}{rgb}{.7,.7,.7}
+\definecolor{colormaptwobottom}{rgb}{.6,.6,.6}
+\definecolor{colormaptwotop}{rgb}{.9,.9,.9}
+}%
 
 \newboolean{CalcI}
 \setboolean{CalcI}{true}

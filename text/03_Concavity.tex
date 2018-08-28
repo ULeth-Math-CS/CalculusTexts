@@ -92,11 +92,22 @@ Let $f(x)=x^3-3x+1$. Find the inflection points of $f$ and the intervals on whic
 This possible inflection point divides the real line into two intervals, $(-\infty,0)$ and $(0,\infty)$. We use a process similar to the one used in the previous section to determine increasing/decreasing. Pick any $c<0$; $\fpp(c)<0$ so $f$ is concave down on $(-\infty,0)$. Pick any $c>0$; $\fpp(c)>0$ so $f$ is concave up on $(0,\infty)$. Since the concavity changes at $x=0$, the point $(0,1)$ is an inflection point.
 
 The number line in Figure \ref{fig:concline1} illustrates the process of determining concavity; Figure \ref{fig:conc1} shows a graph of $f$ and \fpp, confirming our results. Notice how $f$ is concave down precisely when $\fpp(x)<0$ and concave up when $\fpp(x)>0$.
-\mfigure{.38}{A sign diagram for $\fpp$ determining the concavity of $f$ in Example \ref{ex_conc1}.}{fig:concline1}{figures/figconcline1}
+%\mfigure{.38}{A sign diagram for $\fpp$ determining the concavity of $f$ in Example \ref{ex_conc1}.}{fig:concline1}{figures/figconcline1}
+
+\mtable{.38}{A sign diagram for $\fpp$ determining the concavity of $f$ in Example \ref{ex_conc1}.}{fig:concline1}{
+\begin{center}
+\begin{tikzpicture}[>=latex]
+\draw [<->, thick] (-2,0) -- (2,0);
+\draw [fill] (0,0) circle [radius=0.08];
+\draw (0,-0.1) node[below] {\scriptsize \parbox{40pt}{\centering $0$}};
+		
+\draw (-1,-.75) node {\scriptsize \parbox{50pt}{\centering $\fpp<0$ \ c. down }};
+\draw (1,-.75) node {\scriptsize \parbox{50pt}{\centering $\fpp>0$ \ c. up }};
+\end{tikzpicture}
+\end{center}}
+%\myincludegraphics[scale=.5]{apex-second-derivative_img4}
 \mfigure{.19}{A graph of $f(x)$ used in Example \ref{ex_conc1}.}{fig:conc1}{figures/figconc1}
 }\\
-%\myincludegraphics[scale=.5]{apex-second-derivative_img4}
-
 
 \example{ex_conc2}{Finding intervals of concave up/down, inflection points}{
 Let $f(x)=x/(x^2-1)$. Find the inflection points of $f$ and the intervals on which it is concave up/down.}
@@ -119,7 +130,30 @@ The important $x$-values at which concavity might switch are $x=-1$, $x=0$ and $
 
 
 \noindent\begin{minipage}{\textwidth}\centering
-\myincludegraphics{figures/figconcline2}
+%\myincludegraphics{figures/figconcline2}
+\begin{tikzpicture}[>=latex]
+
+\draw [<->, thick] (-5,0) -- (5,0);
+\foreach \x / \y  in %
+					{%
+					-2.5/{$-1$},%
+					2.5/{$1$},%
+					}
+		{\draw [fill=white] (\x,0) circle [radius=0.08];
+		 \draw (\x,-0.1) node[below] {\scriptsize \parbox{40pt}{\centering \y}};}
+
+\draw [fill] (0,0) circle [radius=0.08];
+		 \draw (0,-0.1) node[below] {\scriptsize \parbox{40pt}{\centering $0$}};
+\draw (-3.75,-.75) node {\scriptsize \parbox{50pt}{\centering $\fpp<0$ \ c. down }};
+\draw (-3.75,.25) node {$-$};
+\draw (-1.25,-.75) node {\scriptsize \parbox{50pt}{\centering $\fpp>0$ \ c. up }};
+\draw (-1.25,.25) node {$+$};
+\draw (1.25,-.75) node {\scriptsize \parbox{50pt}{\centering $\fpp<0$ \ c. down }};
+\draw (1.25,.25) node {$-$};
+\draw (3.75,-.75) node {\scriptsize \parbox{50pt}{\centering $\fpp>0$ \ c. up}};
+\draw (3.75,.25) node {$+$};
+
+\end{tikzpicture}
 \captionsetup{type=figure}%
 \caption{Sign diagram for $\fpp$ in Example \ref{ex_conc2}.}\label{fig:concline2}
 \end{minipage}\\

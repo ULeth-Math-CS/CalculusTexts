@@ -28,7 +28,7 @@ Verify the Divergence Theorem by finding the total outward flux of $\vec F$ acro
 }
 {The surface \surfaceS\ is piecewise smooth, comprising surfaces $\surfaceS_1$, which is part of the plane $z=2x$, surface $\surfaceS_2$, which is part of the cylinder $x=1-y^2$, and surface $\surfaceS_3$, which is part of the plane $z=0$. To find the total outward flux across \surfaceS, we need to compute the outward flux across each of these three surfaces.
 
-We leave it to the reader to confirm that surfaces $\surfaceS_1$, $\surfaceS_2$ and $\surfaceS_3$ can be parameterized by $\vec r_1$, $\vec r_2$ and $\vec r_3$ respectively as
+We leave it to the reader to confirm that surfaces $\surfaceS_1$, $\surfaceS_2$ and $\surfaceS_3$ can be parametrized by $\vec r_1$, $\vec r_2$ and $\vec r_3$ respectively as
 \begin{align*}
 \vec r_1(u,v) &= \la v(1-u^2), u, 2v(1-u^2)\ra, \\
 \vec r_2(u,v) &= \la (1-u^2), u, 2v(1-u^2)\ra,\\
@@ -207,7 +207,7 @@ Since $dS = \snorm{\vec r_u\times\vec r_v}\ dA$, the surface integral in practic
 \[
 \iint_\surfaceS (\curl \vec F)\cdot (\vec r_u\times\vec r_v)\ dA,
 \]
-where $\vec r_u\times\vec r_v$ may be replaced by $\vec r_v\times\vec r_u$ to properly match the direction of this vector with the orientation of the parameterization of $C$. \\
+where $\vec r_u\times\vec r_v$ may be replaced by $\vec r_v\times\vec r_u$ to properly match the direction of this vector with the orientation of the parametrization of $C$. \\
 
 \example{ex_stokes1}{Verifying Stokes' Theorem}
 {Considering the planar surface $f(x,y) = 7-2x-2y$, let $C$ be the curve in space that lies on this surface above the circle of radius 1 and centred at $(1,1)$ in the $x$-$y$ plane, let \surfaceS\ be the planar region enclosed by $C$, as illustrated in Figure \ref{fig:stokes1}, and let $\vec F = \langle x+y,2y, y^2\rangle$. Verify Stoke's Theorem by showing $\oint_C \vec F\cdot \ d\vec r = \iint_\surfaceS (\curl\vec F)\cdot \vec n\ dS$.
@@ -219,7 +219,7 @@ where $\vec r_u\times\vec r_v$ may be replaced by $\vec r_v\times\vec r_u$ to pr
 3Droo=399.9999566444115,
 3Dlights=Headlamp,add3Djscript=asylabels.js}{width=145pt}{.4}{As given in Example \ref{ex_stokes1}, the surface \surfaceS\ is the portion of the plane bounded by the curve.}{fig:stokes1}{figures/figstokes1} 
 }
-{We begin by parameterizing $C$ and then find the circulation. A unit circle centred at $(1,1)$ can be parametrized with $x=\cos t+1$, $y=\sin t+1$ on $0\leq t\leq 2\pi$; to put this curve on the surface $f$, make the $z$ component equal $f(x,y)$: $z = 7-2(\cos t+1)-2(\sin t+1)  = 3-2\cos t - 2\sin t$. All together, we parametrize $C$ with $\vec r(t) = \la \cos t+1, \sin t+1, 3-2\cos t-2\sin t\ra$. 
+{We begin by parametrizing $C$ and then find the circulation. A unit circle centred at $(1,1)$ can be parametrized with $x=\cos t+1$, $y=\sin t+1$ on $0\leq t\leq 2\pi$; to put this curve on the surface $f$, make the $z$ component equal $f(x,y)$: $z = 7-2(\cos t+1)-2(\sin t+1)  = 3-2\cos t - 2\sin t$. All together, we parametrize $C$ with $\vec r(t) = \la \cos t+1, \sin t+1, 3-2\cos t-2\sin t\ra$. 
 \enlargethispage{3\baselineskip}
 
 The circulation of $\vec F$ around $C$ is

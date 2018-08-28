@@ -50,7 +50,7 @@ Our above logic can be summarized as ``If $f$ is increasing, then $\fp$ is proba
 
 \mnote{.73}{\textbf{Note:} Parts 1 \& 2 of Theorem \ref{thm:incr_decr} also hold if $\fp(c) = 0$ for a finite number of values of $c$ in $I$.}
 
-Let $f$ be differentiable on an interval $I$ and let $a$ and $b$ be in $I$ where $\fp(a)>0$ and $\fp(b)<0$. If $\fp$ is continuous on $[a,b]$, it follows from the Intermediate Value Theorem that there must be some value $c$ between $a$ and $b$ where $\fp(c) = 0$. (It turns out that this is still true even if $\fp$ is not continuous on $[a,b]$.) This leads us to the following method for finding intervals on which a function is increasing or decreasing.
+Let $f$ be differentiable on an interval $I$ and let $a$ and $b$ be in $I$ where $\fp(a)>0$ and $\fp(b)<0$. If $\fp$ is continuous on $[a,b]$, it follows from the Intermediate Value Theorem that there must be some value $c$ between $a$ and $b$ where $\fp(c) = 0$. If $\fp$ is not continuous on $[a,b]$, it can happen that $\fp$ changes sign at a point $c$ where $\fp(c)$ is undefined, so we should account for these points as well. This leads us to the following method for finding intervals on which a function is increasing or decreasing.
 
 \keyidea{idea:incr_decr}{\parbox[t]{190pt}{Finding Intervals on Which $f$ is Increasing or Decreasing}}
 {Let $f$ be a differentiable function on an interval $I$. To find intervals on which $f$ is increasing and decreasing:\index{increasing function!finding intervals}\index{decreasing function!finding intervals}
@@ -65,6 +65,16 @@ Let $f$ be differentiable on an interval $I$ and let $a$ and $b$ be in $I$ where
 \end{enumerate}
 }
 
+\mnote{.4}{\textbf{Note:} Recall that not all points $c$ where $\fp(c)$ is undefined are critical points. It could be that $\fp(c)$ is undefined because $c$ is not in the domain of $f$; for example, at a vertical asymptote. Even though these points are not critical points, we still include them in our sign diagram, since it's possible that $\fp$ changes sign at such a point.}
+
+To implement Key Idea \ref{idea:incr_decr}, we use a visual aid called a \sword{sign diagram}\index{sign diagram} for $\fp$. A sign diagram for a function $g$ consists of the following:
+\begin{itemize}
+\item A number line representing the domain of the function $g$.
+\item A solid dot marking each point $x$ where $g(x)=0$.
+\item A hollow dot marking each point where $g(x)$ is undefined.
+\item Between each pair of dots, either a $+$ sign or $-$ sign to indicate whether the function is positive or negative on that interval.
+\end{itemize}
+
 We demonstrate using this process in the following example.\\
 
 \example{ex_incr1}{Finding intervals of increasing/decreasing}{
@@ -74,7 +84,28 @@ Let $f(x) = x^3+x^2-x+1$. Find intervals on which $f$ is increasing or decreasin
 Since an interval was not specified for us to consider, we consider the entire domain of $f$ which is $(-\infty,\infty)$. We thus break the whole real line into three subintervals based on the two critical values we just found: $(-\infty,-1)$, $(-1,1/3)$ and $(1/3,\infty)$. This is shown in Figure \ref{fig:incrline1}.\\
 
 \noindent\begin{minipage}{\textwidth}\centering
-\myincludegraphics{figures/figincrline1}
+%\myincludegraphics{figures/figincrline1}
+\begin{tikzpicture}[>=latex]
+
+\draw [<->, thick] (-3,0) -- (3,0);
+\foreach \x / \y  in %
+					{%
+					-1/{$-1$},%
+					1/{$\dfrac{1}{3}$},%
+					}
+		{\draw [fill] (\x,0) circle [radius=0.08];
+		 \draw (\x,-0.1) node[below] {\scriptsize \parbox{40pt}{\centering \y}};}
+		
+\draw (-2,-.75) node {\scriptsize \parbox{50pt}{\centering $\fp>0$ \ incr }};
+\draw (0,-.75) node {\scriptsize \parbox{50pt}{\centering $\fp<0$ \ decr }};
+\draw (2,-.75) node {\scriptsize \parbox{50pt}{\centering $\fp>0$ \ incr }};
+\draw (-2,.25) node {$+$};
+\draw (0,.25) node {$-$};
+\draw (2,.25) node {$+$};
+%\draw (3.75,.5) node {\scriptsize \parbox{50pt}{\centering $\fp>0$ \ incr \vskip 3pt $\fpp<0$ \ c. up}};
+
+
+\end{tikzpicture}
 \captionsetup{type=figure}%
 \caption{Sign diagram for $\fp$ in Example \ref{ex_incr1}.}\label{fig:incrline1}
 \end{minipage}\\
@@ -99,7 +130,7 @@ One is justified in wondering why so much work is done when the graph seems to m
 First, the points at which $f$ switches from increasing to decreasing are not precisely known given a graph. The graph shows us something significant happens near $x=-1$ and $x=0.3$, but we cannot determine exactly where from the graph. 
 
 One could argue that just finding critical values is important; once we know the significant points are $x=-1$ and $x=1/3$, the graph shows the increasing/decreasing traits just fine. That is true. However, the technique prescribed here helps reinforce the relationship between increasing/decreasing and the sign of $\fp$. Once mastery of this concept (and several others) is obtained, one finds that either (a) just the critical points are computed and the graph shows all else that is desired, or (b) a graph is never produced, because determining increasing/decreasing using $\fp$ is straightforward and the graph is unnecessary. 
-So our second reason why the above work is worthwhile is this: once mastery of a subject is gained, one has \textit{options} for finding needed information. We are working to develop mastery.
+So our second reason why the above work is worthwhile is this: once mastery of a subject is gained, one has \textit{options} for finding needed information. %We are working to develop mastery.
 
 Finally, our third reason: many problems we face ``in the real world'' are very complex. Solutions are tractable only through the use of computers to do many calculations for us. Computers do not solve problems ``on their own,'' however; they need to be taught (i.e., \textit{programmed}) to do the right things. It would be beneficial to give a function to a computer and have it return maximum and minimum values, intervals on which the function is increasing and decreasing, the locations of relative maxima, etc. The work that we are doing here is easily programmable. It is hard to teach a computer to ``look at the graph and see if it is going up or down.'' It is easy to teach a computer to ``determine if a number is greater than or less than 0.''
 \pagebreak
@@ -157,13 +188,38 @@ We have found that $f$ has two critical numbers, $x=-1,3$, and at $x=1$ somethin
 In summary, $f$ is increasing on the set $(-\infty,-1)\cup (3,\infty)$ and is decreasing on the set $(-1,1)\cup (1,3)$. Since at $x=-1$, the sign of \fp\ switched from positive to negative, Theorem \ref{thm:first_der} states that $f(-1)$ is a relative maximum of $f$. At $x=3$, the sign of \fp\ switched from negative to positive, meaning $f(3)$ is a relative minimum. At $x=1$, $f$ is not defined, so there is no relative extrema at $x=1$.
 
 \noindent\begin{minipage}{\textwidth}\centering
-\myincludegraphics{figures/figincrline2}
+%\myincludegraphics{figures/figincrline2}
+\begin{tikzpicture}[>=latex]
+
+\draw [<->, thick] (-5,0) -- (5,0);
+\foreach \x / \y  in %
+					{%
+					-2.5/{$-1$},%
+					2.5/{$3$}%
+					}
+		{\draw [fill] (\x,0) circle [radius=0.08];
+		 \draw (\x,-0.1) node[below] {\scriptsize \parbox{40pt}{\centering \y}};}
+\draw [fill=white] (0,0) circle [radius=0.08];
+\draw (0,-0.1) node[below] {\scriptsize \parbox{40pt}{\centering $1$}};
+\draw (-3.75,-.75) node {\scriptsize \parbox{50pt}{\centering $\fp>0$ \ incr }};
+\draw (-3.75,.25) node {$+$};
+\draw (-1.25,-.75) node {\scriptsize \parbox{50pt}{\centering $\fp<0$ \ decr }};
+\draw (-1.25,.25) node {$-$};
+\draw (1.25,-.75) node {\scriptsize \parbox{50pt}{\centering $\fp<0$ \ decr }};
+\draw (1.25,.25) node {$-$};
+\draw (3.75,-.75) node {\scriptsize \parbox{50pt}{\centering $\fp>0$ \ incr}};
+\draw (3.75,.25) node {$+$};
+\draw (-2.5,.75) node {\scriptsize\parbox{15pt}{\centering rel. max}};
+\draw (2.5,.75) node {\scriptsize\parbox{15pt}{\centering rel. min}};
+\end{tikzpicture}
 \captionsetup{type=figure}%
 \caption{Sign diagram for $\fp$ in Example \ref{ex_incr2}.}\label{fig:incrline2}
-\end{minipage}
+\end{minipage}\\
  
 This is summarized in the number line shown in Figure \ref{fig:incrline2}. Also, Figure \ref{fig:incr2} shows a graph of $f$, confirming our calculations. This figure also shows $\fp$, again demonstrating that $f$ is increasing when $\fp>0$ and decreasing when $\fp<0$.
 }\\
+
+\mnote{.5}{\textbf{Note:} with a bit of practice, you might find that you can fill out sign diagrams quickly, without needing to use test values in each interval. One strategy is the following: start on the far left (or far right). Determine the sign in the first interval, and work left-to-right (or right-to-left). Each time you pass a point where $\fp$ is zero or undefined, check the factored expression for $\fp$. Did this point come from an even power, or an odd power? If the power is even, leave the sign unchanged. If the power is odd, change the sign. In Example \ref{ex_incr2}, the critical numbers $-1$ and $3$ come from odd powers. (Recall $(x+1) = (x+1)^1$.) The vertical asymptote contributes the even power $(x-1)^2$ in the denominator. Thus, we see sign changes at $-1$ and $3$, but the sign is the same on either side of $1$. }
 
 One is often tempted to think that functions always alternate ``increasing, decreasing, increasing, decreasing,$\ldots$'' around critical values. Our previous example demonstrated that this is not always the case. While $x=1$ was not technically a critical value, it was an important value we needed to consider. We found that $f$ was decreasing on ``both sides of $x=1.$''
 
@@ -203,7 +259,32 @@ We have 2 positive factors and one negative factor; $\fp(p)<0$ and so $f$ is dec
 \noindent\textbf{Interval 4}, $(1,\infty)$: Similar work to that done for the other three intervals shows that $\fp(x)>0$ on $(1,\infty)$, so $f$ is increasing on this interval.\\
 
 \noindent\begin{minipage}{\textwidth}\centering
-\myincludegraphics{figures/figincrline3}
+%\myincludegraphics{figures/figincrline3}
+\begin{tikzpicture}[>=latex]
+
+\draw [<->, thick] (-5,0) -- (5,0);
+\foreach \x / \y  in %
+					{%
+					-2.5/{$-1$},%
+					2.5/{$1$}%
+					}
+		{\draw [fill] (\x,0) circle [radius=0.08];
+		 \draw (\x,-0.1) node[below] {\scriptsize \parbox{40pt}{\centering \y}};}
+\draw [fill=white] (0,0) circle [radius=0.08];
+\draw (0,-0.1) node[below] {\scriptsize \parbox{40pt}{\centering $0$}};		 
+
+\draw (-3.75,-.75) node {\scriptsize \parbox{50pt}{\centering $\fp<0$ \ incr }};
+\draw (-3.75,.25) node {$-$};
+\draw (-1.25,-.75) node {\scriptsize \parbox{50pt}{\centering $\fp>0$ \ decr }};
+\draw (-1.25,.25) node {$+$};
+\draw (1.25,-.75) node {\scriptsize \parbox{50pt}{\centering $\fp<0$ \ decr }};
+\draw (1.25,.25) node {$-$};
+\draw (3.75,-.75) node {\scriptsize \parbox{50pt}{\centering $\fp>0$ \ incr}};
+\draw (3.75,.25) node {$+$};
+\draw (-2.5,.75) node {\scriptsize\parbox{15pt}{\centering rel. min}};
+\draw (2.5,.75) node {\scriptsize\parbox{15pt}{\centering rel. min}};
+\draw (0,.75) node {\scriptsize\parbox{15pt}{\centering rel. max}};
+\end{tikzpicture}
 \captionsetup{type=figure}%
 \caption{Sign diagram for $f'$ in Example \ref{ex_incr3}.}\label{fig:incrline3}
 \end{minipage}\\

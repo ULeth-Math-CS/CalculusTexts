@@ -31,7 +31,7 @@ Surface integrals can be used to measure a variety of quantities beyond mass. If
 \example{ex_surfint1}{Finding the mass of a thin sheet}
 {Find the mass of a thin sheet modelled by the plane $2x+y+z=3$ over the triangular region of the $x$-$y$ plane bounded by the coordinate axes and the line $y=2-2x$, as shown in Figure \ref{fig:surfint1}, with density function $\delta(x,y,z) = x^2+5y+z$, where all distances are measured in cm and the density is given as gm/cm$^2$. 
 }
-{We begin by parameterizing the planar surface \surfaceS. Using the techniques of the previous section, we can let $x=u$ and $y=v(2-2u)$, where $0\leq u\leq 1$ and $0\leq v\leq 1$. Solving for $z$ in the equation of the plane, we have $z=3-2x-y$, hence $z = 3-2u-v(2-2u)$, giving the parametrization
+{We begin by parametrizing the planar surface \surfaceS. Using the techniques of the previous section, we can let $x=u$ and $y=v(2-2u)$, where $0\leq u\leq 1$ and $0\leq v\leq 1$. Solving for $z$ in the equation of the plane, we have $z=3-2x-y$, hence $z = 3-2u-v(2-2u)$, giving the parametrization
 $\vec r(u,v) = \langle u, v(2-2u), 3-2u-v(2-2u)\rangle$.
 
 \mfigurethree{width=145pt,3Dmenu,activate=onclick,deactivate=onclick,
@@ -144,7 +144,7 @@ Pick a point $(u,v)$ in the interior of $R$ and consider $\vec n(u,v)$. For inst
 
 Let $\vec F_1 = \langle 0,0,1\rangle$ and $\vec F_2 = \langle 0,0,z\rangle$. Using normal vectors for each surface that point ``upward,'' i.e., with a postie $z$-component, find the flux of each field across each surface. 
 }
-{We begin by parameterizing each surface.
+{We begin by parametrizing each surface.
 
 The boundary of the unit disk in the $x$-$y$ plane is the unit circle, which can be described with $\langle \cos u,\sin u,0\rangle$, $0\leq u\leq 2\pi$. To obtain the interior of the circle as well, we can scale by $v$, giving
 \[

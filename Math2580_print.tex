@@ -11,9 +11,11 @@
 
 \usepackage{refcount}
 \usepackage{pdfpages}
+\usepackage[all,cmtip]{xy}
 
 \newboolean{colour}
 \setboolean{colour}{false}
+
 \newboolean{CalcIII}
 \setboolean{CalcIII}{false}
 \newboolean{CalcIV}
@@ -31,7 +33,7 @@
 \input{headers/Header_Calculus}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.8}
-
+\usepgfplotslibrary{fillbetween,decorations.softclip,polar}
 
 \ifthenelse{\boolean{xetex}}%
 	{\sffamily
@@ -95,6 +97,7 @@
 \input{text/12_Tangent_Planes_Lines}
 \input{text/12_Extrema}
 \input{text/12_Derivative_Matrix}
+\input{text/12_Further_Extrema}
 
 %
 %%%\addtocounter{chapter}{12}
@@ -120,6 +123,7 @@
 \input{text/14_Parametrized_Surfaces}
 \input{text/14_Surface_Integrals}
 \input{text/14_Stokes_Divergence}
+\input{text/14_Stokes_Proof}
 
 %%%\layout
 
